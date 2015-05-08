@@ -1,0 +1,4 @@
+# Django, using PostgreSQL
+Django
+psycopg2
+dj-database-url
