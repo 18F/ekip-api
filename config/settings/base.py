@@ -21,7 +21,7 @@ ALLOWED_HOSTS = []
 SECRET_KEY = os.getenv('TKT_SECRET_KEY', 'uns3cur3k3y')
 
 # Application definition
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,6 +29,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
+
+
+# Apps specific to this project go here. 
+LOCAL_APPS = (
+    'ticketer.recordlocator',
+)
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
