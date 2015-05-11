@@ -2,3 +2,6 @@
 Django
 psycopg2
 dj-database-url
+
+# Recordlocator
+-e git+https://github.com/khandelwal/record-locator.git#egg=recordlocator
