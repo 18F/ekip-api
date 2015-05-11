@@ -19,7 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ALLOWED_HOSTS = []
 
 SECRET_KEY = os.getenv('TKT_SECRET_KEY', 'uns3cur3k3y')
-DATABASES = {'default': dj_database_url.parse(os.getenv('TKT_DATABASE_URL'))}
 
 # Application definition
 INSTALLED_APPS = (
@@ -48,7 +47,8 @@ WSGI_APPLICATION = 'ticketer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {}
+#DATABASES = {}
+DATABASES = {'default': dj_database_url.parse(os.getenv('TKT_DATABASE_URL'))}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
