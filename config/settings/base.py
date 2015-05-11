@@ -40,8 +40,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'ticketer.urls'
-WSGI_APPLICATION = 'ticketer.wsgi.application'
+ROOT_URLCONF = 'config.urls'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
