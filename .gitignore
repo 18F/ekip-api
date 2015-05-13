@@ -58,3 +58,6 @@ target/
 
 # Autoenv file
 .env
+
+# Vim temporary files
+*.swp
