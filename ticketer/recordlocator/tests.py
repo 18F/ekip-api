@@ -40,3 +40,8 @@ class RecordLocatorAPITests(TestCase):
         r = json.loads(response.content.decode('utf8'))
         self.assertTrue('record_locators' in r)
         self.assertEqual(len(r['record_locators']), 50)
+
+    def test_maximum_record_locators(self):
+        c = Client()
+        response = c.get('/locator/locator/?n=100')
+        self.assertEqual(400, response.status_code)
