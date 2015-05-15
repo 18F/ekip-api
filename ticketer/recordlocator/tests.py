@@ -5,7 +5,7 @@ from django.test import Client
 
 from .views import generate_locators
 
-# Create your tests here.
+
 class GeneratorTests(TestCase):
     """ Tests the generation of unique record locators """
 
@@ -24,7 +24,7 @@ class GeneratorTests(TestCase):
 
 class RecordLocatorAPITests(TestCase):
     """ Tests for the RecordLocator API. """
-        
+
     def test_api_generate_locators(self):
         c = Client()
         response = c.get('/locator/locator/')

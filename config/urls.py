@@ -1,11 +1,10 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'ticketer.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+urlpatterns = patterns(
+    '',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^locator/', include("ticketer.recordlocator.urls", namespace="recordlocator")),
+    url(
+        r'^locator/',
+        include("ticketer.recordlocator.urls", namespace="recordlocator")),
 )

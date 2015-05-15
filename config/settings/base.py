@@ -31,7 +31,7 @@ DJANGO_APPS = (
 )
 
 
-# Apps specific to this project go here. 
+# Apps specific to this project go here.
 LOCAL_APPS = (
     'ticketer.recordlocator',
 )
@@ -55,7 +55,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-#DATABASES = {}
+# DATABASES = {}
 DATABASES = {'default': dj_database_url.parse(os.getenv('TKT_DATABASE_URL'))}
 
 # Internationalization
