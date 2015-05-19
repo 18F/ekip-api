@@ -1,0 +1,7 @@
+# Django, using PostgreSQL
+Django
+psycopg2
+dj-database-url
+
+# Recordlocator
+-e git+https://github.com/18F/record-locator.git#egg=recordlocator
