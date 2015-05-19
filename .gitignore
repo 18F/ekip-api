@@ -61,3 +61,5 @@ target/
 
 # Vim temporary files
 *.swp
+
+.vagrant
