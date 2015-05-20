@@ -4,6 +4,7 @@ from django.test import TestCase
 from django.test import Client
 
 from .views import generate_locators
+from .models import Ticket
 
 
 class GeneratorTests(TestCase):
@@ -27,7 +28,7 @@ class RecordLocatorAPITests(TestCase):
 
     def test_api_generate_locators(self):
         c = Client()
-        response = c.get('/locator/locator/')
+        response = c.get('/ticket/')
         self.assertEqual(response.status_code, 200)
         r = json.loads(response.content.decode('utf8'))
         self.assertTrue('record_locators' in r)
@@ -35,7 +36,7 @@ class RecordLocatorAPITests(TestCase):
 
     def test_api_multiple_locators(self):
         c = Client()
-        response = c.get('/locator/locator/?n=50')
+        response = c.get('/ticket/?n=50')
         self.assertEqual(response.status_code, 200)
         r = json.loads(response.content.decode('utf8'))
         self.assertTrue('record_locators' in r)
@@ -43,5 +44,15 @@ class RecordLocatorAPITests(TestCase):
 
     def test_maximum_record_locators(self):
         c = Client()
-        response = c.get('/locator/locator/?n=100')
+        response = c.get('/ticket/?n=100')
         self.assertEqual(400, response.status_code)
+
+class TicketGeneratorTest(TestCase):
+    """ Tests for the RecordLocator API. """
+
+    def test_ticket_zip_match(self):
+        c = Client()
+        response = c.get('/ticket/?zip=91381')
+        self.assertEqual(response.status_code, 200)
+        r = json.loads(response.content.decode('utf8'))
+        self.assertEqual('91381', Ticket.objects.get(record_locator=r['record_locators'][0]).zip_code)
