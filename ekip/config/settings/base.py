@@ -35,6 +35,7 @@ DJANGO_APPS = (
 
 # Apps specific to this project go here.
 LOCAL_APPS = (
+    'corsheaders',
     'ticketer.recordlocator',
 )
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -72,3 +74,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = '/app/ekip/static/'
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -63,3 +63,4 @@ target/
 *.swp
 
 .vagrant
+.DS_Store

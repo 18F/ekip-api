@@ -53,7 +53,7 @@ pyenv activate ekip
 pip install -r /vagrant/requirements.txt
 pip install -r /vagrant/requirements-dev.txt
 cd /vagrant/ekip
-python manage.py migrate --no-input
+python manage.py migrate
 echo 'cd /vagrant/ekip' >> ~/.bash_profile
 echo 'pyenv activate ekip' >> ~/.bash_profile
 EOF
