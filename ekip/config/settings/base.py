@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import dj_database_url
+
+from django.utils.crypto import get_random_string
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -18,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 ALLOWED_HOSTS = []
 
-SECRET_KEY = os.getenv('TKT_SECRET_KEY', 'uns3cur3k3y')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 
 # Application definition
 DJANGO_APPS = (
@@ -52,12 +54,6 @@ ROOT_URLCONF = 'config.urls'
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-# DATABASES = {}
-DATABASES = {'default': dj_database_url.parse(os.getenv('TKT_DATABASE_URL'))}
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -75,3 +71,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = '/app/ekip/static/'
