@@ -35,11 +35,15 @@ DJANGO_APPS = (
 
 # Apps specific to this project go here.
 LOCAL_APPS = (
-    'corsheaders',
     'ticketer.recordlocator',
 )
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+THIRD_PARTY_APPS = (
+    'corsheaders',
+    'localflavor',
+)
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
