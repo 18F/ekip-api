@@ -11,6 +11,9 @@ class Ticket(models.Model):
     """ This is a ticket. """
 
     zip_code = USZipCodeField(max_length=5)
-    record_locator = models.CharField(max_length=8)
+    record_locator = models.CharField(max_length=16)
     created = models.DateTimeField(auto_now_add=True)
     redeemed = models.ForeignKey(RedemptionLocation, blank=True, null=True)
+
+    def __str__(self):
+        return "%s %s" % (self.record_locator, self.zip_code)
