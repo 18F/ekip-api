@@ -52,7 +52,7 @@ def create_unique_ticket(zip_code):
         else:
             # Second locator is also used, generate a completely different
             # type.
-            locator = generator.generate_backup_locator()
+            locator = generate_backup_locator()
             if not locator_exists(locator):
                 create_new_ticket(zip_code, locator)
             else:
