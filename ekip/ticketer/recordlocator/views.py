@@ -88,4 +88,3 @@ def generate_backup_locator():
     """ This generates a 16 character locator when we keep generating
     duplicates. """
     return generator.timestamp_generate()
-

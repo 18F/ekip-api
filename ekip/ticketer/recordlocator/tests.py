@@ -9,6 +9,9 @@ from .models import Ticket
 
 
 def mock_generator(length=1):
+    """ A mock record locator generator that returns the same record locator
+    each time. """
+
     return 'XXXXXXXX'
 
 
