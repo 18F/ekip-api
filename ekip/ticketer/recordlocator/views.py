@@ -22,7 +22,7 @@ def record_locators(request):
         return HttpResponseBadRequest(
             'Maximum of %s record locators can be requested' % MAX_REQUESTABLE)
 
-    record_locators = create_tickets(zip_code, num_locators)
+    record_locators, _ = create_tickets(zip_code, num_locators)
 
     data = {'record_locators': record_locators}
     response = json.dumps(data)
@@ -74,7 +74,7 @@ def create_tickets(zip_code, num_locators=1):
             locators.append(locator)
         else:
             failures.append(locator)
-    return locators
+    return locators, failures
 
 
 def create_new_ticket(zip_code, locator):

@@ -3,24 +3,35 @@ import json
 from django.test import TestCase
 from django.test import Client
 
-from .views import generate_locators
+from .views import create_new_ticket, generate_backup_locator, create_tickets
 from .models import Ticket
 
+class TicketCreationTests(TestCase):
+    def test_create_new_ticket(self):
+        """ Test the creation of a new ticket. """
+        create_new_ticket(20852, 'XXYZZYCD')
+        ticket = Ticket.objects.filter(record_locator='XXYZZYCD')[0]
+        self.assertEqual(ticket.zip_code, '20852')
 
-class GeneratorTests(TestCase):
-    """ Tests the generation of unique record locators """
+    def test_generate_backup_locator(self):
+        locator = generate_backup_locator()
+        self.assertTrue('-' in locator)
+        self.assertEqual(16, len(locator))
 
-    def test_generate_locators(self):
-        """ Ensure that a single locator is generated, with no parameters. """
-        locators = generate_locators()
-        self.assertEqual(len(locators), 1)
-        self.assertEqual(len(locators[0]), 8)
+    def test_create_tickets(self):
+        locators, failures = create_tickets(20852, 5)
+        self.assertEqual(5, len(locators) + len(failures))
 
-    def test_multiple_locators(self):
-        """ Test that multiple locators are generated, and are unique. """
-        locators = generate_locators(n=10)
-        self.assertEqual(len(locators), 10)
-        self.assertEqual(len(set(locators)), 10)
+        #Failures should be extremely rare
+        self.assertTrue(len(locators) > 0)
+
+        #Locators are unique with respect to each other. 
+        self.assertEqual(len(locators), len(set(locators)))
+
+        for l in locators:
+            ticket = Ticket.objects.get(record_locator=l)
+            self.assertNotEqual(None, ticket)
+            self.assertEqual(ticket.zip_code, '20852')
 
 
 class RecordLocatorAPITests(TestCase):
