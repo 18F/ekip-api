@@ -36,6 +36,7 @@ DJANGO_APPS = (
 # Apps specific to this project go here.
 LOCAL_APPS = (
     'ticketer.recordlocator',
+    'nationalparks',
 )
 
 THIRD_PARTY_APPS = (
