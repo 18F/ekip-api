@@ -26,14 +26,27 @@ def name_to_site_type(name):
 def phone_number(pstr):
     """ Extract the extension from the phone number if it exists. """
 
-    if ' x ' in pstr:
-        phone, extension = pstr.split('x')
-        return (phone.strip(), extension.strip())
-    elif 'ext' in pstr:
-        phone, extension = pstr.split('ext')
-        return (phone.strip(), extension.strip())
-    else:
-        return (pstr.strip(), None)
+    if ';' in pstr:
+        # In one case we have multiple phone numbers separated by a 
+        # semi-colon. We simply pick the first one. Note this means we're 
+        # "throwing away" the other phone numbers. 
+        pstr = pstr.split(';')[0]
+
+    for m in [' x ', 'ext.', 'ext']:
+        if m in pstr:
+            phone, extension = pstr.split(m)
+            return (phone.strip(), extension.strip())
+    return (pstr.strip(), None)
+    #if ' x ' in pstr:
+    #    phone, extension = pstr.split('x')
+    #    return (phone.strip(), extension.strip())
+    #elif 'ext.' in pstr:
+    #    phone, extension = pstr.split('ext')
+    #    return (phone.strip(), extension.strip())
+    #elif 'ext' in pstr:
+    #    phone, extension = pstr.split('ext')
+    #    return (phone.strip(), extension.strip())
+    #else:
 
 def process_site(row):
     """ Create an entry in the database for a federal site."""
@@ -41,6 +54,7 @@ def process_site(row):
     # Some rows in the CSV don't represent sites. This is indicative by them 
     # missing the city name. 
     if row[2] != '':
+        print(row)
         name = row[0]
         phone, phone_extension = phone_number(row[1])
         city = row[2]
@@ -51,17 +65,24 @@ def process_site(row):
         access = row[7] == 'YES'
         site_type = name_to_site_type(name)
 
-        fs = FederalSite(
-            name=name,
-            site_type=site_type,
-            phone=phone, 
-            phone_extension=phone_extension, 
-            city=city, 
-            state=state,
-            website=website, 
-            annual_pass=annual, 
-            senior_pass=senior,
-            access_pass=access)
+        sites = FederalSite.objects.filter(name=name, city=city)
+
+        if len(sites) > 0:
+            # If we encounter a duplicate, let's update instead of inserting. 
+            fs = sites[0]
+        else:
+            fs = FederalSite()
+
+        fs.name = name 
+        fs.site_type = site_type
+        fs.phone = phone
+        fs.phone_extension = phone_extension
+        fs.city = city
+        fs.state = state
+        fs.website = website
+        fs.annual_pass = annual
+        fs.senior_pass = senior
+        fs.access_pass = access
         fs.save()
 
      
