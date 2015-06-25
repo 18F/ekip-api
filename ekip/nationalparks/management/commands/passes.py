@@ -54,7 +54,6 @@ def process_site(row):
     # Some rows in the CSV don't represent sites. This is indicative by them 
     # missing the city name. 
     if row[2] != '':
-        print(row)
         name = row[0]
         phone, phone_extension = phone_number(row[1])
         city = row[2]

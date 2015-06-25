@@ -17,6 +17,13 @@ class DataCleanupTests(TestCase):
         self.assertEqual(phone, '510-792-5555')
         self.assertEqual(extension, '363')
 
+        phone, extension = phone_number('973-555-0990 ext. 11')
+        self.assertEqual(phone, '973-555-0990')
+        self.assertEqual(extension, '11')
+
+        phone, extension = phone_number('580-555-3165; 580-622-3161')
+        self.assertEqual(phone, '580-555-3165')
+
     def test_name_to_site_type(self):
         self.assertEqual(
             'NF',
