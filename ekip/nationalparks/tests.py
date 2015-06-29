@@ -1,5 +1,7 @@
-from django.test import TestCase
+from django.test import TestCase 
+
 from .management.commands.passes import phone_number, name_to_site_type
+from .management.commands.slugify import nps_slug, nf_slug, nwr_slug
 
 class DataCleanupTests(TestCase):
 
@@ -43,3 +45,29 @@ class DataCleanupTests(TestCase):
         self.assertEqual(
             'NPS',
             name_to_site_type('Assateague Island National Seashore'))
+
+
+class SlugifyTests(TestCase):
+    def test_nps_slug(self):
+        url = 'http://www.nps.gov/isro/'
+        slug = nps_slug(url)
+        self.assertEqual(slug, 'nps-isro')
+
+    def test_nf_slug(self):
+        name = "Monongahela NF - Main Office"
+        slug = nf_slug(name)
+        self.assertEqual(slug, 'nf-monongahela-main')
+
+        name = "Monongahela NF - Cranberry Mountain Nature Center"
+        slug = nf_slug(name)
+        self.assertEqual(slug, 'nf-monongahela-cranberry-mountain-nature')
+
+    def test_nwr_slug(self):
+        name = "Texas Midcoast NWR Complex"
+        self.assertEqual('nwr-texas-midcoast', nwr_slug(name))
+
+        name = "Tamarac National Wildlife Refuge"
+        self.assertEqual('nwr-tamarac', nwr_slug(name))
+
+        name = "Nisqually NWR"
+        self.assertEqual('nwr-nisqually', nwr_slug(name))
