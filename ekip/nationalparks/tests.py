@@ -1,8 +1,9 @@
-from django.test import TestCase 
+from django.test import TestCase
 
 from .management.commands.passes import phone_number, determine_site_type
 from .management.commands.slugify import nps_slug, nf_slug, nwr_slug
 from .management.commands.slugify import blm_slug, nra_slug, other_slug
+
 
 class DataCleanupTests(TestCase):
 
@@ -47,14 +48,15 @@ class DataCleanupTests(TestCase):
         self.assertEqual(
             'NPS',
             determine_site_type(
-                'Assateague Island National Seashore', 'http://www.nps.gov/assateague'))
+                'Assateague Island National Seashore',
+                'http://www.nps.gov/assateague'))
         self.assertEqual(
             'BLM',
             determine_site_type(
                 'La Cienagas National Conservation Area',
                 'http://www.blm.gov/lacienaga.html'))
         self.assertEqual(
-            'NF', 
+            'NF',
             determine_site_type(
                 'Chugach National Forest', 'http://www.fs.fed.us/chugach'))
         self.assertEqual(
@@ -106,7 +108,6 @@ class SlugifyTests(TestCase):
     def test_nra_slug(self):
         name = "Hells Canyon NRA - Clarkston Field Office"
         self.assertEqual('nra-hells-canyon-clarkston', nra_slug(name))
-
 
     def test_other_slug(self):
         name = "The King Center"
