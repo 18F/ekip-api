@@ -17,6 +17,7 @@ class FederalSite(models.Model):
         ('NF', 'National Forest'),
         ('NRA', 'National Recreation Area'),
         ('NHS', 'National Historic Site'),
+        ('OTH', 'Other')
     )
 
     name = models.CharField(max_length=256)
