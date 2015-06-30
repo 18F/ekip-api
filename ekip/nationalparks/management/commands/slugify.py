@@ -77,3 +77,6 @@ class Command(BaseCommand):
                 slug = nra_slug(site.name)
             else:
                 slug = other_slug(site.name)
+
+            site.slug = slug
+            site.save()

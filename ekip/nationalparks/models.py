@@ -27,6 +27,7 @@ class FederalSite(models.Model):
     city = models.CharField(max_length=128)
     state = USStateField(blank=False, null=False)
     website = models.URLField(max_length=512)
+    slug = models.SlugField(unique=True, null=True)
     annual_pass = models.BooleanField(
         default=False, help_text="True if the site offers an annual pass")
     senior_pass = models.BooleanField(
