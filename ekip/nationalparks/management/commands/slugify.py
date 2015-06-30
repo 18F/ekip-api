@@ -27,7 +27,7 @@ def nf_slug(name):
     
 
 def nps_slug(nps_url):
-    """ National Park Service (NPS) urls contain a unique short, slug already.
+    """ National Park Service (aPS) urls contain a unique short, slug already.
     Extract that and use it. """
 
     path = urlparse(nps_url).path
@@ -41,6 +41,21 @@ def blm_slug(name):
     name = delete_from(name, deletes)
     return slugify('blm %s' % name)
 
+
+def nra_slug(name):
+    """ National Recreation Area """
+    deletes = [
+        'NRA', 'Field Office', 'National Recreation Area', 'Fee Machines',
+        'Fee Booth', 'Info Site']
+    name = delete_from(name, deletes)
+    return slugify('nra %s' % name)
+
+
+def other_slug(name):
+    """ Not a specific agency. """
+    deletes = ['Information Center', 'Visitors Center', 'Office']
+    name = delete_from(name, deletes)
+    return slugify('oth %s' % name)
     
 
 class Command(BaseCommand):
@@ -56,7 +71,9 @@ class Command(BaseCommand):
                 slug = nf_slug(site.name)
             elif site.site_type == 'NWR':
                 slug = nwr_slug(site.name)
+            elif site.site_type == 'BLM':
+                slug = blm_slug(site.name)
+            elif site.site_type == 'NRA':
+                slug = nra_slug(site.name)
             else:
-                print(site.name)
-                print(site.website)
-                print(site.site_type)
+                slug = other_slug(site.name)
