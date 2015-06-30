@@ -1,6 +1,6 @@
 from urllib.parse import urlparse
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 
 from nationalparks.models import FederalSite
@@ -24,7 +24,7 @@ def nf_slug(name):
     name = name.replace('Information', '')
     name = name.replace('Center', '').replace('NF', '').strip()
     return slugify('nf %s' % name)
-    
+
 
 def nps_slug(nps_url):
     """ National Park Service (aPS) urls contain a unique short, slug already.
@@ -56,13 +56,13 @@ def other_slug(name):
     deletes = ['Information Center', 'Visitors Center', 'Office']
     name = delete_from(name, deletes)
     return slugify('oth %s' % name)
-    
+
 
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
         sites = FederalSite.objects.all()
-        
+
         slug = ''
         for site in sites:
             if 'nps.gov' in site.website:
