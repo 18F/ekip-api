@@ -8,12 +8,14 @@ from nationalparks.models import FederalSite
 
 
 def delete_from(string, deletes):
+    """ Delete the strings in deletes from string. """
     for d in deletes:
         string = string.replace(d, '')
     return string
 
 
 def nwr_slug(name):
+    """ National Wildlife Refuge related slug generation. """
     deletes = [
         'NWRC', 'NWR', 'Complex', 'District', 'National Wildlife Refuge',
         '(also sold at fee booth)', 'National Wildlife & Fish Refuge', 
@@ -23,24 +25,26 @@ def nwr_slug(name):
 
 
 def nf_slug(name):
+    """ National Forest related slug generation. """
+
     deletes = [
         'District', 'Office', 'Ranger Station', 'Information Center', 'NF', 
-        "Visitor's Center", "Management Unit", 'Visitor Center']
+        "Visitor's Center", "Management Unit", 'Visitor Center',
+        'Nature Center']
     name = delete_from(name, deletes)
     return slugify('nf %s' % name)
 
 
-def nps_slug(nps_url, city):
-    """ National Park Service (aPS) urls contain a unique short, slug already.
-    Extract that and use it. """
+def nps_slug(nps_url):
+    """ National Park Service related slug generation. """
 
     path = urlparse(nps_url).path
     components = [i for i in path.split('/') if i != '']
-    return slugify('nps %s %s' % (components[-1], city))
+    return slugify('nps %s' % components[-1])
 
 
 def blm_slug(name):
-    """ BLM offices """
+    """ BLM related slug generation. """
     deletes = [
         'BLM', 'Field', 'Office', 'District',
         'National', 'Historic', 'Monument']
@@ -49,7 +53,7 @@ def blm_slug(name):
 
 
 def nra_slug(name):
-    """ National Recreation Area """
+    """ National Recreation Area related slug generation. """
     deletes = [
         'NRA', 'Field Office', 'National Recreation Area', 'Fee Machines',
         'Fee Booth', 'Info Site']
@@ -67,6 +71,7 @@ def other_slug(name):
 
 
 class Command(BaseCommand):
+    """ Assign a slug to each FederalSite in the database. """
 
     def handle(self, *args, **options):
         sites = FederalSite.objects.all()
@@ -90,7 +95,7 @@ class Command(BaseCommand):
             try:
                 site.save()
             except IntegrityError:
-                # Try a modified slug (as we have a duplicate)
+                # It's likely we have a duplicate slug, try adding in the city. 
                 slug = slugify("%s %s" % (slug, site.city))
                 site.slug = slug
                 site.save()

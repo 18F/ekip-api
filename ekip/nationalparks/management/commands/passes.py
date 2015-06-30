@@ -5,40 +5,28 @@ from nationalparks.models import FederalSite
 
 
 def determine_site_type(name, website):
-    """ The name of a Federal Site in this list provides an indication of what
-    type of site it might be. This extracts that out. """
+    """ The name (or website)  of a Federal Site in this list provides an
+    indication of what type of site it might be. This extracts that out. """
 
-    if ' BLM' in name:
-        site_type = 'BLM'
-    elif ' NF' in name:
-        site_type = 'NF'
-    elif 'National Forest' in name:
-        site_type = 'NF'
-    elif ' NWR' in name:
-        site_type = 'NWR'
-    elif ' NHS' in name:
-        site_type = 'NHS'
-    elif ' NRA' in name:
-        site_type = 'NRA'
-    elif 'National Recreation Area' in name:
-        site_type = 'NRA'
-    elif 'National Wildlife Refuge' in name:
-        site_type = 'NWR'
-    elif 'Fish and Wildlife' in name:
-        site_type = 'NWR'
-    elif 'fs.fed.us' in website:
-        site_type = 'NF'
-    elif 'fs.usda.gov' in website:
-        site_type = 'NF'
-    elif 'blm.gov' in website:
-        site_type = 'BLM'
-    elif 'fws.gov' in website:
-        site_type = 'NWR'
-    elif 'nps.gov' in website:
-        site_type = 'NPS'
-    else:
-        site_type = 'OTH'
-    return site_type
+    name_fragments = [
+        (' BLM', 'BLM'), (' NF', 'NF'), ('National Forest', 'NF'),
+        (' NWR', 'NWR'), (' NHS', 'NHS'), (' NRA', 'NRA'),
+        ('National Recreation Area', 'NRA'), 
+        ('National Wildlife Refuge', 'NWR'), ('Fish and Wildlife', 'NWR')]
+
+    for fragment, code in name_fragments:
+        if fragment in name:
+            return code
+
+    website_fragments = [
+        ('fs.fed.us', 'NF'), ('fs.usda.gov', 'NF'),
+        ('blm.gov', 'BLM'), ('fws.gov', 'NWR'), ('nps.gov', 'NPS')]
+
+    for fragment, code in website_fragments:
+        if fragment in website:
+            return code
+
+    return 'OTH'
 
 
 def phone_number(pstr):

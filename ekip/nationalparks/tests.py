@@ -73,8 +73,8 @@ class SlugifyTests(TestCase):
 
     def test_nps_slug(self):
         url = 'http://www.nps.gov/isro/'
-        slug = nps_slug(url, 'Gillett')
-        self.assertEqual(slug, 'nps-isro-gillett')
+        slug = nps_slug(url)
+        self.assertEqual(slug, 'nps-isro')
 
     def test_nf_slug(self):
         name = "Monongahela NF - Main Office"
@@ -83,7 +83,7 @@ class SlugifyTests(TestCase):
 
         name = "Monongahela NF - Cranberry Mountain Nature Center"
         slug = nf_slug(name)
-        self.assertEqual(slug, 'nf-monongahela-cranberry-mountain-nature')
+        self.assertEqual(slug, 'nf-monongahela-cranberry-mountain')
 
     def test_nwr_slug(self):
         name = "Texas Midcoast NWR Complex"
