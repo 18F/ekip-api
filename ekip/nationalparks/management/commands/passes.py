@@ -3,7 +3,7 @@ import csv
 from django.core.management.base import BaseCommand, CommandError
 from nationalparks.models import FederalSite
 
-def name_to_site_type(name):
+def determine_site_type(name, website):
     """ The name of a Federal Site in this list provides an indication of what
     type of site it might be. This extracts that out. """
 
@@ -11,16 +11,32 @@ def name_to_site_type(name):
         site_type = 'BLM'
     elif ' NF' in name:
         site_type = 'NF'
+    elif 'National Forest' in name:
+        site_type = 'NF'
     elif ' NWR' in name:
         site_type = 'NWR'
     elif ' NHS' in name:
         site_type = 'NHS'
     elif ' NRA' in name:
         site_type = 'NRA'
+    elif 'National Recreation Area' in name:
+        site_type = 'NRA'
     elif 'National Wildlife Refuge' in name:
         site_type = 'NWR'
-    else:
+    elif 'Fish and Wildlife' in name:
+        site_type = 'NWR'
+    elif 'fs.fed.us' in website:
+        site_type = 'NF'
+    elif 'fs.usda.gov' in website:
+        site_type = 'NF'
+    elif 'blm.gov' in website:
+        site_type = 'BLM'
+    elif 'fws.gov' in website:
+        site_type = 'NWR'
+    elif 'nps.gov' in website:
         site_type = 'NPS'
+    else:
+        site_type = 'OTH'
     return site_type
 
 def phone_number(pstr):
@@ -62,7 +78,7 @@ def process_site(row):
         annual = row[5] == 'YES'
         senior = row[6] == 'YES'
         access = row[7] == 'YES'
-        site_type = name_to_site_type(name)
+        site_type = determine_site_type(name, website)
 
         sites = FederalSite.objects.filter(name=name, city=city)
 
