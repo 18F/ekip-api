@@ -73,18 +73,30 @@ def redeem_vouchers(formset, federal_site):
             redeem_voucher(voucher_id, federal_site)
 
 
+def redeem_confirm(request, slug):
+    """ After a voucher ID form has been submitted, display a confirmation of
+    success. """
+    federal_site = get_object_or_404(FederalSite, slug=slug)
+
+    return render(
+        request,
+        'redeem-confirm.html',
+        {'pass_site': federal_site})
+    
+
+
 def redeem_for_site(request, slug):
     """ Display and process a form that allows a user to enter multiple voucher
     ids for a single recreation site. """
 
     federal_site = get_object_or_404(FederalSite, slug=slug)
-    VoucherEntryFormSet = formset_factory(VoucherEntryForm, extra=6)
+    VoucherEntryFormSet = formset_factory(VoucherEntryForm, extra=10)
 
     if request.method == "POST":
         formset = VoucherEntryFormSet(request.POST)
         if formset.is_valid():
             redeem_vouchers(formset, federal_site)
-            return HttpResponseRedirect('/redeem/')
+            return HttpResponseRedirect('/redeem/done/%s/' % slug)
     else:
         formset = VoucherEntryFormSet()
 

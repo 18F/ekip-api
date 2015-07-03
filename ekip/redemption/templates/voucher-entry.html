@@ -12,7 +12,7 @@ location. </p>
 <p> You can enter voucher ids, up to ten at a time. Using a barcode scanner?
 Make sure the scanner is set to H tab mode before continuing.</p>
 
-<form action="/redeem/specific/{{pass_site.slug}}/" method="POST">
+<form action="/redeem/location/{{pass_site.slug}}/" method="POST">
 {% csrf_token %}
 
 {{formset.management_form}}
