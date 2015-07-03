@@ -9,6 +9,7 @@ from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket
 from nationalparks.models import FederalSite
 
+
 class States():
     """ Create a map of two-letter state codes and the state name. """
 
@@ -25,12 +26,14 @@ def sites_for_state(request):
     sites = FederalSiteResource().list(state)
     states_lookup = States()
     return render(
-        request, 
+        request,
         'redemption-list-state.html',
-        {'sites': sites, 
-        'state_name': states_lookup.states[state]}
+        {
+            'sites': sites,
+            'state_name': states_lookup.states[state]
+        }
     )
-    
+
 
 def get_passes_state(request):
     """ Display a state selector, so that we can display the list of pass
@@ -70,7 +73,6 @@ def redeem_vouchers(formset, federal_site):
             redeem_voucher(voucher_id, federal_site)
 
 
-
 def redeem_for_site(request, slug):
     """ Display and process a form that allows a user to enter multiple voucher
     ids for a single recreation site. """
@@ -90,6 +92,6 @@ def redeem_for_site(request, slug):
         request,
         'voucher-entry.html',
         {
-            'formset': formset, 
+            'formset': formset,
             'pass_site': federal_site
         })
