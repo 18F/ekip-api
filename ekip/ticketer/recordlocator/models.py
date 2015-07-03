@@ -1,6 +1,5 @@
-from datetime import datetime
-
 from django.db import models
+from django.utils import timezone
 
 from localflavor.us.models import USZipCodeField
 from nationalparks.models import FederalSite
@@ -18,7 +17,7 @@ class Ticket(models.Model):
 
     def redeem(self, federal_site):
         self.recreation_site = federal_site
-        self.redemption_entry = datetime.now()
+        self.redemption_entry = timezone.now()
         self.save()
 
     def __str__(self):

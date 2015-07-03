@@ -1,0 +1,68 @@
+[
+    {
+        "fields": {
+            "created": "2015-06-09T16:26:29.589Z",
+            "record_locator": "6PZDJ7TP",
+            "recreation_site": null,
+            "redemption_entry": null,
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "created": "2015-06-10T19:04:08.165Z",
+            "record_locator": "JWG6G4YJ",
+            "recreation_site": null,
+            "redemption_entry": null,
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "created": "2015-06-10T19:04:10.959Z",
+            "record_locator": "XZ6HGDXR",
+            "recreation_site": null,
+            "redemption_entry": null,
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "created": "2015-06-10T19:04:13.096Z",
+            "record_locator": "W6XX994C",
+            "recreation_site": null,
+            "redemption_entry": null,
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "created": "2015-06-11T15:44:03.394Z",
+            "record_locator": "3DFGZHD3",
+            "recreation_site": null,
+            "redemption_entry": null,
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "created": "2015-07-03T15:12:22.508Z",
+            "record_locator": "CZN9XTCF",
+            "recreation_site": 16332,
+            "redemption_entry": "2015-07-03T15:16:48.235Z",
+            "zip_code": "00000"
+        },
+        "model": "recordlocator.ticket",
+        "pk": 6
+    }
+]
