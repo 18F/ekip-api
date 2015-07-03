@@ -6,6 +6,7 @@ from localflavor.us.us_states import US_STATES
 
 from .forms import FederalSiteStateForm, VoucherEntryForm
 from nationalparks.api import FederalSiteResource
+from ticketer.recordlocator.models import Ticket
 from nationalparks.models import FederalSite
 
 class States():
@@ -38,14 +39,23 @@ def get_passes_state(request):
     return render(request, 'redemption-state.html', {'form': form})
 
 
-def process_voucher_id(voucher_id):
-    pass
+def process_voucher_id(voucher_id, federal_site):
+    try:
+        ticket = Ticket.objects.get(record_locator=voucher_id)
 
-def process_voucher_ids(formset):
+        if ticket.redemption_entry is None:
+            ticket.redeem(federal_site)
+
+    except Ticket.DoesNotExist:
+        ticket = None
+    return ticket
+
+
+def process_voucher_ids(formset, federal_site):
     for form in formset:
         if form.has_changed():
             voucher_id = form.cleaned_data['voucher_id']
-            process_voucher_id(voucher_id)
+            process_voucher_id(voucher_id, federal_site)
 
 
 
@@ -56,7 +66,7 @@ def redeem_for_site(request, slug):
     if request.method == "POST":
         formset = VoucherEntryFormSet(request.POST)
         if formset.is_valid():
-            process_voucher_ids(formset)
+            process_voucher_ids(formset, federal_site)
             return HttpResponseRedirect('/redeem/')
     else:
         formset = VoucherEntryFormSet()
