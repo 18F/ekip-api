@@ -6,6 +6,7 @@ waitress==0.8.9
 whitenoise==1.0.6
 django-cors-headers
 django-localflavor
+restless
 
 # Recordlocator
 -e git+https://github.com/18F/record-locator.git#egg=recordlocator
