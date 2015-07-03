@@ -10,6 +10,8 @@ from ticketer.recordlocator.models import Ticket
 from nationalparks.models import FederalSite
 
 class States():
+    """ Create a map of two-letter state codes and the state name. """
+
     def __init__(self):
         self.states = {}
         for abbr, name in US_STATES:
@@ -17,6 +19,8 @@ class States():
 
 
 def sites_for_state(request):
+    """ Display a list of FederalSites per state. """
+
     state = request.GET.get('state', None)
     sites = FederalSiteResource().list(state)
     states_lookup = States()
@@ -29,6 +33,9 @@ def sites_for_state(request):
     
 
 def get_passes_state(request):
+    """ Display a state selector, so that we can display the list of pass
+    issuing federal sites by state. """
+
     if request.method == "POST":
         form = FederalSiteStateForm(request.POST)
         if form.is_valid():
@@ -39,7 +46,10 @@ def get_passes_state(request):
     return render(request, 'redemption-state.html', {'form': form})
 
 
-def process_voucher_id(voucher_id, federal_site):
+def redeem_voucher(voucher_id, federal_site):
+    """ If the Ticket exists and is not redeemed, redeem it at federal_site.
+    """
+
     try:
         ticket = Ticket.objects.get(record_locator=voucher_id)
 
@@ -51,22 +61,27 @@ def process_voucher_id(voucher_id, federal_site):
     return ticket
 
 
-def process_voucher_ids(formset, federal_site):
+def redeem_vouchers(formset, federal_site):
+    """ Redeem all the vouchers that come through on the formset. """
+
     for form in formset:
         if form.has_changed():
             voucher_id = form.cleaned_data['voucher_id']
-            process_voucher_id(voucher_id, federal_site)
+            redeem_voucher(voucher_id, federal_site)
 
 
 
 def redeem_for_site(request, slug):
+    """ Display and process a form that allows a user to enter multiple voucher
+    ids for a single recreation site. """
+
     federal_site = get_object_or_404(FederalSite, slug=slug)
     VoucherEntryFormSet = formset_factory(VoucherEntryForm, extra=6)
 
     if request.method == "POST":
         formset = VoucherEntryFormSet(request.POST)
         if formset.is_valid():
-            process_voucher_ids(formset, federal_site)
+            redeem_vouchers(formset, federal_site)
             return HttpResponseRedirect('/redeem/')
     else:
         formset = VoucherEntryFormSet()
