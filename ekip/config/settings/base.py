@@ -38,6 +38,7 @@ LOCAL_APPS = (
     'ticketer.recordlocator',
     'nationalparks',
     'redemption',
+    'everykid',
 )
 
 THIRD_PARTY_APPS = (
