@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.forms.formsets import formset_factory
 
@@ -19,6 +20,7 @@ class States():
             self.states[abbr] = name
 
 
+@login_required
 def sites_for_state(request):
     """ Display a list of FederalSites per state. """
 
@@ -35,6 +37,7 @@ def sites_for_state(request):
     )
 
 
+@login_required
 def get_passes_state(request):
     """ Display a state selector, so that we can display the list of pass
     issuing federal sites by state. """
@@ -73,6 +76,7 @@ def redeem_vouchers(formset, federal_site):
             redeem_voucher(voucher_id, federal_site)
 
 
+@login_required
 def redeem_confirm(request, slug):
     """ After a voucher ID form has been submitted, display a confirmation of
     success. """
@@ -84,7 +88,7 @@ def redeem_confirm(request, slug):
         {'pass_site': federal_site})
     
 
-
+@login_required
 def redeem_for_site(request, slug):
     """ Display and process a form that allows a user to enter multiple voucher
     ids for a single recreation site. """
