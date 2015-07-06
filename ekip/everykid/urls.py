@@ -1,8 +1,7 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
-from .views import (
-    plan_your_trip, learn, student_pass, educator_passes)
+from .views import learn, student_pass, educator_passes
 
 urlpatterns = patterns(
     '',

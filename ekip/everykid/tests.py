@@ -1,11 +1,12 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
+
 class BasicPageTestCase(TestCase):
 
     def setUp(self):
         self.client = Client()
-    
+
     def test_main_page(self):
         response = self.client.get('/')
         self.assertEqual(200, response.status_code)

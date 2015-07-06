@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+
 
 def plan_your_trip(request):
     return render(
-        request, 
+        request,
         'plan_your_trip.html',
         {}
     )
@@ -10,14 +11,15 @@ def plan_your_trip(request):
 
 def student_pass(request):
     return render(
-        request, 
+        request,
         'student_pass.html',
         {}
     )
 
+
 def educator_passes(request):
     return render(
-        request, 
+        request,
         'educator_passes.html',
         {}
     )
@@ -25,8 +27,7 @@ def educator_passes(request):
 
 def learn(request):
     return render(
-        request, 
+        request,
         'learn.html',
         {}
     )
-
