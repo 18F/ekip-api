@@ -1,4 +1,5 @@
 from django.test import TestCase, Client
+from django.contrib.auth.models import User
 
 # Create your tests here.
 from .views import redeem_voucher
@@ -19,10 +20,20 @@ class RedemptionTestCase(TestCase):
 class SitesTestCase(TestCase):
     fixtures = ['federalsites.json']
 
+    def setUp(self):
+        self.client = Client()
+        self.user = User.objects.create_user(
+            'john', 'john@doi.gov', 'password')
+
+    def test_behind_password(self):
+        response = self.client.get('/redeem/sites/', {'state': 'AZ'})
+        self.assertRedirects(
+            response, '/accounts/login/?next=/redeem/sites/%3Fstate%3DAZ')
+        
     def test_sites_for_state(self):
         """ We display FederalSites by state. Test that display here. """
-        c = Client()
-        response = c.get('/redeem/sites/', {'state': 'AZ'})
+        self.client.login(username='john', password='password')
+        response = self.client.get('/redeem/sites/', {'state': 'AZ'})
         self.assertEqual(200, response.status_code)
 
         content = response.content.decode('utf-8')
