@@ -76,6 +76,10 @@ class SlugifyTests(TestCase):
         slug = nps_slug(url)
         self.assertEqual(slug, 'nps-isro')
 
+        url = "http://www.nps.gov/grsm/index.htm"
+        slug = nps_slug(url)
+        self.assertEqual(slug, 'nps-grsm')
+
     def test_nf_slug(self):
         name = "Monongahela NF - Main Office"
         slug = nf_slug(name)

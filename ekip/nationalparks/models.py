@@ -35,5 +35,8 @@ class FederalSite(models.Model):
     access_pass = models.BooleanField(
         default=False, help_text="True if the site offers an access pass")
 
+    def __str__(self):
+        return "%s (%s, %s)" % (self.name, self.city, self.state)
+
     class Meta:
         unique_together = ('name', 'city')

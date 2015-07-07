@@ -1,0 +1,53 @@
+[
+    {
+        "fields": {
+            "access_pass": true,
+            "annual_pass": true,
+            "city": "Talladega",
+            "name": "Talladega NF - Talladega Ranger District",
+            "phone": "256-362-2909",
+            "phone_extension": null,
+            "senior_pass": true,
+            "site_type": "NF",
+            "slug": "nf-talladega-talladega-ranger",
+            "state": "AL",
+            "website": "http://www.fs.fed.us/r8/alabama/"
+        },
+        "model": "nationalparks.federalsite",
+        "pk": 16332
+    },
+    {
+        "fields": {
+            "access_pass": true,
+            "annual_pass": true,
+            "city": "Phoenix",
+            "name": "Aqua Fria National Monument",
+            "phone": "623-580-5586",
+            "phone_extension": null,
+            "senior_pass": true,
+            "site_type": "BLM",
+            "slug": "blm-aqua-fria",
+            "state": "AZ",
+            "website": "http://www.blm.gov/az/st/en/prog/blm_special_areas/natmon/afria.html"
+        },
+        "model": "nationalparks.federalsite",
+        "pk": 16350
+    },
+    {
+        "fields": {
+            "access_pass": true,
+            "annual_pass": true,
+            "city": "Page",
+            "name": "Rainbow Bridge National Monument (see Glen Canyon, UT)",
+            "phone": "928-608-6200",
+            "phone_extension": null,
+            "senior_pass": true,
+            "site_type": "NPS",
+            "slug": "nps-rabr-page",
+            "state": "AZ",
+            "website": "http://www.nps.gov/rabr"
+        },
+        "model": "nationalparks.federalsite",
+        "pk": 16387
+    }
+]
