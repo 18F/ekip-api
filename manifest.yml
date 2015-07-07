@@ -3,6 +3,7 @@
 memory: 512M
 instances: 1
 applications:
-- name: ekip-api
+- name: blue
   path: .
+  stack: cflinuxfs2
   timeout: 180
