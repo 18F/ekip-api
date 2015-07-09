@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head%}
+<head>
+</head>
+{% endblock %}
+
+<body>
+    <h1> <a href="/">Every Kid in a Park</a></h1>
+
+    {% include "includes/nav.html" %}
+
+    <div id="main">
+        {% block body %} This is not seen. {% endblock %}
+    </div>
+</body>
+</html>

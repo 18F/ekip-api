@@ -8,6 +8,7 @@ from redemption.views import redeem_for_site, redeem_confirm
 
 urlpatterns = patterns(
     '',
+    url(r'', include('everykid.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(
         r'^ticket/',
