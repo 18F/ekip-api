@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from nationalparks.models import FederalSite
 from .forms import PassSiteStateForm
 from nationalparks.api import FederalSiteResource
 
@@ -21,23 +20,16 @@ def student_pass(request):
     )
 
 
-def pass_exchange_state(request, state):
-    sites = FederalSite.objects.filter(state='MD')
-    return render(
-        request,
-        'pass_exchange_state.html',
-        {'sites': sites}
-    )
-
-
 def pass_exchange(request):
+    """ Display the list of sites one can exchange a voucher for a pass at. """
+
     state = request.GET.get('state', None)
-    form = PassSiteStateForm()
 
     if state:
         sites = FederalSiteResource().list(state)
         form = PassSiteStateForm(initial={'state': state})
     else:
+        form = PassSiteStateForm()
         sites = []
 
     return render(
