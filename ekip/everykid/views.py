@@ -20,6 +20,7 @@ def student_pass(request):
         {}
     )
 
+
 def pass_exchange_state(request, state):
     sites = FederalSite.objects.filter(state='MD')
     return render(
@@ -27,6 +28,7 @@ def pass_exchange_state(request, state):
         'pass_exchange_state.html',
         {'sites': sites}
     )
+
 
 def pass_exchange(request):
     state = request.GET.get('state', None)
@@ -42,7 +44,7 @@ def pass_exchange(request):
         request,
         'pass_exchange.html',
         {
-            'sites': sites, 
+            'sites': sites,
             'form': form
         }
     )
