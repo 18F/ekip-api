@@ -29,6 +29,8 @@ class PassExchangeSiteTestCase(TestCase):
 
     def test_choose_by_state(self):
         c = Client()
-        response = c.get('/plan-your-trip/pass-exchange/?state=AZ')
+        url = '%s?state=AZ' % reverse('pass_exchange')
+        response = c.get(url)
         content = response.content.decode('utf-8')
         self.assertTrue('Aqua Fria National Monument' in content)
+        self.assertTrue('Rainbow Bridge National Monument' in content)
