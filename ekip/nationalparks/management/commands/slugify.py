@@ -40,8 +40,14 @@ def nps_slug(nps_url):
 
     path = urlparse(nps_url).path
     components = [i for i in path.split('/') if i != '']
-    return slugify('nps %s' % components[-1])
+    return slugify('nps %s' % components[0])
 
+def nps_name_slug(name):
+    deletes = [ 
+        'Recreation Area', 'National River'
+    ]
+    name = delete_from(name, deletes)
+    return slugify('nps %s' % name)
 
 def blm_slug(name):
     """ BLM related slug generation. """
@@ -56,7 +62,7 @@ def nra_slug(name):
     """ National Recreation Area related slug generation. """
     deletes = [
         'NRA', 'Field Office', 'National Recreation Area', 'Fee Machines',
-        'Fee Booth', 'Info Site']
+        'Fee Booth', 'Info Site', 'see also', 'National Monument']
     name = delete_from(name, deletes)
     return slugify('nra %s' % name)
 
@@ -78,8 +84,9 @@ class Command(BaseCommand):
 
         slug = ''
         for site in sites:
-            if 'nps.gov' in site.website:
-                slug = nps_slug(site.website, site.city)
+            print(site.name)
+            if site.site_type == 'NPS':
+                slug = nps_slug(site.website)
             elif site.site_type == 'NF':
                 slug = nf_slug(site.name)
             elif site.site_type == 'NWR':
@@ -91,11 +98,22 @@ class Command(BaseCommand):
             else:
                 slug = other_slug(site.name)
             site.slug = slug
+            print(slug)
+            print(site.site_type)
 
             try:
                 site.save()
             except IntegrityError:
-                # It's likely we have a duplicate slug, try adding in the city. 
+                # It's likely we have a duplicate slug, try adding in the city.
                 slug = slugify("%s %s" % (slug, site.city))
                 site.slug = slug
-                site.save()
+
+                try:
+                    site.save()
+                except IntegrityError:
+                    if site.site_type == 'NPS':
+                        slug = nps_name_slug(site.name)
+                        site.slug = slug
+                        site.save()
+                    else:
+                        raise

@@ -1,0 +1,11 @@
+---
+applications:
+- name: blue
+  memory: 512M
+  instances: 4
+  timeout: 180
+  host: kids
+  domain: cf.18f.us
+  env:
+    DATABASE_URL: "postgresql://ekip:92J5bsLYy8Ha1xkAMrZ9ZPYib@ekip-api-staging.ch0moygcdwsl.us-east-1.rds.amazonaws.com:5432/ekip"
+    DJANGO_SECRET_KEY: "Getting"
