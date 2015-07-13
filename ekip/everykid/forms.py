@@ -27,4 +27,4 @@ class EducatorForm(forms.ModelForm):
         model =  Educator
         fields = [
             'name', 'work_email', 'organization_name', 'address_line_1',
-            'address_line_2', 'city', 'state', 'zipcode']
+            'address_line_2', 'city', 'state', 'zipcode', 'num_students']

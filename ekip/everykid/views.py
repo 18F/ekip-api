@@ -58,7 +58,8 @@ class EducatorFormPreview(FormPreview):
             address_line_2 = cleaned_data['address_line_2'],
             city = cleaned_data['city'],
             state = cleaned_data['state'],
-            zipcode = cleaned_data['zipcode']
+            zipcode = cleaned_data['zipcode'],
+            num_students = cleaned_data['num_students']
         )
         educator.save()
         return HttpResponseRedirect('/')
