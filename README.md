@@ -40,10 +40,10 @@ This project uses Gulp to manage CSS pre and post-processing. Make sure Gulp is 
 npm install --global gulp
 ```
 
-Also install the additional modules to watch for SASS pre-processing changes (using Bourbon and Neat), gzip, and minify the resulting stylesheets:
+Also install the additional modules to watch for SASS pre-processing changes (using Bourbon and Neat) and to minify the resulting stylesheet:
 
 ```
-npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename gulp-gzip
+npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename
 ```
 
 Then once everything is installed in your project directory, simply invoke the Gulp command in your terminal:

@@ -7,7 +7,7 @@ from nationalparks.api import FederalSiteResource
 def plan_your_trip(request):
     return render(
         request,
-        'plan_your_trip.html',
+        'plan-your-trip/index.html',
         {}
     )
 
@@ -15,7 +15,7 @@ def plan_your_trip(request):
 def student_pass(request):
     return render(
         request,
-        'student_pass.html',
+        'get-your-pass/student_pass.html',
         {}
     )
 
@@ -34,7 +34,7 @@ def pass_exchange(request):
 
     return render(
         request,
-        'pass_exchange.html',
+        'plan-your-trip/pass_exchange.html',
         {
             'sites': sites,
             'form': form
@@ -45,7 +45,7 @@ def pass_exchange(request):
 def educator_passes(request):
     return render(
         request,
-        'educator_passes.html',
+        'get-your-pass/educator_passes.html',
         {}
     )
 
@@ -53,7 +53,7 @@ def educator_passes(request):
 def learn(request):
     return render(
         request,
-        'learn.html',
+        'learn/index.html',
         {}
     )
 
@@ -61,7 +61,7 @@ def learn(request):
 def fourth_grade_voucher(request):
     return render(
         request,
-        'fourth_grade_voucher.html',
+        'get-your-pass/fourth_grade_voucher.html',
         {}
     )
 

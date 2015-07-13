@@ -3,8 +3,7 @@ var gulp = require('gulp'),
     neat = require('node-neat').includePaths,
     watch = require('gulp-watch'),
     minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    gzip = require('gulp-gzip');
+    rename = require('gulp-rename');
 
 var gzip_options = {
     threshold: '1kb',
@@ -22,8 +21,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('ekip/everykid/static/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('ekip/everykid/static/css'))
-        .pipe(gzip(gzip_options))
         .pipe(gulp.dest('ekip/everykid/static/css'));
 });
 

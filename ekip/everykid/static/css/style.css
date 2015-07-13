@@ -1,9 +1,91 @@
-body {
-  margin: 0; }
+body, html {
+  background: #4E6A88;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Avenir Next"; }
 
-header .banner {
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-family: "Superclarendon", serif;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 35px; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+button {
+  text-transform: uppercase; }
+
+.govt-banner {
   background-color: #2C2C2C;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
-  font-size: 14px; }
+  padding: 7px 0;
+  font-size: 13px; }
+
+nav.top-links {
+  padding: 20px 0 20px 0;
+  text-align: right; }
+  nav.top-links ul li {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 10px;
+    border-right: 1px solid #fff;
+    display: inline-block; }
+    nav.top-links ul li:last-child {
+      padding-right: 0;
+      border: none; }
+
+nav.main-nav {
+  width: 175px;
+  float: left; }
+  nav.main-nav ul {
+    display: inline-block; }
+  nav.main-nav li {
+    background: #fff;
+    color: #456D97;
+    padding: 7px 12px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: "Superclarendon", serif;
+    text-align: center;
+    display: block; }
+    nav.main-nav li a {
+      text-decoration: none;
+      color: #456D97; }
+
+.content {
+  width: 950px;
+  margin: auto; }
+
+.hero {
+  width: 775px;
+  float: left; }
+  .hero button {
+    border: 4px solid #fff;
+    background: transparent;
+    font-family: "Superclarendon", serif;
+    color: #fff;
+    font-size: 19px;
+    padding: 10px 20px; }
+
+.landing {
+  text-align: center; }
+  .landing img {
+    margin-bottom: 15px; }
+  .landing .landing-description {
+    width: 550px;
+    font-size: 18px;
+    margin: 0 auto 15px auto; }
+
+footer {
+  clear: both; }

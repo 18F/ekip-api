@@ -1,17 +1,77 @@
 @import "bourbon";
 
-body {
-  margin: 0;
+$site-width: 950px;
+
+body,html {
+  background: #4E6A88;
+  color: #fff;
+  padding:0;
+  margin:0;
+  overflow-x: hidden;
+  font-family: "Avenir Next";
 }
 
-header {
-  .banner {
-    background-color: #2C2C2C;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-family: "Superclarendon", serif;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 35px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
   }
 }
+
+button {
+  text-transform: uppercase;
+}
+
+@import "header";
+@import "nav";
+
+
+.content {
+  width: $site-width;
+  margin: auto;
+}
+
+.hero {
+  width: 775px;
+  float: left;
+
+  button {
+    border: 4px solid #fff;
+    background: transparent;
+    font-family: "Superclarendon", serif;
+    color: #fff;
+    font-size: 19px;
+    padding: 10px 20px;
+  }
+}
+
+.landing {
+  text-align: center;
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  .landing-description {
+    width: 550px;
+    font-size: 18px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+
+@import "footer";
 
 

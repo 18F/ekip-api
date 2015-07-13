@@ -22,26 +22,29 @@
 
 <body>
 
-  <header>
-    <div class="banner">
-      An official website of the United States Government.
-    </div>
+  <div class="govt-banner">
+    An official website of the United States Government.
+  </div>
+
+  <section class="content">
 
     <nav class="top-links">
       <ul>
         <li>4th-grade educators</li>
         <li>Already have a pass?</li>
-        <li>Espanol</li>
+        <li>Español</li>
       </ul>
     </nav>
 
-  </header>
+    {% include "nav.html" %}
 
-  {% include "includes/nav.html" %}
+    {% block hero %}{% endblock hero %}
 
-    <div id="main">
-      {% block body %}{% endblock %}
-    </div>
+  </section>
+
+
+  {% block body %}{% endblock %}
+
 
   <footer>
     <nav>
