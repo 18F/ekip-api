@@ -1,7 +1,7 @@
 EKIP API
 =======
 # ticketing-system
-A ticketing system. 
+A ticketing system.
 
 ## Getting Started
 
@@ -32,3 +32,24 @@ $ python manage.py runserver
 ```
 
 From your host computer, going to http://192.168.19.16 will enable you to access the API.
+
+## Front-end Setup
+This project uses Gulp to manage CSS pre and post-processing. Make sure Gulp is installed system wide:
+
+```
+npm install --global gulp
+```
+
+Also install the additional modules to watch for SASS pre-processing changes (using Bourbon and Neat), gzip, and minify the resulting stylesheets:
+
+```
+npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename gulp-gzip
+```
+
+Then once everything is installed in your project directory, simply invoke the Gulp command in your terminal:
+
+```
+gulp
+```
+
+
