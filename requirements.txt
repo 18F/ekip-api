@@ -7,6 +7,7 @@ whitenoise==1.0.6
 django-cors-headers
 django-localflavor
 restless
+django-formtools
 
 # Recordlocator
 -e git+https://github.com/18F/record-locator.git#egg=recordlocator
