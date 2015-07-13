@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% block head%}
 <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {# mobile #}
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  {# social #}
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:site_name" content="{{ title }}" />
+  <meta property="og:url" content="{{ site.base_url }}{{ site.page_url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:image" content="NEEDSIMAGE" />
+  {% if site.twitter_username != '' %}
+  <meta name="twitter:site" content="{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="{{ site.twitter_username }}">
+  {% endif %}
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta property="twitter:description" content="{{ site.description }}" />
+  {% if site.twitter_image != '' %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:image:src" content="{{ site.twitter_image }}" />
+  {% endif %}
+
+  <link rel="canonical" href="{{ site.base_url }}{{ page.url }}" />
+
+  <link rel="stylesheet" href="/static/css/base.css" />
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
 </head>
-{% endblock %}
 
 <body>
-    <h1> <a href="/">Every Kid in a Park</a></h1>
 
-    {% include "includes/nav.html" %}
+  <header>
+    <div class="banner">
+      An official website of the United States Government.
+    </div>
+
+    <nav class="top-links">
+      <ul>
+        <li>4th-grade educators</li>
+        <li>Already have a pass?</li>
+        <li>Espanol</li>
+      </ul>
+    </nav>
+
+  </header>
+
+  {% include "includes/nav.html" %}
 
     <div id="main">
-        {% block body %} This is not seen. {% endblock %}
+      {% block body %}{% endblock %}
     </div>
+
+  <footer>
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  </footer>
+
 </body>
 </html>

@@ -2,26 +2,28 @@
 
 {% block body %}
 
-<div class="container">
-    <section class="content">
-        <h1> Get your pass </h1>
+<div class="container get-your-pass">
 
+  <h2>Get Your Pass</h2>
 
-   
-    <p> 
-        <a href="{% url 'student_pass' %}">I'm a 4th grader</a>
-    </p>
+  <ul>
+    <li>
+      <h3>I'm a 4th grader</h3>
+      <p>Just complete a fun activity to earn a voucher for your free pass to adventure!</p>
 
-    <p> 
-        <a href="">I'm NOT a 4th grader</a>
-    </p>
-
-    <p> 
-        <a href="{% url 'educator_passes' %}">I'm an educator</a>
-    </p>
-
-
-    </section>
+      <button>Start</button>
+    </li>
+    <li>
+      <h3>I'm not a 4th grader</h3>
+      <p>Sorry, you can't get a voucher, but you can still plan a trip.</p>
+      <button>Plan a Trip</button>
+    </li>
+    <li>
+      <h3>I'm a 4th-grade educator</h3>
+      <p>Get a classroom activity book and download vouchers for your students.</p>
+      <button>Downloads</button>
+    </li>
+  </ul>
 
 </div>
 

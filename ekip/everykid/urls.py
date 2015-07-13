@@ -6,7 +6,7 @@ from .views import learn, student_pass, educator_passes
 urlpatterns = patterns(
     '',
     url(r'^$', TemplateView.as_view(
-        template_name="main_landing.html"), name="main_landing"),
+        template_name="index.html"), name="main_landing"),
     url(r'get-your-pass/fourth-grader', student_pass, name="student_pass"),
     url(r'get-your-pass/educator', educator_passes, name="educator_passes"),
     url(r'get-your-pass/', TemplateView.as_view(
