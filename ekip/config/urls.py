@@ -3,8 +3,6 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from nationalparks.api import FederalSiteResource
-from redemption.views import get_passes_state, sites_for_state
-from redemption.views import redeem_for_site, redeem_confirm
 
 urlpatterns = patterns(
     '',

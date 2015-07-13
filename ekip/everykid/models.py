@@ -1,6 +1,7 @@
 from django.db import models
 from localflavor.us.models import USStateField, USZipCodeField
 
+
 class Educator(models.Model):
     """ An educator has to fill out this form before they can download vouchers
     for their students. """

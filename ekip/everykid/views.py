@@ -45,21 +45,25 @@ def pass_exchange(request):
         }
     )
 
+
 class EducatorFormPreview(FormPreview):
+    """ The educator contact information form requires a preview screen. This
+    class manages that preview process. """
+
     form_template = 'educator_passes.html'
     preview_template = 'educator_passes_preview.html'
 
     def done(self, request, cleaned_data):
         educator = Educator(
-            name  = cleaned_data['name'],
-            work_email = cleaned_data['work_email'],
-            organization_name = cleaned_data['organization_name'],
-            address_line_1 = cleaned_data['address_line_1'],
-            address_line_2 = cleaned_data['address_line_2'],
-            city = cleaned_data['city'],
-            state = cleaned_data['state'],
-            zipcode = cleaned_data['zipcode'],
-            num_students = cleaned_data['num_students']
+            name=cleaned_data['name'],
+            work_email=cleaned_data['work_email'],
+            organization_name=cleaned_data['organization_name'],
+            address_line_1=cleaned_data['address_line_1'],
+            address_line_2=cleaned_data['address_line_2'],
+            city=cleaned_data['city'],
+            state=cleaned_data['state'],
+            zipcode=cleaned_data['zipcode'],
+            num_students=cleaned_data['num_students']
         )
         educator.save()
         return HttpResponseRedirect('/')
