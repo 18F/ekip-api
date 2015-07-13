@@ -22,3 +22,15 @@ class BasicPageTestCase(TestCase):
     def test_get_educator_passes(self):
         response = self.client.get(reverse('educator_passes'))
         self.assertEquals(200, response.status_code)
+
+
+class PassExchangeSiteTestCase(TestCase):
+    fixtures = ['federalsites.json']
+
+    def test_choose_by_state(self):
+        c = Client()
+        url = '%s?state=AZ' % reverse('pass_exchange')
+        response = c.get(url)
+        content = response.content.decode('utf-8')
+        self.assertTrue('Aqua Fria National Monument' in content)
+        self.assertTrue('Rainbow Bridge National Monument' in content)

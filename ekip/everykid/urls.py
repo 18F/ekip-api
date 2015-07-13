@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
-from .views import learn, student_pass, educator_passes
+from .views import learn, student_pass, educator_passes, pass_exchange
 
 urlpatterns = patterns(
     '',
@@ -11,6 +11,7 @@ urlpatterns = patterns(
     url(r'get-your-pass/educator', educator_passes, name="educator_passes"),
     url(r'get-your-pass/', TemplateView.as_view(
         template_name="get_your_pass.html"), name="get_your_pass"),
+    url(r'plan-your-trip/pass-exchange/', pass_exchange, name="pass_exchange"),
     url(r'plan-your-trip/', TemplateView.as_view(
         template_name="plan_your_trip.html"), name="plan_your_trip"),
     url(r'learn/', learn, name="learn"),
