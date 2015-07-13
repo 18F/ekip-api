@@ -1,6 +1,8 @@
 from django import forms
 from localflavor.us.us_states import US_STATES
 
+from .models import Educator
+
 
 # The U.S. states including DC and Puerto Rico
 STATES_AND_PR = US_STATES + (('PR', 'Puerto Rico'), )
@@ -17,3 +19,11 @@ class StateSelect(forms.Select):
 
 class PassSiteStateForm(forms.Form):
     state = forms.CharField(label="State", widget=StateSelect())
+
+
+class EducatorForm(forms.ModelForm):
+    class Meta:
+        model =  Educator
+        fields = [
+            'name', 'work_email', 'organization_name', 'address_line_1',
+            'address_line_2', 'city', 'state', 'zipcode']

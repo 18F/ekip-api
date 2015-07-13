@@ -56,6 +56,12 @@
     voucher.</p>
 
     <p> To access the vouchers, please complete the short form below. </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="submit" />
+    </form>
 </div>
 
 {% endblock %}

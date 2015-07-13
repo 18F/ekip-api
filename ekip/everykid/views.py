@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
-from .forms import PassSiteStateForm
+from .forms import PassSiteStateForm, EducatorForm
 from nationalparks.api import FederalSiteResource
 
 
@@ -41,12 +42,31 @@ def pass_exchange(request):
         }
     )
 
+def educator_vouchers(request):
+    num_vouchers = request.GET.get('num_vouchers', 1)
+
+    return render(
+        request,
+        'educator_vouchers.html',
+        {
+            'num_vouchers': num_vouchers
+        }
+    )
+
 
 def educator_passes(request):
+    if request.method == 'POST':
+        form = EducatorForm(request.POST)
+        if form.is_valid():
+            educator = form.save()
+            return HttpResponseRedirect(
+                '/get-your-pass/educator/vouchers/?num_vouchers=10')
+    else:
+        form = EducatorForm()
     return render(
         request,
         'educator_passes.html',
-        {}
+        {'form': form}
     )
 
 
