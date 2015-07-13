@@ -11,30 +11,12 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-  {# social #}
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:site_name" content="{{ title }}" />
-  <meta property="og:url" content="{{ site.base_url }}{{ site.page_url }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="{{ description }}" />
-  <meta property="og:image" content="NEEDSIMAGE" />
-  {% if site.twitter_username != '' %}
-  <meta name="twitter:site" content="{{ site.twitter_username }}">
-  <meta name="twitter:creator" content="{{ site.twitter_username }}">
-  {% endif %}
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta property="twitter:description" content="{{ site.description }}" />
-  {% if site.twitter_image != '' %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:image:src" content="{{ site.twitter_image }}" />
-  {% endif %}
+  <link rel="canonical" href="" />
 
-  <link rel="canonical" href="{{ site.base_url }}{{ page.url }}" />
+  <link rel="stylesheet" href="/static/css/style.min.css" />
 
-  <link rel="stylesheet" href="/static/css/base.css" />
-
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
+  <meta name="description" content="">
 
 </head>
 
