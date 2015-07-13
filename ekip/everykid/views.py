@@ -56,3 +56,12 @@ def learn(request):
         'learn.html',
         {}
     )
+
+
+def fourth_grade_voucher(request):
+    return render(
+        request,
+        'fourth_grade_voucher.html',
+        {}
+    )
+
