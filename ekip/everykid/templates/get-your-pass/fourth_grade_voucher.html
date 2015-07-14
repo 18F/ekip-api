@@ -1,13 +1,15 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Your Free Pass</title>
 
-  <link rel="stylesheet" href="/static/css/voucher.min.css" />
+  <link rel="stylesheet" href="{% static 'css/voucher.min.css' %}" />
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="/static/js/barcode.js"></script>
-  <script type="text/javascript" src="/static/js/voucher.js"></script>
+  <script type="text/javascript" src="{% static 'js/barcode.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/voucher.js' %}"></script>
 
 </head>
 <body>
@@ -25,7 +27,7 @@
         <span class="voucher-barcode-id">1111111</span>
         <img alt="barcode" class="voucher-barcode-image" />
       </div>
-      <img src="/static/img/voucher.png" alt="" />
+      <img src="{% static 'img/voucher.png' %}" alt="" />
 
     </div>
 

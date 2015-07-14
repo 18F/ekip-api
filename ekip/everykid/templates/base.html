@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +10,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-  <link rel="stylesheet" href="/static/css/style.min.css" />
+  <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
   <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
@@ -21,7 +22,8 @@
 
   <div class="govt-banner">
     An official website of the United States Government.
-    <img alt="US flag signifying that this is a United States Federal Government website" src="/static/img/us_flag_small.png" />
+    <img alt="US flag signifying that this is a United States Federal Government website" src="
+    {% static 'img/us_flag_small.png' %}" />
   </div>
 
   <section class="{% block background %}{% endblock background %}">
