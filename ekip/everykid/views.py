@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 
 from formtools.preview import FormPreview
 
-from .forms import PassSiteStateForm, EducatorForm
+from .forms import PassSiteStateForm
 from .models import Educator
 from ticketer.recordlocator.views import TicketResource
 from nationalparks.api import FederalSiteResource
@@ -78,7 +78,6 @@ def educator_vouchers(request):
 
     tickets = TicketResource().issue(num_vouchers, zip_code)
     locators = [t['record_locator'] for t in tickets.value['locators']]
-    
 
     return render(
         request,
@@ -87,22 +86,6 @@ def educator_vouchers(request):
             'num_vouchers': num_vouchers,
             'locators': locators,
         }
-    )
-
-
-def educator_passes(request):
-    if request.method == 'POST':
-        form = EducatorForm(request.POST)
-        if form.is_valid():
-            educator = form.save()
-            return HttpResponseRedirect(
-                '/get-your-pass/educator/vouchers/?num_vouchers=10')
-    else:
-        form = EducatorForm()
-    return render(
-        request,
-        'educator_passes.html',
-        {'form': form}
     )
 
 

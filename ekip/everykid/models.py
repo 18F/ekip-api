@@ -23,5 +23,6 @@ class Educator(models.Model):
     city = models.CharField(_("City"), max_length=50)
     state = USStateField(_("State"), blank=False, null=False)
     zipcode = USZipCodeField(_("ZIP code"))
-    num_students = models.IntegerField(_("Number of students"),
+    num_students = models.IntegerField(
+        _("Number of students"),
         help_text="Number of students for which you are requesting vouchers")
