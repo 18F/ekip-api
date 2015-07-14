@@ -8,4 +8,7 @@ $(document).ready(function() {
   $(recordLocator).find('.voucher-barcode-id').remove();
   $(recordLocator).find("img").JsBarcode(randomID,{format:"CODE128",displayValue:true,fontSize:20, height:40});
 
+  $(".voucher-barcode-image").JsBarcode(randomID,{format:"CODE128",displayValue:true,fontSize:20, height:40});
+
+
 });

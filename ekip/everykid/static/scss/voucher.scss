@@ -3,7 +3,7 @@
 #fourth-grade-voucher {
   padding: 50px;
   text-align: center;
-
+  font-family: 'Lato', sans-serif;
 
   h1, h2, h3 {
     text-transform: uppercase;
@@ -37,6 +37,19 @@
 
     img {
       width: 175px;
+    }
+  }
+
+  .personnel {
+    margin: 100px 0 0 0;
+    padding: 10px 0 0 0;
+    font-size: 11px;
+    border-top: 1px dotted #BABABA;
+    text-align: left;
+
+    img {
+      width: 170px;
+      float: right;
     }
   }
 
