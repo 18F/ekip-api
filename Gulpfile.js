@@ -5,14 +5,7 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename');
 
-var gzip_options = {
-    threshold: '1kb',
-    gzipOptions: {
-        level: 9
-    }
-};
-
-/* Compile Our Sass */
+// compile all sass files into css folder and create minified file
 gulp.task('sass', function() {
     return gulp.src('ekip/everykid/static/scss/*.scss')
         .pipe(sass({
@@ -24,7 +17,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('ekip/everykid/static/css'));
 });
 
-/* Watch Files For Changes */
+// change watcher
 gulp.task('watch', function() {
     gulp.watch('ekip/everykid/static/scss/*.scss', ['sass']);
 });
