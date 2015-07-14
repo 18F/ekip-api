@@ -20,12 +20,17 @@ class StateSelect(forms.Select):
 
 
 class PassSiteStateForm(forms.Form):
-    state = forms.CharField(label="State", widget=StateSelect())
+    state = forms.CharField(label=_("State"), widget=StateSelect())
 
 
 class EducatorForm(forms.ModelForm):
+    org_or_school = forms.ChoiceField(
+        label=_("School or qualified organization"), widget=forms.RadioSelect,
+        choices=Educator.ORG_CHOICES)
+
     class Meta:
         model =  Educator
         fields = [
             'name', 'work_email', 'organization_name', 'address_line_1',
-            'address_line_2', 'city', 'state', 'zipcode', 'num_students']
+            'address_line_2', 'city', 'state', 'zipcode', 'num_students', 
+            'org_or_school']
