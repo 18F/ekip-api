@@ -1,8 +1,12 @@
 import json
 
 from django.http import HttpResponse, HttpResponseBadRequest
+from django.conf.urls import patterns, url
 
 from recordlocator import generator
+from restless.dj import DjangoResource
+from restless.preparers import FieldsPreparer
+from restless.resources import skip_prepare
 
 from .models import Ticket
 
@@ -10,24 +14,51 @@ from .models import Ticket
 # The maximum number of record locators that can be requested
 MAX_REQUESTABLE = 50
 
+class TicketResource(DjangoResource):
 
-def record_locators(request):
-    """ View that generates at least one record locator, generating 'n' if
-    specified through a query parameter. """
+    def __init__(self, *args, **kwargs):
+        super(TicketResource, self).__init__(*args, **kwargs)
 
-    num_locators = int(request.GET.get('n', 1))
-    zip_code = request.GET.get('zip', '00000')
+        self.http_methods.update({
+            'issue': {
+                'GET': 'issue',
+            }
+        })
 
-    if num_locators > MAX_REQUESTABLE:
-        return HttpResponseBadRequest(
-            'Maximum of %s record locators can be requested' % MAX_REQUESTABLE)
+        self.ticket_preparer = FieldsPreparer(fields={
+            'record_locator': 'record_locator'
+        })
 
-    record_locators, _ = create_tickets(zip_code, num_locators)
+    def prepare_tickets(self, tickets):
+        locators = []
+        for t in tickets:
+            locators.append(self.ticket_preparer.prepare(t))
 
-    data = {'record_locators': record_locators}
-    response = json.dumps(data)
+        data = {
+            'locators': locators
+        }
+        return data
 
-    return HttpResponse(response, content_type='application/json')
+    @skip_prepare
+    def issue(self, num_locators=1, zip_code=None):
+        if self.request and 'num_locators' in self.request.GET:
+            num_locators = self.request.GET.get('num_locators', 1)
+            num_locators = int(num_locators)
+
+        if self.request and 'zip' in self.request.GET:
+            zip_code = self.request.GET.get('zip', '00000')
+
+        tickets, _ = create_tickets(zip_code, num_locators)
+        response = self.prepare_tickets(tickets)
+        return response
+
+    # Finally, extend the URLs
+    @classmethod
+    def urls(cls, name_prefix=None):
+        urlpatterns = super(TicketResource, cls).urls(name_prefix=name_prefix)
+        return urlpatterns + patterns('',
+            url(r'^issue/', cls.as_view('issue'), name=cls.build_url_name('issue', name_prefix)),
+        )
 
 
 def locator_exists(locator):
@@ -42,39 +73,42 @@ def create_unique_ticket(zip_code):
     to explore modes where this never fails. """
 
     locator = generator.safe_generate()
+    ticket = None
+
     if not locator_exists(locator):
-        create_new_ticket(zip_code, locator)
+        ticket = create_new_ticket(zip_code, locator)
     else:
         # Locator is already used, generate another one.
         locator = generator.safe_generate()
         if not locator_exists(locator):
-            create_new_ticket(zip_code, locator)
+            ticket = create_new_ticket(zip_code, locator)
         else:
             # Second locator is also used, generate a completely different
             # type.
             locator = generate_backup_locator()
             if not locator_exists(locator):
-                create_new_ticket(zip_code, locator)
+                ticket = create_new_ticket(zip_code, locator)
             else:
                 # Trying infinitely doesn't make sense. Fail.
                 locator = None
-    return locator
+                ticket = None
+    return ticket
 
 
 def create_tickets(zip_code, num_locators=1):
     """ Create tickets, ensuring that the associated record locators are
     unique. Return the list of those locators corresponding to new tickets. """
 
-    locators = []
+    tickets = []
     failures = []
 
     for r in range(0, num_locators):
-        locator = create_unique_ticket(zip_code)
-        if locator:
-            locators.append(locator)
+        ticket = create_unique_ticket(zip_code)
+        if ticket:
+            tickets.append(ticket)
         else:
             failures.append(locator)
-    return locators, failures
+    return tickets, failures
 
 
 def create_new_ticket(zip_code, locator):
@@ -82,6 +116,7 @@ def create_new_ticket(zip_code, locator):
 
     ticket = Ticket(zip_code=zip_code, record_locator=locator)
     ticket.save()
+    return ticket
 
 
 def generate_backup_locator():
