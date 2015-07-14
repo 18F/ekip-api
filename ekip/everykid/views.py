@@ -5,6 +5,7 @@ from formtools.preview import FormPreview
 
 from .forms import PassSiteStateForm, EducatorForm
 from .models import Educator
+from ticketer.recordlocator.views import TicketResource
 from nationalparks.api import FederalSiteResource
 
 
@@ -66,17 +67,25 @@ class EducatorFormPreview(FormPreview):
             num_students=cleaned_data['num_students']
         )
         educator.save()
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect(
+            'get-your-pass/educator/vouchers/?num_vouchers=%s&zip=%s' % (
+                educator.num_students, educator.zipcode))
 
 
 def educator_vouchers(request):
-    num_vouchers = request.GET.get('num_vouchers', 1)
+    num_vouchers = int(request.GET.get('num_vouchers', 1))
+    zip_code = request.GET.get('zip', '00000')
+
+    tickets = TicketResource().issue(num_vouchers, zip_code)
+    locators = [t['record_locator'] for t in tickets.value['locators']]
+    
 
     return render(
         request,
         'educator_vouchers.html',
         {
-            'num_vouchers': num_vouchers
+            'num_vouchers': num_vouchers,
+            'locators': locators,
         }
     )
 
