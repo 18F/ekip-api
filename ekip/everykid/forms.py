@@ -29,12 +29,3 @@ class EducatorForm(forms.ModelForm):
         fields = [
             'name', 'work_email', 'organization_name', 'address_line_1',
             'address_line_2', 'city', 'state', 'zipcode', 'num_students']
-
-        labels = {
-            'name': _('Full name'),
-            'work_email': _('Work email address'),
-            'organization_name': _('School or organization name'),
-            'num_students': _('Number of students'), 
-            'zipcode': _('ZIP code')
-
-        }
