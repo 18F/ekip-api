@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}Plan Your Trip{% endblock title %}
+
+{% block background %}plan-your-trip{% endblock background %}
+
 {% block body %}
 
 <div class="container">
@@ -16,7 +20,7 @@
 
         <form method="GET">
             {{form.as_p}}
-            <input type="submit" value="submit">
+            <button type="submit">Submit</button>
         </form>
 
 

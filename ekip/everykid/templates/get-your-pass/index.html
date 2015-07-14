@@ -1,34 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}
-  Get Your Pass
-{% endblock title %}
+{% block title %}Get Your Pass{% endblock title %}
+
+{% block background %}get-your-pass{% endblock background %}
 
 {% block body %}
 
-<div class="hero get-your-pass">
+  <div class="content">
 
-  <h2>Get Your Pass</h2>
+    <h2>Get Your Pass</h2>
 
-  <ul>
-    <li>
-      <h3>I'm a 4th grader</h3>
-      <p>Just complete a fun activity to earn a voucher for your free pass to adventure!</p>
+    <p>Bacon ipsum dolor amet ribeye jerky shank chicken corned beef sirloin alcatra pork loin pig bresaola pastrami. Leberkas ribeye shoulder pork belly swine venison prosciutto. Bacon beef ribs salami, fatback short ribs meatloaf tail cupim brisket strip steak. Bresaola pork spare ribs short ribs, pork belly swine filet mignon ham hock shank beef ground round flank strip steak shankle.</p>
 
-      <button>Start</button>
-    </li>
-    <li>
-      <h3>I'm not a 4th grader</h3>
-      <p>Sorry, you can't get a voucher, but you can still plan a trip.</p>
-      <button>Plan a Trip</button>
-    </li>
-    <li>
-      <h3>I'm a 4th-grade educator</h3>
-      <p>Get a classroom activity book and download vouchers for your students.</p>
-      <button>Downloads</button>
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <h3>I'm a<br/>4th grader</h3>
+        <p>Just complete a fun activity to earn a voucher for your free pass to adventure!</p>
 
-</div>
+        <button>Start</button>
+      </li>
+      <li>
+        <h3>I'm not<br/>a 4th grader</h3>
+        <p>Sorry, you can't get a voucher, but you can still plan a trip.</p>
+        <br/>
+        <button>Plan a Trip</button>
+      </li>
+      <li>
+        <h3>I'm a 4th-grade<br/> educator</h3>
+        <p>Get a classroom activity book and download vouchers for your students.</p>
+        <button>Downloads</button>
+      </li>
+    </ul>
+
+  </div>
 
 {% endblock %}

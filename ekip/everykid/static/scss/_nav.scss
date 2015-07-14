@@ -1,6 +1,6 @@
 nav.main-nav {
-  width: 175px;
-  float: left;
+  width: $nav-width;
+  position: absolute;
 
   ul {
     display: inline-block;

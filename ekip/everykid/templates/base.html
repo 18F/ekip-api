@@ -5,15 +5,12 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  {# mobile #}
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-  <link rel="canonical" href="" />
-
   <link rel="stylesheet" href="/static/css/style.min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
   <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
   <meta name="description" content="">
@@ -26,25 +23,25 @@
     An official website of the United States Government.
   </div>
 
-  <section class="content">
+  <section class="{% block background %}{% endblock background %}">
 
-    <nav class="top-links">
-      <ul>
-        <li>4th-grade educators</li>
-        <li>Already have a pass?</li>
-        <li>Español</li>
-      </ul>
-    </nav>
+    <header>
 
-    {% include "nav.html" %}
+      <nav class="top-links">
+        <ul>
+          <li>4th-grade educators</li>
+          <li>Already have a pass?</li>
+          <li>Español</li>
+        </ul>
+      </nav>
 
-    {% block hero %}{% endblock hero %}
+      {% include "nav.html" %}
+
+    </header>
+
+    {% block body %}{% endblock %}
 
   </section>
-
-
-  {% block body %}{% endblock %}
-
 
   <footer>
     <nav>

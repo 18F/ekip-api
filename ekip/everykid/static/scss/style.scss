@@ -1,9 +1,11 @@
 @import "bourbon";
 
 $site-width: 950px;
+$nav-width: 175px;
 
 body,html {
   background: #4E6A88;
+  font-family: 'Lato', sans-serif;
   color: #fff;
   padding:0;
   margin:0;
@@ -21,6 +23,10 @@ h2 {
   font-size: 35px;
 }
 
+p {
+  margin: 5px 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -31,33 +37,23 @@ ul {
 }
 
 button {
+  font-family: "Superclarendon", serif;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @import "header";
 @import "nav";
 
-
 .content {
   width: $site-width;
   margin: auto;
-}
 
-.hero {
-  width: 775px;
-  float: left;
-
-  button {
-    border: 4px solid #fff;
-    background: transparent;
-    font-family: "Superclarendon", serif;
-    color: #fff;
-    font-size: 19px;
-    padding: 10px 20px;
-  }
 }
 
 .landing {
+  background: url(../img/backgrounds/mountain.jpg) no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
 
   img {
@@ -68,6 +64,74 @@ button {
     width: 550px;
     font-size: 18px;
     margin: 0 auto 15px auto;
+  }
+
+  button {
+    border: 4px solid #fff;
+    background: transparent;
+    font-family: "Superclarendon", serif;
+    color: #fff;
+    font-size: 19px;
+    padding: 10px 20px;
+    margin: 0 0 70px 0;
+  }
+}
+
+.get-your-pass {
+  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  .content {
+
+    ul {
+      margin: 30px 0 0 0;
+    }
+
+    li {
+      width: 28%;
+      background: #FEEED0;
+      color: #000;
+      padding: 15px;
+      margin: 0 10px 0 0;
+      font-size: 14px;
+      vertical-align: top;
+      display: inline-block;
+
+      h3 {
+        padding: 0;
+      }
+
+      button {
+        background: #673E2F;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        margin: 15px 0 0 0;
+        font-size: 13px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.plan-your-trip {
+  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.learn {
+  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.get-your-pass, .plan-your-trip, .learn {
+  .content {
+    width: $site-width - $nav-width;
+    margin: auto;
+    padding: 0 0 50px $nav-width;
   }
 }
 
