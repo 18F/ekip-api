@@ -1,0 +1,31 @@
+#fourth-grade-voucher {
+  padding: 50px;
+  text-align: center; }
+  #fourth-grade-voucher h1, #fourth-grade-voucher h2, #fourth-grade-voucher h3 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0; }
+  #fourth-grade-voucher h1 {
+    font-family: "Superclarendon", serif;
+    font-size: 53px;
+    color: #5D402E; }
+  #fourth-grade-voucher h2 {
+    font-size: 45px;
+    color: #BA5E33; }
+  #fourth-grade-voucher h3 {
+    font-size: 18px; }
+  #fourth-grade-voucher .voucher {
+    width: 525px;
+    margin: 50px auto;
+    position: relative; }
+  #fourth-grade-voucher .voucher-barcode {
+    top: 70px;
+    right: -110px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute; }
+    #fourth-grade-voucher .voucher-barcode img {
+      width: 175px; }

@@ -2,17 +2,32 @@
 <html>
 <head>
   <title>Your Free Pass</title>
+
+  <link rel="stylesheet" href="/static/css/voucher.min.css" />
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="/static/js/barcode.js"></script>
+  <script type="text/javascript" src="/static/js/voucher.js"></script>
+
 </head>
 <body>
 
   <div id="fourth-grade-voucher">
 
-    <h1>Congratulations!</h1>
-    <h2>You've earned a free pass</h2>
-    <h3>To all U.S. National Parks, Forests, National Lands, and Waters</h3>
+    <div class="heading">
+      <h1>Congratulations!</h1>
+      <h2>You've earned a free pass</h2>
+      <h3>To all U.S. National Parks, Forests, National Lands and Waters</h3>
+    </div>
 
+    <div class="voucher">
+      <div class="voucher-barcode" data-endpoint="">
+        <span class="voucher-barcode-id">1111111</span>
+        <img alt="barcode" class="ticket__barcode" />
+      </div>
+      <img src="/static/img/voucher.png" alt="" />
 
-
+    </div>
 
   </div>
 
