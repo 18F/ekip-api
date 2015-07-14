@@ -21,6 +21,7 @@
 
   <div class="govt-banner">
     An official website of the United States Government.
+    <img alt="US flag signifying that this is a United States Federal Government website" src="/static/img/us_flag_small.png" />
   </div>
 
   <section class="{% block background %}{% endblock background %}">
@@ -39,7 +40,9 @@
 
     </header>
 
-    {% block body %}{% endblock %}
+    <div class="content">
+      {% block body %}{% endblock %}
+    </div>
 
   </section>
 
