@@ -52,4 +52,29 @@ Then once everything is installed in your project directory, simply invoke the G
 gulp
 ```
 
+## Deploy Notes
 
+We use a blue-green deployment system for zero downtime. 
+
+
+You'll need to set the application to use the production settings file. 
+
+```
+cf set-env blue DJANGO_SETTINGS_MODULE config.settings.production
+cf set-env green DJANGO_SETTINGS_MODULE config.settings.production
+```
+
+
+You'll need to set three environment variables, for both blue and green apps to use S3 for hosting static files. 
+
+```
+cf set-env blue EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
+cf set-env blue EKIP_AWS_ACCESS_KEY_ID <<value>>
+cf set-env blue EKIP_AWS_SECRET_ACCESS_KEY <<value>>
+cf set-env green EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
+cf set-env green EKIP_AWS_ACCESS_KEY_ID <<value>>
+cf set-env green EKIP_AWS_SECRET_ACCESS_KEY <<value>>
+```
+
+To actually deploy the application, simply configure for your use case and run:
+./deployer.sh
