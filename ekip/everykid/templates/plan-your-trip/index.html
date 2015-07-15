@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Plan Your Trip{% endblock title %}
+
+{% block background %}plan-your-trip{% endblock background %}
+
+{% block body %}
+
+  <h2>Plan Your Trip</h2>
+
+  <h3>Exchange Your Voucher</h3>
+
+  <p>
+  You can exchange your voucher for an annual park pass at any of the
+  following sites.
+  </p>
+
+  <a href="{% url 'pass_exchange' %}">View Pass Sites</a>
+
+  <h3> Be Safe </h3>
+
+  <p> Most national recreation sites are the great, wild outdoors. We want you to be safe. </p>
+
+  <ul>
+  <li> Carry enough water </li>
+  <li> Wear sunscreen and a hat </li>
+  <li> Watch out for loose rocks </li>
+  </ul>
+
+  You should probably also read these <a href="">safety disclaimers.</a>
+
+{% endblock %}

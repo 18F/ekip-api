@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Plan Your Trip{% endblock title %}
+
+{% block background %}plan-your-trip{% endblock background %}
+
+{% block body %}
+
+  <h3>Exchange Your Voucher</h3>
+
+  <p> You can exchange your voucher for a 4th grade pass at any of these
+  federal land and water sites. </p>
+
+  <p> Start by selecting the state you are in, or that you plan to visit.
+  </p>
+
+  <form method="GET">
+      {{form.as_p}}
+      <button type="submit">Submit</button>
+  </form>
+
+
+  {% for site in sites %}
+      <ul>
+          <h4> <a href="{{ site.website }}">{{ site.name }}</a><br /> </h4>
+          {{ site.city }}, {{ site.state }} <br />
+          <a href="{{ site.website }}">{{ site.website }}</a>
+      </ul>
+
+  {% endfor %}
+
+{% endblock %}
+

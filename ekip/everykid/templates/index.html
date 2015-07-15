@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Main{% endblock title %}
+
+{% block background %}landing{% endblock background %}
+
+{% block body %}
+
+  <img src="{% static "img/logo.png" %}" alt="" />
+
+  <h2>Hey 4th Graders!</h2>
+  <div class="landing-description">
+    Get a free one-year pass to all of America's national parks, forests, lands and waters
+  </div>
+
+  <a href="/get-your-pass">
+    <button>Get Started!</button>
+  </a>
+
+{% endblock %}
