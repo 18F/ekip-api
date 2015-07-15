@@ -12,7 +12,7 @@ from nationalparks.api import FederalSiteResource
 def plan_your_trip(request):
     return render(
         request,
-        'plan_your_trip.html',
+        'plan-your-trip/index.html',
         {}
     )
 
@@ -20,7 +20,7 @@ def plan_your_trip(request):
 def student_pass(request):
     return render(
         request,
-        'student_pass.html',
+        'get-your-pass/student_pass.html',
         {}
     )
 
@@ -39,7 +39,7 @@ def pass_exchange(request):
 
     return render(
         request,
-        'pass_exchange.html',
+        'plan-your-trip/pass_exchange.html',
         {
             'sites': sites,
             'form': form
@@ -51,8 +51,8 @@ class EducatorFormPreview(FormPreview):
     """ The educator contact information form requires a preview screen. This
     class manages that preview process. """
 
-    form_template = 'educator_passes.html'
-    preview_template = 'educator_passes_preview.html'
+    form_template = 'get-your-pass/educator_passes.html'
+    preview_template = 'get-your-pass/educator_passes_preview.html'
 
     def done(self, request, cleaned_data):
         educator = Educator(
@@ -81,7 +81,7 @@ def educator_vouchers(request):
 
     return render(
         request,
-        'educator_vouchers.html',
+        'get-your-pass/educator_vouchers.html',
         {
             'num_vouchers': num_vouchers,
             'locators': locators,
@@ -92,6 +92,15 @@ def educator_vouchers(request):
 def learn(request):
     return render(
         request,
-        'learn.html',
+        'learn/index.html',
         {}
     )
+
+
+def fourth_grade_voucher(request):
+    return render(
+        request,
+        'get-your-pass/fourth_grade_voucher.html',
+        {}
+    )
+

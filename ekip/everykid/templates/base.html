@@ -1,18 +1,60 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
-{% block head%}
 <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+  <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
+  <meta name="description" content="">
+
 </head>
-{% endblock %}
 
 <body>
-    <h1> <a href="/">Every Kid in a Park</a></h1>
 
-    {% include "includes/nav.html" %}
+  <div class="govt-banner">
+    An official website of the United States Government.
+    <img alt="US flag signifying that this is a United States Federal Government website" src="
+    {% static 'img/us_flag_small.png' %}" />
+  </div>
 
-    <div id="main">
-        {% block body %} This is not seen. {% endblock %}
+  <section class="{% block background %}{% endblock background %}">
+
+    <header>
+
+      <nav class="top-links">
+        <ul>
+          <li>4th-grade educators</li>
+          <li>Already have a pass?</li>
+          <li>Español</li>
+        </ul>
+      </nav>
+
+      {% include "nav.html" %}
+
+    </header>
+
+    <div class="content">
+      {% block body %}{% endblock %}
     </div>
+
+  </section>
+
+  <footer>
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  </footer>
+
 </body>
 </html>

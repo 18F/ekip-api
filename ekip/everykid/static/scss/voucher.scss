@@ -1,0 +1,56 @@
+@import "bourbon";
+
+#fourth-grade-voucher {
+  padding: 50px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+
+  h1, h2, h3 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-family: "Superclarendon", serif;
+    font-size: 53px;
+    color: #5D402E;
+  }
+  h2 {
+    font-size: 45px;
+    color: #BA5E33;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  .voucher {
+    width: 525px;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .voucher-barcode {
+    top: 70px;
+    right: -110px;
+    @include transform(rotate(-90deg));
+    position: absolute;
+
+    img {
+      width: 175px;
+    }
+  }
+
+  .personnel {
+    margin: 100px 0 0 0;
+    padding: 10px 0 0 0;
+    font-size: 11px;
+    border-top: 1px dotted #BABABA;
+    text-align: left;
+
+    img {
+      width: 170px;
+      float: right;
+    }
+  }
+
+}
