@@ -28,11 +28,13 @@ class TicketCreationTests(TestCase):
         self.assertEqual(16, len(locator))
 
     def test_create_tickets(self):
-        locators, failures = views.create_tickets(20852, 5)
-        self.assertEqual(5, len(locators) + len(failures))
+        tickets, failures = views.create_tickets(20852, 5)
+        self.assertEqual(5, len(tickets) + len(failures))
 
         # Failures should be extremely rare
-        self.assertTrue(len(locators) > 0)
+        self.assertTrue(len(tickets) > 0)
+
+        locators = [t.record_locator for t in tickets]
 
         # Locators are unique with respect to each other.
         self.assertEqual(len(locators), len(set(locators)))
@@ -45,18 +47,19 @@ class TicketCreationTests(TestCase):
     @mock.patch(
         'ticketer.recordlocator.views.generator.safe_generate', mock_generator)
     def test_create_unique_ticket(self):
-        locator_one = views.create_unique_ticket(16801)
-        self.assertEqual(locator_one, 'XXXXXXXX')
+        ticket_one = views.create_unique_ticket(16801)
+        self.assertEqual(ticket_one.record_locator, 'XXXXXXXX')
 
-        locator_two = views.create_unique_ticket(16801)
-        self.assertTrue('-' in locator_two)
-        self.assertTrue('XXXXXXXX' in locator_two)
+        ticket_two = views.create_unique_ticket(16801)
+        self.assertTrue('-' in ticket_two.record_locator)
+        self.assertTrue('XXXXXXXX' in ticket_two.record_locator)
 
-        locator_three = views.create_unique_ticket(20002)
-        self.assertTrue('-' in locator_two)
-        self.assertTrue('XXXXXXXX' in locator_two)
+        ticket_three = views.create_unique_ticket(20002)
+        self.assertTrue('-' in ticket_three.record_locator)
+        self.assertTrue('XXXXXXXX' in ticket_three.record_locator)
 
-        self.assertNotEqual(locator_two, locator_three)
+        self.assertNotEqual(
+            ticket_two.record_locator, ticket_three.record_locator)
 
 
 class RecordLocatorAPITests(TestCase):
@@ -64,24 +67,19 @@ class RecordLocatorAPITests(TestCase):
 
     def test_api_generate_locators(self):
         c = Client()
-        response = c.get('/ticket/')
+        response = c.get('/api/tickets/issue/?zip=20852')
         self.assertEqual(response.status_code, 200)
         r = json.loads(response.content.decode('utf8'))
-        self.assertTrue('record_locators' in r)
-        self.assertEqual(len(r['record_locators']), 1)
+        self.assertTrue('locators' in r)
+        self.assertEqual(len(r['locators']), 1)
 
     def test_api_multiple_locators(self):
         c = Client()
-        response = c.get('/ticket/?n=50')
+        response = c.get('/api/tickets/issue/?zip=20852&num_locators=50')
         self.assertEqual(response.status_code, 200)
         r = json.loads(response.content.decode('utf8'))
-        self.assertTrue('record_locators' in r)
-        self.assertEqual(len(r['record_locators']), 50)
-
-    def test_maximum_record_locators(self):
-        c = Client()
-        response = c.get('/ticket/?n=100')
-        self.assertEqual(400, response.status_code)
+        self.assertTrue('locators' in r)
+        self.assertEqual(len(r['locators']), 50)
 
 
 class TicketGeneratorTest(TestCase):
@@ -89,10 +87,10 @@ class TicketGeneratorTest(TestCase):
 
     def test_ticket_zip_match(self):
         c = Client()
-        response = c.get('/ticket/?zip=91381')
+        response = c.get('/api/tickets/issue/?zip=91381')
         self.assertEqual(response.status_code, 200)
         r = json.loads(response.content.decode('utf8'))
         self.assertEqual(
             '91381',
             Ticket.objects.get(
-                record_locator=r['record_locators'][0]).zip_code)
+                record_locator=r['locators'][0]['record_locator']).zip_code)

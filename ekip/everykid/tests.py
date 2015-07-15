@@ -34,3 +34,20 @@ class PassExchangeSiteTestCase(TestCase):
         content = response.content.decode('utf-8')
         self.assertTrue('Aqua Fria National Monument' in content)
         self.assertTrue('Rainbow Bridge National Monument' in content)
+
+
+class EducatorFormTests(TestCase):
+    def test_educator_form(self):
+        """ Check that certain form fields are required. """
+
+        response = self.client.post(
+            '/get-your-pass/educator/',
+            {'work_email': 'abc@abc.gov', 'stage': '1'})
+
+        required_fields = [
+            'name', 'organization_name', 'address_line_1', 'city', 'state',
+            'zipcode', 'num_students', 'org_or_school']
+
+        for field in required_fields:
+            self.assertFormError(
+                response, 'form', field, 'This field is required.')
