@@ -1,6 +1,3 @@
-import json
-
-from django.http import HttpResponse, HttpResponseBadRequest
 from django.conf.urls import patterns, url
 
 from recordlocator import generator
@@ -13,6 +10,7 @@ from .models import Ticket
 
 # The maximum number of record locators that can be requested
 MAX_REQUESTABLE = 50
+
 
 class TicketResource(DjangoResource):
 
@@ -56,8 +54,11 @@ class TicketResource(DjangoResource):
     @classmethod
     def urls(cls, name_prefix=None):
         urlpatterns = super(TicketResource, cls).urls(name_prefix=name_prefix)
-        return urlpatterns + patterns('',
-            url(r'^issue/', cls.as_view('issue'), name=cls.build_url_name('issue', name_prefix)),
+        return urlpatterns + patterns(
+            '',
+            url(
+                r'^issue/', cls.as_view('issue'),
+                name=cls.build_url_name('issue', name_prefix)),
         )
 
 
@@ -107,7 +108,7 @@ def create_tickets(zip_code, num_locators=1):
         if ticket:
             tickets.append(ticket)
         else:
-            failures.append(locator)
+            failures.append(1)
     return tickets, failures
 
 
