@@ -13,7 +13,8 @@
 # and https://github.com/dlapiduz/fugacious/blob/master/cf-deploy.sh
 ###
 
-ROUTE="kids.cf.18f.us"
+ROUTE="cf.18f.us"
+HOST="kids"
 PUSH="cf.sh"
 
 # The first grep can't have -q or the second grep won't have anything to grep!
@@ -37,9 +38,9 @@ if [[ $? -ne 0 ]]; then
 fi
 
 echo "Re-routing $ROUTE to $NEW."
-cf map-route $NEW $ROUTE
+cf map-route $NEW $ROUTE -n $HOST
 echo "Un-routing $ROUTE from $OLD."
-cf unmap-route $OLD $ROUTE
+cf unmap-route $OLD $ROUTE -n $HOST
 cf stop $OLD
 
 echo "Done."
