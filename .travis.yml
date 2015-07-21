@@ -9,7 +9,7 @@ install:
 
 script:
   - cd ekip
-  - coverage run --source=foia_hub manage.py test --settings=foia_hub.settings.test
+  - coverage run --source=ekip manage.py test --settings=config.settings.test
 
 after_success:
   - coveralls
