@@ -47,6 +47,7 @@ class FourthGraderForm(forms.Form):
         widget=forms.RadioSelect,
         choices=STUDENT_CHOICES)
 
+
 class ZipCodeForm(forms.Form):
     """
         This is the form that allows us to ask 4th graders for their ZIP code.

@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
 from .views import (
-    learn, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview, 
+    learn, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview,
     fourth_grade_voucher, game_success)
 
 from .forms import EducatorForm

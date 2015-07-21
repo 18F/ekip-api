@@ -30,10 +30,11 @@ def game_success(request):
     else:
         form = ZipCodeForm()
     return render(
-        request, 
+        request,
         'get-your-pass/game_success.html',
         {'form': form}
     )
+
 
 def student_pass(request):
     if request.method == "POST":
@@ -127,4 +128,3 @@ def fourth_grade_voucher(request):
         'get-your-pass/fourth_grade_voucher.html',
         {}
     )
-
