@@ -9,7 +9,7 @@ install:
 
 script:
   - cd ekip
-  - coverage run --source=ekip manage.py test --settings=config.settings.test
+  - coverage run --source=everykid manage.py test --settings=config.settings.test
 
 after_success:
   - coveralls
