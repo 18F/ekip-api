@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from formtools.preview import FormPreview
 
-from .forms import PassSiteStateForm
+from .forms import PassSiteStateForm, FourthGraderForm, ZipCodeForm
 from .models import Educator
 from ticketer.recordlocator.views import TicketResource
 from nationalparks.api import FederalSiteResource
@@ -17,16 +18,39 @@ def plan_your_trip(request):
     )
 
 
+def game_success(request):
+    """ This is the page that is displayed after the student succesfully
+    completes the game. It'll collect the zipcode, and provide them with a link
+    to the voucher. """
+
+    if request.method == "POST":
+        form = ZipCodeForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect(reverse('fourth_grade_voucher'))
+    else:
+        form = ZipCodeForm()
+    return render(
+        request, 
+        'get-your-pass/game_success.html',
+        {'form': form}
+    )
+
 def student_pass(request):
+    if request.method == "POST":
+        form = FourthGraderForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect(reverse('first_game_start'))
+    else:
+        form = FourthGraderForm()
     return render(
         request,
         'get-your-pass/student_pass.html',
-        {}
+        {'form': form}
     )
 
 
 def pass_exchange(request):
-    """ Display the list of sites one can exchange a voucher for a pass at. """
+    """Display the list of sites one can exchange a voucher for a pass at."""
 
     state = request.GET.get('state', None)
 

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Game{% endblock title %}
+{% block background %}get-your-pass{% endblock background %}
+
+{% block body %}
+
+<h3> Explore some of the different land and water types below. </h3>
+
+<h4> Louisiana: Kitsatchie National Forest </h4>
+
+<p>Kitsatchie National Forest is Louisiana's only national forest. It coveres
+604,000 acres. Hidden in the bayous, beneath the bald cypress trees and
+old-growth pine is a world of natural beauty and excitement.</p>
+
+<p>See: wild orchids, carnivorous plants.</p>
+
+<h4>Colorado: Vermillion CLiffs National Monument</h4>
+
+<p>This 280,000 acre monument is a geologic treasure containing a variety of
+different landscapes. The colorful swirls of cross-bedded sandstone in Coyote
+Buttes are an international hiking destination.</p>
+
+<p>See: California condors.</p>
+
+<h4>Maine: Acadia National Park</h4>
+
+<p> This park is home to many plants and animals, and the tallest mountain on
+the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding
+views of the park's ocean shoreline, coastal forests and mountain silhouettes.
+</p>
+
+<p> Do: ride along broken stone roads build for horse-drawn vehicles.</p>
+
+
+<a href='{% url "game_success" %}'><button>Next</button></a>
+{% endblock %}

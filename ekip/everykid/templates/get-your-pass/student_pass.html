@@ -6,31 +6,19 @@
 
 {% block body %}
 
-  <h2>4th graders: </h2>
-  <h3> Start your outdoor adventure today </h3>
+    <h2>4th graders: </h2>
+    <h3>Start your outdoor adventure today.</h3>
 
+    <p>Play a game and discover all the wonderful places you can go. After the
+    game, you will need to print a voucher for your free pass.</p>
 
-  <ul>
-      <li> Camping. 
-      <li> Fishing. 
-      <li> Hiking through the forest. 
-      <li> Riding your bike along a river. 
-      <li> Watching whales. 
-      <li> Learning about the history and culture of our nation.
-      <li> Visiting a dinosaur. 
-      <li> Or laying down on the ground, and seeing millions of stars at night. 
-  </ul>
+    <p>This voucher can then be exchanged for your free 4th grade pass at many
+    federal lands and waters (don't worry, we'll tell you where).</p>
 
-  <p> These are just a few of the things you can do on your federal lands and
-  waters. Are you ready for your next adventure? </p>
-
-  <p> Caring for your national resources is important. Because of this, we
-  often charge visitors money when they come to federal lands and waters.
-  However, As a 4th grader, you can get a pass that allows you and your car
-  load to visit for free. </p>
-
-
-
-
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" value="Start">Start</button>
+    </form>
 
 {% endblock %}

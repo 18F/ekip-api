@@ -14,4 +14,5 @@ urlpatterns = patterns(
     url(r'^accounts/login/$', auth_views.login),
     url(r'^accounts/logout/$', auth_views.logout),
     url(r'^redeem/', include('redemption.urls')),
+    url(r'^game/', include('game.urls')),
 )
