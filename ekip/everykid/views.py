@@ -26,7 +26,9 @@ def game_success(request):
     if request.method == "POST":
         form = ZipCodeForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect(reverse('fourth_grade_voucher'))
+            return HttpResponseRedirect('%s?zip=%s' % (
+                reverse('fourth_grade_voucher'),
+                form.cleaned_data['zip_code']))
     else:
         form = ZipCodeForm()
     return render(
@@ -125,9 +127,19 @@ def learn(request):
     )
 
 
+def issue_single_voucher(zip_code):
+    """ Create a Ticket, and return a single record locator. """
+    tickets = TicketResource().issue(1, zip_code)
+    locators = [t['record_locator'] for t in tickets.value['locators']]
+    return locators[0]
+
+
 def fourth_grade_voucher(request):
+    zip_code = request.GET.get('zip', '00000')
+    locator = issue_single_voucher(zip_code)
+
     return render(
         request,
         'get-your-pass/fourth_grade_voucher.html',
-        {}
+        {'locator': locator}
     )

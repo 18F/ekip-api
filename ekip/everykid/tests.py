@@ -1,6 +1,9 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
+from .views import issue_single_voucher
+from ticketer.recordlocator.models import Ticket
+
 
 class BasicPageTestCase(TestCase):
 
@@ -49,6 +52,11 @@ class FourthGraderFlowTests(TestCase):
             reverse('game_success'), {'zip_code': 20852})
         self.assertEqual(response.status_code, 302)
         self.assertTrue('voucher' in response.url)
+
+    def test_issue_single_voucher(self):
+        locator = issue_single_voucher(20852)
+        ticket = Ticket.objects.get(record_locator=locator)
+        self.assertEqual('20852', ticket.zip_code)
 
 
 class EducatorFormTests(TestCase):
