@@ -46,7 +46,7 @@ class FourthGraderFlowTests(TestCase):
 
         response = self.client.post(reverse('game_success'), {})
         self.assertFormError(
-                response, 'form', 'zip_code', 'This field is required.')
+            response, 'form', 'zip_code', 'This field is required.')
 
         response = self.client.post(
             reverse('game_success'), {'zip_code': 20852})
