@@ -1,0 +1,82 @@
+#educators {
+
+  .content {
+    h2, p, .explanation {
+      width: 500px;
+    }
+
+    .explanation {
+      border: 2px solid #FFE087;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 14px;
+
+      button {
+        background: #FFE087;
+        color: #306B38;
+        padding: 10px 40px;
+        margin: 25px auto 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  .content-inner {
+    background: #E9FCEB;
+    color: #306B38;
+  }
+
+  .content-inner-block {
+    width: 650px;
+    padding: 75px 0;
+    margin: auto;
+
+    h3 {
+      font-size: 27px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    width: 300px;
+
+    ul {
+      padding: 10px 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 15px 0;
+
+      label {
+        font-weight: bold;
+        font-size: 13px;
+        display: block;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #5A7C5D;
+        padding: 10px;
+      }
+      input[type="number"] {
+        width: 50px;
+        border: 1px solid #5A7C5D;
+        padding: 10px;
+      }
+    }
+
+    button {
+      color: #fff;
+      padding: 10px 20px;
+      margin-right: -20px;
+      background: #306B38;
+      float: right;
+    }
+
+  }
+
+
+}

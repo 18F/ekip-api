@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="{% block page_id %}{% endblock page_id %}">
 
   <div class="govt-banner">
     An official website of the United States Government.
@@ -43,9 +43,15 @@
     </header>
 
     <div class="content">
-      {% block body %}{% endblock %}
+      {% block content %}{% endblock content %}
     </div>
 
+  </section>
+
+  <section class="content-inner">
+    <div class="content-inner-block">
+      {% block content_inner %}{% endblock content_inner %}
+    </div>
   </section>
 
   <footer>

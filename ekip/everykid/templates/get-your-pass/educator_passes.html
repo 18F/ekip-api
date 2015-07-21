@@ -2,70 +2,44 @@
 
 {% block title %}Get Your Pass - Educators{% endblock title %}
 
-{% block background %}get-your-pass{% endblock background %}
+{% block page_id %}educators{% endblock page_id %}
 
-{% block body %}
+{% block background %}hills{% endblock background %}
 
-  <h2>Educators</h2>
+{% block content %}
 
-   <p> As a 4th grade educator, you can download a learning activity, and
-   print paper vouchers for your students. These vouchers will give them free
-   access for their 4th grade year, and the following summer to federal lands
-   and waters. </p>
+  <h2>Get Vouchers For Your Students</h2>
 
-    <p> You are a 4th grade educator if: <p>
+  <p>As a 4th grade educator, you can download a learning activity and print paper vouchers for your students. These vouchers will give them free access for up to a full year to all federal lands and waters.</p>
 
-    <ol>
-        <li> you are a teacher of 4th graders at a US school or a US military school. </li>
+  <div class="explanation">
 
-        <li> or you are responsible for the engagement of 4th graders as part
-        of a youth serving organization. This includes religious group leaders,
-        camp directors and leaders of home-schoolers or after-school programs.
-        </li>
-    </ol>
+    <h3>You are a 4th-grade educator if ...</h3>
+    <p>You are a teacher of 4th graders at a US school or a US military school, or</p>
+    <p>You are responsible for the engagement of 4th graders as part of a youth serving organization. This includes religious group leaders, camp directors and leaders of home-schoolers or after-school programs.</p>
 
-    <!-- <p> We've created a fun, standards-based learning activity that you can use
-    to introduce topics surrouding federal lands and waters to your 4th grade
-    students. </p> -->
+    <button>begin</button>
 
-    <h3> Lesson plans and activities </h3>
+  </div>
 
-    <p> We've created fun, standards based learning activities that you can use
-    to introduce topics surrounding federal lands and waters to your 4th grader
-    students. </p>
+{% endblock content %}
 
-    <ul>
-        <li> 
-            Compare and contract the types of environments found in national
-            parks, describe what a national park is, and find information using
-            maps. <br />
+{% block content_inner %}
 
-            <a href="http://www.nps.gov/teachers/classrooms/natpar45.htm">See activity details.</a> 
-        </li>
+  <h3>First download the activity</h3>
+  <p>We've created a fun and interactive learning activity to help you introduce topics surrounding national lands and waters to your 4th-grade students.</p>
 
-        <li>
-            Make pinwheels and use the power of the wind to do work. <br />
+  <h3>Then generate vouchers</h3>
+  <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
 
-            <a href="http://www.blm.gov/wo/st/en/res/Education_in_BLM/Learning_Landscapes/For_Teachers/science_and_children/energy/index/energy8/energy11.html">See activity details</a>
-        </li>
-    </ul>
+  <form action="" method="post">
+    {% csrf_token %}
 
-    <h3> Vouchers for your students </h3>
- 
-    <p> Once your students have successfully completed the activity, you can
-    award them with vouchers. Each student will receive their own individual
-    voucher.</p>
+    {% include "educator_form.html" %}
 
-    <p> To access the vouchers, please complete the short form below. </p>
+      <input type="hidden" name="{{stage_field}}" value="1" />
+      {# <input type="submit" value="Preview" /> #}
+      <button>Next:<br/>Review Info</button>
+  </form>
 
-    <form action="" method="post">
-        {% csrf_token %}
-
-        {% include 'educator_form.html' %}
-            
-        <input type="hidden" name="{{stage_field}}" value="1" />
-        <input type="submit" value="Preview" />
-    </form>
-
-
-{% endblock %}
+{% endblock content_inner %}

@@ -1,55 +1,57 @@
-        <h4> 4th grade educator information </h4>
 
-        <div class="field-wrapper">
-            {{ form.name.errors }}
-            {{ form.name.label_tag }}
-            {{ form.name }}
-        </div>
-        <div class="field-wrapper">
-            {{ form.work_email.errors }}
-            {{ form.work_email.label_tag }}
-            {{ form.work_email }}
-        </div>
-        <div class="field-wrapper">
-            {{ form.org_or_school.errors }}
-            {{ form.org_or_school.label_tag }}
-            {{ form.org_or_school}}
-        </div>
+  <span>4th-grade educator info:</span>
+  <ul>
+    <li>
+      {{ form.name.errors }}
+      {{ form.name.label_tag }}
+      {{ form.name }}
+    </li>
+    <li>
+      {{ form.work_email.errors }}
+      {{ form.work_email.label_tag }}
+      {{ form.work_email }}
+    </li>
+    <li>
+      {{ form.org_or_school.errors }}
+      {# {{ form.org_or_school.label_tag }} #}
+      {{ form.org_or_school}}
+    </li>
 
-        <h4> Organizational Information </h4>
-        <div class="field-wrapper">
-            {{ form.organization_name.errors }}
-            {{ form.organization_name.label_tag }}
-            {{ form.organization_name}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.address_line_1.errors }}
-            {{ form.address_line_1.label_tag }}
-            {{ form.address_line_1}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.address_line_2.errors }}
-            {{ form.address_line_2.label_tag }}
-            {{ form.address_line_2}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.city.errors }}
-            {{ form.city.label_tag }}
-            {{ form.city}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.state.errors }}
-            {{ form.state.label_tag }}
-            {{ form.state}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.zipcode.errors }}
-            {{ form.zipcode.label_tag }}
-            {{ form.zipcode}}
-        </div>
-        <div class="field-wrapper">
-            {{ form.num_students.errors }}
-            {{ form.num_students.label_tag }}
-            {{ form.num_students}}
-        </div>
-
+  <span>Organizational info:</span>
+  <ul>
+    <li>
+      {{ form.organization_name.errors }}
+      {{ form.organization_name.label_tag }}
+      {{ form.organization_name}}
+    </li>
+    <li>
+      {{ form.address_line_1.errors }}
+      {{ form.address_line_1.label_tag }}
+      {{ form.address_line_1}}
+    </li>
+    <li>
+      {{ form.address_line_2.errors }}
+      {{ form.address_line_2.label_tag }}
+      {{ form.address_line_2}}
+    </li>
+    <li>
+      {{ form.city.errors }}
+      {{ form.city.label_tag }}
+      {{ form.city}}
+    </li>
+    <li>
+      {{ form.state.errors }}
+      {{ form.state.label_tag }}
+      {{ form.state}}
+    </li>
+    <li>
+      {{ form.zipcode.errors }}
+      {{ form.zipcode.label_tag }}
+      {{ form.zipcode}}
+    </li>
+    <li>
+      {{ form.num_students.errors }}
+      {{ form.num_students.label_tag }}
+      {{ form.num_students}}
+    </li>
+  </ul>
