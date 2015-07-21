@@ -37,6 +37,9 @@ def game_success(request):
 
 
 def student_pass(request):
+    """ This is the view where we ask if they are a 4th grader (and if they
+    are) then forward them on to the first page of the game."""
+
     if request.method == "POST":
         form = FourthGraderForm(request.POST)
         if form.is_valid():

@@ -38,6 +38,11 @@ class EducatorForm(forms.ModelForm):
 
 
 class FourthGraderForm(forms.Form):
+    """
+        A very simple, one field form that is used to confirm whether the
+        student is a 4th grader.
+    """
+
     STUDENT_CHOICES = (
         ('Y', _('Yes, I am in the 4th grader (or 10 years old)')),
         ('N', _('No')))
