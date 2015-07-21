@@ -2,6 +2,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.us.us_states import US_STATES
+from localflavor.us.forms import USZipCodeField
 
 from .models import Educator
 
@@ -34,3 +35,27 @@ class EducatorForm(forms.ModelForm):
             'name', 'work_email', 'organization_name', 'address_line_1',
             'address_line_2', 'city', 'state', 'zipcode', 'num_students',
             'org_or_school']
+
+
+class FourthGraderForm(forms.Form):
+    """
+        A very simple, one field form that is used to confirm whether the
+        student is a 4th grader.
+    """
+
+    STUDENT_CHOICES = (
+        ('Y', _('Yes, I am in the 4th grader (or 10 years old)')),
+        ('N', _('No')))
+
+    in_the_fourth_grade = forms.ChoiceField(
+        label=_("Are you a 4th grader?"),
+        widget=forms.RadioSelect,
+        choices=STUDENT_CHOICES)
+
+
+class ZipCodeForm(forms.Form):
+    """
+        This is the form that allows us to ask 4th graders for their ZIP code.
+    """
+
+    zip_code = USZipCodeField(label=_("What is your ZIP code?"))

@@ -6,6 +6,19 @@
 
 {% block body %}
 
-  <h2>4th Graders</h2>
+    <h2>4th graders: </h2>
+    <h3>Start your outdoor adventure today.</h3>
+
+    <p>Play a game and discover all the wonderful places you can go. After the
+    game, you will need to print a voucher for your free pass.</p>
+
+    <p>This voucher can then be exchanged for your free 4th grade pass at many
+    federal lands and waters (don't worry, we'll tell you where).</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" value="Start">Start</button>
+    </form>
 
 {% endblock %}
