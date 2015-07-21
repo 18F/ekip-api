@@ -68,6 +68,11 @@ button {
   padding: 0 0 50px $nav-width;
 }
 
+.errors {
+  padding: 10px 0;
+  color: #ff0000;
+}
+
 @import "landing";
 @import "get-your-pass";
 @import "educators";

@@ -1,57 +1,26 @@
+    {% if form.errors %}
+      <div class="errors">
+        Please correctly fill out the fields below:
+      </div>
+    {% endif %}
 
-  <span>4th-grade educator info:</span>
-  <ul>
-    <li>
-      {{ form.name.errors }}
-      {{ form.name.label_tag }}
-      {{ form.name }}
-    </li>
-    <li>
-      {{ form.work_email.errors }}
-      {{ form.work_email.label_tag }}
-      {{ form.work_email }}
-    </li>
-    <li>
-      {{ form.org_or_school.errors }}
-      {# {{ form.org_or_school.label_tag }} #}
-      {{ form.org_or_school}}
-    </li>
-
-  <span>Organizational info:</span>
-  <ul>
-    <li>
-      {{ form.organization_name.errors }}
-      {{ form.organization_name.label_tag }}
-      {{ form.organization_name}}
-    </li>
-    <li>
-      {{ form.address_line_1.errors }}
-      {{ form.address_line_1.label_tag }}
-      {{ form.address_line_1}}
-    </li>
-    <li>
-      {{ form.address_line_2.errors }}
-      {{ form.address_line_2.label_tag }}
-      {{ form.address_line_2}}
-    </li>
-    <li>
-      {{ form.city.errors }}
-      {{ form.city.label_tag }}
-      {{ form.city}}
-    </li>
-    <li>
-      {{ form.state.errors }}
-      {{ form.state.label_tag }}
-      {{ form.state}}
-    </li>
-    <li>
-      {{ form.zipcode.errors }}
-      {{ form.zipcode.label_tag }}
-      {{ form.zipcode}}
-    </li>
-    <li>
-      {{ form.num_students.errors }}
-      {{ form.num_students.label_tag }}
-      {{ form.num_students}}
-    </li>
-  </ul>
+    <span>4th-grade educator info:</span>
+    <ul>
+    {% for field in form %}
+      {% if field.html_name == 'organization_name' %}
+    </ul>
+    <span>Organizational info:</span>
+    <ul>
+      {% endif %}
+      {% if field.html_name != 'zipcode' %}
+      <li>
+      {% endif %}
+        <div class="{{ field.html_name }}{% if field.errors %} error{% endif %}">
+          {{ field.label_tag }}
+          {{ field }}
+        </div>
+      {% if field.html_name != 'state' %}
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>

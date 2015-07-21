@@ -31,6 +31,5 @@ class EducatorForm(forms.ModelForm):
     class Meta:
         model = Educator
         fields = [
-            'name', 'work_email', 'organization_name', 'address_line_1',
-            'address_line_2', 'city', 'state', 'zipcode', 'num_students',
-            'org_or_school']
+            'name', 'work_email', 'org_or_school', 'organization_name', 'address_line_1',
+            'address_line_2', 'city', 'state', 'zipcode', 'num_students']

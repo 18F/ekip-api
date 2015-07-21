@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}Get Your Pass - Educators{% endblock title %}
-{% block background %}get-your-pass{% endblock background %}
 
-{% block body %}
+{% block page_id %}educators{% endblock page_id %}
+
+{% block background %}hills{% endblock background %}
+
+{% block content %}
 
 <h1> Does your information look good? </h1>
 
@@ -18,7 +21,7 @@
     {% endfor %}
 </table>
 
-<form action="" method="post"> 
+<form action="" method="post">
 {% csrf_token %}
 
 {% for field in form %}
@@ -29,7 +32,7 @@
 <p><input type="submit" value="Good to go? Submit" /></p>
 </form>
 
-If there are mistakes, you can edit it again. 
+If there are mistakes, you can edit it again.
 
 <form action="" method="post">
 {% csrf_token %}
@@ -37,6 +40,6 @@ If there are mistakes, you can edit it again.
 {% include 'educator_form.html' %}
 
 <input type="hidden" name="{{ stage_field }}" value="1" />
-<p><input type="submit" value="Preview" /></p> 
+<p><input type="submit" value="Preview" /></p>
 </form>
-{% endblock %}
+{% endblock content %}

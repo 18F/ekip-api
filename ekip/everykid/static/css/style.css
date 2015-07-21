@@ -92,6 +92,10 @@ nav.main-nav {
   margin: auto;
   padding: 0 0 50px 175px; }
 
+.errors {
+  padding: 10px 0;
+  color: #ff0000; }
+
 #landing .content {
   width: 950px;
   text-align: center;
@@ -165,15 +169,19 @@ nav.main-nav {
     margin-bottom: 30px; }
 
 #educators form {
-  width: 300px; }
+  width: 325px; }
+  #educators form span {
+    font-size: 13px; }
   #educators form ul {
-    padding: 10px 0; }
+    padding: 5px 0 10px 0; }
   #educators form li {
     list-style: none;
-    margin: 0 0 15px 0; }
+    margin: 0 0 15px 0;
+    clear: both; }
     #educators form li label {
       font-weight: bold;
       font-size: 13px;
+      padding-bottom: 5px;
       display: block; }
     #educators form li input[type="text"] {
       width: 100%;
@@ -183,6 +191,38 @@ nav.main-nav {
       width: 50px;
       border: 1px solid #5A7C5D;
       padding: 10px; }
+    #educators form li .org_or_school > label {
+      display: none; }
+    #educators form li .org_or_school ul {
+      padding: 0; }
+      #educators form li .org_or_school ul li {
+        margin: 0;
+        display: inline-block;
+        position: relative;
+        padding-left: 15px; }
+        #educators form li .org_or_school ul li input[type="radio"] {
+          margin: 0 5px 0 0; }
+        #educators form li .org_or_school ul li:nth-child(1) {
+          padding: 0 20px 0 0; }
+        #educators form li .org_or_school ul li:nth-child(2) {
+          padding: 0 0 0 35px; }
+          #educators form li .org_or_school ul li:nth-child(2):before {
+            content: "or";
+            font-size: 13px;
+            position: absolute;
+            left: 0; }
+    #educators form li .city {
+      width: 250px; }
+    #educators form li .state {
+      width: 200px;
+      float: left; }
+    #educators form li .zipcode {
+      width: 100px;
+      float: right; }
+    #educators form li .error input, #educators form li .error select {
+      border: 1px solid red; }
+    #educators form li .error.org_or_school {
+      border: 1px solid red; }
   #educators form button {
     color: #fff;
     padding: 10px 20px;
