@@ -25,20 +25,22 @@
 {% endblock content %}
 
 {% block content_inner %}
+  <div class="content-inner-block">
 
-  <h3>First download the activity</h3>
-  <p>We've created a fun and interactive learning activity to help you introduce topics surrounding national lands and waters to your 4th-grade students.</p>
+    <h3>First download the activity</h3>
+    <p>We've created a fun and interactive learning activity to help you introduce topics surrounding national lands and waters to your 4th-grade students.</p>
 
-  <h3>Then generate vouchers</h3>
-  <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
+    <h3>Then generate vouchers</h3>
+    <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
 
-  <form action="" method="post">
-    {% csrf_token %}
+    <form action="" method="post">
+      {% csrf_token %}
 
-    {% include "educator_form.html" %}
+      {% include "educator_form.html" %}
 
-    <input type="hidden" name="{{stage_field}}" value="1" />
-    <button>Next:<br/>Review Info</button>
-  </form>
+      <input type="hidden" name="{{stage_field}}" value="1" />
+      <button>Next:<br/>Review Info</button>
+    </form>
+  </div>
 
 {% endblock content_inner %}

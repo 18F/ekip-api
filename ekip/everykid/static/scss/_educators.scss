@@ -4,6 +4,9 @@
     h2, p, .explanation {
       width: 500px;
     }
+    h2 {
+      padding-bottom: 0;
+    }
 
     .explanation {
       border: 2px solid #FFE087;
@@ -139,8 +142,31 @@
       background: #306B38;
       float: right;
     }
-
   }
 
+  .preview {
+    width: 550px;
+    background: #D8FCDD;
+    color: #306B38;
+    padding: 30px;
+
+    .data {
+      padding: 20px 0 0 150px;
+      font-weight: 700;
+
+      form {
+        width: auto;
+
+        button {
+          margin: 0 60px 0 0;
+        }
+      }
+    }
+
+    .edit {
+      padding: 30px 0;
+      clear: both;
+    }
+  }
 
 }

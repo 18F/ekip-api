@@ -7,14 +7,15 @@
 
 {% block content %}
 
-<h1> Vouchers </h1>
+  <h2>Vouchers</h2>
 
-Here are {{num_vouchers}} vouchers.
+  <p>Here are {{num_vouchers}} vouchers.</p>
 
-<ul>
-{% for l in locators %}
+  <ul>
+  {% for l in locators %}
     <li> {{l}} </li>
-{% endfor %}
-</ul>
+  {% endfor %}
+  </ul>
 
 {% endblock content %}
+

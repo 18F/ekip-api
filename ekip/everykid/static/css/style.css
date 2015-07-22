@@ -4,8 +4,7 @@ body, html {
   color: #fff;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  font-family: "Avenir Next"; }
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -56,9 +55,16 @@ nav.top-links {
       padding-right: 0;
       border: none; }
 
+#educators .educators-link {
+  color: #F7D27F; }
+
 nav.main-nav {
   width: 175px;
-  position: absolute; }
+  position: absolute;
+  top: 40px; }
+  nav.main-nav img {
+    width: 150px;
+    margin: 0 0 10px 0; }
   nav.main-nav ul {
     display: inline-block; }
   nav.main-nav li {
@@ -75,6 +81,11 @@ nav.main-nav {
       text-decoration: none;
       color: #456D97; }
 
+#landing .main-nav {
+  top: 95px; }
+  #landing .main-nav img {
+    display: none; }
+
 .mountain {
   background: url(../img/backgrounds/mountain.jpg) no-repeat center center fixed;
   background-size: cover; }
@@ -89,6 +100,7 @@ nav.main-nav {
 
 .content {
   width: 775px;
+  min-height: 500px;
   margin: auto;
   padding: 0 0 50px 175px; }
 
@@ -142,6 +154,9 @@ nav.main-nav {
 
 #educators .content h2, #educators .content p, #educators .content .explanation {
   width: 500px; }
+
+#educators .content h2 {
+  padding-bottom: 0; }
 
 #educators .content .explanation {
   border: 2px solid #FFE087;
@@ -229,6 +244,22 @@ nav.main-nav {
     margin-right: -20px;
     background: #306B38;
     float: right; }
+
+#educators .preview {
+  width: 550px;
+  background: #D8FCDD;
+  color: #306B38;
+  padding: 30px; }
+  #educators .preview .data {
+    padding: 20px 0 0 150px;
+    font-weight: 700; }
+    #educators .preview .data form {
+      width: auto; }
+      #educators .preview .data form button {
+        margin: 0 60px 0 0; }
+  #educators .preview .edit {
+    padding: 30px 0;
+    clear: both; }
 
 footer {
   clear: both; }

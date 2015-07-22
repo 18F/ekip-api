@@ -1,6 +1,12 @@
 nav.main-nav {
   width: $nav-width;
   position: absolute;
+  top: 40px;
+
+  img {
+    width: 150px;
+    margin: 0 0 10px 0;
+  }
 
   ul {
     display: inline-block;
@@ -22,5 +28,14 @@ nav.main-nav {
       color: #456D97;
     }
   }
+}
 
+#landing {
+  .main-nav {
+    top: 95px;
+
+    img {
+      display: none;
+    }
+  }
 }
