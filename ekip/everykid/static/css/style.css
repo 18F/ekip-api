@@ -47,7 +47,7 @@ header {
   margin: auto; }
 
 nav.top-links {
-  padding: 20px 0 20px 0;
+  padding: 5px 0 40px 0;
   text-align: right; }
   nav.top-links ul li {
     font-size: 14px;
@@ -63,7 +63,7 @@ nav.top-links {
   color: #F7D27F; }
 
 nav.main-nav {
-  width: 175px;
+  width: 190px;
   position: absolute;
   top: 40px; }
   nav.main-nav img {
@@ -110,10 +110,10 @@ nav.main-nav {
   background-size: cover; }
 
 .content {
-  width: 775px;
+  width: 760px;
   min-height: 500px;
   margin: auto;
-  padding: 0 0 50px 175px; }
+  padding: 0 0 50px 190px; }
 
 .errors {
   padding: 10px 0;
@@ -175,23 +175,23 @@ nav.main-nav {
   #get-your-pass .content .boxes li:last-child {
     margin: 0; }
 
-#educators .content h2, #educators .content p, #educators .content .explanation {
-  width: 500px; }
-
-#educators .content h2 {
-  padding-bottom: 0; }
-
-#educators .content .explanation {
-  border: 2px solid #FFE087;
-  padding: 20px;
-  margin: 20px 0;
-  font-size: 14px; }
-  #educators .content .explanation button {
-    background: #FFE087;
-    color: #306B38;
-    padding: 10px 40px;
-    margin: 25px auto 0 auto;
-    display: block; }
+#educators .content {
+  padding-top: 100px; }
+  #educators .content h2, #educators .content p, #educators .content .explanation {
+    width: 500px; }
+  #educators .content h2 {
+    padding-bottom: 0; }
+  #educators .content .explanation {
+    border: 2px solid #FFE087;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px; }
+    #educators .content .explanation button {
+      background: #FFE087;
+      color: #306B38;
+      padding: 10px 40px;
+      margin: 25px auto 0 auto;
+      display: block; }
 
 #educators .content-inner {
   background: #E9FCEB;
