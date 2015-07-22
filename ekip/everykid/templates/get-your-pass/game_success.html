@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+
+{% block page_id %}student-pass{% endblock page_id %}
+
+{% block background %}brown-rocks{% endblock background %}
+
+{% block content %}
+
+Success! You will get your voucher on the next screen. Please print your
+voucher, keep it in a safe place, and remember to take it with you on your
+trip.
+
+When you visit your federal lands and waters, we'd love to know where you are
+coming from.
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="input" value="submit">Submit</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+language: python
+
+python:
+  - "3.4"
+
+install:
+  - travis_retry pip install -r requirements.txt
+  - travis_retry pip install -r requirements-dev.txt
+
+script:
+  - cd ekip
+  - coverage run --source=everykid manage.py test --settings=config.settings.test
+
+after_success:
+  - coveralls

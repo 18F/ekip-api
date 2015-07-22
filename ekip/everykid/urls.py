@@ -2,8 +2,8 @@ from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
 from .views import (
-    learn, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview, 
-    fourth_grade_voucher)
+    learn, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview,
+    fourth_grade_voucher, game_success)
 
 from .forms import EducatorForm
 
@@ -13,7 +13,14 @@ urlpatterns = patterns(
         template_name="index.html"), name="main_landing"),
 
     # GET YOUR PASS
-    url(r'get-your-pass/fourth-grader/voucher', fourth_grade_voucher, name="fourth_grade_voucher"),
+    url(
+        r'get-your-pass/fourth-grader/game-end',
+        game_success,
+        name="game_success"),
+    url(
+        r'get-your-pass/fourth-grader/voucher',
+        fourth_grade_voucher,
+        name="fourth_grade_voucher"),
     url(r'get-your-pass/fourth-grader', student_pass, name="student_pass"),
     url(
         r'get-your-pass/educator/vouchers/', educator_vouchers,

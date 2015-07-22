@@ -39,6 +39,7 @@ LOCAL_APPS = (
     'nationalparks',
     'redemption',
     'everykid',
+    'game'
 )
 
 THIRD_PARTY_APPS = (

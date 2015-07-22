@@ -2,10 +2,25 @@
 
 {% block title %}Get Your Pass - Fourth Graders{% endblock title %}
 
-{% block background %}get-your-pass{% endblock background %}
+{% block page_id %}student-pass{% endblock page_id %}
 
-{% block body %}
+{% block background %}brown-rocks{% endblock background %}
 
-  <h2>4th Graders</h2>
+{% block content %}
 
-{% endblock %}
+    <h2>4th graders:</h2>
+    <h3>Start your outdoor adventure today.</h3>
+
+    <p>Play a game and discover all the wonderful places you can go. After the
+    game, you will need to print a voucher for your free pass.</p>
+
+    <p>This voucher can then be exchanged for your free 4th grade pass at many
+    federal lands and waters (don't worry, we'll tell you where).</p>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{form}}
+      <button>Start</button>
+    </form>
+
+{% endblock content %}

@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from formtools.preview import FormPreview
 
-from .forms import PassSiteStateForm
+from .forms import PassSiteStateForm, FourthGraderForm, ZipCodeForm
 from .models import Educator
 from ticketer.recordlocator.views import TicketResource
 from nationalparks.api import FederalSiteResource
@@ -17,16 +18,45 @@ def plan_your_trip(request):
     )
 
 
+def game_success(request):
+    """ This is the page that is displayed after the student succesfully
+    completes the game. It'll collect the zipcode, and provide them with a link
+    to the voucher. """
+
+    if request.method == "POST":
+        form = ZipCodeForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('%s?zip=%s' % (
+                reverse('fourth_grade_voucher'),
+                form.cleaned_data['zip_code']))
+    else:
+        form = ZipCodeForm()
+    return render(
+        request,
+        'get-your-pass/game_success.html',
+        {'form': form}
+    )
+
+
 def student_pass(request):
+    """ This is the view where we ask if they are a 4th grader (and if they
+    are) then forward them on to the first page of the game."""
+
+    if request.method == "POST":
+        form = FourthGraderForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect(reverse('first_game_start'))
+    else:
+        form = FourthGraderForm()
     return render(
         request,
         'get-your-pass/student_pass.html',
-        {}
+        {'form': form}
     )
 
 
 def pass_exchange(request):
-    """ Display the list of sites one can exchange a voucher for a pass at. """
+    """Display the list of sites one can exchange a voucher for a pass at."""
 
     state = request.GET.get('state', None)
 
@@ -97,10 +127,19 @@ def learn(request):
     )
 
 
+def issue_single_voucher(zip_code):
+    """ Create a Ticket, and return a single record locator. """
+    tickets = TicketResource().issue(1, zip_code)
+    locators = [t['record_locator'] for t in tickets.value['locators']]
+    return locators[0]
+
+
 def fourth_grade_voucher(request):
+    zip_code = request.GET.get('zip', '00000')
+    locator = issue_single_voucher(zip_code)
+
     return render(
         request,
         'get-your-pass/fourth_grade_voucher.html',
-        {}
+        {'locator': locator}
     )
-

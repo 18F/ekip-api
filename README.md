@@ -1,5 +1,8 @@
 EKIP API
 =======
+
+[![Coverage Status](https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/ekip-api?branch=master)
+
 # ticketing-system
 A ticketing system.
 
