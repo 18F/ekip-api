@@ -70,16 +70,23 @@ nav.main-nav {
   nav.main-nav li {
     background: #fff;
     color: #456D97;
-    padding: 7px 12px;
     margin: 0 0 10px 0;
+    border: 2px solid #1E7197;
     text-transform: uppercase;
     font-size: 13px;
     font-family: "Superclarendon", serif;
     text-align: center;
     display: block; }
     nav.main-nav li a {
+      width: inherit;
+      height: inherit;
+      padding: 7px 12px;
       text-decoration: none;
-      color: #456D97; }
+      color: #456D97;
+      display: block; }
+      nav.main-nav li a:hover {
+        background: #1E7197;
+        color: #fff; }
 
 #landing .main-nav {
   top: 95px; }
