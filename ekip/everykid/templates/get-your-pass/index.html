@@ -8,26 +8,35 @@
 
 {% block content %}
 
-  <h2>Get Your Pass</h2>
+  <div class="pass-content">
 
-  <ul class="boxes">
-    <li>
-      <h3>I'm a<br/>4th grader</h3>
-      <p>Play a game to earn your pass.</p>
+    <h2>Get Your Pass</h2>
+    <p>Camp, fish, bike along a river, or even watch a whale burst through the surface of the water. You can do all these things and more on your federal lands and waters. And as a 4th grader, now you can get a free pass that allows you and a whole car load to visit for free!
+    </p>
 
-     <a href="{%url 'student_pass' %}"><button>Start</button></a>
-    </li>
-    <!--<li>
-      <h3>I'm not<br/>a 4th grader</h3>
-      <p>Sorry, you can't get a voucher, but you can still plan a trip.</p>
-      <br/>
-      <button>Plan a Trip</button>
-    </li> -->
-    <li>
-      <h3>I'm an <br/> educator</h3>
-      <p>Learn how to get passes for your students. </p>
-      <a href="{% url 'educator_passes' %}"><button>Downloads</button></a>
-    </li>
-  </ul>
+    <ul class="boxes">
+      <li>
+        <a href="{%url 'student_pass' %}">
+          <div>
+            <h3>I'm a<br/>4th grader</h3>
+            <p>Play a game to earn your pass.</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <div>
+          <h3>I am a<br/>Parent</h3>
+          <p>Find out how the program works.</p>
+        </div>
+      </li>
+      <li>
+        <a href="{% url 'educator_passes' %}">
+          <div>
+            <h3>I'm an <br/> educator</h3>
+            <p>Learn how to get passes for your students. </p>
+          </div>
+        </a>
+      </li>
+    </ul>
 
 {% endblock content %}

@@ -2,21 +2,40 @@
 
   .content {
 
+    .pass-content {
+      width: 600px;
+      background: #1E7197;
+      padding: 30px;
+
+      h2 {
+        padding: 0;
+      }
+    }
+
     ul {
       margin: 30px 0 0 0;
     }
 
     .boxes li {
-      width: 28%;
-      background: #FEEED0;
-      color: #000;
-      padding: 15px;
+      width: 31%;
+      height: 160px;
+      border: 2px solid #fff;
       margin: 0 10px 0 0;
       font-size: 14px;
       vertical-align: top;
       display: inline-block;
 
+      div {
+        height: 130px;
+        padding: 15px;
+      }
+
+      a {
+        display: block;
+      }
+
       h3 {
+        color: #FED681;
         padding: 0;
       }
 
