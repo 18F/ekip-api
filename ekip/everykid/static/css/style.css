@@ -262,4 +262,16 @@ nav.main-nav {
     clear: both; }
 
 footer {
+  background: #FDEED0;
   clear: both; }
+  footer .footer-content {
+    width: 950px;
+    padding: 50px 0;
+    margin: auto;
+    color: #306B37; }
+    footer .footer-content h3 {
+      color: #673E2F; }
+    footer .footer-content nav ul {
+      padding: 5px 0; }
+    footer .footer-content nav li {
+      padding: 5px 0; }
