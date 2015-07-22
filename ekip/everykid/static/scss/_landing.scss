@@ -1,0 +1,29 @@
+#landing {
+
+  .content {
+    width: $site-width;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    .landing-description {
+      width: 550px;
+      font-size: 18px;
+      margin: 0 auto 15px auto;
+    }
+
+    button {
+      border: 4px solid #fff;
+      background: transparent;
+      font-family: "Superclarendon", serif;
+      color: #fff;
+      font-size: 19px;
+      padding: 10px 20px;
+      margin: 0 0 70px 0;
+    }
+  }
+}

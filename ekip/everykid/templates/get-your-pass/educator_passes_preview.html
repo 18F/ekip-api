@@ -1,42 +1,65 @@
 {% extends "base.html" %}
 
 {% block title %}Get Your Pass - Educators{% endblock title %}
-{% block background %}get-your-pass{% endblock background %}
 
-{% block body %}
+{% block page_id %}educators{% endblock page_id %}
 
-<h1> Does your information look good? </h1>
+{% block background %}hills{% endblock background %}
 
-<p> Please confirm that the information you've provided is correct. </p>
+{% block content %}
 
-<table>
-    {% for field in form %}
-    <tr>
-    <th>{{ field.label }}</th>
-    <td>{{ field.data }}</td>
-    </tr>
-    {% endfor %}
-</table>
+  <div class="preview">
 
-<form action="" method="post"> 
-{% csrf_token %}
+    <h2>Info look good?</h2>
+    <p>Please confirm that the information you've provided is correct.</p>
 
-{% for field in form %}
-    {{field.as_hidden}}
-{% endfor %}
-<input type="hidden" name="{{ stage_field }}" value="2"/>
-<input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}"/>
-<p><input type="submit" value="Good to go? Submit" /></p>
-</form>
+    <div class="data">
+      {{ form.name.data }}<br/>
+      {{ form.work_email.data }}<br/>
+      <br/>
+      {{ form.organization_name.data }}<br/>
+      {{ form.address_line_1.data }}<br/>
+      {% if  form.address_line_2.data %}
+      {{ form.address_line_2.data }}<br/>
+      {% endif %}
+      {{ form.city.data }}, {{ form.state.data }} {{ form.zipcode.data }}<br/>
+      <br/>
+      {{ form.num_students.data }}
+      {% if form.num_students.data == '1' %}
+        student
+      {% else %}
+        students
+      {% endif %}
 
-If there are mistakes, you can edit it again. 
+      <form action="" method="post">
+        {% csrf_token %}
 
-<form action="" method="post">
-{% csrf_token %}
+        {% for field in form %}
+          {{field.as_hidden}}
+        {% endfor %}
+        <input type="hidden" name="{{ stage_field }}" value="2"/>
+        <input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}"/>
+        <button>Good to go?<br/>Submit</button>
+      </form>
 
-{% include 'educator_form.html' %}
+    </div>
 
-<input type="hidden" name="{{ stage_field }}" value="1" />
-<p><input type="submit" value="Preview" /></p> 
-</form>
-{% endblock %}
+    <div class="edit">
+
+      <p>If there are mistakes, you can edit it again:</p>
+
+      <form action="" method="post">
+        {% csrf_token %}
+
+        {% include 'educator_form.html' %}
+
+        <input type="hidden" name="{{ stage_field }}" value="1" />
+
+        <button>Edit</button>
+      </form>
+
+      <br clear="both" />
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,174 @@
+#educators {
+
+  .content {
+    padding-top: 100px;
+
+    h2, p, .explanation {
+      width: 500px;
+    }
+    h2 {
+      padding-bottom: 0;
+    }
+
+    .explanation {
+      border: 2px solid #FFE087;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 14px;
+
+      button {
+        background: #FFE087;
+        color: #306B38;
+        padding: 10px 40px;
+        margin: 25px auto 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  .content-inner {
+    background: #E9FCEB;
+    color: #306B38;
+  }
+
+  .content-inner-block {
+    width: 650px;
+    padding: 75px 0;
+    margin: auto;
+
+    h3 {
+      font-size: 27px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    width: 325px;
+
+    span {
+      font-size: 13px;
+    }
+
+    ul {
+      padding: 5px 0 10px 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 15px 0;
+      clear: both;
+
+      label {
+        font-weight: bold;
+        font-size: 13px;
+        padding-bottom: 5px;
+        display: block;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #5A7C5D;
+        padding: 10px;
+      }
+      input[type="number"] {
+        width: 50px;
+        border: 1px solid #5A7C5D;
+        padding: 10px;
+      }
+
+      .org_or_school {
+
+        > label {
+          display: none;
+        }
+
+        ul {
+          padding: 0;
+
+          li {
+            margin: 0;
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+
+            input[type="radio"] {
+              margin: 0 5px 0 0;
+            }
+
+            &:nth-child(1) {
+              padding: 0 20px 0 0;
+            }
+
+            &:nth-child(2) {
+              padding: 0 0 0 35px;
+
+              &:before {
+                content: "or";
+                font-size: 13px;
+                position: absolute;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      .city {
+        width: 250px;
+      }
+      .state {
+        width: 200px;
+        float: left;
+      }
+      .zipcode {
+        width: 100px;
+        float: right;
+      }
+
+      .error {
+        input, select {
+          border: 1px solid red;
+        }
+
+        &.org_or_school {
+          border: 1px solid red;
+        }
+      }
+    }
+
+    button {
+      color: #fff;
+      padding: 10px 20px;
+      margin-right: -20px;
+      background: #306B38;
+      float: right;
+    }
+  }
+
+  .preview {
+    width: 550px;
+    background: #D8FCDD;
+    color: #306B38;
+    padding: 30px;
+
+    .data {
+      padding: 20px 0 0 150px;
+      font-weight: 700;
+
+      form {
+        width: auto;
+
+        button {
+          margin: 0 60px 0 0;
+        }
+      }
+    }
+
+    .edit {
+      padding: 30px 0;
+      clear: both;
+    }
+  }
+
+}
