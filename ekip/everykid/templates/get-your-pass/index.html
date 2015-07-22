@@ -2,37 +2,44 @@
 
 {% block title %}Get Your Pass{% endblock title %}
 
-{% block background %}get-your-pass{% endblock background %}
+{% block page_id %}get-your-pass{% endblock page_id %}
 
-{% block body %}
+{% block background %}brown-rocks{% endblock background %}
 
-  <h2>Get Your Free Pass</h2>
+{% block content %}
 
-  <p> Camp, fish, bike along a river. Learn about the history and culture of
-  our nation, or visit a dinosaur. You can do all of these and more on your
-  federal lands and waters. </p>
+  <div class="pass-content">
 
-  <p> And, as a 4th grader, you can now get a pass that allows you and your
-  whole car load to visit for free and start your next adventure!</p>
+    <h2>Get Your Pass</h2>
 
-  <ul>
-    <li>
-      <h3>I am a<br/>4th grader</h3>
-      <p>Play a game to earn your pass.</p>
+    <p>Camp, fish, bike along a river, or even watch a whale burst through the
+    surface of the water. You can do all these things and more on your federal
+    lands and waters. And as a 4th grader, now you can get a free pass that
+    allows you and a whole car load to visit for free!  </p>
 
-     <a href="{%url 'student_pass' %}"><button>Start</button></a>
-    </li>
-    <!--<li>
-      <h3>I'm not<br/>a 4th grader</h3>
-      <p>Sorry, you can't get a voucher, but you can still plan a trip.</p>
-      <br/>
-      <button>Plan a Trip</button>
-    </li> -->
-    <li>
-      <h3>I am an <br/> educator</h3>
-      <p>Learn how to get passes for your 4th-grade students. </p>
-      <a href="{% url 'educator_passes' %}"><button>Downloads</button></a>
-    </li>
-  </ul>
+    <ul class="boxes">
+      <li>
+        <a href="{%url 'student_pass' %}">
+          <div>
+            <h3>I'm a<br/>4th grader</h3>
+            <p>Play a game to earn your pass.</p>
+          </div>
+        </a>
+      </li>
+<!--      <li>
+        <div>
+          <h3>I am a<br/>Parent</h3>
+          <p>Find out how the program works.</p>
+        </div>
+      </li>
+      <li> -->
+        <a href="{% url 'educator_passes' %}">
+          <div>
+            <h3>I'm an <br/> educator</h3>
+            <p>Learn how to get passes for your 4th grade students. </p>
+          </div>
+        </a>
+      </li>
+    </ul>
 
-{% endblock %}
+{% endblock content %}

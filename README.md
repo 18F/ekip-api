@@ -36,6 +36,7 @@ $ python manage.py runserver
 
 From your host computer, going to http://192.168.19.16 will enable you to access the API.
 
+
 ## Front-end Setup
 This project uses Gulp to manage CSS pre and post-processing. Make sure Gulp is installed system wide:
 
@@ -55,12 +56,19 @@ Then once everything is installed in your project directory, simply invoke the G
 gulp
 ```
 
+## Testing
+To run tests locally:
+```
+python manage.py test --settings=config.settings.test
+```
+
+
 ## Deploy Notes
 
-We use a blue-green deployment system for zero downtime. 
+We use a blue-green deployment system for zero downtime.
 
 
-You'll need to set the application to use the production settings file. 
+You'll need to set the application to use the production settings file.
 
 ```
 cf set-env blue DJANGO_SETTINGS_MODULE config.settings.production
@@ -68,7 +76,7 @@ cf set-env green DJANGO_SETTINGS_MODULE config.settings.production
 ```
 
 
-You'll need to set three environment variables, for both blue and green apps to use S3 for hosting static files. 
+You'll need to set three environment variables, for both blue and green apps to use S3 for hosting static files.
 
 ```
 cf set-env blue EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>

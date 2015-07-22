@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="{% block page_id %}{% endblock page_id %}">
 
   <div class="govt-banner">
     An official website of the United States Government.
@@ -32,9 +32,9 @@
 
       <nav class="top-links">
         <ul>
-          <li><a href="{% url 'educator_passes' %}">4th-grade educators</a></li>
-          <!-- <li>Already have a pass?</li> -->
-          <!-- <li>Español</li> -->
+          <li class="educators-link"><a href="{% url 'educator_passes' %}">4th-grade educators</a></li>
+          <!--<li>Already have a pass?</li> -->
+          <!--<li>Español</li>-->
         </ul>
       </nav>
 
@@ -43,17 +43,40 @@
     </header>
 
     <div class="content">
-      {% block body %}{% endblock %}
+      {% block content %}{% endblock content %}
     </div>
 
   </section>
 
+  <section class="content-inner">
+    {% block content_inner %}{% endblock content_inner %}
+  </section>
+
   <footer>
-    <nav>
-      <ul>
-        <li></li>
-      </ul>
-    </nav>
+
+    <section class="footer-content">
+
+      <h3>Every Kid In A Park</h3>
+
+      <nav>
+        <ul>
+          <li>
+            Get your pass
+          </li>
+          <li>
+            Plan a trip
+          </li>
+          <li>
+            Learn
+          </li>
+          <li>
+            4th-grade educators
+          </li>
+        </ul>
+      </nav>
+
+    </section>
+
   </footer>
 
 </body>
