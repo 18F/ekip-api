@@ -60,7 +60,8 @@ gulp
 We use a blue-green deployment system for zero downtime. 
 
 
-You'll need to set the application to use the production settings file. 
+### Setting up the applications. 
+You'll need to set the application to use the production settings file.
 
 ```
 cf set-env blue DJANGO_SETTINGS_MODULE config.settings.production
@@ -68,7 +69,8 @@ cf set-env green DJANGO_SETTINGS_MODULE config.settings.production
 ```
 
 
-You'll need to set three environment variables, for both blue and green apps to use S3 for hosting static files. 
+You'll need to set three environment variables, for both blue and green apps to
+use S3 for hosting static files. Do this once. 
 
 ```
 cf set-env blue EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
@@ -79,5 +81,20 @@ cf set-env green EKIP_AWS_ACCESS_KEY_ID <<value>>
 cf set-env green EKIP_AWS_SECRET_ACCESS_KEY <<value>>
 ```
 
+
+### Running deploys
+
 To actually deploy the application, simply configure for your use case and run:
+
+```
 ./deployer.sh
+```
+
+### Running database migrations 
+
+Use cf-ssh to create an instance of the application you can ssh into, and then
+run:
+
+```
+python manage.py migrate --settings=config.settings.production
+```
