@@ -7,13 +7,16 @@
 
   <ul>
     <li>
-      <a href="/get-your-pass/">Get Your Pass</a>
+      <a href="/">Home</a>
     </li>
     <li>
-      <a href="/plan-your-trip/">Plan a Trip</a>
+      <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
     </li>
     <li>
-      <a href="/learn/">Learn</a>
+      <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
     </li>
+<!--    <li>
+      <a href="{% url 'learn' %}">Learn</a>
+    </li> -->
   </ul>
 </nav>
