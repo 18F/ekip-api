@@ -8,9 +8,10 @@ class Educator(models.Model):
     """ An educator has to fill out this form before they can download vouchers
     for their students. """
 
-    ORG_CHOICES = (('O', 'Qualified organization'), ('S', 'School'))
+    ORG_CHOICES = (('S', 'School'), ('O', 'Qualified organization'))
 
-    name = models.CharField(_("Full name"), max_length=128)
+
+    name = models.CharField(_("Educator's full name"), max_length=128)
     work_email = models.CharField(
         _("Work email address"), max_length=128, null=True)
     organization_name = models.CharField(

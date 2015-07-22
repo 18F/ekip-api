@@ -36,31 +36,46 @@ $ python manage.py runserver
 
 From your host computer, going to http://192.168.19.16 will enable you to access the API.
 
+
 ## Front-end Setup
-This project uses Gulp to manage CSS pre and post-processing. Make sure Gulp is installed system wide:
+This project uses Gulp to manage CSS pre and post-processing. Make sure Gulp is
+installed system wide:
 
 ```
 npm install --global gulp
 ```
 
-Also install the additional modules to watch for SASS pre-processing changes (using Bourbon and Neat) and to minify the resulting stylesheet:
+Also install the additional modules to watch for SASS pre-processing changes
+(using Bourbon and Neat) and to minify the resulting stylesheet:
 
 ```
 npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename
 ```
 
-Then once everything is installed in your project directory, simply invoke the Gulp command in your terminal:
+Then once everything is installed in your project directory, simply invoke the
+Gulp command in your terminal:
 
 ```
 gulp
 ```
 
+## Testing
+
+To run tests locally:
+```
+python manage.py test --settings=config.settings.test
+```
+
+
 ## Deploy Notes
 
-We use a blue-green deployment system for zero downtime. 
+We use a blue-green deployment system for zero downtime.
 
 
+<<<<<<< HEAD
 ### Setting up the applications. 
+=======
+>>>>>>> 26d29416cb0aea8c12e68adbd939ba94aa067da5
 You'll need to set the application to use the production settings file.
 
 ```

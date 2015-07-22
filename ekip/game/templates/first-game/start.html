@@ -3,14 +3,16 @@
 
 {% block title %}Game{% endblock title %}
 
-{% block background %}get-your-pass{% endblock background %}
+{% block page_id %}student-pass{% endblock page_id %}
 
-{% block body %}
+{% block background %}brown-rocks{% endblock background %}
+
+{% block content %}
 
 <h3> What are federal lands and waters? </h3>
 
 Federal lands and waters are owned by the American people (that means you) and
-managed by federal government. 
+managed by federal government.
 
 <p> Federal lands and waters include: </p>
 
@@ -20,8 +22,8 @@ managed by federal government.
     <li> National monuments. </li>
 </ul>
 
-A large number of federal lands and waters are open for recreational use.  
+A large number of federal lands and waters are open for recreational use.
 
 <a href='{% url "first_game_infographic" %}'><button>Next</button></a>
 
-{% endblock %}
+{% endblock content %}

@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 {% block title %}Get Your Pass - Educators{% endblock title %}
-{% block background %}get-your-pass{% endblock background %}
 
-{% block body %}
+{% block page_id %}educators{% endblock page_id %}
 
-<h1> Vouchers </h1>
+{% block background %}hills{% endblock background %}
 
-Here are {{num_vouchers}} vouchers.
+{% block content %}
 
-<ul>
-{% for l in locators %}
+  <h2>Vouchers</h2>
+
+  <p>Here are {{num_vouchers}} vouchers.</p>
+
+  <ul>
+  {% for l in locators %}
     <li> {{l}} </li>
-{% endfor %}
-</ul>
+  {% endfor %}
+  </ul>
 
-{% endblock %}
+{% endblock content %}
+

@@ -4,8 +4,7 @@ body, html {
   color: #fff;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  font-family: "Avenir Next"; }
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -15,6 +14,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 35px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
 
 p {
   margin: 5px 0; }
@@ -28,7 +31,9 @@ ul {
 button {
   font-family: "Superclarendon", serif;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  border: none;
+  text-align: center; }
 
 .govt-banner {
   background-color: #2C2C2C;
@@ -42,7 +47,7 @@ header {
   margin: auto; }
 
 nav.top-links {
-  padding: 20px 0 20px 0;
+  padding: 5px 0 40px 0;
   text-align: right; }
   nav.top-links ul li {
     font-size: 14px;
@@ -54,40 +59,78 @@ nav.top-links {
       padding-right: 0;
       border: none; }
 
+#educators .educators-link {
+  color: #F7D27F; }
+
 nav.main-nav {
-  width: 175px;
-  position: absolute; }
+  width: 190px;
+  position: absolute;
+  top: 40px; }
+  nav.main-nav img {
+    width: 150px;
+    margin: 0 0 10px 0; }
   nav.main-nav ul {
     display: inline-block; }
   nav.main-nav li {
     background: #fff;
     color: #456D97;
-    padding: 7px 12px;
     margin: 0 0 10px 0;
+    border: 2px solid #1E7197;
     text-transform: uppercase;
     font-size: 13px;
     font-family: "Superclarendon", serif;
     text-align: center;
     display: block; }
     nav.main-nav li a {
+      width: inherit;
+      height: inherit;
+      padding: 7px 12px;
       text-decoration: none;
-      color: #456D97; }
+      color: #456D97;
+      display: block; }
+      nav.main-nav li a:hover {
+        background: #1E7197;
+        color: #fff; }
+
+#landing .main-nav {
+  top: 95px; }
+  #landing .main-nav img {
+    display: none; }
+
+.mountain {
+  background: url(../img/backgrounds/mountain.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.hills {
+  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.brown-rocks {
+  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background-size: cover; }
 
 .content {
-  width: 950px;
-  margin: auto; }
+  width: 760px;
+  min-height: 500px;
+  margin: auto;
+  padding: 0 0 50px 190px; }
 
-.landing {
-  background: url(../img/backgrounds/mountain.jpg) no-repeat center center fixed;
-  background-size: cover;
-  text-align: center; }
-  .landing img {
+.errors {
+  padding: 10px 0;
+  color: #ff0000; }
+
+#landing .content {
+  width: 950px;
+  text-align: center;
+  padding: 0;
+  margin: auto; }
+  #landing .content img {
     margin-bottom: 15px; }
-  .landing .landing-description {
+  #landing .content .landing-description {
     width: 550px;
     font-size: 18px;
     margin: 0 auto 15px auto; }
-  .landing button {
+  #landing .content button {
     border: 4px solid #fff;
     background: transparent;
     font-family: "Superclarendon", serif;
@@ -96,44 +139,162 @@ nav.main-nav {
     padding: 10px 20px;
     margin: 0 0 70px 0; }
 
-.get-your-pass {
-  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
-  background-size: cover; }
-  .get-your-pass .content ul {
-    margin: 30px 0 0 0; }
-  .get-your-pass .content li {
-    width: 28%;
-    background: #FEEED0;
-    color: #000;
-    padding: 15px;
-    margin: 0 10px 0 0;
-    font-size: 14px;
-    vertical-align: top;
-    display: inline-block; }
-    .get-your-pass .content li h3 {
+#get-your-pass .content .pass-content {
+  width: 600px;
+  background: #1E7197;
+  padding: 30px; }
+  #get-your-pass .content .pass-content h2 {
+    padding: 0; }
+
+#get-your-pass .content ul {
+  margin: 30px 0 0 0; }
+
+#get-your-pass .content .boxes li {
+  width: 31%;
+  height: 160px;
+  border: 2px solid #fff;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  vertical-align: top;
+  display: inline-block; }
+  #get-your-pass .content .boxes li div {
+    height: 130px;
+    padding: 15px; }
+  #get-your-pass .content .boxes li a {
+    display: block; }
+  #get-your-pass .content .boxes li h3 {
+    color: #FED681;
+    padding: 0; }
+  #get-your-pass .content .boxes li button {
+    background: #673E2F;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 15px 0 0 0;
+    font-size: 13px; }
+  #get-your-pass .content .boxes li:last-child {
+    margin: 0; }
+
+#educators .content {
+  padding-top: 100px; }
+  #educators .content h2, #educators .content p, #educators .content .explanation {
+    width: 500px; }
+  #educators .content h2 {
+    padding-bottom: 0; }
+  #educators .content .explanation {
+    border: 2px solid #FFE087;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px; }
+    #educators .content .explanation button {
+      background: #FFE087;
+      color: #306B38;
+      padding: 10px 40px;
+      margin: 25px auto 0 auto;
+      display: block; }
+
+#educators .content-inner {
+  background: #E9FCEB;
+  color: #306B38; }
+
+#educators .content-inner-block {
+  width: 650px;
+  padding: 75px 0;
+  margin: auto; }
+  #educators .content-inner-block h3 {
+    font-size: 27px; }
+  #educators .content-inner-block p {
+    margin-bottom: 30px; }
+
+#educators form {
+  width: 325px; }
+  #educators form span {
+    font-size: 13px; }
+  #educators form ul {
+    padding: 5px 0 10px 0; }
+  #educators form li {
+    list-style: none;
+    margin: 0 0 15px 0;
+    clear: both; }
+    #educators form li label {
+      font-weight: bold;
+      font-size: 13px;
+      padding-bottom: 5px;
+      display: block; }
+    #educators form li input[type="text"] {
+      width: 100%;
+      border: 1px solid #5A7C5D;
+      padding: 10px; }
+    #educators form li input[type="number"] {
+      width: 50px;
+      border: 1px solid #5A7C5D;
+      padding: 10px; }
+    #educators form li .org_or_school > label {
+      display: none; }
+    #educators form li .org_or_school ul {
       padding: 0; }
-    .get-your-pass .content li button {
-      background: #673E2F;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      margin: 15px 0 0 0;
-      font-size: 13px; }
-    .get-your-pass .content li:last-child {
-      margin: 0; }
+      #educators form li .org_or_school ul li {
+        margin: 0;
+        display: inline-block;
+        position: relative;
+        padding-left: 15px; }
+        #educators form li .org_or_school ul li input[type="radio"] {
+          margin: 0 5px 0 0; }
+        #educators form li .org_or_school ul li:nth-child(1) {
+          padding: 0 20px 0 0; }
+        #educators form li .org_or_school ul li:nth-child(2) {
+          padding: 0 0 0 35px; }
+          #educators form li .org_or_school ul li:nth-child(2):before {
+            content: "or";
+            font-size: 13px;
+            position: absolute;
+            left: 0; }
+    #educators form li .city {
+      width: 250px; }
+    #educators form li .state {
+      width: 200px;
+      float: left; }
+    #educators form li .zipcode {
+      width: 100px;
+      float: right; }
+    #educators form li .error input, #educators form li .error select {
+      border: 1px solid red; }
+    #educators form li .error.org_or_school {
+      border: 1px solid red; }
+  #educators form button {
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: -20px;
+    background: #306B38;
+    float: right; }
 
-.plan-your-trip {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
-  background-size: cover; }
-
-.learn {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
-  background-size: cover; }
-
-.get-your-pass .content, .plan-your-trip .content, .learn .content {
-  width: 775px;
-  margin: auto;
-  padding: 0 0 50px 175px; }
+#educators .preview {
+  width: 550px;
+  background: #D8FCDD;
+  color: #306B38;
+  padding: 30px; }
+  #educators .preview .data {
+    padding: 20px 0 0 150px;
+    font-weight: 700; }
+    #educators .preview .data form {
+      width: auto; }
+      #educators .preview .data form button {
+        margin: 0 60px 0 0; }
+  #educators .preview .edit {
+    padding: 30px 0;
+    clear: both; }
 
 footer {
+  background: #FDEED0;
   clear: both; }
+  footer .footer-content {
+    width: 950px;
+    padding: 50px 0;
+    margin: auto;
+    color: #306B37; }
+    footer .footer-content h3 {
+      color: #673E2F; }
+    footer .footer-content nav ul {
+      padding: 5px 0; }
+    footer .footer-content nav li {
+      padding: 5px 0; }
