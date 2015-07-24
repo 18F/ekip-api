@@ -74,7 +74,6 @@ We use a blue-green deployment system for zero downtime.
 
 ### Setting up the applications.
 =======
->>>>>>> 26d29416cb0aea8c12e68adbd939ba94aa067da5
 You'll need to set the application to use the production settings file.
 
 ```
