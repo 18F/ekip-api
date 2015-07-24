@@ -14,9 +14,11 @@ body,html {
 
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
   font-family: "Superclarendon", serif;
-  text-transform: uppercase;
+}
+h1 {
+  font-size: 60px;
 }
 h2 {
   font-size: 35px;

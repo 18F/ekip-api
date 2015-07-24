@@ -8,9 +8,11 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 0 0 10px 0;
-  font-family: "Superclarendon", serif;
-  text-transform: uppercase; }
+  padding: 0 0 5px 0;
+  font-family: "Superclarendon", serif; }
+
+h1 {
+  font-size: 60px; }
 
 h2 {
   font-size: 35px; }
@@ -44,10 +46,10 @@ button {
 
 header {
   width: 950px;
-  margin: auto; }
+  margin: 0 auto 10px auto; }
 
 nav.top-links {
-  padding: 5px 0 40px 0;
+  padding: 5px 0 0 0;
   text-align: right; }
   nav.top-links ul li {
     font-size: 14px;
@@ -125,18 +127,20 @@ nav.main-nav {
   padding: 0;
   margin: auto; }
   #landing .content img {
-    margin-bottom: 15px; }
+    margin: 40px 0 15px 0; }
   #landing .content .landing-description {
-    width: 550px;
-    font-size: 18px;
-    margin: 0 auto 15px auto; }
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 auto 45px auto; }
   #landing .content button {
     border: 4px solid #fff;
     background: transparent;
     font-family: "Superclarendon", serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: #fff;
     font-size: 19px;
-    padding: 10px 20px;
+    padding: 20px 15px;
     margin: 0 0 70px 0; }
 
 #get-your-pass .content .pass-content {
