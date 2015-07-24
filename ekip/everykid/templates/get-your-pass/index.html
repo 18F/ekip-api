@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Get Your Pass{% endblock title %}
 
 {% block page_id %}get-your-pass{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}tent{% endblock background %}
 
 {% block content %}
 
   <div class="pass-content">
 
-    <h2>Get Your Pass</h2>
+    <h1>Get your pass.</h1>
 
     <p>Camp, fish, bike along a river, or even watch a whale burst through the
     surface of the water. You can do all these things and more on your federal
@@ -21,7 +22,8 @@
       <li>
         <a href="{%url 'student_pass' %}">
           <div>
-            <h3>I'm a<br/>4th grader</h3>
+            <img src="{% static "img/icon-binoculars.png" %}" alt="" />
+            <h2>I am a<br/>4th grader</h2>
             <p>Play a game to earn your pass.</p>
           </div>
         </a>
@@ -32,11 +34,12 @@
           <p>Find out how the program works.</p>
         </div>
       </li>
-      <li> -->
+       -->
       <li>
         <a href="{% url 'educator_passes' %}">
           <div>
-            <h3>I'm an <br/> educator</h3>
+            <img src="{% static "img/icon-fish.png" %}" alt="" />
+            <h2>I am an <br/> educator</h2>
             <p>Learn how to get passes for your 4th grade students. </p>
           </div>
         </a>

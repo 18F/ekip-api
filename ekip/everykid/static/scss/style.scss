@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Superclarendon", serif;
 }
 h1 {
-  font-size: 60px;
+  font-size: 46px;
 }
 h2 {
   font-size: 35px;
@@ -62,6 +62,12 @@ button {
   background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+
+.tent {
+  background: url(../img/backgrounds/tent.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
 
 .brown-rocks {
   background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;

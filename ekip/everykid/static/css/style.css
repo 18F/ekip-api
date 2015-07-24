@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Superclarendon", serif; }
 
 h1 {
-  font-size: 60px; }
+  font-size: 46px; }
 
 h2 {
   font-size: 35px; }
@@ -114,6 +114,10 @@ nav.main-nav {
   background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
   background-size: cover; }
 
+.tent {
+  background: url(../img/backgrounds/tent.png) no-repeat center center fixed;
+  background-size: cover; }
+
 .brown-rocks {
   background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
   background-size: cover; }
@@ -127,6 +131,9 @@ nav.main-nav {
 .errors {
   padding: 10px 0;
   color: #ff0000; }
+
+#landing h1 {
+  font-size: 60px; }
 
 #landing .content {
   width: 1000px;
@@ -151,31 +158,34 @@ nav.main-nav {
     margin: 0 0 70px 0; }
 
 #get-your-pass .content .pass-content {
-  width: 600px;
-  background: #1E7197;
-  padding: 30px; }
-  #get-your-pass .content .pass-content h2 {
-    padding: 0; }
+  width: 670px;
+  background: rgba(23, 112, 153, 0.9);
+  padding: 35px;
+  font-size: 18px;
+  font-weight: 300; }
 
 #get-your-pass .content ul {
   margin: 30px 0 0 0; }
 
 #get-your-pass .content .boxes li {
   width: 31%;
-  height: 160px;
+  height: 220px;
   border: 2px solid #fff;
   margin: 0 10px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   vertical-align: top;
   display: inline-block; }
-  #get-your-pass .content .boxes li div {
-    height: 130px;
-    padding: 15px; }
   #get-your-pass .content .boxes li a {
     display: block; }
-  #get-your-pass .content .boxes li h3 {
-    color: #FED681;
-    padding: 0; }
+  #get-your-pass .content .boxes li div {
+    height: 130px;
+    padding: 17px; }
+  #get-your-pass .content .boxes li h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFE897;
+    text-transform: uppercase;
+    padding: 5px 0 0 0; }
   #get-your-pass .content .boxes li button {
     background: #673E2F;
     color: #fff;
