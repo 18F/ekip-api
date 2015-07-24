@@ -1,29 +1,33 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Game{% endblock title %}
+{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}tent{% endblock background %}
 
 {% block content %}
 
-<h3> What are federal lands and waters? </h3>
+  <div class="pass-content">
 
-Federal lands and waters are owned by the American people (that means you) and
-managed by federal government.
+    <h3> What are federal lands and waters? </h3>
 
-<p> Federal lands and waters include: </p>
+    Federal lands and waters are owned by the American people (that means you) and
+    managed by federal government.
 
-<ul>
-    <li> National parks.  </li>
-    <li> National forests. </li>
-    <li> National monuments. </li>
-</ul>
+    <p> Federal lands and waters include: </p>
 
-A large number of federal lands and waters are open for recreational use.
+    <ul>
+        <li> National parks.  </li>
+        <li> National forests. </li>
+        <li> National monuments. </li>
+    </ul>
 
-<a href='{% url "first_game_infographic" %}'><button>Next</button></a>
+    A large number of federal lands and waters are open for recreational use.
+
+    <a href='{% url "first_game_infographic" %}'><button>Next</button></a>
+
+    </div>
 
 {% endblock content %}

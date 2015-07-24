@@ -196,6 +196,24 @@ nav.main-nav {
   #get-your-pass .content .boxes li:last-child {
     margin: 0; }
 
+#student-pass .content .pass-content {
+  width: 670px;
+  background: rgba(23, 112, 153, 0.9);
+  padding: 35px;
+  font-size: 18px;
+  font-weight: 300; }
+  #student-pass .content .pass-content form {
+    width: 360px;
+    margin: 30px auto;
+    border: 2px solid #fff;
+    padding: 30px;
+    text-align: center; }
+  #student-pass .content .pass-content button {
+    font-size: 14px;
+    padding: 15px 35px;
+    background: #fff;
+    color: #177099; }
+
 #educators .content {
   padding-bottom: 100px; }
   #educators .content h2, #educators .content p, #educators .content .explanation {
