@@ -314,7 +314,9 @@ footer {
     margin: auto;
     color: #306B37; }
     footer .footer-content h3 {
-      color: #673E2F; }
+      color: #683E2D;
+      font-size: 23px;
+      text-transform: uppercase; }
     footer .footer-content nav ul {
       padding: 5px 0; }
     footer .footer-content nav li {
