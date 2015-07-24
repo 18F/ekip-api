@@ -10,26 +10,28 @@
 
   <div class="preview">
 
-    <h2>Info look good?</h2>
-    <p>Please confirm that the information you've provided is correct.</p>
+    <h2>Double-check your info</h2>
+    <p>Please confirm that the info you've provided is correct.</p>
 
     <div class="data">
-      {{ form.name.data }}<br/>
+      <strong>{{ form.name.data }}</strong><br/>
       {{ form.work_email.data }}<br/>
       <br/>
-      {{ form.organization_name.data }}<br/>
+      <strong>{{ form.organization_name.data }}</strong><br/>
       {{ form.address_line_1.data }}<br/>
       {% if  form.address_line_2.data %}
       {{ form.address_line_2.data }}<br/>
       {% endif %}
       {{ form.city.data }}, {{ form.state.data }} {{ form.zipcode.data }}<br/>
       <br/>
+      <strong>
       {{ form.num_students.data }}
       {% if form.num_students.data == '1' %}
         student
       {% else %}
         students
       {% endif %}
+      </strong>
 
       <form action="" method="post">
         {% csrf_token %}
@@ -39,7 +41,7 @@
         {% endfor %}
         <input type="hidden" name="{{ stage_field }}" value="2"/>
         <input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}"/>
-        <button>Good to go?<br/>Submit</button>
+        <button>All good?<br/><span>Get vouchers</span></button>
       </form>
 
     </div>

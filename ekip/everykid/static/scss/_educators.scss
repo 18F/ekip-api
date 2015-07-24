@@ -98,14 +98,19 @@
 
       input[type="text"] {
         width: 100%;
+        font-size: 18px;
         border: 1px solid #5A7C5D;
         padding: 15px;
         margin: 0 0 10px 0;
       }
       input[type="number"] {
         width: 50px;
+        font-size: 18px;
         border: 1px solid #5A7C5D;
         padding: 10px;
+      }
+      select {
+        font-size: 18px;
       }
 
       .org_or_school {
@@ -185,13 +190,21 @@
 
   .preview {
     width: 550px;
-    background: #D8FCDD;
+    background: #D7FDDC;
     color: #306B38;
     padding: 30px;
+    font-size: 18px;
+
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      color: #323232;
+      font-size: 18px;
+    }
 
     .data {
-      padding: 20px 0 0 150px;
-      font-weight: 700;
+      padding: 20px 0 0 90px;
 
       form {
         width: auto;

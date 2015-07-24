@@ -269,13 +269,17 @@ nav.main-nav {
       display: block; }
     #educators form li input[type="text"] {
       width: 100%;
+      font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 15px;
       margin: 0 0 10px 0; }
     #educators form li input[type="number"] {
       width: 50px;
+      font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 10px; }
+    #educators form li select {
+      font-size: 18px; }
     #educators form li .org_or_school > label {
       display: none; }
     #educators form li .org_or_school ul {
@@ -322,12 +326,17 @@ nav.main-nav {
 
 #educators .preview {
   width: 550px;
-  background: #D8FCDD;
+  background: #D7FDDC;
   color: #306B38;
-  padding: 30px; }
+  padding: 30px;
+  font-size: 18px; }
+  #educators .preview h2 {
+    font-size: 30px; }
+  #educators .preview p {
+    color: #323232;
+    font-size: 18px; }
   #educators .preview .data {
-    padding: 20px 0 0 150px;
-    font-weight: 700; }
+    padding: 20px 0 0 90px; }
     #educators .preview .data form {
       width: auto; }
       #educators .preview .data form button {
