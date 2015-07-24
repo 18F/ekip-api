@@ -1,7 +1,7 @@
 @import "bourbon";
 
-$site-width: 950px;
-$nav-width: 190px;
+$site-width: 1000px;
+$nav-width: 210px;
 
 body,html {
   background: #4E6A88;
@@ -72,7 +72,7 @@ button {
   width: $site-width - $nav-width;
   min-height: 500px;
   margin: auto;
-  padding: 0 0 50px $nav-width;
+  padding: 60px 0 50px $nav-width + 90;
 }
 
 .errors {

@@ -45,14 +45,18 @@ button {
   font-size: 13px; }
 
 header {
-  width: 950px;
+  width: 1000px;
   margin: 0 auto 10px auto; }
 
 nav.top-links {
-  padding: 5px 0 0 0;
   text-align: right; }
+  nav.top-links ul {
+    background: #2D6C35;
+    padding: 5px 45px 10px 45px;
+    display: inline-block; }
   nav.top-links ul li {
     font-size: 14px;
+    font-weight: bold;
     line-height: 14px;
     padding: 0 10px;
     border-right: 1px solid #fff;
@@ -65,34 +69,37 @@ nav.top-links {
   color: #F7D27F; }
 
 nav.main-nav {
-  width: 190px;
+  width: 210px;
   position: absolute;
   top: 40px; }
   nav.main-nav img {
     width: 150px;
-    margin: 0 0 10px 0; }
+    margin: 40px 0 20px 35px; }
   nav.main-nav ul {
     display: inline-block; }
   nav.main-nav li {
     background: #fff;
     color: #456D97;
-    margin: 0 0 10px 0;
-    border: 2px solid #1E7197;
+    margin: 0 0 20px 0;
+    border: 2px solid #177099;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
     font-family: "Superclarendon", serif;
     text-align: center;
-    display: block; }
+    display: inline-block; }
     nav.main-nav li a {
       width: inherit;
       height: inherit;
-      padding: 7px 12px;
+      padding: 12px 15px;
       text-decoration: none;
       color: #456D97;
       display: block; }
       nav.main-nav li a:hover {
         background: #1E7197;
         color: #fff; }
+    nav.main-nav li:nth-child(odd) {
+      margin-left: 35px; }
 
 #landing .main-nav {
   top: 150px; }
@@ -112,22 +119,22 @@ nav.main-nav {
   background-size: cover; }
 
 .content {
-  width: 760px;
+  width: 790px;
   min-height: 500px;
   margin: auto;
-  padding: 0 0 50px 190px; }
+  padding: 60px 0 50px 300px; }
 
 .errors {
   padding: 10px 0;
   color: #ff0000; }
 
 #landing .content {
-  width: 950px;
+  width: 1000px;
   text-align: center;
   padding: 0;
   margin: auto; }
   #landing .content img {
-    margin: 40px 0 15px 0; }
+    margin: 30px 0 15px 0; }
   #landing .content .landing-description {
     font-size: 22px;
     font-weight: 300;
@@ -292,7 +299,7 @@ footer {
   background: #FDEED0;
   clear: both; }
   footer .footer-content {
-    width: 950px;
+    width: 1000px;
     padding: 50px 0;
     margin: auto;
     color: #306B37; }

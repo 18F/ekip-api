@@ -12,11 +12,16 @@ header {
 }
 
 nav.top-links {
-  padding: 5px 0 0 0;
   text-align: right;
 
+  ul {
+    background: #2D6C35;
+    padding: 5px 45px 10px 45px;
+    display: inline-block;
+  }
   ul li {
     font-size: 14px;
+    font-weight: bold;
     line-height: 14px;
     padding: 0 10px;
     border-right: 1px solid #fff;
