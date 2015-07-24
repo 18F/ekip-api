@@ -1,25 +1,40 @@
 #educators {
 
   .content {
-    padding-top: 100px;
+    padding-bottom: 100px;
 
     h2, p, .explanation {
-      width: 500px;
+      width: 710px;
     }
-    h2 {
-      padding-bottom: 0;
+    p {
+      font-size: 22px;
+      font-weight: 300;
     }
 
     .explanation {
+      width: 570px;
       border: 2px solid #FFE087;
       padding: 20px;
       margin: 20px 0;
-      font-size: 14px;
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      p {
+        width: auto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4em;
+      }
 
       button {
         background: #FFE087;
-        color: #306B38;
-        padding: 10px 40px;
+        color: #683E2D;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 15px 20px;
         margin: 25px auto 0 auto;
         display: block;
       }
@@ -32,27 +47,41 @@
   }
 
   .content-inner-block {
-    width: 650px;
+    width: 580px;
     padding: 75px 0;
     margin: auto;
 
     h3 {
-      font-size: 27px;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 0;
     }
     p {
+      font-size: 18px;
+      line-height: 1.4em;
+      color: #323232;
       margin-bottom: 30px;
     }
+
+    .download-activity {
+      width: 330px;
+      padding: 0 0 90px 0;
+    }
+
   }
 
   form {
-    width: 325px;
+    width: 370px;
+    padding: 15px 0;
+
+    @include clearfix();
 
     span {
-      font-size: 13px;
+      font-size: 18px;
     }
 
     ul {
-      padding: 5px 0 10px 0;
+      padding: 10px 0;
     }
 
     li {
@@ -62,7 +91,7 @@
 
       label {
         font-weight: bold;
-        font-size: 13px;
+        font-size: 18px;
         padding-bottom: 5px;
         display: block;
       }
@@ -70,7 +99,8 @@
       input[type="text"] {
         width: 100%;
         border: 1px solid #5A7C5D;
-        padding: 10px;
+        padding: 15px;
+        margin: 0 0 10px 0;
       }
       input[type="number"] {
         width: 50px;
@@ -106,7 +136,7 @@
 
               &:before {
                 content: "or";
-                font-size: 13px;
+                font-size: 18px;
                 position: absolute;
                 left: 0;
               }
@@ -115,7 +145,7 @@
         }
       }
       .city {
-        width: 250px;
+        width: 230px;
       }
       .state {
         width: 200px;
@@ -139,10 +169,17 @@
 
     button {
       color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
       padding: 10px 20px;
-      margin-right: -20px;
+      margin-right: -30px;
       background: #306B38;
       float: right;
+
+      span {
+        color: #FFD77B;
+        font-size: 14px;
+      }
     }
   }
 
