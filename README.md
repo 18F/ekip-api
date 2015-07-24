@@ -72,8 +72,7 @@ python manage.py test --settings=config.settings.test
 We use a blue-green deployment system for zero downtime.
 
 
-<<<<<<< HEAD
-### Setting up the applications. 
+### Setting up the applications.
 =======
 >>>>>>> 26d29416cb0aea8c12e68adbd939ba94aa067da5
 You'll need to set the application to use the production settings file.
@@ -85,7 +84,7 @@ cf set-env green DJANGO_SETTINGS_MODULE config.settings.production
 
 
 You'll need to set three environment variables, for both blue and green apps to
-use S3 for hosting static files. Do this once. 
+use S3 for hosting static files. Do this once.
 
 ```
 cf set-env blue EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
@@ -105,7 +104,7 @@ To actually deploy the application, simply configure for your use case and run:
 ./deployer.sh
 ```
 
-### Running database migrations 
+### Running database migrations
 
 Use cf-ssh to create an instance of the application you can ssh into, and then
 run:
