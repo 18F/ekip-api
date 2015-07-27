@@ -51,7 +51,8 @@ header {
 nav.top-links {
   text-align: right; }
   nav.top-links ul {
-    background: #2D6C35;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 2px 0 0 0;
     padding: 5px 45px 10px 45px;
     display: inline-block; }
   nav.top-links ul li {
