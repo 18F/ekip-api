@@ -27,30 +27,43 @@
     width: 525px;
     margin: 50px auto;
     position: relative;
-  }
 
-  .voucher-barcode {
-    top: 70px;
-    right: -110px;
-    @include transform(rotate(-90deg));
-    position: absolute;
+    .voucher-barcode {
+      top: 70px;
+      right: -110px;
+      @include transform(rotate(-90deg));
+      position: absolute;
 
-    img {
-      width: 175px;
+      img {
+        width: 175px;
+      }
     }
   }
 
   .personnel {
-    margin: 100px 0 0 0;
+    margin: 150px 0 0 0;
     padding: 10px 0 0 0;
     font-size: 11px;
     border-top: 1px dotted #BABABA;
     text-align: left;
 
-    img {
-      width: 170px;
+    @include clearfix();
+
+    .text {
+      width: 20%;
+      float: left;
+    }
+
+    .personnel-barcode {
+      width: 60%;
+      margin: 0;
+      text-align: right;
       float: right;
+
+      li, li img {
+        width: 170px;
+        display: inline-block;
+      }
     }
   }
-
 }

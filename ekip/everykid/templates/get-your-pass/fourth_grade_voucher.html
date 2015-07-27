@@ -23,16 +23,22 @@
     </div>
 
     <div class="voucher">
-      <div class="voucher-barcode" data-endpoint="">
-        <span class="voucher-barcode-id">{{locator}}</span>
-        <img alt="barcode" class="voucher-barcode-image" />
+      <div class="voucher-barcode">
+        <img class="barcode" alt="barcode" data-id="{{ locator }}" />
       </div>
       <img src="{% static 'img/voucher.png' %}" alt="" />
     </div>
 
     <div class="personnel">
-      This area for official use by facility personnel.
-      <img alt="barcode" class="voucher-barcode-image" />
+      <div class="text">
+        This area for official use by facility personnel.
+      </div>
+
+      <ul class="personnel-barcode">
+        <li>
+          <img alt="barcode" data-id="{{ locator }}" />
+        </li>
+      </ul>
     </div>
 
   </div>

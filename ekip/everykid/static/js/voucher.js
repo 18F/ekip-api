@@ -1,11 +1,31 @@
 $(document).ready(function() {
 
-  var recordLocator = $('.voucher-barcode'),
-      locatorID = $(recordLocator).find('.voucher-barcode-id').text();
+  var locatorID;
 
-  $(recordLocator).find('.voucher-barcode-id').remove();
-  $(recordLocator).find("img").JsBarcode(locatorID,{format:"CODE128",displayValue:true,fontSize:20, height:40});
+  $('.voucher-barcode').each(function() {
 
-  $(".voucher-barcode-image").JsBarcode(locatorID,{format:"CODE128",displayValue:true,fontSize:20, height:40});
+    locatorID = $(this).find('.barcode').attr('data-id');
+
+    $(this).find('img').JsBarcode(locatorID, {
+      format: 'CODE128',
+      displayValue: true,
+      fontSize: 20,
+      height: 40
+    });
+
+  })
+
+  $('.personnel-barcode li').each(function() {
+
+    locatorID = $(this).find('img').attr('data-id');
+
+    $(this).find("img").JsBarcode(locatorID, {
+      format: 'CODE128',
+      displayValue: true,
+      fontSize: 20,
+      height: 40
+    });
+
+  });
 
 });
