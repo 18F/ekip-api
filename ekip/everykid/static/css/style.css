@@ -465,14 +465,32 @@ footer {
   clear: both; }
   footer .footer-content {
     width: 1000px;
-    padding: 50px 0;
+    padding: 40px 0;
+    color: #2D6C35;
     margin: auto;
-    color: #306B37; }
-    footer .footer-content h3 {
+    text-align: center; }
+    footer .footer-content p {
       color: #683E2D;
-      font-size: 23px;
-      text-transform: uppercase; }
-    footer .footer-content nav ul {
-      padding: 5px 0; }
+      font-size: 16px;
+      font-weight: 300; }
+    footer .footer-content ul.social {
+      padding: 10px 0 30px 0;
+      font-weight: bold; }
+      footer .footer-content ul.social li {
+        padding: 0 15px;
+        display: inline-block; }
+        footer .footer-content ul.social li a {
+          display: table; }
+        footer .footer-content ul.social li span {
+          padding: 0 0 0 5px;
+          display: table-cell;
+          vertical-align: middle; }
     footer .footer-content nav li {
-      padding: 5px 0; }
+      line-height: 12px;
+      font-size: 12px;
+      padding: 0 10px;
+      border-right: 1px solid #683E2D;
+      display: inline-block; }
+      footer .footer-content nav li:last-child {
+        padding-right: 0;
+        border: none; }
