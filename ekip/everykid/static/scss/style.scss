@@ -1,7 +1,7 @@
 @import "bourbon";
 
-$site-width: 950px;
-$nav-width: 190px;
+$site-width: 1000px;
+$nav-width: 210px;
 
 body,html {
   background: #4E6A88;
@@ -14,9 +14,11 @@ body,html {
 
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
   font-family: "Superclarendon", serif;
-  text-transform: uppercase;
+}
+h1 {
+  font-size: 46px;
 }
 h2 {
   font-size: 35px;
@@ -61,16 +63,22 @@ button {
   background-size: cover;
 }
 
+.tent {
+  background: url(../img/backgrounds/tent.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
 .brown-rocks {
   background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
 .content {
-  width: $site-width - $nav-width;
+  max-width: $site-width - $nav-width;
   min-height: 500px;
   margin: auto;
-  padding: 0 0 50px $nav-width;
+  padding: 60px 0 50px $nav-width + 90;
 }
 
 .errors {
@@ -80,9 +88,9 @@ button {
 
 @import "landing";
 @import "get-your-pass";
+@import "student-pass";
 @import "educators";
-
 
 @import "footer";
 
-
+@import "responsive";

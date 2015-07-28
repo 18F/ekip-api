@@ -4,23 +4,26 @@
 
 {% block page_id %}student-pass{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}tent{% endblock background %}
 
 {% block content %}
 
-    <h2>4th graders:</h2>
-    <h3>Start your outdoor adventure today.</h3>
+  <div class="pass-content">
 
-    <p>Play a game and discover all the wonderful places you can go. After the
-    game, you will need to print a voucher for your free pass.</p>
-
-    <p>This voucher can then be exchanged for your free 4th grade pass at many
-    federal lands and waters (don't worry, we'll tell you where).</p>
+    <h1>Start your outdoor adventure right now</h1>
+    <p>Play a game and discover all the wonderful places you can go. After the game, you can print a voucher for free access to your federal lands and waters.</p>
+    <p>This voucher can then be exchanged for your free 4th grade pass (a more durable, and smaller version) at many federal lands and waters (don't worry, we'll tell you where).</p>
 
     <form method="POST">
       {% csrf_token %}
-      {{form}}
-      <button>Start</button>
+
+      <label for="in_the_fourth_grade">
+      <input id="in_the_fourth_grade" name="in_the_fourth_grade" type="checkbox" value="Y" />
+      <span>Yes, I am in the 4th grade</span> (or I am 10 years old)</label>
+
+      <button>Play</button>
     </form>
+
+  </div>
 
 {% endblock content %}

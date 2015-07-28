@@ -1,22 +1,27 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Game{% endblock title %}
+{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}tent{% endblock background %}
 
 {% block content %}
 
-<h3> Learn about different parks. </h3>
+  <div class="pass-content">
 
-<p>Federal lands and waters provide habitats for rare and endangered species.
-At least one or more endangered species are found in 204 of the 394 national
-parks.</p>
+    <h3> Learn about different parks. </h3>
 
-<p> Examples include: the Guadelupe fur seal, the humpback whale and the brown
-pelican. </p>
+    <p>Federal lands and waters provide habitats for rare and endangered species.
+    At least one or more endangered species are found in 204 of the 394 national
+    parks.</p>
 
-<a href='{% url "first_game_lands_map" %}'><button>Next</button></a>
+    <p> Examples include: the Guadelupe fur seal, the humpback whale and the brown
+    pelican. </p>
+
+    <a href='{% url "first_game_lands_map" %}'><button>Next</button></a>
+
+  </div>
+
 {% endblock %}

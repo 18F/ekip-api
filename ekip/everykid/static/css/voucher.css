@@ -1,41 +1,69 @@
-#fourth-grade-voucher {
+#fourth-grade-voucher, #educator-vouchers {
+  width: 595px;
   padding: 50px;
+  margin: auto;
   text-align: center;
   font-family: 'Lato', sans-serif; }
-  #fourth-grade-voucher h1, #fourth-grade-voucher h2, #fourth-grade-voucher h3 {
+  #fourth-grade-voucher h1, #fourth-grade-voucher h2, #fourth-grade-voucher h3, #educator-vouchers h1, #educator-vouchers h2, #educator-vouchers h3 {
     text-transform: uppercase;
     padding: 0;
     margin: 0; }
-  #fourth-grade-voucher h1 {
+  #fourth-grade-voucher h1, #educator-vouchers h1 {
     font-family: "Superclarendon", serif;
-    font-size: 53px;
+    font-size: 43px;
     color: #5D402E; }
-  #fourth-grade-voucher h2 {
-    font-size: 45px;
+  #fourth-grade-voucher h2, #educator-vouchers h2 {
+    font-size: 39px;
     color: #BA5E33; }
-  #fourth-grade-voucher h3 {
-    font-size: 18px; }
-  #fourth-grade-voucher .voucher {
+  #fourth-grade-voucher h3, #educator-vouchers h3 {
+    font-size: 16px; }
+  #fourth-grade-voucher .voucher, #educator-vouchers .voucher {
     width: 525px;
     margin: 50px auto;
     position: relative; }
-  #fourth-grade-voucher .voucher-barcode {
-    top: 70px;
-    right: -110px;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    position: absolute; }
-    #fourth-grade-voucher .voucher-barcode img {
-      width: 175px; }
-  #fourth-grade-voucher .personnel {
-    margin: 100px 0 0 0;
+    #fourth-grade-voucher .voucher .voucher-barcode, #educator-vouchers .voucher .voucher-barcode {
+      top: 70px;
+      right: -110px;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      position: absolute; }
+      #fourth-grade-voucher .voucher .voucher-barcode img, #educator-vouchers .voucher .voucher-barcode img {
+        width: 175px; }
+  #fourth-grade-voucher .personnel, #educator-vouchers .personnel {
+    margin: 150px 0 0 0;
     padding: 10px 0 0 0;
     font-size: 11px;
     border-top: 1px dotted #BABABA;
     text-align: left; }
-    #fourth-grade-voucher .personnel img {
-      width: 170px;
+    #fourth-grade-voucher .personnel::after, #educator-vouchers .personnel::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #fourth-grade-voucher .personnel .text, #educator-vouchers .personnel .text {
+      float: left; }
+    #fourth-grade-voucher .personnel .personnel-barcode, #educator-vouchers .personnel .personnel-barcode {
+      width: 300px;
+      margin: 5px 0;
+      text-align: right;
       float: right; }
+      #fourth-grade-voucher .personnel .personnel-barcode li, #fourth-grade-voucher .personnel .personnel-barcode li img, #educator-vouchers .personnel .personnel-barcode li, #educator-vouchers .personnel .personnel-barcode li img {
+        width: 130px;
+        display: inline-block; }
+
+#educator-vouchers {
+  padding: 0;
+  position: relative;
+  border: 1px solid transparent; }
+  #educator-vouchers .heading {
+    width: 595px;
+    top: 0;
+    left: 20px;
+    position: absolute; }
+  #educator-vouchers .voucher {
+    height: 642px;
+    margin: 200px auto 0 auto; }
+  #educator-vouchers .personnel {
+    display: none; }

@@ -8,7 +8,7 @@
 
 {% block content %}
 
-  <h2>Get Vouchers For Your Students</h2>
+  <h1>Get vouchers<br/>for your students</h1>
 
   <p>As a 4th grade educator, you can download a learning activity and print paper vouchers for your students. These vouchers will give them free access for up to a full year to all federal lands and waters.</p>
 
@@ -16,9 +16,11 @@
 
     <h3>You are a 4th-grade educator if ...</h3>
     <p>You are a teacher of 4th graders at a US school or a US military school, or</p>
-    <p>You are responsible for the engagement of 4th graders as part of a youth serving organization. This includes religious group leaders, camp directors and leaders of home-schoolers or after-school programs.</p>
+    <p>You are responsible for the engagement of 4th graders as part of a youth-serving organization. This includes religious group leaders, camp directors and leaders of home-schoolers or after-school programs.</p>
 
-    <button>begin</button>
+    <a href="#begin">
+      <button>begin</button>
+    </a>
 
   </div>
 
@@ -27,19 +29,23 @@
 {% block content_inner %}
   <div class="content-inner-block">
 
-    <h3>First download the activity</h3>
-    <p>We've created a fun and interactive learning activity to help you introduce topics surrounding national lands and waters to your 4th-grade students.</p>
+    <div class="download-activity">
+      <h3>First<br/>download the<br/>activity</h3>
+      <p>We've created a fun and interactive activity to help you introduce topics surrounding national lands and waters to your 4th-grade students.</p>
+    </div>
+    <div class="generate-vouchers">
+      <h3>Then generate vouchers</h3>
+      <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
+    </div>
 
-    <h3>Then generate vouchers</h3>
-    <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
-
+    <a name="begin"></a>
     <form action="" method="post">
       {% csrf_token %}
 
       {% include "educator_form.html" %}
 
       <input type="hidden" name="{{stage_field}}" value="1" />
-      <button>Next:<br/>Review Info</button>
+      <button>Next:<br/><span>Review Information</span></button>
     </form>
   </div>
 

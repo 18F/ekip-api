@@ -3,13 +3,11 @@
   .content {
 
     .pass-content {
-      width: 600px;
-      background: #1E7197;
-      padding: 30px;
-
-      h2 {
-        padding: 0;
-      }
+      max-width: 670px;
+      background: rgba(23, 112, 153, 0.9);
+      padding: 35px;
+      font-size: 18px;
+      font-weight: 300;
     }
 
     ul {
@@ -18,25 +16,28 @@
 
     .boxes li {
       width: 31%;
-      height: 160px;
+      height: 220px;
       border: 2px solid #fff;
       margin: 0 10px 0 0;
-      font-size: 14px;
+      font-size: 16px;
       vertical-align: top;
       display: inline-block;
-
-      div {
-        height: 130px;
-        padding: 15px;
-      }
 
       a {
         display: block;
       }
 
-      h3 {
-        color: #FED681;
-        padding: 0;
+      div {
+        height: 130px;
+        padding: 17px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #FFE897;
+        text-transform: uppercase;
+        padding: 5px 0 0 0;
       }
 
       button {

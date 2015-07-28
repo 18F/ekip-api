@@ -1,7 +1,9 @@
 @import "bourbon";
 
-#fourth-grade-voucher {
+#fourth-grade-voucher, #educator-vouchers {
+  width: 595px;
   padding: 50px;
+  margin: auto;
   text-align: center;
   font-family: 'Lato', sans-serif;
 
@@ -12,45 +14,79 @@
   }
   h1 {
     font-family: "Superclarendon", serif;
-    font-size: 53px;
+    font-size: 43px;
     color: #5D402E;
   }
   h2 {
-    font-size: 45px;
+    font-size: 39px;
     color: #BA5E33;
   }
   h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .voucher {
     width: 525px;
     margin: 50px auto;
     position: relative;
-  }
 
-  .voucher-barcode {
-    top: 70px;
-    right: -110px;
-    @include transform(rotate(-90deg));
-    position: absolute;
+    .voucher-barcode {
+      top: 70px;
+      right: -110px;
+      @include transform(rotate(-90deg));
+      position: absolute;
 
-    img {
-      width: 175px;
+      img {
+        width: 175px;
+      }
     }
   }
 
   .personnel {
-    margin: 100px 0 0 0;
+    margin: 150px 0 0 0;
     padding: 10px 0 0 0;
     font-size: 11px;
     border-top: 1px dotted #BABABA;
     text-align: left;
+    @include clearfix();
 
-    img {
-      width: 170px;
-      float: right;
+    .text {
+      float: left;
     }
+
+    .personnel-barcode {
+      width: 300px;
+      margin: 5px 0;
+      text-align: right;
+      float: right;
+
+      li, li img {
+        width: 130px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#educator-vouchers {
+  padding: 0;
+  position: relative;
+  border: 1px solid transparent;
+
+  .heading {
+    width: 595px;
+    top: 0;
+    left: 20px;
+    position: absolute;
+  }
+
+  .voucher {
+    height: 642px;
+    margin: 200px auto 0 auto;
+  }
+
+  .personnel {
+    display: none;
   }
 
 }

@@ -1,24 +1,49 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Get Your Pass - Fourth Graders{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}tent{% endblock background %}
 
 {% block content %}
 
-Success! You will get your voucher on the next screen. Please print your
-voucher, keep it in a safe place, and remember to take it with you on your
-trip.
+  <div class="pass-content voucher-claim">
 
-When you visit your federal lands and waters, we'd love to know where you are
-coming from.
+    <h1>You did it!<br/>Claim your voucher</h1>
 
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <button type="input" value="submit">Submit</button>
-</form>
+    <div class="voucher-claim-description">
+
+      <p>Success! You will get your voucher on the next screen. Please print your voucher, keep it in a safe place, and remember to take it with you on your trip. When you visit your federal lands and waters, we'd love to know where you are coming from.</p>
+
+    </div>
+
+    <div class="voucher-claim-zipcode">
+      <img src="{% static "img/envelope-zipcode.png" %}" alt="" />
+    </div>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      {% for field in form %}
+
+        {{ field.label_tag }}
+        {% if field.errors %}
+          <div class="error">
+            <div>{{ field.errors }}</div>
+            {{ field }}
+          </div>
+        {% else %}
+        {{ field }}
+        {% endif %}
+
+      {% endfor %}
+
+
+      <button>Get my voucher</button>
+    </form>
+
+  </div>
 
 {% endblock content %}

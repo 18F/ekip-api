@@ -3,23 +3,51 @@ footer {
   clear: both;
 
   .footer-content {
-    width: $site-width;
-    padding: 50px 0;
+    max-width: $site-width;
+    padding: 40px 0;
+    color: #2D6C35;
     margin: auto;
-    color: #306B37;
+    text-align: center;
 
-    h3 {
-      color: #673E2F;
+    p {
+      color: #683E2D;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    ul.social {
+      padding: 10px 0 30px 0;
+      font-weight: bold;
+
+      li {
+        padding: 0 15px;
+        display: inline-block;
+
+        a {
+          display: table;
+        }
+
+        span {
+          padding: 0 0 0 5px;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
     }
 
     nav {
 
-      ul {
-        padding: 5px 0;
-      }
-
       li {
-        padding: 5px 0;
+        line-height: 12px;
+        font-size: 12px;
+        padding: 0 10px;
+        border-right: 1px solid #683E2D;
+        display: inline-block;
+
+        &:last-child {
+          padding-right: 0;
+          border: none;
+        }
       }
     }
   }

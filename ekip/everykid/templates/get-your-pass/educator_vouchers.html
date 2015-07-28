@@ -1,21 +1,54 @@
-{% extends "base.html" %}
-{% block title %}Get Your Pass - Educators{% endblock title %}
+{% load staticfiles %}
 
-{% block page_id %}educators{% endblock page_id %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Student Vouchers</title>
 
-{% block background %}hills{% endblock background %}
+  <link rel="stylesheet" href="{% static 'css/voucher.min.css' %}" />
 
-{% block content %}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/barcode.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/voucher.js' %}"></script>
 
-  <h2>Vouchers</h2>
+</head>
+<body>
 
-  <p>Here are {{num_vouchers}} vouchers.</p>
+  <div id="educator-vouchers">
 
-  <ul>
-  {% for l in locators %}
-    <li> {{l}} </li>
+    <div class="heading">
+      <h1>Student Vouchers</h1>
+      <h2>These are your passes</h2>
+      <h3>To all U.S. National Parks, Forests, National Lands and Waters</h3>
+    </div>
+
+  {% for locator in locators %}
+    <div class="voucher">
+      <div class="voucher-barcode">
+        <img class="barcode" alt="barcode" data-id="{{ locator }}" />
+      </div>
+      <img src="{% static 'img/voucher.png' %}" alt="" />
+    </div>
   {% endfor %}
-  </ul>
 
-{% endblock content %}
+    <div class="personnel">
+      <div class="text">
+        This area for official use by facility personnel.
+      </div>
+
+      <ul class="personnel-barcode">
+      {% for locator in locators %}
+        <li>
+          <img alt="barcode" data-id="{{ locator }}" />
+        </li>
+      {% endfor %}
+      </ul>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+
 

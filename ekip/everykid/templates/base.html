@@ -11,7 +11,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
   <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
   <meta name="description" content="">
@@ -56,24 +56,50 @@
 
     <section class="footer-content">
 
-      <h3>Every Kid In A Park</h3>
+      <p>Share your own pictures and #EveryKidInAPark story:</p>
 
+      <ul class="social">
+        <li>
+          <a href="http://www.instagram.com/everykidinapark" target="_blank">
+            <img src="{% static 'img/instagram.png' %}" alt="" />
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.twitter.com/everykidinapark" target="_blank">
+            <img src="{% static 'img/twitter.png' %}" alt="" />
+            <span>Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/everykidinapark" target="_blank">
+            <img src="{% static 'img/facebook.png' %}" alt="" />
+            <span>Facebook</span>
+          </a>
+        </li>
+      </ul>
+
+      {% comment %}
       <nav>
         <ul>
           <li>
-            Get your pass
+            Become a partner school
           </li>
           <li>
-            Plan a trip
+            About us
           </li>
           <li>
-            Learn
+            Contact
           </li>
           <li>
-            4th-grade educators
+            Terms of use
+          </li>
+          <li>
+            Privacy policy
           </li>
         </ul>
       </nav>
+      {% endcomment %}
 
     </section>
 

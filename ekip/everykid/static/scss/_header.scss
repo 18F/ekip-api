@@ -7,16 +7,22 @@
 }
 
 header {
-  width: $site-width;
-  margin: auto;
+  max-width: $site-width;
+  margin: 0 auto 10px auto;
 }
 
 nav.top-links {
-  padding: 5px 0 40px 0;
   text-align: right;
 
+  ul {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 2px 0 0 0;
+    padding: 5px 45px 10px 45px;
+    display: inline-block;
+  }
   ul li {
     font-size: 14px;
+    font-weight: bold;
     line-height: 14px;
     padding: 0 10px;
     border-right: 1px solid #fff;

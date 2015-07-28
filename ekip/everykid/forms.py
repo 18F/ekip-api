@@ -32,9 +32,8 @@ class EducatorForm(forms.ModelForm):
     class Meta:
         model = Educator
         fields = [
-            'name', 'work_email', 'organization_name', 'address_line_1',
-            'address_line_2', 'city', 'state', 'zipcode', 'num_students',
-            'org_or_school']
+            'name', 'work_email', 'org_or_school', 'organization_name', 'address_line_1',
+            'address_line_2', 'city', 'state', 'zipcode', 'num_students']
 
 
 class FourthGraderForm(forms.Form):
@@ -58,4 +57,4 @@ class ZipCodeForm(forms.Form):
         This is the form that allows us to ask 4th graders for their ZIP code.
     """
 
-    zip_code = USZipCodeField(label=_("What is your ZIP code?"))
+    zip_code = USZipCodeField(label=_("My zip code is"))
