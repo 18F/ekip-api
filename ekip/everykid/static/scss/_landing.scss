@@ -30,6 +30,13 @@
       font-size: 19px;
       padding: 20px 15px;
       margin: 0 0 70px 0;
+
+      @include transition(background-color 0.5s ease-in, color 0.5s ease-in);
+
+      &:hover {
+        background: #fff;
+        color: #177099;
+      }
     }
   }
 }
