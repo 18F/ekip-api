@@ -8,6 +8,7 @@
       padding: 35px;
       font-size: 18px;
       font-weight: 300;
+      @include clearfix();
 
       form {
         width: 360px;
@@ -17,11 +18,79 @@
         text-align: center;
       }
 
+      label {
+        font-size: 16px;
+        padding: 0 0 15px 0;
+        cursor: pointer;
+        display: block;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      input[type="checkbox"] {
+        background: #FFE897;
+      }
+
       button {
         font-size: 14px;
+        margin: 15px 0 0 0;
         padding: 15px 35px;
-        background: #fff;
+        background: #FFE897;
         color: #177099;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    }
+
+    .voucher-claim {
+
+      .voucher-claim-description {
+        width: 420px;
+        float: left;
+      }
+      .voucher-claim-zipcode {
+        width: 210px;
+        padding: 0 0 0 15px;
+        float: left;
+      }
+
+      form {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        border: none;
+        vertical-align: top;
+        clear: both;
+
+        label {
+          font-weight: bold;
+          padding: 0 0 10px 0;
+          cursor: default;
+        }
+
+        input[type="text"] {
+          width: 180px;
+          height: 28px;
+          padding: 10px;
+          margin: 0 15px 0 0;
+          font-size: 16px;
+          border: 1px solid #fff;
+          background: rgba(255, 255, 255, 0.7);
+          float: left;
+        }
+
+        button {
+          height: 50px;
+          border: 1px solid #fff;
+          font-weight: normal;
+          padding: 15px;
+          margin: 0;
+          background: #fff;
+          float: left;
+        }
       }
 
     }

@@ -203,17 +203,72 @@ nav.main-nav {
   padding: 35px;
   font-size: 18px;
   font-weight: 300; }
+  #student-pass .content .pass-content::after {
+    clear: both;
+    content: "";
+    display: table; }
   #student-pass .content .pass-content form {
     width: 360px;
     margin: 30px auto;
     border: 2px solid #fff;
     padding: 30px;
     text-align: center; }
+  #student-pass .content .pass-content label {
+    font-size: 16px;
+    padding: 0 0 15px 0;
+    cursor: pointer;
+    display: block; }
+    #student-pass .content .pass-content label span {
+      font-weight: bold; }
+  #student-pass .content .pass-content input[type="checkbox"] {
+    background: #FFE897; }
   #student-pass .content .pass-content button {
     font-size: 14px;
+    margin: 15px 0 0 0;
     padding: 15px 35px;
+    background: #FFE897;
+    color: #177099;
+    font-weight: bold;
+    letter-spacing: 1px; }
+
+#student-pass .content .voucher-claim .voucher-claim-description {
+  width: 420px;
+  float: left; }
+
+#student-pass .content .voucher-claim .voucher-claim-zipcode {
+  width: 210px;
+  padding: 0 0 0 15px;
+  float: left; }
+
+#student-pass .content .voucher-claim form {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+  vertical-align: top;
+  clear: both; }
+  #student-pass .content .voucher-claim form label {
+    font-weight: bold;
+    padding: 0 0 10px 0;
+    cursor: default; }
+  #student-pass .content .voucher-claim form input[type="text"] {
+    width: 180px;
+    height: 28px;
+    padding: 10px;
+    margin: 0 15px 0 0;
+    font-size: 16px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.7);
+    float: left; }
+  #student-pass .content .voucher-claim form button {
+    height: 50px;
+    border: 1px solid #fff;
+    font-weight: normal;
+    padding: 15px;
+    margin: 0;
     background: #fff;
-    color: #177099; }
+    float: left; }
 
 #educators .content {
   padding-bottom: 100px; }

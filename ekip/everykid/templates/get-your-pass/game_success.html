@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Get Your Pass - Fourth Graders{% endblock title %}
 
@@ -8,21 +9,27 @@
 
 {% block content %}
 
-  <div class="pass-content">
+  <div class="pass-content voucher-claim">
 
-    Success! You will get your voucher on the next screen. Please print your
-    voucher, keep it in a safe place, and remember to take it with you on your
-    trip.
+    <h1>You did it!<br/>Claim your voucher</h1>
 
-    When you visit your federal lands and waters, we'd love to know where you are
-    coming from.
+    <div class="voucher-claim-description">
+
+      <p>You will get your voucher on the next screen. Please print it and keep it in a safe place, and remember to bring it with you on your trip! Just tell us your zip code so that we know where you are coming from when you visit.</p>
+
+    </div>
+
+    <div class="voucher-claim-zipcode">
+      <img src="{% static "img/envelope-zipcode.png" %}" alt="" />
+    </div>
 
     <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <br/>
-        <br/>
-        <button type="input" value="submit">Submit</button>
+      {% csrf_token %}
+
+      <label for="id_zip_code">My zip code is:</label>
+      <input id="id_zip_code" name="zip_code" type="text">
+
+      <button>Get my voucher</button>
     </form>
 
   </div>
