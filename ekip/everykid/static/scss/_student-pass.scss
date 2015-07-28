@@ -3,7 +3,7 @@
   .content {
 
     .pass-content {
-      width: 670px;
+      max-width: 670px;
       background: rgba(23, 112, 153, 0.9);
       padding: 35px;
       font-size: 18px;
@@ -11,7 +11,7 @@
       @include clearfix();
 
       form {
-        width: 360px;
+        max-width: 360px;
         margin: 30px auto;
         border: 2px solid #fff;
         padding: 30px;
@@ -60,7 +60,7 @@
     .voucher-claim {
 
       .voucher-claim-description {
-        width: 420px;
+        max-width: 420px;
         float: left;
       }
       .voucher-claim-zipcode {

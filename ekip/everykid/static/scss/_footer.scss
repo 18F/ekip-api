@@ -3,7 +3,7 @@ footer {
   clear: both;
 
   .footer-content {
-    width: $site-width;
+    max-width: $site-width;
     padding: 40px 0;
     color: #2D6C35;
     margin: auto;

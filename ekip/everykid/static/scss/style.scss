@@ -75,7 +75,7 @@ button {
 }
 
 .content {
-  width: $site-width - $nav-width;
+  max-width: $site-width - $nav-width;
   min-height: 500px;
   margin: auto;
   padding: 60px 0 50px $nav-width + 90;
@@ -91,7 +91,6 @@ button {
 @import "student-pass";
 @import "educators";
 
-
 @import "footer";
 
-
+@import "responsive";

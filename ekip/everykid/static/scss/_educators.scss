@@ -4,7 +4,7 @@
     padding-bottom: 100px;
 
     h2, p, .explanation {
-      width: 710px;
+      max-width: 710px;
     }
     p {
       font-size: 22px;
@@ -12,7 +12,7 @@
     }
 
     .explanation {
-      width: 570px;
+      max-width: 570px;
       border: 2px solid #FFE087;
       padding: 20px;
       margin: 20px 0;
@@ -47,7 +47,7 @@
   }
 
   .content-inner-block {
-    width: 620px;
+    max-width: 620px;
     padding: 75px 0;
     margin: auto;
 
@@ -64,7 +64,7 @@
     }
 
     .download-activity {
-      width: 310px;
+      max-width: 310px;
       padding: 0 0 90px 50px;
       border-left: 5px dotted #B0CFB4;
       position: relative;
@@ -111,7 +111,7 @@
   }
 
   form {
-    width: 370px;
+    max-width: 370px;
     padding: 15px 0;
 
     @include clearfix();
@@ -229,7 +229,7 @@
   }
 
   .preview {
-    width: 550px;
+    max-width: 550px;
     background: #D7FDDC;
     color: #306B38;
     padding: 30px;

@@ -1,5 +1,5 @@
 nav.main-nav {
-  width: $nav-width;
+  max-width: $nav-width;
   position: absolute;
   top: 40px;
 
@@ -48,13 +48,3 @@ nav.main-nav {
   }
 }
 
-#landing {
-  .main-nav {
-    // top: 95px;
-    top: 150px;
-
-    img {
-      display: none;
-    }
-  }
-}

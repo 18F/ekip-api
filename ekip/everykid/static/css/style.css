@@ -45,7 +45,7 @@ button {
   font-size: 13px; }
 
 header {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto 10px auto; }
 
 nav.top-links {
@@ -70,7 +70,7 @@ nav.top-links {
   color: #F7D27F; }
 
 nav.main-nav {
-  width: 210px;
+  max-width: 210px;
   position: absolute;
   top: 40px; }
   nav.main-nav img {
@@ -105,11 +105,6 @@ nav.main-nav {
     nav.main-nav li:nth-child(odd) {
       margin-left: 35px; }
 
-#landing .main-nav {
-  top: 150px; }
-  #landing .main-nav img {
-    display: none; }
-
 .mountain {
   background: url(../img/backgrounds/mountain.jpg) no-repeat center center fixed;
   background-size: cover; }
@@ -127,7 +122,7 @@ nav.main-nav {
   background-size: cover; }
 
 .content {
-  width: 790px;
+  max-width: 790px;
   min-height: 500px;
   margin: auto;
   padding: 60px 0 50px 300px; }
@@ -139,8 +134,13 @@ nav.main-nav {
 #landing h1 {
   font-size: 60px; }
 
+#landing .main-nav {
+  top: 150px; }
+  #landing .main-nav img {
+    display: none; }
+
 #landing .content {
-  width: 1000px;
+  max-width: 1000px;
   text-align: center;
   padding: 0;
   margin: auto; }
@@ -168,7 +168,7 @@ nav.main-nav {
       color: #177099; }
 
 #get-your-pass .content .pass-content {
-  width: 670px;
+  max-width: 670px;
   background: rgba(23, 112, 153, 0.9);
   padding: 35px;
   font-size: 18px;
@@ -207,7 +207,7 @@ nav.main-nav {
     margin: 0; }
 
 #student-pass .content .pass-content {
-  width: 670px;
+  max-width: 670px;
   background: rgba(23, 112, 153, 0.9);
   padding: 35px;
   font-size: 18px;
@@ -217,7 +217,7 @@ nav.main-nav {
     content: "";
     display: table; }
   #student-pass .content .pass-content form {
-    width: 360px;
+    max-width: 360px;
     margin: 30px auto;
     border: 2px solid #fff;
     padding: 30px;
@@ -249,7 +249,7 @@ nav.main-nav {
     letter-spacing: 1px; }
 
 #student-pass .content .voucher-claim .voucher-claim-description {
-  width: 420px;
+  max-width: 420px;
   float: left; }
 
 #student-pass .content .voucher-claim .voucher-claim-zipcode {
@@ -291,12 +291,12 @@ nav.main-nav {
 #educators .content {
   padding-bottom: 100px; }
   #educators .content h2, #educators .content p, #educators .content .explanation {
-    width: 710px; }
+    max-width: 710px; }
   #educators .content p {
     font-size: 22px;
     font-weight: 300; }
   #educators .content .explanation {
-    width: 570px;
+    max-width: 570px;
     border: 2px solid #FFE087;
     padding: 20px;
     margin: 20px 0; }
@@ -323,7 +323,7 @@ nav.main-nav {
   color: #306B38; }
 
 #educators .content-inner-block {
-  width: 620px;
+  max-width: 620px;
   padding: 75px 0;
   margin: auto; }
   #educators .content-inner-block h3 {
@@ -336,7 +336,7 @@ nav.main-nav {
     color: #323232;
     margin-bottom: 30px; }
   #educators .content-inner-block .download-activity {
-    width: 310px;
+    max-width: 310px;
     padding: 0 0 90px 50px;
     border-left: 5px dotted #B0CFB4;
     position: relative; }
@@ -372,7 +372,7 @@ nav.main-nav {
       left: -24px; }
 
 #educators form {
-  width: 370px;
+  max-width: 370px;
   padding: 15px 0; }
   #educators form::after {
     clear: both;
@@ -449,7 +449,7 @@ nav.main-nav {
       font-size: 14px; }
 
 #educators .preview {
-  width: 550px;
+  max-width: 550px;
   background: #D7FDDC;
   color: #306B38;
   padding: 30px;
@@ -473,7 +473,7 @@ footer {
   background: #FDEED0;
   clear: both; }
   footer .footer-content {
-    width: 1000px;
+    max-width: 1000px;
     padding: 40px 0;
     color: #2D6C35;
     margin: auto;
@@ -503,3 +503,55 @@ footer {
       footer .footer-content nav li:last-child {
         padding-right: 0;
         border: none; }
+
+@media (max-width: 1050px) {
+  nav.main-nav {
+    left: 25px; }
+  .content {
+    margin-right: 25px; } }
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px; }
+  h2 {
+    font-size: 20px; }
+  nav.top-links {
+    display: none; }
+  nav.main-nav {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+    text-align: center; }
+    nav.main-nav img {
+      margin: 5px 0; }
+    nav.main-nav ul {
+      margin: 0 5px;
+      display: block; }
+    nav.main-nav li {
+      font-size: 13px;
+      margin: 5px; }
+      nav.main-nav li a {
+        padding: 8px 10px; }
+      nav.main-nav li:nth-child(odd) {
+        margin: 0; }
+  .content {
+    padding: 0;
+    margin: 0; }
+  #landing .main-nav {
+    top: 20px; }
+  #landing h1 {
+    font-size: 50px; }
+  #landing .content {
+    padding: 0 20px; }
+  #get-your-pass .content .pass-content {
+    padding: 20px; }
+  #student-pass .content .pass-content {
+    padding: 20px; }
+  #educators .content {
+    padding: 20px; }
+  #educators .content-inner-block {
+    padding: 20px; }
+  #educators form {
+    width: 100%;
+    border: 1px solid red; } }

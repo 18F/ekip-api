@@ -4,8 +4,16 @@
     font-size: 60px;
   }
 
+  .main-nav {
+    top: 150px;
+
+    img {
+      display: none;
+    }
+  }
+
   .content {
-    width: $site-width;
+    max-width: $site-width;
     text-align: center;
     padding: 0;
     margin: auto;
