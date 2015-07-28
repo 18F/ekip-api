@@ -26,8 +26,20 @@
     <form method="POST">
       {% csrf_token %}
 
-      <label for="id_zip_code">My zip code is:</label>
-      <input id="id_zip_code" name="zip_code" type="text">
+      {% for field in form %}
+
+        {{ field.label_tag }}
+        {% if field.errors %}
+          <div class="error">
+            <div>{{ field.errors }}</div>
+            {{ field }}
+          </div>
+        {% else %}
+        {{ field }}
+        {% endif %}
+
+      {% endfor %}
+
 
       <button>Get my voucher</button>
     </form>

@@ -16,6 +16,19 @@
         border: 2px solid #fff;
         padding: 30px;
         text-align: center;
+
+        .error {
+          color: #ff0000;
+          font-size: 14px;
+          font-weight: bold;
+
+          div {
+            padding: 0 0 10px 0;
+          }
+          input[type="text"] {
+            border: 1px solid #ff0000;
+          }
+        }
       }
 
       label {
@@ -76,6 +89,7 @@
           height: 28px;
           padding: 10px;
           margin: 0 15px 0 0;
+          color: #177099;
           font-size: 16px;
           border: 1px solid #fff;
           background: rgba(255, 255, 255, 0.7);

@@ -57,4 +57,4 @@ class ZipCodeForm(forms.Form):
         This is the form that allows us to ask 4th graders for their ZIP code.
     """
 
-    zip_code = USZipCodeField(label=_("What is your ZIP code?"))
+    zip_code = USZipCodeField(label=_("My zip code is"))
