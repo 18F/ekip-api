@@ -2,8 +2,8 @@
 
 #voucher-page {
   width: 595px;
-  height: 842px;
-  padding: 20px 0;
+  height: 812px;
+  padding: 10px 0;
   margin: auto;
   font-family: 'Lato', sans-serif;
   position: relative;
@@ -31,6 +31,7 @@
     }
     h3 {
       font-size: 33px;
+      line-height: 30px;
       font-weight: 300;
       color: #6C6C69;
     }
@@ -49,7 +50,7 @@
     h2 {
       font-size: 20px;
       color: #4C89A5;
-      padding: 0 0 5px 0;
+      padding: 0;
     }
     p {
       font-size: 14px;
@@ -150,7 +151,7 @@
   .personnel {
     left: 0;
     right: 0;
-    bottom: 20px;
+    bottom: 0;
     padding: 5px 0;
     position: absolute;
     font-size: 12px;
