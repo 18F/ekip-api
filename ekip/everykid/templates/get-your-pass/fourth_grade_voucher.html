@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Free Pass</title>
+  <title>Your Free Voucher</title>
 
   <link rel="stylesheet" href="{% static 'css/voucher.min.css' %}" />
 
@@ -14,12 +14,12 @@
 </head>
 <body>
 
-  <div id="fourth-grade-voucher">
+  <div id="voucher-page">
 
     <div class="heading">
       <h1>Congratulations!</h1>
       <h2>You've earned a free pass</h2>
-      <h3>To all U.S. National Parks, Forests, National Lands and Waters</h3>
+      <h3>To all Federal Lands and Waters</h3>
     </div>
 
     <div class="voucher">
@@ -30,15 +30,8 @@
     </div>
 
     <div class="personnel">
-      <div class="text">
-        This area for official use by facility personnel.
-      </div>
-
-      <ul class="personnel-barcode">
-        <li>
-          <img alt="barcode" data-id="{{ locator }}" />
-        </li>
-      </ul>
+      <span>This area for official use by facility personnel.</span>
+      <img alt="barcode" data-id="{{ locator }}" />
     </div>
 
   </div>

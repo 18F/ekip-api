@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   })
 
-  $('.personnel-barcode li').each(function() {
+  $('.personnel').each(function() {
 
     locatorID = $(this).find('img').attr('data-id');
 
