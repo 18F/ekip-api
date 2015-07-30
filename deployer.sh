@@ -13,7 +13,7 @@
 # and https://github.com/dlapiduz/fugacious/blob/master/cf-deploy.sh
 ###
 
-ROUTE="cf.18f.us"
+ROUTE="18f.gov"
 HOST="kids"
 PUSH="cf.sh"
 
