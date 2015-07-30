@@ -9,13 +9,13 @@ $(document).ready(function() {
     $(this).find('img').JsBarcode(locatorID, {
       format: 'CODE128',
       displayValue: true,
-      fontSize: 20,
-      height: 40
+      fontSize: 30,
+      height: 50
     });
 
   })
 
-  $('.personnel-barcode li').each(function() {
+  $('.personnel').each(function() {
 
     locatorID = $(this).find('img').attr('data-id');
 

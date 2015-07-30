@@ -14,39 +14,55 @@
 </head>
 <body>
 
-  <div id="educator-vouchers">
+  {% for locator in locators %}
+  <div id="voucher-page">
 
     <div class="heading">
-      <h1>Student Vouchers</h1>
-      <h2>These are your passes</h2>
-      <h3>To all U.S. National Parks, Forests, National Lands and Waters</h3>
+      <h1>Congratulations!</h1>
+      <h2>You've earned a free pass</h2>
+      <h3>To all Federal Lands and Waters</h3>
     </div>
 
-  {% for locator in locators %}
+    <h3 class="instructions">Follow these instructions to start your adventure!</h3>
+
+    <div class="step print-page">
+      <h2>Print this page</h2>
+      <p>Great job! First print this paper voucher and put it in a safe place until you are ready to use it.</p>
+    </div>
+
     <div class="voucher">
+      <img class="voucher-image" src="{% static 'img/voucher.jpg' %}" alt="" />
+
+      <div class="credit">
+        "Weathered Wood Texture" by chefranden, CC by 2.5
+        https://www.flickr.com/photos/
+        chefranden/4757787899/
+      </div>
+
       <div class="voucher-barcode">
         <img class="barcode" alt="barcode" data-id="{{ locator }}" />
       </div>
-      <img src="{% static 'img/voucher.png' %}" alt="" />
     </div>
-  {% endfor %}
+
+    <div class="step plan">
+      <h2>Hit the road</h2>
+      <p>Click "Plan Your Trip" on this website (www.everykidinapark.gov) to learn about all of the places you can go.</p>
+    </div>
+
+    <div class="step get">
+      <h2>Get in free!</h2>
+      <p>Show this paper voucher to receive free access and/or claim your 4th grade pass. Be safe and have fun!</p>
+
+      <img class="durable-pass" src="{% static 'img/durable-pass.jpg' %}" alt="" />
+    </div>
 
     <div class="personnel">
-      <div class="text">
-        This area for official use by facility personnel.
-      </div>
-
-      <ul class="personnel-barcode">
-      {% for locator in locators %}
-        <li>
-          <img alt="barcode" data-id="{{ locator }}" />
-        </li>
-      {% endfor %}
-      </ul>
-
+      <span>This area for official use by facility personnel.</span>
+      <img alt="barcode" data-id="{{ locator }}" />
     </div>
 
   </div>
+  {% endfor %}
 
 </body>
 </html>
