@@ -26,6 +26,11 @@ class BasicPageTestCase(TestCase):
         response = self.client.get(reverse('educator_passes'))
         self.assertEquals(200, response.status_code)
 
+    def test_get_privacy_policy(self):
+        response = self.client.get(reverse('privacy_policy'))
+        self.assertEquals(200, response.status_code)
+        
+
 
 class PassExchangeSiteTestCase(TestCase):
     fixtures = ['federalsites.json']
