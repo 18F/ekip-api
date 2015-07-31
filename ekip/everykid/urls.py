@@ -39,6 +39,11 @@ urlpatterns = patterns(
     # LEARN
     url(r'learn/', learn, name="learn"),
 
+
+    # ABOUT
+    url(r'about/$', TemplateView.as_view(
+        template_name="about.html"), name="about_ekip"),
+
     # LEGAL
     url(r'privacy-policy/$', TemplateView.as_view(
         template_name="legal/privacy.html"), name="privacy_policy"),
