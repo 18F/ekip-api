@@ -11,13 +11,35 @@
 
   <img src="{% static "img/logo.png" %}" alt="" />
 
-  <h1></h1>
-  <div class="landing-description">
-    Get a free one-year pass to all of America's federal lands and waters
-  </div>
+  <h1><span>Hey 4th graders,</span> see America’s natural wonders and historic sites for free!</h1>
 
   <a href="{% url 'get_your_pass' %}">
-    <button>Get Started!</button>
+    <button>Let's Go!</button>
   </a>
 
 {% endblock content %}
+
+{% block content_inner %}
+  <div class="content-inner-block">
+
+    <section>
+
+      <ul>
+        <li>
+          <div class="image">
+            <img src="{% static "img/landing-park.png" %}" alt="" />
+            <div class="caption">
+              A specific park in America
+            </div>
+          </div>
+          <div class="description">
+            <h2>Every Kid in a Park</h2>
+            <p>is a program which gives you and your family unlimited access to all of our national parks, forests, and federal lands and waters, for up to a full year.</p>
+          </div>
+
+        </li>
+
+    </section>
+
+  </div>
+{% endblock content_inner %}

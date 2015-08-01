@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
 from .views import (
-    learn, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview,
+    how_it_works, student_pass, pass_exchange, educator_vouchers, EducatorFormPreview,
     fourth_grade_voucher, game_success)
 
 from .forms import EducatorForm
@@ -36,8 +36,9 @@ urlpatterns = patterns(
     url(r'plan-your-trip/', TemplateView.as_view(
         template_name="plan-your-trip/index.html"), name="plan_your_trip"),
 
-    # LEARN
-    url(r'learn/', learn, name="learn"),
+    # HOW IT WORKS
+    url(r'how-it-works/$', TemplateView.as_view(
+        template_name="how-it-works/index.html"), name="how_it_works"),
 
 
     # ABOUT

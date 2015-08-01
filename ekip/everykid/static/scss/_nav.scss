@@ -41,8 +41,12 @@ nav.main-nav {
       }
     }
 
-    &:nth-child(odd) {
-      margin-left: 35px;
+    &:nth-child(1) {
+      margin-left: 40px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 60px;
     }
 
   }
