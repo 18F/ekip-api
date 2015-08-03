@@ -73,12 +73,26 @@ nav.main-nav {
   max-width: 210px;
   position: absolute;
   top: 40px; }
-  nav.main-nav img {
+  nav.main-nav .logo {
     width: 150px;
     margin: 40px 0 20px 35px; }
+  nav.main-nav .nav-container {
+    position: relative; }
+  nav.main-nav .lines {
+    width: 55px;
+    height: 99px;
+    top: 35px;
+    right: 23px;
+    z-index: 0;
+    position: absolute; }
+    nav.main-nav .lines g {
+      stroke: #fff; }
   nav.main-nav ul {
+    z-index: 100;
+    position: relative;
     display: inline-block; }
   nav.main-nav li {
+    z-index: 100;
     background: #fff;
     color: #456D97;
     margin: 0 0 20px 0;
@@ -95,13 +109,19 @@ nav.main-nav {
       padding: 12px 15px;
       text-decoration: none;
       color: #456D97;
-      display: block;
-      -webkit-transition: background-color 0.4s ease-in, color 0.4s ease-in;
-      -moz-transition: background-color 0.4s ease-in, color 0.4s ease-in;
-      transition: background-color 0.4s ease-in, color 0.4s ease-in; }
+      position: relative;
+      display: block; }
       nav.main-nav li a:hover {
         background: #1E7197;
         color: #fff; }
+        nav.main-nav li a:hover:before {
+          width: 55px;
+          height: 55px;
+          background: url(../img/nav-compass.png) center center no-repeat;
+          content: "\00a0";
+          top: 5px;
+          left: -37px;
+          position: absolute; }
     nav.main-nav li:nth-child(1) {
       margin-left: 40px; }
     nav.main-nav li:nth-child(3) {
@@ -142,7 +162,7 @@ nav.main-nav {
 
 #landing .main-nav {
   top: 150px; }
-  #landing .main-nav img {
+  #landing .main-nav .logo {
     display: none; }
 
 #landing .content {
