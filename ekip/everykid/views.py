@@ -119,10 +119,10 @@ def educator_vouchers(request):
     )
 
 
-def learn(request):
+def how_it_works(request):
     return render(
         request,
-        'learn/index.html',
+        'how-it-works/index.html',
         {}
     )
 

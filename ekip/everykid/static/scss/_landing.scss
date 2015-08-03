@@ -1,13 +1,19 @@
 #landing {
 
   h1 {
-    font-size: 60px;
+    max-width: 660px;
+    font-size: 40px;
+    margin: 0 auto 20px auto;
+
+    span {
+      color: #FFE897;
+    }
   }
 
   .main-nav {
     top: 150px;
 
-    img {
+    .logo {
       display: none;
     }
   }
@@ -22,12 +28,6 @@
       margin: 30px 0 15px 0;
     }
 
-    .landing-description {
-      font-size: 22px;
-      font-weight: 300;
-      margin: 0 auto 45px auto;
-    }
-
     button {
       border: 4px solid #fff;
       background: transparent;
@@ -36,8 +36,8 @@
       letter-spacing: 1px;
       color: #fff;
       font-size: 19px;
-      padding: 20px 15px;
-      margin: 0 0 70px 0;
+      padding: 20px 30px;
+      margin: 0 0 90px 0;
 
       @include transition(background-color 0.5s ease-in, color 0.5s ease-in);
 
@@ -47,4 +47,48 @@
       }
     }
   }
+
+  .content-inner-block {
+    background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat;
+    height: 1000px;
+
+    section {
+      max-width: 1130px;
+      padding: 60px 20px;
+      margin: auto;
+
+      .image {
+        background: #C82629;
+        border: 4px solid #fff;
+        display: inline-block;
+
+        img {
+          border-bottom: 4px solid #fff;
+        }
+        .caption {
+          font-size: 16px;
+          padding: 3px 13px 7px 13px;
+        }
+      }
+      .description {
+        max-width: 450px;
+        padding: 50px;
+        display: inline-block;
+        vertical-align: top;
+
+        h2 {
+          font-size: 30px;
+          padding-bottom: 0;
+        }
+        p {
+          margin-top: 0;
+          font-size: 22px;
+          line-height: 30px;
+          font-weight: 300;
+        }
+      }
+    }
+
+  }
+
 }

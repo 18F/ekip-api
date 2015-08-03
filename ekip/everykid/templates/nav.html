@@ -2,19 +2,33 @@
 <nav class="main-nav">
 
   <a href="/">
-    <img src="{% static "img/logo.png" %}" alt="" />
+    <img src="{% static "img/logo.png" %}" class="logo" alt="" />
   </a>
 
-  <ul>
-    <li>
-      <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
-    </li>
-    <li>
-      <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
-    </li>
-    <li>
-      <a href="{% url 'learn' %}">Learn</a>
-    </li>
-  </ul>
+  <div class="nav-container">
+
+    <svg class="lines" viewBox="0 0 55 99" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-279.000000, -142.000000)" stroke-width="2" stroke-dasharray="6,4">
+          <g transform="translate(279.000000, 142.000000)">
+            <path d="M54,0.5 L54,54.5512466 L13.8198828,54.5512466"></path>
+            <path d="M1,62.5 L1,101.551247"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <ul>
+      <li>
+        <a href="{% url 'how_it_works' %}">How It Works</a>
+      <li>
+        <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+      </li>
+      <li>
+        <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+      </li>
+    </ul>
+
+  </div>
 
 </nav>
