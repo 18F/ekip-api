@@ -46,25 +46,30 @@ button {
 
 header {
   max-width: 1000px;
-  margin: 0 auto 10px auto; }
+  margin: 0 auto 10px auto;
+  border-top: 1px solid transparent; }
 
 nav.top-links {
-  text-align: right; }
+  text-align: right;
+  position: absolute;
+  right: 0; }
   nav.top-links ul {
     background: rgba(0, 0, 0, 0.6);
-    margin: 2px 0 0 0;
-    padding: 5px 45px 10px 45px;
+    margin-top: 1px;
+    padding: 0 30px 0 0;
     display: inline-block; }
-  nav.top-links ul li {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 14px;
-    padding: 0 10px;
-    border-right: 1px solid #fff;
-    display: inline-block; }
-    nav.top-links ul li:last-child {
-      padding-right: 0;
-      border: none; }
+    nav.top-links ul li {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-right: 1px solid #fff;
+      display: inline-block; }
+      nav.top-links ul li a {
+        opacity: 0.8; }
+      nav.top-links ul li a:hover {
+        opacity: 1; }
+      nav.top-links ul li:last-child {
+        border: none; }
 
 #educators .educators-link {
   color: #F7D27F; }
