@@ -7,7 +7,54 @@
 {% block content %}
 
   <h1>How does it work?</h1>
-  <p>It's easy! Just follow these steps to earn your free voucher and be on your way!</p>
 
+  <p>It's easy! Just follow the steps shown below and you'll be visiting the
+  outdoors in no time.</p>
+
+  <h2>1</h2>
+
+  <p>As a 4th grader, use this website to <a href="{% url "student_pass" %}">get and print</a> a voucher.</p>
+
+  <p>Educators can <a href="{% url "educator_passes" %}">get vouchers</a> for
+  their students (and download a related learning activity).</p>
+
+  <h2>2</h2>
+
+  <p><a href="{% url "plan_your_trip" %}">Plan a trip</a> (it's a good idea to
+  involve your parents during this portion).</p>
+
+  <p>We provide resources for educators to plan classroom field trips.</p>
+
+  <h2>3</h2>
+
+  <p>Exchange your voucher for a wallet-sized pass at
+  <a href="{% url "pass_exchange" %}">particpating locations.</a> 
+  Everywhere else, you can use
+  your voucher for free entry (federal lands and waters only).</p>
+
+  <p>Be sure to print your voucher before you go!</p>
+
+  <h2>4</h2>
+
+  <p>Enjoy your federal lands and waters. Leave only footsteps, take only
+  pictures.</p>
+
+  <p>Share your pictures and stories using #EveryKidInAPark</p>
+  <p>And then, do it all again. Your pass is valid for up to one full year</p>
+
+  <h2> A few things to know: </h2>
+
+  <ul> 
+
+    <li> Each voucher has a unique bar code. This means you can't photocopy
+    your voucher and give it to your friends. However, you should encourage
+    them to come here and get their own voucher if they are in the fourth
+    grade.</li>
+
+    <li>You will need to print your voucher and bring it with you. Electronic
+    copies (on your phone or tablet, for example) are not accepted. At
+    unstaffed locations, you'll need to leave the voucher on the dashboard of
+    your car. </li>
+  </ul>
 
 {% endblock content %}
