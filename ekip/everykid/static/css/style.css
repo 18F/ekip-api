@@ -252,7 +252,7 @@ ul.top-links {
     #landing .content-inner-block section li:nth-child(even) .image {
       float: right; }
     #landing .content-inner-block section li.ekip .description {
-      padding: 100px 0 0 45px; }
+      margin: 100px 0 0 45px; }
     #landing .content-inner-block section li.fourth-graders {
       margin: 65px 0 0 0; }
       #landing .content-inner-block section li.fourth-graders .image {
@@ -617,7 +617,7 @@ footer {
         border: none; }
 
 @media (max-width: 1050px) {
-  nav.main-nav {
+  .menu-container nav {
     left: 25px; }
   .content {
     margin-right: 25px; } }
@@ -627,41 +627,82 @@ footer {
     font-size: 30px; }
   h2 {
     font-size: 20px; }
-  nav.top-links {
+  ul.top-links {
     display: none; }
-  nav.main-nav {
+  .menu-container {
+    top: 0; }
+  .menu-container nav {
     max-width: 100%;
     top: 0;
     left: 0;
     position: relative;
     text-align: center; }
-    nav.main-nav img {
+    .menu-container nav .logo {
       margin: 5px 0; }
-    nav.main-nav ul {
+    .menu-container nav .lines {
+      display: none; }
+    .menu-container nav ul {
       margin: 0 5px;
       display: block; }
-    nav.main-nav li {
+    .menu-container nav li {
       font-size: 13px;
       margin: 5px; }
-      nav.main-nav li a {
+      .menu-container nav li a {
         padding: 8px 10px; }
-      nav.main-nav li:nth-child(odd) {
+        .menu-container nav li a:hover:before {
+          display: none; }
+      .menu-container nav li:nth-child(odd) {
         margin: 0; }
   .content {
-    padding: 0;
+    padding: 10px 20px;
     margin: 0; }
-  #landing .main-nav {
-    top: 20px; }
+  #landing .menu-container nav {
+    top: 0;
+    padding: 5px 0; }
   #landing h1 {
-    font-size: 30px; }
+    font-size: 28px;
+    padding: 0; }
   #landing .content {
     padding: 0 20px; }
+    #landing .content .logo {
+      margin: 0; }
     #landing .content button {
       font-size: 16px;
       padding: 15px;
-      margin-bottom: 30px; }
-  #landing .content-inner-block section {
-    padding: 20px; }
+      margin: 0; }
+  #landing .content-inner-block {
+    background: #C82629; }
+    #landing .content-inner-block section {
+      padding: 20px 0; }
+      #landing .content-inner-block section li .image {
+        display: none; }
+      #landing .content-inner-block section li .description {
+        padding: 10px 20px; }
+        #landing .content-inner-block section li .description h2 {
+          font-size: 26px; }
+        #landing .content-inner-block section li .description p {
+          font-size: 19px;
+          margin-bottom: 15px; }
+      #landing .content-inner-block section li:nth-child(even) .image {
+        float: none; }
+      #landing .content-inner-block section li.ekip,
+      #landing .content-inner-block section li.fourth-graders,
+      #landing .content-inner-block section li.parents,
+      #landing .content-inner-block section li.educators {
+        margin: 10px 0; }
+        #landing .content-inner-block section li.ekip .image,
+        #landing .content-inner-block section li.ekip .description,
+        #landing .content-inner-block section li.fourth-graders .image,
+        #landing .content-inner-block section li.fourth-graders .description,
+        #landing .content-inner-block section li.parents .image,
+        #landing .content-inner-block section li.parents .description,
+        #landing .content-inner-block section li.educators .image,
+        #landing .content-inner-block section li.educators .description {
+          margin: 0; }
+  #landing .content-inner-quote section {
+    padding: 30px 20px; }
+    #landing .content-inner-quote section .quote {
+      font-size: 26px; }
   #get-your-pass .content .pass-content {
     padding: 20px; }
   #student-pass .content .pass-content {

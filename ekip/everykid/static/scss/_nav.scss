@@ -50,7 +50,6 @@ ul.top-links {
 
       @include transition(opacity 0.3s ease-in);
 
-
       &:hover {
         opacity: .8;
       }
@@ -114,7 +113,6 @@ ul.top-links {
             top: 5px;
             left: -37px;
             position: absolute;
-
           }
         }
       }

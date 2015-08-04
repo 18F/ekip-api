@@ -1,5 +1,5 @@
 @media (max-width: 1050px) {
-  nav.main-nav {
+  .menu-container nav {
     left: 25px;
   }
   .content {
@@ -16,19 +16,27 @@
     font-size: 20px;
   }
 
-  nav.top-links {
+  ul.top-links {
     display: none;
   }
 
-  nav.main-nav {
+  .menu-container {
+    top: 0;
+  }
+
+  .menu-container nav {
     max-width: 100%;
     top: 0;
     left: 0;
     position: relative;
     text-align: center;
 
-    img {
+    .logo {
       margin: 5px 0;
+    }
+
+    .lines {
+      display: none;
     }
 
     ul {
@@ -42,6 +50,10 @@
 
       a {
         padding: 8px 10px;
+
+        &:hover:before {
+          display: none;
+        }
       }
 
       &:nth-child(odd) {
@@ -52,34 +64,87 @@
   }
 
   .content {
-    padding: 0;
+    padding: 10px 20px;
     margin: 0;
   }
 
   #landing {
-    .main-nav {
-      top: 20px;
+
+    .menu-container nav {
+      top: 0;
+      padding: 5px 0;
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 28px;
+      padding: 0;
     }
 
     .content {
       padding: 0 20px;
 
+      .logo {
+        margin: 0;
+      }
+
       button {
         font-size: 16px;
         padding: 15px;
-        margin-bottom: 30px;
+        margin: 0;
       }
     }
 
     .content-inner-block {
+      background: $red;
+
       section {
-        padding: 20px;
+        padding: 20px 0;
+
+        li {
+
+          .image {
+            display: none;
+          }
+
+          .description {
+            padding: 10px 20px;
+
+            h2 {
+              font-size: 26px;
+            }
+            p {
+              font-size: 19px;
+              margin-bottom: 15px;
+            }
+          }
+
+          &:nth-child(even) .image {
+            float: none;
+          }
+
+          &.ekip,
+          &.fourth-graders,
+          &.parents,
+          &.educators {
+            margin: 10px 0;
+
+            .image,
+            .description {
+              margin: 0;
+            }
+          }
+        }
       }
     }
+
+    .content-inner-quote section {
+      padding: 30px 20px;
+
+      .quote {
+        font-size: 26px;
+      }
+    }
+
   }
 
   #get-your-pass .content {
