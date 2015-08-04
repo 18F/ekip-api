@@ -18,7 +18,6 @@ h2 {
   font-size: 35px; }
 
 a {
-  text-decoration: none;
   color: inherit; }
 
 p {
@@ -298,6 +297,7 @@ ul.top-links {
   vertical-align: top;
   display: inline-block; }
   #get-your-pass .content .boxes li a {
+    text-decoration: none;
     display: block; }
   #get-your-pass .content .boxes li div {
     height: 130px;
@@ -583,11 +583,11 @@ ul.top-links {
 
 footer {
   background: #FDEED0;
+  color: #2D6C35;
   clear: both; }
   footer .footer-content {
     max-width: 985px;
     padding: 40px 0;
-    color: #2D6C35;
     margin: auto;
     text-align: center; }
     footer .footer-content p {
@@ -601,6 +601,7 @@ footer {
         padding: 0 5px;
         display: inline-block; }
         footer .footer-content ul.social li a {
+          text-decoration: none;
           display: table; }
         footer .footer-content ul.social li span {
           padding: 0 0 0 5px;
@@ -612,6 +613,8 @@ footer {
       padding: 0 10px;
       border-right: 1px solid #683E2D;
       display: inline-block; }
+      footer .footer-content nav li a {
+        text-decoration: none; }
       footer .footer-content nav li:last-child {
         padding-right: 0;
         border: none; }
