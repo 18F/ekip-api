@@ -72,7 +72,7 @@ nav.top-links {
         border: none; }
 
 #educators .educators-link {
-  color: #F7D27F; }
+  color: #FFE897; }
 
 nav.main-nav {
   max-width: 210px;
@@ -99,7 +99,6 @@ nav.main-nav {
   nav.main-nav li {
     z-index: 100;
     background: #fff;
-    color: #456D97;
     margin: 0 0 20px 0;
     border: 2px solid #177099;
     text-transform: uppercase;
@@ -113,11 +112,11 @@ nav.main-nav {
       height: inherit;
       padding: 12px 15px;
       text-decoration: none;
-      color: #456D97;
+      color: #177099;
       position: relative;
       display: block; }
       nav.main-nav li a:hover {
-        background: #1E7197;
+        background: #177099;
         color: #fff; }
         nav.main-nav li a:hover:before {
           width: 55px;
@@ -195,34 +194,75 @@ nav.main-nav {
       color: #177099; }
 
 #landing .content-inner-block {
-  background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat;
-  height: 1000px; }
+  background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat; }
   #landing .content-inner-block section {
-    max-width: 1130px;
-    padding: 60px 20px;
+    max-width: 1080px;
+    padding: 65px 20px 75px 20px;
     margin: auto; }
-    #landing .content-inner-block section .image {
+    #landing .content-inner-block section ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #landing .content-inner-block section li::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #landing .content-inner-block section li .image {
       background: #C82629;
       border: 4px solid #fff;
       display: inline-block; }
-      #landing .content-inner-block section .image img {
+      #landing .content-inner-block section li .image img {
         border-bottom: 4px solid #fff; }
-      #landing .content-inner-block section .image .caption {
+      #landing .content-inner-block section li .image .caption {
         font-size: 16px;
-        padding: 3px 13px 7px 13px; }
-    #landing .content-inner-block section .description {
+        padding: 3px 13px 10px 13px; }
+    #landing .content-inner-block section li .description {
       max-width: 450px;
-      padding: 50px;
       display: inline-block;
       vertical-align: top; }
-      #landing .content-inner-block section .description h2 {
+      #landing .content-inner-block section li .description h2 {
         font-size: 30px;
         padding-bottom: 0; }
-      #landing .content-inner-block section .description p {
-        margin-top: 0;
+      #landing .content-inner-block section li .description p {
+        margin: 0 0 25px 0;
         font-size: 22px;
         line-height: 30px;
         font-weight: 300; }
+      #landing .content-inner-block section li .description button {
+        background: #FFE897 url(../img/icon-fish-red.png) center left 10px no-repeat;
+        color: #C82629;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 13px 13px 13px 45px; }
+    #landing .content-inner-block section li:nth-child(even) .image {
+      float: right; }
+    #landing .content-inner-block section li.ekip .description {
+      padding: 100px 0 0 45px; }
+    #landing .content-inner-block section li.fourth-graders {
+      margin: 65px 0 0 0; }
+      #landing .content-inner-block section li.fourth-graders .image {
+        margin: 0 25px 0 0; }
+      #landing .content-inner-block section li.fourth-graders .description {
+        margin: 100px 0 0 90px; }
+    #landing .content-inner-block section li.parents {
+      margin: 170px 0 0 0; }
+      #landing .content-inner-block section li.parents .image {
+        margin: 0 0 0 55px; }
+      #landing .content-inner-block section li.parents .description {
+        margin: 30px 0 0 18px; }
+    #landing .content-inner-block section li.educators .description {
+      margin: 180px 0 0 150px; }
+
+#landing .content-inner-quote {
+  background: #177099; }
+  #landing .content-inner-quote section {
+    max-width: 780px;
+    margin: auto;
+    padding: 50px 0; }
+    #landing .content-inner-quote section .quote {
+      font-family: "Superclarendon", serif;
+      font-size: 30px;
+      font-weight: 600; }
 
 #get-your-pass .content .pass-content {
   max-width: 670px;
@@ -254,7 +294,7 @@ nav.main-nav {
     text-transform: uppercase;
     padding: 5px 0 0 0; }
   #get-your-pass .content .boxes li button {
-    background: #673E2F;
+    background: #FFE897;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -543,7 +583,7 @@ footer {
       padding: 10px 0 30px 0;
       font-weight: bold; }
       footer .footer-content ul.social li {
-        padding: 0 15px;
+        padding: 0 5px;
         display: inline-block; }
         footer .footer-content ul.social li a {
           display: table; }

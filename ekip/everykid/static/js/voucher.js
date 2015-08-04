@@ -9,8 +9,8 @@ $(document).ready(function() {
     $(this).find('img').JsBarcode(locatorID, {
       format: 'CODE128',
       displayValue: true,
-      fontSize: 30,
-      height: 50
+      fontSize: 35,
+      height: 60
     });
 
   })
@@ -23,7 +23,7 @@ $(document).ready(function() {
       format: 'CODE128',
       displayValue: true,
       fontSize: 20,
-      height: 40
+      height: 50
     });
 
   });

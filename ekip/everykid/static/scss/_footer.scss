@@ -5,12 +5,12 @@ footer {
   .footer-content {
     max-width: $site-width;
     padding: 40px 0;
-    color: #2D6C35;
+    color: $green;
     margin: auto;
     text-align: center;
 
     p {
-      color: #683E2D;
+      color: $brown;
       font-size: 16px;
       font-weight: 300;
     }
@@ -20,7 +20,7 @@ footer {
       font-weight: bold;
 
       li {
-        padding: 0 15px;
+        padding: 0 5px;
         display: inline-block;
 
         a {
@@ -41,7 +41,7 @@ footer {
         line-height: 12px;
         font-size: 12px;
         padding: 0 10px;
-        border-right: 1px solid #683E2D;
+        border-right: 1px solid $brown;
         display: inline-block;
 
         &:last-child {

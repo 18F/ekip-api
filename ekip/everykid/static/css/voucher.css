@@ -45,18 +45,18 @@ html, body {
       position: absolute; }
     .voucher-page .steps .voucher {
       width: 595px;
-      margin: 140px 0 0 10px;
+      margin: 145px 0 0 10px;
       z-index: 0;
       position: absolute; }
       .voucher-page .steps .voucher .voucher-image {
-        width: 530px; }
+        width: 550px; }
       .voucher-page .steps .voucher .credit {
-        width: 90px;
-        font-size: 7px;
+        width: 100px;
+        font-size: 8px;
         line-height: 8px;
         font-weight: 300;
-        top: 35px;
-        right: -15px;
+        top: 37px;
+        right: -27px;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -64,8 +64,8 @@ html, body {
         transform: rotate(-90deg);
         position: absolute; }
       .voucher-page .steps .voucher .voucher-barcode {
-        top: 132px;
-        right: -23px;
+        top: 137px;
+        right: -34px;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
