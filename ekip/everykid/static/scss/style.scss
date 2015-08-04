@@ -100,6 +100,21 @@ button {
   color: #ff0000;
 }
 
+#about,
+#student-pass,
+#plan-your-trip {
+
+  .content {
+    ul {
+      margin: 5px 0 5px 20px;
+
+      li {
+        list-style: bullet;
+      }
+    }
+  }
+}
+
 @import "landing";
 @import "get-your-pass";
 @import "student-pass";

@@ -166,6 +166,15 @@ ul.top-links {
   padding: 10px 0;
   color: #ff0000; }
 
+#about .content ul,
+#student-pass .content ul,
+#plan-your-trip .content ul {
+  margin: 5px 0 5px 20px; }
+  #about .content ul li,
+  #student-pass .content ul li,
+  #plan-your-trip .content ul li {
+    list-style: bullet; }
+
 #landing h1 {
   max-width: 660px;
   font-size: 40px;
