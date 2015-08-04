@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 17 Copy 8 + Stroke 1 Copy 2 + Fill 2 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="EKiP-Footer" sketch:type="MSArtboardGroup" transform="translate(-476.000000, -112.000000)">
+            <g id="Footer-Simple" sketch:type="MSLayerGroup" transform="translate(0.000000, 38.000000)">
+                <g id="Oval-17-Copy-8-+-Stroke-1-Copy-2-+-Fill-2-Copy-2" transform="translate(477.000000, 75.000000)" sketch:type="MSShapeGroup">
+                    <ellipse id="Oval-17-Copy-8" stroke="#2D6C35" stroke-width="1.2" cx="15.6961614" cy="15.6961614" rx="15.6961614" ry="15.6961614"></ellipse>
+                    <path d="M7,7 L23.1019031,7 L23.1019031,23.1019031 L7,23.1019031 L7,7 Z M11.2069267,13.2566636 L7,13.2566636 L11.2069267,13.2566636 Z M23.1021013,13.2566636 L18.8725738,13.2566636 L23.1021013,13.2566636 Z M19.19414,15.0508524 C19.19414,17.3390875 17.3392858,19.1939417 15.0510507,19.1939417 C12.7628156,19.1939417 10.9079614,17.3390875 10.9079614,15.0508524 C10.9079614,12.7628156 12.7628156,10.9077631 15.0510507,10.9077631 C17.3392858,10.9077631 19.19414,12.7628156 19.19414,15.0508524 L19.19414,15.0508524 Z" id="Stroke-1-Copy-2" stroke="#2D6C35" stroke-width="1.2"></path>
+                    <path d="M19,8 L21.8136053,8 L21.8136053,10.8136053 L19,10.8136053 L19,8 Z" id="Fill-2-Copy-2" fill="#2D6C35"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
