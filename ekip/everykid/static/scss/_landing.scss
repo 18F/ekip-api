@@ -10,8 +10,8 @@
     }
   }
 
-  .main-nav {
-    top: 150px;
+  .menu-container nav {
+    top: 90px;
 
     .logo {
       display: none;
@@ -21,11 +21,11 @@
   .content {
     max-width: $site-width;
     text-align: center;
-    padding: 0;
+    padding: 88px 0 0 0;
     margin: auto;
 
     img {
-      margin: 30px 0 15px 0;
+      margin: 0 0 45px 0;
     }
 
     button {
@@ -98,6 +98,13 @@
             font-weight: 700;
             font-size: 14px;
             padding: 13px 13px 13px 45px;
+
+            @include transition(background-color 0.3s ease-in, color 0.3s ease-in);
+
+            &:hover {
+              background: #fff url(../img/icon-fish-red.png) center left 10px no-repeat;
+
+            }
           }
         }
 

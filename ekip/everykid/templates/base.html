@@ -28,19 +28,7 @@
 
   <section class="{% block background %}{% endblock background %}">
 
-    <header>
-
-      <nav class="top-links">
-        <ul>
-          <li class="educators-link"><a href="{% url 'educator_passes' %}">Educators</a></li>
-          <!--<li>Already have a pass?</li> -->
-          <!--<li>Español</li>-->
-        </ul>
-      </nav>
-
-      {% include "nav.html" %}
-
-    </header>
+    {% include "nav.html" %}
 
     <div class="content">
       {% block content %}{% endblock content %}
