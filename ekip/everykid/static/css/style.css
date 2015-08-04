@@ -1,5 +1,5 @@
 body, html {
-  background: #4E6A88;
+  background: #177099;
   font-family: 'Lato', sans-serif;
   color: #fff;
   padding: 0;
@@ -44,93 +44,101 @@ button {
   padding: 7px 0;
   font-size: 13px; }
 
-header {
-  max-width: 1000px;
-  margin: 0 auto 10px auto;
-  border-top: 1px solid transparent; }
-
-nav.top-links {
-  text-align: right;
+ul.top-links {
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 1px;
+  padding: 0 30px 0 0;
+  right: 0;
   position: absolute;
-  right: 0; }
-  nav.top-links ul {
-    background: rgba(0, 0, 0, 0.6);
-    margin-top: 1px;
-    padding: 0 30px 0 0;
-    display: inline-block; }
-    nav.top-links ul li {
-      font-size: 14px;
-      font-weight: bold;
-      padding: 10px 15px;
-      border-right: 1px solid #fff;
-      display: inline-block; }
-      nav.top-links ul li a {
-        opacity: 0.8; }
-      nav.top-links ul li a:hover {
-        opacity: 1; }
-      nav.top-links ul li:last-child {
-        border: none; }
-
-#educators .educators-link {
-  color: #F7D27F; }
-
-nav.main-nav {
-  max-width: 210px;
-  position: absolute;
-  top: 40px; }
-  nav.main-nav .logo {
-    width: 150px;
-    margin: 40px 0 20px 35px; }
-  nav.main-nav .nav-container {
-    position: relative; }
-  nav.main-nav .lines {
-    width: 55px;
-    height: 99px;
-    top: 35px;
-    right: 23px;
-    z-index: 0;
-    position: absolute; }
-    nav.main-nav .lines g {
-      stroke: #fff; }
-  nav.main-nav ul {
-    z-index: 100;
-    position: relative;
-    display: inline-block; }
-  nav.main-nav li {
-    z-index: 100;
-    background: #fff;
-    color: #456D97;
-    margin: 0 0 20px 0;
-    border: 2px solid #177099;
-    text-transform: uppercase;
+  display: inline-block; }
+  ul.top-links li {
     font-size: 14px;
     font-weight: bold;
-    font-family: "Superclarendon", serif;
-    text-align: center;
+    padding: 10px 15px;
+    border-right: 1px solid #fff;
     display: inline-block; }
-    nav.main-nav li a {
-      width: inherit;
-      height: inherit;
-      padding: 12px 15px;
-      text-decoration: none;
-      color: #456D97;
+    ul.top-links li a {
+      opacity: 0.7;
+      -webkit-transition: opacity 0.4s ease-in;
+      -moz-transition: opacity 0.4s ease-in;
+      transition: opacity 0.4s ease-in; }
+    ul.top-links li a:hover {
+      opacity: 1; }
+    ul.top-links li:last-child {
+      border: none; }
+
+#educators .educators-link {
+  color: #FFE897; }
+
+.menu-container {
+  max-width: 985px;
+  margin: auto;
+  position: relative; }
+  .menu-container nav {
+    max-width: 210px;
+    position: absolute;
+    top: 50px; }
+    .menu-container nav .logo {
+      margin: 0 0 20px 30px;
+      z-index: 100;
       position: relative;
-      display: block; }
-      nav.main-nav li a:hover {
-        background: #1E7197;
-        color: #fff; }
-        nav.main-nav li a:hover:before {
-          width: 55px;
-          height: 55px;
-          background: url(../img/nav-compass.png) center center no-repeat;
-          content: "\00a0";
-          top: 5px;
-          left: -37px;
-          position: absolute; }
-    nav.main-nav li:nth-child(1) {
-      margin-left: 40px; }
-    nav.main-nav li:nth-child(3) {
-      margin-left: 60px; }
+      -webkit-transition: opacity 0.3s ease-in;
+      -moz-transition: opacity 0.3s ease-in;
+      transition: opacity 0.3s ease-in; }
+      .menu-container nav .logo:hover {
+        opacity: .8; }
+    .menu-container nav .menu {
+      position: relative; }
+    .menu-container nav .lines {
+      width: 55px;
+      height: 99px;
+      top: 35px;
+      right: 27px;
+      z-index: 0;
+      position: absolute; }
+      .menu-container nav .lines g {
+        stroke: #fff; }
+    .menu-container nav ul {
+      z-index: 100;
+      position: relative;
+      display: inline-block; }
+    .menu-container nav li {
+      z-index: 100;
+      background: #fff;
+      margin: 0 0 20px 0;
+      border: 2px solid #177099;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "Superclarendon", serif;
+      text-align: center;
+      display: inline-block; }
+      .menu-container nav li a {
+        width: inherit;
+        height: inherit;
+        padding: 12px 15px;
+        text-decoration: none;
+        color: #177099;
+        position: relative;
+        display: block;
+        -webkit-transition: background-color 0.1s ease-in, color 0.1s ease-in;
+        -moz-transition: background-color 0.1s ease-in, color 0.1s ease-in;
+        transition: background-color 0.1s ease-in, color 0.1s ease-in; }
+        .menu-container nav li a:hover {
+          background: #177099;
+          color: #fff; }
+          .menu-container nav li a:hover:before {
+            width: 55px;
+            height: 55px;
+            background: url(../img/nav-compass.png) center center no-repeat;
+            content: "\00a0";
+            top: 5px;
+            left: -37px;
+            position: absolute; }
+      .menu-container nav li:nth-child(1) {
+        margin-left: 40px; }
+      .menu-container nav li:nth-child(3) {
+        margin-left: 60px; }
 
 .mountain {
   background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
@@ -149,10 +157,11 @@ nav.main-nav {
   background-size: cover; }
 
 .content {
-  max-width: 790px;
+  max-width: 725px;
   min-height: 500px;
   margin: auto;
-  padding: 60px 0 50px 300px; }
+  padding: 100px 0 50px 260px;
+  position: relative; }
 
 .errors {
   padding: 10px 0;
@@ -165,18 +174,18 @@ nav.main-nav {
   #landing h1 span {
     color: #FFE897; }
 
-#landing .main-nav {
-  top: 150px; }
-  #landing .main-nav .logo {
+#landing .menu-container nav {
+  top: 90px; }
+  #landing .menu-container nav .logo {
     display: none; }
 
 #landing .content {
-  max-width: 1000px;
+  max-width: 985px;
   text-align: center;
-  padding: 0;
+  padding: 88px 0 0 0;
   margin: auto; }
   #landing .content img {
-    margin: 30px 0 15px 0; }
+    margin: 0 0 45px 0; }
   #landing .content button {
     border: 4px solid #fff;
     background: transparent;
@@ -187,42 +196,88 @@ nav.main-nav {
     font-size: 19px;
     padding: 20px 30px;
     margin: 0 0 90px 0;
-    -webkit-transition: background-color 0.5s ease-in, color 0.5s ease-in;
-    -moz-transition: background-color 0.5s ease-in, color 0.5s ease-in;
-    transition: background-color 0.5s ease-in, color 0.5s ease-in; }
+    -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in; }
     #landing .content button:hover {
       background: #fff;
       color: #177099; }
 
 #landing .content-inner-block {
-  background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat;
-  height: 1000px; }
+  background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat; }
   #landing .content-inner-block section {
-    max-width: 1130px;
-    padding: 60px 20px;
+    max-width: 1080px;
+    padding: 65px 20px 75px 20px;
     margin: auto; }
-    #landing .content-inner-block section .image {
+    #landing .content-inner-block section ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #landing .content-inner-block section li::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #landing .content-inner-block section li .image {
       background: #C82629;
       border: 4px solid #fff;
       display: inline-block; }
-      #landing .content-inner-block section .image img {
+      #landing .content-inner-block section li .image img {
         border-bottom: 4px solid #fff; }
-      #landing .content-inner-block section .image .caption {
+      #landing .content-inner-block section li .image .caption {
         font-size: 16px;
-        padding: 3px 13px 7px 13px; }
-    #landing .content-inner-block section .description {
+        padding: 3px 13px 10px 13px; }
+    #landing .content-inner-block section li .description {
       max-width: 450px;
-      padding: 50px;
       display: inline-block;
       vertical-align: top; }
-      #landing .content-inner-block section .description h2 {
+      #landing .content-inner-block section li .description h2 {
         font-size: 30px;
         padding-bottom: 0; }
-      #landing .content-inner-block section .description p {
-        margin-top: 0;
+      #landing .content-inner-block section li .description p {
+        margin: 0 0 25px 0;
         font-size: 22px;
         line-height: 30px;
         font-weight: 300; }
+      #landing .content-inner-block section li .description button {
+        background: #FFE897 url(../img/icon-fish-red.png) center left 10px no-repeat;
+        color: #C82629;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 13px 13px 13px 45px;
+        -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        -moz-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in; }
+        #landing .content-inner-block section li .description button:hover {
+          background: #fff url(../img/icon-fish-red.png) center left 10px no-repeat; }
+    #landing .content-inner-block section li:nth-child(even) .image {
+      float: right; }
+    #landing .content-inner-block section li.ekip .description {
+      margin: 100px 0 0 45px; }
+    #landing .content-inner-block section li.fourth-graders {
+      margin: 65px 0 0 0; }
+      #landing .content-inner-block section li.fourth-graders .image {
+        margin: 0 25px 0 0; }
+      #landing .content-inner-block section li.fourth-graders .description {
+        margin: 100px 0 0 90px; }
+    #landing .content-inner-block section li.parents {
+      margin: 170px 0 0 0; }
+      #landing .content-inner-block section li.parents .image {
+        margin: 0 0 0 55px; }
+      #landing .content-inner-block section li.parents .description {
+        margin: 30px 0 0 18px; }
+    #landing .content-inner-block section li.educators .description {
+      margin: 180px 0 0 150px; }
+
+#landing .content-inner-quote {
+  background: #177099; }
+  #landing .content-inner-quote section {
+    max-width: 780px;
+    margin: auto;
+    padding: 50px 0 60px 0; }
+    #landing .content-inner-quote section .quote {
+      font-family: "Superclarendon", serif;
+      font-size: 30px;
+      font-weight: 600; }
 
 #get-your-pass .content .pass-content {
   max-width: 670px;
@@ -254,7 +309,7 @@ nav.main-nav {
     text-transform: uppercase;
     padding: 5px 0 0 0; }
   #get-your-pass .content .boxes li button {
-    background: #673E2F;
+    background: #FFE897;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -530,7 +585,7 @@ footer {
   background: #FDEED0;
   clear: both; }
   footer .footer-content {
-    max-width: 1000px;
+    max-width: 985px;
     padding: 40px 0;
     color: #2D6C35;
     margin: auto;
@@ -540,10 +595,10 @@ footer {
       font-size: 16px;
       font-weight: 300; }
     footer .footer-content ul.social {
-      padding: 10px 0 30px 0;
+      padding: 5px 0 30px 0;
       font-weight: bold; }
       footer .footer-content ul.social li {
-        padding: 0 15px;
+        padding: 0 5px;
         display: inline-block; }
         footer .footer-content ul.social li a {
           display: table; }
@@ -562,7 +617,7 @@ footer {
         border: none; }
 
 @media (max-width: 1050px) {
-  nav.main-nav {
+  .menu-container nav {
     left: 25px; }
   .content {
     margin-right: 25px; } }
@@ -572,41 +627,82 @@ footer {
     font-size: 30px; }
   h2 {
     font-size: 20px; }
-  nav.top-links {
+  ul.top-links {
     display: none; }
-  nav.main-nav {
+  .menu-container {
+    top: 0; }
+  .menu-container nav {
     max-width: 100%;
     top: 0;
     left: 0;
     position: relative;
     text-align: center; }
-    nav.main-nav img {
+    .menu-container nav .logo {
       margin: 5px 0; }
-    nav.main-nav ul {
+    .menu-container nav .lines {
+      display: none; }
+    .menu-container nav ul {
       margin: 0 5px;
       display: block; }
-    nav.main-nav li {
+    .menu-container nav li {
       font-size: 13px;
       margin: 5px; }
-      nav.main-nav li a {
+      .menu-container nav li a {
         padding: 8px 10px; }
-      nav.main-nav li:nth-child(odd) {
+        .menu-container nav li a:hover:before {
+          display: none; }
+      .menu-container nav li:nth-child(odd) {
         margin: 0; }
   .content {
-    padding: 0;
+    padding: 10px 20px;
     margin: 0; }
-  #landing .main-nav {
-    top: 20px; }
+  #landing .menu-container nav {
+    top: 0;
+    padding: 5px 0; }
   #landing h1 {
-    font-size: 30px; }
+    font-size: 28px;
+    padding: 0; }
   #landing .content {
     padding: 0 20px; }
+    #landing .content .logo {
+      margin: 0; }
     #landing .content button {
       font-size: 16px;
       padding: 15px;
-      margin-bottom: 30px; }
-  #landing .content-inner-block section {
-    padding: 20px; }
+      margin: 0; }
+  #landing .content-inner-block {
+    background: #C82629; }
+    #landing .content-inner-block section {
+      padding: 20px 0; }
+      #landing .content-inner-block section li .image {
+        display: none; }
+      #landing .content-inner-block section li .description {
+        padding: 10px 20px; }
+        #landing .content-inner-block section li .description h2 {
+          font-size: 26px; }
+        #landing .content-inner-block section li .description p {
+          font-size: 19px;
+          margin-bottom: 15px; }
+      #landing .content-inner-block section li:nth-child(even) .image {
+        float: none; }
+      #landing .content-inner-block section li.ekip,
+      #landing .content-inner-block section li.fourth-graders,
+      #landing .content-inner-block section li.parents,
+      #landing .content-inner-block section li.educators {
+        margin: 10px 0; }
+        #landing .content-inner-block section li.ekip .image,
+        #landing .content-inner-block section li.ekip .description,
+        #landing .content-inner-block section li.fourth-graders .image,
+        #landing .content-inner-block section li.fourth-graders .description,
+        #landing .content-inner-block section li.parents .image,
+        #landing .content-inner-block section li.parents .description,
+        #landing .content-inner-block section li.educators .image,
+        #landing .content-inner-block section li.educators .description {
+          margin: 0; }
+  #landing .content-inner-quote section {
+    padding: 30px 20px; }
+    #landing .content-inner-quote section .quote {
+      font-size: 26px; }
   #get-your-pass .content .pass-content {
     padding: 20px; }
   #student-pass .content .pass-content {

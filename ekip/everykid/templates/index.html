@@ -9,7 +9,7 @@
 
 {% block content %}
 
-  <img src="{% static "img/logo.png" %}" alt="" />
+  <img src="{% static "img/logo.png" %}" class="logo" alt="" />
 
   <h1><span>Hey 4th graders,</span> see America’s natural wonders and historic sites for free!</h1>
 
@@ -25,7 +25,7 @@
     <section>
 
       <ul>
-        <li>
+        <li class="ekip">
           <div class="image">
             <img src="{% static "img/landing-park.png" %}" alt="" />
             <div class="caption">
@@ -35,11 +35,68 @@
           <div class="description">
             <h2>Every Kid in a Park</h2>
             <p>is a program which gives you and your family unlimited access to all of our national parks, forests, and federal lands and waters, for up to a full year.</p>
-          </div>
 
+            <button>Learn How It Works</button>
+          </div>
         </li>
+        <li class="fourth-graders">
+          <div class="description">
+            <h2>Fourth graders</h2>
+            <p>This is for you! Lorem ipsum dolor amet, and a few more brief words to entice you into clicking the yellow button.</p>
+
+            <button>Get Your Pass</button>
+          </div>
+          <div class="image">
+            <img src="{% static "img/landing-historic.png" %}" alt="" />
+            <div class="caption">
+              A specific historic site in America
+            </div>
+          </div>
+        </li>
+        <li class="parents">
+          <div class="image">
+            <img src="{% static "img/landing-dam.png" %}" alt="" />
+            <div class="caption">
+              Hoover Dam, amirite?
+            </div>
+          </div>
+          <div class="description">
+            <h2>Parents</h2>
+            <p>Lorem ipsum dolor amet, lorem ipsum. Lorem ipsum dolor amet, lorem ipsum. Parents ipsum, parental ipsum.</p>
+
+            <button>Learn More</button>
+          </div>
+        </li>
+        <li class="educators">
+          <div class="description">
+            <h2>4th-grade educators</h2>
+            <p>Teachers are the best. Teaching ipsum dolor amet, lorem ipsum. Learning ipsum dolor amet, inspiring ipsum.</p>
+
+            <button>Enticing Call To Action</button>
+          </div>
+          <div class="image">
+            <img src="{% static "img/landing-hiking.png" %}" alt="" />
+            <div class="caption">
+              Kids exploring our Great Lands
+            </div>
+          </div>
+        </li>
+      </ul>
 
     </section>
 
   </div>
+
+  <div class="content-inner-quote">
+
+    <section>
+
+      <span class="quote">
+        “This is going to be a super amazingly awesome quote from President Obama, lorem inspirational ipsum greatness dolor amet.”
+      </span>
+
+    </section>
+
+  </div>
+
 {% endblock content_inner %}

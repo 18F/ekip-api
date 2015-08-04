@@ -1,10 +1,17 @@
 @import "bourbon";
 
-$site-width: 1000px;
+$site-width: 985px;
 $nav-width: 210px;
 
+$gray: #2C2C2C;
+$yellow: #FFE897;
+$blue: #177099;
+$red: #C82629;
+$green: #2D6C35;
+$brown: #683E2D;
+
 body,html {
-  background: #4E6A88;
+  background: $blue;
   font-family: 'Lato', sans-serif;
   color: #fff;
   padding:0;
@@ -50,7 +57,14 @@ button {
   text-align: center;
 }
 
-@import "header";
+.govt-banner {
+  background-color: $gray;
+  color: #fff;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 13px;
+}
+
 @import "nav";
 
 .mountain {
@@ -75,10 +89,11 @@ button {
 }
 
 .content {
-  max-width: $site-width - $nav-width;
+  max-width: $site-width - $nav-width - 50;
   min-height: 500px;
   margin: auto;
-  padding: 60px 0 50px $nav-width + 90;
+  padding: 100px 0 50px $nav-width + 50;
+  position: relative;
 }
 
 .errors {

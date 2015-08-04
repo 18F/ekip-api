@@ -28,19 +28,7 @@
 
   <section class="{% block background %}{% endblock background %}">
 
-    <header>
-
-      <nav class="top-links">
-        <ul>
-          <li class="educators-link"><a href="{% url 'educator_passes' %}">Educators</a></li>
-          <!--<li>Already have a pass?</li> -->
-          <!--<li>Español</li>-->
-        </ul>
-      </nav>
-
-      {% include "nav.html" %}
-
-    </header>
+    {% include "nav.html" %}
 
     <div class="content">
       {% block content %}{% endblock content %}
@@ -61,19 +49,19 @@
       <ul class="social">
         <li>
           <a href="http://www.instagram.com/everykidinapark" target="_blank">
-            <img src="{% static 'img/instagram.png' %}" alt="" />
+            <img src="{% static 'img/social/instagram.svg' %}" alt="" />
             <span>Instagram</span>
           </a>
         </li>
         <li>
           <a href="http://www.twitter.com/everykidinapark" target="_blank">
-            <img src="{% static 'img/twitter.png' %}" alt="" />
+            <img src="{% static 'img/social/twitter.svg' %}" alt="" />
             <span>Twitter</span>
           </a>
         </li>
         <li>
           <a href="http://www.facebook.com/everykidinapark" target="_blank">
-            <img src="{% static 'img/facebook.png' %}" alt="" />
+            <img src="{% static 'img/social/facebook.svg' %}" alt="" />
             <span>Facebook</span>
           </a>
         </li>
