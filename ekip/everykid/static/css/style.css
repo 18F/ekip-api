@@ -114,7 +114,10 @@ nav.main-nav {
       text-decoration: none;
       color: #177099;
       position: relative;
-      display: block; }
+      display: block;
+      -webkit-transition: background-color 0.1s ease-in, color 0.1s ease-in;
+      -moz-transition: background-color 0.1s ease-in, color 0.1s ease-in;
+      transition: background-color 0.1s ease-in, color 0.1s ease-in; }
       nav.main-nav li a:hover {
         background: #177099;
         color: #fff; }
@@ -186,9 +189,9 @@ nav.main-nav {
     font-size: 19px;
     padding: 20px 30px;
     margin: 0 0 90px 0;
-    -webkit-transition: background-color 0.5s ease-in, color 0.5s ease-in;
-    -moz-transition: background-color 0.5s ease-in, color 0.5s ease-in;
-    transition: background-color 0.5s ease-in, color 0.5s ease-in; }
+    -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in; }
     #landing .content button:hover {
       background: #fff;
       color: #177099; }

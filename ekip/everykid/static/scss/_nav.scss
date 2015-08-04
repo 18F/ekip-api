@@ -52,7 +52,7 @@ nav.main-nav {
       position: relative;
       display: block;
 
-      // @include transition(background-color 0.4s ease-in, color 0.4s ease-in);
+      @include transition(background-color 0.1s ease-in, color 0.1s ease-in);
 
       &:hover {
         background: $blue;
