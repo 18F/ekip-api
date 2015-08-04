@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div id="voucher-page">
+  <div class="voucher-page">
 
     <div class="heading">
       <h1>Congratulations!</h1>
@@ -23,37 +23,41 @@
       <h4>Follow these instructions to start your adventure!</h4>
     </div>
 
-    <img src="{% static 'img/voucher-rules.svg' %}" class="step-lines" alt="" />
+    <div class="steps">
 
-    <div class="step print-page">
-      <h2>Print this page</h2>
-      <p>Great job! First print this paper voucher and put it in a safe place until you are ready to use it.</p>
-    </div>
+      <img src="{% static 'img/voucher-rules.svg' %}" class="step-lines" alt="" />
 
-    <div class="voucher">
-      <img class="voucher-image" src="{% static 'img/voucher.jpg' %}" alt="" />
+      <div class="voucher">
+        <img class="voucher-image" src="{% static 'img/voucher.jpg' %}" alt="" />
 
-      <div class="credit">
-        "Weathered Wood Texture" by chefranden, CC by 2.5
-        https://www.flickr.com/photos/
-        chefranden/4757787899/
+        <div class="credit">
+          "Weathered Wood Texture" by chefranden, CC by 2.5
+          https://www.flickr.com/photos/
+          chefranden/4757787899/
+        </div>
+
+        <div class="voucher-barcode">
+          <img class="barcode" alt="barcode" data-id="{{ locator }}" />
+        </div>
       </div>
 
-      <div class="voucher-barcode">
-        <img class="barcode" alt="barcode" data-id="{{ locator }}" />
-      </div>
-    </div>
+      <ol>
+        <li class="print-page">
+          <h2>Print this page</h2>
+          <p>Great job! First print this paper voucher and put it in a safe place until you are ready to use it.</p>
+        </li>
+        <li class="plan">
+          <h2>Hit the road</h2>
+          <p>Click "Plan Your Trip" on this website (www.everykidinapark.gov) to learn about all of the places you can go.</p>
+        </li>
+        <li class="get">
+          <h2>Get in free!</h2>
+          <p>Show this paper voucher to receive free access and/or claim your 4th grade pass. Be safe and have fun!</p>
 
-    <div class="step plan">
-      <h2>Hit the road</h2>
-      <p>Click "Plan Your Trip" on this website (www.everykidinapark.gov) to learn about all of the places you can go.</p>
-    </div>
+          <img class="durable-pass" src="{% static 'img/durable-pass.jpg' %}" alt="" />
+        </li>
+      </ol>
 
-    <div class="step get">
-      <h2>Get in free!</h2>
-      <p>Show this paper voucher to receive free access and/or claim your 4th grade pass. Be safe and have fun!</p>
-
-      <img class="durable-pass" src="{% static 'img/durable-pass.jpg' %}" alt="" />
     </div>
 
     <div class="personnel">

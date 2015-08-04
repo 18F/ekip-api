@@ -1,9 +1,16 @@
 @import "bourbon";
 
-#voucher-page {
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.voucher-page {
   width: 595px;
-  height: 812px;
-  margin: auto;
+  height: 842px;
+  margin: 0 auto;
+  page-break-after: always;
+
   font-family: 'Lato', sans-serif;
   position: relative;
 
@@ -13,8 +20,8 @@
   }
 
   .heading {
-    height: 150px;
-    margin: 10px 0 0 0;
+    height: 145px;
+    margin: 15px 0 0 0;
 
     h1, h2, h3 {
       text-transform: uppercase;
@@ -22,100 +29,114 @@
     }
     h1 {
       font-family: "Superclarendon", serif;
-      font-size: 46px;
+      font-size: 42px;
       line-height: 40px;
       color: #5D402E;
     }
     h2 {
-      font-size: 42px;
+      font-size: 37px;
       font-weight: 400;
       color: #D7552A;
     }
     h3 {
-      font-size: 33px;
+      font-size: 28px;
       line-height: 30px;
       font-weight: 300;
       color: #6C6C69;
     }
     h4 {
-      font-size: 21px;
+      font-size: 18px;
       color: #4C89A5;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0 0 0;
     }
   }
 
-  .step-lines {
-    width: 350px;
-    position: absolute;
-  }
-
-  .step {
-    text-align: left;
-
-    h2 {
-      font-size: 24px;
-      color: #4C89A5;
-    }
-    p {
-      font-size: 15px;
-      line-height: 22px;
-      font-weight: 300;
-      margin: 0;
-      color: #000;
-    }
-
-    &.print-page {
-      width: 220px;
-      margin: 35px 0 0 280px;
-    }
-
-    &.plan {
-      width: 250px;
-      margin: 35px 0 0 335px;
-    }
-
-    &.get {
-      width: 260px;
-      margin: 5px 0 0 170px;
-      position: relative;
-
-      .durable-pass {
-        top: 25px;
-        right: -120px;
-        position: absolute;
-      }
-    }
-  }
-
-  .voucher {
-    margin: 20px 0 0 10px;
+  .steps {
+    border: 1px solid transparent;
     position: relative;
 
-    .voucher-image {
-      width: 530px;
+    .step-lines {
+      width: 350px;
+      position: absolute;
     }
 
-    .credit {
-      width: 90px;
-      font-size: 7px;
-      line-height: 8px;
-      font-weight: 300;
-      top: 35px;
-      right: -15px;
-      @include transform(rotate(-90deg));
+    .voucher {
+      width: 595px;
+      margin: 140px 0 0 10px;
+      z-index: 0;
       position: absolute;
 
+      .voucher-image {
+        width: 530px;
+      }
+
+      .credit {
+        width: 90px;
+        font-size: 7px;
+        line-height: 8px;
+        font-weight: 300;
+        top: 35px;
+        right: -15px;
+        @include transform(rotate(-90deg));
+        position: absolute;
+      }
+
+      .voucher-barcode {
+        top: 132px;
+        right: -23px;
+        @include transform(rotate(-90deg));
+        position: absolute;
+
+        img {
+          width: 100px;
+        }
+      }
     }
 
-    .voucher-barcode {
-      top: 132px;
-      right: -23px;
-      @include transform(rotate(-90deg));
+    ol {
+      z-index: 100;
+      margin: 0;
       position: absolute;
 
-      img {
-        width: 100px;
+      li {
+        height: 110px;
+        list-style: none;
+        text-align: left;
+
+        h2 {
+          font-size: 22px;
+          color: #4C89A5;
+        }
+        p {
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 300;
+          margin: 0;
+          color: #000;
+        }
+
+        &.print-page {
+          width: 220px;
+          margin: 35px 0 0 245px;
+        }
+
+        &.plan {
+          width: 250px;
+          margin: 245px 0 0 295px;
+        }
+
+        &.get {
+          width: 260px;
+          margin: 0 0 0 130px;
+          position: relative;
+
+          .durable-pass {
+            top: 32px;
+            right: -120px;
+            position: absolute;
+          }
+        }
       }
     }
   }
