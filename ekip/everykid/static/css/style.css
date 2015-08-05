@@ -684,7 +684,9 @@ footer {
   .menu-container nav {
     left: 25px; }
   .content {
-    margin-right: 25px; } }
+    margin-right: 25px; }
+  #landing .content-inner-block section li .description {
+    max-width: 400px; } }
 
 @media (max-width: 800px) {
   h1 {
