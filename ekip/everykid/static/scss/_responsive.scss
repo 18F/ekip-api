@@ -35,6 +35,7 @@
       margin: 5px 0;
     }
 
+    .logo-line,
     .lines {
       display: none;
     }
@@ -147,15 +148,40 @@
 
   }
 
-  #get-your-pass .content {
-    .pass-content {
+  #get-your-pass,
+  #student-pass {
+    .content .pass-content {
       padding: 20px;
+
+      h1 {
+        font-size: 28px;
+      }
     }
   }
 
-  #student-pass .content {
-    .pass-content {
-      padding: 20px;
+  #get-your-pass .content .pass-content {
+    h1,
+    p,
+    img,
+    ul.boxes,
+    ul.boxes li {
+      width: auto;
+      float: none;
+    }
+    p {
+      margin: 15px 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  #student-pass .voucher-claim {
+    img {
+      margin: 10px 0;
+    }
+    form button {
+      margin-top: 10px;
     }
   }
 
@@ -168,7 +194,6 @@
     }
     form {
       width: 100%;
-      border: 1px solid red;
     }
   }
 }

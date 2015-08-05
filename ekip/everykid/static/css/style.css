@@ -415,7 +415,8 @@ ul.top-links {
     padding: 15px 40px;
     background: #FFE897;
     color: #177099;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    display: block; }
 
 #student-pass .voucher-claim .voucher-claim-description {
   max-width: 420px;
@@ -449,6 +450,7 @@ ul.top-links {
     background: rgba(255, 255, 255, 0.7);
     float: left; }
   #student-pass .voucher-claim form button {
+    width: 202px;
     height: 50px;
     background: #FFE897;
     font-weight: normal;
@@ -701,6 +703,7 @@ footer {
     text-align: center; }
     .menu-container nav .logo {
       margin: 5px 0; }
+    .menu-container nav .logo-line,
     .menu-container nav .lines {
       display: none; }
     .menu-container nav ul {
@@ -765,14 +768,30 @@ footer {
     padding: 30px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
-  #get-your-pass .content .pass-content {
-    padding: 20px; }
+  #get-your-pass .content .pass-content,
   #student-pass .content .pass-content {
     padding: 20px; }
+    #get-your-pass .content .pass-content h1,
+    #student-pass .content .pass-content h1 {
+      font-size: 28px; }
+  #get-your-pass .content .pass-content h1,
+  #get-your-pass .content .pass-content p,
+  #get-your-pass .content .pass-content img,
+  #get-your-pass .content .pass-content ul.boxes,
+  #get-your-pass .content .pass-content ul.boxes li {
+    width: auto;
+    float: none; }
+  #get-your-pass .content .pass-content p {
+    margin: 15px 0; }
+  #get-your-pass .content .pass-content img {
+    width: 100%; }
+  #student-pass .voucher-claim img {
+    margin: 10px 0; }
+  #student-pass .voucher-claim form button {
+    margin-top: 10px; }
   #educators .content {
     padding: 20px; }
   #educators .content-inner-block {
     padding: 20px; }
   #educators form {
-    width: 100%;
-    border: 1px solid red; } }
+    width: 100%; } }

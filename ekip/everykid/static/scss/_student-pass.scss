@@ -54,6 +54,7 @@
       background: $yellow;
       color: $blue;
       letter-spacing: 1px;
+      display: block;
     }
   }
 
@@ -97,6 +98,7 @@
       }
 
       button {
+        width: 202px;
         height: 50px;
         background: $yellow;
         font-weight: normal;
