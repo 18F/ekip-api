@@ -92,6 +92,10 @@ ul.top-links {
       transition: opacity 0.3s ease-in; }
       .menu-container nav .logo:hover {
         opacity: .8; }
+    .menu-container nav .logo-line {
+      top: 150px;
+      left: 105px;
+      position: absolute; }
     .menu-container nav .menu {
       position: relative; }
     .menu-container nav .lines {
@@ -148,6 +152,9 @@ ul.top-links {
 .mountain {
   background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
   background-size: cover; }
+  .mountain .menu-container nav li {
+    border: none;
+    margin-bottom: 25px; }
 
 .hills {
   background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
@@ -192,7 +199,8 @@ ul.top-links {
 
 #landing .menu-container nav {
   top: 90px; }
-  #landing .menu-container nav .logo {
+  #landing .menu-container nav .logo,
+  #landing .menu-container nav .logo-line {
     display: none; }
 
 #landing .content {

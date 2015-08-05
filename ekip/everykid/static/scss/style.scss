@@ -75,6 +75,11 @@ button {
 .mountain {
   background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
   background-size: cover;
+
+  .menu-container nav li {
+    border: none;
+    margin-bottom: 25px;
+  }
 }
 
 .hills {
