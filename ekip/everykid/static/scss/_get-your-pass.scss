@@ -1,57 +1,98 @@
 #get-your-pass {
 
-  .content {
+  .pass-content {
+    background: rgba(23, 112, 153, 0.9);
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 300;
 
-    .pass-content {
-      max-width: 670px;
-      background: rgba(23, 112, 153, 0.9);
-      padding: 35px;
-      font-size: 18px;
-      font-weight: 300;
+    @include clearfix();
+
+    h1 {
+      width: 370px;
+      font-size: 40px;
+      line-height: 40px;
+      padding: 0 0 13px 0;
+      float: left;
+    }
+    p {
+      width: 370px;
+      line-height: 25px;
+      margin: 0 0 30px 0;
+      float: left;
+    }
+    img {
+      float: left;
     }
 
-    ul {
-      margin: 30px 0 0 0;
-    }
+    ul.boxes {
+      width: 254px;
+      float: right;
 
-    .boxes li {
-      width: 31%;
-      height: 220px;
-      border: 2px solid #fff;
-      margin: 0 10px 0 0;
-      font-size: 16px;
-      vertical-align: top;
-      display: inline-block;
+      li {
+        font-size: 16px;
+        padding: 25px;
+        margin: 0 0 15px 0;
+        border: 2px solid $blue-light;
+        text-align: center;
+        float: right;
 
-      a {
-        text-decoration: none;
-        display: block;
-      }
+        a {
+          text-decoration: none;
+        }
+        h2 {
+          color: $yellow;
+          font-size: 14px;
+          line-height: 14px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        p {
+          width: auto;
+          margin: 0;
+          font-size: 14px;
+          line-height: 18px;
+        }
 
-      div {
-        height: 130px;
-        padding: 17px;
-      }
+        &.fourth-graders {
+          background: $yellow;
+          border: none;
+          color: $blue;
 
-      h2 {
-        font-size: 18px;
-        font-weight: bold;
-        color: #FFE897;
-        text-transform: uppercase;
-        padding: 5px 0 0 0;
-      }
+          h2 {
+            color: $blue;
+            font-size: 20px;
+            line-height: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          p {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 0 20px 0;
+          }
+          button {
+            background: url(../img/icon-fish-blue.png) center left 10px no-repeat;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: 600;
+            padding: 10px 20px 10px 45px;
+            letter-spacing: 1px;
 
-      button {
-        background: $yellow;
-        color: #fff;
-        border: none;
-        padding: 10px 15px;
-        margin: 15px 0 0 0;
-        font-size: 13px;
-      }
+            @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
-      &:last-child {
-        margin: 0;
+            &:hover {
+              border: 2px solid $blue;
+              background: $blue url(../img/icon-fish-white.png) center left 10px no-repeat;
+
+              color: #fff;
+            }
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
       }
     }
   }

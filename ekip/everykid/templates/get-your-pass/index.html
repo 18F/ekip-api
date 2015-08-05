@@ -13,37 +13,29 @@
 
     <h1>Get your pass</h1>
 
+    <ul class="boxes">
+      <li class="fourth-graders">
+        <h2>Fourth Graders</h2>
+        <p>Play this game to get your free pass.</p>
+        <a href="{%url 'student_pass' %}">
+          <button>Start</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'educator_passes' %}">
+        <h2>Educators</h2>
+        <p>Get passes for your fourth grade students.</p>
+        </a>
+      </li>
+    </ul>
+
     <p>Bike through a mountain forest. Camp in a desert. Watch a whale burst
     through the ocean's surface. These are just a few of the things you can do
     on federal lands and waters. And you &mdash; and your family &mdash; can
     visit them call for free!</p>
 
-    <ul class="boxes">
-      <li>
-        <a href="{%url 'student_pass' %}">
-          <div>
-            <img src="{% static "img/icon-binoculars.png" %}" alt="" />
-            <h2>Fourth Graders</h2>
-            <p>Play this game to get your free pass.</p>
-          </div>
-        </a>
-      </li>
-<!--      <li>
-        <div>
-          <h3>I am a<br/>Parent</h3>
-          <p>Find out how the program works.</p>
-        </div>
-      </li>
-       -->
-      <li>
-        <a href="{% url 'educator_passes' %}">
-          <div>
-            <img src="{% static "img/icon-fish.png" %}" alt="" />
-            <h2>Educators</h2>
-            <p>Get passes for your fourth grade students.</p>
-          </div>
-        </a>
-      </li>
-    </ul>
+    <img src="{% static "img/get-your-pass-kids.png" %}" alt="" />
+
+  </div>
 
 {% endblock content %}

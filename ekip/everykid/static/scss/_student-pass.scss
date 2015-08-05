@@ -1,112 +1,110 @@
 #student-pass {
 
-  .content {
+  .pass-content {
+    max-width: 670px;
+    background: rgba(23, 112, 153, 0.9);
+    padding: 35px;
+    font-size: 18px;
+    font-weight: 300;
+    @include clearfix();
 
-    .pass-content {
-      max-width: 670px;
-      background: rgba(23, 112, 153, 0.9);
-      padding: 35px;
-      font-size: 18px;
-      font-weight: 300;
-      @include clearfix();
+    h1 {
+      font-size: 40px;
+    }
 
-      form {
-        max-width: 360px;
-        margin: 30px auto;
-        border: 2px solid #fff;
-        padding: 30px;
-        text-align: center;
+    form {
+      max-width: 360px;
+      margin: 30px auto;
+      border: 2px solid #fff;
+      padding: 30px;
+      text-align: center;
 
-        .error {
-          color: #ff0000;
-          font-size: 14px;
-          font-weight: bold;
-
-          div {
-            padding: 0 0 10px 0;
-          }
-          input[type="text"] {
-            border: 1px solid #ff0000;
-          }
-        }
-      }
-
-      label {
-        font-size: 16px;
-        padding: 0 0 15px 0;
-        cursor: pointer;
-        display: block;
-
-        span {
-          font-weight: bold;
-        }
-      }
-
-      input[type="checkbox"] {
-        background: $yellow;
-      }
-
-      button {
+      .error {
+        color: #ff0000;
         font-size: 14px;
-        margin: 15px 0 0 0;
-        padding: 15px 35px;
-        background: $yellow;
-        color: $blue;
         font-weight: bold;
-        letter-spacing: 1px;
+
+        div {
+          padding: 0 0 10px 0;
+        }
+        input[type="text"] {
+          border: 1px solid #ff0000;
+        }
       }
     }
 
-    .voucher-claim {
+    label {
+      font-size: 16px;
+      padding: 0 0 15px 0;
+      cursor: pointer;
+      display: block;
 
-      .voucher-claim-description {
-        max-width: 420px;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    input[type="checkbox"] {
+      background: $yellow;
+    }
+
+    button {
+      margin: 15px 0 0 0;
+      padding: 15px 40px;
+      background: $yellow;
+      color: $blue;
+      letter-spacing: 1px;
+    }
+  }
+
+  .voucher-claim {
+
+    .voucher-claim-description {
+      max-width: 420px;
+      float: left;
+    }
+    .voucher-claim-zipcode {
+      width: 210px;
+      padding: 0 0 0 15px;
+      float: left;
+    }
+
+    form {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      border: none;
+      vertical-align: top;
+      clear: both;
+
+      label {
+        font-weight: bold;
+        padding: 0 0 10px 0;
+        cursor: default;
+      }
+
+      input[type="text"] {
+        width: 180px;
+        height: 28px;
+        padding: 10px;
+        margin: 0 15px 0 0;
+        color: #177099;
+        font-size: 16px;
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.7);
         float: left;
       }
-      .voucher-claim-zipcode {
-        width: 210px;
-        padding: 0 0 0 15px;
-        float: left;
-      }
 
-      form {
-        max-width: 100%;
+      button {
+        height: 50px;
+        border: 1px solid #fff;
+        font-weight: normal;
+        padding: 15px;
         margin: 0;
-        padding: 0;
-        text-align: left;
-        border: none;
-        vertical-align: top;
-        clear: both;
-
-        label {
-          font-weight: bold;
-          padding: 0 0 10px 0;
-          cursor: default;
-        }
-
-        input[type="text"] {
-          width: 180px;
-          height: 28px;
-          padding: 10px;
-          margin: 0 15px 0 0;
-          color: #177099;
-          font-size: 16px;
-          border: 1px solid #fff;
-          background: rgba(255, 255, 255, 0.7);
-          float: left;
-        }
-
-        button {
-          height: 50px;
-          border: 1px solid #fff;
-          font-weight: normal;
-          padding: 15px;
-          margin: 0;
-          background: #fff;
-          float: left;
-        }
+        background: #fff;
+        float: left;
       }
-
     }
   }
 }
