@@ -13,7 +13,8 @@
   .menu-container nav {
     top: 90px;
 
-    .logo {
+    .logo,
+    .logo-line {
       display: none;
     }
   }
@@ -31,15 +32,13 @@
     button {
       border: 4px solid #fff;
       background: transparent;
-      font-family: "Superclarendon", serif;
-      font-weight: bold;
       letter-spacing: 1px;
       color: #fff;
       font-size: 19px;
       padding: 20px 30px;
       margin: 0 0 90px 0;
 
-      @include transition(background-color 0.2s ease-in, color 0.2s ease-in);
+      @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
       &:hover {
         background: #fff;
@@ -95,11 +94,9 @@
           button {
             background: $yellow url(../img/icon-fish-red.png) center left 10px no-repeat;
             color: $red;
-            font-weight: 700;
-            font-size: 14px;
             padding: 13px 13px 13px 45px;
 
-            @include transition(background-color 0.3s ease-in, color 0.3s ease-in);
+            @include transition(background 0.3s ease-in, color 0.3s ease-in);
 
             &:hover {
               background: #fff url(../img/icon-fish-red.png) center left 10px no-repeat;

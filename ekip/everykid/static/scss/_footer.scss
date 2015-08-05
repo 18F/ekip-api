@@ -1,11 +1,11 @@
 footer {
   background: #FDEED0;
+  color: $green;
   clear: both;
 
   .footer-content {
     max-width: $site-width;
     padding: 40px 0;
-    color: $green;
     margin: auto;
     text-align: center;
 
@@ -24,6 +24,7 @@ footer {
         display: inline-block;
 
         a {
+          text-decoration: none;
           display: table;
         }
 
@@ -42,6 +43,10 @@ footer {
         padding: 0 10px;
         border-right: 1px solid $brown;
         display: inline-block;
+
+        a {
+          text-decoration: none;
+        }
 
         &:last-child {
           padding-right: 0;
