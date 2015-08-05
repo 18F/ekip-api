@@ -1,7 +1,11 @@
 #educators {
 
   .content {
-    padding-bottom: 100px;
+    padding-bottom: 110px;
+
+    h1 {
+      font-size: 40px;
+    }
 
     h2, p, .explanation {
       max-width: 710px;
@@ -9,13 +13,14 @@
     p {
       font-size: 22px;
       font-weight: 300;
+      margin: 0 0 5px 0;
     }
 
-    .explanation {
+    .box {
       max-width: 570px;
       border: 2px solid #FFE087;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 25px;
+      margin: 40px 0 20px 0;
 
       h3 {
         font-size: 18px;
@@ -27,6 +32,10 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 1.4em;
+        margin: 7px 0;
+      }
+      a {
+        text-decoration: none;
       }
 
       button {
@@ -52,7 +61,6 @@
 
     h3 {
       font-size: 30px;
-      text-transform: uppercase;
       padding: 0;
     }
     p {
