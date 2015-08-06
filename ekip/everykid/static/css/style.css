@@ -301,29 +301,31 @@ ul.top-links {
       font-size: 30px;
       font-weight: 600; }
 
-#how-it-works {
+#how-it-works .content-block {
+  width: 600px;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center; }
+  #how-it-works .content-block h1 {
+    font-size: 40px;
+    text-align: left; }
+  #how-it-works .content-block p {
+    text-align: left;
+    margin: 0; }
+  #how-it-works .content-block button {
+    font-size: 18px;
+    margin: 100px 0 0 0;
+    padding: 20px 30px;
+    border: 4px solid #fff;
+    -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+    -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+    transition: background 0.2s ease-in, color 0.2s ease-in; }
+    #how-it-works .content-block button:hover {
+      background: #fff;
+      color: #177099; }
+
+#how-it-works .content-inner {
   font-weight: 300; }
-  #how-it-works .content-block {
-    width: 600px;
-    font-size: 22px;
-    text-align: center; }
-    #how-it-works .content-block h1 {
-      font-size: 40px;
-      text-align: left; }
-    #how-it-works .content-block p {
-      text-align: left;
-      margin: 0; }
-    #how-it-works .content-block button {
-      font-size: 18px;
-      margin: 100px 0 0 0;
-      padding: 20px 30px;
-      border: 4px solid #fff;
-      -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
-      -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
-      transition: background 0.2s ease-in, color 0.2s ease-in; }
-      #how-it-works .content-block button:hover {
-        background: #fff;
-        color: #177099; }
   #how-it-works .content-inner h2 {
     font-size: 30px; }
   #how-it-works .content-inner ol li {
@@ -743,8 +745,7 @@ footer {
       font-size: 12px;
       padding: 0 10px;
       border-right: 1px solid #683E2D;
-      display: inline-block;
-      font-weight: 400; }
+      display: inline-block; }
       footer .footer-content nav li a {
         text-decoration: none; }
       footer .footer-content nav li:last-child {
