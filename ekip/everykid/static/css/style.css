@@ -713,6 +713,7 @@ ul.top-links {
 
 footer {
   background: #FDEED0;
+  border-top: 5px solid #000;
   color: #2D6C35;
   clear: both; }
   footer .footer-content {
