@@ -19,14 +19,16 @@ h2 {
 
 a {
   color: inherit; }
+  a:hover {
+    text-decoration: none; }
 
 p {
   margin: 5px 0; }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0; }
-  ul li {
+  ul li, ol li {
     list-style: none; }
 
 button {
@@ -170,7 +172,7 @@ ul.top-links {
 
 .content {
   max-width: 725px;
-  min-height: 500px;
+  min-height: 450px;
   margin: auto;
   padding: 100px 0 50px 260px;
   position: relative; }
@@ -180,14 +182,21 @@ ul.top-links {
   color: #ff0000; }
 
 #about .content ul,
+#about .content-inner ul,
 #student-pass .content ul,
+#student-pass .content-inner ul,
 #plan-your-trip .content ul,
-#privacy-policy .content ul {
+#plan-your-trip .content-inner ul,
+#privacy-policy .content ul, #privacy-policy .content-inner ul {
   margin: 5px 0 5px 20px; }
   #about .content ul li,
+  #about .content-inner ul li,
   #student-pass .content ul li,
+  #student-pass .content-inner ul li,
   #plan-your-trip .content ul li,
-  #privacy-policy .content ul li {
+  #plan-your-trip .content-inner ul li,
+  #privacy-policy .content ul li, #privacy-policy .content-inner ul li {
+    padding: 0 0 5px 0;
     list-style: bullet; }
 
 #landing h1 {
@@ -298,6 +307,76 @@ ul.top-links {
       font-family: "Superclarendon", serif;
       font-size: 30px;
       font-weight: 600; }
+
+#how-it-works .content-block {
+  width: 600px;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center; }
+  #how-it-works .content-block h1 {
+    font-size: 40px;
+    text-align: left; }
+  #how-it-works .content-block p {
+    text-align: left;
+    margin: 0; }
+  #how-it-works .content-block button {
+    font-size: 18px;
+    margin: 100px 0 0 0;
+    padding: 20px 30px;
+    border: 4px solid #fff;
+    -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+    -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+    transition: background 0.2s ease-in, color 0.2s ease-in; }
+    #how-it-works .content-block button:hover {
+      background: #fff;
+      color: #177099; }
+
+#how-it-works .content-inner {
+  font-weight: 300; }
+  #how-it-works .content-inner h2 {
+    font-size: 30px; }
+  #how-it-works .content-inner ol li {
+    width: 100%;
+    height: 100%;
+    padding: 60px 0 120px 0;
+    background: #C82629;
+    list-style: none; }
+    #how-it-works .content-inner ol li:nth-child(even) {
+      background: #FDEED0;
+      color: #000; }
+      #how-it-works .content-inner ol li:nth-child(even) h2 {
+        background: #C82629;
+        color: #fff; }
+      #how-it-works .content-inner ol li:nth-child(even) .step-container {
+        margin-left: 300px; }
+    #how-it-works .content-inner ol li h2 {
+      width: 50px;
+      height: 45px;
+      background: #fff;
+      border-radius: 30px;
+      font-size: 38px;
+      color: #C82629;
+      margin: 0 20px 0 0;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top; }
+    #how-it-works .content-inner ol li .step-container {
+      max-width: 900px;
+      margin: auto; }
+      #how-it-works .content-inner ol li .step-container .step {
+        width: 500px;
+        font-size: 22px;
+        display: inline-block; }
+  #how-it-works .content-inner .reminders {
+    max-width: 1030px;
+    padding: 60px 20px 80px 20px;
+    margin: auto; }
+    #how-it-works .content-inner .reminders ul {
+      max-width: 600px; }
+    #how-it-works .content-inner .reminders li {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 0 10px 0; }
 
 #get-your-pass .pass-content {
   background: rgba(23, 112, 153, 0.9);
@@ -415,8 +494,7 @@ ul.top-links {
     padding: 15px 40px;
     background: #FFE897;
     color: #177099;
-    letter-spacing: 1px;
-    display: block; }
+    letter-spacing: 1px; }
 
 #student-pass .voucher-claim .voucher-claim-description {
   max-width: 420px;
@@ -642,8 +720,34 @@ ul.top-links {
     padding: 30px 0;
     clear: both; }
 
+#plan-your-trip .content {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 25px; }
+  #plan-your-trip .content h1 {
+    font-size: 40px;
+    line-height: 45px; }
+  #plan-your-trip .content p {
+    line-height: 28px;
+    margin: 5px 0 10px 0; }
+
+#plan-your-trip .content-inner {
+  font-weight: 300; }
+  #plan-your-trip .content-inner .plans {
+    width: 600px;
+    margin: auto;
+    padding: 30px 0 60px 0;
+    font-size: 20px;
+    line-height: 24px; }
+    #plan-your-trip .content-inner .plans h2 {
+      font-size: 30px; }
+    #plan-your-trip .content-inner .plans > li {
+      padding: 30px 0;
+      list-style: none; }
+
 footer {
   background: #FDEED0;
+  border-top: 5px solid #000;
   color: #2D6C35;
   clear: both; }
   footer .footer-content {

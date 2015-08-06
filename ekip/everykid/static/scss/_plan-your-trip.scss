@@ -1,0 +1,40 @@
+#plan-your-trip {
+
+  .content {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 25px;
+
+    h1 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    p {
+      line-height: 28px;
+      margin: 5px 0 10px 0;
+    }
+  }
+
+  .content-inner {
+    font-weight: 300;
+
+    .plans {
+      width: 600px;
+      margin: auto;
+      padding: 30px 0 60px 0;
+      font-size: 20px;
+      line-height: 24px;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      > li {
+        padding: 30px 0;
+        list-style: none;
+      }
+
+    }
+  }
+}
