@@ -10,6 +10,7 @@ $blue-light: #489BC0;
 $red: #C82629;
 $green: #2D6C35;
 $brown: #683E2D;
+$cream: #FDEED0;
 
 body, html {
   background: $blue;
@@ -34,13 +35,17 @@ h2 {
 
 a {
   color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 p {
   margin: 5px 0;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
 
@@ -100,7 +105,7 @@ button {
 
 .content {
   max-width: $site-width - $nav-width - 50;
-  min-height: 500px;
+  min-height: 450px;
   margin: auto;
   padding: 100px 0 50px $nav-width + 50;
   position: relative;
@@ -128,6 +133,7 @@ button {
 }
 
 @import "landing";
+@import "how-it-works";
 @import "get-your-pass";
 @import "student-pass";
 @import "educators";
