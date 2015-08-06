@@ -182,14 +182,21 @@ ul.top-links {
   color: #ff0000; }
 
 #about .content ul,
+#about .content-inner ul,
 #student-pass .content ul,
+#student-pass .content-inner ul,
 #plan-your-trip .content ul,
-#privacy-policy .content ul {
+#plan-your-trip .content-inner ul,
+#privacy-policy .content ul, #privacy-policy .content-inner ul {
   margin: 5px 0 5px 20px; }
   #about .content ul li,
+  #about .content-inner ul li,
   #student-pass .content ul li,
+  #student-pass .content-inner ul li,
   #plan-your-trip .content ul li,
-  #privacy-policy .content ul li {
+  #plan-your-trip .content-inner ul li,
+  #privacy-policy .content ul li, #privacy-policy .content-inner ul li {
+    padding: 0 0 5px 0;
     list-style: bullet; }
 
 #landing h1 {
@@ -712,6 +719,31 @@ ul.top-links {
   #educators .preview .edit {
     padding: 30px 0;
     clear: both; }
+
+#plan-your-trip .content {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 25px; }
+  #plan-your-trip .content h1 {
+    font-size: 40px;
+    line-height: 45px; }
+  #plan-your-trip .content p {
+    line-height: 28px;
+    margin: 5px 0 10px 0; }
+
+#plan-your-trip .content-inner {
+  font-weight: 300; }
+  #plan-your-trip .content-inner .plans {
+    width: 600px;
+    margin: auto;
+    padding: 30px 0 60px 0;
+    font-size: 20px;
+    line-height: 24px; }
+    #plan-your-trip .content-inner .plans h2 {
+      font-size: 30px; }
+    #plan-your-trip .content-inner .plans > li {
+      padding: 30px 0;
+      list-style: none; }
 
 footer {
   background: #FDEED0;

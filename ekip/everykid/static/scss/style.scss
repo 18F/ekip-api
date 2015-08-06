@@ -121,11 +121,12 @@ button {
 #plan-your-trip,
 #privacy-policy {
 
-  .content {
+  .content, .content-inner {
     ul {
       margin: 5px 0 5px 20px;
 
       li {
+        padding: 0 0 5px 0;
         list-style: bullet;
       }
     }
@@ -137,6 +138,7 @@ button {
 @import "get-your-pass";
 @import "student-pass";
 @import "educators";
+@import "plan-your-trip";
 
 @import "footer";
 
