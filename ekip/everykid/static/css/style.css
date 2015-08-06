@@ -743,7 +743,8 @@ footer {
       font-size: 12px;
       padding: 0 10px;
       border-right: 1px solid #683E2D;
-      display: inline-block; }
+      display: inline-block;
+      font-weight: 400; }
       footer .footer-content nav li a {
         text-decoration: none; }
       footer .footer-content nav li:last-child {
