@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Superclarendon", serif; }
 
 h1 {
-  font-size: 46px; }
+  font-size: 40px; }
 
 h2 {
   font-size: 35px; }
@@ -199,6 +199,25 @@ ul.top-links {
     padding: 0 0 5px 0;
     list-style: bullet; }
 
+#about .content,
+#privacy-policy .content {
+  font-weight: 200; }
+  #about .content h1,
+  #privacy-policy .content h1 {
+    line-height: 40px; }
+  #about .content h2,
+  #privacy-policy .content h2 {
+    font-size: 30px;
+    padding: 15px 0 0 0; }
+  #about .content h3,
+  #privacy-policy .content h3 {
+    padding: 10px 0 0 0; }
+  #about .content p,
+  #privacy-policy .content p {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 0 10px 0; }
+
 #landing h1 {
   max-width: 660px;
   font-size: 40px;
@@ -314,7 +333,6 @@ ul.top-links {
   font-weight: 300;
   text-align: center; }
   #how-it-works .content-block h1 {
-    font-size: 40px;
     text-align: left; }
   #how-it-works .content-block p {
     text-align: left;
@@ -389,7 +407,6 @@ ul.top-links {
     display: table; }
   #get-your-pass .pass-content h1 {
     width: 370px;
-    font-size: 40px;
     line-height: 40px;
     padding: 0 0 13px 0;
     float: left; }
@@ -464,8 +481,6 @@ ul.top-links {
     clear: both;
     content: "";
     display: table; }
-  #student-pass .pass-content h1 {
-    font-size: 40px; }
   #student-pass .pass-content form {
     max-width: 360px;
     margin: 30px auto;
@@ -538,8 +553,6 @@ ul.top-links {
 
 #educators .content {
   padding-bottom: 110px; }
-  #educators .content h1 {
-    font-size: 40px; }
   #educators .content h2, #educators .content p, #educators .content .explanation {
     max-width: 710px; }
   #educators .content p {
@@ -725,11 +738,27 @@ ul.top-links {
   font-size: 22px;
   line-height: 25px; }
   #plan-your-trip .content h1 {
-    font-size: 40px;
     line-height: 45px; }
   #plan-your-trip .content p {
     line-height: 28px;
     margin: 5px 0 10px 0; }
+  #plan-your-trip .content form ul {
+    width: 300px;
+    margin: 25px auto;
+    border: 2px solid #fff;
+    padding: 20px; }
+    #plan-your-trip .content form ul li {
+      padding: 10px 0;
+      text-align: center;
+      list-style: none; }
+  #plan-your-trip .content button {
+    background: #177099;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 1px; }
+  #plan-your-trip .content .sites li {
+    padding: 10px 0; }
 
 #plan-your-trip .content-inner {
   font-weight: 300; }

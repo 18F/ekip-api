@@ -6,14 +6,40 @@
     line-height: 25px;
 
     h1 {
-      font-size: 40px;
       line-height: 45px;
     }
-
     p {
       line-height: 28px;
       margin: 5px 0 10px 0;
     }
+    form {
+      ul {
+        width: 300px;
+        margin: 25px auto;
+        border: 2px solid #fff;
+        padding: 20px;
+
+        li {
+          padding: 10px 0;
+          text-align: center;
+          list-style: none;
+        }
+      }
+    }
+    button {
+      background: $blue;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 20px;
+      letter-spacing: 1px;
+    }
+
+    .sites {
+      li {
+        padding: 10px 0;
+      }
+    }
+
   }
 
   .content-inner {
