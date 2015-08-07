@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Superclarendon", serif;
 }
 h1 {
-  font-size: 46px;
+  font-size: 40px;
 }
 h2 {
   font-size: 35px;
@@ -129,6 +129,29 @@ button {
         padding: 0 0 5px 0;
         list-style: bullet;
       }
+    }
+  }
+}
+
+#about,
+#privacy-policy {
+  .content {
+    font-weight: 200;
+
+    h1 {
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 30px;
+      padding: 15px 0 0 0;
+    }
+    h3 {
+      padding: 10px 0 0 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0 0 10px 0;
     }
   }
 }
