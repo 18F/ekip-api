@@ -730,6 +730,23 @@ ul.top-links {
   #plan-your-trip .content p {
     line-height: 28px;
     margin: 5px 0 10px 0; }
+  #plan-your-trip .content form ul {
+    width: 300px;
+    margin: 25px auto;
+    border: 2px solid #fff;
+    padding: 20px; }
+    #plan-your-trip .content form ul li {
+      padding: 10px 0;
+      text-align: center;
+      list-style: none; }
+  #plan-your-trip .content button {
+    background: #177099;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 1px; }
+  #plan-your-trip .content .sites li {
+    padding: 10px 0; }
 
 #plan-your-trip .content-inner {
   font-weight: 300; }
