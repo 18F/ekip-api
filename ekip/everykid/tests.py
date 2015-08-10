@@ -39,8 +39,7 @@ class NavigationTestCase(TestCase):
         response = self.client.get(reverse('how_it_works'))
         self.assertEquals(200, response.status_code)
         content = response.content.decode('utf-8')
-        self.assertTrue('<a class="active" href="/how-it-works/"' in content)
-        
+        self.assertTrue('<li class="active">' in content)
 
 
 class PassExchangeSiteTestCase(TestCase):
