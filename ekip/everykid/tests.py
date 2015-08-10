@@ -29,6 +29,17 @@ class BasicPageTestCase(TestCase):
     def test_get_privacy_policy(self):
         response = self.client.get(reverse('privacy_policy'))
         self.assertEquals(200, response.status_code)
+
+
+class NavigationTestCase(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_active_selector(self):
+        response = self.client.get(reverse('how_it_works'))
+        self.assertEquals(200, response.status_code)
+        content = response.content.decode('utf-8')
+        self.assertTrue('<a class="active" href="/how-it-works/"' in content)
         
 
 
