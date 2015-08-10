@@ -124,6 +124,18 @@ ul.top-links {
       font-family: "Superclarendon", serif;
       text-align: center;
       display: inline-block; }
+      .menu-container nav li.active a {
+        background: #177099;
+        color: #fff;
+        cursor: default; }
+        .menu-container nav li.active a:before {
+          width: 55px;
+          height: 55px;
+          background: url(../img/nav-compass.png) center center no-repeat;
+          content: "\00a0";
+          top: 5px;
+          left: -37px;
+          position: absolute; }
       .menu-container nav li a {
         width: inherit;
         height: inherit;
