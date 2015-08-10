@@ -55,6 +55,10 @@
       font-size: 13px;
       margin: 5px;
 
+      &.active a:before {
+        display: none;
+      }
+
       a {
         padding: 8px 10px;
 

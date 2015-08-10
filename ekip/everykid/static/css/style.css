@@ -167,7 +167,7 @@ ul.top-links {
   background-size: cover; }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center center fixed;
+  background: url(../img/backgrounds/tent.png) no-repeat center bottom fixed;
   background-size: cover; }
 
 .brown-rocks {
@@ -851,6 +851,8 @@ footer {
     .menu-container nav li {
       font-size: 13px;
       margin: 5px; }
+      .menu-container nav li.active a:before {
+        display: none; }
       .menu-container nav li a {
         padding: 8px 10px; }
         .menu-container nav li a:hover:before {
