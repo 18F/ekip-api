@@ -96,6 +96,22 @@ ul.top-links {
       text-align: center;
       display: inline-block;
 
+      &.active a {
+        background: $blue;
+        color: #fff;
+        cursor: default;
+
+        &:before {
+          width: 55px;
+          height: 55px;
+          background: url(../img/nav-compass.png) center center no-repeat;
+          content: "\00a0";
+          top: 5px;
+          left: -37px;
+          position: absolute;
+        }
+      }
+
       a {
         width: inherit;
         height: inherit;
