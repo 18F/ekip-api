@@ -126,16 +126,6 @@ ul.top-links {
         &:hover {
           background: $blue;
           color: #fff;
-
-          &:before {
-            width: 55px;
-            height: 55px;
-            background: url(../img/nav-compass.png) center center no-repeat;
-            content: "\00a0";
-            top: 5px;
-            left: -37px;
-            position: absolute;
-          }
         }
       }
 

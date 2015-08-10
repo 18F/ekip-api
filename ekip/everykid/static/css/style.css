@@ -150,14 +150,6 @@ ul.top-links {
         .menu-container nav li a:hover {
           background: #177099;
           color: #fff; }
-          .menu-container nav li a:hover:before {
-            width: 55px;
-            height: 55px;
-            background: url(../img/nav-compass.png) center center no-repeat;
-            content: "\00a0";
-            top: 5px;
-            left: -37px;
-            position: absolute; }
       .menu-container nav li:nth-child(1) {
         margin-left: 40px; }
       .menu-container nav li:nth-child(3) {
