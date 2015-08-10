@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load tags %}
 
     <ul class="top-links">
       <li class="educators-link">
@@ -34,23 +35,16 @@
           </svg>
 
           <ul>
-            <li>
+            <li class="{% active request 'how-it-works' %}">
               <a href="{% url 'how_it_works' %}">How It Works</a>
-            <li>
+            <li class="{% active request 'get-your-pass' %}">
               <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
             </li>
-            <li>
+            <li class="{% active request 'plan-your-trip' %}" >
               <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
             </li>
-            {% comment %}
-            <li class="active">
-              <a>Current Page</a>
-            </li>
-            {% endcomment %}
           </ul>
-
         </div>
 
       </nav>
-
     </section>
