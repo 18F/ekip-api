@@ -88,15 +88,22 @@ ul.top-links {
     .menu-container nav .logo {
       margin: 0 0 20px 30px;
       z-index: 100;
+      font-size: 14px;
       position: relative;
       -webkit-transition: opacity 0.3s ease-in;
       -moz-transition: opacity 0.3s ease-in;
       transition: opacity 0.3s ease-in; }
+      .menu-container nav .logo span {
+        left: 61px;
+        bottom: 13px;
+        position: absolute; }
+      .menu-container nav .logo a {
+        text-decoration: none; }
       .menu-container nav .logo:hover {
         opacity: .8; }
     .menu-container nav .logo-line {
       top: 150px;
-      left: 105px;
+      left: 108px;
       position: absolute; }
     .menu-container nav .menu {
       position: relative; }
@@ -117,7 +124,6 @@ ul.top-links {
       z-index: 100;
       background: #fff;
       margin: 0 0 20px 0;
-      border: 2px solid #177099;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -127,7 +133,10 @@ ul.top-links {
       .menu-container nav li.active a {
         background: #177099;
         color: #fff;
+        border: 2px solid #fff;
         cursor: default; }
+        .menu-container nav li.active a:hover {
+          opacity: 1; }
         .menu-container nav li.active a:before {
           width: 55px;
           height: 55px;
@@ -139,6 +148,7 @@ ul.top-links {
       .menu-container nav li a {
         width: inherit;
         height: inherit;
+        border: 2px solid #177099;
         padding: 12px 15px;
         text-decoration: none;
         color: #177099;
@@ -149,18 +159,25 @@ ul.top-links {
         transition: background 0.1s ease-in, color 0.1s ease-in; }
         .menu-container nav li a:hover {
           background: #177099;
-          color: #fff; }
+          border: 2px solid #fff;
+          color: #fff;
+          opacity: 0.8; }
       .menu-container nav li:nth-child(1) {
         margin-left: 40px; }
+        .menu-container nav li:nth-child(1) a:before {
+          top: -25px;
+          left: -40px; }
       .menu-container nav li:nth-child(3) {
         margin-left: 55px; }
+        .menu-container nav li:nth-child(3) a:before {
+          top: 20px;
+          left: -35px; }
 
 .mountain {
   background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
   background-size: cover; }
   .mountain .menu-container nav li {
-    border: none;
-    margin-bottom: 25px; }
+    border: none; }
 
 .hills {
   background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
