@@ -65,6 +65,10 @@ button {
   border: none;
   cursor: pointer;
   text-align: center;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .govt-banner {
@@ -78,28 +82,31 @@ button {
 @import "nav";
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
+  background: url(../img/backgrounds/mountain.png) no-repeat center top;
   background-size: cover;
 
   .menu-container nav li {
     border: none;
-    margin-bottom: 25px;
   }
 }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
   background-size: cover;
 }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center center fixed;
+  background: url(../img/backgrounds/tent.png) no-repeat center top;
   background-size: cover;
 }
 
-
 .brown-rocks {
   background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.blue-sky-tent {
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
   background-size: cover;
 }
 

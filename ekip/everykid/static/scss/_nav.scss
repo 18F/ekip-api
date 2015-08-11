@@ -47,17 +47,27 @@ ul.top-links {
     .logo {
       margin: 0 0 20px 30px;
       z-index: 100;
+      font-size: 14px;
+      display: inline-block;
       position: relative;
 
       @include transition(opacity 0.3s ease-in);
 
+      span {
+        left: 61px;
+        bottom: 13px;
+        position: absolute;
+      }
+      a {
+        text-decoration: none;
+      }
       &:hover {
         opacity: .8;
       }
     }
     .logo-line {
       top: 150px;
-      left: 105px;
+      left: 108px;
       position: absolute;
     }
 
@@ -88,7 +98,6 @@ ul.top-links {
       z-index: 100;
       background: #fff;
       margin: 0 0 20px 0;
-      border: 2px solid $blue;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -99,7 +108,12 @@ ul.top-links {
       &.active a {
         background: $blue;
         color: #fff;
+        border: 2px solid #fff;
         cursor: default;
+
+        &:hover {
+          opacity: 1;
+        }
 
         &:before {
           width: 55px;
@@ -115,6 +129,7 @@ ul.top-links {
       a {
         width: inherit;
         height: inherit;
+        border: 2px solid $blue;
         padding: 12px 15px;
         text-decoration: none;
         color: $blue;
@@ -125,26 +140,28 @@ ul.top-links {
 
         &:hover {
           background: $blue;
+          border: 2px solid #fff;
           color: #fff;
-
-          &:before {
-            width: 55px;
-            height: 55px;
-            background: url(../img/nav-compass.png) center center no-repeat;
-            content: "\00a0";
-            top: 5px;
-            left: -37px;
-            position: absolute;
-          }
+          opacity: 0.8;
         }
       }
 
       &:nth-child(1) {
         margin-left: 40px;
+
+        a:before {
+          top: -25px;
+          left: -40px;
+        }
       }
 
       &:nth-child(3) {
         margin-left: 55px;
+
+        a:before {
+          top: 20px;
+          left: -35px;
+        }
       }
     }
   }

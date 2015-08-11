@@ -116,6 +116,7 @@
   form {
     max-width: 370px;
     padding: 15px 0;
+    margin: 0 0 0 50px;
 
     @include clearfix();
 
@@ -243,6 +244,10 @@
     p {
       color: #323232;
       font-size: 18px;
+    }
+
+    form {
+      margin: 0;
     }
 
     .data {
