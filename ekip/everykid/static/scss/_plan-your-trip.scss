@@ -54,6 +54,18 @@
   .content-inner {
     font-weight: 300;
 
+    button {
+      background: $yellow;
+      color: $blue;
+
+      @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+      &:hover {
+        background: #fff;
+        color: $blue;
+      }
+    }
+
     .plan-your-trip-line-container {
       max-width: 950px;
       margin: auto;

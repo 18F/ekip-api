@@ -42,6 +42,8 @@ button {
   border: none;
   cursor: pointer;
   text-align: center; }
+  button a {
+    text-decoration: none; }
 
 .govt-banner {
   background-color: #2C2C2C;
@@ -797,6 +799,15 @@ ul.top-links {
 
 #plan-your-trip .content-inner {
   font-weight: 300; }
+  #plan-your-trip .content-inner button {
+    background: #FFE897;
+    color: #177099;
+    -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+    -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+    transition: background 0.2s ease-in, color 0.2s ease-in; }
+    #plan-your-trip .content-inner button:hover {
+      background: #fff;
+      color: #177099; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
     max-width: 950px;
     margin: auto;
@@ -1078,4 +1089,17 @@ footer {
           #plan-your-trip .content-inner section.lodging .section-content .packing-list ul,
           #plan-your-trip .content-inner section.prepare .section-content .packing-list ul,
           #plan-your-trip .content-inner section.voucher .section-content .packing-list ul {
-            padding: 10px; } }
+            padding: 10px; }
+        #plan-your-trip .content-inner section.destination .section-content .voucher-image,
+        #plan-your-trip .content-inner section.lodging .section-content .voucher-image,
+        #plan-your-trip .content-inner section.prepare .section-content .voucher-image,
+        #plan-your-trip .content-inner section.voucher .section-content .voucher-image {
+          padding: 20px;
+          display: block;
+          text-align: center; }
+        #plan-your-trip .content-inner section.destination .section-content .voucher-content,
+        #plan-your-trip .content-inner section.lodging .section-content .voucher-content,
+        #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
+        #plan-your-trip .content-inner section.voucher .section-content .voucher-content {
+          width: auto;
+          padding: 0; } }
