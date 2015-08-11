@@ -356,7 +356,7 @@ ul.top-links {
       font-weight: 600; }
 
 #how-it-works .content-block {
-  width: 600px;
+  max-width: 600px;
   font-size: 22px;
   font-weight: 300;
   text-align: center; }
@@ -410,7 +410,7 @@ ul.top-links {
       max-width: 900px;
       margin: auto; }
       #how-it-works .content-inner ol li .step-container .step {
-        width: 500px;
+        max-width: 500px;
         font-size: 22px;
         display: inline-block; }
   #how-it-works .content-inner .reminders {
@@ -1015,6 +1015,22 @@ footer {
     padding: 30px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
+  #how-it-works .content {
+    min-height: 0; }
+  #how-it-works .content-block button {
+    margin: 20px;
+    font-size: 16px;
+    padding: 10px 15px; }
+  #how-it-works .content-inner ol li {
+    width: auto;
+    height: auto;
+    padding: 20px; }
+    #how-it-works .content-inner ol li:nth-child(even) .step-container {
+      margin-left: 0; }
+    #how-it-works .content-inner ol li .step-container .step {
+      font-size: 18px; }
+  #how-it-works .content-inner .reminders {
+    padding: 20px; }
   #get-your-pass .content .pass-content,
   #student-pass .content .pass-content {
     padding: 20px; }
@@ -1043,15 +1059,19 @@ footer {
   #educators form {
     width: 100%; }
   #plan-your-trip .content {
-    min-height: 0; }
+    min-height: 0;
+    font-size: 20px; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
     display: none; }
   #plan-your-trip .content-inner section {
     width: auto;
-    min-height: 0; }
+    min-height: 0;
+    font-size: 18px; }
     #plan-your-trip .content-inner section h2 {
       font-size: 25px;
       line-height: 100%; }
+    #plan-your-trip .content-inner section p {
+      font-size: 18px; }
     #plan-your-trip .content-inner section.destination,
     #plan-your-trip .content-inner section.lodging,
     #plan-your-trip .content-inner section.prepare,

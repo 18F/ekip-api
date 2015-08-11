@@ -1,7 +1,7 @@
 #how-it-works {
 
   .content-block {
-    width: 600px;
+    max-width: 600px;
     font-size: 22px;
     font-weight: 300;
     text-align: center;
@@ -75,7 +75,7 @@
           margin: auto;
 
           .step {
-            width: 500px;
+            max-width: 500px;
             font-size: 22px;
             display: inline-block;
           }

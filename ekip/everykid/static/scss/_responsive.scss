@@ -158,6 +158,40 @@
 
   }
 
+  #how-it-works {
+    .content {
+      min-height: 0;
+    }
+
+    .content-block {
+      button {
+        margin: 20px;
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+    }
+    .content-inner {
+      ol li {
+        width: auto;
+        height: auto;
+        padding: 20px;
+
+        &:nth-child(even) {
+          .step-container {
+            margin-left: 0;
+          }
+        }
+        .step-container .step {
+          font-size: 18px;
+        }
+      }
+
+      .reminders {
+        padding: 20px;
+      }
+    }
+  }
+
   #get-your-pass,
   #student-pass {
     .content .pass-content {
@@ -210,6 +244,7 @@
   #plan-your-trip {
     .content {
       min-height: 0;
+      font-size: 20px;
     }
 
     .content-inner {
@@ -221,11 +256,17 @@
       section {
         width: auto;
         min-height: 0;
+        font-size: 18px;
 
         h2 {
           font-size: 25px;
           line-height: 100%;
         }
+
+        p {
+          font-size: 18px;
+        }
+
         &.destination,
         &.lodging,
         &.prepare,
