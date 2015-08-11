@@ -85,22 +85,28 @@
   <section class="voucher">
     <div class="section-content">
 
-      <h2>Exchange Your Voucher</h2>
+      <div class="voucher-image">
+        <img src="{% static "img/plan-your-trip-voucher.png" %}" alt="" />
+      </div>
 
-      <p>At the following sites you can exchange your paper voucher for a
-      wallet-sized pass. All of these sites are amazing places to visit.</p>
+      <div class="voucher-content">
+        <h2>Exchange Your Voucher</h2>
 
-      <a href="{% url 'pass_exchange' %}">View Pass Sites</a>
+        <p>At the following sites you can exchange your paper voucher for a
+        wallet-sized pass. All of these sites are amazing places to visit.</p>
 
-      <p>You might not have cell phone coverage. For example, Glacier National Park
-      is located in the mountains which are so big and remote you can't make or
-      receive phone calls, texts or emails. Not all sites are like this, but it's
-      best not to rely on your cell phone when you visit.</p>
+        <a href="{% url 'pass_exchange' %}">View Pass Sites</a>
 
-      <p>Don't forget! You'll also need to bring the printed paper voucher instead
-      of an electronic copy on your phone or tablet. The sites do not have the
-      ability to accept electronic vouchers. Also, in some cases, you may need to
-      leave the paper copy on the dashboard of your vehicle.</p>
+        <p>You might not have cell phone coverage. For example, Glacier National Park
+        is located in the mountains which are so big and remote you can't make or
+        receive phone calls, texts or emails. Not all sites are like this, but it's
+        best not to rely on your cell phone when you visit.</p>
+
+        <p>Don't forget! You'll also need to bring the printed paper voucher instead
+        of an electronic copy on your phone or tablet. The sites do not have the
+        ability to accept electronic vouchers. Also, in some cases, you may need to
+        leave the paper copy on the dashboard of your vehicle.</p>
+      </div>
 
     </div>
   </section>

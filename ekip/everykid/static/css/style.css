@@ -863,8 +863,15 @@ ul.top-links {
       background: #177099;
       color: #fff; }
       #plan-your-trip .content-inner section.voucher .section-content {
-        width: 500px;
-        padding: 60px 0 50px 510px; }
+        padding: 60px 0 0 0; }
+      #plan-your-trip .content-inner section.voucher .voucher-image {
+        padding: 0 0 0 70px;
+        vertical-align: top;
+        display: inline-block; }
+      #plan-your-trip .content-inner section.voucher .voucher-content {
+        width: 450px;
+        padding: 0 0 50px 140px;
+        display: inline-block; }
 
 footer {
   background: #FDEED0;

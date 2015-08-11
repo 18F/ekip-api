@@ -148,8 +148,18 @@
         color: #fff;
 
         .section-content {
-          width: 500px;
-          padding: 60px 0 50px 510px;
+          padding: 60px 0 0 0;
+        }
+
+        .voucher-image {
+          padding: 0 0 0 70px;
+          vertical-align: top;
+          display: inline-block;
+        }
+        .voucher-content {
+          width: 450px;
+          padding: 0 0 50px 140px;
+          display: inline-block;
         }
       }
     }
