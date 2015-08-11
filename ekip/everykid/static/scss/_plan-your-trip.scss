@@ -1,17 +1,26 @@
 #plan-your-trip {
 
   .content {
+    min-height: 540px;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 25px;
 
     h1 {
+      max-width: 580px;
       line-height: 45px;
     }
     p {
+      max-width: 580px;
       line-height: 28px;
-      margin: 5px 0 10px 0;
+      margin: 5px 0 15px 0;
     }
+
+    .author {
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
     form {
       ul {
         width: 300px;
@@ -45,22 +54,104 @@
   .content-inner {
     font-weight: 300;
 
-    .plans {
-      width: 600px;
+    .plan-your-trip-line-container {
+      width: 950px;
       margin: auto;
-      padding: 30px 0 60px 0;
+      position: relative;
+
+      .lines {
+        width: 932px;
+        height: 1594px;
+        background: url(../img/plan-your-trip-lines.png) no-repeat;
+        top: 70px;
+        left: 100px;
+        position: absolute;
+      }
+    }
+
+    section {
+      min-height: 500px;
+      margin: auto;
       font-size: 20px;
       line-height: 24px;
 
       h2 {
-        font-size: 30px;
+        font-size: 36px;
+        line-height: 42px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 10px 0;
       }
 
-      > li {
-        padding: 30px 0;
-        list-style: none;
+      .section-content {
+        max-width: 950px;
+        margin: auto;
       }
 
+      &.destination {
+        background: #B1DAEC;
+        color: $blue;
+
+        .section-content {
+          width: 720px;
+          padding: 70px 0 0 200px;
+        }
+      }
+      &.lodging {
+        background: $green;
+
+        .section-content {
+          padding: 70px 0 0 0;
+
+          .lodging-image {
+            display: inline-block;
+          }
+          .lodging-content {
+            width: 400px;
+            padding: 70px 0 0 120px;
+            vertical-align: top;
+            display: inline-block;
+          }
+        }
+      }
+      &.prepare {
+        min-height: 550px;
+        background: #CBE4CE;
+        color: $green;
+
+        .section-content {
+          padding: 65px 0 0 0;
+
+          .prepare-content {
+            width: 360px;
+            padding: 70px 0 0 200px;
+            vertical-align: top;
+            display: inline-block;
+          }
+          .packing-list {
+            width: 350px;
+            background: #fff;
+            display: inline-block;
+
+            ul {
+              padding: 20px;
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      &.voucher {
+        background: $blue;
+        color: #fff;
+
+        .section-content {
+          width: 500px;
+          padding: 60px 0 50px 510px;
+        }
+      }
     }
   }
 }

@@ -206,4 +206,23 @@
       width: 100%;
     }
   }
+
+  #plan-your-trip {
+    .content {
+      min-height: 0;
+    }
+
+    .content-inner {
+      padding: 0 20px;
+
+      .plans {
+        width: auto;
+
+        h2 {
+          font-size: 25px;
+          line-height: 100%;
+        }
+      }
+    }
+  }
 }

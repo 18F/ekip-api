@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Plan Your Trip{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
-{% block background %}brown-rocks{% endblock background %}
+{% block background %}blue-sky-tent{% endblock background %}
 
 {% block content %}
 
   <h1>Plan Your Trip</h1>
 
-  <p>"In every walk with nature, one receives far more than he seeks." - John Muir</p>
+  <p>"In every walk with nature, one receives far more than he seeks." <span class="author">- John Muir</span></p>
 
   <p>Your paper voucher opens the door to new adventures and discovery of the
   great outdoors. Our federal lands and waters provide an amazing and
@@ -20,8 +21,13 @@
 
 {% block content_inner %}
 
-  <ul class="plans">
-    <li>
+  <div class="plan-your-trip-line-container">
+    <div class="lines"></div>
+  </div>
+
+  <section class="destination">
+    <div class="section-content">
+
       <h2>Explore Various Destinations</h2>
 
       <p>These cool trip planning tools (from our partner agencies), can help you find a destination. There are many federal lands and waters you can visit, and each presents a whole variety of activities you can do.</p>
@@ -31,39 +37,60 @@
         <li><a href="http://www.discovertheforest.org">Discover the Forest:</a>: national forests and other areas</li>
         <li><a href="http://findyourpark.com/find">Find Your Park</a>: national parks</li>
       </ul>
-    </li>
-    <li>
+    </div>
+  </section>
+
+  <section class="lodging">
+    <div class="section-content">
+
+      <div class="lodging-image">
+        <img src="{% static "img/plan-your-trip-lodging.png" %}" alt="" />
+      </div>
+
+      <div class="lodging-content">
+        <h2>Lodging</h2>
+
+        <p>Explore lodging options before you start out. Where you are looking for
+        hotels, campgrouns or back country camping, we recommend reserving a spot
+        when possible. See <a href="http://www.recreation.gov">recreation.gov</a> to
+        make online reservations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="prepare">
+    <div class="section-content">
+
+      <div class="prepare-content">
+        <h2>Packing List</h2>
+
+        These are some essentials you should consider carrying with you.
+      </div>
+
+      <div class="packing-list">
+        <ul>
+          <li>Plenty of water</li>
+          <li>Snacks (high energy snacks such as trail mix and protein bars are great)</li>
+          <li>A small first-aid kit</li>
+          <li>Sunglasses, hat, and sunscreen (or gloves and a warm hat depending on the season)</li>
+          <li>Bug repellent</li>
+          <li>A map of the area and emergency numbers</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="voucher">
+    <div class="section-content">
+
       <h2>Exchange Your Voucher</h2>
 
       <p>At the following sites you can exchange your paper voucher for a
       wallet-sized pass. All of these sites are amazing places to visit.</p>
 
       <a href="{% url 'pass_exchange' %}">View Pass Sites</a>
-    </li>
-    <li>
-      <h2>Be Prepared Before You Go</h2>
-    </li>
-    <li>
-      <h2>Lodging</h2>
-
-      <p>Explore lodging options before you start out. Where you are looking for
-      hotels, campgrouns or back country camping, we recommend reserving a spot
-      when possible. See <a href="http://www.recreation.gov">recreation.gov</a> to
-      make online reservations.</p>
-    </li>
-    <li>
-      <h2>Packing List</h2>
-
-      These are some essentials you should consider carrying with you.
-
-      <ul>
-        <li>Plenty of water</li>
-        <li>Snacks (high energy snacks such as trail mix and protein bars are great)</li>
-        <li>A small first-aid kit</li>
-        <li>Sunglasses, hat, and sunscreen (or gloves and a warm hat depending on the season)</li>
-        <li>Bug repellent</li>
-        <li>A map of the area and emergency numbers</li>
-      </ul>
 
       <p>You might not have cell phone coverage. For example, Glacier National Park
       is located in the mountains which are so big and remote you can't make or
@@ -74,7 +101,9 @@
       of an electronic copy on your phone or tablet. The sites do not have the
       ability to accept electronic vouchers. Also, in some cases, you may need to
       leave the paper copy on the dashboard of your vehicle.</p>
-    </li>
-  </ul>
+
+    </div>
+  </section>
+
 
 {% endblock content_inner %}
