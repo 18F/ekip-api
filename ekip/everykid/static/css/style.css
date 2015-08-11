@@ -798,7 +798,7 @@ ul.top-links {
 #plan-your-trip .content-inner {
   font-weight: 300; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
-    width: 950px;
+    max-width: 950px;
     margin: auto;
     position: relative; }
     #plan-your-trip .content-inner .plan-your-trip-line-container .lines {
@@ -1026,10 +1026,49 @@ footer {
     width: 100%; }
   #plan-your-trip .content {
     min-height: 0; }
-  #plan-your-trip .content-inner {
-    padding: 0 20px; }
-    #plan-your-trip .content-inner .plans {
-      width: auto; }
-      #plan-your-trip .content-inner .plans h2 {
-        font-size: 25px;
-        line-height: 100%; } }
+  #plan-your-trip .content-inner .plan-your-trip-line-container {
+    display: none; }
+  #plan-your-trip .content-inner section {
+    width: auto;
+    min-height: 0; }
+    #plan-your-trip .content-inner section h2 {
+      font-size: 25px;
+      line-height: 100%; }
+    #plan-your-trip .content-inner section.destination,
+    #plan-your-trip .content-inner section.lodging,
+    #plan-your-trip .content-inner section.prepare,
+    #plan-your-trip .content-inner section.voucher {
+      padding: 20px;
+      min-height: 0; }
+      #plan-your-trip .content-inner section.destination .section-content,
+      #plan-your-trip .content-inner section.lodging .section-content,
+      #plan-your-trip .content-inner section.prepare .section-content,
+      #plan-your-trip .content-inner section.voucher .section-content {
+        width: auto;
+        padding: 0; }
+        #plan-your-trip .content-inner section.destination .section-content .lodging-image,
+        #plan-your-trip .content-inner section.lodging .section-content .lodging-image,
+        #plan-your-trip .content-inner section.prepare .section-content .lodging-image,
+        #plan-your-trip .content-inner section.voucher .section-content .lodging-image {
+          display: none; }
+        #plan-your-trip .content-inner section.destination .section-content .lodging-content,
+        #plan-your-trip .content-inner section.destination .section-content .prepare-content,
+        #plan-your-trip .content-inner section.lodging .section-content .lodging-content,
+        #plan-your-trip .content-inner section.lodging .section-content .prepare-content,
+        #plan-your-trip .content-inner section.prepare .section-content .lodging-content,
+        #plan-your-trip .content-inner section.prepare .section-content .prepare-content,
+        #plan-your-trip .content-inner section.voucher .section-content .lodging-content,
+        #plan-your-trip .content-inner section.voucher .section-content .prepare-content {
+          width: auto;
+          padding: 0; }
+        #plan-your-trip .content-inner section.destination .section-content .packing-list,
+        #plan-your-trip .content-inner section.lodging .section-content .packing-list,
+        #plan-your-trip .content-inner section.prepare .section-content .packing-list,
+        #plan-your-trip .content-inner section.voucher .section-content .packing-list {
+          width: auto;
+          margin: 20px 0; }
+          #plan-your-trip .content-inner section.destination .section-content .packing-list ul,
+          #plan-your-trip .content-inner section.lodging .section-content .packing-list ul,
+          #plan-your-trip .content-inner section.prepare .section-content .packing-list ul,
+          #plan-your-trip .content-inner section.voucher .section-content .packing-list ul {
+            padding: 10px; } }

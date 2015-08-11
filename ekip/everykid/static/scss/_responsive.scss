@@ -213,14 +213,47 @@
     }
 
     .content-inner {
-      padding: 0 20px;
 
-      .plans {
+      .plan-your-trip-line-container {
+        display: none;
+      }
+
+      section {
         width: auto;
+        min-height: 0;
 
         h2 {
           font-size: 25px;
           line-height: 100%;
+        }
+        &.destination,
+        &.lodging,
+        &.prepare,
+        &.voucher {
+          padding: 20px;
+          min-height: 0;
+
+          .section-content {
+            width: auto;
+            padding: 0;
+
+            .lodging-image {
+              display: none;
+            }
+            .lodging-content,
+            .prepare-content {
+              width: auto;
+              padding: 0;
+            }
+            .packing-list {
+              width: auto;
+              margin: 20px 0;
+
+              ul {
+                padding: 10px;
+              }
+            }
+          }
         }
       }
     }
