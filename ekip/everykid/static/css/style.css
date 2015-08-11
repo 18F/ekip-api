@@ -175,17 +175,17 @@ ul.top-links {
           left: -35px; }
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center center fixed;
+  background: url(../img/backgrounds/mountain.png) no-repeat center top;
   background-size: cover; }
   .mountain .menu-container nav li {
     border: none; }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center center fixed;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
   background-size: cover; }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center bottom fixed;
+  background: url(../img/backgrounds/tent.png) no-repeat center top;
   background-size: cover; }
 
 .brown-rocks {
@@ -193,8 +193,8 @@ ul.top-links {
   background-size: cover; }
 
 .blue-sky-tent {
-  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top fixed;
-  background-size: contain; }
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
+  background-size: cover; }
 
 .content {
   max-width: 725px;
@@ -421,6 +421,9 @@ ul.top-links {
       font-size: 16px;
       line-height: 20px;
       padding: 0 0 10px 0; }
+
+#get-your-pass .content {
+  min-height: 600px; }
 
 #get-your-pass .pass-content {
   background: rgba(23, 112, 153, 0.9);
