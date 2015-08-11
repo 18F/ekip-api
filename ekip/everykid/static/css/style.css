@@ -669,7 +669,8 @@ ul.top-links {
 
 #educators form {
   max-width: 370px;
-  padding: 15px 0; }
+  padding: 15px 0;
+  margin: 0 0 0 50px; }
   #educators form::after {
     clear: both;
     content: "";
@@ -754,6 +755,8 @@ ul.top-links {
   #educators .preview p {
     color: #323232;
     font-size: 18px; }
+  #educators .preview form {
+    margin: 0; }
   #educators .preview .data {
     padding: 20px 0 0 90px; }
     #educators .preview .data form {
@@ -1057,7 +1060,9 @@ footer {
   #educators .content-inner-block {
     padding: 20px; }
   #educators form {
-    width: 100%; }
+    width: 100%;
+    padding: 0;
+    margin: 0; }
   #plan-your-trip .content {
     min-height: 0;
     font-size: 20px; }
