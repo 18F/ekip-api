@@ -177,17 +177,17 @@ ul.top-links {
           left: -35px; }
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center top;
+  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
   background-size: cover; }
   .mountain .menu-container nav li {
     border: none; }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center top;
+  background: url(../img/backgrounds/tent.png) no-repeat center bottom;
   background-size: cover; }
 
 .brown-rocks {
@@ -195,7 +195,7 @@ ul.top-links {
   background-size: cover; }
 
 .blue-sky-tent {
-  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .content {

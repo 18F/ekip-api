@@ -82,7 +82,7 @@ button {
 @import "nav";
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center top;
+  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
   background-size: cover;
 
   .menu-container nav li {
@@ -91,12 +91,12 @@ button {
 }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover;
 }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center top;
+  background: url(../img/backgrounds/tent.png) no-repeat center bottom;
   background-size: cover;
 }
 
@@ -106,7 +106,7 @@ button {
 }
 
 .blue-sky-tent {
-  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
   background-size: cover;
 }
 
