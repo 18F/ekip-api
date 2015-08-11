@@ -836,7 +836,8 @@ ul.top-links {
       margin: 10px 0; }
     #plan-your-trip .content-inner section .section-content {
       max-width: 950px;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
     #plan-your-trip .content-inner section.destination {
       background: #B1DAEC;
       color: #177099; }
@@ -859,7 +860,8 @@ ul.top-links {
       background: #CBE4CE;
       color: #2D6C35; }
       #plan-your-trip .content-inner section.prepare .section-content {
-        padding: 65px 0 0 0; }
+        padding: 65px 0 0 0;
+        cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
           width: 360px;
           padding: 70px 0 0 200px;
