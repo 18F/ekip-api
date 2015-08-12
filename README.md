@@ -72,7 +72,7 @@ To load the list of pass-exchange sites, you'll need to run the following
 Django management command:
 
 ```
-python manage.py nationalparks/data/pass-list.csv
+python manage.py passes nationalparks/data/pass-list.csv
 ```
 
 where pass-list.csv is the dataset for the pass exchange sites. The data file
