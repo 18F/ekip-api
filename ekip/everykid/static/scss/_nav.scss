@@ -55,11 +55,15 @@ ul.top-links {
     top: 50px;
 
     .logo {
-      margin: 0 0 20px 30px;
+      margin: 0 0 20px 27px;
       z-index: 100;
       font-size: 14px;
       display: inline-block;
       position: relative;
+
+      img {
+        width: 174px;
+      }
 
       @include transition(opacity 0.3s ease-in);
 
@@ -84,7 +88,7 @@ ul.top-links {
     }
     .logo-line {
       top: 150px;
-      left: 108px;
+      left: 110px;
       position: absolute;
     }
 

@@ -95,7 +95,7 @@ ul.top-links {
     position: absolute;
     top: 50px; }
     .menu-container nav .logo {
-      margin: 0 0 20px 30px;
+      margin: 0 0 20px 27px;
       z-index: 100;
       font-size: 14px;
       display: inline-block;
@@ -103,6 +103,8 @@ ul.top-links {
       -webkit-transition: opacity 0.3s ease-in;
       -moz-transition: opacity 0.3s ease-in;
       transition: opacity 0.3s ease-in; }
+      .menu-container nav .logo img {
+        width: 174px; }
       .menu-container nav .logo span {
         left: 61px;
         bottom: 13px;
@@ -119,7 +121,7 @@ ul.top-links {
           opacity: 1; }
     .menu-container nav .logo-line {
       top: 150px;
-      left: 108px;
+      left: 110px;
       position: absolute; }
     .menu-container nav .menu {
       position: relative; }
