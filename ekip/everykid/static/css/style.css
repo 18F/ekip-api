@@ -106,11 +106,17 @@ ul.top-links {
       .menu-container nav .logo span {
         left: 61px;
         bottom: 13px;
-        position: absolute; }
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in; }
       .menu-container nav .logo a {
         text-decoration: none; }
       .menu-container nav .logo:hover {
         opacity: .8; }
+        .menu-container nav .logo:hover span {
+          opacity: 1; }
     .menu-container nav .logo-line {
       top: 150px;
       left: 108px;

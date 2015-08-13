@@ -67,12 +67,19 @@ ul.top-links {
         left: 61px;
         bottom: 13px;
         position: absolute;
+        opacity: 0;
+
+        @include transition(opacity 0.5s ease-in);
       }
       a {
         text-decoration: none;
       }
       &:hover {
         opacity: .8;
+
+        span {
+          opacity: 1;
+        }
       }
     }
     .logo-line {
