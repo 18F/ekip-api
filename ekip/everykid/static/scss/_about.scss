@@ -27,7 +27,7 @@
       background: $blue;
     }
     .agencies-content {
-      width: 820px;
+      max-width: 820px;
       padding: 70px 0;
       margin: auto;
       position: relative;
@@ -38,7 +38,7 @@
       }
 
       .participating {
-        width: 480px;
+        max-width: 480px;
         margin: 40px auto 0 auto;
 
         h3 {
@@ -88,7 +88,7 @@
       padding: 70px 0;
     }
     .contact-content {
-      width: 486px;
+      max-width: 486px;
       color: $blue;
       margin: auto;
       position: relative;

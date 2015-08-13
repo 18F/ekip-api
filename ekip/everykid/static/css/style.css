@@ -919,7 +919,7 @@ ul.top-links {
   #about .content-inner .agencies {
     background: #177099; }
   #about .content-inner .agencies-content {
-    width: 820px;
+    max-width: 820px;
     padding: 70px 0;
     margin: auto;
     position: relative; }
@@ -927,7 +927,7 @@ ul.top-links {
       color: #C9EFFF;
       font-size: 30px; }
     #about .content-inner .agencies-content .participating {
-      width: 480px;
+      max-width: 480px;
       margin: 40px auto 0 auto; }
       #about .content-inner .agencies-content .participating h3 {
         font-size: 23px;
@@ -961,7 +961,7 @@ ul.top-links {
     background: #B1DAEC;
     padding: 70px 0; }
   #about .content-inner .contact-content {
-    width: 486px;
+    max-width: 486px;
     color: #177099;
     margin: auto;
     position: relative; }
@@ -1056,7 +1056,8 @@ footer {
         margin: 0; }
   .content {
     padding: 10px 20px;
-    margin: 0; }
+    margin: 0;
+    min-height: 0; }
   #landing .menu-container nav {
     top: 0;
     padding: 5px 0; }
@@ -1104,8 +1105,6 @@ footer {
     padding: 30px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
-  #how-it-works .content {
-    min-height: 0; }
   #how-it-works .content-block button {
     margin: 20px;
     font-size: 16px;
@@ -1150,7 +1149,6 @@ footer {
     padding: 0;
     margin: 0; }
   #plan-your-trip .content {
-    min-height: 0;
     font-size: 20px; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
     display: none; }
@@ -1213,4 +1211,29 @@ footer {
         #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
         #plan-your-trip .content-inner section.voucher .section-content .voucher-content {
           width: auto;
-          padding: 0; } }
+          padding: 0; }
+  #about .about-content {
+    padding: 20px;
+    font-size: 18px; }
+  #about .content-inner .background-fishies {
+    display: none; }
+  #about .content-inner .agencies-content {
+    padding: 20px; }
+    #about .content-inner .agencies-content h2 {
+      font-size: 24px; }
+    #about .content-inner .agencies-content .participating {
+      margin: 20px 0; }
+      #about .content-inner .agencies-content .participating h3 {
+        font-size: 20px; }
+      #about .content-inner .agencies-content .participating p {
+        font-size: 16px;
+        line-height: 20px; }
+  #about .content-inner .contact {
+    padding: 20px; }
+  #about .content-inner .contact-content img {
+    margin: 0 0 20px 0;
+    max-width: 100%; }
+  #about .content-inner .contact-content h2 {
+    font-size: 18px; }
+  #about .content-inner .contact-content p {
+    font-size: 16px; } }
