@@ -53,16 +53,19 @@ button {
   font-size: 13px; }
 
 ul.top-links {
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
   padding: 0 30px 0 0;
   right: 0;
   position: absolute;
+  z-index: 500;
   display: inline-block; }
   ul.top-links li {
     font-size: 14px;
+    line-height: 12px;
     font-weight: bold;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 0 15px;
     border-right: 1px solid #fff;
     display: inline-block; }
     ul.top-links li a {
@@ -71,8 +74,12 @@ ul.top-links {
       -webkit-transition: opacity 0.4s ease-in;
       -moz-transition: opacity 0.4s ease-in;
       transition: opacity 0.4s ease-in; }
-    ul.top-links li a:hover {
-      opacity: 1; }
+      ul.top-links li a:hover {
+        opacity: 1; }
+    ul.top-links li.active a {
+      color: #FFE897;
+      opacity: 1;
+      cursor: default; }
     ul.top-links li:last-child {
       border: none; }
 
@@ -198,6 +205,10 @@ ul.top-links {
   background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
   background-size: cover; }
 
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover; }
+
 .content {
   max-width: 725px;
   min-height: 450px;
@@ -209,16 +220,12 @@ ul.top-links {
   padding: 10px 0;
   color: #ff0000; }
 
-#about .content ul,
-#about .content-inner ul,
 #student-pass .content ul,
 #student-pass .content-inner ul,
 #plan-your-trip .content ul,
 #plan-your-trip .content-inner ul,
 #privacy-policy .content ul, #privacy-policy .content-inner ul {
   margin: 5px 0 5px 20px; }
-  #about .content ul li,
-  #about .content-inner ul li,
   #student-pass .content ul li,
   #student-pass .content-inner ul li,
   #plan-your-trip .content ul li,
@@ -227,20 +234,15 @@ ul.top-links {
     padding: 0 0 5px 0;
     list-style: bullet; }
 
-#about .content,
 #privacy-policy .content {
   font-weight: 200; }
-  #about .content h1,
   #privacy-policy .content h1 {
     line-height: 40px; }
-  #about .content h2,
   #privacy-policy .content h2 {
     font-size: 30px;
     padding: 15px 0 0 0; }
-  #about .content h3,
   #privacy-policy .content h3 {
     padding: 10px 0 0 0; }
-  #about .content p,
   #privacy-policy .content p {
     font-size: 20px;
     line-height: 25px;
@@ -888,6 +890,80 @@ ul.top-links {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+
+#about .about-content {
+  background: rgba(23, 112, 153, 0.6);
+  padding: 35px 30px;
+  font-size: 20px;
+  line-height: 25px; }
+  #about .about-content p {
+    padding: 10px 0; }
+
+#about .content-inner {
+  font-weight: 200;
+  position: relative; }
+  #about .content-inner .background-fishies {
+    background: url(../img/about-background-fish.png) top center no-repeat;
+    top: 280px;
+    width: 1166px;
+    height: 1018px;
+    position: absolute; }
+  #about .content-inner .agencies {
+    background: #177099; }
+  #about .content-inner .agencies-content {
+    width: 820px;
+    padding: 70px 0;
+    margin: auto;
+    position: relative; }
+    #about .content-inner .agencies-content h2 {
+      color: #C9EFFF;
+      font-size: 30px; }
+    #about .content-inner .agencies-content .participating {
+      width: 480px;
+      margin: 40px auto 0 auto; }
+      #about .content-inner .agencies-content .participating h3 {
+        font-size: 23px;
+        line-height: 21px;
+        padding: 0; }
+      #about .content-inner .agencies-content .participating p {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0; }
+      #about .content-inner .agencies-content .participating ul {
+        border-top: 1px solid #62B6DB;
+        margin: 15px 0; }
+        #about .content-inner .agencies-content .participating ul li {
+          margin: 0 0 0 27px;
+          padding: 13px 0 10px 0;
+          border-bottom: 1px solid #62B6DB;
+          position: relative; }
+          #about .content-inner .agencies-content .participating ul li:before {
+            font-size: 22px;
+            font-weight: 200;
+            top: 12px;
+            left: -20px;
+            content: "+";
+            position: absolute; }
+        #about .content-inner .agencies-content .participating ul h4 {
+          font-size: 18px;
+          font-family: 'Lato', sans-serif; }
+        #about .content-inner .agencies-content .participating ul .description {
+          display: none; }
+  #about .content-inner .contact {
+    background: #B1DAEC;
+    padding: 70px 0; }
+  #about .content-inner .contact-content {
+    width: 486px;
+    color: #177099;
+    margin: auto;
+    position: relative; }
+    #about .content-inner .contact-content img {
+      margin: 0 0 35px 0; }
+    #about .content-inner .contact-content h2 {
+      font-size: 23px;
+      line-height: 20px; }
+    #about .content-inner .contact-content p {
+      font-size: 18px; }
 
 footer {
   background: #FDEED0;

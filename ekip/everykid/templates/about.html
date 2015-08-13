@@ -1,80 +1,111 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}About Every Kid in a Park{% endblock title %}
+
 {% block page_id %}about{% endblock page_id %}
+
+{% block background %}river{% endblock background %}
 
 {% block content %}
 
-<h1> About </h1>
+  <div class="about-content">
 
-<p>Every Kid in a Park is an initiaive by President Barack Obama to encourage
-every kid to explore America's great outdoors and unique history. Each year,
-4th graders get a free pass to visit federal lands and waters.</p>
+    <h1>About</h1>
 
-<h2>Participating Agencies</h2>
+    <p>Every Kid in a Park is an initiaive by President Barack Obama to encourage
+    every kid to explore America's great outdoors and unique history. Each year,
+    4th graders get a free pass to visit federal lands and waters.</p>
 
-<p> Seven agencies are responsible for your federal lands and waters. Learn
-more about their conservation work and other activities by visiting their
-websites.</p>
-
-<h3>Bureau of Land Management</h3>
-
-<p><a href="http://www.blm.gov">http://www.blm.gov</a><br/>
-The Bureau of Land Management manages 250 million acres of public lands,
-and visitors enjoy countless types of outdoor adventure: camping, hunting,
-hiking, horseback riding, boating, white water rafting, hang gliding, mountain
-biking, birding and wildlife viewing, photography, climbing, all types of
-winter sports, and visiting natural and cultural heritage sites.</p>
-
-<h3>Bureau of Reclamation</h3>
-
-<p><a href="http://www.usbr.gov">http://www.usbr.gov</a><br/>
-The Bureau of Reclamation plays a major role in meeting the increasing
-public demands for water based outdoor recreation facilities and opportunities.
-It is the steward of 6.5 million acres of land and water that is, for the most
-part, available for public outdoor recreation.</p>
-
-<h3>National Oceanic and Atmospheric Administration</h3>
-
-<p><a href="http://www.noaa.gov">http://www.noaa.gov</a><br/>
-The National Oceanic and Atmospheric Administration manages national marine
-sanctuaries. You can fish, whale watch, surf and dive and national marine
-sanctuaries.</p>
-
-<h3>National Park Service</h3>
-
-<p><a href="http://www.nps.gov">http://www.nps.gov</a><br/>
-The National Park Service manages national parks and monuments. It preserves
-the natural and cultural resources, and values of the national park system for
-the enjoyment, education and inspiration of this and future generations.</p>
-
-<h3>U.S. Fish & Wildlife Service</h3>
-
-<p><a href="http://www.fws.gov">http://www.fws.gov</a><br/>
-Clean water. Clean air. Unusual and abundant wildlife. World-class
-recreation. The National Wildlife Refuge System protects it all on 150 million
-acres of land and water, but more than 418 million acres of national marine
-monuments.</p>
-
-<h3>U.S. Forest service</h3>
-
-<p><a href="http://www.fs.fed.us">http://www.fs.fed.us</a><br/>
-From the ice fields of Alaska to the tropical rainforest of Puerto Rico,
-these 193 million acres of national forests and grasslands offer a large
-variety of outdoor recreation activities.</p>
-
-<h3>US Army Corps of Engineers</h3>
-
-<p><a href="http://www.corpslakes.us">http://www.corpslakes.us</a><br/>
-The Army Corps of Engineers are stewards of the lands and waters at Corps
-water resource projects (lakes, beaches and other areas). It's natural
-resources management mission is to conserve those resources while providing
-quality public outdoor recreation experiences.</p>
-
-<h2> Code </h2>
-
-<p>This website was developed in the <a
-href="https://github.com/18F/ekip-api">open</a>. We welcome contributions and
-comments.</p>
+  </div>
 
 {% endblock content %}
+
+{% block content_inner %}
+
+  <div class="background-fishies"></div>
+
+  <div class="agencies">
+    <div class="agencies-content">
+
+      <h2>America’s dazzling recreational and learning landscapes protect our wildlife, natural resources, and historic sites, holding them in the public trust and supporting a healthy planet.</h2>
+
+      <div class="participating">
+
+        <h3>Participating Agencies</h3>
+        <p> Seven agencies are responsible for your federal lands and waters. Learn
+        more about their conservation work and other activities by visiting their
+        websites.</p>
+
+        <ul>
+          <li>
+            <h4>Bureau of Land Management</h4>
+            <span class="description">
+              <p><a href="http://www.blm.gov">http://www.blm.gov</a><br/>
+              The Bureau of Land Management manages 250 million acres of public lands, and visitors enjoy countless types of outdoor adventure: camping, hunting, hiking, horseback riding, boating, white water rafting, hang gliding, mountain biking, birding and wildlife viewing, photography, climbing, all types of winter sports, and visiting natural and cultural heritage sites.</p>
+            </span>
+          </li>
+          <li>
+            <h4>Bureau of Reclamation</h4>
+            <span class="description">
+              <p><a href="http://www.usbr.gov">http://www.usbr.gov</a><br/>
+              The Bureau of Reclamation plays a major role in meeting the increasing
+              public demands for water based outdoor recreation facilities and opportunities. It is the steward of 6.5 million acres of land and water that is, for the most part, available for public outdoor recreation.</p>
+            </span>
+          </li>
+          <li>
+            <h4>National Oceanic and Atmospheric Administration</h4>
+            <span class="description">
+              <p><a href="http://www.noaa.gov">http://www.noaa.gov</a><br/>
+              The National Oceanic and Atmospheric Administration manages national marine sanctuaries. You can fish, whale watch, surf and dive and national marine sanctuaries.</p>
+            </span>
+          </li>
+          <li>
+            <h4>National Park Service</h4>
+            <span class="description">
+              <p><a href="http://www.nps.gov">http://www.nps.gov</a><br/>
+              The National Park Service manages national parks and monuments. It preserves the natural and cultural resources, and values of the national park system for the enjoyment, education and inspiration of this and future generations.</p>
+            </span>
+          </li>
+          <li>
+            <h4>U.S. Fish & Wildlife Service</h4>
+            <span class="description">
+              <p><a href="http://www.fws.gov">http://www.fws.gov</a><br/>
+              Clean water. Clean air. Unusual and abundant wildlife. World-class
+              recreation. The National Wildlife Refuge System protects it all on 150 million acres of land and water, but more than 418 million acres of national marine monuments.</p>
+            </span>
+          </li>
+          <li>
+            <h4>U.S. Forest service</h4>
+            <span class="description">
+              <p><a href="http://www.fs.fed.us">http://www.fs.fed.us</a><br/>
+              From the ice fields of Alaska to the tropical rainforest of Puerto Rico, these 193 million acres of national forests and grasslands offer a large variety of outdoor recreation activities.</p>
+            </span>
+          </li>
+          <li>
+            <h4>US Army Corps of Engineers</h4>
+            <span class="description">
+              <p><a href="http://www.corpslakes.us">http://www.corpslakes.us</a><br/>
+              The Army Corps of Engineers are stewards of the lands and waters at Corps water resource projects (lakes, beaches and other areas). It's natural resources management mission is to conserve those resources while providing quality public outdoor recreation experiences.</p>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="contact-content">
+
+      <img src="{% static "img/about-kids.jpg" %}" alt="" />
+
+      <h2>Code</h2>
+      <p>This website was developed in the <a
+      href="https://github.com/18F/ekip-api">open</a>. We welcome contributions and
+      comments.</p>
+
+    </div>
+  </div>
+
+{% endblock content_inner %}

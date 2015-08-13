@@ -1,15 +1,18 @@
 ul.top-links {
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
   padding: 0 30px 0 0;
   right: 0;
   position: absolute;
+  z-index: 500;
   display: inline-block;
 
   li {
     font-size: 14px;
+    line-height: 12px;
     font-weight: bold;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 0 15px;
     border-right: 1px solid #fff;
     display: inline-block;
 
@@ -18,12 +21,19 @@ ul.top-links {
       opacity: 0.7;
 
       @include transition(opacity 0.4s ease-in);
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
-    a:hover {
-      opacity: 1;
+    &.active {
+      a {
+        color: $yellow;
+        opacity: 1;
+        cursor: default;
+      }
     }
-
     &:last-child {
       border: none;
     }
