@@ -2,7 +2,10 @@
 {% load tags %}
 
     <ul class="top-links">
-      <li class="educators-link">
+      <li class="{% active request 'about' %}">
+        <a href="{% url 'about_ekip' %}">About</a>
+      </li>
+      <li class="{% active request 'educator' %}">
         <a href="{% url 'educator_passes' %}">Educators</a>
       </li>
     </ul>

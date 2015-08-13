@@ -9,12 +9,16 @@
 
 {% block content %}
 
-  <h1>Plan your trip</h1>
+  <div class="plan-your-trip-content">
 
-  <p>"We come and go, but the land is always here. And the people who love it and understand it are the people who own it — for a little while." <span class="author">- Willa Cather</span></p>
+    <h1>Plan your trip</h1>
 
-  <p>Plan your adventure using these tools. No matter where you live in the United States,
-  there's a site within 2 hours of your home.</p>
+    <p>"We come and go, but the land is always here. And the people who love it and understand it are the people who own it — for a little while." <span class="author">- Willa Cather</span></p>
+
+    <p>Plan your adventure using these tools. No matter where you live in the United States,
+    there's a site within 2 hours of your home.</p>
+
+  </div>
 
 {% endblock content %}
 
@@ -29,9 +33,23 @@
 
       <h2>Explore parks and sites</h2>
       <ul>
+        <li>
+          <h3><a href="http://www.fws.gov/refuges/">National Wildlife Refuge System</a></h3>
+          <p>National Wildlife Refuges</p>
+        </li>
+        <li>
+          <h3><a href="http://www.discovertheforest.org">Discover the Forest</a></h3>
+          <p>National Forests and other areas</p>
+          </li>
+        <li>
+          <h3><a href="http://findyourpark.com/find">Find Your<br/>Park</a></h3>
+          <p>National Parks</p>
+        </li>
+<!--
         <li>Find places with protected animals on the <a href="http://www.fws.gov/refuges/">National Wildlife Refuge System</a> website.</li>
         <li>Find forests on the <a href="http://www.discovertheforest.org">Discover the Forest</a> website.</li>
         <li>Find parks on the <a href="http://findyourpark.com/find">Find Your Park</a> website.</li>
+-->
       </ul>
     </div>
   </section>
@@ -46,8 +64,9 @@
       <div class="lodging-content">
         <h2>Get a place to stay</h2>
 
-        <p>Your family may want to stay somewhere overnight. You can reserve a hotel or 
+        <p>Your family may want to stay somewhere overnight. You can reserve a hotel or
         campground on <a href="http://www.recreation.gov">recreation.gov</a>.</p>
+
       </div>
 
     </div>
@@ -57,8 +76,14 @@
     <div class="section-content">
 
       <div class="prepare-content">
+
         <h2>Pack this</h2>
+
+      </div>
+
       <div class="packing-list">
+
+        <h3>What to bring</h3>
         <ul>
           <li>Water</li>
           <li>Healthy snacks</li>
@@ -72,9 +97,9 @@
           <li>A map</li>
           <li>Emergency numbers</li>
         </ul>
-        
-        <p>Note: some of our sites don't get cell service. 
-        This means you might not be able to make or get phone calls, texts, 
+
+        <p>Note: some of our sites don't get cell service.
+        This means you might not be able to make or get phone calls, texts,
         or emails when you visit.</p>
 
       </div>
@@ -93,11 +118,11 @@
         <h2>Bring your pass</h2>
 
         <p>Make sure you bring your pass to get in for free.</p>
-        
-        <p>At some of our sites, you can trade your paper pass for a plastic pass. 
-        This step is optional. The paper pass and plastic pass work exactly the same. 
-        You can use either to visit any site. Some kids like to get the plastic pass because 
-        it's waterproof and fits in your wallet. We think it makes a great keepsake, too!</p> 
+
+        <p>At some of our sites, you can trade your paper pass for a plastic pass.
+        This step is optional. The paper pass and plastic pass work exactly the same.
+        You can use either to visit any site. Some kids like to get the plastic pass because
+        it's waterproof and fits in your wallet. We think it makes a great keepsake, too!</p>
 
         <button><a href="{% url 'pass_exchange' %}">Sites with plastic passes</a></button>
 

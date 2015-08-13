@@ -1,0 +1,109 @@
+#about {
+
+  .about-content {
+    background: rgba(23, 112, 153, 0.6);
+    padding: 35px 30px;
+    font-size: 20px;
+    line-height: 25px;
+
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  .content-inner {
+    font-weight: 200;
+    position: relative;
+
+    .background-fishies {
+      background: url(../img/about-background-fish.png) top center no-repeat;
+      top: 280px;
+      width: 1166px;
+      height: 1018px;
+      position: absolute;
+    }
+
+    .agencies {
+      background: $blue;
+    }
+    .agencies-content {
+      max-width: 820px;
+      padding: 70px 0;
+      margin: auto;
+      position: relative;
+
+      h2 {
+        color: #C9EFFF;
+        font-size: 30px;
+      }
+
+      .participating {
+        max-width: 480px;
+        margin: 40px auto 0 auto;
+
+        h3 {
+          font-size: 23px;
+          line-height: 21px;
+          padding: 0;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          padding: 0;
+        }
+        ul {
+          border-top: 1px solid #62B6DB;
+          margin: 15px 0;
+
+          li {
+            margin: 0 0 0 27px;
+            padding: 13px 0 10px 0;
+            border-bottom: 1px solid #62B6DB;
+            position: relative;
+
+            &:before {
+              font-size: 22px;
+              font-weight: 200;
+              top: 12px;
+              left: -20px;
+              content: "+";
+              position: absolute;
+            }
+          }
+
+          h4 {
+            font-size: 18px;
+            font-family: 'Lato', sans-serif;
+          }
+
+          .description {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .contact {
+      background: #B1DAEC;
+      padding: 70px 0;
+    }
+    .contact-content {
+      width: 486px;
+      color: $blue;
+      margin: auto;
+      position: relative;
+
+      img {
+        margin: 0 0 35px 0;
+      }
+
+      h2 {
+        font-size: 23px;
+        line-height: 20px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -53,16 +53,19 @@ button {
   font-size: 13px; }
 
 ul.top-links {
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
   padding: 0 30px 0 0;
   right: 0;
   position: absolute;
+  z-index: 500;
   display: inline-block; }
   ul.top-links li {
     font-size: 14px;
+    line-height: 12px;
     font-weight: bold;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 0 15px;
     border-right: 1px solid #fff;
     display: inline-block; }
     ul.top-links li a {
@@ -71,8 +74,12 @@ ul.top-links {
       -webkit-transition: opacity 0.4s ease-in;
       -moz-transition: opacity 0.4s ease-in;
       transition: opacity 0.4s ease-in; }
-    ul.top-links li a:hover {
-      opacity: 1; }
+      ul.top-links li a:hover {
+        opacity: 1; }
+    ul.top-links li.active a {
+      color: #FFE897;
+      opacity: 1;
+      cursor: default; }
     ul.top-links li:last-child {
       border: none; }
 
@@ -88,7 +95,7 @@ ul.top-links {
     position: absolute;
     top: 50px; }
     .menu-container nav .logo {
-      margin: 0 0 20px 30px;
+      margin: 0 0 20px 27px;
       z-index: 100;
       font-size: 14px;
       display: inline-block;
@@ -96,17 +103,25 @@ ul.top-links {
       -webkit-transition: opacity 0.3s ease-in;
       -moz-transition: opacity 0.3s ease-in;
       transition: opacity 0.3s ease-in; }
+      .menu-container nav .logo img {
+        width: 174px; }
       .menu-container nav .logo span {
         left: 61px;
         bottom: 13px;
-        position: absolute; }
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in; }
       .menu-container nav .logo a {
         text-decoration: none; }
       .menu-container nav .logo:hover {
         opacity: .8; }
+        .menu-container nav .logo:hover span {
+          opacity: 1; }
     .menu-container nav .logo-line {
       top: 150px;
-      left: 108px;
+      left: 110px;
       position: absolute; }
     .menu-container nav .menu {
       position: relative; }
@@ -177,17 +192,17 @@ ul.top-links {
           left: -35px; }
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center top;
+  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
   background-size: cover; }
   .mountain .menu-container nav li {
     border: none; }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center top;
+  background: url(../img/backgrounds/tent.png) no-repeat center bottom;
   background-size: cover; }
 
 .brown-rocks {
@@ -195,7 +210,11 @@ ul.top-links {
   background-size: cover; }
 
 .blue-sky-tent {
-  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
+  background-size: cover; }
+
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .content {
@@ -209,16 +228,12 @@ ul.top-links {
   padding: 10px 0;
   color: #ff0000; }
 
-#about .content ul,
-#about .content-inner ul,
 #student-pass .content ul,
 #student-pass .content-inner ul,
 #plan-your-trip .content ul,
 #plan-your-trip .content-inner ul,
 #privacy-policy .content ul, #privacy-policy .content-inner ul {
   margin: 5px 0 5px 20px; }
-  #about .content ul li,
-  #about .content-inner ul li,
   #student-pass .content ul li,
   #student-pass .content-inner ul li,
   #plan-your-trip .content ul li,
@@ -227,20 +242,15 @@ ul.top-links {
     padding: 0 0 5px 0;
     list-style: bullet; }
 
-#about .content,
 #privacy-policy .content {
   font-weight: 200; }
-  #about .content h1,
   #privacy-policy .content h1 {
     line-height: 40px; }
-  #about .content h2,
   #privacy-policy .content h2 {
     font-size: 30px;
     padding: 15px 0 0 0; }
-  #about .content h3,
   #privacy-policy .content h3 {
     padding: 10px 0 0 0; }
-  #about .content p,
   #privacy-policy .content p {
     font-size: 20px;
     line-height: 25px;
@@ -767,6 +777,10 @@ ul.top-links {
     padding: 30px 0;
     clear: both; }
 
+#plan-your-trip .plan-your-trip-content {
+  background: rgba(1, 63, 91, 0.6);
+  padding: 35px; }
+
 #plan-your-trip .content {
   min-height: 540px;
   font-weight: 300;
@@ -836,13 +850,47 @@ ul.top-links {
       margin: 10px 0; }
     #plan-your-trip .content-inner section .section-content {
       max-width: 950px;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
     #plan-your-trip .content-inner section.destination {
       background: #B1DAEC;
       color: #177099; }
       #plan-your-trip .content-inner section.destination .section-content {
-        width: 720px;
+        max-width: 720px;
         padding: 70px 0 0 200px; }
+        #plan-your-trip .content-inner section.destination .section-content > p {
+          max-width: 620px; }
+        #plan-your-trip .content-inner section.destination .section-content ul {
+          margin: 20px 0 0 0; }
+        #plan-your-trip .content-inner section.destination .section-content li {
+          width: 160px;
+          height: 110px;
+          padding: 25px;
+          margin: 0 10px 20px 0;
+          background: #fff;
+          text-align: center;
+          display: inline-block;
+          vertical-align: top; }
+          #plan-your-trip .content-inner section.destination .section-content li h3 {
+            font-size: 20px;
+            font-family: 'Lato', sans-serif; }
+          #plan-your-trip .content-inner section.destination .section-content li a {
+            text-decoration: none; }
+            #plan-your-trip .content-inner section.destination .section-content li a:hover {
+              text-decoration: underline; }
+          #plan-your-trip .content-inner section.destination .section-content li p {
+            font-size: 18px;
+            line-height: 22px; }
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) h3,
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) h3 {
+            color: #FFE897; }
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) p,
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) p {
+            color: #fff; }
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) {
+            background: #177099; }
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
+            background: #2D6C35; }
     #plan-your-trip .content-inner section.lodging {
       background: #2D6C35; }
       #plan-your-trip .content-inner section.lodging .section-content {
@@ -850,7 +898,7 @@ ul.top-links {
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
-          width: 400px;
+          max-width: 400px;
           padding: 70px 0 0 120px;
           vertical-align: top;
           display: inline-block; }
@@ -859,17 +907,25 @@ ul.top-links {
       background: #CBE4CE;
       color: #2D6C35; }
       #plan-your-trip .content-inner section.prepare .section-content {
-        padding: 65px 0 0 0; }
+        padding: 60px 0 0 0;
+        cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
-          width: 360px;
-          padding: 70px 0 0 200px;
+          max-width: 340px;
+          padding: 70px 30px 0 200px;
           vertical-align: top;
           display: inline-block; }
         #plan-your-trip .content-inner section.prepare .section-content .packing-list {
-          width: 350px;
+          max-width: 350px;
           background: #fff;
           display: inline-block; }
+          #plan-your-trip .content-inner section.prepare .section-content .packing-list h3 {
+            font-size: 30px;
+            padding: 30px 0 10px 20px;
+            font-weight: 400; }
           #plan-your-trip .content-inner section.prepare .section-content .packing-list ul {
+            width: auto;
+            margin: 5px 20px;
+            border-top: 2px solid #2D6C35;
             padding: 20px;
             font-size: 18px;
             font-weight: 600; }
@@ -886,6 +942,80 @@ ul.top-links {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+
+#about .about-content {
+  background: rgba(23, 112, 153, 0.6);
+  padding: 35px 30px;
+  font-size: 20px;
+  line-height: 25px; }
+  #about .about-content p {
+    padding: 10px 0; }
+
+#about .content-inner {
+  font-weight: 200;
+  position: relative; }
+  #about .content-inner .background-fishies {
+    background: url(../img/about-background-fish.png) top center no-repeat;
+    top: 280px;
+    width: 1166px;
+    height: 1018px;
+    position: absolute; }
+  #about .content-inner .agencies {
+    background: #177099; }
+  #about .content-inner .agencies-content {
+    max-width: 820px;
+    padding: 70px 0;
+    margin: auto;
+    position: relative; }
+    #about .content-inner .agencies-content h2 {
+      color: #C9EFFF;
+      font-size: 30px; }
+    #about .content-inner .agencies-content .participating {
+      max-width: 480px;
+      margin: 40px auto 0 auto; }
+      #about .content-inner .agencies-content .participating h3 {
+        font-size: 23px;
+        line-height: 21px;
+        padding: 0; }
+      #about .content-inner .agencies-content .participating p {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0; }
+      #about .content-inner .agencies-content .participating ul {
+        border-top: 1px solid #62B6DB;
+        margin: 15px 0; }
+        #about .content-inner .agencies-content .participating ul li {
+          margin: 0 0 0 27px;
+          padding: 13px 0 10px 0;
+          border-bottom: 1px solid #62B6DB;
+          position: relative; }
+          #about .content-inner .agencies-content .participating ul li:before {
+            font-size: 22px;
+            font-weight: 200;
+            top: 12px;
+            left: -20px;
+            content: "+";
+            position: absolute; }
+        #about .content-inner .agencies-content .participating ul h4 {
+          font-size: 18px;
+          font-family: 'Lato', sans-serif; }
+        #about .content-inner .agencies-content .participating ul .description {
+          display: none; }
+  #about .content-inner .contact {
+    background: #B1DAEC;
+    padding: 70px 0; }
+  #about .content-inner .contact-content {
+    width: 486px;
+    color: #177099;
+    margin: auto;
+    position: relative; }
+    #about .content-inner .contact-content img {
+      margin: 0 0 35px 0; }
+    #about .content-inner .contact-content h2 {
+      font-size: 23px;
+      line-height: 20px; }
+    #about .content-inner .contact-content p {
+      font-size: 18px; }
 
 footer {
   background: #FDEED0;
@@ -970,7 +1100,8 @@ footer {
         margin: 0; }
   .content {
     padding: 10px 20px;
-    margin: 0; }
+    margin: 0;
+    min-height: 0; }
   #landing .menu-container nav {
     top: 0;
     padding: 5px 0; }
@@ -1018,8 +1149,6 @@ footer {
     padding: 30px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
-  #how-it-works .content {
-    min-height: 0; }
   #how-it-works .content-block button {
     margin: 20px;
     font-size: 16px;
@@ -1063,9 +1192,11 @@ footer {
     width: 100%;
     padding: 0;
     margin: 0; }
+  #plan-your-trip .plan-your-trip-content {
+    padding: 20px; }
   #plan-your-trip .content {
-    min-height: 0;
-    font-size: 20px; }
+    font-size: 20px;
+    min-height: 0; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
     display: none; }
   #plan-your-trip .content-inner section {
@@ -1074,9 +1205,11 @@ footer {
     font-size: 18px; }
     #plan-your-trip .content-inner section h2 {
       font-size: 25px;
-      line-height: 100%; }
+      line-height: 20px; }
     #plan-your-trip .content-inner section p {
-      font-size: 18px; }
+      font-size: 18px;
+      line-height: 24px;
+      margin: 5px 0; }
     #plan-your-trip .content-inner section.destination,
     #plan-your-trip .content-inner section.lodging,
     #plan-your-trip .content-inner section.prepare,
@@ -1102,19 +1235,26 @@ footer {
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content,
         #plan-your-trip .content-inner section.voucher .section-content .lodging-content,
         #plan-your-trip .content-inner section.voucher .section-content .prepare-content {
-          width: auto;
+          max-width: none;
           padding: 0; }
         #plan-your-trip .content-inner section.destination .section-content .packing-list,
         #plan-your-trip .content-inner section.lodging .section-content .packing-list,
         #plan-your-trip .content-inner section.prepare .section-content .packing-list,
         #plan-your-trip .content-inner section.voucher .section-content .packing-list {
-          width: auto;
-          margin: 20px 0; }
+          max-width: none;
+          margin: 10px 0; }
+          #plan-your-trip .content-inner section.destination .section-content .packing-list h3,
+          #plan-your-trip .content-inner section.lodging .section-content .packing-list h3,
+          #plan-your-trip .content-inner section.prepare .section-content .packing-list h3,
+          #plan-your-trip .content-inner section.voucher .section-content .packing-list h3 {
+            font-size: 24px;
+            padding: 10px; }
           #plan-your-trip .content-inner section.destination .section-content .packing-list ul,
           #plan-your-trip .content-inner section.lodging .section-content .packing-list ul,
           #plan-your-trip .content-inner section.prepare .section-content .packing-list ul,
           #plan-your-trip .content-inner section.voucher .section-content .packing-list ul {
-            padding: 10px; }
+            padding: 10px;
+            font-size: 16px; }
         #plan-your-trip .content-inner section.destination .section-content .voucher-image,
         #plan-your-trip .content-inner section.lodging .section-content .voucher-image,
         #plan-your-trip .content-inner section.prepare .section-content .voucher-image,
@@ -1127,4 +1267,29 @@ footer {
         #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
         #plan-your-trip .content-inner section.voucher .section-content .voucher-content {
           width: auto;
-          padding: 0; } }
+          padding: 0; }
+  #about .about-content {
+    padding: 20px;
+    font-size: 18px; }
+  #about .content-inner .background-fishies {
+    display: none; }
+  #about .content-inner .agencies-content {
+    padding: 20px; }
+    #about .content-inner .agencies-content h2 {
+      font-size: 24px; }
+    #about .content-inner .agencies-content .participating {
+      margin: 20px 0; }
+      #about .content-inner .agencies-content .participating h3 {
+        font-size: 20px; }
+      #about .content-inner .agencies-content .participating p {
+        font-size: 16px;
+        line-height: 20px; }
+  #about .content-inner .contact {
+    padding: 20px; }
+  #about .content-inner .contact-content img {
+    margin: 0 0 20px 0;
+    max-width: 100%; }
+  #about .content-inner .contact-content h2 {
+    font-size: 18px; }
+  #about .content-inner .contact-content p {
+    font-size: 16px; } }

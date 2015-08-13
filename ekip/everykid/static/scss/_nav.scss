@@ -1,15 +1,18 @@
 ul.top-links {
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
   padding: 0 30px 0 0;
   right: 0;
   position: absolute;
+  z-index: 500;
   display: inline-block;
 
   li {
     font-size: 14px;
+    line-height: 12px;
     font-weight: bold;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 0 15px;
     border-right: 1px solid #fff;
     display: inline-block;
 
@@ -18,12 +21,19 @@ ul.top-links {
       opacity: 0.7;
 
       @include transition(opacity 0.4s ease-in);
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
-    a:hover {
-      opacity: 1;
+    &.active {
+      a {
+        color: $yellow;
+        opacity: 1;
+        cursor: default;
+      }
     }
-
     &:last-child {
       border: none;
     }
@@ -45,11 +55,15 @@ ul.top-links {
     top: 50px;
 
     .logo {
-      margin: 0 0 20px 30px;
+      margin: 0 0 20px 27px;
       z-index: 100;
       font-size: 14px;
       display: inline-block;
       position: relative;
+
+      img {
+        width: 174px;
+      }
 
       @include transition(opacity 0.3s ease-in);
 
@@ -57,17 +71,24 @@ ul.top-links {
         left: 61px;
         bottom: 13px;
         position: absolute;
+        opacity: 0;
+
+        @include transition(opacity 0.5s ease-in);
       }
       a {
         text-decoration: none;
       }
       &:hover {
         opacity: .8;
+
+        span {
+          opacity: 1;
+        }
       }
     }
     .logo-line {
       top: 150px;
-      left: 108px;
+      left: 110px;
       position: absolute;
     }
 

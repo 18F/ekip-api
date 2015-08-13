@@ -77,6 +77,7 @@
   .content {
     padding: 10px 20px;
     margin: 0;
+    min-height: 0;
   }
 
   #landing {
@@ -159,9 +160,6 @@
   }
 
   #how-it-works {
-    .content {
-      min-height: 0;
-    }
 
     .content-block {
       button {
@@ -244,9 +242,14 @@
   }
 
   #plan-your-trip {
+
+    .plan-your-trip-content {
+      padding: 20px;
+    }
+
     .content {
-      min-height: 0;
       font-size: 20px;
+      min-height: 0;
     }
 
     .content-inner {
@@ -262,11 +265,13 @@
 
         h2 {
           font-size: 25px;
-          line-height: 100%;
+          line-height: 20px;
         }
 
         p {
           font-size: 18px;
+          line-height: 24px;
+          margin: 5px 0;
         }
 
         &.destination,
@@ -285,15 +290,21 @@
             }
             .lodging-content,
             .prepare-content {
-              width: auto;
+              max-width: none;
               padding: 0;
             }
             .packing-list {
-              width: auto;
-              margin: 20px 0;
+              max-width: none;
+              margin: 10px 0;
+
+              h3 {
+                font-size: 24px;
+                padding: 10px;
+              }
 
               ul {
                 padding: 10px;
+                font-size: 16px;
               }
             }
             .voucher-image {
@@ -306,6 +317,56 @@
               padding: 0;
             }
           }
+        }
+      }
+    }
+  }
+
+  #about {
+    .about-content {
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .content-inner {
+
+      .background-fishies {
+        display: none;
+      }
+
+      .agencies-content {
+        padding: 20px;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        .participating {
+          margin: 20px 0;
+
+          h3 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .contact {
+        padding: 20px;
+      }
+      .contact-content {
+        img {
+          margin: 0 0 20px 0;
+          max-width: 100%;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 16px;
         }
       }
     }
