@@ -28,7 +28,10 @@ def clean_agency(agency_name):
         return 'National Oceanic and Atmospheric Administration'
     return agency_name
 
-def replace(f):
+def replace_facilities(f):
+    """ We replace activity, feature descriptions with standardized phrases to
+    describe those (for consistency).  """
+
     exists = [
         'picnic', 'trail', 'day use', 'beach', 'fishing', 'lake', 'hiking']
 
@@ -74,21 +77,54 @@ def replace(f):
     else:
         return f
 
-
 def clean_youth_facilities(facilities):
     
     facilities = facilities.lower()
     facilities = re.split('[;,]|and|&', facilities)
     facilities = [f.strip() for f in facilities]
     facilities = [f.replace('(a.k.a.', '') for f in facilities]
-    facilities = [replace(f) for f in facilities]
+    facilities = [replace_facilities(f) for f in facilities]
 
     return facilities
 
+
+def clean_website(url):
+    """ In a few instances, the URL was not formatted correctly. We correct
+    that here. """
+
+    url.replace('http;', 'http:')
+    return url
+
+
+def clean_name(name):
+    """" Clean up the name of the location. """
+    return name.strip()
+
+
+def clean_phone(phone_number):
+    """ Phone numbers exist in the dataset in different formats. Standardize to
+    a single format. """
+
+    if phone_number:
+        phone_pattern = re.compile(r'(\d{3})\D*(\d{3})\D*(\d{4})', re.VERBOSE)
+        match = phone_pattern.search(phone_number)
+        if match:
+            components = match.groups()
+            return '%s-%s-%s' % components
+
+def clean_thirty_five_or_more(text):
+    """ Return True if the location can support more than 35 4th graders.  """
+
+    text = text.lower().strip()
+    if text == 'yes' or text == 'y':
+        return True
+    else:
+        return False
+
+
 def process_site(row):
-    facilities = clean_youth_facilities(row['YOUTH_FACI'])
-    for f in facilities:
-        print(f)
+    print(clean_thirty_five_or_more(row['THRIRTYFIV']))
+
 
 def read_site_list(filename):
     with open(filename, 'r', encoding='latin-1') as site_csv:
