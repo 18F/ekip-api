@@ -440,7 +440,7 @@ ul.top-links {
 #get-your-pass .pass-content {
   background: rgba(23, 112, 153, 0.9);
   padding: 30px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 300; }
   #get-your-pass .pass-content::after {
     clear: both;
@@ -910,12 +910,12 @@ ul.top-links {
         padding: 60px 0 0 0;
         cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
-          max-width: 340px;
+          width: 340px;
           padding: 70px 30px 0 200px;
           vertical-align: top;
           display: inline-block; }
         #plan-your-trip .content-inner section.prepare .section-content .packing-list {
-          max-width: 350px;
+          width: 350px;
           background: #fff;
           display: inline-block; }
           #plan-your-trip .content-inner section.prepare .section-content .packing-list h3 {
