@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Plan Your Trip{% endblock title %}
+{% block title %}Plan your trip{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -11,13 +11,12 @@
 
   <div class="plan-your-trip-content">
 
-    <h1>Plan Your Trip</h1>
+    <h1>Plan your trip</h1>
 
-    <p>"In every walk with nature, one receives far more than he seeks." <span class="author">- John Muir</span></p>
+    <p>"We come and go, but the land is always here. And the people who love it and understand it are the people who own it — for a little while." <span class="author">- Willa Cather</span></p>
 
-    <p>Your paper voucher opens the door to new adventures and discovery of the
-    great outdoors. Our federal lands and waters provide an amazing and
-    fulfilling experience with a little bit of planning.</p>
+    <p>Plan your adventure using these tools. No matter where you live in the United States,
+    there's a site within 2 hours of your home.</p>
 
   </div>
 
@@ -32,10 +31,7 @@
   <section class="destination">
     <div class="section-content">
 
-      <h2>Explore Various Destinations</h2>
-
-      <p>These cool trip planning tools (from our partner agencies), can help you find a destination. There are many federal lands and waters you can visit, and each presents a whole variety of activities you can do.</p>
-
+      <h2>Explore parks and sites</h2>
       <ul>
         <li>
           <h3><a href="http://www.fws.gov/refuges/">National Wildlife Refuge System</a></h3>
@@ -49,6 +45,11 @@
           <h3><a href="http://findyourpark.com/find">Find Your<br/>Park</a></h3>
           <p>National Parks</p>
         </li>
+<!--
+        <li>Find places with protected animals on the <a href="http://www.fws.gov/refuges/">National Wildlife Refuge System</a> website.</li>
+        <li>Find forests on the <a href="http://www.discovertheforest.org">Discover the Forest</a> website.</li>
+        <li>Find parks on the <a href="http://findyourpark.com/find">Find Your Park</a> website.</li>
+-->
       </ul>
     </div>
   </section>
@@ -61,12 +62,11 @@
       </div>
 
       <div class="lodging-content">
-        <h2>Lodging</h2>
+        <h2>Get a place to stay</h2>
 
-        <p>Explore lodging options before you start out. Where you are looking for
-        hotels, campgrounds or back country camping, we recommend reserving a spot
-        when possible. See <a href="http://www.recreation.gov">recreation.gov</a> to
-        make online reservations.</p>
+        <p>Your family may want to stay somewhere overnight. You can reserve a hotel or
+        campground on <a href="http://www.recreation.gov">recreation.gov</a>.</p>
+
       </div>
 
     </div>
@@ -76,22 +76,32 @@
     <div class="section-content">
 
       <div class="prepare-content">
-        <h2>Packing List</h2>
 
-        <p>These are some essentials you should consider carrying with you.</p>
+        <h2>Pack this</h2>
+
       </div>
 
       <div class="packing-list">
 
         <h3>What to bring</h3>
         <ul>
-          <li>Plenty of water</li>
-          <li>Snacks (high energy snacks such as trail mix and protein bars are great)</li>
-          <li>A small first-aid kit</li>
-          <li>Sunglasses, hat, and sunscreen (or gloves and a warm hat depending on the season)</li>
-          <li>Bug repellent</li>
-          <li>A map of the area and emergency numbers</li>
+          <li>Water</li>
+          <li>Healthy snacks</li>
+          <li>A first-aid kit</li>
+          <li>Comfortable shoes</li>
+          <li>Sunglasses</li>
+          <li>A hat</li>
+          <li>Sunscreen</li>
+          <li>Gloves (if it's cold)</li>
+          <li>Bug spray</li>
+          <li>A map</li>
+          <li>Emergency numbers</li>
         </ul>
+
+        <p>Note: some of our sites don't get cell service.
+        This means you might not be able to make or get phone calls, texts,
+        or emails when you visit.</p>
+
       </div>
 
     </div>
@@ -105,22 +115,17 @@
       </div>
 
       <div class="voucher-content">
-        <h2>Exchange Your Voucher</h2>
+        <h2>Bring your pass</h2>
 
-        <p>At the following sites you can exchange your paper voucher for a
-        wallet-sized pass. All of these sites are amazing places to visit.</p>
+        <p>Make sure you bring your pass to get in for free.</p>
 
-        <button><a href="{% url 'pass_exchange' %}">View Pass Sites</a></button>
+        <p>At some of our sites, you can trade your paper pass for a plastic pass.
+        This step is optional. The paper pass and plastic pass work exactly the same.
+        You can use either to visit any site. Some kids like to get the plastic pass because
+        it's waterproof and fits in your wallet. We think it makes a great keepsake, too!</p>
 
-        <p>You might not have cell phone coverage. For example, Glacier National Park
-        is located in the mountains which are so big and remote you can't make or
-        receive phone calls, texts or emails. Not all sites are like this, but it's
-        best not to rely on your cell phone when you visit.</p>
+        <button><a href="{% url 'pass_exchange' %}">Sites with plastic passes</a></button>
 
-        <p>Don't forget! You'll also need to bring the printed paper voucher instead
-        of an electronic copy on your phone or tablet. The sites do not have the
-        ability to accept electronic vouchers. Also, in some cases, you may need to
-        leave the paper copy on the dashboard of your vehicle.</p>
       </div>
 
     </div>
