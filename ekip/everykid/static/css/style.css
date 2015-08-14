@@ -450,7 +450,6 @@ ul.top-links {
     width: 254px;
     float: right; }
     #get-your-pass .pass-content ul.boxes li {
-      font-size: 16px;
       padding: 25px;
       margin: 0 0 15px 0;
       border: 2px solid #489BC0;
@@ -467,7 +466,7 @@ ul.top-links {
       #get-your-pass .pass-content ul.boxes li p {
         width: auto;
         margin: 0;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 18px; }
       #get-your-pass .pass-content ul.boxes li.fourth-graders {
         background: #FFE897;
@@ -480,7 +479,6 @@ ul.top-links {
           font-weight: bold;
           text-transform: uppercase; }
         #get-your-pass .pass-content ul.boxes li.fourth-graders p {
-          font-size: 16px;
           line-height: 22px;
           margin: 0 0 20px 0; }
         #get-your-pass .pass-content ul.boxes li.fourth-graders button {
