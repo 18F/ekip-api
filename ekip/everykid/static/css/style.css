@@ -1019,22 +1019,10 @@ footer {
       color: #683E2D;
       font-size: 16px;
       font-weight: 300; }
-    footer .footer-content ul.social {
-      padding: 5px 0 30px 0;
-      font-weight: bold; }
-      footer .footer-content ul.social li {
-        padding: 0 5px;
-        display: inline-block; }
-        footer .footer-content ul.social li a {
-          text-decoration: none;
-          display: table; }
-        footer .footer-content ul.social li span {
-          padding: 0 0 0 5px;
-          display: table-cell;
-          vertical-align: middle; }
     footer .footer-content nav li {
       line-height: 12px;
       font-size: 12px;
+      margin: 30px 0 0 0;
       padding: 0 10px;
       border-right: 1px solid #683E2D;
       display: inline-block; }
