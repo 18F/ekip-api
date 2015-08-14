@@ -99,36 +99,21 @@ ul.top-links {
       z-index: 100;
       font-size: 14px;
       display: inline-block;
-      position: relative;
-      -webkit-transition: opacity 0.3s ease-in;
-      -moz-transition: opacity 0.3s ease-in;
-      transition: opacity 0.3s ease-in; }
+      position: relative; }
       .menu-container nav .logo img {
         width: 174px; }
-      .menu-container nav .logo span {
-        left: 61px;
-        bottom: 13px;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition: opacity 0.5s ease-in;
-        -moz-transition: opacity 0.5s ease-in;
-        transition: opacity 0.5s ease-in; }
-      .menu-container nav .logo a {
-        text-decoration: none; }
-      .menu-container nav .logo:hover {
-        opacity: .8; }
-        .menu-container nav .logo:hover span {
-          opacity: 1; }
-    .menu-container nav .logo-line {
-      top: 150px;
-      left: 110px;
+    .menu-container nav .home-line {
+      top: 50px;
+      left: 60px;
       position: absolute; }
+      .menu-container nav .home-line g {
+        stroke: #fff; }
     .menu-container nav .menu {
       position: relative; }
     .menu-container nav .lines {
       width: 55px;
       height: 99px;
-      top: 35px;
+      top: 106px;
       right: 27px;
       z-index: 0;
       position: absolute; }
@@ -141,7 +126,7 @@ ul.top-links {
     .menu-container nav li {
       z-index: 100;
       background: #fff;
-      margin: 0 0 20px 0;
+      margin: 0 0 23px 0;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -180,14 +165,14 @@ ul.top-links {
           border: 2px solid #fff;
           color: #fff;
           opacity: 0.8; }
-      .menu-container nav li:nth-child(1) {
+      .menu-container nav li:nth-child(2) {
         margin-left: 40px; }
-        .menu-container nav li:nth-child(1) a:before {
+        .menu-container nav li:nth-child(2) a:before {
           top: -25px;
           left: -40px; }
-      .menu-container nav li:nth-child(3) {
+      .menu-container nav li:nth-child(4) {
         margin-left: 55px; }
-        .menu-container nav li:nth-child(3) a:before {
+        .menu-container nav li:nth-child(4) a:before {
           top: 20px;
           left: -35px; }
 
@@ -266,8 +251,11 @@ ul.top-links {
 #landing .menu-container nav {
   top: 90px; }
   #landing .menu-container nav .logo,
-  #landing .menu-container nav .logo-line {
+  #landing .menu-container nav .home-line,
+  #landing .menu-container nav li.home {
     display: none; }
+  #landing .menu-container nav .lines {
+    top: 38px; }
 
 #landing .content {
   max-width: 985px;
