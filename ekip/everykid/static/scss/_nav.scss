@@ -64,32 +64,15 @@ ul.top-links {
       img {
         width: 174px;
       }
-
-      @include transition(opacity 0.3s ease-in);
-
-      span {
-        left: 61px;
-        bottom: 13px;
-        position: absolute;
-        opacity: 0;
-
-        @include transition(opacity 0.5s ease-in);
-      }
-      a {
-        text-decoration: none;
-      }
-      &:hover {
-        opacity: .8;
-
-        span {
-          opacity: 1;
-        }
-      }
     }
-    .logo-line {
-      top: 150px;
-      left: 110px;
+    .home-line {
+      top: 50px;
+      left: 60px;
       position: absolute;
+
+      g {
+        stroke: #fff;
+      }
     }
 
     .menu {
@@ -99,7 +82,7 @@ ul.top-links {
     .lines {
       width: 55px;
       height: 99px;
-      top: 35px;
+      top: 106px;
       right: 27px;
       z-index: 0;
       position: absolute;
@@ -118,7 +101,7 @@ ul.top-links {
     li {
       z-index: 100;
       background: #fff;
-      margin: 0 0 20px 0;
+      margin: 0 0 23px 0;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -167,7 +150,7 @@ ul.top-links {
         }
       }
 
-      &:nth-child(1) {
+      &:nth-child(2) {
         margin-left: 40px;
 
         a:before {
@@ -176,7 +159,7 @@ ul.top-links {
         }
       }
 
-      &:nth-child(3) {
+      &:nth-child(4) {
         margin-left: 55px;
 
         a:before {

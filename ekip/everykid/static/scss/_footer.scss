@@ -16,31 +16,11 @@ footer {
       font-weight: 300;
     }
 
-    ul.social {
-      padding: 5px 0 30px 0;
-      font-weight: bold;
-
-      li {
-        padding: 0 5px;
-        display: inline-block;
-
-        a {
-          text-decoration: none;
-          display: table;
-        }
-
-        span {
-          padding: 0 0 0 5px;
-          display: table-cell;
-          vertical-align: middle;
-        }
-      }
-    }
-
     nav {
       li {
         line-height: 12px;
         font-size: 12px;
+        margin: 30px 0 0 0;
         padding: 0 10px;
         border-right: 1px solid $brown;
         display: inline-block;

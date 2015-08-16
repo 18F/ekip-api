@@ -99,36 +99,21 @@ ul.top-links {
       z-index: 100;
       font-size: 14px;
       display: inline-block;
-      position: relative;
-      -webkit-transition: opacity 0.3s ease-in;
-      -moz-transition: opacity 0.3s ease-in;
-      transition: opacity 0.3s ease-in; }
+      position: relative; }
       .menu-container nav .logo img {
         width: 174px; }
-      .menu-container nav .logo span {
-        left: 61px;
-        bottom: 13px;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition: opacity 0.5s ease-in;
-        -moz-transition: opacity 0.5s ease-in;
-        transition: opacity 0.5s ease-in; }
-      .menu-container nav .logo a {
-        text-decoration: none; }
-      .menu-container nav .logo:hover {
-        opacity: .8; }
-        .menu-container nav .logo:hover span {
-          opacity: 1; }
-    .menu-container nav .logo-line {
-      top: 150px;
-      left: 110px;
+    .menu-container nav .home-line {
+      top: 50px;
+      left: 60px;
       position: absolute; }
+      .menu-container nav .home-line g {
+        stroke: #fff; }
     .menu-container nav .menu {
       position: relative; }
     .menu-container nav .lines {
       width: 55px;
       height: 99px;
-      top: 35px;
+      top: 106px;
       right: 27px;
       z-index: 0;
       position: absolute; }
@@ -141,7 +126,7 @@ ul.top-links {
     .menu-container nav li {
       z-index: 100;
       background: #fff;
-      margin: 0 0 20px 0;
+      margin: 0 0 23px 0;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -180,14 +165,14 @@ ul.top-links {
           border: 2px solid #fff;
           color: #fff;
           opacity: 0.8; }
-      .menu-container nav li:nth-child(1) {
+      .menu-container nav li:nth-child(2) {
         margin-left: 40px; }
-        .menu-container nav li:nth-child(1) a:before {
+        .menu-container nav li:nth-child(2) a:before {
           top: -25px;
           left: -40px; }
-      .menu-container nav li:nth-child(3) {
+      .menu-container nav li:nth-child(4) {
         margin-left: 55px; }
-        .menu-container nav li:nth-child(3) a:before {
+        .menu-container nav li:nth-child(4) a:before {
           top: 20px;
           left: -35px; }
 
@@ -266,8 +251,11 @@ ul.top-links {
 #landing .menu-container nav {
   top: 90px; }
   #landing .menu-container nav .logo,
-  #landing .menu-container nav .logo-line {
+  #landing .menu-container nav .home-line,
+  #landing .menu-container nav li.home {
     display: none; }
+  #landing .menu-container nav .lines {
+    top: 38px; }
 
 #landing .content {
   max-width: 985px;
@@ -275,6 +263,7 @@ ul.top-links {
   padding: 88px 0 0 0;
   margin: auto; }
   #landing .content img {
+    max-width: 256px;
     margin: 0 0 45px 0; }
   #landing .content button {
     border: 4px solid #fff;
@@ -440,7 +429,7 @@ ul.top-links {
 #get-your-pass .pass-content {
   background: rgba(23, 112, 153, 0.9);
   padding: 30px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 300; }
   #get-your-pass .pass-content::after {
     clear: both;
@@ -462,7 +451,6 @@ ul.top-links {
     width: 254px;
     float: right; }
     #get-your-pass .pass-content ul.boxes li {
-      font-size: 16px;
       padding: 25px;
       margin: 0 0 15px 0;
       border: 2px solid #489BC0;
@@ -479,7 +467,7 @@ ul.top-links {
       #get-your-pass .pass-content ul.boxes li p {
         width: auto;
         margin: 0;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 18px; }
       #get-your-pass .pass-content ul.boxes li.fourth-graders {
         background: #FFE897;
@@ -492,7 +480,6 @@ ul.top-links {
           font-weight: bold;
           text-transform: uppercase; }
         #get-your-pass .pass-content ul.boxes li.fourth-graders p {
-          font-size: 16px;
           line-height: 22px;
           margin: 0 0 20px 0; }
         #get-your-pass .pass-content ul.boxes li.fourth-graders button {
@@ -910,12 +897,12 @@ ul.top-links {
         padding: 60px 0 0 0;
         cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
-          max-width: 340px;
+          width: 340px;
           padding: 70px 30px 0 200px;
           vertical-align: top;
           display: inline-block; }
         #plan-your-trip .content-inner section.prepare .section-content .packing-list {
-          max-width: 350px;
+          width: 350px;
           background: #fff;
           display: inline-block; }
           #plan-your-trip .content-inner section.prepare .section-content .packing-list h3 {
@@ -1031,22 +1018,10 @@ footer {
       color: #683E2D;
       font-size: 16px;
       font-weight: 300; }
-    footer .footer-content ul.social {
-      padding: 5px 0 30px 0;
-      font-weight: bold; }
-      footer .footer-content ul.social li {
-        padding: 0 5px;
-        display: inline-block; }
-        footer .footer-content ul.social li a {
-          text-decoration: none;
-          display: table; }
-        footer .footer-content ul.social li span {
-          padding: 0 0 0 5px;
-          display: table-cell;
-          vertical-align: middle; }
     footer .footer-content nav li {
       line-height: 12px;
       font-size: 12px;
+      margin: 30px 0 0 0;
       padding: 0 10px;
       border-right: 1px solid #683E2D;
       display: inline-block; }

@@ -14,8 +14,13 @@
     top: 90px;
 
     .logo,
-    .logo-line {
+    .home-line,
+    li.home {
       display: none;
+    }
+
+    .lines {
+      top: 38px;
     }
   }
 
@@ -26,6 +31,7 @@
     margin: auto;
 
     img {
+      max-width: 256px;
       margin: 0 0 45px 0;
     }
 
