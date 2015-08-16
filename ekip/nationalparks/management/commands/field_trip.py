@@ -3,6 +3,7 @@ import re
 
 from django.core.management.base import BaseCommand
 
+
 def clean_advance_reservation(text):
     """ The advance reservation field identifies whether or not advance
     reservations are required to use these facilities (day use areas). If there
@@ -19,7 +20,8 @@ def clean_advance_reservation(text):
     if 'call ahead' in text:
         return True
     return False
-    
+
+
 def clean_agency(agency_name):
     """ Clean up the agency names in the dataset to make them consistent. """
 
@@ -27,6 +29,7 @@ def clean_agency(agency_name):
     if 'Oceanic' in agency_name:
         return 'National Oceanic and Atmospheric Administration'
     return agency_name
+
 
 def replace_facilities(f):
     """ We replace activity, feature descriptions with standardized phrases to
@@ -68,17 +71,17 @@ def replace_facilities(f):
         return 'visitor center'
     elif 'auto' in f or 'driving' in f:
         return 'auto tour route'
-    elif 'river' in f and not 'museum' in f:
+    elif 'river' in f and 'museum' not in f:
         return 'river'
     elif ' water ' in f or 'waterway' in f:
         return 'water access'
-    elif 'camp' in f and not 'spy' in f and not 'primitive' in f:
+    elif 'camp' in f and 'spy' not in f and 'primitive' not in f:
         return 'camping'
     else:
         return f
 
+
 def clean_youth_facilities(facilities):
-    
     facilities = facilities.lower()
     facilities = re.split('[;,]|and|&', facilities)
     facilities = [f.strip() for f in facilities]
@@ -139,14 +142,17 @@ def convert_time_ranges(time_ranges, times):
     best_times = ', '.join(ranges)
     return best_times
 
+
 def clean_best_times(times):
-    if ('-' in times or 'through' in times) and not 'year-round' in times.lower():
+    if ('-' in times
+            or 'through' in times) and 'year-round' not in times.lower():
         time_ranges = parse_range(times)
         convert_time_ranges(time_ranges, times)
     elif 'year' in times.lower() and 'prime' not in times.lower():
         return 'Year-round'
     else:
         return times
+
 
 def process_site(row):
     clean_best_times(row['BEST_TIMES'])
@@ -157,6 +163,7 @@ def read_site_list(filename):
         site_reader = csv.DictReader(site_csv, delimiter=',', quotechar='"')
         for l in site_reader:
             process_site(l)
+
 
 class Command(BaseCommand):
     """ Read and import a list of field trip sites (also known as the FICOR
