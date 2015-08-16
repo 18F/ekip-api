@@ -112,6 +112,7 @@ def clean_phone(phone_number):
             components = match.groups()
             return '%s-%s-%s' % components
 
+
 def clean_thirty_five_or_more(text):
     """ Return True if the location can support more than 35 4th graders.  """
 
@@ -122,8 +123,33 @@ def clean_thirty_five_or_more(text):
         return False
 
 
+def parse_range(times):
+    range_pattern = re.compile(r'(\w+)\s+-\s+(\w+)', re.VERBOSE)
+    match = range_pattern.findall(times)
+    if match:
+        return match
+    else:
+        through_pattern = re.compile(r'(\w+)\s+ through \s+(\w+)', re.VERBOSE)
+        match = through_pattern.findall(times)
+        return match
+
+
+def convert_time_ranges(time_ranges, times):
+    ranges = ['%s - %s' % r for r in time_ranges]
+    best_times = ', '.join(ranges)
+    return best_times
+
+def clean_best_times(times):
+    if ('-' in times or 'through' in times) and not 'year-round' in times.lower():
+        time_ranges = parse_range(times)
+        convert_time_ranges(time_ranges, times)
+    elif 'year' in times.lower() and 'prime' not in times.lower():
+        return 'Year-round'
+    else:
+        return times
+
 def process_site(row):
-    print(clean_thirty_five_or_more(row['THRIRTYFIV']))
+    clean_best_times(row['BEST_TIMES'])
 
 
 def read_site_list(filename):
