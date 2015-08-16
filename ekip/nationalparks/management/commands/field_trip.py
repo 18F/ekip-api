@@ -127,6 +127,9 @@ def clean_thirty_five_or_more(text):
 
 
 def parse_range(times):
+    """ Parse a month or season range like: April - November, or Fall through
+    Spring. """
+
     range_pattern = re.compile(r'(\w+)\s+-\s+(\w+)', re.VERBOSE)
     match = range_pattern.findall(times)
     if match:
@@ -138,16 +141,23 @@ def parse_range(times):
 
 
 def convert_time_ranges(time_ranges, times):
+    """ Convert a parsed list of month, season ranges into a single string. """
+
     ranges = ['%s - %s' % r for r in time_ranges]
     best_times = ', '.join(ranges)
     return best_times
 
 
 def clean_best_times(times):
+    """ The best times to visit a location are listed in various different ways
+    in the dataset. Extract a month or season range and normalize year-round
+    mentions, ensuring that the best times have some semblence of consistency.
+    """
+
     if ('-' in times
             or 'through' in times) and 'year-round' not in times.lower():
         time_ranges = parse_range(times)
-        convert_time_ranges(time_ranges, times)
+        return convert_time_ranges(time_ranges, times)
     elif 'year' in times.lower() and 'prime' not in times.lower():
         return 'Year-round'
     else:
@@ -155,7 +165,7 @@ def clean_best_times(times):
 
 
 def process_site(row):
-    clean_best_times(row['BEST_TIMES'])
+    print(clean_best_times(row['BEST_TIMES']))
 
 
 def read_site_list(filename):
