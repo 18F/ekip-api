@@ -13,9 +13,7 @@
 
   <h1><span>Hey fourth graders!</span> See America’s natural wonders and historic sites for free.</h1>
 
-  <a href="{% url 'get_your_pass' %}">
-    <button>Let's Go!</button>
-  </a>
+  <button class="lets-go">Let's Go!</button>
 
 {% endblock content %}
 
@@ -29,7 +27,7 @@
           <div class="image">
             <img src="{% static "img/landing-park.png" %}" alt="" />
             <div class="caption">
-                Play outdoors. 
+                Play outdoors.
             </div>
           </div>
           <div class="description">
@@ -49,7 +47,7 @@
           <div class="image">
             <img src="{% static "img/landing-historic.png" %}" alt="" />
             <div class="caption">
-                Learn our nation's history. 
+                Learn our nation's history.
             </div>
           </div>
         </li>
@@ -57,7 +55,7 @@
           <div class="image">
             <img src="{% static "img/landing-dam.png" %}" alt="" />
             <div class="caption">
-                Explore a dam. 
+                Explore a dam.
             </div>
           </div>
           <div class="description">
