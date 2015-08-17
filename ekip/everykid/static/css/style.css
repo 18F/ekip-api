@@ -204,7 +204,7 @@ ul.top-links {
 
 .content {
   max-width: 725px;
-  min-height: 450px;
+  min-height: 508px;
   margin: auto;
   padding: 100px 0 50px 260px;
   position: relative; }
@@ -591,7 +591,8 @@ ul.top-links {
     max-width: 570px;
     border: 2px solid #FFE087;
     padding: 25px;
-    margin: 40px 0 20px 0; }
+    margin: 40px 0 20px 0;
+    position: relative; }
     #educators .content .box h3 {
       font-size: 18px;
       font-weight: bold;
@@ -611,14 +612,18 @@ ul.top-links {
       padding: 15px 20px;
       margin: 25px auto 0 auto;
       display: block; }
+  #educators .content .animate-line {
+    right: 310px;
+    position: absolute;
+    display: none; }
 
 #educators .content-inner {
   background: #E9FCEB;
   color: #306B38; }
 
 #educators .content-inner-block {
-  max-width: 620px;
-  padding: 75px 0;
+  max-width: 585px;
+  padding: 100px 0;
   margin: auto; }
   #educators .content-inner-block h3 {
     font-size: 30px;
@@ -666,7 +671,7 @@ ul.top-links {
 
 #educators form {
   max-width: 370px;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
   margin: 0 0 0 50px; }
   #educators form::after {
     clear: both;
