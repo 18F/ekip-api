@@ -61,19 +61,39 @@
             border-bottom: 1px solid #62B6DB;
             position: relative;
 
-            &:before {
-              font-size: 22px;
-              font-weight: 200;
-              top: 12px;
-              left: -20px;
-              content: "+";
-              position: absolute;
-            }
+            // &:hover {
+            //   .expand {
+            //     display: inline-block;
+            //   }
+            // }
           }
 
           h4 {
             font-size: 18px;
             font-family: 'Lato', sans-serif;
+            display: inline-block;
+            position: relative;
+
+            &:before {
+              font-size: 22px;
+              font-weight: 200;
+              top: -3px;
+              left: -20px;
+              content: "+";
+              position: absolute;
+            }
+
+            &:hover {
+              color: $yellow;
+              cursor: pointer;
+            }
+          }
+
+          .expand {
+            font-size: 14px;
+            padding: 0 5px;
+            font-weight: 400;
+            display: none;
           }
 
           .description {

@@ -13,4 +13,10 @@ $(function () {
 
   });
 
+  $('#about .participating li').click(function() {
+
+    $(this).find('.description').fadeToggle();
+
+  });
+
 }());
