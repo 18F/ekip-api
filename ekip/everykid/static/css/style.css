@@ -1089,23 +1089,24 @@ footer {
     text-align: center; }
     .menu-container nav .logo {
       margin: 5px 0; }
-    .menu-container nav .logo-line,
+    .menu-container nav .home-line,
     .menu-container nav .lines {
       display: none; }
     .menu-container nav ul {
-      margin: 0 5px;
       display: block; }
     .menu-container nav li {
       font-size: 13px;
-      margin: 5px; }
+      margin: 5px;
+      display: inline-block; }
       .menu-container nav li.active a:before {
         display: none; }
       .menu-container nav li a {
         padding: 8px 10px; }
         .menu-container nav li a:hover:before {
           display: none; }
-      .menu-container nav li:nth-child(odd) {
-        margin: 0; }
+      .menu-container nav li:nth-child(2),
+      .menu-container nav li:nth-child(4) {
+        margin: 5px; }
   .content {
     padding: 10px 20px;
     margin: 0;
@@ -1117,13 +1118,12 @@ footer {
     font-size: 28px;
     padding: 0; }
   #landing .content {
-    padding: 0 20px; }
+    padding: 20px; }
     #landing .content .logo {
-      margin: 0; }
-    #landing .content button {
-      font-size: 16px;
-      padding: 15px;
-      margin: 0; }
+      margin: 0 0 15px 0; }
+    #landing .content button,
+    #landing .content .animate-line {
+      display: none; }
   #landing .content-inner-block {
     background: #C82629; }
     #landing .content-inner-block section {
@@ -1157,10 +1157,10 @@ footer {
     padding: 30px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
-  #how-it-works .content-block button {
-    margin: 20px;
-    font-size: 16px;
-    padding: 10px 15px; }
+  #how-it-works .content-block {
+    padding: 20px; }
+    #how-it-works .content-block button {
+      display: none; }
   #how-it-works .content-inner ol li {
     width: auto;
     height: auto;
@@ -1194,6 +1194,10 @@ footer {
     margin-top: 10px; }
   #educators .content {
     padding: 20px; }
+    #educators .content h1 br {
+      display: none; }
+    #educators .content .box .educator-begin {
+      display: none; }
   #educators .content-inner-block {
     padding: 20px; }
   #educators form {
