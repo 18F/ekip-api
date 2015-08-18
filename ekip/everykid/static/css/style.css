@@ -279,6 +279,11 @@ ul.top-links {
     #landing .content button:hover {
       background: #fff;
       color: #177099; }
+  #landing .content .animate-line {
+    right: 490px;
+    bottom: -120px;
+    position: absolute;
+    display: none; }
 
 #landing .content-inner-block {
   background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat; }
@@ -297,7 +302,9 @@ ul.top-links {
     #landing .content-inner-block section li .image {
       background: #C82629;
       border: 4px solid #fff;
-      display: inline-block; }
+      display: inline-block;
+      z-index: 500;
+      position: relative; }
       #landing .content-inner-block section li .image img {
         border-bottom: 4px solid #fff; }
       #landing .content-inner-block section li .image .caption {

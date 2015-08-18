@@ -9,7 +9,7 @@ $(function () {
         scrollTop: $(".content-inner").offset().top
      }, 1000);
 
-    $('.animate-line').fadeIn(500);
+    $('.animate-line').fadeIn(1200);
 
   });
 
