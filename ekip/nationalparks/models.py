@@ -1,6 +1,66 @@
 from django.db import models
 
-from localflavor.us.models import USStateField, PhoneNumberField
+from localflavor.us.models import (
+    USStateField, PhoneNumberField, USZipCodeField)
+
+
+class BestVisitTime(models.Model):
+    """ Stores a string that indicates the best time to visit a location. This
+    is often expressed as a range such as January - March or Fall through
+    Summer. """
+
+    best_time = models.CharField(max_length=128, unique=True)
+
+
+class YouthFacility(models.Model):
+    """ Stores a string that describes a youth facility (activities, features).
+    """
+
+    facility = models.CharField(max_length=256, unique=True)
+
+
+class FieldTripSite(models.Model):
+    """ These sites are those that are great for field trips for 4th graders
+    (and presumably other ages as well). Internally, this is known as the FICOR
+    list. """
+
+    # List of management agencies. 
+    AGENCY_CHOICES = (
+        ('USACE', 'US Army Corps of Engineers'),
+        ('BLM', 'Bureau of Land Management'),
+        ('USBR', 'Bureau of Reclamation'),
+        ('NOAA', 'National Oceanic and Atmospheric Administration'),
+        ('NPS', 'National Park Service'),
+        ('FWS', 'U.S. Fish and Wildlife Service'),
+        ('FS', 'U.S. Forest Service')
+    )
+
+    name = models.CharField(max_length=256)
+    agency = models.CharField(max_length=5, choices=AGENCY_CHOICES)
+    phone = PhoneNumberField(null=True)
+    phone_extension = models.IntegerField(null=True)
+    city = models.CharField(max_length=128)
+    state = USStateField(blank=False, null=False)
+    website = models.URLField(max_length=512)
+    slug = models.SlugField(unique=True, null=True)
+    address_line_1  = models.CharField(max_length=256)
+    zipcode = USZipCodeField()
+
+    advance_reservation = models.BooleanField(
+        default=False,
+        help_text="If advance reservation for large groups is required.")
+
+    update_timestamp = models.DateTimeField(auto_now=True)
+
+    larger_groups = models.BooleanField(
+        default=True, 
+        help_text="If the site can accomodate more than 35 4th graders.")
+
+    best_visit_times = models.ManyToManyField(BestVisitTime)
+    facilities = models.ManyToManyField(YouthFacility)
+
+    class Meta:
+        unique_together = ('name', 'agency')
 
 
 class FederalSite(models.Model):
