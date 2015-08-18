@@ -810,8 +810,6 @@ ul.top-links {
     font-weight: 600;
     padding: 10px 20px;
     letter-spacing: 1px; }
-  #plan-your-trip .content .sites li {
-    padding: 10px 0; }
 
 #plan-your-trip .content-inner {
   font-weight: 300; }
@@ -941,6 +939,19 @@ ul.top-links {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+
+#plan-your-trip .content-inner-block {
+  width: 800px;
+  padding: 50px 0;
+  margin: auto; }
+  #plan-your-trip .content-inner-block ol li {
+    list-style-type: decimal; }
+  #plan-your-trip .content-inner-block .sites li {
+    padding: 20px 0; }
+  #plan-your-trip .content-inner-block .sites h3 {
+    font-size: 24px; }
+  #plan-your-trip .content-inner-block .sites p {
+    font-size: 20px; }
 
 #about .about-content {
   background: rgba(23, 112, 153, 0.6);

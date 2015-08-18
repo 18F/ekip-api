@@ -19,4 +19,12 @@ $(function () {
 
   });
 
+  if($('#plan-your-trip .sites').length) {
+
+    $('html, body').animate({
+        scrollTop: $(".content-inner-block").offset().top
+     }, 1200);
+
+  }
+
 }());
