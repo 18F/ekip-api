@@ -47,13 +47,6 @@
       padding: 10px 20px;
       letter-spacing: 1px;
     }
-
-    .sites {
-      li {
-        padding: 10px 0;
-      }
-    }
-
   }
 
   .content-inner {
@@ -241,4 +234,32 @@
       }
     }
   }
+
+  .content-inner-block {
+    width: 800px;
+    padding: 50px 0;
+    margin: auto;
+
+    ol li {
+      list-style-type: decimal;
+    }
+
+    .sites {
+
+      li {
+        padding: 20px 0;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 20px;
+      }
+
+    }
+
+
+  }
+
 }

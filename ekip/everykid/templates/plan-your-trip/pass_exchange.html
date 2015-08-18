@@ -25,16 +25,25 @@
     </ul>
   </form>
 
-  {% if sites %}
-  <ul class="sites">
-  {% for site in sites %}
-    <li>
-      <h3><a href="{{ site.website }}">{{ site.name }}</a></h3>
-      <p>{{ site.city }}, {{ site.state }} </p>
-    </li>
-  {% endfor %}
-  </ul>
-  {% endif %}
-
 {% endblock content %}
+
+{% block content_inner %}
+
+  <div class="content-inner-block">
+
+    {% if sites %}
+    <ol class="sites">
+    {% for site in sites %}
+      <li>
+        <h3><a href="{{ site.website }}">{{ site.name }}</a></h3>
+        <p>{{ site.city }}, {{ site.state }} </p>
+      </li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+  </div>
+
+
+{% endblock content_inner %}
 

@@ -5,7 +5,7 @@ html, body {
   margin: 0;
 }
 
-.voucher-page {
+.voucher-container, .voucher-instructions {
   width: 595px;
   height: 842px;
   margin: 0 auto;
@@ -166,3 +166,22 @@ html, body {
   }
 }
 
+.voucher-instructions {
+  border: 1px dotted #ccc;
+
+  .instruction-content {
+    padding: 30px;
+
+    h2 {
+      font-family: "Superclarendon", serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #D7552A;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}

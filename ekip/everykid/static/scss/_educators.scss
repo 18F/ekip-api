@@ -17,6 +17,7 @@
       border: 2px solid #FFE087;
       padding: 25px;
       margin: 40px 0 20px 0;
+      position: relative;
 
       h3 {
         font-size: 18px;
@@ -43,6 +44,11 @@
         display: block;
       }
     }
+    .animate-line {
+      right: 310px;
+      position: absolute;
+      display: none;
+    }
   }
 
   .content-inner {
@@ -51,8 +57,8 @@
   }
 
   .content-inner-block {
-    max-width: 620px;
-    padding: 75px 0;
+    max-width: 585px;
+    padding: 100px 0;
     margin: auto;
 
     h3 {
@@ -115,7 +121,7 @@
 
   form {
     max-width: 370px;
-    padding: 15px 0;
+    padding: 15px 0 0 0;
     margin: 0 0 0 50px;
 
     @include clearfix();

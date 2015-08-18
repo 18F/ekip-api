@@ -10,7 +10,7 @@
 
 {% block content %}
 
-  <h1>Get passes<br/>for your students</h1>
+  <h1>Get passes <br/>for your students</h1>
 
   <p>As a fourth-grade educator, you can download an activity and print paper passes for each of your students.</p>
 
@@ -18,12 +18,21 @@
 
     <h3>A fourth-grade educator is either of the following: </h3>
     <p>A teacher at a U.S. or U.S. military school, or</p>
-    <p>An adult who engages fourth graders through a youth-serving organization. 
+    <p>An adult who engages fourth graders through a youth-serving organization.
     For example, a camp director, a home-school leader, an after-school leader, or a religious group leader.</p>
 
-    <a href="#begin">
-      <button>begin</button>
-    </a>
+    <button class="educator-begin">begin</button>
+
+    <svg class="animate-line" width="372px" height="272px" viewBox="0 0 372 272" version="1.1">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-356.000000, -567.000000)" stroke-width="4" stroke-dasharray="6,4">
+          <g transform="translate(358.000000, 567.000000)">
+            <path d="M0.320987654,163.886359 L0.320987654,217.409935 L367.716362,217.409935 L367.716362,272.000153" id="Line-Copy-3" stroke-opacity="0.3" stroke="#2D6C35" transform="translate(184.018675, 217.943256) scale(1, -1) translate(-184.018675, -217.943256) "></path>
+              <path d="M368,0 L368,165" stroke="#FFD77B"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
 
   </div>
 
@@ -32,15 +41,14 @@
 {% block content_inner %}
   <div class="content-inner-block">
 
-    <a name="begin"></a>
     <div class="download-activity">
       <h3>Download<br/> the activity</h3>
-      <p>Our activity introduces <a href="{% static "activities/class-one.pdf" %}" target="_blank">key topics</a> 
+      <p>Our activity introduces <a href="{% static "activities/class-one.pdf" %}" target="_blank">key topics</a>
       to your students (<a href="{% static "activities/class-one.pdf" %}" target="_blank">PDF</a>).</p>
     </div>
     <div class="generate-vouchers">
       <h3>Generate passes</h3>
-      <p>Each student receives a paper pass with a unique code. 
+      <p>Each student receives a paper pass with a unique code.
       That pass gives them free access to all federal lands and waters until August 2016.</p>
     </div>
 
