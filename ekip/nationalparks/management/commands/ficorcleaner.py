@@ -1,5 +1,9 @@
 import re
+from localflavor.us.us_states import US_STATES, US_TERRITORIES
 
+STATES = {name:abbr for abbr, name in US_STATES}
+TERRITORIES = {name:abbr for abbr, name in US_TERRITORIES}
+STATES.update(TERRITORIES)
 
 def clean_advance_reservation(text):
     """ The advance reservation field identifies whether or not advance
@@ -137,11 +141,10 @@ def parse_range(times):
 
 
 def convert_time_ranges(time_ranges, times):
-    """ Convert a parsed list of month, season ranges into a single string. """
+    """ Convert a parsed list of month, season ranges consistent ranges. """
 
     ranges = ['%s - %s' % r for r in time_ranges]
-    best_times = ', '.join(ranges)
-    return best_times
+    return ranges
 
 
 def clean_best_times(times):
@@ -150,12 +153,16 @@ def clean_best_times(times):
     mentions, ensuring that the best times have some semblence of consistency.
     """
 
-    if ('-' in times
-            or 'through' in times) and 'year-round' not in times.lower():
-        time_ranges = parse_range(times)
-        return convert_time_ranges(time_ranges, times)
-    elif 'year' in times.lower() and 'prime' not in times.lower():
-        return 'Year-round'
-    else:
-        return times
+    times = times.strip()
+    if times:
+        if ('-' in times
+                or 'through' in times) and 'year-round' not in times.lower():
+            time_ranges = parse_range(times)
+            return convert_time_ranges(time_ranges, times)
+        elif 'year' in times.lower() and 'prime' not in times.lower():
+            return ['Year-round']
+        else:
+            return [times]
 
+def clean_state(state_name):
+    return STATES[state_name]
