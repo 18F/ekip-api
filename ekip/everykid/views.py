@@ -7,7 +7,7 @@ from formtools.preview import FormPreview
 from .forms import PassSiteStateForm, FourthGraderForm, ZipCodeForm
 from .models import Educator
 from ticketer.recordlocator.views import TicketResource
-from nationalparks.api import FederalSiteResource
+from nationalparks.api import FederalSiteResource, FieldTripResource
 
 
 def plan_your_trip(request):
@@ -70,6 +70,26 @@ def pass_exchange(request):
     return render(
         request,
         'plan-your-trip/pass_exchange.html',
+        {
+            'sites': sites,
+            'form': form
+        }
+    )
+
+def field_trip(request):
+    """ Display the list of sites intended for field trips. """
+
+    state = request.GET.get('state', None)
+
+    if state:
+        sites = FieldTripResource().list(state)
+        form = PassSiteStateForm(initial={'state': state})
+    else:
+        form = PassSiteStateForm()
+        sites = []
+    return render(
+        request,
+        'plan-your-trip/field_trip.html',
         {
             'sites': sites,
             'form': form
