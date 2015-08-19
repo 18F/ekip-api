@@ -41,19 +41,19 @@
       margin: 5px 0;
     }
 
-    .logo-line,
+    .home-line,
     .lines {
       display: none;
     }
 
     ul {
-      margin: 0 5px;
       display: block;
     }
 
     li {
       font-size: 13px;
       margin: 5px;
+      display: inline-block;
 
       &.active a:before {
         display: none;
@@ -67,8 +67,9 @@
         }
       }
 
-      &:nth-child(odd) {
-        margin: 0;
+      &:nth-child(2),
+      &:nth-child(4) {
+        margin: 5px;
       }
     }
 
@@ -77,6 +78,7 @@
   .content {
     padding: 10px 20px;
     margin: 0;
+    min-height: 0;
   }
 
   #landing {
@@ -92,16 +94,15 @@
     }
 
     .content {
-      padding: 0 20px;
+      padding: 20px;
 
       .logo {
-        margin: 0;
+        margin: 0 0 15px 0;
       }
 
-      button {
-        font-size: 16px;
-        padding: 15px;
-        margin: 0;
+      button,
+      .animate-line {
+        display: none;
       }
     }
 
@@ -159,15 +160,12 @@
   }
 
   #how-it-works {
-    .content {
-      min-height: 0;
-    }
 
     .content-block {
+      padding: 20px;
+
       button {
-        margin: 20px;
-        font-size: 16px;
-        padding: 10px 15px;
+        display: none;
       }
     }
     .content-inner {
@@ -232,7 +230,18 @@
   #educators {
     .content {
       padding: 20px;
+
+      h1 br {
+        display: none;
+      }
+
+      .box {
+        .educator-begin {
+          display: none;
+        }
+      }
     }
+
     .content-inner-block {
       padding: 20px;
     }
@@ -244,9 +253,14 @@
   }
 
   #plan-your-trip {
+
+    .plan-your-trip-content {
+      padding: 20px;
+    }
+
     .content {
-      min-height: 0;
       font-size: 20px;
+      min-height: 0;
     }
 
     .content-inner {
@@ -262,11 +276,13 @@
 
         h2 {
           font-size: 25px;
-          line-height: 100%;
+          line-height: 20px;
         }
 
         p {
           font-size: 18px;
+          line-height: 24px;
+          margin: 5px 0;
         }
 
         &.destination,
@@ -285,15 +301,21 @@
             }
             .lodging-content,
             .prepare-content {
-              width: auto;
+              max-width: none;
               padding: 0;
             }
             .packing-list {
-              width: auto;
-              margin: 20px 0;
+              max-width: none;
+              margin: 10px 0;
+
+              h3 {
+                font-size: 24px;
+                padding: 10px;
+              }
 
               ul {
                 padding: 10px;
+                font-size: 16px;
               }
             }
             .voucher-image {
@@ -306,6 +328,56 @@
               padding: 0;
             }
           }
+        }
+      }
+    }
+  }
+
+  #about {
+    .about-content {
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .content-inner {
+
+      .background-fishies {
+        display: none;
+      }
+
+      .agencies-content {
+        padding: 20px;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        .participating {
+          margin: 20px 0;
+
+          h3 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .contact {
+        padding: 20px;
+      }
+      .contact-content {
+        img {
+          margin: 0 0 20px 0;
+          max-width: 100%;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 16px;
         }
       }
     }

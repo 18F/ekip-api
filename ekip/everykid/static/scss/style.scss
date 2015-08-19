@@ -82,7 +82,7 @@ button {
 @import "nav";
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center top;
+  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
   background-size: cover;
 
   .menu-container nav li {
@@ -91,12 +91,12 @@ button {
 }
 
 .hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center top;
+  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover;
 }
 
 .tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center top;
+  background: url(../img/backgrounds/tent.png) no-repeat center bottom;
   background-size: cover;
 }
 
@@ -106,13 +106,18 @@ button {
 }
 
 .blue-sky-tent {
-  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center top;
+  background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
   background-size: cover;
 }
 
 .content {
   max-width: $site-width - $nav-width - 50;
-  min-height: 450px;
+  min-height: 508px;
   margin: auto;
   padding: 100px 0 50px $nav-width + 50;
   position: relative;
@@ -123,7 +128,6 @@ button {
   color: #ff0000;
 }
 
-#about,
 #student-pass,
 #plan-your-trip,
 #privacy-policy {
@@ -140,7 +144,6 @@ button {
   }
 }
 
-#about,
 #privacy-policy {
   .content {
     font-weight: 200;
@@ -169,6 +172,7 @@ button {
 @import "student-pass";
 @import "educators";
 @import "plan-your-trip";
+@import "about";
 
 @import "footer";
 

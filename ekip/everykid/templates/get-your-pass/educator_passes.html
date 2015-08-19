@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %}Get Your Pass - Educators{% endblock title %}
+{% block title %}Get your pass - educators{% endblock title %}
 
 {% block page_id %}educators{% endblock page_id %}
 
@@ -10,19 +10,29 @@
 
 {% block content %}
 
-  <h1>Get vouchers<br/>for your students</h1>
+  <h1>Get passes <br/>for your students</h1>
 
-  <p>As a 4th grade educator, you can download a learning activity and print paper vouchers for your students. These vouchers will give them free access for up to a full year to all federal lands and waters.</p>
+  <p>As a fourth-grade educator, you can download an activity and print paper passes for each of your students.</p>
 
   <div class="box">
 
-    <h3>You are a 4th-grade educator if ...</h3>
-    <p>You are a teacher of 4th graders at a US school or a US military school, or</p>
-    <p>You are responsible for the engagement of 4th graders as part of a youth-serving organization. This includes religious group leaders, camp directors and leaders of home-schoolers or after-school programs.</p>
+    <h3>A fourth-grade educator is either of the following: </h3>
+    <p>A teacher at a U.S. or U.S. military school, or</p>
+    <p>An adult who engages fourth graders through a youth-serving organization.
+    For example, a camp director, a home-school leader, an after-school leader, or a religious group leader.</p>
 
-    <a href="#begin">
-      <button>begin</button>
-    </a>
+    <button class="educator-begin">begin</button>
+
+    <svg class="animate-line" width="372px" height="272px" viewBox="0 0 372 272" version="1.1">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-356.000000, -567.000000)" stroke-width="4" stroke-dasharray="6,4">
+          <g transform="translate(358.000000, 567.000000)">
+            <path d="M0.320987654,163.886359 L0.320987654,217.409935 L367.716362,217.409935 L367.716362,272.000153" id="Line-Copy-3" stroke-opacity="0.3" stroke="#2D6C35" transform="translate(184.018675, 217.943256) scale(1, -1) translate(-184.018675, -217.943256) "></path>
+              <path d="M368,0 L368,165" stroke="#FFD77B"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
 
   </div>
 
@@ -31,14 +41,15 @@
 {% block content_inner %}
   <div class="content-inner-block">
 
-    <a name="begin"></a>
     <div class="download-activity">
-      <h3>First download<br/> the activity</h3>
-      <p>We've created a <a href="{% static "activities/class-one.pdf" %}" target="_blank">fun and interactive activity</a> to help you introduce topics surrounding national lands and waters to your 4th-grade students (<a href="{% static "activities/class-one.pdf" %}" target="_blank">PDF</a>).</p>
+      <h3>Download<br/> the activity</h3>
+      <p>Our activity introduces <a href="{% static "activities/class-one.pdf" %}" target="_blank">key topics</a>
+      to your students (<a href="{% static "activities/class-one.pdf" %}" target="_blank">PDF</a>).</p>
     </div>
     <div class="generate-vouchers">
-      <h3>Then generate vouchers</h3>
-      <p>Once your students have successfully completed the activity, you can award them with vouchers. Each student will receive their own individual voucher, with a unique code. Complete this short form to access the vouchers.</p>
+      <h3>Generate passes</h3>
+      <p>Each student receives a paper pass with a unique code.
+      That pass gives them free access to all federal lands and waters until August 2016.</p>
     </div>
 
     <form action="" method="post">

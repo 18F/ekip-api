@@ -66,6 +66,18 @@ To run tests locally:
 python manage.py test --settings=config.settings.test
 ```
 
+## Loading Data
+
+To load the list of pass-exchange sites, you'll need to run the following
+Django management command:
+
+```
+python manage.py passes nationalparks/data/pass-list.csv
+```
+
+where pass-list.csv is the dataset for the pass exchange sites. The data file
+is included in the repository. 
+
 
 ## Deploy Notes
 

@@ -1,15 +1,18 @@
 ul.top-links {
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
   padding: 0 30px 0 0;
   right: 0;
   position: absolute;
+  z-index: 500;
   display: inline-block;
 
   li {
     font-size: 14px;
+    line-height: 12px;
     font-weight: bold;
-    padding: 10px 15px;
+    margin: 12px 0;
+    padding: 0 15px;
     border-right: 1px solid #fff;
     display: inline-block;
 
@@ -18,12 +21,19 @@ ul.top-links {
       opacity: 0.7;
 
       @include transition(opacity 0.4s ease-in);
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
-    a:hover {
-      opacity: 1;
+    &.active {
+      a {
+        color: $yellow;
+        opacity: 1;
+        cursor: default;
+      }
     }
-
     &:last-child {
       border: none;
     }
@@ -45,30 +55,24 @@ ul.top-links {
     top: 50px;
 
     .logo {
-      margin: 0 0 20px 30px;
+      margin: 0 0 20px 27px;
       z-index: 100;
       font-size: 14px;
       display: inline-block;
       position: relative;
 
-      @include transition(opacity 0.3s ease-in);
-
-      span {
-        left: 61px;
-        bottom: 13px;
-        position: absolute;
-      }
-      a {
-        text-decoration: none;
-      }
-      &:hover {
-        opacity: .8;
+      img {
+        width: 174px;
       }
     }
-    .logo-line {
-      top: 150px;
-      left: 108px;
+    .home-line {
+      top: 50px;
+      left: 60px;
       position: absolute;
+
+      g {
+        stroke: #fff;
+      }
     }
 
     .menu {
@@ -78,7 +82,7 @@ ul.top-links {
     .lines {
       width: 55px;
       height: 99px;
-      top: 35px;
+      top: 106px;
       right: 27px;
       z-index: 0;
       position: absolute;
@@ -97,7 +101,7 @@ ul.top-links {
     li {
       z-index: 100;
       background: #fff;
-      margin: 0 0 20px 0;
+      margin: 0 0 23px 0;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: bold;
@@ -146,7 +150,7 @@ ul.top-links {
         }
       }
 
-      &:nth-child(1) {
+      &:nth-child(2) {
         margin-left: 40px;
 
         a:before {
@@ -155,7 +159,7 @@ ul.top-links {
         }
       }
 
-      &:nth-child(3) {
+      &:nth-child(4) {
         margin-left: 55px;
 
         a:before {

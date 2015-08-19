@@ -1,5 +1,10 @@
 #plan-your-trip {
 
+  .plan-your-trip-content {
+    background: rgba(1, 63, 91, 0.6);
+    padding: 35px;
+  }
+
   .content {
     min-height: 540px;
     font-weight: 300;
@@ -42,13 +47,6 @@
       padding: 10px 20px;
       letter-spacing: 1px;
     }
-
-    .sites {
-      li {
-        padding: 10px 0;
-      }
-    }
-
   }
 
   .content-inner {
@@ -100,6 +98,7 @@
       .section-content {
         max-width: 950px;
         margin: auto;
+        position: relative;
       }
 
       &.destination {
@@ -107,8 +106,58 @@
         color: $blue;
 
         .section-content {
-          width: 720px;
+          max-width: 720px;
           padding: 70px 0 0 200px;
+
+          > p {
+            max-width: 620px;
+          }
+
+          ul {
+            margin: 20px 0 0 0;
+          }
+          li {
+            width: 160px;
+            height: 110px;
+            padding: 25px;
+            margin: 0 10px 20px 0;
+            background: #fff;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+
+            h3 {
+              font-size: 20px;
+              font-family: 'Lato', sans-serif;
+            }
+            a {
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            p {
+              font-size: 18px;
+              line-height: 22px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+              h3 {
+                color: $yellow;
+              }
+              p {
+                color: #fff;
+              }
+            }
+            &:nth-child(2) {
+              background: $blue;
+            }
+            &:nth-child(3) {
+              background: $green;
+            }
+          }
         }
       }
       &.lodging {
@@ -121,7 +170,7 @@
             display: inline-block;
           }
           .lodging-content {
-            width: 400px;
+            max-width: 400px;
             padding: 70px 0 0 120px;
             vertical-align: top;
             display: inline-block;
@@ -134,11 +183,12 @@
         color: $green;
 
         .section-content {
-          padding: 65px 0 0 0;
+          padding: 60px 0 0 0;
+          cursor: text;
 
           .prepare-content {
-            width: 360px;
-            padding: 70px 0 0 200px;
+            width: 340px;
+            padding: 70px 30px 0 200px;
             vertical-align: top;
             display: inline-block;
           }
@@ -147,7 +197,15 @@
             background: #fff;
             display: inline-block;
 
+            h3 {
+              font-size: 30px;
+              padding: 30px 0 10px 20px;
+              font-weight: 400;
+            }
             ul {
+              width: auto;
+              margin: 5px 20px;
+              border-top: 2px solid $green;
               padding: 20px;
               font-size: 18px;
               font-weight: 600;
@@ -176,4 +234,32 @@
       }
     }
   }
+
+  .content-inner-block {
+    width: 800px;
+    padding: 50px 0;
+    margin: auto;
+
+    ol li {
+      list-style-type: decimal;
+    }
+
+    .sites {
+
+      li {
+        padding: 20px 0;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 20px;
+      }
+
+    }
+
+
+  }
+
 }
