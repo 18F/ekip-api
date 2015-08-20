@@ -33,7 +33,7 @@
     <ol class="sites">
     {% for site in sites %}
       <li>
-        <h3><a href="{{ site.website }}">{{ site.name }}</a></h3>
+        <h3><a href="/plan-your-trip/field-trip/{{site.slug}}/">{{ site.name }}</a></h3>
         <p>{{ site.city }}, {{ site.state }} </p>
       </li>
     {% endfor %}

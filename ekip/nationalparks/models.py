@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 from localflavor.us.models import (
     USStateField, PhoneNumberField, USZipCodeField)
@@ -58,6 +59,10 @@ class FieldTripSite(models.Model):
 
     best_visit_times = models.ManyToManyField(BestVisitTime)
     facilities = models.ManyToManyField(YouthFacility)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.agency + self.name)[:50]
+        super(FieldTripSite, self).save(*args, **kwargs)
 
     class Meta:
         unique_together = ('name', 'agency')
