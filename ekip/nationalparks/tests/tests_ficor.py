@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from ..management.commands import ficorcleaner  as fc
+from ..management.commands import ficorcleaner as fc
 
 
 class FicorCleanerTests(TestCase):
@@ -19,13 +19,12 @@ class FicorCleanerTests(TestCase):
 
         just_say_no = [
             '',
-            'no', 
+            'no',
             'No',
             'not required']
 
         for text in just_say_no:
             self.assertFalse(fc.clean_advance_reservation(text))
-
 
     def test_clean_agency(self):
 
@@ -40,7 +39,6 @@ class FicorCleanerTests(TestCase):
             'National Oceanic and Atmospheric Administration',
             fc.clean_agency(agency_name))
 
-
     def test_clean_website(self):
 
         url = 'http;//www.usa.gov'
@@ -48,7 +46,6 @@ class FicorCleanerTests(TestCase):
 
         url = 'http://www.usa.gov'
         self.assertEqual('http://www.usa.gov', fc.clean_website(url))
-
 
     def test_clean_phone(self):
         phone_number = 'Chip Baker/276-629-2503'
@@ -76,7 +73,6 @@ class FicorCleanerTests(TestCase):
 
         text = 'Fall - Winter'
         self.assertEqual([('Fall', 'Winter')], fc.parse_range(text))
-
 
     def test_clean_best_times(self):
         text = 'year-round'
