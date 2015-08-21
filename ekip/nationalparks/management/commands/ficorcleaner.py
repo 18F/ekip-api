@@ -1,8 +1,8 @@
 import re
 from localflavor.us.us_states import US_STATES, US_TERRITORIES
 
-STATES = {name:abbr for abbr, name in US_STATES}
-TERRITORIES = {name:abbr for abbr, name in US_TERRITORIES}
+STATES = {name: abbr for abbr, name in US_STATES}
+TERRITORIES = {name: abbr for abbr, name in US_TERRITORIES}
 STATES.update(TERRITORIES)
 
 
@@ -12,10 +12,12 @@ def clean_postal_code(postal_code):
     if postal_code > 0:
         return postal_code
 
+
 def clean_text(text):
     text = text.strip()
     if text:
         return text
+
 
 def clean_advance_reservation(text):
     """ The advance reservation field identifies whether or not advance
@@ -138,6 +140,7 @@ def clean_thirty_five_or_more(text):
     else:
         return False
 
+
 def parse_range(times):
     """ Parse a month or season range like: April - November, or Fall through
     Spring. """
@@ -175,6 +178,7 @@ def clean_best_times(times):
             return ['Year-round']
         else:
             return [times]
+
 
 def clean_state(state_name):
     return STATES[state_name]
