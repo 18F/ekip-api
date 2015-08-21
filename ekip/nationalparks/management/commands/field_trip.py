@@ -30,28 +30,24 @@ def create_youth_facilities(facilities_list):
         facilities.append(facility)
     return facilities
 
-
 def process_site(row):
     name = fc.clean_name(row['NAME'])
     agency = abbreviate_agency(fc.clean_agency(row['AGENCY']))
-    phone = fc.clean_phone(row['PHONE_1'])
-    city = row['City']
-    state = fc.clean_state(row['Region'])
-    website = fc.clean_website(row['WEBSITE'])
-    address_line_1 = row['AddressLin']
-    advance_reservation = fc.clean_advance_reservation(row['ADV_RES_RE'])
-    larger_groups = fc.clean_thirty_five_or_more(row['THRIRTYFIV'])
 
     field_trip_site, created = FieldTripSite.objects.get_or_create(
         name=name, agency=agency)
 
-    field_trip_site.phone = phone
-    field_trip_site.city = city
-    field_trip_site.state = state
-    field_trip_site.website = website
-    field_trip_site.address_line_1 = address_line_1
-    field_trip_site.advance_reservation = advance_reservation
-    field_trip_site.larger_groups = larger_groups
+    field_trip_site.phone = fc.clean_phone(row['PHONE_1'])
+    field_trip_site.city = fc.clean_text(row['City'])
+    field_trip_site.state = fc.clean_state(row['Region'])
+    field_trip_site.website = fc.clean_website(row['WEBSITE'])
+    field_trip_site.address_line_1 = fc.clean_text(row['StAddr'])
+    field_trip_site.advance_reservation = fc.clean_advance_reservation(
+        row['ADV_RES_RE'])
+
+    field_trip_site.larger_groups = fc.clean_thirty_five_or_more(
+        row['THRIRTYFIV'])
+    field_trip_site.zipcode = fc.clean_postal_code(row['PostalCode'])
     field_trip_site.save()
 
     #Clear the deck.

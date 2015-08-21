@@ -40,12 +40,12 @@ class FieldTripSite(models.Model):
     agency = models.CharField(max_length=5, choices=AGENCY_CHOICES)
     phone = PhoneNumberField(null=True)
     phone_extension = models.IntegerField(null=True)
-    city = models.CharField(max_length=128)
+    city = models.CharField(max_length=128, null=True)
     state = USStateField(blank=False, null=False)
     website = models.URLField(max_length=512)
     slug = models.SlugField(unique=True, null=True)
-    address_line_1  = models.CharField(max_length=256)
-    zipcode = USZipCodeField()
+    address_line_1  = models.CharField(max_length=256, null=True)
+    zipcode = USZipCodeField(null=True)
 
     advance_reservation = models.BooleanField(
         default=False,

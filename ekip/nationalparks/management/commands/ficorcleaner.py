@@ -5,6 +5,18 @@ STATES = {name:abbr for abbr, name in US_STATES}
 TERRITORIES = {name:abbr for abbr, name in US_TERRITORIES}
 STATES.update(TERRITORIES)
 
+
+def clean_postal_code(postal_code):
+    postal_code = postal_code.strip()
+    postal_code = int(postal_code)
+    if postal_code > 0:
+        return postal_code
+
+def clean_text(text):
+    text = text.strip()
+    if text:
+        return text
+
 def clean_advance_reservation(text):
     """ The advance reservation field identifies whether or not advance
     reservations are required to use these facilities (day use areas). If there
