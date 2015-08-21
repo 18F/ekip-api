@@ -76,3 +76,33 @@ class FicorCleanerTests(TestCase):
 
         text = 'Fall - Winter'
         self.assertEqual([('Fall', 'Winter')], fc.parse_range(text))
+
+
+    def test_clean_best_times(self):
+        text = 'year-round'
+        self.assertEqual(['Year-round'], fc.clean_best_times(text))
+
+        text = 'Year Around'
+        self.assertEqual(['Year-round'], fc.clean_best_times(text))
+
+        text = 'Year-round opportunities'
+        self.assertEqual(['Year-round'], fc.clean_best_times(text))
+
+        text = 'Fall (September - October)'
+        self.assertEqual(['September - October'], fc.clean_best_times(text))
+
+        text = 'April'
+        self.assertEqual(['April'], fc.clean_best_times(text))
+
+        text = 'Peak periods April through November'
+        self.assertEqual(['April - November'], fc.clean_best_times(text))
+
+    def test_clean_state(self):
+        text = 'New Mexico'
+        self.assertEqual('NM', fc.clean_state(text))
+
+        text = 'Florida'
+        self.assertEqual('FL', fc.clean_state(text))
+
+        text = 'Puerto Rico'
+        self.assertEqual('PR', fc.clean_state(text))

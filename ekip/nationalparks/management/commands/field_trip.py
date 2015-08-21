@@ -32,7 +32,7 @@ def create_youth_facilities(facilities_list):
 
 
 def process_site(row):
-    print(row['PHONE_1'])
+    print(row['BEST_TIMES'])
 
 def process_site2(row):
     name = fc.clean_name(row['NAME'])
