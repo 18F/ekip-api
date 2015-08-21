@@ -1,8 +1,8 @@
 from django.test import TestCase
 
-from .management.commands.passes import phone_number, determine_site_type
-from .management.commands.slugify import nps_slug, nf_slug, nwr_slug
-from .management.commands.slugify import blm_slug, nra_slug, other_slug
+from ..management.commands.passes import phone_number, determine_site_type
+from ..management.commands.slugify import nps_slug, nf_slug, nwr_slug
+from ..management.commands.slugify import blm_slug, nra_slug, other_slug
 
 
 class DataCleanupTests(TestCase):

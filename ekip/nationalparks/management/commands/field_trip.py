@@ -32,6 +32,9 @@ def create_youth_facilities(facilities_list):
 
 
 def process_site(row):
+    print(row['PHONE_1'])
+
+def process_site2(row):
     name = fc.clean_name(row['NAME'])
     agency = abbreviate_agency(fc.clean_agency(row['AGENCY']))
 

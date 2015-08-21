@@ -110,8 +110,7 @@ def clean_website(url):
     """ In a few instances, the URL was not formatted correctly. We correct
     that here. """
 
-    url.replace('http;', 'http:')
-    return url
+    return url.replace('http;', 'http:')
 
 
 def clean_name(name):
