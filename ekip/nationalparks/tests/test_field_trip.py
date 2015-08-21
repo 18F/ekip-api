@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 from ..management.commands import field_trip as trip
-from ..models import BestVisitTime, YouthFacility
+from ..models import BestVisitTime, YouthFacility, FieldTripSite
 
 
 class FieldTripTests(TestCase):
@@ -54,3 +54,43 @@ class FieldTripTests(TestCase):
         r2 = trip.create_youth_facilities(['Restrooms'])
         r2 = r2[0]
         self.assertEqual(r1.id, r2.id)
+
+    def test_process_site(self):
+        row = {
+            'NAME': ' Wheeler NWR',
+            'AGENCY': 'U.S. Fish and Wildlife Service',
+            'PHONE_1': '(256) 350-6639',
+            'City': 'Decatur',
+            'Region': 'Alabama',
+            'WEBSITE': 'http;//www.fws.gov/refuge/Wheeler/',
+            'StAddr': 'Visitor Center Rd',
+            'ADV_RES_RE': 'yes',
+            'THRIRTYFIV': 'Yes',
+            'PostalCode': '35603',
+            'YOUTH_FACI': 'Visitor center, trail, auto tour route, bicycling',
+            'BEST_TIMES': 'September through June'}
+
+        trip.process_site(row)
+
+        fts = FieldTripSite.objects.get(slug='fwswheeler-nwr')
+        self.assertIsNotNone(fts)
+
+        self.assertEqual('Wheeler NWR', fts.name)
+        self.assertEqual('FWS', fts.agency)
+        self.assertEqual('256-350-6639', fts.phone)
+        self.assertEqual('http://www.fws.gov/refuge/Wheeler/', fts.website)
+        self.assertEqual('Visitor Center Rd', fts.address_line_1)
+        self.assertEqual(True, fts.advance_reservation)
+
+        self.assertEqual('Decatur', fts.city)
+        self.assertEqual('AL', fts.state)
+        self.assertEqual('35603', fts.zipcode)
+
+        best_visit_time = fts.best_visit_times.all()[0]
+        self.assertEqual('September - June', best_visit_time.best_time)
+
+        youth_facilities = [y.facility for y in fts.facilities.all()]
+        self.assertTrue('visitor center' in youth_facilities)
+        self.assertTrue('trail' in youth_facilities)
+        self.assertTrue('auto tour route' in youth_facilities)
+        self.assertTrue('bicycling' in youth_facilities)
