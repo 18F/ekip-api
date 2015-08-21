@@ -77,6 +77,7 @@ def pass_exchange(request):
         }
     )
 
+
 def field_trip_details(request, slug):
     destination = get_object_or_404(FieldTripSite, slug=slug)
 
@@ -85,7 +86,7 @@ def field_trip_details(request, slug):
 
     destination.features_list = [
         v.facility for v in destination.facilities.all()]
-        
+
     return render(
         request, 
         'plan-your-trip/field_trip_details.html',

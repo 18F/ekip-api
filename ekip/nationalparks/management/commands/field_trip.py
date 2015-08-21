@@ -6,7 +6,7 @@ from nationalparks.management.commands import ficorcleaner as fc
 from nationalparks.models import FieldTripSite, BestVisitTime, YouthFacility
 
 
-NAME_TO_ABBR = {r[1]:r[0] for r in FieldTripSite.AGENCY_CHOICES}
+NAME_TO_ABBR = {r[1]: r[0] for r in FieldTripSite.AGENCY_CHOICES}
 NAME_TO_ABBR['Army Corps'] = 'USACE'
 
 
@@ -30,6 +30,7 @@ def create_youth_facilities(facilities_list):
         facilities.append(facility)
     return facilities
 
+
 def process_site(row):
     name = fc.clean_name(row['NAME'])
     agency = abbreviate_agency(fc.clean_agency(row['AGENCY']))
@@ -50,7 +51,7 @@ def process_site(row):
     field_trip_site.zipcode = fc.clean_postal_code(row['PostalCode'])
     field_trip_site.save()
 
-    #Clear the deck.
+    # Clear the deck.
     field_trip_site.best_visit_times.remove()
     field_trip_site.facilities.remove()
 

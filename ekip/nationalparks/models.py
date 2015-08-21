@@ -25,7 +25,7 @@ class FieldTripSite(models.Model):
     (and presumably other ages as well). Internally, this is known as the FICOR
     list. """
 
-    # List of management agencies. 
+    # List of management agencies.
     AGENCY_CHOICES = (
         ('USACE', 'US Army Corps of Engineers'),
         ('BLM', 'Bureau of Land Management'),
@@ -44,7 +44,7 @@ class FieldTripSite(models.Model):
     state = USStateField(blank=False, null=False)
     website = models.URLField(max_length=512)
     slug = models.SlugField(unique=True, null=True)
-    address_line_1  = models.CharField(max_length=256, null=True)
+    address_line_1 = models.CharField(max_length=256, null=True)
     zipcode = USZipCodeField(null=True)
 
     advance_reservation = models.BooleanField(
@@ -54,7 +54,7 @@ class FieldTripSite(models.Model):
     update_timestamp = models.DateTimeField(auto_now=True)
 
     larger_groups = models.BooleanField(
-        default=True, 
+        default=True,
         help_text="If the site can accomodate more than 35 4th graders.")
 
     best_visit_times = models.ManyToManyField(BestVisitTime)

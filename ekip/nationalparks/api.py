@@ -21,6 +21,7 @@ class FederalSiteResource(DjangoResource):
 
         return FederalSite.objects.all()
 
+
 class FieldTripResource(DjangoResource):
     """ The API endpoint for FieldTripSites. """
 
@@ -37,7 +38,7 @@ class FieldTripResource(DjangoResource):
 
         if self.request and 'state' in self.request.GET:
             state = self.request.GET.get('state', None)
-        
+
         if state:
             return FieldTripSite.objects.filter(state=state)
 
