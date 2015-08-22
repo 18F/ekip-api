@@ -177,7 +177,7 @@ ul.top-links {
           left: -35px; }
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
+  background: url(../img/backgrounds/mountain.jpg) no-repeat center bottom;
   background-size: cover; }
   .mountain .menu-container nav li {
     border: none; }
@@ -191,7 +191,7 @@ ul.top-links {
   background-size: cover; }
 
 .brown-rocks {
-  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center bottom;
   background-size: cover; }
 
 .blue-sky-tent {
@@ -200,6 +200,10 @@ ul.top-links {
 
 .river {
   background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover; }
+
+.forest {
+  background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .content {
@@ -363,7 +367,9 @@ ul.top-links {
 
 #how-it-works .content-block {
   max-width: 600px;
-  font-size: 22px;
+  background: rgba(45, 108, 53, 0.7);
+  padding: 35px;
+  font-size: 26px;
   font-weight: 300;
   text-align: center; }
   #how-it-works .content-block h1 {
