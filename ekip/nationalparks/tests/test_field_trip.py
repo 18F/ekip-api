@@ -75,7 +75,7 @@ class FieldTripTests(TestCase):
         fts = FieldTripSite.objects.get(slug='fwswheeler-nwr')
         self.assertIsNotNone(fts)
 
-        self.assertEqual('Wheeler NWR', fts.name)
+        self.assertEqual('Wheeler National Wildlife Refuge', fts.name)
         self.assertEqual('FWS', fts.agency)
         self.assertEqual('256-350-6639', fts.phone)
         self.assertEqual('http://www.fws.gov/refuge/Wheeler/', fts.website)

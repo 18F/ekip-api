@@ -115,7 +115,9 @@ def clean_website(url):
 
 def clean_name(name):
     """" Clean up the name of the location. """
-    return name.strip()
+    name = name.strip()
+    name = name.replace('NWR', 'National Wildlife Refuge')
+    return name
 
 
 def clean_phone(phone_number):

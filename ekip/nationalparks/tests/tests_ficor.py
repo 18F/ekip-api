@@ -102,3 +102,8 @@ class FicorCleanerTests(TestCase):
 
         text = 'Puerto Rico'
         self.assertEqual('PR', fc.clean_state(text))
+
+    def test_clean_name(self):
+        name =  ' Blackwater NWR '
+        self.assertEqual(
+            'Blackwater National Wildlife Refuge', fc.clean_name(name))
