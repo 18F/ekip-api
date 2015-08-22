@@ -62,7 +62,7 @@ class FieldTripTests(TestCase):
             'PHONE_1': '(256) 350-6639',
             'City': 'Decatur',
             'Region': 'Alabama',
-            'WEBSITE': 'http;//www.fws.gov/refuge/Wheeler/',
+            'WEBSITE': 'http;/www.fws.gov/refuge/Wheeler/',
             'StAddr': 'Visitor Center Rd',
             'ADV_RES_RE': 'yes',
             'THRIRTYFIV': 'Yes',

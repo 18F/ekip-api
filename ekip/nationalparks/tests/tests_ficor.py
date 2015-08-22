@@ -40,12 +40,12 @@ class FicorCleanerTests(TestCase):
             fc.clean_agency(agency_name))
 
     def test_clean_website(self):
+        urls = [
+            'http;/www.usa.gov', 'http://www.usa.gov', 'http:/www.usa.gov']
 
-        url = 'http;//www.usa.gov'
-        self.assertEqual('http://www.usa.gov', fc.clean_website(url))
+        for url in urls:
+            self.assertEqual('http://www.usa.gov', fc.clean_website(url))
 
-        url = 'http://www.usa.gov'
-        self.assertEqual('http://www.usa.gov', fc.clean_website(url))
 
     def test_clean_phone(self):
         phone_number = 'Chip Baker/276-629-2503'
