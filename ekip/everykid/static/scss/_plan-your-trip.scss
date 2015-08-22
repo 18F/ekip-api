@@ -88,8 +88,8 @@
       position: relative;
 
       .lines {
-        width: 932px;
-        height: 1594px;
+        width: 937px;
+        height: 1773px;
         background: url(../img/plan-your-trip-lines.png) no-repeat;
         top: 70px;
         left: 100px;
@@ -121,11 +121,12 @@
 
       &.destination {
         background: #B1DAEC;
+        min-height: 651px;
         color: $blue;
 
         .section-content {
           max-width: 720px;
-          padding: 70px 0 0 200px;
+          padding: 80px 0 0 240px;
 
           > p {
             max-width: 620px;
@@ -182,7 +183,7 @@
         background: $green;
 
         .section-content {
-          padding: 70px 0 0 0;
+          padding: 10px 0 0 10px;
 
           .lodging-image {
             display: inline-block;
@@ -196,22 +197,23 @@
         }
       }
       &.prepare {
-        min-height: 550px;
+        min-height: 566px;
         background: #CBE4CE;
         color: $green;
 
         .section-content {
-          padding: 60px 0 0 0;
+          padding: 5px 0 0 0;
           cursor: text;
 
           .prepare-content {
-            width: 340px;
+            width: 270px;
             padding: 70px 30px 0 200px;
             vertical-align: top;
             display: inline-block;
           }
           .packing-list {
-            width: 350px;
+            width: 320px;
+            margin: 60px 0 0 45px;
             background: #fff;
             display: inline-block;
 
@@ -236,7 +238,7 @@
         color: #fff;
 
         .section-content {
-          padding: 60px 0 0 0;
+          padding: 80px 0 0 0;
         }
 
         .voucher-image {

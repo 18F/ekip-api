@@ -850,8 +850,8 @@ ul.top-links {
     margin: auto;
     position: relative; }
     #plan-your-trip .content-inner .plan-your-trip-line-container .lines {
-      width: 932px;
-      height: 1594px;
+      width: 937px;
+      height: 1773px;
       background: url(../img/plan-your-trip-lines.png) no-repeat;
       top: 70px;
       left: 100px;
@@ -874,10 +874,11 @@ ul.top-links {
       position: relative; }
     #plan-your-trip .content-inner section.destination {
       background: #B1DAEC;
+      min-height: 651px;
       color: #177099; }
       #plan-your-trip .content-inner section.destination .section-content {
         max-width: 720px;
-        padding: 70px 0 0 200px; }
+        padding: 80px 0 0 240px; }
         #plan-your-trip .content-inner section.destination .section-content > p {
           max-width: 620px; }
         #plan-your-trip .content-inner section.destination .section-content ul {
@@ -914,7 +915,7 @@ ul.top-links {
     #plan-your-trip .content-inner section.lodging {
       background: #2D6C35; }
       #plan-your-trip .content-inner section.lodging .section-content {
-        padding: 70px 0 0 0; }
+        padding: 10px 0 0 10px; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
@@ -923,19 +924,20 @@ ul.top-links {
           vertical-align: top;
           display: inline-block; }
     #plan-your-trip .content-inner section.prepare {
-      min-height: 550px;
+      min-height: 566px;
       background: #CBE4CE;
       color: #2D6C35; }
       #plan-your-trip .content-inner section.prepare .section-content {
-        padding: 60px 0 0 0;
+        padding: 5px 0 0 0;
         cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
-          width: 340px;
+          width: 270px;
           padding: 70px 30px 0 200px;
           vertical-align: top;
           display: inline-block; }
         #plan-your-trip .content-inner section.prepare .section-content .packing-list {
-          width: 350px;
+          width: 320px;
+          margin: 60px 0 0 45px;
           background: #fff;
           display: inline-block; }
           #plan-your-trip .content-inner section.prepare .section-content .packing-list h3 {
@@ -953,7 +955,7 @@ ul.top-links {
       background: #177099;
       color: #fff; }
       #plan-your-trip .content-inner section.voucher .section-content {
-        padding: 60px 0 0 0; }
+        padding: 80px 0 0 0; }
       #plan-your-trip .content-inner section.voucher .voucher-image {
         padding: 0 0 0 70px;
         vertical-align: top;
