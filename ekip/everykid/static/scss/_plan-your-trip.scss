@@ -3,11 +3,29 @@
   .plan-your-trip-content {
     background: rgba(1, 63, 91, 0.6);
     padding: 35px;
+
+    .lets-get-going {
+      width: 145px;
+      margin: 45px auto 0 auto;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "Superclarendon", serif;
+      color: $yellow;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      .arrow-down {
+        margin: 25px auto 10px auto;
+        display: block;
+      }
+    }
   }
 
   .content {
     min-height: 540px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     line-height: 25px;
 
@@ -18,7 +36,7 @@
     p {
       max-width: 580px;
       line-height: 28px;
-      margin: 5px 0 15px 0;
+      margin: 10px 0 15px 0;
     }
 
     .author {
