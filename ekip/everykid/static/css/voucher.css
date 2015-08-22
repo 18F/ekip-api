@@ -98,12 +98,12 @@ html, body {
           width: 250px;
           margin: 245px 0 0 295px; }
         .voucher-container .steps ol li.get, .voucher-instructions .steps ol li.get {
-          width: 260px;
-          margin: 0 0 0 130px;
+          width: 270px;
+          margin: 0 0 0 135px;
           position: relative; }
           .voucher-container .steps ol li.get .durable-pass, .voucher-instructions .steps ol li.get .durable-pass {
             top: 32px;
-            right: -120px;
+            right: -140px;
             position: absolute; }
   .voucher-container .personnel, .voucher-instructions .personnel {
     left: 0;
