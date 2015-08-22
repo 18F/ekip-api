@@ -13,17 +13,28 @@
   <h2>{{destination.name}}</h2>
 
   <p> 
-    {{destination.address_line_1}} <br />
+    {% if destination_address_line_1 %}
+        {{destination.address_line_1}} <br />
+    {% endif %}
     {% if destination.city %}
         {{destination.city}}, 
     {% endif %}
-    {{destination.state}} {{destination.zipcode}}<br />
+    {{destination.state}}
+    {% if destination.zipcode %}
+        {{destination.zipcode}}
+    {% endif %}
+    <br />
     {{destination.phone}}
   </p>
 
   <p>
   {% if destination.larger_groups %}
     This site is suitable for large groups. 
+  {% endif %}
+  </p>
+  <p>
+  {% if destination.advance_reservation %}
+    This site requires advance reservations for field trips. 
   {% endif %}
   </p>
 
