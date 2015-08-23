@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+
+{% block page_id %}student-pass{% endblock page_id %}
+
+{% block background %}tent{% endblock background %}
+
+{% block content %}
+
+  <div class="pass-content">
+
+    <p> I could hardly wait to jump into that fresh, cold </p>
+
+    <form method='POST'>
+        {% csrf_token %}
+        <ul>
+            <li>
+                <button type="submit" name='selection' value="ocean">
+                    Ocean!
+                </button>
+            </li>
+            <li>
+                <button type="submit" name='selection' value="lake">
+                    Lake!
+                </button>
+            </li>
+            <li>
+                <button type="submit" name='selection' value="river">
+                    River!
+                </button>
+            </li>
+        </ul>
+    </form>
+    </div>
+{% endblock content %}

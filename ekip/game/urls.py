@@ -1,6 +1,10 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
+from .views import (
+    nature_walk, nature_walk_end, time_travel, time_travel_end, swimming, 
+    swimming_end)
+
 urlpatterns = patterns(
     '',
     url(r'first/one$', TemplateView.as_view(
@@ -14,4 +18,27 @@ urlpatterns = patterns(
     url(r'first/four$', TemplateView.as_view(
         template_name='first-game/lands_map.html'),
         name='first_game_lands_map'),
+    url(r'adventure/start', TemplateView.as_view(
+        template_name='adventure/start.html'), name='adventure_start'),
+
+
+
+    #url(r'adventure/nature-walk/mountains', TemplateView.as_view(
+    #    template_name='adventure/nature_walk_mountains.html'),
+    #    name='nature_walk_mountains'),
+    #url(r'adventure/nature-walk/animals', TemplateView.as_view(
+    #    template_name='adventure/nature_walk_animals.html'),
+    #    name='nature_walk_animals'),
+    #url(r'adventure/nature-walk/plants', TemplateView.as_view(
+    #    template_name='adventure/nature_walk_plants.html'),
+    #    name='nature_walk_plants'),
+
+    url(r'adventure/nature-walk/end', nature_walk_end, name='nature_walk_end'),
+    url(r'adventure/nature-walk', nature_walk, name='adventure_nature_walk'),
+
+    url(r'adventure/time-travel/end', time_travel_end, name='time_travel_end'),
+    url(r'adventure/time-travel', time_travel, name='adventure_time_travel'),
+
+    url(r'adventure/swimming/end', swimming_end, name='swimming_end'),
+    url(r'adventure/swimming', swimming, name='adventure_swimming'),
 )

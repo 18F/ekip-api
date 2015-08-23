@@ -46,7 +46,7 @@ def student_pass(request):
     if request.method == "POST":
         form = FourthGraderForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect(reverse('first_game_start'))
+            return HttpResponseRedirect(reverse('adventure_start'))
     else:
         form = FourthGraderForm()
     return render(
