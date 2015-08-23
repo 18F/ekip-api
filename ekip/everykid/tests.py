@@ -30,6 +30,10 @@ class BasicPageTestCase(TestCase):
         response = self.client.get(reverse('privacy_policy'))
         self.assertEquals(200, response.status_code)
 
+    def test_field_trip(self):
+        response = self.client.get(reverse('field_trip'))
+        self.assertEquals(200, response.status_code)
+
 
 class NavigationTestCase(TestCase):
     def setUp(self):

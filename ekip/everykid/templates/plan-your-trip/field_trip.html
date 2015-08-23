@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Exchange Your Voucher{% endblock title %}
+
+{% block page_id %}plan-your-trip{% endblock page_id %}
+
+{% block background %}blue-sky-tent{% endblock background %}
+
+{% block content %}
+
+  <h1>Plan a Field Trip</h1>
+
+  <p> A field trip with your class offers a unique learning opportunity. </p>
+
+  <p> Start by selecting the state you are in, or that you plan to visit. </p>
+
+  <form method="GET">
+    <ul>
+      {{ form.as_ul }}
+      <li>
+        <button>Submit</button>
+      </li>
+    </ul>
+  </form>
+
+{% endblock content %}
+
+{% block content_inner %}
+
+  <div class="content-inner-block">
+
+    {% if sites %}
+    <ol class="sites">
+    {% for site in sites %}
+      <li>
+        <h3><a href="/plan-your-trip/field-trip/{{site.slug}}/">{{ site.name }}</a></h3>
+        {% if site.city %}
+            <p>{{ site.city }}, {{ site.state }} </p>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+  </div>
+
+
+{% endblock content_inner %}
+
