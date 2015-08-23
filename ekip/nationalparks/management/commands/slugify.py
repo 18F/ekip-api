@@ -18,7 +18,7 @@ def nwr_slug(name):
     """ National Wildlife Refuge related slug generation. """
     deletes = [
         'NWRC', 'NWR', 'Complex', 'District', 'National Wildlife Refuge',
-        '(also sold at fee booth)', 'National Wildlife & Fish Refuge', 
+        '(also sold at fee booth)', 'National Wildlife & Fish Refuge',
         'Fish and Wildlife Service']
     name = delete_from(name, deletes)
     return slugify('nwr %s' % name)
@@ -28,7 +28,7 @@ def nf_slug(name):
     """ National Forest related slug generation. """
 
     deletes = [
-        'District', 'Office', 'Ranger Station', 'Information Center', 'NF', 
+        'District', 'Office', 'Ranger Station', 'Information Center', 'NF',
         "Visitor's Center", "Management Unit", 'Visitor Center',
         'Nature Center']
     name = delete_from(name, deletes)
@@ -42,12 +42,14 @@ def nps_slug(nps_url):
     components = [i for i in path.split('/') if i != '']
     return slugify('nps %s' % components[0])
 
+
 def nps_name_slug(name):
-    deletes = [ 
+    deletes = [
         'Recreation Area', 'National River'
     ]
     name = delete_from(name, deletes)
     return slugify('nps %s' % name)
+
 
 def blm_slug(name):
     """ BLM related slug generation. """

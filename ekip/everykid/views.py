@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
@@ -7,7 +7,8 @@ from formtools.preview import FormPreview
 from .forms import PassSiteStateForm, FourthGraderForm, ZipCodeForm
 from .models import Educator
 from ticketer.recordlocator.views import TicketResource
-from nationalparks.api import FederalSiteResource
+from nationalparks.api import FederalSiteResource, FieldTripResource
+from nationalparks.models import FieldTripSite
 
 
 def plan_your_trip(request):
@@ -45,7 +46,7 @@ def student_pass(request):
     if request.method == "POST":
         form = FourthGraderForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect(reverse('first_game_start'))
+            return HttpResponseRedirect(reverse('adventure_start'))
     else:
         form = FourthGraderForm()
     return render(
@@ -70,6 +71,43 @@ def pass_exchange(request):
     return render(
         request,
         'plan-your-trip/pass_exchange.html',
+        {
+            'sites': sites,
+            'form': form
+        }
+    )
+
+
+def field_trip_details(request, slug):
+    destination = get_object_or_404(FieldTripSite, slug=slug)
+
+    destination.visit_times_list = [
+        v.best_time for v in destination.best_visit_times.all()]
+
+    destination.features_list = [
+        v.facility for v in destination.facilities.all()]
+
+    return render(
+        request, 
+        'plan-your-trip/field_trip_details.html',
+        {'destination': destination}
+    )
+
+
+def field_trip(request):
+    """ Display the list of sites intended for field trips. """
+
+    state = request.GET.get('state', None)
+
+    if state:
+        sites = FieldTripResource().list(state)
+        form = PassSiteStateForm(initial={'state': state})
+    else:
+        form = PassSiteStateForm()
+        sites = []
+    return render(
+        request,
+        'plan-your-trip/field_trip.html',
         {
             'sites': sites,
             'form': form

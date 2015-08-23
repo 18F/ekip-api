@@ -11,7 +11,7 @@ def determine_site_type(name, website):
     name_fragments = [
         (' BLM', 'BLM'), (' NF', 'NF'), ('National Forest', 'NF'),
         (' NWR', 'NWR'), (' NHS', 'NHS'), (' NRA', 'NRA'),
-        ('National Recreation Area', 'NRA'), 
+        ('National Recreation Area', 'NRA'),
         ('National Wildlife Refuge', 'NWR'), ('Fish and Wildlife', 'NWR')]
 
     for fragment, code in name_fragments:
