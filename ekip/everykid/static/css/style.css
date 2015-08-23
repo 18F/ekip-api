@@ -177,7 +177,7 @@ ul.top-links {
           left: -35px; }
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
+  background: url(../img/backgrounds/mountain.jpg) no-repeat center bottom;
   background-size: cover; }
   .mountain .menu-container nav li {
     border: none; }
@@ -191,7 +191,7 @@ ul.top-links {
   background-size: cover; }
 
 .brown-rocks {
-  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center bottom;
   background-size: cover; }
 
 .blue-sky-tent {
@@ -200,6 +200,10 @@ ul.top-links {
 
 .river {
   background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover; }
+
+.forest {
+  background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .content {
@@ -363,25 +367,30 @@ ul.top-links {
 
 #how-it-works .content-block {
   max-width: 600px;
-  font-size: 22px;
-  font-weight: 300;
+  background: rgba(45, 108, 53, 0.7);
+  padding: 35px;
+  font-size: 26px;
+  font-weight: 400;
   text-align: center; }
   #how-it-works .content-block h1 {
     text-align: left; }
   #how-it-works .content-block p {
     text-align: left;
     margin: 0; }
-  #how-it-works .content-block button {
-    font-size: 18px;
-    margin: 100px 0 0 0;
-    padding: 20px 30px;
-    border: 4px solid #fff;
-    -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
-    -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
-    transition: background 0.2s ease-in, color 0.2s ease-in; }
-    #how-it-works .content-block button:hover {
-      background: #fff;
-      color: #177099; }
+  #how-it-works .content-block .lets-get-going {
+    width: 145px;
+    margin: 45px auto 0 auto;
+    text-transform: uppercase;
+    font-family: "Superclarendon", serif;
+    text-align: center;
+    color: #FFE897;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer; }
+    #how-it-works .content-block .lets-get-going .arrow-down {
+      margin: 25px auto 10px auto;
+      display: block; }
 
 #how-it-works .content-inner {
   font-weight: 300; }
@@ -437,7 +446,7 @@ ul.top-links {
   background: rgba(23, 112, 153, 0.9);
   padding: 30px;
   font-size: 22px;
-  font-weight: 300; }
+  font-weight: 400; }
   #get-your-pass .pass-content::after {
     clear: both;
     content: "";
@@ -779,10 +788,24 @@ ul.top-links {
 #plan-your-trip .plan-your-trip-content {
   background: rgba(1, 63, 91, 0.6);
   padding: 35px; }
+  #plan-your-trip .plan-your-trip-content .lets-get-going {
+    width: 145px;
+    margin: 45px auto 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Superclarendon", serif;
+    color: #FFE897;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer; }
+    #plan-your-trip .plan-your-trip-content .lets-get-going .arrow-down {
+      margin: 25px auto 10px auto;
+      display: block; }
 
 #plan-your-trip .content {
   min-height: 540px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   line-height: 25px; }
   #plan-your-trip .content h1 {
@@ -791,7 +814,7 @@ ul.top-links {
   #plan-your-trip .content p {
     max-width: 580px;
     line-height: 28px;
-    margin: 5px 0 15px 0; }
+    margin: 10px 0 15px 0; }
   #plan-your-trip .content .author {
     font-size: 17px;
     text-transform: uppercase; }
@@ -827,8 +850,8 @@ ul.top-links {
     margin: auto;
     position: relative; }
     #plan-your-trip .content-inner .plan-your-trip-line-container .lines {
-      width: 932px;
-      height: 1594px;
+      width: 937px;
+      height: 1773px;
       background: url(../img/plan-your-trip-lines.png) no-repeat;
       top: 70px;
       left: 100px;
@@ -851,10 +874,11 @@ ul.top-links {
       position: relative; }
     #plan-your-trip .content-inner section.destination {
       background: #B1DAEC;
+      min-height: 651px;
       color: #177099; }
       #plan-your-trip .content-inner section.destination .section-content {
         max-width: 720px;
-        padding: 70px 0 0 200px; }
+        padding: 80px 0 0 240px; }
         #plan-your-trip .content-inner section.destination .section-content > p {
           max-width: 620px; }
         #plan-your-trip .content-inner section.destination .section-content ul {
@@ -891,7 +915,7 @@ ul.top-links {
     #plan-your-trip .content-inner section.lodging {
       background: #2D6C35; }
       #plan-your-trip .content-inner section.lodging .section-content {
-        padding: 70px 0 0 0; }
+        padding: 10px 0 0 10px; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
@@ -900,19 +924,20 @@ ul.top-links {
           vertical-align: top;
           display: inline-block; }
     #plan-your-trip .content-inner section.prepare {
-      min-height: 550px;
+      min-height: 566px;
       background: #CBE4CE;
       color: #2D6C35; }
       #plan-your-trip .content-inner section.prepare .section-content {
-        padding: 60px 0 0 0;
+        padding: 5px 0 0 0;
         cursor: text; }
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content {
-          width: 340px;
+          width: 270px;
           padding: 70px 30px 0 200px;
           vertical-align: top;
           display: inline-block; }
         #plan-your-trip .content-inner section.prepare .section-content .packing-list {
-          width: 350px;
+          width: 320px;
+          margin: 60px 0 0 45px;
           background: #fff;
           display: inline-block; }
           #plan-your-trip .content-inner section.prepare .section-content .packing-list h3 {
@@ -930,7 +955,7 @@ ul.top-links {
       background: #177099;
       color: #fff; }
       #plan-your-trip .content-inner section.voucher .section-content {
-        padding: 60px 0 0 0; }
+        padding: 80px 0 0 0; }
       #plan-your-trip .content-inner section.voucher .voucher-image {
         padding: 0 0 0 70px;
         vertical-align: top;
@@ -960,6 +985,20 @@ ul.top-links {
   line-height: 25px; }
   #about .about-content p {
     padding: 10px 0; }
+  #about .about-content .about-more {
+    width: 235px;
+    margin: 45px auto 0 auto;
+    text-transform: uppercase;
+    font-family: "Superclarendon", serif;
+    text-align: center;
+    color: #FFE897;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer; }
+    #about .about-content .about-more .arrow-down {
+      margin: 25px auto 10px auto;
+      display: block; }
 
 #about .content-inner {
   font-weight: 200;

@@ -82,7 +82,7 @@ button {
 @import "nav";
 
 .mountain {
-  background: url(../img/backgrounds/mountain.png) no-repeat center bottom;
+  background: url(../img/backgrounds/mountain.jpg) no-repeat center bottom;
   background-size: cover;
 
   .menu-container nav li {
@@ -101,7 +101,7 @@ button {
 }
 
 .brown-rocks {
-  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center fixed;
+  background: url(../img/backgrounds/brownrocks.jpg) no-repeat center center bottom;
   background-size: cover;
 }
 
@@ -114,6 +114,12 @@ button {
   background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
   background-size: cover;
 }
+
+.forest {
+  background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
 
 .content {
   max-width: $site-width - $nav-width - 50;
