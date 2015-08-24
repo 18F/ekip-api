@@ -1219,16 +1219,24 @@ footer {
     padding: 20px; }
     #how-it-works .content-block button {
       display: none; }
-  #how-it-works .content-inner ol li {
-    width: auto;
-    height: auto;
-    padding: 20px; }
-    #how-it-works .content-inner ol li:nth-child(even) .step-container {
-      margin-left: 0; }
-    #how-it-works .content-inner ol li .step-container .step {
-      font-size: 18px; }
-  #how-it-works .content-inner .reminders {
-    padding: 20px; }
+  #how-it-works .content-inner .how-it-works-line-container {
+    display: none; }
+  #how-it-works .content-inner section {
+    min-height: 0; }
+    #how-it-works .content-inner section h2 {
+      font-size: 28px;
+      line-height: 28px; }
+    #how-it-works .content-inner section p {
+      font-size: 22px;
+      line-height: 24px; }
+    #how-it-works .content-inner section .section-content {
+      padding: 20px; }
+    #how-it-works .content-inner section.get-your-pass .description,
+    #how-it-works .content-inner section.plan-a-trip .description,
+    #how-it-works .content-inner section.hit-the-road .description,
+    #how-it-works .content-inner section.reminders .description {
+      max-width: 100%;
+      margin: 20px 0; }
   #get-your-pass .content .pass-content,
   #student-pass .content .pass-content {
     padding: 20px; }

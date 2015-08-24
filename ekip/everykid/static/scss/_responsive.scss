@@ -169,24 +169,36 @@
       }
     }
     .content-inner {
-      ol li {
-        width: auto;
-        height: auto;
-        padding: 20px;
 
-        &:nth-child(even) {
-          .step-container {
-            margin-left: 0;
-          }
-        }
-        .step-container .step {
-          font-size: 18px;
-        }
+      .how-it-works-line-container {
+        display: none;
       }
 
-      .reminders {
-        padding: 20px;
+      section {
+        min-height: 0;
+
+        h2 {
+          font-size: 28px;
+          line-height: 28px;
+        }
+        p {
+          font-size: 22px;
+          line-height: 24px;
+        }
+
+        .section-content {
+          padding: 20px;
+        }
+        &.get-your-pass .description,
+        &.plan-a-trip .description,
+        &.hit-the-road .description,
+        &.reminders .description {
+          max-width: 100%;
+          margin: 20px 0;
+        }
+
       }
+
     }
   }
 
