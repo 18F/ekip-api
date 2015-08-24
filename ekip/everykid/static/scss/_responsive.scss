@@ -221,19 +221,20 @@
   }
 
   #get-your-pass .content .pass-content {
-    h1,
-    p,
-    img,
-    ul.boxes,
-    ul.boxes li {
-      width: auto;
-      float: none;
-    }
-    p {
+
+    ul.boxes {
       margin: 15px 0;
-    }
-    img {
-      width: 100%;
+
+      li {
+        width: 100%;
+        height: auto;
+        padding: 0 0 20px 0;
+        margin: 0 0 15px 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
     }
   }
 
