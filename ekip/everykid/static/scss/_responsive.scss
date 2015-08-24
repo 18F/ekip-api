@@ -187,15 +187,23 @@
           line-height: 24px;
         }
 
-        .section-content {
-          padding: 20px;
-        }
-        &.get-your-pass .description,
-        &.plan-a-trip .description,
-        &.hit-the-road .description,
-        &.reminders .description {
-          max-width: 100%;
-          margin: 20px 0;
+        &.get-your-pass,
+        &.plan-a-trip,
+        &.hit-the-road,
+        &.reminders {
+
+          .section-content {
+            padding: 20px;
+          }
+
+          .image {
+            margin: 0;
+          }
+
+          .description {
+            max-width: 100%;
+            margin: 20px 0;
+          }
         }
       }
     }

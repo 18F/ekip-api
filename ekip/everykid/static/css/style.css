@@ -1259,8 +1259,16 @@ footer {
     #how-it-works .content-inner section p {
       font-size: 22px;
       line-height: 24px; }
-    #how-it-works .content-inner section .section-content {
+    #how-it-works .content-inner section.get-your-pass .section-content,
+    #how-it-works .content-inner section.plan-a-trip .section-content,
+    #how-it-works .content-inner section.hit-the-road .section-content,
+    #how-it-works .content-inner section.reminders .section-content {
       padding: 20px; }
+    #how-it-works .content-inner section.get-your-pass .image,
+    #how-it-works .content-inner section.plan-a-trip .image,
+    #how-it-works .content-inner section.hit-the-road .image,
+    #how-it-works .content-inner section.reminders .image {
+      margin: 0; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
