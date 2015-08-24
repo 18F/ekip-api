@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}How Every Kid in a Park Works{% endblock title %}
 {% block page_id %}how-it-works{% endblock page_id %}
@@ -44,11 +45,17 @@
 
         <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
       </div>
+      <div class="image">
+        <img src="{% static "img/how-it-works-print.png" %}" alt="" />
+      </div>
     </div>
   </section>
 
   <section class="plan-a-trip">
     <div class="section-content">
+      <div class="image">
+        <img src="{% static "img/how-it-works-plan.png" %}" alt="" />
+      </div>
       <div class="description">
         <h2>Plan a trip</h2>
         <p>It's a good idea to involve your parents during this portion.</p>
@@ -64,11 +71,19 @@
         <p>Enjoy federal lands and waters
         for a full year. Leave only footseps. Take only pictures. </p>
       </div>
+      <div class="image">
+        <img src="{% static "img/how-it-works-road.png" %}" alt="" />
+      </div>
     </div>
   </section>
 
   <section class="reminders">
     <div class="section-content">
+
+      <div class="image">
+        <img src="{% static "img/how-it-works-pass.png" %}" alt="" />
+      </div>
+
       <div class="description">
         <h2>A few things to know...</h2>
         <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>

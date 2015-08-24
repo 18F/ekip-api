@@ -85,9 +85,24 @@
       &.get-your-pass {
         background: $red;
 
+        .section-content {
+          padding: 40px 0;
+        }
+
         .description {
           max-width: 420px;
-          margin: 0 0 0 185px;
+          margin: 40px 0 0 185px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .image {
+          margin: 40px 0 0 60px;
+          display: inline-block;
+
+          img {
+            width: 252px;
+            height: 307px;
+          }
         }
       }
 
@@ -99,9 +114,15 @@
           color: $red;
         }
 
+        .image {
+          display: inline-block;
+        }
+
         .description {
           max-width: 480px;
-          margin: 0 0 0 470px;
+          margin: 0 0 0 110px;
+          display: inline-block;
+          vertical-align: top;
 
           button {
             background: $red;
@@ -123,16 +144,39 @@
       &.hit-the-road {
         background: $red;
 
+        .section-content {
+          padding: 40px 0;
+        }
+
         .description {
           max-width: 435px;
-          margin: 0 0 0 190px;
+          margin: 40px 0 0 190px;
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        .image {
+          margin: 20px 0 0 60px;
+          display: inline-block;
         }
       }
 
       &.reminders {
 
+        .image {
+          margin: 0 55px 0 0;
+          display: inline-block;
+          vertical-align: top;
+
+          img {
+            max-width: 443px;
+            max-height: 198px;
+          }
+        }
+
         .description {
           max-width: 430px;
+          display: inline-block;
         }
       }
 

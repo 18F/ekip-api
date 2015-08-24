@@ -427,17 +427,31 @@ ul.top-links {
           text-decoration: underline; }
     #how-it-works .content-inner section.get-your-pass {
       background: #C82629; }
+      #how-it-works .content-inner section.get-your-pass .section-content {
+        padding: 40px 0; }
       #how-it-works .content-inner section.get-your-pass .description {
         max-width: 420px;
-        margin: 0 0 0 185px; }
+        margin: 40px 0 0 185px;
+        display: inline-block;
+        vertical-align: top; }
+      #how-it-works .content-inner section.get-your-pass .image {
+        margin: 40px 0 0 60px;
+        display: inline-block; }
+        #how-it-works .content-inner section.get-your-pass .image img {
+          width: 252px;
+          height: 307px; }
     #how-it-works .content-inner section.plan-a-trip {
       background: #FDEED0;
       color: #000; }
       #how-it-works .content-inner section.plan-a-trip h2 {
         color: #C82629; }
+      #how-it-works .content-inner section.plan-a-trip .image {
+        display: inline-block; }
       #how-it-works .content-inner section.plan-a-trip .description {
         max-width: 480px;
-        margin: 0 0 0 470px; }
+        margin: 0 0 0 110px;
+        display: inline-block;
+        vertical-align: top; }
         #how-it-works .content-inner section.plan-a-trip .description button {
           background: #C82629;
           letter-spacing: 1px;
@@ -452,11 +466,26 @@ ul.top-links {
             color: #C82629; }
     #how-it-works .content-inner section.hit-the-road {
       background: #C82629; }
+      #how-it-works .content-inner section.hit-the-road .section-content {
+        padding: 40px 0; }
       #how-it-works .content-inner section.hit-the-road .description {
         max-width: 435px;
-        margin: 0 0 0 190px; }
+        margin: 40px 0 0 190px;
+        display: inline-block;
+        vertical-align: top; }
+      #how-it-works .content-inner section.hit-the-road .image {
+        margin: 20px 0 0 60px;
+        display: inline-block; }
+    #how-it-works .content-inner section.reminders .image {
+      margin: 0 55px 0 0;
+      display: inline-block;
+      vertical-align: top; }
+      #how-it-works .content-inner section.reminders .image img {
+        max-width: 443px;
+        max-height: 198px; }
     #how-it-works .content-inner section.reminders .description {
-      max-width: 430px; }
+      max-width: 430px;
+      display: inline-block; }
 
 #get-your-pass .content {
   min-height: 600px; }
