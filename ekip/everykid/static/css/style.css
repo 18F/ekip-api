@@ -394,50 +394,69 @@ ul.top-links {
 
 #how-it-works .content-inner {
   font-weight: 300; }
-  #how-it-works .content-inner h2 {
-    font-size: 30px; }
-  #how-it-works .content-inner ol li {
-    width: 100%;
-    height: 100%;
-    padding: 60px 0 120px 0;
-    background: #C82629;
-    list-style: none; }
-    #how-it-works .content-inner ol li:nth-child(even) {
+  #how-it-works .content-inner .how-it-works-line-container {
+    max-width: 950px;
+    margin: auto;
+    position: relative; }
+    #how-it-works .content-inner .how-it-works-line-container .lines {
+      width: 471px;
+      height: 1279px;
+      background: url(../img/how-it-works-lines.png) no-repeat;
+      top: 70px;
+      left: 100px;
+      position: absolute; }
+  #how-it-works .content-inner section {
+    min-height: 450px;
+    margin: auto; }
+    #how-it-works .content-inner section h2 {
+      font-size: 36px;
+      line-height: 36px; }
+    #how-it-works .content-inner section p {
+      font-size: 22px;
+      line-height: 28px;
+      margin: 5px 0; }
+    #how-it-works .content-inner section .section-content {
+      max-width: 950px;
+      padding: 80px 0;
+      margin: auto;
+      position: relative; }
+      #how-it-works .content-inner section .section-content a {
+        color: #FFE897;
+        text-decoration: none; }
+        #how-it-works .content-inner section .section-content a:hover {
+          text-decoration: underline; }
+    #how-it-works .content-inner section.get-your-pass {
+      background: #C82629; }
+      #how-it-works .content-inner section.get-your-pass .description {
+        max-width: 420px;
+        margin: 0 0 0 185px; }
+    #how-it-works .content-inner section.plan-a-trip {
       background: #FDEED0;
       color: #000; }
-      #how-it-works .content-inner ol li:nth-child(even) h2 {
-        background: #C82629;
-        color: #fff; }
-      #how-it-works .content-inner ol li:nth-child(even) .step-container {
-        margin-left: 300px; }
-    #how-it-works .content-inner ol li h2 {
-      width: 50px;
-      height: 45px;
-      background: #fff;
-      border-radius: 30px;
-      font-size: 38px;
-      color: #C82629;
-      margin: 0 20px 0 0;
-      text-align: center;
-      display: inline-block;
-      vertical-align: top; }
-    #how-it-works .content-inner ol li .step-container {
-      max-width: 900px;
-      margin: auto; }
-      #how-it-works .content-inner ol li .step-container .step {
-        max-width: 500px;
-        font-size: 22px;
-        display: inline-block; }
-  #how-it-works .content-inner .reminders {
-    max-width: 1030px;
-    padding: 60px 20px 80px 20px;
-    margin: auto; }
-    #how-it-works .content-inner .reminders ul {
-      max-width: 600px; }
-    #how-it-works .content-inner .reminders li {
-      font-size: 16px;
-      line-height: 20px;
-      padding: 0 0 10px 0; }
+      #how-it-works .content-inner section.plan-a-trip h2 {
+        color: #C82629; }
+      #how-it-works .content-inner section.plan-a-trip .description {
+        max-width: 480px;
+        margin: 0 0 0 470px; }
+        #how-it-works .content-inner section.plan-a-trip .description button {
+          background: #C82629;
+          letter-spacing: 1px;
+          color: #FFE897;
+          padding: 13px 30px;
+          margin: 20px 0;
+          -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+          -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+          transition: background 0.2s ease-in, color 0.2s ease-in; }
+          #how-it-works .content-inner section.plan-a-trip .description button:hover {
+            background: #fff;
+            color: #C82629; }
+    #how-it-works .content-inner section.hit-the-road {
+      background: #C82629; }
+      #how-it-works .content-inner section.hit-the-road .description {
+        max-width: 435px;
+        margin: 0 0 0 190px; }
+    #how-it-works .content-inner section.reminders .description {
+      max-width: 430px; }
 
 #get-your-pass .content {
   min-height: 600px; }

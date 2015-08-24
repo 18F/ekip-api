@@ -32,52 +32,51 @@
 
 {% block content_inner %}
 
-  <ol>
-    <li>
-      <div class="step-container">
-        <h2>1</h2>
-
-        <div class="step">
-          <p>Fourth graders: <a href="{% url "student_pass" %}">click here</a> to get and print your pass.</p>
-
-          <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="step-container">
-        <h2>2</h2>
-
-        <div class="step">
-          <p><a href="{% url "plan_your_trip" %}">Plan a trip</a>. It's a good idea to involve your parents during this portion.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="step-container">
-        <h2>3</h2>
-
-        <div class="step">
-          <p>Enjoy federal lands and waters
-          for a full year. Leave only footseps. Take only pictures. </p>
-        </div>
-      </div>
-    </li>
-  </ol>
-
-  <div class="reminders">
-    <h2> A few things to know: </h2>
-
-    <ul>
-      <li>
-        <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>
-      </li>
-
-      <li>
-        <p>Your pass has a unique code. That means you can't copy it and give it to friends.
-        Encourage your friends to get their own pass if they're in the fourth grade.</p>
-      </li>
-    </ul>
+  <div class="how-it-works-line-container">
+    <div class="lines"></div>
   </div>
+
+  <section class="get-your-pass">
+    <div class="section-content">
+      <div class="description">
+        <h2>Get your pass</h2>
+        <p>Fourth graders: <a href="{% url "student_pass" %}">click here</a> to get and print your pass.</p>
+
+        <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-a-trip">
+    <div class="section-content">
+      <div class="description">
+        <h2>Plan a trip</h2>
+        <p>It's a good idea to involve your parents during this portion.</p>
+        <a href="{% url "plan_your_trip" %}"><button>Start</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hit-the-road">
+    <div class="section-content">
+      <div class="description">
+        <h2>Hit the road!</h2>
+        <p>Enjoy federal lands and waters
+        for a full year. Leave only footseps. Take only pictures. </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reminders">
+    <div class="section-content">
+      <div class="description">
+        <h2>A few things to know...</h2>
+        <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>
+        <br/>
+        <p>Your pass has a unique code. That means you can't copy it and give it to friends.
+          Encourage your friends to get their own pass if they're in the fourth grade.</p>
+      </div>
+    </div>
+  </section>
 
 {% endblock content_inner %}

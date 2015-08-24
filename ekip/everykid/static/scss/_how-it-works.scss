@@ -37,72 +37,105 @@
   .content-inner {
     font-weight: 300;
 
-    h2 {
-      font-size: 30px;
-    }
+    .how-it-works-line-container {
+      max-width: 950px;
+      margin: auto;
+      position: relative;
 
-    ol {
-      li {
-        width: 100%;
-        height: 100%;
-        padding: 60px 0 120px 0;
-        background: $red;
-        list-style: none;
-
-        &:nth-child(even) {
-          background: $cream;
-          color: #000;
-
-          h2 {
-            background: $red;
-            color: #fff;
-          }
-
-          .step-container {
-            margin-left: 300px;
-          }
-        }
-
-        h2 {
-          width: 50px;
-          height: 45px;
-          background: #fff;
-          border-radius: 30px;
-          font-size: 38px;
-          color: $red;
-          margin: 0 20px 0 0;
-          text-align: center;
-          display: inline-block;
-          vertical-align: top;
-        }
-
-        .step-container {
-          max-width: 900px;
-          margin: auto;
-
-          .step {
-            max-width: 500px;
-            font-size: 22px;
-            display: inline-block;
-          }
-        }
+      .lines {
+        width: 471px;
+        height: 1279px;
+        background: url(../img/how-it-works-lines.png) no-repeat;
+        top: 70px;
+        left: 100px;
+        position: absolute;
       }
     }
 
-    .reminders {
-      max-width: 1030px;
-      padding: 60px 20px 80px 20px;
+    section {
+      min-height: 450px;
       margin: auto;
 
-      ul {
-        max-width: 600px;
+      h2 {
+        font-size: 36px;
+        line-height: 36px;
       }
-      li {
-        font-size: 16px;
-        line-height: 20px;
-        padding: 0 0 10px 0;
+      p {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 5px 0;
       }
-    }
 
+      .section-content {
+        max-width: 950px;
+        padding: 80px 0;
+        margin: auto;
+        position: relative;
+
+        a {
+          color: $yellow;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &.get-your-pass {
+        background: $red;
+
+        .description {
+          max-width: 420px;
+          margin: 0 0 0 185px;
+        }
+      }
+
+      &.plan-a-trip {
+        background: $cream;
+        color: #000;
+
+        h2 {
+          color: $red;
+        }
+
+        .description {
+          max-width: 480px;
+          margin: 0 0 0 470px;
+
+          button {
+            background: $red;
+            letter-spacing: 1px;
+            color: $yellow;
+            padding: 13px 30px;
+            margin: 20px 0;
+
+            @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+            &:hover {
+              background: #fff;
+              color: $red;
+            }
+          }
+        }
+      }
+
+      &.hit-the-road {
+        background: $red;
+
+        .description {
+          max-width: 435px;
+          margin: 0 0 0 190px;
+        }
+      }
+
+      &.reminders {
+
+        .description {
+          max-width: 430px;
+        }
+      }
+
+    }
   }
 }
