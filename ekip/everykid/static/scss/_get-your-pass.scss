@@ -5,89 +5,65 @@
   }
 
   .pass-content {
-    background: rgba(23, 112, 153, 0.9);
+    background: rgba(23, 112, 153, 0.8);
     padding: 30px;
     font-size: 22px;
-    font-weight: 300;
-
-    @include clearfix();
-
-    h1 {
-      width: 370px;
-      line-height: 40px;
-      padding: 0 0 13px 0;
-      float: left;
-    }
-    p {
-      width: 370px;
-      line-height: 25px;
-      margin: 0 0 30px 0;
-      float: left;
-    }
-    img {
-      float: left;
-    }
+    font-weight: 400;
 
     ul.boxes {
-      width: 254px;
-      float: right;
+      margin: 40px 0 0 0;
+      text-align: center;
 
       li {
-        padding: 25px;
-        margin: 0 0 15px 0;
-        border: 2px solid $blue-light;
-        text-align: center;
-        float: right;
-
-        a {
-          text-decoration: none;
-        }
-        h2 {
-          color: $yellow;
-          font-size: 14px;
-          line-height: 14px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-        p {
-          width: auto;
-          margin: 0;
-          font-size: 18px;
-          line-height: 18px;
-        }
+        width: 190px;
+        height: 230px;
+        background: $yellow;
+        color: $green;
+        font-size: 16px;
+        font-weight: 200;
+        margin: 0 15px 0 0;
+        display: inline-block;
+        vertical-align: top;
 
         &.fourth-graders {
-          background: $yellow;
-          border: none;
-          color: $blue;
+          width: 230px;
+        }
 
-          h2 {
-            color: $blue;
-            font-size: 20px;
-            line-height: 22px;
-            font-weight: bold;
-            text-transform: uppercase;
-          }
-          p {
-            line-height: 22px;
-            margin: 0 0 20px 0;
-          }
-          button {
-            background: url(../img/icon-fish-blue.png) center left 10px no-repeat;
-            border: 2px solid $blue;
-            color: $blue;
-            font-weight: 600;
-            padding: 10px 20px 10px 45px;
-            letter-spacing: 1px;
+        img {
+          margin: 20px 0 10px 0;
+        }
 
-            @include transition(background 0.2s ease-in, color 0.2s ease-in);
+        .backpack {
+          width: 32px;
+          height: 40px;
+        }
+        .binoculars {
+          width: 43px;
+          height: 38px;
+        }
 
-            &:hover {
-              border: 2px solid $blue;
-              background: $blue url(../img/icon-fish-white.png) center left 10px no-repeat;
+        h2 {
+          font-family: 'Lato', sans-serif;
+          font-size: 22px;
+          font-weight: 400;
+          padding: 0;
+        }
+        p {
+          padding: 0 10px 15px 10px;
+        }
 
-              color: #fff;
-            }
+        button {
+          border: 1px solid $green;
+          color: $green;
+          font-weight: 600;
+          padding: 10px 20px;
+          letter-spacing: 1px;
+
+          @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+          &:hover {
+            background: $green;
+            color: #fff;
           }
         }
 

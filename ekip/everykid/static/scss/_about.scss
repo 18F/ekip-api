@@ -9,6 +9,26 @@
     p {
       padding: 10px 0;
     }
+
+    .about-more {
+      width: 235px;
+      margin: 45px auto 0 auto;
+      text-transform: uppercase;
+      font-family: "Superclarendon", serif;
+      text-align: center;
+      color: $yellow;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      .arrow-down {
+        margin: 25px auto 10px auto;
+        display: block;
+      }
+    }
+
+
   }
 
   .content-inner {

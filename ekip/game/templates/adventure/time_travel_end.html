@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+
+{% block page_id %}student-pass{% endblock page_id %}
+
+{% block background %}tent{% endblock background %}
+
+{% block content %}
+
+  <div class="pass-content">
+
+    <p> The best part is that this historic place belongs to me! </p>
+    <p> What a great trip. </p>
+
+    <a href={%url "game_success" %}><button>Get your pass now</button></a>
+
+    <hr />
+    <p>
+    Your story: time travelled to see {{selection}}!
+    </p>
+
+    <p>Dear Diary,</p>
+
+    <p>Today I used my free pass to explore America!</p>
+
+    <p>At first I was nervous, because there were so many options. There were
+    parks, forests, seashores, and wildlife habitats to visit. I had to decide
+    what I wanted to do.</p>
+
+    <p>I time travelled! It was so cool to see {{selection}}. And the
+     best part is that this cool place belongs to me! What a great trip.</p> 
+
+    </div>
+{% endblock content %}

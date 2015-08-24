@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}How Every Kid in a Park Works{% endblock title %}
 {% block page_id %}how-it-works{% endblock page_id %}
 
-{% block background %}mountain{% endblock background %}
+{% block background %}forest{% endblock background %}
 
 {% block content %}
 
@@ -14,7 +15,17 @@
     <p>Follow the steps below, and you'll be visiting the
     outdoors in no time.</p>
 
-    <button class="get-started">Get started</button>
+    <div class="lets-get-going">
+      Let's Get Going!
+
+      <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-757.000000, -384.000000)" fill="#FFE897">
+            <path d="M792.840667,386.497942 L790.349333,384 L774.920333,399.469926 L759.491333,384 L757,386.497942 L774.920333,404.465809 L792.840667,386.497942"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
 
   </div>
 
@@ -22,52 +33,64 @@
 
 {% block content_inner %}
 
-  <ol>
-    <li>
-      <div class="step-container">
-        <h2>1</h2>
-
-        <div class="step">
-          <p>Fourth graders: <a href="{% url "student_pass" %}">click here</a> to get and print your pass.</p>
-
-          <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="step-container">
-        <h2>2</h2>
-
-        <div class="step">
-          <p><a href="{% url "plan_your_trip" %}">Plan a trip</a>. It's a good idea to involve your parents during this portion.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="step-container">
-        <h2>3</h2>
-
-        <div class="step">
-          <p>Enjoy federal lands and waters
-          for a full year. Leave only footseps. Take only pictures. </p>
-        </div>
-      </div>
-    </li>
-  </ol>
-
-  <div class="reminders">
-    <h2> A few things to know: </h2>
-
-    <ul>
-      <li>
-        <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>
-      </li>
-
-      <li>
-        <p>Your pass has a unique code. That means you can't copy it and give it to friends.
-        Encourage your friends to get their own pass if they're in the fourth grade.</p>
-      </li>
-    </ul>
+  <div class="how-it-works-line-container">
+    <div class="lines"></div>
   </div>
+
+  <section class="get-your-pass">
+    <div class="section-content">
+      <div class="description">
+        <h2>Get your pass</h2>
+        <p>Fourth graders: <a href="{% url "student_pass" %}">click here</a> to get and print your pass.</p>
+
+        <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
+      </div>
+      <div class="image">
+        <img src="{% static "img/how-it-works-print.png" %}" alt="Printable Pass" />
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-a-trip">
+    <div class="section-content">
+      <div class="image">
+        <img src="{% static "img/how-it-works-plan.png" %}" alt="Stand up paddlers with dog" />
+      </div>
+      <div class="description">
+        <h2>Plan a trip</h2>
+        <p>It's a good idea to involve your parents during this portion.</p>
+        <a href="{% url "plan_your_trip" %}"><button>Start</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hit-the-road">
+    <div class="section-content">
+      <div class="description">
+        <h2>Hit the road!</h2>
+        <p>Enjoy federal lands and waters for a full year. Leave only footsteps. Take only pictures.</p>
+      </div>
+      <div class="image">
+        <img src="{% static "img/how-it-works-road.png" %}" alt="Kid with binoculars" />
+      </div>
+    </div>
+  </section>
+
+  <section class="reminders">
+    <div class="section-content">
+
+      <div class="image">
+        <img src="{% static "img/how-it-works-pass.png" %}" alt="Every Kid In A Park Pass" />
+      </div>
+
+      <div class="description">
+        <h2>A few things to know...</h2>
+        <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>
+        <br/>
+        <p>Your pass has a unique code. That means you can't copy it and give it to friends.
+          Encourage your friends to get their own pass if they're in the fourth grade.</p>
+      </div>
+    </div>
+  </section>
 
 {% endblock content_inner %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Exchange Your Voucher{% endblock title %}
+
+{% block page_id %}plan-your-trip{% endblock page_id %}
+
+{% block background %}blue-sky-tent{% endblock background %}
+
+{% block content %}
+
+  <h1>Plan a Field Trip</h1>
+
+  <h2>{{destination.name}}</h2>
+
+  <p> 
+    {% if destination_address_line_1 %}
+        {{destination.address_line_1}} <br />
+    {% endif %}
+    {% if destination.city %}
+        {{destination.city}}, 
+    {% endif %}
+    {{destination.state}}
+    {% if destination.zipcode %}
+        {{destination.zipcode}}
+    {% endif %}
+    <br />
+    {{destination.phone}}
+  </p>
+
+  <p>
+  {% if destination.larger_groups %}
+    This site is suitable for large groups. 
+  {% endif %}
+  </p>
+  <p>
+  {% if destination.advance_reservation %}
+    This site requires advance reservations for field trips. 
+  {% endif %}
+  </p>
+
+  {% if destination.visit_times_list %}
+    <h3>Best times to visit</h3>
+    <p>
+      {{destination.visit_times_list|join:", "|title}}
+    </p>
+  {% endif %}
+
+  {% if destination.features_list %}
+
+  <h3>Facilities</h3>
+  <p>
+    {{destination.features_list|join:", "|title}}
+  </p>
+  {% endif %}
+
+
+  <h3>Website</h3>
+
+  <p>
+  Be informed before you visit in person. Visit the <a href="{{destination.website}}">website</a> first. 
+  </p>
+
+{% endblock content %}
+
+{% block content_inner %}
+
+  <div class="content-inner-block">
+  </div>
+
+{% endblock content_inner %}

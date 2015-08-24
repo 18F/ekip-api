@@ -2,8 +2,10 @@
 
   .content-block {
     max-width: 600px;
-    font-size: 22px;
-    font-weight: 300;
+    background: rgba(45, 108, 53, 0.7);
+    padding: 35px;
+    font-size: 26px;
+    font-weight: 400;
     text-align: center;
 
     h1 {
@@ -14,89 +16,170 @@
       margin: 0;
     }
 
-    button {
-      font-size: 18px;
-      margin: 100px 0 0 0;
-      padding: 20px 30px;
-      border: 4px solid #fff;
+    .lets-get-going {
+      width: 145px;
+      margin: 45px auto 0 auto;
+      text-transform: uppercase;
+      font-family: "Superclarendon", serif;
+      text-align: center;
+      color: $yellow;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
 
-      @include transition(background 0.2s ease-in, color 0.2s ease-in);
-
-      &:hover {
-        background: #fff;
-        color: $blue;
+      .arrow-down {
+        margin: 25px auto 10px auto;
+        display: block;
       }
     }
   }
   .content-inner {
     font-weight: 300;
 
-    h2 {
-      font-size: 30px;
+    .how-it-works-line-container {
+      max-width: 950px;
+      margin: auto;
+      position: relative;
+
+      .lines {
+        width: 471px;
+        height: 1279px;
+        background: url(../img/how-it-works-lines.png) no-repeat;
+        top: 70px;
+        left: 100px;
+        position: absolute;
+      }
     }
 
-    ol {
-      li {
-        width: 100%;
-        height: 100%;
-        padding: 60px 0 120px 0;
-        background: $red;
-        list-style: none;
+    section {
+      min-height: 450px;
+      margin: auto;
 
-        &:nth-child(even) {
-          background: $cream;
-          color: #000;
+      h2 {
+        font-size: 36px;
+        line-height: 36px;
+      }
+      p {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 5px 0;
+      }
 
-          h2 {
-            background: $red;
-            color: #fff;
-          }
+      .section-content {
+        max-width: 950px;
+        padding: 80px 0;
+        margin: auto;
+        position: relative;
 
-          .step-container {
-            margin-left: 300px;
+        a {
+          color: $yellow;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
           }
         }
+      }
+
+      &.get-your-pass {
+        background: $red;
+
+        .section-content {
+          padding: 40px 0;
+        }
+
+        .description {
+          max-width: 420px;
+          margin: 40px 0 0 185px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .image {
+          margin: 40px 0 0 60px;
+          display: inline-block;
+
+          img {
+            width: 252px;
+            height: 307px;
+          }
+        }
+      }
+
+      &.plan-a-trip {
+        background: $cream;
+        color: #000;
 
         h2 {
-          width: 50px;
-          height: 45px;
-          background: #fff;
-          border-radius: 30px;
-          font-size: 38px;
           color: $red;
-          margin: 0 20px 0 0;
-          text-align: center;
+        }
+
+        .image {
+          display: inline-block;
+        }
+
+        .description {
+          max-width: 480px;
+          margin: 0 0 0 110px;
+          display: inline-block;
+          vertical-align: top;
+
+          button {
+            background: $red;
+            letter-spacing: 1px;
+            color: $yellow;
+            padding: 13px 30px;
+            margin: 20px 0;
+
+            @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+            &:hover {
+              background: #fff;
+              color: $red;
+            }
+          }
+        }
+      }
+
+      &.hit-the-road {
+        background: $red;
+
+        .section-content {
+          padding: 40px 0;
+        }
+
+        .description {
+          max-width: 435px;
+          margin: 40px 0 0 190px;
           display: inline-block;
           vertical-align: top;
         }
 
-        .step-container {
-          max-width: 900px;
-          margin: auto;
-
-          .step {
-            max-width: 500px;
-            font-size: 22px;
-            display: inline-block;
-          }
+        .image {
+          margin: 20px 0 0 60px;
+          display: inline-block;
         }
       }
-    }
 
-    .reminders {
-      max-width: 1030px;
-      padding: 60px 20px 80px 20px;
-      margin: auto;
+      &.reminders {
 
-      ul {
-        max-width: 600px;
+        .image {
+          margin: 0 55px 0 0;
+          display: inline-block;
+          vertical-align: top;
+
+          img {
+            max-width: 443px;
+            max-height: 198px;
+          }
+        }
+
+        .description {
+          max-width: 430px;
+          display: inline-block;
+        }
       }
-      li {
-        font-size: 16px;
-        line-height: 20px;
-        padding: 0 0 10px 0;
-      }
-    }
 
+    }
   }
 }

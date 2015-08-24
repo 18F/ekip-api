@@ -10,18 +10,17 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="{% static 'js/barcode.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/voucher.js' %}"></script>
-
 </head>
 <body>
 
   {% for locator in locators %}
-  <div class="voucher-page">
+  <div class="voucher-container">
 
     <div class="heading">
       <h1>Congratulations!</h1>
       <h2>You've earned a free pass</h2>
-      <h3>To all Federal Lands and Waters</h3>
-      <h4>Follow these instructions to start your adventure!</h4>
+      <h3>to all national parks, lands, and waters</h3>
+      <h4>Start your adventure!</h4>
     </div>
 
     <div class="steps">
@@ -45,15 +44,15 @@
       <ol>
         <li class="print-page">
           <h2>Print this page</h2>
-          <p>Great job! First print this paper voucher and put it in a safe place until you are ready to use it.</p>
+          <p>You must have a printed pass. We can't take electronic copies.</p>
         </li>
         <li class="plan">
           <h2>Hit the road</h2>
-          <p>Click "Plan Your Trip" on this website (www.everykidinapark.gov) to learn about all of the places you can go.</p>
+          <p>Plan your trip at www.everykidinapark.gov/planyourtrip</p>
         </li>
         <li class="get">
           <h2>Get in free!</h2>
-          <p>Show this paper voucher to receive free access and/or claim your 4th grade pass. Be safe and have fun!</p>
+          <p>Show this paper pass to get in free! Your family and friends get in free, too. At some sites, you can choose to trade this paper pass in for a special, limited edition plastic pass!</p>
 
           <img class="durable-pass" src="{% static 'img/durable-pass.jpg' %}" alt="" />
         </li>
@@ -64,6 +63,41 @@
     <div class="personnel">
       <span>This area for official use by facility personnel.</span>
       <img alt="barcode" data-id="{{ locator }}" />
+    </div>
+
+  </div>
+
+  <div class="voucher-instructions">
+
+    <div class="instruction-content">
+
+      <h2>Instructions</h2>
+
+      <p>Our national lands and waters belong to everyone. That includes you!  Use this pass to visit any of them for free.  You can bring your family and friends with you for free, too!</p>
+
+      <strong>Official rules</strong>
+
+      <ul>
+        <li>The pass is for U.S. fourth graders or 10-year-old home-school students.</li>
+        <li>The pass is for the 2015 to 2016 school year. It expires August 30, 2016. </li>
+        <li>Students can't transfer the pass to anyone else.</li>
+        <li>Students must have a printed pass to get in free. We can't accept electronic versions. </li>
+        <li>There’s no way to request a refund later if you forget the pass when you visit.</li>
+        <li>If you lose your pass, get a new one by visiting the website and signing up again. </li>
+        <li>Educators can get one paper pass for each of their fourth-grade students. </li>
+      </ul>
+
+      <strong>How it works</strong>
+
+      <ul>
+        <li>Show your pass to a ranger when you enter. If there is no employee, leave it on the dashboard of your car.</li>
+        <li>If you visit a site that charges entrance fees per person— This pass admits all children under 16 and up to three adults for free. </li>
+        <li>If your group visits a site that charges vehicle fees - The pass admits all children under 16 and all adults in up to one passenger vehicle.  Commercial vehicles can't use a pass to get in.</li>
+        <li>If you arrive at a site on bicycle— The pass admits all children under 16 and up to three adult bikers.</li>
+        <li>The pass doesn't cover things like camping, boats, and special tours.   Also, some sites are managed by private operators.  They may not honor the pass.  Check ahead of time if you're visiting one of those sites.</li>
+        <li>The pass doesn’t cover fees for local, city, or state parks and recreation areas unless they say that they accept this pass at their entrance booth.</li>
+      </ul>
+
     </div>
 
   </div>
