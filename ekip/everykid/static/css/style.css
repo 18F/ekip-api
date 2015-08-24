@@ -1216,8 +1216,9 @@ footer {
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
   #how-it-works .content-block {
-    padding: 20px; }
-    #how-it-works .content-block button {
+    padding: 20px;
+    margin: 0 0 20px 0; }
+    #how-it-works .content-block .lets-get-going {
       display: none; }
   #how-it-works .content-inner .how-it-works-line-container {
     display: none; }
@@ -1272,6 +1273,8 @@ footer {
     margin: 0; }
   #plan-your-trip .plan-your-trip-content {
     padding: 20px; }
+    #plan-your-trip .plan-your-trip-content .lets-get-going {
+      display: none; }
   #plan-your-trip .content {
     font-size: 20px;
     min-height: 0; }

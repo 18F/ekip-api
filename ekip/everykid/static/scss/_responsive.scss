@@ -163,8 +163,9 @@
 
     .content-block {
       padding: 20px;
+      margin: 0 0 20px 0;
 
-      button {
+      .lets-get-going {
         display: none;
       }
     }
@@ -196,9 +197,7 @@
           max-width: 100%;
           margin: 20px 0;
         }
-
       }
-
     }
   }
 
@@ -268,6 +267,10 @@
 
     .plan-your-trip-content {
       padding: 20px;
+
+      .lets-get-going {
+        display: none;
+      }
     }
 
     .content {
