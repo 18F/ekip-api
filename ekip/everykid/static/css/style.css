@@ -186,8 +186,8 @@ ul.top-links {
   background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover; }
 
-.tent {
-  background: url(../img/backgrounds/tent.png) no-repeat center bottom;
+.leaves {
+  background: url(../img/backgrounds/leaves.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .brown-rocks {
@@ -491,75 +491,52 @@ ul.top-links {
   min-height: 600px; }
 
 #get-your-pass .pass-content {
-  background: rgba(23, 112, 153, 0.9);
+  background: rgba(23, 112, 153, 0.8);
   padding: 30px;
   font-size: 22px;
   font-weight: 400; }
-  #get-your-pass .pass-content::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #get-your-pass .pass-content h1 {
-    width: 370px;
-    line-height: 40px;
-    padding: 0 0 13px 0;
-    float: left; }
-  #get-your-pass .pass-content p {
-    width: 370px;
-    line-height: 25px;
-    margin: 0 0 30px 0;
-    float: left; }
-  #get-your-pass .pass-content img {
-    float: left; }
   #get-your-pass .pass-content ul.boxes {
-    width: 254px;
-    float: right; }
+    margin: 40px 0 0 0;
+    text-align: center; }
     #get-your-pass .pass-content ul.boxes li {
-      padding: 25px;
-      margin: 0 0 15px 0;
-      border: 2px solid #489BC0;
-      text-align: center;
-      float: right; }
-      #get-your-pass .pass-content ul.boxes li a {
-        text-decoration: none; }
-      #get-your-pass .pass-content ul.boxes li h2 {
-        color: #FFE897;
-        font-size: 14px;
-        line-height: 14px;
-        letter-spacing: 1px;
-        text-transform: uppercase; }
-      #get-your-pass .pass-content ul.boxes li p {
-        width: auto;
-        margin: 0;
-        font-size: 18px;
-        line-height: 18px; }
+      width: 190px;
+      height: 230px;
+      background: #FFE897;
+      color: #2D6C35;
+      font-size: 16px;
+      font-weight: 200;
+      margin: 0 15px 0 0;
+      display: inline-block;
+      vertical-align: top; }
       #get-your-pass .pass-content ul.boxes li.fourth-graders {
-        background: #FFE897;
-        border: none;
-        color: #177099; }
-        #get-your-pass .pass-content ul.boxes li.fourth-graders h2 {
-          color: #177099;
-          font-size: 20px;
-          line-height: 22px;
-          font-weight: bold;
-          text-transform: uppercase; }
-        #get-your-pass .pass-content ul.boxes li.fourth-graders p {
-          line-height: 22px;
-          margin: 0 0 20px 0; }
-        #get-your-pass .pass-content ul.boxes li.fourth-graders button {
-          background: url(../img/icon-fish-blue.png) center left 10px no-repeat;
-          border: 2px solid #177099;
-          color: #177099;
-          font-weight: 600;
-          padding: 10px 20px 10px 45px;
-          letter-spacing: 1px;
-          -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
-          -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
-          transition: background 0.2s ease-in, color 0.2s ease-in; }
-          #get-your-pass .pass-content ul.boxes li.fourth-graders button:hover {
-            border: 2px solid #177099;
-            background: #177099 url(../img/icon-fish-white.png) center left 10px no-repeat;
-            color: #fff; }
+        width: 230px; }
+      #get-your-pass .pass-content ul.boxes li img {
+        margin: 20px 0 10px 0; }
+      #get-your-pass .pass-content ul.boxes li .backpack {
+        width: 32px;
+        height: 40px; }
+      #get-your-pass .pass-content ul.boxes li .binoculars {
+        width: 43px;
+        height: 38px; }
+      #get-your-pass .pass-content ul.boxes li h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        padding: 0; }
+      #get-your-pass .pass-content ul.boxes li p {
+        padding: 0 10px 15px 10px; }
+      #get-your-pass .pass-content ul.boxes li button {
+        border: 1px solid #2D6C35;
+        color: #2D6C35;
+        font-weight: 600;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+        -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+        -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+        transition: background 0.2s ease-in, color 0.2s ease-in; }
+        #get-your-pass .pass-content ul.boxes li button:hover {
+          background: #2D6C35;
+          color: #fff; }
       #get-your-pass .pass-content ul.boxes li:last-child {
         margin: 0; }
 
@@ -1281,17 +1258,15 @@ footer {
     #get-your-pass .content .pass-content h1,
     #student-pass .content .pass-content h1 {
       font-size: 28px; }
-  #get-your-pass .content .pass-content h1,
-  #get-your-pass .content .pass-content p,
-  #get-your-pass .content .pass-content img,
-  #get-your-pass .content .pass-content ul.boxes,
-  #get-your-pass .content .pass-content ul.boxes li {
-    width: auto;
-    float: none; }
-  #get-your-pass .content .pass-content p {
+  #get-your-pass .content .pass-content ul.boxes {
     margin: 15px 0; }
-  #get-your-pass .content .pass-content img {
-    width: 100%; }
+    #get-your-pass .content .pass-content ul.boxes li {
+      width: 100%;
+      height: auto;
+      padding: 0 0 20px 0;
+      margin: 0 0 15px 0; }
+      #get-your-pass .content .pass-content ul.boxes li:last-child {
+        margin: 0; }
   #student-pass .voucher-claim img {
     margin: 10px 0; }
   #student-pass .voucher-claim form button {
