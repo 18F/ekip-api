@@ -932,34 +932,34 @@ ul.top-links {
         #plan-your-trip .content-inner section.destination .section-content ul {
           margin: 20px 0 0 0; }
         #plan-your-trip .content-inner section.destination .section-content li {
-          width: 160px;
-          height: 110px;
-          padding: 25px;
+          width: 315px;
+          height: 180px;
           margin: 0 10px 20px 0;
-          background: #fff;
+          background: #013F5B;
           text-align: center;
           display: inline-block;
           vertical-align: top; }
+          #plan-your-trip .content-inner section.destination .section-content li img {
+            width: 39px;
+            height: 39px;
+            margin: 20px 0 15px 0; }
           #plan-your-trip .content-inner section.destination .section-content li h3 {
-            font-size: 20px;
-            font-family: 'Lato', sans-serif; }
+            font-size: 14px;
+            line-height: 14px;
+            color: #FFE897;
+            text-transform: uppercase; }
           #plan-your-trip .content-inner section.destination .section-content li a {
-            text-decoration: none; }
-            #plan-your-trip .content-inner section.destination .section-content li a:hover {
-              text-decoration: underline; }
+            width: inherit;
+            height: inherit;
+            color: #fff;
+            text-decoration: none;
+            display: block; }
           #plan-your-trip .content-inner section.destination .section-content li p {
-            font-size: 18px;
-            line-height: 22px; }
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) h3,
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) h3 {
-            color: #FFE897; }
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) p,
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) p {
-            color: #fff; }
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2) {
-            background: #177099; }
+            font-size: 16px;
+            margin: 0; }
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2),
           #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
-            background: #2D6C35; }
+            background: #177099; }
     #plan-your-trip .content-inner section.lodging {
       background: #2D6C35; }
       #plan-your-trip .content-inner section.lodging .section-content {
