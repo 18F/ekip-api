@@ -5,10 +5,37 @@ html, body {
   margin: 0;
 }
 
+.print {
+  margin: 25px 0 35px 0;
+  text-align: center;
+
+  button {
+    background: #2D6C35;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+
+    span {
+      font-size: 19px;
+      line-height: 40px;
+      font-family: "Superclarendon", serif;
+      font-weight: 600;
+      color: #FFE897;
+    }
+  }
+}
+
 .voucher-container, .voucher-instructions {
-  width: 595px;
+  width: 610px;
+  // width: 595px;
   height: 842px;
-  margin: 0 auto;
+  margin: 0 auto 35px auto;
+  border: 1px dotted #ccc;
   page-break-after: always;
 
   font-family: 'Lato', sans-serif;
@@ -183,5 +210,18 @@ html, body {
       font-size: 18px;
       line-height: 25px;
     }
+  }
+}
+
+@media print {
+
+  .print {
+    display: none;
+  }
+
+  .voucher-container,
+  .voucher-instructions {
+    margin-bottom: 0;
+    border: none;
   }
 }

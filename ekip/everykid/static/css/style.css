@@ -512,12 +512,16 @@ ul.top-links {
         width: 230px; }
       #get-your-pass .pass-content ul.boxes li img {
         margin: 20px 0 10px 0; }
-      #get-your-pass .pass-content ul.boxes li .backpack {
-        width: 32px;
-        height: 40px; }
-      #get-your-pass .pass-content ul.boxes li .binoculars {
-        width: 43px;
-        height: 38px; }
+        #get-your-pass .pass-content ul.boxes li img.backpack {
+          width: 32px;
+          height: 40px; }
+        #get-your-pass .pass-content ul.boxes li img.leaf {
+          width: 27px;
+          height: 50px;
+          margin: 15px 0 5px 0; }
+        #get-your-pass .pass-content ul.boxes li img.binoculars {
+          width: 43px;
+          height: 38px; }
       #get-your-pass .pass-content ul.boxes li h2 {
         font-family: 'Lato', sans-serif;
         font-size: 22px;
