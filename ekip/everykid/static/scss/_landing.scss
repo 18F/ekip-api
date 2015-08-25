@@ -2,7 +2,7 @@
 
   h1 {
     max-width: 660px;
-    font-size: 40px;
+    font-size: 36px;
     margin: 0 auto 20px auto;
 
     span {
@@ -27,23 +27,22 @@
   .content {
     max-width: $site-width;
     text-align: center;
-    padding: 88px 0 0 0;
+    padding: 40px 0 0 0;
     margin: auto;
-    // position: relative;
 
     img {
       max-width: 256px;
-      margin: 0 0 45px 0;
+      margin: 0 0 25px 0;
     }
 
     button {
       border: 4px solid #fff;
       background: transparent;
       letter-spacing: 1px;
-      color: #fff;
-      font-size: 19px;
-      padding: 20px 30px;
-      margin: 0 0 90px 0;
+      color: $yellow;
+      font-size: 17px;
+      padding: 15px 30px;
+      margin: 0 0 60px 0;
 
       @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
