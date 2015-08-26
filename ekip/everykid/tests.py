@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
-from .views import issue_single_voucher
+from .views import issue_single_voucher, STATES
 from ticketer.recordlocator.models import Ticket
 
 
@@ -56,6 +56,11 @@ class PassExchangeSiteTestCase(TestCase):
         content = response.content.decode('utf-8')
         self.assertTrue('Aqua Fria National Monument' in content)
         self.assertTrue('Rainbow Bridge National Monument' in content)
+
+    def test_states_mapping(self):
+        self.assertEqual('Maryland', STATES['MD'])
+        self.assertEqual('Colorado', STATES['CO'])
+        
 
 
 class FourthGraderFlowTests(TestCase):

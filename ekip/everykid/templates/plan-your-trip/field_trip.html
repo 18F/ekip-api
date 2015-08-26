@@ -8,13 +8,16 @@
 
 {% block content %}
 
-  <h1>Plan a Field Trip</h1>
+  <h1>Plan a field trip</h1>
 
-  <p> A field trip with your class offers a unique learning opportunity. </p>
+  <p>A field trip is a great learning opportunity. </p>
 
-  <p> Start by selecting the state you are in, or that you plan to visit. </p>
+  <p>Start by selecting a state. Then check out our list of recommended sites. 
+  You can see the best time of year to visit and what things that site has to offer. 
+  For example, trails, outdoor classrooms, and visitor centers. </p>
   
-  <p>For help scheduling field trips and transportation, contact your destination site.</p>
+  <p>You'll also see contact information for each site. 
+  Contact the site for help scheduling trips and transportation.</p>
 
   <form method="GET">
     <ul>
@@ -32,6 +35,8 @@
   <div class="content-inner-block">
 
     {% if sites %}
+    <p> {{state_name}} </p>
+
     <ol class="sites">
     {% for site in sites %}
       <li>

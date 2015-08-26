@@ -182,8 +182,8 @@ ul.top-links {
   .mountain .menu-container nav li {
     border: none; }
 
-.caves {
-  background: url(../img/backgrounds/caves.jpg) no-repeat center bottom;
+.hills {
+  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .leaves {
@@ -198,8 +198,8 @@ ul.top-links {
   background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
   background-size: cover; }
 
-.canoeing {
-  background: url(../img/backgrounds/canoeing.jpg) no-repeat center bottom;
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .forest {
@@ -1296,9 +1296,7 @@ footer {
     #how-it-works .content-inner section.plan-a-trip .image,
     #how-it-works .content-inner section.hit-the-road .image,
     #how-it-works .content-inner section.reminders .image {
-      margin: 0;
-      position: relative;
-      left: 0; }
+      margin: 0; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
@@ -1324,19 +1322,11 @@ footer {
     margin: 10px 0; }
   #student-pass .voucher-claim form button {
     margin-top: 10px; }
-  #educators .educator-content {
-    padding: 20px;
-    margin: 0 0 20px 0; }
-    #educators .educator-content h1 {
-      font-size: 26px; }
-    #educators .educator-content h2 {
-      font-size: 24px;
-      margin: 5px 0 15px 0; }
-    #educators .educator-content h3 {
-      font-size: 22px; }
-    #educators .educator-content p {
-      font-size: 16px; }
-    #educators .educator-content button {
+  #educators .content {
+    padding: 20px; }
+    #educators .content h1 br {
+      display: none; }
+    #educators .content .box .educator-begin {
       display: none; }
   #educators .content-inner-block {
     padding: 20px; }
@@ -1344,16 +1334,6 @@ footer {
     width: 100%;
     padding: 0;
     margin: 0; }
-  #educators .preview {
-    padding: 20px; }
-    #educators .preview h2 {
-      font-size: 26px; }
-    #educators .preview .data {
-      padding: 20px 0; }
-      #educators .preview .data form .buttons {
-        margin-bottom: 0; }
-      #educators .preview .data form .back {
-        margin-bottom: 15px; }
   #plan-your-trip .plan-your-trip-content {
     padding: 20px; }
     #plan-your-trip .plan-your-trip-content .lets-get-going {
@@ -1368,7 +1348,7 @@ footer {
     min-height: 0;
     font-size: 18px; }
     #plan-your-trip .content-inner section h2 {
-      font-size: 26px;
+      font-size: 25px;
       line-height: 20px; }
     #plan-your-trip .content-inner section p {
       font-size: 18px;
