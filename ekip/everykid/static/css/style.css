@@ -1051,18 +1051,35 @@ ul.top-links {
         padding: 0 0 50px 140px;
         display: inline-block; }
 
-#plan-your-trip .content-inner-block {
-  width: 800px;
-  padding: 50px 0;
+#plan-your-trip .pass-exchange-sites section {
+  min-height: 0; }
+
+#plan-your-trip .pass-exchange-sites .exchange-content {
+  width: 500px;
+  padding: 25px 0;
   margin: auto; }
-  #plan-your-trip .content-inner-block ol li {
-    list-style-type: decimal; }
-  #plan-your-trip .content-inner-block .sites li {
-    padding: 20px 0; }
-  #plan-your-trip .content-inner-block .sites h3 {
-    font-size: 24px; }
-  #plan-your-trip .content-inner-block .sites p {
-    font-size: 20px; }
+  #plan-your-trip .pass-exchange-sites .exchange-content h2 {
+    font-size: 30px;
+    line-height: 34px; }
+
+#plan-your-trip .pass-exchange-sites .sites {
+  margin: 0; }
+  #plan-your-trip .pass-exchange-sites .sites li {
+    font-size: 22px;
+    font-weight: 200;
+    color: #177099;
+    list-style: none; }
+    #plan-your-trip .pass-exchange-sites .sites li h3 {
+      font-size: 30px; }
+    #plan-your-trip .pass-exchange-sites .sites li a {
+      color: #115F83;
+      text-decoration: underline; }
+      #plan-your-trip .pass-exchange-sites .sites li a:hover {
+        text-decoration: none; }
+    #plan-your-trip .pass-exchange-sites .sites li:nth-child(odd) {
+      background: #C9EFFF; }
+    #plan-your-trip .pass-exchange-sites .sites li:nth-child(even) {
+      background: #B1DAEC; }
 
 #about .about-content {
   background: rgba(23, 112, 153, 0.8);

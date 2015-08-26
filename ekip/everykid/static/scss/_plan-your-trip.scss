@@ -296,28 +296,52 @@
     }
   }
 
-  .content-inner-block {
-    width: 800px;
-    padding: 50px 0;
-    margin: auto;
+  .pass-exchange-sites {
 
-    ol li {
-      list-style-type: decimal;
+    section {
+      min-height: 0;
+    }
+
+    .exchange-content {
+      width: 500px;
+      padding: 25px 0;
+      margin: auto;
+
+      h2 {
+        font-size: 30px;
+        line-height: 34px;
+      }
     }
 
     .sites {
+      margin: 0;
 
       li {
-        padding: 20px 0;
-      }
+        font-size: 22px;
+        font-weight: 200;
+        color: $blue;
+        list-style: none;
 
-      h3 {
-        font-size: 24px;
-      }
-      p {
-        font-size: 20px;
-      }
+        h3 {
+          font-size: 30px;
+        }
 
+        a {
+          color: #115F83;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:nth-child(odd) {
+          background: #C9EFFF;
+        }
+        &:nth-child(even) {
+          background: #B1DAEC;
+        }
+      }
     }
   }
 }
