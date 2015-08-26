@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  $('.print button').click(function() {
+    window.print();
+  });
+
   var locatorID;
 
   $('.voucher-barcode').each(function() {
@@ -9,7 +13,7 @@ $(document).ready(function() {
     $(this).find('img').JsBarcode(locatorID, {
       format: 'CODE128',
       displayValue: true,
-      fontSize: 35,
+      fontSize: 40,
       height: 60
     });
 
@@ -22,7 +26,7 @@ $(document).ready(function() {
     $(this).find("img").JsBarcode(locatorID, {
       format: 'CODE128',
       displayValue: true,
-      fontSize: 20,
+      fontSize: 25,
       height: 50
     });
 

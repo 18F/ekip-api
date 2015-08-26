@@ -31,15 +31,20 @@
 
         img {
           margin: 20px 0 10px 0;
-        }
 
-        .backpack {
-          width: 32px;
-          height: 40px;
-        }
-        .binoculars {
-          width: 43px;
-          height: 38px;
+          &.backpack {
+            width: 32px;
+            height: 40px;
+          }
+          &.leaf {
+            width: 27px;
+            height: 50px;
+            margin: 15px 0 5px 0;
+          }
+          &.binoculars {
+            width: 43px;
+            height: 38px;
+          }
         }
 
         h2 {

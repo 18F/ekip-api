@@ -78,6 +78,16 @@ python manage.py passes nationalparks/data/pass-list.csv
 where pass-list.csv is the dataset for the pass exchange sites. The data file
 is included in the repository. 
 
+To load the list of field trip sites, you'll need to run the following Django
+management command:
+
+```
+    python manage.py field_trip nationalparks/data/ficor.csv
+```
+
+where ficor.csv is the dataset for the field trip sites. The data file is
+included in the repository. 
+
 
 ## Deploy Notes
 

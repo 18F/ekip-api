@@ -10,16 +10,17 @@
 
   <div class="pass-content">
 
-    <h1>Start your outdoor adventure right now</h1>
-    <p>Play a game and discover all the wonderful places you can go. After the game, you can print a voucher for free access to your federal lands and waters.</p>
-    <p>This voucher can then be exchanged for your free 4th grade pass (a more durable, and smaller version) at many federal lands and waters (don't worry, we'll tell you where).</p>
+    <h1>Start your adventure right now</h1>
+    <p>We've put together a sneak peak of cool places you can visit in America. 
+    Fill out the "choose your own adventure" diary entry with things you want to see and do. 
+    When you're done, read your story! Then print your paper pass.</p>
 
     <form method="POST">
       {% csrf_token %}
 
       <label for="in_the_fourth_grade">
       <input id="in_the_fourth_grade" name="in_the_fourth_grade" type="checkbox" value="Y" />
-      <span>Yes, I am in the 4th grade</span> (or I am 10 years old)</label>
+      <span>Yes, I'm in the fourth grade or home-school equivalent</span></label>
 
       <button>Play</button>
     </form>
