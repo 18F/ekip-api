@@ -66,16 +66,19 @@ def pass_exchange(request):
     if state:
         sites = FederalSiteResource().list(state)
         form = PassSiteStateForm(initial={'state': state})
+        state_name = STATES[state]
     else:
         form = PassSiteStateForm()
         sites = []
+        state_name = None
 
     return render(
         request,
         'plan-your-trip/pass_exchange.html',
         {
             'sites': sites,
-            'form': form
+            'form': form,
+            'state_name': state_name
         }
     )
 
