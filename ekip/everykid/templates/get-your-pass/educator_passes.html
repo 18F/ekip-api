@@ -55,7 +55,7 @@
     <form action="" method="post">
       {% csrf_token %}
 
-      {% include "educator_form.html" %}
+      {% include "get-your-pass/educator_form.html" %}
 
       <input type="hidden" name="{{stage_field}}" value="1" />
       <button>Next:<br/><span>Review Information</span></button>
