@@ -7,7 +7,19 @@ Every Kid in a Park (EKIP API)
 The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year. 
 
 #About this Site
-This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
+This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
+
+###Landing / Home Section.
+The landing / home section describes the program, how it works, and provides links to resources for 4th grade students, educators and parents.
+
+###How it Works Section.
+This section provides a step-by-step walkthrough of the process for getting and using the pass.
+
+###Get Your Pass.
+This section walks either the student or the educator through the appropriate process to get a pass.  4th grade students are directed to an activity - once the activity is completed they can print the paper pass.  The paper pass can later be redeemed for a plastic pass at participating sites.
+
+###Plan a Trip.
+The Plan a Trip section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
 
 #Technical Stuff
 The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.  
