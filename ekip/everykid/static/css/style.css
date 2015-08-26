@@ -628,6 +628,12 @@ ul.top-links {
     margin: 0;
     float: left; }
 
+#student-pass .voucher-claim .no-zipcode {
+  padding: 10px 0 0 0;
+  clear: both; }
+  #student-pass .voucher-claim .no-zipcode a {
+    font-size: 16px; }
+
 #educators .educator-content {
   background: rgba(45, 108, 53, 0.7);
   padding: 35px;
