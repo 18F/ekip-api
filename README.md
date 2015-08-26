@@ -1,9 +1,21 @@
-EKIP API
+Every Kid in a Park (EKIP API)
 =======
 
 [![Coverage Status](https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/ekip-api?branch=master)
 
-# ticketing-system
+#Introduction
+The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year. 
+
+#About this Site
+This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
+
+#Technical Stuff
+The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.  
+
+##Submitting Issues
+Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
+
+## ticketing-system
 A ticketing system.
 
 ## Getting Started
