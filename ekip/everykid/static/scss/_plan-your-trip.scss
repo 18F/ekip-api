@@ -77,6 +77,10 @@
 
       @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
+      a {
+        color: $blue;
+      }
+
       &:hover {
         background: #fff;
         color: $blue;

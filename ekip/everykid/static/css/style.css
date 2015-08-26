@@ -872,6 +872,8 @@ ul.top-links {
     -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
     -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
     transition: background 0.2s ease-in, color 0.2s ease-in; }
+    #plan-your-trip .content-inner button a {
+      color: #177099; }
     #plan-your-trip .content-inner button:hover {
       background: #fff;
       color: #177099; }
