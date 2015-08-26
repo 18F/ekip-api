@@ -198,8 +198,8 @@ ul.top-links {
   background: url(../img/backgrounds/blue-sky-tent.jpg) no-repeat center bottom;
   background-size: cover; }
 
-.river {
-  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+.canoeing {
+  background: url(../img/backgrounds/canoeing.jpg) no-repeat center bottom;
   background-size: cover; }
 
 .forest {
@@ -1008,7 +1008,7 @@ ul.top-links {
     font-size: 20px; }
 
 #about .about-content {
-  background: rgba(23, 112, 153, 0.6);
+  background: rgba(23, 112, 153, 0.8);
   padding: 35px 30px;
   font-size: 20px;
   line-height: 25px; }
@@ -1103,7 +1103,13 @@ ul.top-links {
       font-size: 23px;
       line-height: 20px; }
     #about .content-inner .contact-content p {
-      font-size: 18px; }
+      font-size: 18px;
+      padding-bottom: 20px; }
+    #about .content-inner .contact-content a {
+      text-decoration: none;
+      font-weight: 400; }
+      #about .content-inner .contact-content a:hover {
+        text-decoration: underline; }
 
 footer {
   background: #FDEED0;
