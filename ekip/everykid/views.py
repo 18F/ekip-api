@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 from formtools.preview import FormPreview
+from localflavor.us.us_states import US_STATES
 
 from .forms import PassSiteStateForm, FourthGraderForm, ZipCodeForm
 from .models import Educator
@@ -10,6 +11,7 @@ from ticketer.recordlocator.views import TicketResource
 from nationalparks.api import FederalSiteResource, FieldTripResource
 from nationalparks.models import FieldTripSite
 
+STATES = {abbr: name for abbr, name in US_STATES}
 
 def plan_your_trip(request):
     return render(
@@ -98,10 +100,12 @@ def field_trip(request):
     """ Display the list of sites intended for field trips. """
 
     state = request.GET.get('state', None)
+    state_name = None
 
     if state:
         sites = FieldTripResource().list(state)
         form = PassSiteStateForm(initial={'state': state})
+        state_name = STATES[state]
     else:
         form = PassSiteStateForm()
         sites = []
@@ -110,7 +114,8 @@ def field_trip(request):
         'plan-your-trip/field_trip.html',
         {
             'sites': sites,
-            'form': form
+            'form': form,
+            'state_name': state_name
         }
     )
 
