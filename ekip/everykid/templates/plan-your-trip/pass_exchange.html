@@ -8,22 +8,26 @@
 
 {% block content %}
 
-  <h1>Exchange Your Voucher</h1>
+  <div class="plan-your-trip-content">
 
-  <p> You can exchange your voucher for a 4th grade pass at any of these
-  federal land and water sites. </p>
+    <h1>Exchange Your Voucher</h1>
 
-  <p> Start by selecting the state you are in, or that you plan to visit.
-  </p>
+    <p> You can exchange your voucher for a 4th grade pass at any of these
+    federal land and water sites. </p>
 
-  <form method="GET">
-    <ul>
-      {{ form.as_ul }}
-      <li>
-        <button>Submit</button>
-      </li>
-    </ul>
-  </form>
+    <p> Start by selecting the state you are in, or that you plan to visit.
+    </p>
+
+    <form class="pass-exchange-state" method="GET">
+      <div class="choose-state">
+        Choose a state:
+      </div>
+      {{ form.state }}
+      <button>Go</button>
+
+    </form>
+
+  </div>
 
 {% endblock content %}
 

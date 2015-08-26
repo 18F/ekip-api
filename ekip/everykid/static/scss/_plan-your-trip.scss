@@ -2,7 +2,61 @@
 
   .plan-your-trip-content {
     background: rgba(1, 63, 91, 0.6);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
     padding: 35px;
+
+    h1 {
+      max-width: 580px;
+      line-height: 45px;
+    }
+    p {
+      max-width: 580px;
+      line-height: 28px;
+      margin: 10px 0 15px 0;
+    }
+
+    .author {
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
+    .pass-exchange-state {
+      width: 300px;
+      margin: 25px auto;
+      padding: 0 0 25px 0;
+      border: 2px solid #fff;
+      text-align: center;
+
+      .choose-state {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        padding: 5px 10px;
+      }
+
+      select {
+        margin: 25px auto;
+        display: block;
+      }
+      button {
+        width: 130px;
+      }
+    }
+
+    button {
+      background: $yellow;
+      color: $blue;
+      font-weight: 600;
+      padding: 10px 20px;
+      letter-spacing: 1px;
+
+      &:hover {
+        background: #fff;
+        color: $blue;
+      }
+    }
 
     .lets-get-going {
       width: 145px;
@@ -20,50 +74,6 @@
         margin: 25px auto 10px auto;
         display: block;
       }
-    }
-  }
-
-  .content {
-    min-height: 540px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
-
-    h1 {
-      max-width: 580px;
-      line-height: 45px;
-    }
-    p {
-      max-width: 580px;
-      line-height: 28px;
-      margin: 10px 0 15px 0;
-    }
-
-    .author {
-      font-size: 17px;
-      text-transform: uppercase;
-    }
-
-    form {
-      ul {
-        width: 300px;
-        margin: 25px auto;
-        border: 2px solid #fff;
-        padding: 20px;
-
-        li {
-          padding: 10px 0;
-          text-align: center;
-          list-style: none;
-        }
-      }
-    }
-    button {
-      background: $blue;
-      color: #fff;
-      font-weight: 600;
-      padding: 10px 20px;
-      letter-spacing: 1px;
     }
   }
 

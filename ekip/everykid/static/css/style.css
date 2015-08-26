@@ -41,7 +41,10 @@ button {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+  transition: background 0.2s ease-in, color 0.2s ease-in; }
   button a {
     text-decoration: none; }
 
@@ -835,7 +838,45 @@ ul.top-links {
 
 #plan-your-trip .plan-your-trip-content {
   background: rgba(1, 63, 91, 0.6);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
   padding: 35px; }
+  #plan-your-trip .plan-your-trip-content h1 {
+    max-width: 580px;
+    line-height: 45px; }
+  #plan-your-trip .plan-your-trip-content p {
+    max-width: 580px;
+    line-height: 28px;
+    margin: 10px 0 15px 0; }
+  #plan-your-trip .plan-your-trip-content .author {
+    font-size: 17px;
+    text-transform: uppercase; }
+  #plan-your-trip .plan-your-trip-content .pass-exchange-state {
+    width: 300px;
+    margin: 25px auto;
+    padding: 0 0 25px 0;
+    border: 2px solid #fff;
+    text-align: center; }
+    #plan-your-trip .plan-your-trip-content .pass-exchange-state .choose-state {
+      font-size: 18px;
+      font-weight: 600;
+      text-align: left;
+      padding: 5px 10px; }
+    #plan-your-trip .plan-your-trip-content .pass-exchange-state select {
+      margin: 25px auto;
+      display: block; }
+    #plan-your-trip .plan-your-trip-content .pass-exchange-state button {
+      width: 130px; }
+  #plan-your-trip .plan-your-trip-content button {
+    background: #FFE897;
+    color: #177099;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 1px; }
+    #plan-your-trip .plan-your-trip-content button:hover {
+      background: #fff;
+      color: #177099; }
   #plan-your-trip .plan-your-trip-content .lets-get-going {
     width: 145px;
     margin: 45px auto 0 auto;
@@ -850,37 +891,6 @@ ul.top-links {
     #plan-your-trip .plan-your-trip-content .lets-get-going .arrow-down {
       margin: 25px auto 10px auto;
       display: block; }
-
-#plan-your-trip .content {
-  min-height: 540px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 25px; }
-  #plan-your-trip .content h1 {
-    max-width: 580px;
-    line-height: 45px; }
-  #plan-your-trip .content p {
-    max-width: 580px;
-    line-height: 28px;
-    margin: 10px 0 15px 0; }
-  #plan-your-trip .content .author {
-    font-size: 17px;
-    text-transform: uppercase; }
-  #plan-your-trip .content form ul {
-    width: 300px;
-    margin: 25px auto;
-    border: 2px solid #fff;
-    padding: 20px; }
-    #plan-your-trip .content form ul li {
-      padding: 10px 0;
-      text-align: center;
-      list-style: none; }
-  #plan-your-trip .content button {
-    background: #177099;
-    color: #fff;
-    font-weight: 600;
-    padding: 10px 20px;
-    letter-spacing: 1px; }
 
 #plan-your-trip .content-inner {
   font-weight: 300; }

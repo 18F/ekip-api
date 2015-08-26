@@ -70,6 +70,8 @@ button {
   a {
     text-decoration: none;
   }
+
+  @include transition(background 0.2s ease-in, color 0.2s ease-in);
 }
 
 .govt-banner {
