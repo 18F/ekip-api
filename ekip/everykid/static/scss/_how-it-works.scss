@@ -68,7 +68,7 @@
 
       .section-content {
         max-width: 950px;
-        padding: 80px 0;
+        padding: 45px 0;
         margin: auto;
         position: relative;
 
@@ -115,12 +115,13 @@
         }
 
         .image {
-          display: inline-block;
+          position: absolute;
+          left: -70px;
         }
 
         .description {
           max-width: 480px;
-          margin: 0 0 0 110px;
+          margin: 30px 0 0 460px;
           display: inline-block;
           vertical-align: top;
 
