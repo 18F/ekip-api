@@ -73,12 +73,22 @@
     button {
       background: $yellow;
       color: $blue;
+      margin: 10px 0 0 0;
 
       @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
       &:hover {
         background: #fff;
         color: $blue;
+      }
+    }
+
+    a {
+      color: $yellow;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 
@@ -144,10 +154,26 @@
             display: inline-block;
             vertical-align: top;
 
-            img {
+            .icon {
+              margin: 30px 0 0 0;
+              height: 65px;
+            }
+
+            .owl {
               width: 39px;
               height: 39px;
-              margin: 20px 0 15px 0;
+            }
+            .tree {
+              width: 41px;
+              height: 46px;
+            }
+            .mountains {
+              width: 58px;
+              height: 31px;
+            }
+            .compass {
+              width: 45px;
+              height: 46px;
             }
 
             h3 {
@@ -185,7 +211,7 @@
             display: inline-block;
           }
           .lodging-content {
-            max-width: 400px;
+            max-width: 410px;
             padding: 70px 0 0 120px;
             vertical-align: top;
             display: inline-block;
@@ -241,6 +267,11 @@
           padding: 0 0 0 70px;
           vertical-align: top;
           display: inline-block;
+
+          img {
+            width: 269px;
+            height: 327px;
+          }
         }
         .voucher-content {
           width: 450px;

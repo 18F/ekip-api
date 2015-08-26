@@ -47,28 +47,36 @@
       <ul>
         <li>
           <a href="http://www.fws.gov/refuges/" target="_blank">
-          <img src="{% static "img/icon-owl.png" %}" alt="owl icon" />
+          <div class="icon">
+            <img src="{% static "img/icon-owl.png" %}" class="owl" alt="owl icon" />
+          </div>
           <h3>See protected animals</h3>
           <p>fws.gov</p>
           </a>
         </li>
         <li>
           <a href="http://www.discovertheforest.org" target="_blank">
-          <img src="{% static "img/icon-owl.png" %}" alt="owl icon" />
+          <div class="icon">
+            <img src="{% static "img/icon-tree.png" %}" class="tree" alt="tree icon" />
+          </div>
           <h3>Visit the woods</h3>
           <p>discovertheforest.org</p>
           </a>
         </li>
         <li>
           <a href="http://findyourpark.com/find" target="_blank">
-          <img src="{% static "img/icon-owl.png" %}" alt="owl icon" />
+          <div class="icon">
+            <img src="{% static "img/icon-mountains.png" %}" class="mountains" alt="mountains icon" />
+          </div>
           <h3>Go to a park</h3>
           <p>findyourpark.org</p>
           </a>
         </li>
         <li>
           <a href="http://recreation.gov" target="_blank">
-          <img src="{% static "img/icon-owl.png" %}" alt="owl icon" />
+          <div class="icon">
+            <img src="{% static "img/icon-compass.png" %}" class="compass" alt="compass icon" />
+          </div>
           <h3>More places to play</h3>
           <p>recreation.gov</p>
           </a>
@@ -101,7 +109,7 @@
       <div class="prepare-content">
 
         <h2>Pack this</h2>
-        <p>Note: some of our sites don't get cell service. This means you might not be able to make or get phone calls, 
+        <p>Note: some of our sites don't get cell service. This means you might not be able to make or get phone calls,
         texts, or emails when you visit.</p>
 
       </div>
@@ -139,7 +147,7 @@
 
         <p>Make sure you bring your pass to get in for free.</p>
 
-        <p> At some sites, the ranger will exchange your paper pass for a plastic pass. 
+        <p> At some sites, the ranger will exchange your paper pass for a plastic pass.
         The plastic pass is waterproof and a great keepsake!</p>
 
         <button><a href="{% url 'pass_exchange' %}">Sites with plastic passes</a></button>
