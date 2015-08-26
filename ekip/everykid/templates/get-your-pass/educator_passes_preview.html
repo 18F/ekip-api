@@ -4,7 +4,7 @@
 
 {% block page_id %}educators{% endblock page_id %}
 
-{% block background %}hills{% endblock background %}
+{% block background %}caves{% endblock background %}
 
 {% block content %}
 
@@ -41,10 +41,17 @@
         {% endfor %}
         <input type="hidden" name="{{ stage_field }}" value="2"/>
         <input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}"/>
-        <button>Good to go?<br/><span>Get vouchers</span></button>
+
+        <div class="buttons">
+          <div class="back">Errors?<br/>Go Back</div>
+          <button>Good to go?<br/><span>Get vouchers</span></button>
+        </div>
       </form>
 
     </div>
+
+
+    {% comment %}
 
     <div class="edit">
 
@@ -63,5 +70,7 @@
       <br clear="both" />
 
     </div>
+
+    {% endcomment %}
 
 {% endblock content %}
