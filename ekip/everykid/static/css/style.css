@@ -271,7 +271,7 @@ ul.top-links {
     margin: 0 0 25px 0; }
   #landing .content button {
     border: 4px solid #fff;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     color: #FFE897;
     font-size: 17px;
@@ -327,14 +327,14 @@ ul.top-links {
         line-height: 30px;
         font-weight: 300; }
       #landing .content-inner-block section li .description button {
-        background: #FFE897 url(../img/icon-fish-red.png) center left 10px no-repeat;
+        background: #FFE897;
         color: #C82629;
-        padding: 13px 13px 13px 45px;
+        padding: 13px;
         -webkit-transition: background 0.3s ease-in, color 0.3s ease-in;
         -moz-transition: background 0.3s ease-in, color 0.3s ease-in;
         transition: background 0.3s ease-in, color 0.3s ease-in; }
         #landing .content-inner-block section li .description button:hover {
-          background: #fff url(../img/icon-fish-red.png) center left 10px no-repeat; }
+          background: #fff; }
     #landing .content-inner-block section li:nth-child(even) .image {
       float: right; }
     #landing .content-inner-block section li.ekip .description {
