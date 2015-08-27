@@ -869,6 +869,19 @@ ul.top-links {
     background: rgba(45, 108, 53, 0.7); }
     #plan-your-trip .plan-your-trip-content.plan-field-trip button {
       color: #683E2D; }
+  #plan-your-trip .plan-your-trip-content.plan-field-trip-details {
+    background: #D7FDDC;
+    color: #2D6C35; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details h2 {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 25px 0 0 0; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details h3 {
+      font-size: 18px;
+      padding: 0; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details p {
+      font-size: 18px;
+      margin: 0 0 15px 0; }
   #plan-your-trip .plan-your-trip-content .state-select {
     width: 300px;
     margin: 25px auto;
