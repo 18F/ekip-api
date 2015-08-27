@@ -306,6 +306,7 @@
 
     .plan-your-trip-content {
       padding: 20px;
+      font-size: 18px;
 
       .lets-get-going {
         display: none;
@@ -385,6 +386,25 @@
         }
       }
     }
+
+    .sites-container {
+
+      .state-content {
+        padding: 20px;
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .sites li {
+        font-size: 16px;
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+
   }
 
   #about {

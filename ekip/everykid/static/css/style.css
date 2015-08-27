@@ -858,21 +858,25 @@ ul.top-links {
   #plan-your-trip .plan-your-trip-content .author {
     font-size: 17px;
     text-transform: uppercase; }
-  #plan-your-trip .plan-your-trip-content .pass-exchange-state {
+  #plan-your-trip .plan-your-trip-content.plan-field-trip {
+    background: rgba(45, 108, 53, 0.7); }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip button {
+      color: #683E2D; }
+  #plan-your-trip .plan-your-trip-content .state-select {
     width: 300px;
     margin: 25px auto;
     padding: 0 0 25px 0;
     border: 2px solid #fff;
     text-align: center; }
-    #plan-your-trip .plan-your-trip-content .pass-exchange-state .choose-state {
+    #plan-your-trip .plan-your-trip-content .state-select .choose-state {
       font-size: 18px;
       font-weight: 600;
       text-align: left;
       padding: 5px 10px; }
-    #plan-your-trip .plan-your-trip-content .pass-exchange-state select {
+    #plan-your-trip .plan-your-trip-content .state-select select {
       margin: 25px auto;
       display: block; }
-    #plan-your-trip .plan-your-trip-content .pass-exchange-state button {
+    #plan-your-trip .plan-your-trip-content .state-select button {
       width: 130px; }
   #plan-your-trip .plan-your-trip-content button {
     background: #FFE897;
@@ -912,11 +916,6 @@ ul.top-links {
     #plan-your-trip .content-inner button:hover {
       background: #fff;
       color: #177099; }
-  #plan-your-trip .content-inner a {
-    color: #FFE897;
-    text-decoration: none; }
-    #plan-your-trip .content-inner a:hover {
-      text-decoration: underline; }
   #plan-your-trip .content-inner .plan-your-trip-line-container {
     max-width: 950px;
     margin: auto;
@@ -999,6 +998,11 @@ ul.top-links {
       background: #2D6C35; }
       #plan-your-trip .content-inner section.lodging .section-content {
         padding: 10px 0 0 10px; }
+        #plan-your-trip .content-inner section.lodging .section-content a {
+          color: #FFE897;
+          text-decoration: none; }
+          #plan-your-trip .content-inner section.lodging .section-content a:hover {
+            text-decoration: underline; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
@@ -1051,35 +1055,47 @@ ul.top-links {
         padding: 0 0 50px 140px;
         display: inline-block; }
 
-#plan-your-trip .pass-exchange-sites section {
+#plan-your-trip .sites-container section {
   min-height: 0; }
 
-#plan-your-trip .pass-exchange-sites .exchange-content {
-  width: 500px;
+#plan-your-trip .sites-container .state-content {
+  max-width: 500px;
   padding: 25px 0;
   margin: auto; }
-  #plan-your-trip .pass-exchange-sites .exchange-content h2 {
+  #plan-your-trip .sites-container .state-content h2 {
     font-size: 30px;
     line-height: 34px; }
 
-#plan-your-trip .pass-exchange-sites .sites {
+#plan-your-trip .sites-container.field-trip .state {
+  background: #2D6C35; }
+
+#plan-your-trip .sites-container .sites {
   margin: 0; }
-  #plan-your-trip .pass-exchange-sites .sites li {
+  #plan-your-trip .sites-container .sites li {
     font-size: 22px;
     font-weight: 200;
     color: #177099;
     list-style: none; }
-    #plan-your-trip .pass-exchange-sites .sites li h3 {
+    #plan-your-trip .sites-container .sites li h3 {
       font-size: 30px; }
-    #plan-your-trip .pass-exchange-sites .sites li a {
+    #plan-your-trip .sites-container .sites li a {
       color: #115F83;
       text-decoration: underline; }
-      #plan-your-trip .pass-exchange-sites .sites li a:hover {
+      #plan-your-trip .sites-container .sites li a:hover {
         text-decoration: none; }
-    #plan-your-trip .pass-exchange-sites .sites li:nth-child(odd) {
+    #plan-your-trip .sites-container .sites li:nth-child(odd) {
       background: #C9EFFF; }
-    #plan-your-trip .pass-exchange-sites .sites li:nth-child(even) {
+    #plan-your-trip .sites-container .sites li:nth-child(even) {
       background: #B1DAEC; }
+
+#plan-your-trip .sites-container.field-trip .sites li {
+  color: #2D6C35; }
+  #plan-your-trip .sites-container.field-trip .sites li a {
+    color: #2D6C35; }
+  #plan-your-trip .sites-container.field-trip .sites li:nth-child(odd) {
+    background: #E9FCEB; }
+  #plan-your-trip .sites-container.field-trip .sites li:nth-child(even) {
+    background: #CBE4CE; }
 
 #about .about-content {
   background: rgba(23, 112, 153, 0.8);
@@ -1388,7 +1404,8 @@ footer {
       #educators .preview .data form .back {
         margin-bottom: 15px; }
   #plan-your-trip .plan-your-trip-content {
-    padding: 20px; }
+    padding: 20px;
+    font-size: 18px; }
     #plan-your-trip .plan-your-trip-content .lets-get-going {
       display: none; }
   #plan-your-trip .content {
@@ -1465,6 +1482,14 @@ footer {
         #plan-your-trip .content-inner section.voucher .section-content .voucher-content {
           width: auto;
           padding: 0; }
+  #plan-your-trip .sites-container .state-content {
+    padding: 20px; }
+    #plan-your-trip .sites-container .state-content h2 {
+      font-size: 24px; }
+  #plan-your-trip .sites-container .sites li {
+    font-size: 16px; }
+    #plan-your-trip .sites-container .sites li h3 {
+      font-size: 18px; }
   #about .about-content {
     padding: 20px;
     font-size: 18px; }

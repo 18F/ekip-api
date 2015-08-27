@@ -18,13 +18,12 @@
     <p> Start by selecting the state you are in, or that you plan to visit.
     </p>
 
-    <form class="pass-exchange-state" method="GET">
+    <form class="state-select" method="GET">
       <div class="choose-state">
         Choose a state:
       </div>
       {{ form.state }}
       <button>Go</button>
-
     </form>
 
   </div>
@@ -33,11 +32,11 @@
 
 {% block content_inner %}
 
-  <div class="pass-exchange-sites">
+  <div class="sites-container">
 
     {% if sites %}
     <section class="state">
-      <div class="exchange-content">
+      <div class="state-content">
         <h2>Where to exchange your pass in {{state_name}}:</h2>
       </div>
     </section>
@@ -45,7 +44,7 @@
     <ul class="sites">
     {% for site in sites %}
       <li>
-        <div class="exchange-content">
+        <div class="state-content">
           <h3><a href="{{ site.website }}">{{ site.name }}</a></h3>
           <p>{{ site.city }}, {{ site.state }} </p>
         </div>
