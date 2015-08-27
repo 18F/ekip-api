@@ -143,7 +143,7 @@ def clean_thirty_five_or_more(text):
     """ Return True if the location can support more than 35 4th graders. """
 
     text = text.lower().strip()
-    if text == 'yes' or text == 'y':
+    if text in ['yes', 'y']:
         return True
     else:
         return False
