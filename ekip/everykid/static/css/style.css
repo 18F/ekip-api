@@ -273,9 +273,9 @@ ul.top-links {
     max-width: 256px;
     margin: 0 0 25px 0; }
   #landing .content button {
-    background: #fff;
+    border: 4px solid #fff;
+    background: rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
-    color: #177099;
     font-size: 17px;
     padding: 18px 30px;
     margin: 0 0 60px 0;
@@ -284,12 +284,12 @@ ul.top-links {
     -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
     -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
     transition: background 0.2s ease-in, color 0.2s ease-in; }
-    #landing .content button:hover {
-      background: #FFE897;
+    #landing .content button:hover, #landing .content button.active {
+      background: #fff;
       color: #177099; }
   #landing .content .animate-line {
     right: 490px;
-    bottom: -120px;
+    bottom: -150px;
     position: absolute;
     z-index: 100;
     display: none; }

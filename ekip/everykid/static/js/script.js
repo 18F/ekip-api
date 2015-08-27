@@ -9,6 +9,8 @@ $(function () {
         scrollTop: $(".content-inner").offset().top
      }, 1000);
 
+    $(this).addClass('active');
+
     $('.animate-line').fadeIn(1200);
   });
 
@@ -23,8 +25,8 @@ $(function () {
 
     if($(window).width() > 1024) {
       $('html, body').animate({
-          scrollTop: $(".sites-container").offset().top
-       }, 1200);
+        scrollTop: $(".sites-container").offset().top
+     }, 1200);
     }
   }
 

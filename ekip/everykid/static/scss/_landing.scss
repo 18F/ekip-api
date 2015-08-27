@@ -36,11 +36,9 @@
     }
 
     button {
-      // border: 4px solid #fff;
-      // background: rgba(0,0,0,0.4);
-      background: #fff;
+      border: 4px solid #fff;
+      background: rgba(0,0,0,0.4);
       letter-spacing: 1px;
-      color: $blue;
       font-size: 17px;
       padding: 18px 30px;
       margin: 0 0 60px 0;
@@ -49,15 +47,15 @@
 
       @include transition(background 0.2s ease-in, color 0.2s ease-in);
 
-      &:hover {
-        background: $yellow;
+      &:hover, &.active {
+        background: #fff;
         color: $blue;
       }
     }
 
     .animate-line {
       right: 490px;
-      bottom: -120px;
+      bottom: -150px;
       position: absolute;
       z-index: 100;
       display: none;
