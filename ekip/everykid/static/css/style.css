@@ -369,6 +369,11 @@ ul.top-links {
       font-family: "Superclarendon", serif;
       font-size: 30px;
       font-weight: 600; }
+      #landing .content-inner-quote section .quote .author {
+        font-family: 'Lato', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        text-transform: uppercase; }
 
 #how-it-works .content-block {
   max-width: 600px;
