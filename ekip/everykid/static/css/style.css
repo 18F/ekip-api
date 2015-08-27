@@ -595,6 +595,43 @@ ul.top-links {
     color: #177099;
     letter-spacing: 1px; }
 
+#student-pass .diary {
+  min-height: 523px;
+  padding: 0; }
+  #student-pass .diary::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #student-pass .diary .diary-left {
+    width: 50%;
+    float: left; }
+    #student-pass .diary .diary-left .page {
+      margin-right: 2px; }
+  #student-pass .diary .diary-right {
+    width: 50%;
+    float: right; }
+    #student-pass .diary .diary-right .page {
+      margin-left: 2px; }
+  #student-pass .diary .page {
+    min-height: 515px;
+    background: #fff;
+    padding: 0 30px;
+    margin: 4px; }
+    #student-pass .diary .page h2 {
+      color: #C82629;
+      padding: 50px 0 0 0; }
+    #student-pass .diary .page p {
+      color: #177099;
+      font-size: 22px;
+      font-weight: 400; }
+    #student-pass .diary .page span {
+      color: #C82629; }
+    #student-pass .diary .page button.start {
+      background: #177099;
+      color: #FFE897;
+      margin: 40px auto 0 auto;
+      display: block; }
+
 #student-pass .voucher-claim .voucher-claim-description {
   max-width: 420px;
   float: left; }
