@@ -62,20 +62,7 @@ class PassExchangeSiteTestCase(TestCase):
         self.assertEqual('Colorado', STATES['CO'])
         
 
-
 class FourthGraderFlowTests(TestCase):
-    def test_zipcode_form(self):
-        """ Check that the zipcode field is required, one the page before we
-        issue the ZIP code. """
-
-        response = self.client.post(reverse('game_success'), {})
-        self.assertFormError(
-            response, 'form', 'zip_code', 'This field is required.')
-
-        response = self.client.post(
-            reverse('game_success'), {'zip_code': 20852})
-        self.assertEqual(response.status_code, 302)
-        self.assertTrue('voucher' in response.url)
 
     def test_issue_single_voucher(self):
         locator = issue_single_voucher(20852)

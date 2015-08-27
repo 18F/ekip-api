@@ -26,6 +26,10 @@ def game_success(request):
     completes the game. It'll collect the zipcode, and provide them with a link
     to the voucher. """
 
+    if 'game_end' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
+    request.session['game_success'] = True
     if request.method == "POST":
         form = ZipCodeForm(request.POST)
         if form.is_valid():
@@ -48,6 +52,7 @@ def student_pass(request):
     if request.method == "POST":
         form = FourthGraderForm(request.POST)
         if form.is_valid():
+            request.session['ok_to_start'] = True
             return HttpResponseRedirect(reverse('adventure_start'))
     else:
         form = FourthGraderForm()
@@ -181,6 +186,9 @@ def issue_single_voucher(zip_code):
 
 
 def fourth_grade_voucher(request):
+    if 'game_success' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     zip_code = request.GET.get('zip', '00000')
     locator = issue_single_voucher(zip_code)
 

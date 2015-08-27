@@ -105,3 +105,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
