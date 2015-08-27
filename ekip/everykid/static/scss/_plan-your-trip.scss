@@ -30,6 +30,27 @@
       }
     }
 
+    &.plan-field-trip-details {
+      background: #D7FDDC;
+      color: $green;
+
+      h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 25px 0 0 0;
+      }
+      h3 {
+        font-size: 18px;
+        padding: 0;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 0 0 15px 0;
+      }
+
+    }
+
     .state-select {
       width: 300px;
       margin: 25px auto;

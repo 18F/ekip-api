@@ -273,9 +273,9 @@ ul.top-links {
     max-width: 256px;
     margin: 0 0 25px 0; }
   #landing .content button {
-    background: #fff;
+    border: 4px solid #fff;
+    background: rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
-    color: #177099;
     font-size: 17px;
     padding: 18px 30px;
     margin: 0 0 60px 0;
@@ -284,18 +284,18 @@ ul.top-links {
     -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
     -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
     transition: background 0.2s ease-in, color 0.2s ease-in; }
-    #landing .content button:hover {
-      background: #FFE897;
+    #landing .content button:hover, #landing .content button.active {
+      background: #fff;
       color: #177099; }
   #landing .content .animate-line {
     right: 490px;
-    bottom: -120px;
+    bottom: -150px;
     position: absolute;
     z-index: 100;
     display: none; }
 
 #landing .content-inner-block {
-  background: #C82629 url(../img/backgrounds/landing-icons.png) top 40px center no-repeat; }
+  background: #C82629 url(../img/landing-icons.png) top 40px center no-repeat; }
   #landing .content-inner-block section {
     max-width: 1080px;
     padding: 65px 20px 75px 20px;
@@ -369,6 +369,11 @@ ul.top-links {
       font-family: "Superclarendon", serif;
       font-size: 30px;
       font-weight: 600; }
+      #landing .content-inner-quote section .quote .author {
+        font-family: 'Lato', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        text-transform: uppercase; }
 
 #how-it-works .content-block {
   max-width: 600px;
@@ -589,6 +594,43 @@ ul.top-links {
     background: #FFE897;
     color: #177099;
     letter-spacing: 1px; }
+
+#student-pass .diary {
+  min-height: 523px;
+  padding: 0; }
+  #student-pass .diary::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #student-pass .diary .diary-left {
+    width: 50%;
+    float: left; }
+    #student-pass .diary .diary-left .page {
+      margin-right: 2px; }
+  #student-pass .diary .diary-right {
+    width: 50%;
+    float: right; }
+    #student-pass .diary .diary-right .page {
+      margin-left: 2px; }
+  #student-pass .diary .page {
+    min-height: 515px;
+    background: #fff;
+    padding: 0 30px;
+    margin: 4px; }
+    #student-pass .diary .page h2 {
+      color: #C82629;
+      padding: 50px 0 0 0; }
+    #student-pass .diary .page p {
+      color: #177099;
+      font-size: 22px;
+      font-weight: 400; }
+    #student-pass .diary .page span {
+      color: #C82629; }
+    #student-pass .diary .page button.start {
+      background: #177099;
+      color: #FFE897;
+      margin: 40px auto 0 auto;
+      display: block; }
 
 #student-pass .voucher-claim .voucher-claim-description {
   max-width: 420px;
@@ -864,6 +906,19 @@ ul.top-links {
     background: rgba(45, 108, 53, 0.7); }
     #plan-your-trip .plan-your-trip-content.plan-field-trip button {
       color: #683E2D; }
+  #plan-your-trip .plan-your-trip-content.plan-field-trip-details {
+    background: #D7FDDC;
+    color: #2D6C35; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details h2 {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 25px 0 0 0; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details h3 {
+      font-size: 18px;
+      padding: 0; }
+    #plan-your-trip .plan-your-trip-content.plan-field-trip-details p {
+      font-size: 18px;
+      margin: 0 0 15px 0; }
   #plan-your-trip .plan-your-trip-content .state-select {
     width: 300px;
     margin: 25px auto;
