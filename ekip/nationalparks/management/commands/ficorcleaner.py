@@ -7,6 +7,7 @@ STATES.update(TERRITORIES)
 
 
 def clean_postal_code(postal_code):
+    """ Clean the postal code from the dataset."""
     postal_code = postal_code.strip()
     postal_code = int(postal_code)
     if postal_code > 0:
@@ -14,6 +15,7 @@ def clean_postal_code(postal_code):
 
 
 def clean_text(text):
+    """ Strip spaces from the text, return None if no string remaining."""
     text = text.strip()
     if text:
         return text
@@ -97,6 +99,9 @@ def replace_facilities(f):
 
 
 def clean_youth_facilities(facilities):
+    """ Clean up the descriptions of the youth facilities. facilities is a
+    list. """
+
     facilities = facilities.lower()
     facilities = re.split('[;,]|and|&', facilities)
     facilities = [f.strip() for f in facilities]
@@ -135,7 +140,7 @@ def clean_phone(phone_number):
 
 
 def clean_thirty_five_or_more(text):
-    """ Return True if the location can support more than 35 4th graders.  """
+    """ Return True if the location can support more than 35 4th graders. """
 
     text = text.lower().strip()
     if text == 'yes' or text == 'y':
@@ -184,4 +189,5 @@ def clean_best_times(times):
 
 
 def clean_state(state_name):
+    """ Convert name of the state to it's two character abbreviation."""
     return STATES[state_name]
