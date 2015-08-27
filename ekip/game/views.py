@@ -3,7 +3,22 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 
+def game_start(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
+    request.session['game_start'] = True
+        
+    return render(
+        request,
+        'adventure/start.html',
+    )
+
+
 def swimming_end(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     selection = request.GET.get('selection', 'ocean')
 
     selector = {
@@ -11,6 +26,7 @@ def swimming_end(request):
         'lake': 'lake',
         'river': 'river'
     }
+    request.session['game_end'] = True
 
     return render(
         request,
@@ -23,6 +39,9 @@ def swimming_end(request):
 
 
 def swimming(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     if request.method == 'POST':
         selection = request.POST.get('selection', 'ocean')
         return HttpResponseRedirect(
@@ -31,6 +50,9 @@ def swimming(request):
 
 
 def time_travel_end(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     selection = request.GET.get('selection', 'dinosaur-tracks')
 
     selector = {
@@ -38,6 +60,7 @@ def time_travel_end(request):
         'ancient-drawings': 'ancient drawings',
         'dinosaur-tracks': 'dinosaur tracks'
     }
+    request.session['game_end'] = True
 
     return render(
         request,
@@ -50,6 +73,9 @@ def time_travel_end(request):
 
 
 def time_travel(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     if request.method == 'POST':
         selection = request.POST.get('selection', 'dinosaur-tracks')
         return HttpResponseRedirect(
@@ -58,6 +84,9 @@ def time_travel(request):
 
 
 def nature_walk(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     if request.method == 'POST':
         if 'huge-mountain' in request.POST:
             return HttpResponseRedirect(
@@ -72,6 +101,9 @@ def nature_walk(request):
 
 
 def nature_walk_end(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
     selection = request.GET.get('selection', 'mountains')
 
     selector = {
@@ -79,6 +111,8 @@ def nature_walk_end(request):
         'animals': 'wild animals',
         'plants': 'beautiful plants'
     }
+
+    request.session['game_end'] = True
 
     return render(
         request,
