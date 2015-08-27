@@ -66,7 +66,7 @@ def student_pass(request):
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
 
-    state = request.GET.get('state', None)
+    state = request.GET.get('state')
 
     if state:
         sites = FederalSiteResource().list(state)
@@ -135,6 +135,7 @@ class EducatorFormPreview(FormPreview):
     form_template = 'get-your-pass/educator_passes.html'
     preview_template = 'get-your-pass/educator_passes_preview.html'
 
+    @staticmethod
     def done(self, request, cleaned_data):
         educator = Educator(
             name=cleaned_data['name'],

@@ -53,6 +53,58 @@
     }
   }
 
+  .diary {
+    min-height: 523px;
+    padding: 0;
+
+    @include clearfix();
+
+    .diary-left {
+      width: 50%;
+      float: left;
+
+      .page {
+        margin-right: 2px;
+      }
+    }
+
+    .diary-right {
+      width: 50%;
+      float: right;
+
+      .page {
+        margin-left: 2px;
+      }
+    }
+
+    .page {
+      min-height: 515px;
+      background: #fff;
+      padding: 0 30px;
+      margin: 4px;
+
+      h2 {
+        color: $red;
+        padding: 50px 0 0 0;
+      }
+      p {
+        color: $blue;
+        font-size: 22px;
+        font-weight: 400;
+      }
+      span {
+        color: $red;
+      }
+      button.start {
+        background: $blue;
+        color: $yellow;
+        margin: 40px auto 0 auto;
+        display: block;
+      }
+    }
+
+  }
+
   .voucher-claim {
 
     .voucher-claim-description {
