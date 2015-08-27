@@ -61,9 +61,13 @@ class FieldTripSite(models.Model):
     facilities = models.ManyToManyField(YouthFacility)
 
     def save(self, *args, **kwargs):
-        name = self.name
-        name = name.replace('National Wildlife Refuge', 'NWR')
-        self.slug = slugify(self.agency + name)[:50]
+        """ Generate and save a slug when this object is saved for the first
+        time. """
+
+        if not self.id:
+            name = self.name
+            name = name.replace('National Wildlife Refuge', 'NWR')
+            self.slug = slugify(self.agency + name)[:50]
         super(FieldTripSite, self).save(*args, **kwargs)
 
     class Meta:

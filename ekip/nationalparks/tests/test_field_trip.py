@@ -94,3 +94,26 @@ class FieldTripTests(TestCase):
         self.assertTrue('trail' in youth_facilities)
         self.assertTrue('auto tour route' in youth_facilities)
         self.assertTrue('bicycling' in youth_facilities)
+
+    def test_slug_generated_once(self):
+        row = {
+            'NAME': ' Wheeler NWR',
+            'AGENCY': 'U.S. Fish and Wildlife Service',
+            'PHONE_1': '(256) 350-6639',
+            'City': 'Decatur',
+            'Region': 'Alabama',
+            'WEBSITE': 'http;/www.fws.gov/refuge/Wheeler/',
+            'StAddr': 'Visitor Center Rd',
+            'ADV_RES_RE': 'yes',
+            'THRIRTYFIV': 'Yes',
+            'PostalCode': '35603',
+            'YOUTH_FACI': 'Visitor center, trail, auto tour route, bicycling',
+            'BEST_TIMES': 'September through June'}
+
+        trip.process_site(row)
+        fts = FieldTripSite.objects.get(slug='fwswheeler-nwr')
+
+        fts.name = 'new-name'
+        fts.save()
+
+        self.assertEqual(fts.slug, 'fwswheeler-nwr')
