@@ -198,6 +198,8 @@
 
           .image {
             margin: 0;
+            position: relative;
+            left: 0;
           }
 
           .description {
@@ -248,27 +250,55 @@
   }
 
   #educators {
-    .content {
+    .educator-content {
       padding: 20px;
+      margin: 0 0 20px 0;
 
-      h1 br {
-        display: none;
+      h1 {
+        font-size: 26px;
       }
-
-      .box {
-        .educator-begin {
-          display: none;
-        }
+      h2 {
+        font-size: 24px;
+        margin: 5px 0 15px 0;
+      }
+      h3 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+      button {
+        display: none;
       }
     }
 
     .content-inner-block {
       padding: 20px;
     }
+
     form {
       width: 100%;
       padding: 0;
       margin: 0;
+    }
+
+    .preview {
+      padding: 20px;
+
+      h2 {
+        font-size: 26px;
+      }
+      .data {
+        padding: 20px 0;
+
+        form .buttons {
+          margin-bottom: 0;
+        }
+
+        form .back {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 
@@ -276,6 +306,7 @@
 
     .plan-your-trip-content {
       padding: 20px;
+      font-size: 18px;
 
       .lets-get-going {
         display: none;
@@ -299,7 +330,7 @@
         font-size: 18px;
 
         h2 {
-          font-size: 25px;
+          font-size: 26px;
           line-height: 20px;
         }
 
@@ -355,6 +386,25 @@
         }
       }
     }
+
+    .sites-container {
+
+      .state-content {
+        padding: 20px;
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .sites li {
+        font-size: 16px;
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+
   }
 
   #about {

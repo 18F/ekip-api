@@ -70,6 +70,8 @@ button {
   a {
     text-decoration: none;
   }
+
+  @include transition(background 0.2s ease-in, color 0.2s ease-in);
 }
 
 .govt-banner {
@@ -91,8 +93,8 @@ button {
   }
 }
 
-.hills {
-  background: url(../img/backgrounds/hills.jpg) no-repeat center bottom;
+.caves {
+  background: url(../img/backgrounds/caves.jpg) no-repeat center bottom;
   background-size: cover;
 }
 
@@ -111,8 +113,8 @@ button {
   background-size: cover;
 }
 
-.river {
-  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+.canoeing {
+  background: url(../img/backgrounds/canoeing.jpg) no-repeat center bottom;
   background-size: cover;
 }
 

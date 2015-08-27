@@ -4,49 +4,58 @@
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
-{% block background %}blue-sky-tent{% endblock background %}
+{% block background %}caves{% endblock background %}
 
 {% block content %}
 
-  <h1>Plan a field trip</h1>
+  <div class="plan-your-trip-content plan-field-trip">
 
-  <p>A field trip is a great learning opportunity. </p>
+    <h1>Plan a field trip</h1>
 
-  <p>Start by selecting a state. Then check out our list of recommended sites. 
-  You can see the best time of year to visit and what things that site has to offer. 
-  For example, trails, outdoor classrooms, and visitor centers. </p>
-  
-  <p>You'll also see contact information for each site. 
-  Contact the site for help scheduling trips and transportation.</p>
+    <p>A field trip is a great learning opportunity. </p>
 
-  <form method="GET">
-    <ul>
-      {{ form.as_ul }}
-      <li>
-        <button>Submit</button>
-      </li>
-    </ul>
-  </form>
+    <p>Start by selecting a state. Then check out our list of recommended sites.
+    You can see the best time of year to visit and what things that site has to offer.
+    For example, trails, outdoor classrooms, and visitor centers. </p>
+
+    <p>You'll also see contact information for each site.
+    Contact the site for help scheduling trips and transportation.</p>
+
+    <form class="state-select" method="GET">
+      <div class="choose-state">
+        Choose a state:
+      </div>
+      {{ form.state }}
+      <button>Submit</button>
+    </form>
+
+  </div>
 
 {% endblock content %}
 
 {% block content_inner %}
 
-  <div class="content-inner-block">
+  <div class="sites-container field-trip">
 
     {% if sites %}
-    <p> {{state_name}} </p>
+    <section class="state">
+      <div class="state-content">
+        <h2>Sites to visit in {{state_name}}:</h2>
+      </div>
+    </section>
 
-    <ol class="sites">
+    <ul class="sites">
     {% for site in sites %}
       <li>
-        <h3><a href="/plan-your-trip/field-trip/{{site.slug}}/">{{ site.name }}</a></h3>
-        {% if site.city %}
+        <div class="state-content">
+          <h3><a href="/plan-your-trip/field-trip/{{site.slug}}/">{{ site.name }}</a></h3>
+          {% if site.city %}
             <p>{{ site.city }}, {{ site.state }} </p>
-        {% endif %}
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
-    </ol>
+    </ul>
     {% endif %}
 
   </div>

@@ -2,7 +2,69 @@
 
   .plan-your-trip-content {
     background: rgba(1, 63, 91, 0.6);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
     padding: 35px;
+
+    h1 {
+      max-width: 580px;
+      line-height: 45px;
+    }
+    p {
+      max-width: 580px;
+      line-height: 28px;
+      margin: 10px 0 15px 0;
+    }
+
+    .author {
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
+    &.plan-field-trip {
+      background: rgba(45, 108, 53, 0.7);
+
+      button {
+        color: $brown;
+      }
+    }
+
+    .state-select {
+      width: 300px;
+      margin: 25px auto;
+      padding: 0 0 25px 0;
+      border: 2px solid #fff;
+      text-align: center;
+
+      .choose-state {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        padding: 5px 10px;
+      }
+
+      select {
+        margin: 25px auto;
+        display: block;
+      }
+      button {
+        width: 130px;
+      }
+    }
+
+    button {
+      background: $yellow;
+      color: $blue;
+      font-weight: 600;
+      padding: 10px 20px;
+      letter-spacing: 1px;
+
+      &:hover {
+        background: #fff;
+        color: $blue;
+      }
+    }
 
     .lets-get-going {
       width: 145px;
@@ -23,58 +85,19 @@
     }
   }
 
-  .content {
-    min-height: 540px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
-
-    h1 {
-      max-width: 580px;
-      line-height: 45px;
-    }
-    p {
-      max-width: 580px;
-      line-height: 28px;
-      margin: 10px 0 15px 0;
-    }
-
-    .author {
-      font-size: 17px;
-      text-transform: uppercase;
-    }
-
-    form {
-      ul {
-        width: 300px;
-        margin: 25px auto;
-        border: 2px solid #fff;
-        padding: 20px;
-
-        li {
-          padding: 10px 0;
-          text-align: center;
-          list-style: none;
-        }
-      }
-    }
-    button {
-      background: $blue;
-      color: #fff;
-      font-weight: 600;
-      padding: 10px 20px;
-      letter-spacing: 1px;
-    }
-  }
-
   .content-inner {
     font-weight: 300;
 
     button {
       background: $yellow;
       color: $blue;
+      margin: 10px 0 0 0;
 
       @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+      a {
+        color: $blue;
+      }
 
       &:hover {
         background: #fff;
@@ -144,10 +167,25 @@
             display: inline-block;
             vertical-align: top;
 
-            img {
+            .icon {
+              margin: 30px 0 0 0;
+              height: 65px;
+            }
+            .owl {
               width: 39px;
               height: 39px;
-              margin: 20px 0 15px 0;
+            }
+            .tree {
+              width: 41px;
+              height: 46px;
+            }
+            .mountains {
+              width: 58px;
+              height: 31px;
+            }
+            .compass {
+              width: 45px;
+              height: 46px;
             }
 
             h3 {
@@ -162,6 +200,10 @@
               color: #fff;
               text-decoration: none;
               display: block;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
             p {
               font-size: 16px;
@@ -181,11 +223,20 @@
         .section-content {
           padding: 10px 0 0 10px;
 
+          a {
+            color: $yellow;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
           .lodging-image {
             display: inline-block;
           }
           .lodging-content {
-            max-width: 400px;
+            max-width: 410px;
             padding: 70px 0 0 120px;
             vertical-align: top;
             display: inline-block;
@@ -241,6 +292,11 @@
           padding: 0 0 0 70px;
           vertical-align: top;
           display: inline-block;
+
+          img {
+            width: 269px;
+            height: 327px;
+          }
         }
         .voucher-content {
           width: 450px;
@@ -251,31 +307,72 @@
     }
   }
 
-  .content-inner-block {
-    width: 800px;
-    padding: 50px 0;
-    margin: auto;
+  .sites-container {
 
-    ol li {
-      list-style-type: decimal;
+    section {
+      min-height: 0;
+    }
+
+    .state-content {
+      max-width: 500px;
+      padding: 25px 0;
+      margin: auto;
+
+      h2 {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+
+    &.field-trip .state {
+      background: $green;
     }
 
     .sites {
+      margin: 0;
 
       li {
-        padding: 20px 0;
-      }
+        font-size: 22px;
+        font-weight: 200;
+        color: $blue;
+        list-style: none;
 
-      h3 {
-        font-size: 24px;
-      }
-      p {
-        font-size: 20px;
-      }
+        h3 {
+          font-size: 30px;
+        }
 
+        a {
+          color: #115F83;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:nth-child(odd) {
+          background: #C9EFFF;
+        }
+        &:nth-child(even) {
+          background: #B1DAEC;
+        }
+      }
     }
 
+    &.field-trip .sites li {
+      color: $green;
+
+      a {
+        color: $green;
+      }
+
+      &:nth-child(odd) {
+        background: #E9FCEB;
+      }
+      &:nth-child(even) {
+        background: #CBE4CE;
+      }
+    }
 
   }
-
 }
