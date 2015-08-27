@@ -24,7 +24,7 @@ class States():
 def sites_for_state(request):
     """ Display a list of FederalSites per state. """
 
-    state = request.GET.get('state', None)
+    state = request.GET.get('state')
     sites = FederalSiteResource().list(state)
     states_lookup = States()
     return render(

@@ -61,7 +61,7 @@ def student_pass(request):
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
 
-    state = request.GET.get('state', None)
+    state = request.GET.get('state')
 
     if state:
         sites = FederalSiteResource().list(state)

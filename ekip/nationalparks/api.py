@@ -14,7 +14,7 @@ class FederalSiteResource(DjangoResource):
     def list(self, state=None):
 
         if self.request and 'state' in self.request.GET:
-            state = self.request.GET.get('state', 'None')
+            state = self.request.GET.get('state')
 
         if state:
             return FederalSite.objects.filter(state=state)
