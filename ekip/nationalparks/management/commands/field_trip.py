@@ -11,10 +11,12 @@ NAME_TO_ABBR['Army Corps'] = 'USACE'
 
 
 def abbreviate_agency(agency_name):
+    """ Abbreviate the name of the agency for storage. """
     return NAME_TO_ABBR[agency_name]
 
 
 def create_best_times(best_times_list):
+    """ Create the best visit times objects. """
     best_times = []
     for time_range in best_times_list:
         best_time, _ = BestVisitTime.objects.get_or_create(
@@ -24,6 +26,7 @@ def create_best_times(best_times_list):
 
 
 def create_youth_facilities(facilities_list):
+    """ Create the youth facilities objects. """
     facilities = []
     for feature in facilities_list:
         facility, _ = YouthFacility.objects.get_or_create(facility=feature)
@@ -32,6 +35,7 @@ def create_youth_facilities(facilities_list):
 
 
 def process_site(row):
+    """ Clean up the data, and save a FieldTrip object. """
     name = fc.clean_name(row['NAME'])
     agency = abbreviate_agency(fc.clean_agency(row['AGENCY']))
 
@@ -68,6 +72,7 @@ def process_site(row):
 
 
 def read_site_list(filename):
+    """ Read and process the list of field trip sites. """
     with open(filename, 'r', encoding='latin-1') as site_csv:
         site_reader = csv.DictReader(site_csv, delimiter=',', quotechar='"')
         for l in site_reader:
