@@ -15,16 +15,6 @@
     Fill out the "choose your own adventure" diary entry with things you want to see and do. 
     When you're done, read your story! Then print your paper pass.</p>
 
-    <form method="POST">
-      {% csrf_token %}
-
-      <label for="in_the_fourth_grade">
-      <input id="in_the_fourth_grade" name="in_the_fourth_grade" type="checkbox" value="Y" />
-      <span>Yes, I'm in the fourth grade or home-school equivalent</span></label>
-
-      <button>Play</button>
-    </form>
-
   <form method="POST">
       {% csrf_token %}
 
