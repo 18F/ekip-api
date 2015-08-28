@@ -1,40 +1,68 @@
-#!/bin/sh
+#!/bin/bash
+
+# Blue-green deployment script. Usage:
+#
+#   ./deploy.sh <appname>
 
 set -e
+set -o pipefail
+set -x
 
-app_name="ekip-staging"
 
-timestamp="$(date +"%s")"
-current_apps="$(cf apps)"
+if [ $# -ne 1 ]; then
+	echo "Usage:\n\n\t./deploy.sh <appname>\n"
+	exit 1
+fi
 
-deploy()
+
+BLUE=$1
+GREEN="${BLUE}-B"
+PUSH="cf.sh"
+
+
+finally ()
 {
-	current_deployment=$1
-	next_deployment=$2
-
-	current_vars="$(cf env $current_deployment)"
-
-	database_url="$(echo ${current_vars#*DATABASE_URL: } | awk '{print $1}')"
-
-	echo "$current_deployment is currently deployed, pushing $next_deployment"
-	cf push $next_deployment --no-start -n $app_name-$timestamp
-	cf set-env $next_deployment DATABASE_URL $database_url
-	cf push $next_deployment -n $app_name-$timestamp
-	echo "Mapping $next_deployment to the Main Domain"
-	cf map-route $next_deployment 18f.gov -n $app_name
-	cf map-route $next_deployment cf.18f.us -n $app_name
-	echo "Removing $current_deployment From the Main Domain"
-	cf unmap-route $current_deployment 18f.gov -n $app_name
-	cf unmap-route $current_deployment cf.18f.us -n $app_name
-    cf delete $current_deployment -f
+  # we don't want to keep the sensitive information around
+  rm $MANIFEST
 }
 
-if [[ $current_apps == *"green"* ]]; then
-	echo "Green Exists, Deploying Blue"
-	deploy green blue
-elif [[ $current_apps == *"blue"* ]]; then
-	echo "Blue Exists, Deploying Green"
-	deploy blue green
-else
-	echo "No existing blue or green app, please create one first!"
+on_fail () {
+  finally
+  echo "DEPLOY FAILED - you may need to check 'cf apps' and 'cf routes' and do manual cleanup"
+}
+
+
+CF_VERSION=$(cf --version)
+# http://stackoverflow.com/a/229606/358804
+if [[ "$CF_VERSION" != *"6.12.0-"* ]] && [[ "$CF_VERSION" != *"6.12.1-"* ]]; then
+  echo "CF CLI version is not compatible. See\n\n\thttps://github.com/18F/cf-blue-green#cf-cli\n"
+  exit 1
 fi
+
+# pull the up-to-date manifest from the BLUE (existing) application
+MANIFEST=$(mktemp -t "${BLUE}_manifest.XXXXXXXXXX")
+cf create-app-manifest $BLUE -p $MANIFEST
+
+# set up try/catch
+# http://stackoverflow.com/a/185900/358804
+trap on_fail ERR
+
+DOMAIN=$(cat $MANIFEST | grep domain: | awk '{print $2}')
+
+# create the GREEN application
+cf push $GREEN -f $MANIFEST -c "bash $PUSH" -n $GREEN
+# ensure it starts
+curl --fail -I "https://${GREEN}.${DOMAIN}"
+
+# add the GREEN application to each BLUE route to be load-balanced
+# TODO this output parsing seems a bit fragile...find a way to use more structured output
+cf routes | tail -n +4 | grep $BLUE | awk '{print $3" -n "$2}' | xargs -n 3 cf map-route $GREEN
+
+# cleanup
+# TODO consider 'stop'-ing the BLUE instead of deleting it, so that depedencies are cached for next time
+cf delete $BLUE -f
+cf rename $GREEN $BLUE
+cf delete-route $DOMAIN -n $GREEN -f
+finally
+
+echo "DONE"
