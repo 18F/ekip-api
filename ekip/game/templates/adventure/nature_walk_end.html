@@ -9,29 +9,29 @@
 
 {% block content %}
 
-  <div class="pass-content">
+  <div class="pass-content diary">
+    <div class="diary-left">
+        <div class="page">
 
-    <p> The best part is that this cool place belongs to me! </p>
-    <p> What a great trip </p>
+            <h1><span>Dear Diary,</span></h1>
 
-    <p>
-    Your story: a nature walk to see {{selection}}!
-    </p>
+            <p>Today I used my free pass to explore America!</p>
 
-    <a href={%url "game_success" %}><button>Get your pass now</button></a>
+            <p>At first I was nervous, because there were so many options. There were
+            parks, forests, seashores, and wildlife habitats to visit. I had to decide
+            what I wanted to do.</p>
 
-    <hr />
+            <p>I went on a nature walk! When I arrived, I saw {{selection}}. And the
+             best part is that this cool place belongs to me! What a great trip.</p>
 
-    <p>Dear Diary,</p>
-
-    <p>Today I used my free pass to explore America!</p>
-
-    <p>At first I was nervous, because there were so many options. There were
-    parks, forests, seashores, and wildlife habitats to visit. I had to decide
-    what I wanted to do.</p>
-
-    <p>I went on a nature walk! When I arrived, I saw {{selection}}. And the
-     best part is that this cool place belongs to me! What a great trip.</p>
-
+        </div>
     </div>
+
+  <div class="diary-right">
+    <div class="page">
+        <a href="{% url 'game_success' %}"><button>Get your pass now</button></a>
+    </div>
+  </div>
+
+ </div>
 {% endblock content %}

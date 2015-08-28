@@ -9,11 +9,16 @@
 
 {% block content %}
 
-  <div class="pass-content">
+  <div class="pass-content diary">
+    <div class="diary-left">
+        <div class="page">
+          <h1><span> It was so cool to see </span></h1>
+        </div>
+    </div>
 
-    <p> It was so cool to see </p>
-
-    <form method='POST'>
+    <div class="diary-right">
+      <div class="page">
+        <form method='POST'>
         {% csrf_token %}
         <ul>
             <li>
@@ -33,5 +38,7 @@
             </li>
         </ul>
     </form>
+    </div>
+      </div>
     </div>
 {% endblock content %}

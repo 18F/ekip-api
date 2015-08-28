@@ -2,6 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
+def choose_adventure_type(request):
+    if 'ok_to_start' not in request.session:
+        return HttpResponseRedirect(reverse('student_pass'))
+
+    return render(
+        request,
+        'adventure/choose_adventure.html',
+    )
+
 
 def game_start(request):
     if 'ok_to_start' not in request.session:
