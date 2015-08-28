@@ -83,7 +83,7 @@
       }
 
       &.get-your-pass {
-        background: $red;
+        background: $green;
 
         .section-content {
           padding: 40px 0;
@@ -94,6 +94,22 @@
           margin: 40px 0 0 185px;
           display: inline-block;
           vertical-align: top;
+
+          button {
+            width: 215px;
+            background: $yellow;
+            color: $green;
+            margin: 20px 0;
+            display: block;
+
+            @include transition(background 0.2s ease-in, color 0.2s ease-in);
+
+            &:hover {
+              background: #fff;
+              color: $green;
+            }
+          }
+
         }
         .image {
           margin: 40px 0 0 60px;
@@ -111,7 +127,7 @@
         color: #000;
 
         h2 {
-          color: $red;
+          color: $green;
         }
 
         .image {
@@ -126,7 +142,7 @@
           vertical-align: top;
 
           button {
-            background: $red;
+            background: $green;
             letter-spacing: 1px;
             color: $yellow;
             padding: 13px 30px;
@@ -136,14 +152,14 @@
 
             &:hover {
               background: #fff;
-              color: $red;
+              color: $green;
             }
           }
         }
       }
 
       &.hit-the-road {
-        background: $red;
+        background: $blue;
 
         .section-content {
           padding: 40px 0;
@@ -163,6 +179,7 @@
       }
 
       &.reminders {
+        background: $red;
 
         .image {
           margin: 0 55px 0 0;

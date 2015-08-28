@@ -436,7 +436,7 @@ ul.top-links {
         #how-it-works .content-inner section .section-content a:hover {
           text-decoration: underline; }
     #how-it-works .content-inner section.get-your-pass {
-      background: #C82629; }
+      background: #2D6C35; }
       #how-it-works .content-inner section.get-your-pass .section-content {
         padding: 40px 0; }
       #how-it-works .content-inner section.get-your-pass .description {
@@ -444,6 +444,18 @@ ul.top-links {
         margin: 40px 0 0 185px;
         display: inline-block;
         vertical-align: top; }
+        #how-it-works .content-inner section.get-your-pass .description button {
+          width: 215px;
+          background: #FFE897;
+          color: #2D6C35;
+          margin: 20px 0;
+          display: block;
+          -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+          -moz-transition: background 0.2s ease-in, color 0.2s ease-in;
+          transition: background 0.2s ease-in, color 0.2s ease-in; }
+          #how-it-works .content-inner section.get-your-pass .description button:hover {
+            background: #fff;
+            color: #2D6C35; }
       #how-it-works .content-inner section.get-your-pass .image {
         margin: 40px 0 0 60px;
         display: inline-block; }
@@ -454,7 +466,7 @@ ul.top-links {
       background: #FDEED0;
       color: #000; }
       #how-it-works .content-inner section.plan-a-trip h2 {
-        color: #C82629; }
+        color: #2D6C35; }
       #how-it-works .content-inner section.plan-a-trip .image {
         position: absolute;
         left: -70px; }
@@ -464,7 +476,7 @@ ul.top-links {
         display: inline-block;
         vertical-align: top; }
         #how-it-works .content-inner section.plan-a-trip .description button {
-          background: #C82629;
+          background: #2D6C35;
           letter-spacing: 1px;
           color: #FFE897;
           padding: 13px 30px;
@@ -474,9 +486,9 @@ ul.top-links {
           transition: background 0.2s ease-in, color 0.2s ease-in; }
           #how-it-works .content-inner section.plan-a-trip .description button:hover {
             background: #fff;
-            color: #C82629; }
+            color: #2D6C35; }
     #how-it-works .content-inner section.hit-the-road {
-      background: #C82629; }
+      background: #177099; }
       #how-it-works .content-inner section.hit-the-road .section-content {
         padding: 40px 0; }
       #how-it-works .content-inner section.hit-the-road .description {
@@ -487,16 +499,18 @@ ul.top-links {
       #how-it-works .content-inner section.hit-the-road .image {
         margin: 20px 0 0 60px;
         display: inline-block; }
-    #how-it-works .content-inner section.reminders .image {
-      margin: 0 55px 0 0;
-      display: inline-block;
-      vertical-align: top; }
-      #how-it-works .content-inner section.reminders .image img {
-        max-width: 443px;
-        max-height: 198px; }
-    #how-it-works .content-inner section.reminders .description {
-      max-width: 430px;
-      display: inline-block; }
+    #how-it-works .content-inner section.reminders {
+      background: #C82629; }
+      #how-it-works .content-inner section.reminders .image {
+        margin: 0 55px 0 0;
+        display: inline-block;
+        vertical-align: top; }
+        #how-it-works .content-inner section.reminders .image img {
+          max-width: 443px;
+          max-height: 198px; }
+      #how-it-works .content-inner section.reminders .description {
+        max-width: 430px;
+        display: inline-block; }
 
 #get-your-pass .content {
   min-height: 600px; }
