@@ -12,7 +12,7 @@
   <div class="pass-content diary">
     <div class="diary-left">
       <div class="page">
-        <h2>It was so cool to see </h2>
+        <h2>It was so cool to see ...</h2>
       </div>
     </div>
 
@@ -22,19 +22,16 @@
         {% csrf_token %}
         <ul>
           <li>
-              <button type="submit" name='selection' value="mlk-house">
-                  Martin Luther King's house!
-              </button>
+            <img src="{% static "img/activity/mountains.jpg" %}" alt="mountains" />
+            <button type="submit" name='selection' value="mlk-house">Martin Luther King's house!</button>
           </li>
           <li>
-              <button type="submit" name='selection' value="ancient-drawings">
-                  Ancient drawings!
-              </button>
+            <img src="{% static "img/activity/animal.jpg" %}" alt="gecko" />
+            <button type="submit" name='selection' value="ancient-drawings">Ancient drawings!</button>
           </li>
           <li>
-              <button type="submit" name='selection' value="dinosaur-tracks">
-                  Dinosaur tracks!
-              </button>
+            <img src="{% static "img/activity/plant.jpg" %}" alt="cactus" />
+            <button type="submit" name='selection' value="dinosaur-tracks">Dinosaur tracks!</button>
           </li>
         </ul>
         </form>

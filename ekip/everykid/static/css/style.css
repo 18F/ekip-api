@@ -642,6 +642,10 @@ ul.top-links {
     background: #fff;
     padding: 0 25px;
     margin: 4px; }
+    #student-pass .diary .page::after {
+      clear: both;
+      content: "";
+      display: table; }
     #student-pass .diary .page h2 {
       font-size: 40px;
       color: #C82629;
@@ -667,13 +671,19 @@ ul.top-links {
     #student-pass .diary .page ul {
       padding: 10px 0;
       margin: 0; }
-      #student-pass .diary .page ul li button {
-        width: 100%;
-        padding: 15px 0px;
-        background: #177099;
-        color: #FFE897; }
-        #student-pass .diary .page ul li button:hover {
-          background: #C82629; }
+      #student-pass .diary .page ul li {
+        margin: 20px 0;
+        position: relative; }
+        #student-pass .diary .page ul li img {
+          width: 100%; }
+        #student-pass .diary .page ul li button {
+          width: 100%;
+          padding: 15px 5px;
+          background: rgba(23, 112, 153, 0.9);
+          color: #FFE897;
+          bottom: 8px;
+          left: 0;
+          position: absolute; }
     #student-pass .diary .page form {
       max-width: 100%;
       margin: 0;
@@ -1467,6 +1477,30 @@ footer {
     #get-your-pass .content .pass-content h1,
     #student-pass .content .pass-content h1 {
       font-size: 28px; }
+  #student-pass .diary {
+    min-height: 0; }
+    #student-pass .diary .diary-left,
+    #student-pass .diary .diary-right {
+      width: 100%;
+      float: none; }
+      #student-pass .diary .diary-left .page,
+      #student-pass .diary .diary-right .page {
+        margin: 5px 0; }
+    #student-pass .diary .diary-left .page {
+      padding-bottom: 20px; }
+    #student-pass .diary.diary-end .page button {
+      margin-bottom: 20px; }
+    #student-pass .diary .page {
+      min-height: 0;
+      margin: 0; }
+      #student-pass .diary .page h2 {
+        font-size: 30px;
+        padding: 20px 0 10px 0; }
+      #student-pass .diary .page p {
+        font-size: 20px;
+        line-height: 27px; }
+      #student-pass .diary .page button.start {
+        margin: 20px auto; }
   #get-your-pass .content .pass-content ul.boxes {
     margin: 15px 0; }
     #get-your-pass .content .pass-content ul.boxes li {

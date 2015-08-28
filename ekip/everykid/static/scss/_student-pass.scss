@@ -102,6 +102,8 @@
       padding: 0 25px;
       margin: 4px;
 
+      @include clearfix();
+
       h2 {
         font-size: 40px;
         color: $red;
@@ -139,15 +141,21 @@
         margin: 0;
 
         li {
+          margin: 20px 0;
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
           button {
             width: 100%;
-            padding: 15px 0px;
-            background: $blue;
+            padding: 15px 5px;
+            background: rgba(23, 112, 153, 0.9);
             color: $yellow;
-
-            &:hover {
-              background: $red;
-            }
+            bottom: 8px;
+            left: 0;
+            position: absolute;
           }
         }
       }

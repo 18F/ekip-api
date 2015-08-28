@@ -22,12 +22,15 @@
         {% csrf_token %}
         <ul>
           <li>
+            <img src="{% static "img/activity/mountains.jpg" %}" alt="mountains" />
             <button type="submit" name='selection' value="ocean">Ocean!</button>
           </li>
           <li>
+            <img src="{% static "img/activity/animal.jpg" %}" alt="gecko" />
             <button type="submit" name='selection' value="lake">Lake!</button>
           </li>
           <li>
+            <img src="{% static "img/activity/plant.jpg" %}" alt="cactus" />
             <button type="submit" name='selection' value="river">River!</button>
           </li>
         </ul>
