@@ -3,7 +3,7 @@
 ###
 # Zero downtime deploy script for foia-hub.
 #
-# Deploys a new version of the foia app, then once that works,
+# Deploys a new version of the EKIP app, then once that works,
 # flips the route to point at the new version.
 #
 # The old version of the app stays around and can be reverted to
