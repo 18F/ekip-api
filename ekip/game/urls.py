@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 from .views import (
     nature_walk, nature_walk_end, time_travel, time_travel_end, swimming,
-    swimming_end, game_start)
+    swimming_end, game_start, choose_adventure_type)
 
 urlpatterns = patterns(
     '',
@@ -20,6 +20,7 @@ urlpatterns = patterns(
         name='first_game_lands_map'),
 
     url(r'adventure/start', game_start, name='adventure_start'),
+    url(r'adventure/choose-adventure', choose_adventure_type, name='choose_adventure_type'),
 
     # Choose your own adventure.
 
