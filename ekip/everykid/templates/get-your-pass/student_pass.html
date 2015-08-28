@@ -15,7 +15,7 @@
     Fill out the "choose your own adventure" diary entry with things you want to see and do. 
     When you're done, read your story! Then print your paper pass.</p>
 
-   <form method="POST">
+    <form method="POST">
       {% csrf_token %}
 
       <label for="in_the_fourth_grade">
@@ -26,8 +26,6 @@
     </form>
 
 <script type="text/javascript">document.getElementById("in_the_fourth_grade").setCustomValidity("First check the box if you are in the fourth grade.");</script>
-
-
   </div>
 
 {% endblock content %}
