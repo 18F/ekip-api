@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Exchange Your Voucher{% endblock title %}
+{% block title %}Exchange your pass{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -10,13 +10,11 @@
 
   <div class="plan-your-trip-content">
 
-    <h1>Exchange Your Voucher</h1>
+    <h1>Exchange your pass</h1>
 
-    <p> You can exchange your voucher for a 4th grade pass at any of these
-    federal land and water sites. </p>
+    <p>Trade your paper pass for a limited-edition, plastic pass at any of the sites on this page.</p>
 
-    <p> Start by selecting the state you are in, or that you plan to visit.
-    </p>
+    <p> Start by selecting a state, and we'll show you all the places in that state that can make the trade for you.</p>
 
     <form class="state-select" method="GET">
       <div class="choose-state">
@@ -37,7 +35,7 @@
     {% if sites %}
     <section class="state">
       <div class="state-content">
-        <h2>Where to exchange your pass in {{state_name}}:</h2>
+        <h2>Where to trade your pass in {{state_name}}:</h2>
       </div>
     </section>
 
