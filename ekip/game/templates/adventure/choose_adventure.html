@@ -12,9 +12,9 @@
   <div class="pass-content diary">
 
     <div class="diary-left">
-        <div class="page">
-            <h1><span> Here's what I decided to do ... </span></h1>
-        </div>
+      <div class="page">
+        <h2>Here's what I decided to do ...</h2>
+      </div>
     </div>
 
     <div class="diary-right">
@@ -22,9 +22,15 @@
       <div class="page">
 
         <ul>
-            <li><a href="{% url 'adventure_nature_walk' %}"><button>I went on a nature walk!</button></a></li>
-            <li><a href="{% url 'adventure_time_travel' %}"><button>I time traveled!</button></a></li>
-            <li><a href="{% url 'adventure_swimming' %}"><button>I went swimming!</button></a></li>
+          <li>
+            <a href="{% url 'adventure_nature_walk' %}"><button>I went on a nature walk!</button></a>
+          </li>
+          <li>
+            <a href="{% url 'adventure_time_travel' %}"><button>I time traveled!</button></a>
+          </li>
+          <li>
+            <a href="{% url 'adventure_swimming' %}"><button>I went swimming!</button></a>
+          </li>
         </ul>
 
       </div>
