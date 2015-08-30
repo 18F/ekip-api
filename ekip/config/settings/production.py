@@ -6,7 +6,10 @@ from .base import *
 DEBUG = False
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    '.everykidinapark.gov', # Allow domain and subdomains
+    'kids-prod.18f.gov', # Internal URL for production instance 
+    ]
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
@@ -51,6 +54,9 @@ LOGGING = {
         },
     }
 }
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 try:
   from .local_settings import *
