@@ -7,3 +7,5 @@ applications:
   path: .
   stack: cflinuxfs2
   timeout: 180
+  env:
+    NEW_RELIC_CONFIG_FILE: /app/newrelic.ini
