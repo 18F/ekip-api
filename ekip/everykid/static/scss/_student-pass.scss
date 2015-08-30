@@ -77,32 +77,96 @@
       }
     }
 
+    &.diary-end .page h2 {
+      padding: 20px 0 0 0;
+    }
+    &.diary-end .page button {
+      background: $green;
+      color: $yellow;
+
+      &:hover {
+        background: $red;
+      }
+    }
+    &.diary-end .diary-right {
+      text-align: center;
+
+      img {
+        margin: 20px 0 0 0;
+      }
+    }
+
     .page {
-      min-height: 515px;
+      min-height: 525px;
       background: #fff;
-      padding: 0 30px;
+      padding: 0 25px;
       margin: 4px;
 
+      @include clearfix();
+
       h2 {
+        font-size: 40px;
         color: $red;
-        padding: 50px 0 0 0;
+        padding: 40px 0 0 0;
       }
       p {
         color: $blue;
         font-size: 22px;
         font-weight: 400;
+        margin: 5px 0 15px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       span {
         color: $red;
+      }
+      a {
+        text-decoration: none;
       }
       button.start {
         background: $blue;
         color: $yellow;
         margin: 40px auto 0 auto;
         display: block;
+
+        &:hover {
+          background: $red;
+        }
+      }
+
+      ul {
+        padding: 10px 0;
+        margin: 0;
+
+        li {
+          margin: 20px 0;
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          button {
+            width: 100%;
+            padding: 15px 5px;
+            background: rgba(23, 112, 153, 0.9);
+            color: $yellow;
+            bottom: 8px;
+            left: 0;
+            position: absolute;
+          }
+        }
+      }
+
+      form {
+        max-width: 100%;
+        margin: 0;
+        border: none;
+        padding: 0;
       }
     }
-
   }
 
   .voucher-claim {

@@ -11,8 +11,8 @@
 
   <div class="pass-content diary">
     <div class="diary-left">
-        <div class="page">
-            <h1><span>I could hardly wait to jump into that fresh, cold ... </span></h1>
+      <div class="page">
+        <h2>I could hardly wait to jump into that fresh, cold ... </h2>
         </div>
     </div>
 
@@ -21,24 +21,22 @@
         <form method='POST'>
         {% csrf_token %}
         <ul>
-            <li>
-                <button type="submit" name='selection' value="ocean">
-                    Ocean!
-                </button>
-            </li>
-            <li>
-                <button type="submit" name='selection' value="lake">
-                    Lake!
-                </button>
-            </li>
-            <li>
-                <button type="submit" name='selection' value="river">
-                    River!
-                </button>
-            </li>
+          <li>
+            <img src="{% static "img/activity/mountains.jpg" %}" alt="mountains" />
+            <button type="submit" name='selection' value="ocean">Ocean!</button>
+          </li>
+          <li>
+            <img src="{% static "img/activity/animal.jpg" %}" alt="gecko" />
+            <button type="submit" name='selection' value="lake">Lake!</button>
+          </li>
+          <li>
+            <img src="{% static "img/activity/plant.jpg" %}" alt="cactus" />
+            <button type="submit" name='selection' value="river">River!</button>
+          </li>
         </ul>
-    </form>
-    </div>
+        </form>
       </div>
     </div>
+  </div>
+
 {% endblock content %}

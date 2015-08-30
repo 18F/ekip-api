@@ -9,26 +9,30 @@
 
 {% block content %}
 
-  <div class="pass-content diary">
+  <div class="pass-content diary diary-end">
     <div class="diary-left">
-        <div class="page">
-            <h1><span>Dear Diary,</span></h1>
-            <p>Today I used my free pass to explore America!</p>
+      <div class="page">
+        <h2>Dear Diary,</h2>
+        <p>Today I used my free pass to explore America!</p>
 
-            <p>At first I was nervous, because there were so many options.
-            There were parks, forests, seashores, and wildlife habitats to
-            visit. I had to decide what I wanted to do.</p>
+        <p>At first I was nervous, because there were so many options.
+        There were parks, forests, seashores, and wildlife habitats to
+        visit. I had to decide what I wanted to do.</p>
 
-            <p>I time traveled! It was so cool to see {{selection}}. And the
-            best part is that this cool place belongs to me! What a great
-            trip.</p>
-        </div>
+        <p>I time travelled! It was so cool to see {{selection}}. And the
+        best part is that this cool place belongs to me! What a great
+        trip.</p>
+      </div>
     </div>
-  
-  <div class="diary-right">
-    <div class="page">
-    <a href={%url "game_success" %}><button>Get your pass now</button></a>
+
+    <div class="diary-right">
+      <div class="page">
+
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="time travel" />
+        <img src="{% static "img/activity/end-animal.jpg" %}" alt="gecko" />
+
+        <a href={%url "game_success" %}><button>Get your pass now</button></a>
+      </div>
     </div>
   </div>
-    </div>
 {% endblock content %}

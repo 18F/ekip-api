@@ -10,23 +10,34 @@
 {% block content %}
 
   <div class="pass-content diary">
+
     <div class="diary-left">
-        <div class="page">
-            <h1><span> When I arrived I saw ... </span></h1>
-        </div>
+      <div class="page">
+        <h2>When I arrived I saw ... </h2>
+      </div>
     </div>
 
     <div class="diary-right">
       <div class="page">
         <form method='POST'>
-            {% csrf_token %}
-            <ul>
-                <li><button type="submit" name='huge-mountain' value="huge mountains">Huge mountains!</button></li>
-                <li><button type="submit" name='wild-animals' value="wild animals">Wild animals!</button></li>
-                <li><button type="submit" name='beautiful-plants' value="beautiful-plants">Beautiful plants!</button></li>
-            </ul>
+          {% csrf_token %}
+          <ul>
+            <li>
+              <img src="{% static "img/activity/mountains.jpg" %}" alt="mountains" />
+              <button type="submit" name='huge-mountain' value="huge mountains">Huge mountains!</button>
+            </li>
+            <li>
+              <img src="{% static "img/activity/animal.jpg" %}" alt="gecko" />
+              <button type="submit" name='wild-animals' value="wild animals">Wild animals!</button>
+            </li>
+            <li>
+              <img src="{% static "img/activity/plant.jpg" %}" alt="cactus" />
+              <button type="submit" name='beautiful-plants' value="beautiful-plants">Beautiful plants!</button>
+            </li>
+          </ul>
         </form>
         </div>
       </div>
     </div>
+
 {% endblock content %}

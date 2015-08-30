@@ -41,9 +41,11 @@
     <div class="section-content">
       <div class="description">
         <h2>Get your pass</h2>
-        <p>Fourth graders: <a href="{% url "student_pass" %}">click here</a> to get and print your pass.</p>
+        <p>Get and print fourth-grade passes to our national lands and waters.</p>
 
-        <p>Educators: <a href="{% url "educator_passes" %}">click here</a> to get and print passes for your students.</p>
+        <a href="{% url "student_pass" %}"><button>Fourth Graders</button></a>
+
+        <a href="{% url "educator_passes" %}"><button>Educators</button></a>
       </div>
       <div class="image">
         <img src="{% static "img/how-it-works-print.png" %}" alt="Printable Pass" />
