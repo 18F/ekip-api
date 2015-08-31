@@ -14,6 +14,7 @@ ALLOWED_HOSTS = [
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
+DATABASES['default']['CONN_MAX_AGE'] = 60
 
 AWS_STORAGE_BUCKET_NAME = os.getenv('EKIP_STATIC_BUCKET_NAME')
 AWS_S3_CUSTOM_DOMAIN = 's3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
