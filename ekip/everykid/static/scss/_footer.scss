@@ -27,17 +27,24 @@ footer {
       }
     }
 
-    p {
+    p.hashtag {
       color: $brown;
       font-size: 18px;
       font-weight: 500;
+      padding: 0 0 10px 0;
+    }
+
+    p {
+      color: #000;
+      font-size: 12px;
+      padding: 5px 0;
     }
 
     nav {
       li {
         line-height: 12px;
         font-size: 12px;
-        margin: 30px 0 0 0;
+        margin: 10px 0 0 0;
         padding: 0 10px;
         border-right: 1px solid $brown;
         display: inline-block;

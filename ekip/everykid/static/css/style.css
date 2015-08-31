@@ -1371,14 +1371,19 @@ footer {
       transition: opacity 0.2s ease-in; }
       footer .footer-content img.doi:hover {
         opacity: 1; }
-    footer .footer-content p {
+    footer .footer-content p.hashtag {
       color: #683E2D;
       font-size: 18px;
-      font-weight: 500; }
+      font-weight: 500;
+      padding: 0 0 10px 0; }
+    footer .footer-content p {
+      color: #000;
+      font-size: 12px;
+      padding: 5px 0; }
     footer .footer-content nav li {
       line-height: 12px;
       font-size: 12px;
-      margin: 30px 0 0 0;
+      margin: 10px 0 0 0;
       padding: 0 10px;
       border-right: 1px solid #683E2D;
       display: inline-block; }
