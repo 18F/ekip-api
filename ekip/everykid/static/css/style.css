@@ -1344,6 +1344,15 @@ footer {
     padding: 40px 0;
     margin: auto;
     text-align: center; }
+    footer .footer-content img {
+      width: 100px;
+      margin: 0 0 10px 0;
+      opacity: 0.8;
+      -webkit-transition: opacity 0.2s ease-in;
+      -moz-transition: opacity 0.2s ease-in;
+      transition: opacity 0.2s ease-in; }
+      footer .footer-content img:hover {
+        opacity: 1; }
     footer .footer-content p {
       color: #683E2D;
       font-size: 18px;
