@@ -803,7 +803,7 @@ ul.top-links {
     font-size: 18px;
     line-height: 1.4em;
     color: #323232;
-    margin-bottom: 30px; }
+    margin-bottom: 15px; }
   #educators .content-inner-block .download-activity {
     max-width: 310px;
     padding: 0 0 90px 50px;
@@ -895,12 +895,12 @@ ul.top-links {
             position: absolute;
             left: 0; }
     #educators form li .city {
-      width: 230px; }
+      max-width: 230px; }
     #educators form li .state {
-      width: 200px;
+      max-width: 200px;
       float: left; }
     #educators form li .zipcode {
-      width: 100px;
+      max-width: 100px;
       float: right; }
     #educators form li .error input, #educators form li .error select {
       border: 1px solid red; }
@@ -995,7 +995,7 @@ ul.top-links {
       font-size: 18px;
       margin: 0 0 15px 0; }
   #plan-your-trip .plan-your-trip-content .state-select {
-    width: 300px;
+    max-width: 300px;
     margin: 25px auto;
     padding: 0 0 25px 0;
     border: 2px solid #fff;
@@ -1409,7 +1409,12 @@ footer {
   h2 {
     font-size: 20px; }
   ul.top-links {
-    display: none; }
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative; }
   .menu-container {
     top: 0; }
   .menu-container nav {
@@ -1442,6 +1447,15 @@ footer {
     padding: 10px 20px;
     margin: 0;
     min-height: 0; }
+  footer .footer-content {
+    padding: 20px; }
+    footer .footer-content img.doi {
+      top: 0;
+      position: relative; }
+    footer .footer-content nav {
+      margin: 15px 0; }
+    footer .footer-content nav li {
+      margin: 0; }
   #landing .menu-container nav {
     top: 0;
     padding: 5px 0; }
@@ -1515,6 +1529,11 @@ footer {
       margin: 0;
       position: relative;
       left: 0; }
+      #how-it-works .content-inner section.get-your-pass .image img,
+      #how-it-works .content-inner section.plan-a-trip .image img,
+      #how-it-works .content-inner section.hit-the-road .image img,
+      #how-it-works .content-inner section.reminders .image img {
+        width: 100%; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
@@ -1580,10 +1599,23 @@ footer {
       display: none; }
   #educators .content-inner-block {
     padding: 20px; }
+    #educators .content-inner-block .download-activity,
+    #educators .content-inner-block .generate-vouchers {
+      margin-left: 15px;
+      padding-left: 35px; }
   #educators form {
     width: 100%;
     padding: 0;
     margin: 0; }
+    #educators form li input[type="text"] {
+      width: 90%; }
+    #educators form li .state {
+      padding-bottom: 15px;
+      float: none; }
+    #educators form li .zipcode {
+      float: none; }
+    #educators form button {
+      float: none; }
   #educators .preview {
     padding: 20px; }
     #educators .preview h2 {
@@ -1610,7 +1642,7 @@ footer {
     font-size: 18px; }
     #plan-your-trip .content-inner section h2 {
       font-size: 26px;
-      line-height: 20px; }
+      line-height: 30px; }
     #plan-your-trip .content-inner section p {
       font-size: 18px;
       line-height: 24px;
@@ -1627,6 +1659,11 @@ footer {
       #plan-your-trip .content-inner section.voucher .section-content {
         width: auto;
         padding: 0; }
+        #plan-your-trip .content-inner section.destination .section-content li,
+        #plan-your-trip .content-inner section.lodging .section-content li,
+        #plan-your-trip .content-inner section.prepare .section-content li,
+        #plan-your-trip .content-inner section.voucher .section-content li {
+          width: 100%; }
         #plan-your-trip .content-inner section.destination .section-content .lodging-image,
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image,
         #plan-your-trip .content-inner section.prepare .section-content .lodging-image,
@@ -1646,7 +1683,7 @@ footer {
         #plan-your-trip .content-inner section.lodging .section-content .packing-list,
         #plan-your-trip .content-inner section.prepare .section-content .packing-list,
         #plan-your-trip .content-inner section.voucher .section-content .packing-list {
-          max-width: none;
+          width: 100%;
           margin: 10px 0; }
           #plan-your-trip .content-inner section.destination .section-content .packing-list h3,
           #plan-your-trip .content-inner section.lodging .section-content .packing-list h3,
