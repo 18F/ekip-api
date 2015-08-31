@@ -5,9 +5,8 @@ TEMPLATE_DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'ekip',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'ekip',                      
         'USER': 'ekip',
         'PASSWORD': 'pike',
         'HOST': 'localhost',
@@ -16,6 +15,12 @@ DATABASES = {
 }
 
 INTERNAL_IPS = ['127.0.0.1', '::1', '192.168.19.16']
+
+CACHES = {
+    'default': { 
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
 
 try:
   from .local_settings import *

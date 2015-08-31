@@ -6,7 +6,11 @@ from .base import *
 DEBUG = False
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    '.everykidinapark.gov', # Allow domain and subdomains
+    'kids-prod.18f.gov', # Internal URL for production instance 
+    'kids.18f.gov', # Allow staging URL
+    ]
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
@@ -18,6 +22,16 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 AWS_ACCESS_KEY_ID = os.getenv('EKIP_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('EKIP_AWS_SECRET_ACCESS_KEY')
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.getenv('TMPDIR', '/tmp'),
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000,
+        },
+    }
+}
 
 
 # Don't add complex authentication related query parameters for requests
@@ -51,6 +65,9 @@ LOGGING = {
         },
     }
 }
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 try:
   from .local_settings import *

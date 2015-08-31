@@ -10,6 +10,19 @@ footer {
     margin: auto;
     text-align: center;
 
+    img {
+      width: 100px;
+      margin: 0 0 10px 0;
+      opacity: 0.8;
+
+      @include transition(opacity 0.2s ease-in);
+
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     p {
       color: $brown;
       font-size: 18px;
