@@ -1402,7 +1402,12 @@ footer {
   h2 {
     font-size: 20px; }
   ul.top-links {
-    display: none; }
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative; }
   .menu-container {
     top: 0; }
   .menu-container nav {
