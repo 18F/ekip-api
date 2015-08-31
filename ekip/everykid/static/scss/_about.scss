@@ -65,9 +65,11 @@
           padding: 0;
         }
         p {
+          max-width: 330px;
           font-size: 18px;
           line-height: 24px;
           padding: 0;
+          display: inline-block;
         }
         ul {
           border-top: 1px solid #62B6DB;
@@ -79,8 +81,26 @@
             border-bottom: 1px solid #62B6DB;
             position: relative;
 
-            &.open h4:before {
-              content: "–";
+            &.open {
+
+              h4:before {
+                content: "–";
+              }
+
+              img {
+                margin: 10px 0 0 0;
+                float: right;
+                vertical-align: top;
+                display: inline-block;
+              }
+            }
+
+            img {
+              display: none;
+            }
+
+            p {
+              font-size: 16px;
             }
           }
 
