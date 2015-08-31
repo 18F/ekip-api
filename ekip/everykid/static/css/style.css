@@ -1568,6 +1568,8 @@ footer {
       #student-pass .diary .page p {
         font-size: 20px;
         line-height: 27px; }
+      #student-pass .diary .page img {
+        width: 100%; }
       #student-pass .diary .page button.start {
         margin: 20px auto; }
   #get-your-pass .content .pass-content ul.boxes {
