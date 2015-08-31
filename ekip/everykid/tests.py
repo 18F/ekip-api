@@ -60,6 +60,8 @@ class PassExchangeSiteTestCase(TestCase):
     def test_states_mapping(self):
         self.assertEqual('Maryland', STATES['MD'])
         self.assertEqual('Colorado', STATES['CO'])
+        self.assertEqual('Puerto Rico', STATES['PR'])
+        self.assertEqual('Virgin Islands', STATES['VI'])
         
 
 class FourthGraderFlowTests(TestCase):
