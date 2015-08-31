@@ -133,20 +133,21 @@ button {
 
 .tooltip {
   position: relative;
-}
 
-.tooltip-content {
-  font-size: 13px;
-  line-height: 17px;
-  font-weight: 400;
-  padding: 8px 12px;
-  text-align: left;
-  background: #fff;
-  color: $blue;
-  border: 1px solid $blue;
-  top: -110px;
-  position: absolute;
-  display: none;
+  &:hover:before {
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: $blue;
+    border: 1px solid $blue;
+    left: 0;
+    top: -110px;
+    content: attr(title);
+    position: absolute;
+  }
 }
 
 .errors {

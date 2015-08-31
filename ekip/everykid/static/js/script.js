@@ -27,16 +27,6 @@ $(function () {
 
   });
 
-  $('#about .participating li h4').hover(function() {
-
-    $(this).next().fadeIn();
-
-  }, function () {
-
-    $(this).next().fadeOut();
-
-  })
-
   // scroll down to park sites on screens larger than tablet
   if($('#plan-your-trip .sites').length) {
 

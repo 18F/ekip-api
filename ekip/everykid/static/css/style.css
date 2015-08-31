@@ -218,19 +218,19 @@ ul.top-links {
 
 .tooltip {
   position: relative; }
-
-.tooltip-content {
-  font-size: 13px;
-  line-height: 17px;
-  font-weight: 400;
-  padding: 8px 12px;
-  text-align: left;
-  background: #fff;
-  color: #177099;
-  border: 1px solid #177099;
-  top: -110px;
-  position: absolute;
-  display: none; }
+  .tooltip:hover:before {
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: #177099;
+    border: 1px solid #177099;
+    left: 0;
+    top: -110px;
+    content: attr(title);
+    position: absolute; }
 
 .errors {
   padding: 10px 0;
