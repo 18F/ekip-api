@@ -63,7 +63,7 @@ class PassExchangeSiteTestCase(TestCase):
         self.assertEqual('Colorado', STATES['CO'])
         self.assertEqual('Puerto Rico', STATES['PR'])
         self.assertEqual('Virgin Islands', STATES['VI'])
-        
+
 
 class FourthGraderFlowTests(TestCase):
 
@@ -92,8 +92,8 @@ class EducatorFormTests(TestCase):
     def test_create_educator(self):
         """ Test the create_educator function. """
         data = {
-            'name': 'Smokey the Bear', 
-            'work_email': 'smokey@abc.gov', 
+            'name': 'Smokey the Bear',
+            'work_email': 'smokey@abc.gov',
             'organization_name': 'Wildfire Foundation',
             'org_or_school': 'O',
             'address_line_1': '123 Main St.',
@@ -117,6 +117,3 @@ class EducatorFormTests(TestCase):
         self.assertEqual(saved.zipcode, data['zipcode'])
         self.assertEqual(saved.num_students, data['num_students'])
         self.assertEqual(saved.org_or_school, data['org_or_school'])
-
-
-
