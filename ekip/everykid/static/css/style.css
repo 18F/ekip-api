@@ -1355,7 +1355,7 @@ footer {
   clear: both; }
   footer .footer-content {
     max-width: 985px;
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
     margin: auto;
     text-align: center;
     position: relative; }
@@ -1363,7 +1363,7 @@ footer {
       width: 100px;
       margin: 0 0 10px 0;
       opacity: 0.8;
-      top: 20px;
+      top: 40px;
       right: 0;
       position: absolute;
       -webkit-transition: opacity 0.2s ease-in;
@@ -1371,15 +1371,17 @@ footer {
       transition: opacity 0.2s ease-in; }
       footer .footer-content img.doi:hover {
         opacity: 1; }
-    footer .footer-content p.hashtag {
-      color: #683E2D;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0 0 10px 0; }
     footer .footer-content p {
       color: #000;
       font-size: 12px;
       padding: 5px 0; }
+      footer .footer-content p.hashtag {
+        color: #683E2D;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 0 10px 0; }
+      footer .footer-content p.notice {
+        padding-top: 25px; }
     footer .footer-content nav li {
       line-height: 12px;
       font-size: 12px;

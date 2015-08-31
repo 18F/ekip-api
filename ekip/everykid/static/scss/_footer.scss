@@ -6,7 +6,7 @@ footer {
 
   .footer-content {
     max-width: $site-width;
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
     margin: auto;
     text-align: center;
     position: relative;
@@ -15,29 +15,31 @@ footer {
       width: 100px;
       margin: 0 0 10px 0;
       opacity: 0.8;
-      top: 20px;
+      top: 40px;
       right: 0;
       position: absolute;
 
       @include transition(opacity 0.2s ease-in);
-
 
       &:hover {
         opacity: 1;
       }
     }
 
-    p.hashtag {
-      color: $brown;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0 0 10px 0;
-    }
-
     p {
       color: #000;
       font-size: 12px;
       padding: 5px 0;
+
+      &.hashtag {
+        color: $brown;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 0 10px 0;
+      }
+      &.notice {
+        padding-top: 25px;
+      }
     }
 
     nav {
