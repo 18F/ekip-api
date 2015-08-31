@@ -404,6 +404,7 @@
       .lets-get-going {
         display: none;
       }
+
     }
 
     .content {
@@ -424,7 +425,7 @@
 
         h2 {
           font-size: 26px;
-          line-height: 20px;
+          line-height: 30px;
         }
 
         p {
@@ -444,6 +445,10 @@
             width: auto;
             padding: 0;
 
+            li {
+              width: 100%;
+            }
+
             .lodging-image {
               display: none;
             }
@@ -453,7 +458,7 @@
               padding: 0;
             }
             .packing-list {
-              max-width: none;
+              width: 100%;
               margin: 10px 0;
 
               h3 {

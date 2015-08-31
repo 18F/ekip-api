@@ -803,7 +803,7 @@ ul.top-links {
     font-size: 18px;
     line-height: 1.4em;
     color: #323232;
-    margin-bottom: 30px; }
+    margin-bottom: 15px; }
   #educators .content-inner-block .download-activity {
     max-width: 310px;
     padding: 0 0 90px 50px;
@@ -995,7 +995,7 @@ ul.top-links {
       font-size: 18px;
       margin: 0 0 15px 0; }
   #plan-your-trip .plan-your-trip-content .state-select {
-    width: 300px;
+    max-width: 300px;
     margin: 25px auto;
     padding: 0 0 25px 0;
     border: 2px solid #fff;
@@ -1635,7 +1635,7 @@ footer {
     font-size: 18px; }
     #plan-your-trip .content-inner section h2 {
       font-size: 26px;
-      line-height: 20px; }
+      line-height: 30px; }
     #plan-your-trip .content-inner section p {
       font-size: 18px;
       line-height: 24px;
@@ -1652,6 +1652,11 @@ footer {
       #plan-your-trip .content-inner section.voucher .section-content {
         width: auto;
         padding: 0; }
+        #plan-your-trip .content-inner section.destination .section-content li,
+        #plan-your-trip .content-inner section.lodging .section-content li,
+        #plan-your-trip .content-inner section.prepare .section-content li,
+        #plan-your-trip .content-inner section.voucher .section-content li {
+          width: 100%; }
         #plan-your-trip .content-inner section.destination .section-content .lodging-image,
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image,
         #plan-your-trip .content-inner section.prepare .section-content .lodging-image,
@@ -1671,7 +1676,7 @@ footer {
         #plan-your-trip .content-inner section.lodging .section-content .packing-list,
         #plan-your-trip .content-inner section.prepare .section-content .packing-list,
         #plan-your-trip .content-inner section.voucher .section-content .packing-list {
-          max-width: none;
+          width: 100%;
           margin: 10px 0; }
           #plan-your-trip .content-inner section.destination .section-content .packing-list h3,
           #plan-your-trip .content-inner section.lodging .section-content .packing-list h3,
