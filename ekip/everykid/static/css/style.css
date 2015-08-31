@@ -1435,6 +1435,15 @@ footer {
     padding: 10px 20px;
     margin: 0;
     min-height: 0; }
+  footer .footer-content {
+    padding: 20px; }
+    footer .footer-content img.doi {
+      top: 0;
+      position: relative; }
+    footer .footer-content nav {
+      margin: 15px 0; }
+    footer .footer-content nav li {
+      margin: 0; }
   #landing .menu-container nav {
     top: 0;
     padding: 5px 0; }
@@ -1508,6 +1517,11 @@ footer {
       margin: 0;
       position: relative;
       left: 0; }
+      #how-it-works .content-inner section.get-your-pass .image img,
+      #how-it-works .content-inner section.plan-a-trip .image img,
+      #how-it-works .content-inner section.hit-the-road .image img,
+      #how-it-works .content-inner section.reminders .image img {
+        width: 100%; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
