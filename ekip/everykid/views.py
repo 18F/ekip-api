@@ -12,6 +12,8 @@ from nationalparks.api import FederalSiteResource, FieldTripResource
 from nationalparks.models import FieldTripSite
 
 STATES = {abbr: name for abbr, name in US_STATES}
+STATES['PR'] = 'Puerto Rico'
+STATES['VI'] = 'Virgin Islands'
 
 def plan_your_trip(request):
     return render(
