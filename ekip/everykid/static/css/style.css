@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, html {
   background: #177099;
   font-family: 'Lato', sans-serif;
@@ -1290,6 +1291,8 @@ ul.top-links {
           padding: 13px 0 10px 0;
           border-bottom: 1px solid #62B6DB;
           position: relative; }
+          #about .content-inner .agencies-content .participating ul li.open h4:before {
+            content: "–"; }
         #about .content-inner .agencies-content .participating ul h4 {
           font-size: 18px;
           font-family: 'Lato', sans-serif;

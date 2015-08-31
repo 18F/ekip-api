@@ -78,6 +78,10 @@
             padding: 13px 0 10px 0;
             border-bottom: 1px solid #62B6DB;
             position: relative;
+
+            &.open h4:before {
+              content: "–";
+            }
           }
 
           h4 {
