@@ -41,7 +41,7 @@ class FieldTripSite(models.Model):
     phone = PhoneNumberField(null=True)
     phone_extension = models.IntegerField(null=True)
     city = models.CharField(max_length=128, null=True)
-    state = USStateField(blank=False, null=False)
+    state = USStateField(blank=False, null=False, db_index=True)
     website = models.URLField(max_length=512)
     slug = models.SlugField(unique=True, null=True)
     address_line_1 = models.CharField(max_length=256, null=True)
@@ -96,7 +96,7 @@ class FederalSite(models.Model):
     phone = PhoneNumberField(null=True)
     phone_extension = models.IntegerField(null=True)
     city = models.CharField(max_length=128)
-    state = USStateField(blank=False, null=False)
+    state = USStateField(blank=False, null=False, db_index=True)
     website = models.URLField(max_length=512)
     slug = models.SlugField(unique=True, null=True)
     annual_pass = models.BooleanField(
