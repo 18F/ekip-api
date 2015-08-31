@@ -895,12 +895,12 @@ ul.top-links {
             position: absolute;
             left: 0; }
     #educators form li .city {
-      width: 230px; }
+      max-width: 230px; }
     #educators form li .state {
-      width: 200px;
+      max-width: 200px;
       float: left; }
     #educators form li .zipcode {
-      width: 100px;
+      max-width: 100px;
       float: right; }
     #educators form li .error input, #educators form li .error select {
       border: 1px solid red; }
@@ -1592,10 +1592,23 @@ footer {
       display: none; }
   #educators .content-inner-block {
     padding: 20px; }
+    #educators .content-inner-block .download-activity,
+    #educators .content-inner-block .generate-vouchers {
+      margin-left: 15px;
+      padding-left: 35px; }
   #educators form {
     width: 100%;
     padding: 0;
     margin: 0; }
+    #educators form li input[type="text"] {
+      width: 90%; }
+    #educators form li .state {
+      padding-bottom: 15px;
+      float: none; }
+    #educators form li .zipcode {
+      float: none; }
+    #educators form button {
+      float: none; }
   #educators .preview {
     padding: 20px; }
     #educators .preview h2 {

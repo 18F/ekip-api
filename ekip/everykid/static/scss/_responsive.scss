@@ -343,12 +343,36 @@
 
     .content-inner-block {
       padding: 20px;
+
+      .download-activity,
+      .generate-vouchers {
+        margin-left: 15px;
+        padding-left: 35px;
+      }
     }
 
     form {
       width: 100%;
       padding: 0;
       margin: 0;
+
+      li {
+        input[type="text"] {
+          width: 90%;
+        }
+
+        .state {
+          padding-bottom: 15px;
+          float: none;
+        }
+        .zipcode {
+          float: none;
+        }
+      }
+
+      button {
+        float: none;
+      }
     }
 
     .preview {

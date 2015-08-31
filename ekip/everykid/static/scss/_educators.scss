@@ -111,7 +111,6 @@
         left: -24px;
       }
     }
-
   }
 
   form {
@@ -195,14 +194,14 @@
         }
       }
       .city {
-        width: 230px;
+        max-width: 230px;
       }
       .state {
-        width: 200px;
+        max-width: 200px;
         float: left;
       }
       .zipcode {
-        width: 100px;
+        max-width: 100px;
         float: right;
       }
 
