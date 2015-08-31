@@ -216,6 +216,22 @@ ul.top-links {
   padding: 100px 0 50px 260px;
   position: relative; }
 
+.tooltip {
+  position: relative; }
+
+.tooltip-content {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  padding: 8px 12px;
+  text-align: left;
+  background: #fff;
+  color: #177099;
+  border: 1px solid #177099;
+  top: -110px;
+  position: absolute;
+  display: none; }
+
 .errors {
   padding: 10px 0;
   color: #ff0000; }

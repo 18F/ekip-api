@@ -37,10 +37,9 @@ $(function () {
 
   })
 
-  // scroll down to pass/field trip sites
+  // scroll down to park sites on screens larger than tablet
   if($('#plan-your-trip .sites').length) {
 
-    // don't scroll if tablet size or less
     if($(window).width() > 1024) {
       $('html, body').animate({
         scrollTop: $(".sites-container").offset().top
@@ -48,6 +47,16 @@ $(function () {
     }
 
   }
+
+  $('.tooltip').hover(function() {
+
+    $(this).find('.tooltip-content').stop(true).fadeIn();
+
+  }, function() {
+
+    $(this).find('.tooltip-content').stop(true).fadeOut();
+
+  });
 
   // educator form (back to edit)
   $('#educators .back').click(function() {

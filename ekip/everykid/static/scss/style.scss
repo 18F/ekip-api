@@ -123,13 +123,30 @@ button {
   background-size: cover;
 }
 
-
 .content {
   max-width: $site-width - $nav-width - 50;
   min-height: 508px;
   margin: auto;
   padding: 100px 0 50px $nav-width + 50;
   position: relative;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-content {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  padding: 8px 12px;
+  text-align: left;
+  background: #fff;
+  color: $blue;
+  border: 1px solid $blue;
+  top: -110px;
+  position: absolute;
+  display: none;
 }
 
 .errors {
