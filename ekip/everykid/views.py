@@ -130,6 +130,23 @@ def field_trip(request):
     )
 
 
+def create_educator(data):
+    educator = Educator(
+        name=data['name'],
+        work_email=data['work_email'],
+        organization_name=data['organization_name'],
+        org_or_school=data['org_or_school'],
+        address_line_1=data['address_line_1'],
+        address_line_2=data['address_line_2'],
+        city=data['city'],
+        state=data['state'],
+        zipcode=data['zipcode'],
+        num_students=data['num_students']
+    )
+    educator.save()
+    return educator
+
+
 class EducatorFormPreview(FormPreview):
     """ The educator contact information form requires a preview screen. This
     class manages that preview process. """
@@ -138,19 +155,7 @@ class EducatorFormPreview(FormPreview):
     preview_template = 'get-your-pass/educator_passes_preview.html'
 
     def done(self, request, cleaned_data):
-        educator = Educator(
-            name=cleaned_data['name'],
-            work_email=cleaned_data['work_email'],
-            organization_name=cleaned_data['organization_name'],
-            org_or_school=cleaned_data['org_or_school'],
-            address_line_1=cleaned_data['address_line_1'],
-            address_line_2=cleaned_data['address_line_2'],
-            city=cleaned_data['city'],
-            state=cleaned_data['state'],
-            zipcode=cleaned_data['zipcode'],
-            num_students=cleaned_data['num_students']
-        )
-        educator.save()
+        educator = create_educator(cleaned_data)
         return HttpResponseRedirect(
             'get-your-pass/educator/vouchers/?num_vouchers=%s&zip=%s' % (
                 educator.num_students, educator.zipcode))
