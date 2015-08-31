@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, html {
   background: #177099;
   font-family: 'Lato', sans-serif;
@@ -1279,9 +1280,11 @@ ul.top-links {
         line-height: 21px;
         padding: 0; }
       #about .content-inner .agencies-content .participating p {
+        max-width: 330px;
         font-size: 18px;
         line-height: 24px;
-        padding: 0; }
+        padding: 0;
+        display: inline-block; }
       #about .content-inner .agencies-content .participating ul {
         border-top: 1px solid #62B6DB;
         margin: 15px 0; }
@@ -1290,6 +1293,17 @@ ul.top-links {
           padding: 13px 0 10px 0;
           border-bottom: 1px solid #62B6DB;
           position: relative; }
+          #about .content-inner .agencies-content .participating ul li.open h4:before {
+            content: "–"; }
+          #about .content-inner .agencies-content .participating ul li.open img {
+            margin: 10px 0 0 0;
+            float: right;
+            vertical-align: top;
+            display: inline-block; }
+          #about .content-inner .agencies-content .participating ul li img {
+            display: none; }
+          #about .content-inner .agencies-content .participating ul li p {
+            font-size: 16px; }
         #about .content-inner .agencies-content .participating ul h4 {
           font-size: 18px;
           font-family: 'Lato', sans-serif;
@@ -1343,15 +1357,19 @@ footer {
     max-width: 985px;
     padding: 40px 0;
     margin: auto;
-    text-align: center; }
-    footer .footer-content img {
+    text-align: center;
+    position: relative; }
+    footer .footer-content img.doi {
       width: 100px;
       margin: 0 0 10px 0;
       opacity: 0.8;
+      top: 20px;
+      right: 0;
+      position: absolute;
       -webkit-transition: opacity 0.2s ease-in;
       -moz-transition: opacity 0.2s ease-in;
       transition: opacity 0.2s ease-in; }
-      footer .footer-content img:hover {
+      footer .footer-content img.doi:hover {
         opacity: 1; }
     footer .footer-content p {
       color: #683E2D;

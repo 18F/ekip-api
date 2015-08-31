@@ -28,10 +28,21 @@
     <div class="diary-right">
       <div class="page">
 
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="time travel" />
-        <img src="{% static "img/activity/end-animal.jpg" %}" alt="gecko" />
+      {% if selection == "Martin Luther King's house" %}
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-house.jpg" %}" alt="mountain" />
+      {% elif selection == "ancient drawings" %}
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-drawings.jpg" %}" alt="mountain" />
+      {% elif selection == "dinosaur tracks" %}
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-tracks.jpg" %}" alt="mountain" />
+      {% else %}
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-mountain.jpg" %}" alt="mountain" />
+      {% endif %}
 
-        <a href={%url "game_success" %}><button>Get your pass now</button></a>
+        <a href={% url "game_success" %}><button>Get your pass now</button></a>
       </div>
     </div>
   </div>

@@ -9,11 +9,15 @@ footer {
     padding: 40px 0;
     margin: auto;
     text-align: center;
+    position: relative;
 
-    img {
+    img.doi {
       width: 100px;
       margin: 0 0 10px 0;
       opacity: 0.8;
+      top: 20px;
+      right: 0;
+      position: absolute;
 
       @include transition(opacity 0.2s ease-in);
 

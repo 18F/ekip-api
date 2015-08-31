@@ -28,10 +28,21 @@
     <div class="diary-right">
       <div class="page">
 
+      {% if selection == "ocean" %}
         <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
-        <img src="{% static "img/activity/end-plant.jpg" %}" alt="cactus" />
+        <img src="{% static "img/activity/end-ocean.jpg" %}" alt="ocean" />
+      {% elif selection == "lake" %}
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
+        <img src="{% static "img/activity/end-lake.jpg" %}" alt="lake" />
+      {% elif selection == "river" %}
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="river" />
+      {% else %}
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="river" />
+      {% endif %}
 
-        <a href={%url "game_success" %}><button>Get your pass now</button></a>
+        <a href={% url "game_success" %}><button>Get your pass now</button></a>
       </div>
     </div>
   </div>

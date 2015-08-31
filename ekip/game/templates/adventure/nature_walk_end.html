@@ -16,9 +16,7 @@
 
         <h2>Dear Diary,</h2>
 
-        <p>Today I used my free pass to explore America! At first I was nervous, because there were so many options. There were
-        parks, forests, seashores, and wildlife habitats to visit. I had to decide
-        what I wanted to do.</p>
+        <p>Today I used my free pass to explore America! At first I was nervous, because there were so many options. There were parks, forests, seashores, and wildlife habitats to visit. I had to decide what I wanted to do.</p>
 
         <p>I went on a nature walk! When I arrived, I saw {{selection}}. And the
          best part is that this cool place belongs to me! What a great trip.</p>
@@ -26,11 +24,22 @@
       </div>
     </div>
 
-  <div class="diary-right">
-    <div class="page">
+    <div class="diary-right">
+      <div class="page">
 
-      <img src="{% static "img/activity/end-walk.jpg" %}" alt="walk" />
-      <img src="{% static "img/activity/end-mountain.jpg" %}" alt="mountain" />
+      {% if selection == "huge mountains" %}
+        <img src="{% static "img/activity/end-walk.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-mountain.jpg" %}" alt="mountain" />
+      {% elif selection == "wild animals" %}
+        <img src="{% static "img/activity/end-walk.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-animal.jpg" %}" alt="gecko" />
+      {% elif selection == "beautiful plants" %}
+        <img src="{% static "img/activity/end-walk.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-plant.jpg" %}" alt="cactis" />
+      {% else %}
+        <img src="{% static "img/activity/end-walk.jpg" %}" alt="walk" />
+        <img src="{% static "img/activity/end-mountain.jpg" %}" alt="mountain" />
+      {% endif %}
 
       <a href="{% url 'game_success' %}"><button>Get your pass now</button></a>
     </div>

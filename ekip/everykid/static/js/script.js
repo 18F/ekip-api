@@ -27,6 +27,17 @@ $(function () {
 
   });
 
+  $('#about .participating li h4').hover(function() {
+
+    $(this).next().stop(true).fadeIn();
+
+  }, function () {
+
+    $(this).next().stop(true).fadeOut();
+
+  });
+
+
   // scroll down to park sites on screens larger than tablet
   if($('#plan-your-trip .sites').length) {
 
@@ -37,16 +48,6 @@ $(function () {
     }
 
   }
-
-  $('.tooltip').hover(function() {
-
-    $(this).find('.tooltip-content').stop(true).fadeIn();
-
-  }, function() {
-
-    $(this).find('.tooltip-content').stop(true).fadeOut();
-
-  });
 
   // educator form (back to edit)
   $('#educators .back').click(function() {
