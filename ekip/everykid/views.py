@@ -15,6 +15,7 @@ STATES = {abbr: name for abbr, name in US_STATES}
 STATES['PR'] = 'Puerto Rico'
 STATES['VI'] = 'Virgin Islands'
 
+
 def plan_your_trip(request):
     return render(
         request,
@@ -100,7 +101,7 @@ def field_trip_details(request, slug):
         v.facility for v in destination.facilities.all()]
 
     return render(
-        request, 
+        request,
         'plan-your-trip/field_trip_details.html',
         {'destination': destination}
     )
@@ -131,6 +132,9 @@ def field_trip(request):
 
 
 def create_educator(data):
+    """ Given a dictionary with all the right fields, create an Educator
+    object.  """
+
     educator = Educator(
         name=data['name'],
         work_email=data['work_email'],
