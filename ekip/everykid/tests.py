@@ -1,7 +1,8 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
-from .views import issue_single_voucher, STATES
+from .views import issue_single_voucher, STATES, create_educator
+from .models import Educator
 from ticketer.recordlocator.models import Ticket
 
 
@@ -62,7 +63,7 @@ class PassExchangeSiteTestCase(TestCase):
         self.assertEqual('Colorado', STATES['CO'])
         self.assertEqual('Puerto Rico', STATES['PR'])
         self.assertEqual('Virgin Islands', STATES['VI'])
-        
+
 
 class FourthGraderFlowTests(TestCase):
 
@@ -87,3 +88,32 @@ class EducatorFormTests(TestCase):
         for field in required_fields:
             self.assertFormError(
                 response, 'form', field, 'This field is required.')
+
+    def test_create_educator(self):
+        """ Test the create_educator function. """
+        data = {
+            'name': 'Smokey the Bear',
+            'work_email': 'smokey@abc.gov',
+            'organization_name': 'Wildfire Foundation',
+            'org_or_school': 'O',
+            'address_line_1': '123 Main St.',
+            'address_line_2': None,
+            'city': 'Anytown',
+            'state': 'CT',
+            'zipcode': '20852',
+            'num_students': 10,
+        }
+
+        educator = create_educator(data)
+        self.assertIsNotNone(educator)
+
+        saved = Educator.objects.get(work_email='smokey@abc.gov')
+        self.assertEqual(saved.name, data['name'])
+        self.assertEqual(saved.organization_name, data['organization_name'])
+        self.assertEqual(saved.address_line_1, data['address_line_1'])
+        self.assertEqual(saved.address_line_2, data['address_line_2'])
+        self.assertEqual(saved.city, data['city'])
+        self.assertEqual(saved.state, data['state'])
+        self.assertEqual(saved.zipcode, data['zipcode'])
+        self.assertEqual(saved.num_students, data['num_students'])
+        self.assertEqual(saved.org_or_school, data['org_or_school'])
