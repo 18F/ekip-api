@@ -12,15 +12,22 @@ $(function () {
     $(this).addClass('active');
 
     $('.animate-line').fadeIn(1200);
+
   });
 
+  // toggle agency descriptions
   $('#about .participating li').click(function() {
 
     $(this).find('.description').fadeToggle();
+
+    $(this).toggleClass('open').toggleClass('closed');
+
+    $('.closed .expand').html('click to expand');
+    $('.open .expand').html('click to collapse');
+
   });
 
-  // scroll down to pass/field trip sites
-  // if larger than tablet
+  // scroll down to park sites on screens larger than tablet
   if($('#plan-your-trip .sites').length) {
 
     if($(window).width() > 1024) {
@@ -28,10 +35,24 @@ $(function () {
         scrollTop: $(".sites-container").offset().top
      }, 1200);
     }
+
   }
 
+  $('.tooltip').hover(function() {
+
+    $(this).find('.tooltip-content').stop(true).fadeIn();
+
+  }, function() {
+
+    $(this).find('.tooltip-content').stop(true).fadeOut();
+
+  });
+
+  // educator form (back to edit)
   $('#educators .back').click(function() {
+
     history.go(-1);
+
   });
 
 }());
