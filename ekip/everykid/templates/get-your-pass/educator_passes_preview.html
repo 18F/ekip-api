@@ -17,6 +17,8 @@
       <strong>{{ form.name.data }}</strong><br/>
       {{ form.work_email.data }}<br/>
       <br/>
+
+
       <strong>{{ form.organization_name.data }}</strong><br/>
       {{ form.address_line_1.data }}<br/>
       {% if  form.address_line_2.data %}
@@ -24,6 +26,14 @@
       {% endif %}
       {{ form.city.data }}, {{ form.state.data }} {{ form.zipcode.data }}<br/>
       <br/>
+
+      {% if form.org_or_school.data == 'O'%}
+        The above is an <strong>organization</strong> not a school. <br/> <br/>
+      {% elif form.org_or_school.data == 'S' %}
+        The above is a <strong>school</strong> not an organization. <br/> <br/>
+      {% endif %}
+
+
       <strong>
       {{ form.num_students.data }}
       {% if form.num_students.data == '1' %}
