@@ -56,6 +56,12 @@
       </li>
     {% endfor %}
     </ul>
+    {% else %}
+    <section class="state">
+        <div class="state-content">
+        <h2> No results for: {{state_name}}. </h2>
+        </div>
+    </section>
     {% endif %}
 
   </div>
