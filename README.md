@@ -7,7 +7,7 @@ Every Kid in a Park (EKIP API)
 
 
 #Introduction
-The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year. 
+The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
 
 #About this Site
 This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
@@ -25,7 +25,7 @@ This section walks either the student or the educator through the appropriate pr
 The Plan a Trip section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
 
 #Technical Stuff
-The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.  
+The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.
 
 ##Submitting Issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
@@ -73,10 +73,10 @@ npm install --global gulp
 ```
 
 Also install the additional modules to watch for SASS pre-processing changes
-(using Bourbon and Neat) and to minify the resulting stylesheet:
+(using Bourbon and Neat and minifying the results) as well as uglification of JavaScript files:
 
 ```
-npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename
+npm install gulp-watch gulp-sass node-neat node-bourbon gulp-minify-css gulp-rename gulp-uglifyjs
 ```
 
 Then once everything is installed in your project directory, simply invoke the
@@ -103,7 +103,7 @@ python manage.py passes nationalparks/data/pass-list.csv
 ```
 
 where pass-list.csv is the dataset for the pass exchange sites. The data file
-is included in the repository. 
+is included in the repository.
 
 To load the list of field trip sites, you'll need to run the following Django
 management command:
@@ -113,7 +113,7 @@ management command:
 ```
 
 where ficor.csv is the dataset for the field trip sites. The data file is
-included in the repository. 
+included in the repository.
 
 
 ## Deploy Notes
