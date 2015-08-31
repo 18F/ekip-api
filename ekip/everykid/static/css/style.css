@@ -1357,15 +1357,19 @@ footer {
     max-width: 985px;
     padding: 40px 0;
     margin: auto;
-    text-align: center; }
-    footer .footer-content img {
+    text-align: center;
+    position: relative; }
+    footer .footer-content img.doi {
       width: 100px;
       margin: 0 0 10px 0;
       opacity: 0.8;
+      top: 20px;
+      right: 0;
+      position: absolute;
       -webkit-transition: opacity 0.2s ease-in;
       -moz-transition: opacity 0.2s ease-in;
       transition: opacity 0.2s ease-in; }
-      footer .footer-content img:hover {
+      footer .footer-content img.doi:hover {
         opacity: 1; }
     footer .footer-content p {
       color: #683E2D;
