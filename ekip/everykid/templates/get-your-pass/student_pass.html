@@ -18,12 +18,13 @@
       {% csrf_token %}
 
       <label for="in_the_fourth_grade">
-      <input id="in_the_fourth_grade" name="in_the_fourth_grade" type="checkbox" value="Y" />
+      <input id="in_the_fourth_grade" required name="in_the_fourth_grade" type="checkbox" value="Y" onchange="this.setValidFourth(validity.valueMissing ? 'First check the box if you are in the fourth grade.' : '');" />
       <span>Yes, I'm in the fourth grade or home-school equivalent</span></label>
 
       <button>Play</button>
     </form>
 
+<script type="text/javascript">document.getElementById("in_the_fourth_grade").setValidFourth("First check the box if you are in the fourth grade.");</script>
   </div>
 
 {% endblock content %}
