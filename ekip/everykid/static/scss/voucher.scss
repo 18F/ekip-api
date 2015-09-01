@@ -122,13 +122,13 @@ html, body {
       }
 
       .voucher-barcode {
-        top: 137px;
-        right: -34px;
+        top: 80px;
+        right: -58px;
         @include transform(rotate(-90deg));
         position: absolute;
 
         img {
-          width: 100px;
+          width: 150px;
         }
       }
     }

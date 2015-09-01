@@ -92,8 +92,8 @@ html, body {
         transform: rotate(-90deg);
         position: absolute; }
       .voucher-container .steps .voucher .voucher-barcode, .voucher-instructions .steps .voucher .voucher-barcode {
-        top: 137px;
-        right: -34px;
+        top: 80px;
+        right: -58px;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -101,7 +101,7 @@ html, body {
         transform: rotate(-90deg);
         position: absolute; }
         .voucher-container .steps .voucher .voucher-barcode img, .voucher-instructions .steps .voucher .voucher-barcode img {
-          width: 100px; }
+          width: 150px; }
     .voucher-container .steps ol, .voucher-instructions .steps ol {
       z-index: 100;
       margin: 0;
