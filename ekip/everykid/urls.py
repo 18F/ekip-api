@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 from .views import (
     student_pass, pass_exchange, educator_vouchers,
     EducatorFormPreview, fourth_grade_voucher, game_success, field_trip,
-    field_trip_details)
+    field_trip_details, planyourtrip)
 
 from .forms import EducatorForm
 
@@ -34,6 +34,7 @@ urlpatterns = patterns(
         template_name="get-your-pass/index.html")), name="get_your_pass"),
 
     # PLAN YOUR TRIP
+    url(r'planyourtrip', planyourtrip, name='redirect_planner'),
     url(
         r'plan-your-trip/field-trip/(?P<slug>[-\w]+)/$',
         cache_page(60*60)(field_trip_details), name="field_trip_details"),
