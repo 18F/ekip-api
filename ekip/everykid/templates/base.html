@@ -21,6 +21,10 @@
 
 <body id="{% block page_id %}{% endblock page_id %}">
 
+<div id="skipnav">
+  <a href="#maincontent">skip to main content</a>
+</div>
+
   <div class="govt-banner">
     An official website of the United States Government.
     <img alt="US flag signifying that this is a United States Federal Government website" src="{% static 'img/us_flag_small.png' %}" />
@@ -30,7 +34,7 @@
 
     {% include "nav.html" %}
 
-    <div class="content">
+    <div id="maincontent" class="content">
       {% block content %}{% endblock content %}
     </div>
 

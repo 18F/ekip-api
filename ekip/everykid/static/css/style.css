@@ -56,6 +56,13 @@ button {
   button a {
     text-decoration: none; }
 
+#skipnav {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px; }
+
 .govt-banner {
   background-color: #2C2C2C;
   color: #fff;

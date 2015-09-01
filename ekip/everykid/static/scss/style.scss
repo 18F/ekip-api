@@ -86,6 +86,14 @@ button {
   @include transition(background 0.2s ease-in, color 0.2s ease-in);
 }
 
+#skipnav {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
 .govt-banner {
   background-color: $gray;
   color: #fff;
