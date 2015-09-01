@@ -1540,7 +1540,8 @@ footer {
       #how-it-works .content-inner section.plan-a-trip .image img,
       #how-it-works .content-inner section.hit-the-road .image img,
       #how-it-works .content-inner section.reminders .image img {
-        width: 100%; }
+        width: 100%;
+        height: auto; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
