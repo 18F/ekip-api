@@ -37,7 +37,7 @@ urlpatterns = patterns(
     url(
         r'plan-your-trip/field-trip/(?P<slug>[-\w]+)/$',
         cache_page(60*60)(field_trip_details), name="field_trip_details"),
-    url(r'plan-your-trip/field-trip/', field_trip, name="field_trip"),
+    url(r'plan-your-trip/field-trip/', cache_page(60*60)(field_trip), name="field_trip"),
     url(r'plan-your-trip/pass-exchange/', cache_page(60*60)(pass_exchange), name="pass_exchange"),
     url(r'plan-your-trip/', cache_page(60*60)(TemplateView.as_view(
         template_name="plan-your-trip/index.html")), name="plan_your_trip"),
