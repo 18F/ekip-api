@@ -15,6 +15,11 @@ STATES = {abbr: name for abbr, name in US_STATES}
 STATES['PR'] = 'Puerto Rico'
 STATES['VI'] = 'Virgin Islands'
 
+def planyourtrip(request):
+    # We launched with /planyoutrip printed on the vouchers. 
+    # Make that URL work. 
+    return HttpResponseRedirect(reverse('plan_your_trip'))
+
 
 def plan_your_trip(request):
     return render(
