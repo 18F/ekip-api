@@ -13,8 +13,8 @@ $(document).ready(function() {
     $(this).find('img').JsBarcode(locatorID, {
       format: 'CODE128',
       displayValue: true,
-      fontSize: 40,
-      height: 60
+      fontSize: 33,
+      height: 50
     });
 
   })

@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Superclarendon';
+  src: url("../fonts/superclarendon_bd-webfont.eot");
+  src: url("../fonts/superclarendon_bd-webfont.eot?#iefix") format("../fonts/embedded-opentype"), url("../fonts/superclarendon_bd-webfont.woff2") format("woff2"), url("../fonts/superclarendon_bd-webfont.woff") format("woff"), url("../fonts/superclarendon_bd-webfont.ttf") format("truetype"), url("../fonts/superclarendon_bd-webfont.svg#superclarendon_rgbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body, html {
   background: #177099;
   font-family: 'Lato', sans-serif;
@@ -1533,7 +1540,8 @@ footer {
       #how-it-works .content-inner section.plan-a-trip .image img,
       #how-it-works .content-inner section.hit-the-road .image img,
       #how-it-works .content-inner section.reminders .image img {
-        width: 100%; }
+        width: 100%;
+        height: auto; }
     #how-it-works .content-inner section.get-your-pass .description,
     #how-it-works .content-inner section.plan-a-trip .description,
     #how-it-works .content-inner section.hit-the-road .description,
