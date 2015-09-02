@@ -23,17 +23,17 @@
       <div class="page">
 
       {% if selection == "Martin Luther King's house" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
-        <img src="{% static "img/activity/end-house.jpg" %}" alt="mountain" />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
+        <img src="{% static "img/activity/end-house.jpg" %}" alt="It was so cool to see Martin Luther King Jr.&#39;s house." />
       {% elif selection == "ancient drawings" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
-        <img src="{% static "img/activity/end-drawings.jpg" %}" alt="mountain" />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
+        <img src="{% static "img/activity/end-drawings.jpg" %}" alt="It was so cool to see ancient drawings." />
       {% elif selection == "dinosaur tracks" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
-        <img src="{% static "img/activity/end-tracks.jpg" %}" alt="mountain" />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
+        <img src="{% static "img/activity/end-tracks.jpg" %}" alt="It was so cool to see dinosaur tracks." />
       {% else %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="walk" />
-        <img src="{% static "img/activity/end-mountain.jpg" %}" alt="mountain" />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
+        <img src="{% static "img/activity/end-house.jpg" %}" alt="It was so cool to see Martin Luther King Jr.&#39;s house." />
       {% endif %}
 
         <a href={% url "game_success" %}><button>Get your pass now</button></a>
