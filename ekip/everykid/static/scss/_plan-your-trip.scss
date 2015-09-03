@@ -63,6 +63,7 @@
         font-weight: 600;
         text-align: left;
         padding: 5px 10px;
+        display: block;
       }
 
       select {
@@ -238,6 +239,7 @@
           }
         }
       }
+
       &.lodging {
         background: $green;
 
@@ -264,6 +266,7 @@
           }
         }
       }
+
       &.prepare {
         min-height: 566px;
         background: #CBE4CE;
@@ -301,6 +304,7 @@
           }
         }
       }
+
       &.voucher {
         background: $blue;
         color: #fff;
@@ -325,6 +329,24 @@
           display: inline-block;
         }
       }
+
+      &.field-trip-sites {
+        background: #B1DAEC;
+        color: $blue;
+        min-height: 0;
+
+        .section-content {
+          padding: 60px 0 80px 0;
+        }
+
+        .field-trip-sites-content {
+          max-width: 650px;
+          padding: 0 0 0 200px;
+          display: inline-block;
+        }
+
+      }
+
     }
   }
 

@@ -56,6 +56,13 @@ button {
   button a {
     text-decoration: none; }
 
+#skipnav {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px; }
+
 .govt-banner {
   background-color: #2C2C2C;
   color: #fff;
@@ -226,7 +233,8 @@ ul.top-links {
 
 .tooltip {
   position: relative; }
-  .tooltip:hover:before {
+  .tooltip:hover:before,
+  .tooltip:focus:before {
     background: #fff;
     padding: 8px 12px;
     font-size: 13px;
@@ -857,6 +865,11 @@ ul.top-links {
     display: table; }
   #educators form span {
     font-size: 18px; }
+  #educators form fieldset {
+    border: none;
+    padding: 0; }
+    #educators form fieldset legend {
+      display: none; }
   #educators form ul {
     padding: 10px 0; }
   #educators form li {
@@ -1011,7 +1024,8 @@ ul.top-links {
       font-size: 18px;
       font-weight: 600;
       text-align: left;
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      display: block; }
     #plan-your-trip .plan-your-trip-content .state-select select {
       margin: 25px auto;
       display: block; }
@@ -1195,6 +1209,16 @@ ul.top-links {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+    #plan-your-trip .content-inner section.field-trip-sites {
+      background: #B1DAEC;
+      color: #177099;
+      min-height: 0; }
+      #plan-your-trip .content-inner section.field-trip-sites .section-content {
+        padding: 60px 0 80px 0; }
+      #plan-your-trip .content-inner section.field-trip-sites .field-trip-sites-content {
+        max-width: 650px;
+        padding: 0 0 0 200px;
+        display: inline-block; }
 
 #plan-your-trip .sites-container section {
   min-height: 0; }
@@ -1338,7 +1362,7 @@ ul.top-links {
     padding: 70px 0; }
   #about .content-inner .contact-content {
     width: 486px;
-    color: #177099;
+    color: #115F83;
     margin: auto;
     position: relative; }
     #about .content-inner .contact-content img {
@@ -1398,6 +1422,8 @@ footer {
       display: inline-block; }
       footer .footer-content nav li a {
         text-decoration: none; }
+        footer .footer-content nav li a:hover {
+          text-decoration: underline; }
       footer .footer-content nav li:last-child {
         padding-right: 0;
         border: none; }
@@ -1660,24 +1686,28 @@ footer {
     #plan-your-trip .content-inner section.destination,
     #plan-your-trip .content-inner section.lodging,
     #plan-your-trip .content-inner section.prepare,
-    #plan-your-trip .content-inner section.voucher {
+    #plan-your-trip .content-inner section.voucher,
+    #plan-your-trip .content-inner section.field-trip-sites {
       padding: 20px;
       min-height: 0; }
       #plan-your-trip .content-inner section.destination .section-content,
       #plan-your-trip .content-inner section.lodging .section-content,
       #plan-your-trip .content-inner section.prepare .section-content,
-      #plan-your-trip .content-inner section.voucher .section-content {
+      #plan-your-trip .content-inner section.voucher .section-content,
+      #plan-your-trip .content-inner section.field-trip-sites .section-content {
         width: auto;
         padding: 0; }
         #plan-your-trip .content-inner section.destination .section-content li,
         #plan-your-trip .content-inner section.lodging .section-content li,
         #plan-your-trip .content-inner section.prepare .section-content li,
-        #plan-your-trip .content-inner section.voucher .section-content li {
+        #plan-your-trip .content-inner section.voucher .section-content li,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content li {
           width: 100%; }
         #plan-your-trip .content-inner section.destination .section-content .lodging-image,
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image,
         #plan-your-trip .content-inner section.prepare .section-content .lodging-image,
-        #plan-your-trip .content-inner section.voucher .section-content .lodging-image {
+        #plan-your-trip .content-inner section.voucher .section-content .lodging-image,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-image {
           display: none; }
         #plan-your-trip .content-inner section.destination .section-content .lodging-content,
         #plan-your-trip .content-inner section.destination .section-content .prepare-content,
@@ -1686,38 +1716,50 @@ footer {
         #plan-your-trip .content-inner section.prepare .section-content .lodging-content,
         #plan-your-trip .content-inner section.prepare .section-content .prepare-content,
         #plan-your-trip .content-inner section.voucher .section-content .lodging-content,
-        #plan-your-trip .content-inner section.voucher .section-content .prepare-content {
+        #plan-your-trip .content-inner section.voucher .section-content .prepare-content,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-content,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .prepare-content {
           max-width: none;
           padding: 0; }
         #plan-your-trip .content-inner section.destination .section-content .packing-list,
         #plan-your-trip .content-inner section.lodging .section-content .packing-list,
         #plan-your-trip .content-inner section.prepare .section-content .packing-list,
-        #plan-your-trip .content-inner section.voucher .section-content .packing-list {
+        #plan-your-trip .content-inner section.voucher .section-content .packing-list,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list {
           width: 100%;
           margin: 10px 0; }
           #plan-your-trip .content-inner section.destination .section-content .packing-list h3,
           #plan-your-trip .content-inner section.lodging .section-content .packing-list h3,
           #plan-your-trip .content-inner section.prepare .section-content .packing-list h3,
-          #plan-your-trip .content-inner section.voucher .section-content .packing-list h3 {
+          #plan-your-trip .content-inner section.voucher .section-content .packing-list h3,
+          #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list h3 {
             font-size: 24px;
             padding: 10px; }
           #plan-your-trip .content-inner section.destination .section-content .packing-list ul,
           #plan-your-trip .content-inner section.lodging .section-content .packing-list ul,
           #plan-your-trip .content-inner section.prepare .section-content .packing-list ul,
-          #plan-your-trip .content-inner section.voucher .section-content .packing-list ul {
+          #plan-your-trip .content-inner section.voucher .section-content .packing-list ul,
+          #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list ul {
             padding: 10px;
             font-size: 16px; }
         #plan-your-trip .content-inner section.destination .section-content .voucher-image,
         #plan-your-trip .content-inner section.lodging .section-content .voucher-image,
         #plan-your-trip .content-inner section.prepare .section-content .voucher-image,
-        #plan-your-trip .content-inner section.voucher .section-content .voucher-image {
+        #plan-your-trip .content-inner section.voucher .section-content .voucher-image,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-image {
           padding: 20px;
           display: block;
           text-align: center; }
         #plan-your-trip .content-inner section.destination .section-content .voucher-content,
+        #plan-your-trip .content-inner section.destination .section-content .field-trip-sites-content,
         #plan-your-trip .content-inner section.lodging .section-content .voucher-content,
+        #plan-your-trip .content-inner section.lodging .section-content .field-trip-sites-content,
         #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
-        #plan-your-trip .content-inner section.voucher .section-content .voucher-content {
+        #plan-your-trip .content-inner section.prepare .section-content .field-trip-sites-content,
+        #plan-your-trip .content-inner section.voucher .section-content .voucher-content,
+        #plan-your-trip .content-inner section.voucher .section-content .field-trip-sites-content,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-content,
+        #plan-your-trip .content-inner section.field-trip-sites .section-content .field-trip-sites-content {
           width: auto;
           padding: 0; }
   #plan-your-trip .sites-container .state-content {
