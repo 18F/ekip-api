@@ -75,7 +75,7 @@ class PassExchangeSiteTestCase(TestCase):
         empty. """
 
         sites = get_active_pass_exchange_sites('CA')
-        self.assertEqual(sites, [])
+        self.assertTrue(len(sites) == 0)
 
 
 class FourthGraderFlowTests(TestCase):

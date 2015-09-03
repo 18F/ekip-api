@@ -74,10 +74,7 @@ def student_pass(request):
 
 def get_active_pass_exchange_sites(state):
     """ For a given state, return the sites that are issuing kids passes. """
-
-    all_sites = FederalSiteResource().list(state)
-    sites = [s for s in all_sites if s.kids_pass]
-    return sites
+    return FederalSiteResource().list(state, 1)
 
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
