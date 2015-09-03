@@ -1023,7 +1023,8 @@ ul.top-links {
       font-size: 18px;
       font-weight: 600;
       text-align: left;
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      display: block; }
     #plan-your-trip .plan-your-trip-content .state-select select {
       margin: 25px auto;
       display: block; }
