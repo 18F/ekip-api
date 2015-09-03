@@ -5,22 +5,29 @@
     {% endif %}
 
     <span>Fourth-grade educator info:</span>
-    <ul>
-    {% for field in form %}
-      {% if field.html_name == 'organization_name' %}
-    </ul>
+    <fieldset>
+      <legend>Fourth-grade educator info:</legend>
+      <ul>
+      {% for field in form %}
+        {% if field.html_name == 'organization_name' %}
+      </ul>
+    </fieldset>
+
     <span>Organizational info:</span>
-    <ul>
-      {% endif %}
-      {% if field.html_name != 'zipcode' %}
-      <li>
-      {% endif %}
-        <div class="{{ field.html_name }}{% if field.errors %} error{% endif %}">
-          {{ field.label_tag }}
-          {{ field }}
-        </div>
-      {% if field.html_name != 'state' %}
-      </li>
-      {% endif %}
-    {% endfor %}
-    </ul>
+    <fieldset>
+      <legend>Organizational info:</legend>
+      <ul>
+        {% endif %}
+        {% if field.html_name != 'zipcode' %}
+        <li>
+        {% endif %}
+          <div class="{{ field.html_name }}{% if field.errors %} error{% endif %}">
+            {{ field.label_tag }}
+            {{ field }}
+          </div>
+        {% if field.html_name != 'state' %}
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </fieldset>

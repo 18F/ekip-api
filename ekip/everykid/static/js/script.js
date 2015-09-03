@@ -16,7 +16,9 @@ $(function () {
   });
 
   // toggle agency descriptions
-  $('#about .participating li').click(function() {
+  $('#about .participating li').click(function(e) {
+
+    e.preventDefault();
 
     $(this).find('.description').fadeToggle();
 
