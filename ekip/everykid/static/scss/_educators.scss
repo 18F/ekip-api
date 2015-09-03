@@ -124,6 +124,15 @@
       font-size: 18px;
     }
 
+    fieldset {
+      border: none;
+      padding: 0;
+
+      legend {
+        display: none;
+      }
+    }
+
     ul {
       padding: 10px 0;
     }

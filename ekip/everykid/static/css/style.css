@@ -864,6 +864,11 @@ ul.top-links {
     display: table; }
   #educators form span {
     font-size: 18px; }
+  #educators form fieldset {
+    border: none;
+    padding: 0; }
+    #educators form fieldset legend {
+      display: none; }
   #educators form ul {
     padding: 10px 0; }
   #educators form li {
