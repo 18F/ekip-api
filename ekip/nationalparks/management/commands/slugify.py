@@ -82,7 +82,8 @@ class Command(BaseCommand):
     """ Assign a slug to each FederalSite in the database. """
 
     def handle(self, *args, **options):
-        sites = FederalSite.objects.all()
+        #Only assign slugs to objects that don't have one. 
+        sites = FederalSite.objects.filter(slug__isnull=True)
 
         slug = ''
         for site in sites:
