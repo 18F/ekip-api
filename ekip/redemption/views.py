@@ -7,18 +7,28 @@ from localflavor.us.us_states import US_STATES
 
 from .forms import FederalSiteStateForm, VoucherEntryForm
 from nationalparks.api import FederalSiteResource
-from ticketer.recordlocator.models import Ticket
+from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
 
 
 class States():
     """ Create a map of two-letter state codes and the state name. """
-
     def __init__(self):
         self.states = {}
         for abbr, name in US_STATES:
             self.states[abbr] = name
 
+
+@login_required
+def statistics(request):
+    all_tickets_num = Ticket.objects.all().count()
+    return render(
+        request,
+        'stats.html',
+        {
+            'num_tickets_issued': all_tickets_num
+        }
+    )
 
 @login_required
 def sites_for_state(request):
@@ -61,6 +71,11 @@ def redeem_voucher(voucher_id, federal_site):
 
         if ticket.redemption_entry is None:
             ticket.redeem(federal_site)
+        else:
+            # This ticket has been redeemed before
+            ar = AdditionalRedemption(
+                ticket=ticket, recreation_site=federal_site)
+            ar.save()
 
     except Ticket.DoesNotExist:
         ticket = None

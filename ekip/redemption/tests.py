@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your tests here.
 from .views import redeem_voucher
 from nationalparks.models import FederalSite
+from ticketer.recordlocator.models import AdditionalRedemption
 
 
 class RedemptionTestCase(TestCase):
@@ -15,6 +16,22 @@ class RedemptionTestCase(TestCase):
             slug="nf-talladega-talladega-ranger")
         ticket = redeem_voucher('6PZDJ7TP', federal_site)
         self.assertEqual(ticket.record_locator, '6PZDJ7TP')
+        self.assertIsNotNone(ticket.redemption_entry, None)
+
+    def test_multiple_redemptions(self):
+        federal_site = FederalSite.objects.get(
+            slug="nf-talladega-talladega-ranger")
+        ticket = redeem_voucher('XZ6HGDXR', federal_site)
+
+        self.assertEqual(ticket.record_locator, 'XZ6HGDXR')
+        self.assertIsNotNone(ticket.redemption_entry, None)
+
+        ticket = redeem_voucher('XZ6HGDXR', federal_site)
+
+        ars = AdditionalRedemption.objects.filter(
+            ticket__record_locator='XZ6HGDXR')
+        self.assertEqual(len(ars), 1)
+        self.assertEqual(ars[0].ticket.record_locator, 'XZ6HGDXR')
 
 
 class SitesTestCase(TestCase):
