@@ -442,7 +442,8 @@
         &.destination,
         &.lodging,
         &.prepare,
-        &.voucher {
+        &.voucher,
+        &.field-trip-sites {
           padding: 20px;
           min-height: 0;
 
@@ -481,7 +482,8 @@
               display: block;
               text-align: center;
             }
-            .voucher-content {
+            .voucher-content,
+            .field-trip-sites-content {
               width: auto;
               padding: 0;
             }

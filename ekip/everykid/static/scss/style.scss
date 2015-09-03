@@ -154,7 +154,8 @@ button {
 .tooltip {
   position: relative;
 
-  &:hover:before {
+  &:hover:before,
+  &:focus:before {
     background: #fff;
     padding: 8px 12px;
     font-size: 13px;
