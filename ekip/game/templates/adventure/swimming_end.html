@@ -24,17 +24,17 @@
       <div class="page">
 
       {% if selection == "ocean" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
-        <img src="{% static "img/activity/end-ocean.jpg" %}" alt="ocean" />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
+        <img src="{% static "img/activity/end-ocean.jpg" %}" alt="I could hardly wait to jump into that fresh, cold ocean." />
       {% elif selection == "lake" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
-        <img src="{% static "img/activity/end-lake.jpg" %}" alt="lake" />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
+        <img src="{% static "img/activity/end-lake.jpg" %}" alt="I could hardly wait to jump into that fresh, cold lake." />
       {% elif selection == "river" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
-        <img src="{% static "img/activity/end-river.jpg" %}" alt="river" />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="I could hardly wait to jump into that fresh, cold river." />
       {% else %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="beach" />
-        <img src="{% static "img/activity/end-river.jpg" %}" alt="river" />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="I could hardly wait to jump into that fresh, cold river." />
       {% endif %}
 
         <a href={% url "game_success" %}><button>Get your pass now</button></a>
