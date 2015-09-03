@@ -11,7 +11,9 @@
             "site_type": "NF",
             "slug": "nf-talladega-talladega-ranger",
             "state": "AL",
-            "website": "http://www.fs.fed.us/r8/alabama/"
+            "website": "http://www.fs.fed.us/r8/alabama/",
+            "update_timestamp": "2011-09-01T13:20:30+03:00",
+            "version": 1
         },
         "model": "nationalparks.federalsite",
         "pk": 16332
@@ -28,7 +30,9 @@
             "site_type": "BLM",
             "slug": "blm-aqua-fria",
             "state": "AZ",
-            "website": "http://www.blm.gov/az/st/en/prog/blm_special_areas/natmon/afria.html"
+            "website": "http://www.blm.gov/az/st/en/prog/blm_special_areas/natmon/afria.html",
+            "update_timestamp": "2011-09-01T13:20:30+03:00",
+            "version": 1
         },
         "model": "nationalparks.federalsite",
         "pk": 16350
@@ -45,9 +49,31 @@
             "site_type": "NPS",
             "slug": "nps-rabr-page",
             "state": "AZ",
-            "website": "http://www.nps.gov/rabr"
+            "website": "http://www.nps.gov/rabr",
+            "update_timestamp": "2011-09-01T13:20:30+03:00",
+            "version": 1
         },
         "model": "nationalparks.federalsite",
         "pk": 16387
+    },
+    {
+        "fields": {
+            "access_pass": true,
+            "active_participant": false,
+            "annual_pass": true,
+            "city": "Ventura",
+            "name": "Channel Islands National Park",
+            "phone": "805-658-5734",
+            "phone_extension": null,
+            "senior_pass": true,
+            "site_type": "NPS",
+            "slug": "nps-chis",
+            "state": "CA",
+            "update_timestamp": "2015-09-02T20:25:16.713Z",
+            "version": 1,
+            "website": "http://www.nps.gov/chis/"
+        },
+        "model": "nationalparks.federalsite",
+        "pk": 16443
     }
 ]
