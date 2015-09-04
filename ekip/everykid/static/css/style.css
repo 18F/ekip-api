@@ -1074,7 +1074,7 @@ ul.top-links {
     margin: auto;
     position: relative; }
     #plan-your-trip .content-inner .plan-your-trip-line-container .lines {
-      width: 937px;
+      width: 650px;
       height: 1773px;
       background: url(../img/plan-your-trip-lines.png) no-repeat;
       top: 70px;
@@ -1159,6 +1159,7 @@ ul.top-links {
           #plan-your-trip .content-inner section.lodging .section-content a:hover {
             text-decoration: underline; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
+          margin: 40px 0 0 0;
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
           max-width: 410px;
