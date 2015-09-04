@@ -114,6 +114,8 @@ ul.top-links {
         color: #fff;
         border: 2px solid #fff;
         cursor: default;
+        position: relative;
+        z-index: 50;
 
         &:hover {
           opacity: 1;
@@ -126,6 +128,7 @@ ul.top-links {
           content: "\00a0";
           top: 5px;
           left: -37px;
+          z-index: 100;
           position: absolute;
         }
       }

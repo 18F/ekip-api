@@ -155,7 +155,9 @@ ul.top-links {
         background: #177099;
         color: #fff;
         border: 2px solid #fff;
-        cursor: default; }
+        cursor: default;
+        position: relative;
+        z-index: 50; }
         .menu-container nav li.active a:hover {
           opacity: 1; }
         .menu-container nav li.active a:before {
@@ -165,6 +167,7 @@ ul.top-links {
           content: "\00a0";
           top: 5px;
           left: -37px;
+          z-index: 100;
           position: absolute; }
       .menu-container nav li a {
         width: inherit;
