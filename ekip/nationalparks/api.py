@@ -11,15 +11,23 @@ class FederalSiteResource(DjangoResource):
         'city': 'city'
     })
 
-    def list(self, state=None):
+    def list(self, state=None, everykid=None):
 
         if self.request and 'state' in self.request.GET:
             state = self.request.GET.get('state')
 
-        if state:
-            return FederalSite.objects.filter(state=state)
+        if self.request and 'everykid' in self.request.GET:
+            # Only return those sites that issue the Every Kid in a Park pass
+            everykid = True
 
-        return FederalSite.objects.all()
+        query = FederalSite.objects.all()
+
+        if state:
+            query = FederalSite.objects.filter(state=state)
+        if everykid:
+            query = query.filter(annual_pass=True, active_participant=True)
+
+        return query
 
 
 class FieldTripResource(DjangoResource):
