@@ -1,7 +1,9 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
-from .views import issue_single_voucher, STATES, create_educator
+from .views import (
+    issue_single_voucher, STATES, create_educator,
+    get_active_pass_exchange_sites)
 from .models import Educator
 from ticketer.recordlocator.models import Ticket
 
@@ -67,6 +69,13 @@ class PassExchangeSiteTestCase(TestCase):
         self.assertEqual('Colorado', STATES['CO'])
         self.assertEqual('Puerto Rico', STATES['PR'])
         self.assertEqual('Virgin Islands', STATES['VI'])
+
+    def test_get_active_pass_exchange_sites(self):
+        """ The fixture has an inactive site in California - so this should be
+        empty. """
+
+        sites = get_active_pass_exchange_sites('CA')
+        self.assertTrue(len(sites) == 0)
 
 
 class FourthGraderFlowTests(TestCase):

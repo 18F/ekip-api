@@ -60,6 +60,7 @@ class FieldTripSite(models.Model):
     best_visit_times = models.ManyToManyField(BestVisitTime)
     facilities = models.ManyToManyField(YouthFacility)
 
+
     def save(self, *args, **kwargs):
         """ Generate and save a slug when this object is saved for the first
         time. """
@@ -105,6 +106,14 @@ class FederalSite(models.Model):
         default=False, help_text="True if the site offers a senior pass")
     access_pass = models.BooleanField(
         default=False, help_text="True if the site offers an access pass")
+
+    active_participant = models.BooleanField(default=True)
+    version = models.PositiveIntegerField(null=False)
+    update_timestamp = models.DateTimeField(auto_now=True)
+
+    @property
+    def kids_pass(self):
+        return (self.annual_pass and self.active_participant)
 
     def __str__(self):
         return "%s (%s, %s)" % (self.name, self.city, self.state)

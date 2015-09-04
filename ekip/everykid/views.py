@@ -16,8 +16,9 @@ STATES['PR'] = 'Puerto Rico'
 STATES['VI'] = 'Virgin Islands'
 
 def planyourtrip(request):
-    # We launched with /planyoutrip printed on the vouchers. 
-    # Make that URL work. 
+    """ We launched with /planyoutrip printed on the vouchers.  Make that URL
+    work. """
+
     return HttpResponseRedirect(reverse('plan_your_trip'))
 
 
@@ -71,13 +72,17 @@ def student_pass(request):
     )
 
 
+def get_active_pass_exchange_sites(state):
+    """ For a given state, return the sites that are issuing kids passes. """
+    return FederalSiteResource().list(state, 1)
+
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
 
     state = request.GET.get('state')
 
     if state:
-        sites = FederalSiteResource().list(state)
+        sites = get_active_pass_exchange_sites(state)
         form = PassSiteStateForm(initial={'state': state})
         state_name = STATES[state]
     else:

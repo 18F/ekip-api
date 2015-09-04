@@ -22,3 +22,10 @@ class Ticket(models.Model):
 
     def __str__(self):
         return "%s %s" % (self.record_locator, self.zip_code)
+
+class AdditionalRedemption(models.Model):
+    """ Create this, when a ticket is redeemed more than once. """
+
+    ticket = models.ForeignKey(Ticket)
+    recreation_site = models.ForeignKey(FederalSite, null=False)
+    redemption_entry = models.DateTimeField(auto_now_add=True)
