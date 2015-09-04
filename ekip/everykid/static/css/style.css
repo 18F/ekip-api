@@ -1763,6 +1763,10 @@ footer {
         #plan-your-trip .content-inner section.field-trip-sites .section-content .field-trip-sites-content {
           width: auto;
           padding: 0; }
+    #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
+      background: #013F5B; }
+    #plan-your-trip .content-inner section.destination .section-content li:nth-child(4) {
+      background: #177099; }
   #plan-your-trip .sites-container .state-content {
     padding: 20px; }
     #plan-your-trip .sites-container .state-content h2 {
