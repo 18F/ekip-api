@@ -9,32 +9,35 @@ Every Kid in a Park (EKIP API)
 #Introduction
 The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
 
-#About this Site
+#About this site
 This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
 
-###Landing / Home Section.
+###Landing / home
 The landing / home section describes the program, how it works, and provides links to resources for 4th grade students, educators and parents.
+Reading grade level: 4.5.
 
-###How it Works Section.
+###How it works
 This section provides a step-by-step walkthrough of the process for getting and using the pass.
+Reading grade level: 3.7.
 
-###Get Your Pass.
+###Get your pass
 This section walks either the student or the educator through the appropriate process to get a pass.  4th grade students are directed to an activity - once the activity is completed they can print the paper pass.  The paper pass can later be redeemed for a plastic pass at participating sites.
+Reading grade level: 2.6.
 
-###Plan a Trip.
-The Plan a Trip section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
+###Plan your trip
+This section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
+Reading grade level: 1.3
 
-#Technical Stuff
+#Technical stuff
 The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.
 
-##Submitting Issues
+##Submitting issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
 
-## ticketing-system
+## Ticketing system
 A ticketing system.
 
-## Getting Started
-
+## Getting started
 Make sure you have `vagrant` installed. For instance, on OS X with Homebrew:
 
 ```
@@ -93,7 +96,7 @@ To run tests locally:
 python manage.py test --settings=config.settings.test
 ```
 
-## Loading Data
+## Loading data
 
 To load the list of pass-exchange sites, you'll need to run the following
 Django management command:
@@ -116,7 +119,7 @@ where ficor.csv is the dataset for the field trip sites. The data file is
 included in the repository.
 
 
-## Deploy Notes
+## Deploy notes
 
 We use a blue-green deployment system for zero downtime.
 
