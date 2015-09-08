@@ -155,7 +155,9 @@ ul.top-links {
         background: #177099;
         color: #fff;
         border: 2px solid #fff;
-        cursor: default; }
+        cursor: default;
+        position: relative;
+        z-index: 50; }
         .menu-container nav li.active a:hover {
           opacity: 1; }
         .menu-container nav li.active a:before {
@@ -165,6 +167,7 @@ ul.top-links {
           content: "\00a0";
           top: 5px;
           left: -37px;
+          z-index: 100;
           position: absolute; }
       .menu-container nav li a {
         width: inherit;
@@ -1074,7 +1077,7 @@ ul.top-links {
     margin: auto;
     position: relative; }
     #plan-your-trip .content-inner .plan-your-trip-line-container .lines {
-      width: 937px;
+      width: 650px;
       height: 1773px;
       background: url(../img/plan-your-trip-lines.png) no-repeat;
       top: 70px;
@@ -1159,6 +1162,7 @@ ul.top-links {
           #plan-your-trip .content-inner section.lodging .section-content a:hover {
             text-decoration: underline; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-image {
+          margin: 40px 0 0 0;
           display: inline-block; }
         #plan-your-trip .content-inner section.lodging .section-content .lodging-content {
           max-width: 410px;
@@ -1762,6 +1766,10 @@ footer {
         #plan-your-trip .content-inner section.field-trip-sites .section-content .field-trip-sites-content {
           width: auto;
           padding: 0; }
+    #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
+      background: #013F5B; }
+    #plan-your-trip .content-inner section.destination .section-content li:nth-child(4) {
+      background: #177099; }
   #plan-your-trip .sites-container .state-content {
     padding: 20px; }
     #plan-your-trip .sites-container .state-content h2 {

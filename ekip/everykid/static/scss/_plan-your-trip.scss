@@ -133,7 +133,7 @@
       position: relative;
 
       .lines {
-        width: 937px;
+        width: 650px;
         height: 1773px;
         background: url(../img/plan-your-trip-lines.png) no-repeat;
         top: 70px;
@@ -256,6 +256,7 @@
           }
 
           .lodging-image {
+            margin: 40px 0 0 0;
             display: inline-block;
           }
           .lodging-content {
