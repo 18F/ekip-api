@@ -386,9 +386,11 @@ ul.top-links {
       #landing .content-inner-block section li.fourth-graders .description {
         margin: 100px 0 0 90px; }
     #landing .content-inner-block section li.parents {
-      margin: 170px 0 0 0; }
+      margin: 155px 0 0 0; }
       #landing .content-inner-block section li.parents .image {
         margin: 0 0 0 55px; }
+        #landing .content-inner-block section li.parents .image img {
+          max-width: 262px; }
       #landing .content-inner-block section li.parents .description {
         margin: 30px 0 0 18px; }
     #landing .content-inner-block section li.educators .description {

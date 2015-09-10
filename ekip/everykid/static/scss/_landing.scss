@@ -140,10 +140,14 @@
           }
         }
         &.parents {
-          margin: 170px 0 0 0;
+          margin: 155px 0 0 0;
 
           .image {
             margin: 0 0 0 55px;
+
+            img {
+              max-width: 262px;
+            }
           }
           .description {
             margin: 30px 0 0 18px;
