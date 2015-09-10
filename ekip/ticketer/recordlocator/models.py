@@ -9,7 +9,7 @@ class Ticket(models.Model):
     """ This is a voucher. """
 
     zip_code = USZipCodeField(max_length=5)
-    record_locator = models.CharField(max_length=16)
+    record_locator = models.CharField(max_length=16, db_index=True)
     created = models.DateTimeField(auto_now_add=True)
 
     recreation_site = models.ForeignKey(FederalSite, null=True)
