@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Parents{% endblock title %}
+
+{% block page_id %}parents{% endblock page_id %}
+
+{% block background %}river{% endblock background %}
+
+{% block content %}
+
+  <div class="parents-content">
+
+    <h1>Parents and guardians</h1>
+
+    <p>“The wilderness holds answers to questions man has not yet learned to ask.” <span class="author">– NANCY NEWHALL</span></p>
+
+    <p>Your child can take you amazing places! With the pass, fourth graders can bring family and friends on adventures for free for a full year.</p>
+
+    <div class="parents-more">
+      Learn More
+
+      <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-757.000000, -384.000000)" fill="#FFE897">
+            <path d="M792.840667,386.497942 L790.349333,384 L774.920333,399.469926 L759.491333,384 L757,386.497942 L774.920333,404.465809 L792.840667,386.497942"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+
+{% endblock content %}
+
+{% block content_inner %}
+
+  <ul>
+    <li>
+      <div class="section-content plan-a-trip">
+        <h2>Plan a trip</h2>
+        <p>Visiting public lands is healthy and fun. Learn about your heritage, and connect with nature. No matter where you live in the U.S., you’re within two hours of an included site.</p>
+        <p>Check out plan your trip to find fun things to do at public lands, waters, and parks.</p>
+        <a href="{% url "plan_your_trip" %}"><button>Go</button></a>
+      </div>
+    </li>
+    <li>
+      <div class="section-content rules">
+        <h2>Official Rules</h2>
+        <p>See our rules and instructions before you go.</p>
+        <a href=""><button>View Rules</button></a>
+      </div>
+    </li>
+    <li>
+      <div class="section-content why">
+        <h2>Why fourth graders</h2>
+        <p>We chose fourth graders because research shows that kids ages nine to 11 are beginning to learn about the world around them. They’re open to new ideas, and they are likely to connect to nature and our history.</p>
+        <p>This year is just the start! We’ll offer the pass to fourth graders every year. Over time, all kids will get the chance to explore our country.</p>
+        <img src="{% static "img/parents-fishing.jpg" %}" alt="family fishing" />
+      </div>
+    </li>
+  </ul>
+
+
+{% endblock content_inner %}

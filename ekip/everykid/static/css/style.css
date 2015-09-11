@@ -227,6 +227,10 @@ ul.top-links {
   background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
   background-size: cover; }
 
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover; }
+
 .content {
   max-width: 725px;
   min-height: 508px;
@@ -1385,6 +1389,75 @@ ul.top-links {
       #about .content-inner .contact-content a:hover {
         text-decoration: underline; }
 
+#parents .parents-content {
+  background: rgba(45, 108, 53, 0.8);
+  padding: 35px 30px;
+  font-size: 22px;
+  line-height: 25px; }
+  #parents .parents-content p {
+    padding: 10px 0; }
+  #parents .parents-content .author {
+    font-size: 17px;
+    text-transform: uppercase; }
+  #parents .parents-content .parents-more {
+    width: 270px;
+    margin: 35px auto 0 auto;
+    text-transform: uppercase;
+    font-family: "Superclarendon", serif;
+    text-align: center;
+    color: #FFE897;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer; }
+    #parents .parents-content .parents-more .arrow-down {
+      margin: 25px auto 10px auto;
+      display: block; }
+
+#parents .content-inner {
+  font-weight: 200;
+  position: relative; }
+  #parents .content-inner li {
+    padding: 70px 0; }
+  #parents .content-inner li:nth-child(odd) {
+    background: #C82629; }
+    #parents .content-inner li:nth-child(odd) button {
+      background: #FFE897;
+      color: #C82629;
+      padding: 10px 50px; }
+      #parents .content-inner li:nth-child(odd) button:hover {
+        background: #fff;
+        color: #C82629; }
+  #parents .content-inner li:nth-child(even) {
+    background: #FDEED0;
+    color: #C82629; }
+    #parents .content-inner li:nth-child(even) button {
+      background: #C82629;
+      color: #FFE897;
+      padding: 10px 20px; }
+      #parents .content-inner li:nth-child(even) button:hover {
+        background: #fff;
+        color: #C82629; }
+  #parents .content-inner .section-content {
+    max-width: 840px;
+    padding: 0 0 0 130px;
+    margin: auto; }
+    #parents .content-inner .section-content p {
+      max-width: 630px;
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 15px; }
+    #parents .content-inner .section-content.plan-a-trip {
+      background: url(../img/parents-plan-a-trip.png) top left no-repeat;
+      padding-bottom: 90px; }
+    #parents .content-inner .section-content.rules {
+      background: url(../img/parents-rules.png) top left 45px no-repeat; }
+    #parents .content-inner .section-content.why {
+      background: url(../img/parents-why.png) top left 45px no-repeat; }
+      #parents .content-inner .section-content.why img {
+        max-width: 473px;
+        margin: 15px 0 0 0; }
+
 footer {
   background: #FDEED0;
   border-top: 5px solid #000;
@@ -1804,4 +1877,24 @@ footer {
   #about .content-inner .contact-content h2 {
     font-size: 18px; }
   #about .content-inner .contact-content p {
-    font-size: 16px; } }
+    font-size: 16px; }
+  #parents .parents-content h1 {
+    line-height: 35px; }
+  #parents .parents-content p {
+    font-size: 18px;
+    padding: 5px 0 0 0; }
+  #parents .parents-content .parents-more {
+    display: none; }
+  #parents .content-inner li {
+    padding: 20px; }
+  #parents .content-inner .section-content {
+    padding: 0 20px; }
+    #parents .content-inner .section-content h2 {
+      font-size: 28px; }
+    #parents .content-inner .section-content p {
+      font-size: 18px; }
+    #parents .content-inner .section-content.plan-a-trip,
+    #parents .content-inner .section-content.rules,
+    #parents .content-inner .section-content.why {
+      background: none;
+      padding: 0; } }

@@ -1,7 +1,7 @@
 $(function () {
   'use strict';
 
-  $('.lets-go, .educator-begin, .lets-get-going, .about-more').click(function(e) {
+  $('.lets-go, .educator-begin, .lets-get-going, .about-more, .parents-more').click(function(e) {
 
     e.preventDefault();
 

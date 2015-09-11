@@ -143,6 +143,12 @@ button {
   background-size: cover;
 }
 
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+
 .content {
   max-width: $site-width - $nav-width - 50;
   min-height: 508px;
@@ -221,6 +227,7 @@ button {
 @import "educators";
 @import "plan-your-trip";
 @import "about";
+@import "parents";
 
 @import "footer";
 
