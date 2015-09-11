@@ -62,6 +62,10 @@ button {
   position: absolute;
   overflow: hidden;
   top: -10px; }
+  #skipnav:focus {
+    height: auto;
+    width: auto;
+    top: 0; }
 
 .govt-banner {
   background-color: #2C2C2C;

@@ -92,6 +92,12 @@ button {
   position: absolute;
   overflow: hidden;
   top: -10px;
+
+  &:focus {
+    height: auto;
+    width: auto;
+    top: 0;
+  }
 }
 
 .govt-banner {
