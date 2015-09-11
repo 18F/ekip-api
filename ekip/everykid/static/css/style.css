@@ -1350,6 +1350,8 @@ ul.top-links {
           font-family: 'Lato', sans-serif;
           display: inline-block;
           position: relative; }
+          #about .content-inner .agencies-content .participating ul h4 a {
+            text-decoration: none; }
           #about .content-inner .agencies-content .participating ul h4:before {
             font-size: 22px;
             font-weight: 200;
