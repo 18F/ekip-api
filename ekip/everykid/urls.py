@@ -59,4 +59,9 @@ urlpatterns = patterns(
     # LEGAL
     url(r'privacy-policy/$', cache_page(60*60)(TemplateView.as_view(
         template_name="legal/privacy.html")), name="privacy_policy"),
+
+    # 404
+    url(r'not-found/$', cache_page(60*60)(TemplateView.as_view(
+        template_name="404.html")), name="404"),
+
 )
