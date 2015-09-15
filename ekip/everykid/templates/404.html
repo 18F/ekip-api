@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="blitz" content="mu-bf431adc-3df60040-20150ee5-6af832b8">
+  <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <title>Every Kid in a Park | Sorry! We couldn't find this page.</title>
+  <meta name="description" content="">
+
+</head>
+
+<body id="not-found">
+
+  <a id="skipnav" href="#maincontent">skip to main content</a>
+
+  <div class="govt-banner">
+    An official website of the United States Government.
+    <img alt="US flag signifying that this is a United States Federal Government website" src="{% static 'img/us_flag_small.png' %}" />
+  </div>
+
+  <div id="maincontent">
+
+    <img src="{% static "img/404-compass.png" %}" class="compass" alt="Compass" />
+
+    <h1>Sorry!<br/>We couldn't find this page.</h1>
+    <h2>It must be out exploring!</h2>
+
+    <a href="/"><button>Get Back On Track</button></a>
+
+  </div>
+
+
+</body>

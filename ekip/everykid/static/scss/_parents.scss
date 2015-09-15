@@ -1,0 +1,105 @@
+#parents {
+
+  .parents-content {
+    background: rgba(45, 108, 53, 0.8);
+    padding: 35px 30px;
+    font-size: 22px;
+    line-height: 25px;
+
+    p {
+      font-size: 26px;
+      line-height: 32px;
+      padding: 10px 0;
+    }
+
+    .author {
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
+    .parents-more {
+      width: 270px;
+      margin: 35px auto 0 auto;
+      text-transform: uppercase;
+      font-family: "Superclarendon", serif;
+      text-align: center;
+      color: $yellow;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      .arrow-down {
+        margin: 25px auto 10px auto;
+        display: block;
+      }
+    }
+  }
+
+  .content-inner {
+    font-weight: 200;
+    position: relative;
+
+    li {
+      padding: 70px 0;
+    }
+
+    li:nth-child(odd) {
+      background: $red;
+
+      button {
+        background: $yellow;
+        color: $red;
+        padding: 10px 50px;
+
+        &:hover {
+          background: #fff;
+          color: $red;
+        }
+      }
+    }
+    li:nth-child(even) {
+      background: $cream;
+      color: $red;
+
+      button {
+        background: $red;
+        color: $yellow;
+        padding: 10px 20px;
+
+        &:hover {
+          background: #fff;
+          color: $red;
+        }
+      }
+    }
+    .section-content {
+      max-width: 840px;
+      padding: 0 0 0 130px;
+      margin: auto;
+
+      p {
+        max-width: 630px;
+        font-size: 22px;
+        line-height: 30px;
+        padding-bottom: 15px;
+      }
+
+      &.plan-a-trip {
+        background: url(../img/parents-plan-a-trip.png) top left no-repeat;
+        padding-bottom: 90px;
+      }
+      &.rules {
+        background: url(../img/parents-rules.png) top left 45px no-repeat;
+      }
+      &.why {
+        background: url(../img/parents-why.png) top left 45px no-repeat;
+
+        img {
+          max-width: 473px;
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+  }
+}

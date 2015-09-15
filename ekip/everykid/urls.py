@@ -52,7 +52,12 @@ urlpatterns = patterns(
     url(r'about/$', cache_page(60*60)(TemplateView.as_view(
         template_name="about.html")), name="about_ekip"),
 
+    # PARENTS
+    url(r'parents/$', cache_page(60*60)(TemplateView.as_view(
+        template_name="parents.html")), name="parents"),
+
     # LEGAL
     url(r'privacy-policy/$', cache_page(60*60)(TemplateView.as_view(
         template_name="legal/privacy.html")), name="privacy_policy"),
+
 )

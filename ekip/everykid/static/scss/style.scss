@@ -26,12 +26,15 @@ $cream: #FDEED0;
 }
 
 body, html {
-  background: $blue;
   font-family: 'Lato', sans-serif;
   color: #fff;
   padding:0;
   margin:0;
   overflow-x: hidden;
+}
+
+body {
+  background: $blue;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +95,12 @@ button {
   position: absolute;
   overflow: hidden;
   top: -10px;
+
+  &:focus {
+    height: auto;
+    width: auto;
+    top: 0;
+  }
 }
 
 .govt-banner {
@@ -142,6 +151,12 @@ button {
   background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
   background-size: cover;
 }
+
+.river {
+  background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
 
 .content {
   max-width: $site-width - $nav-width - 50;
@@ -214,6 +229,45 @@ button {
   }
 }
 
+#not-found {
+  background: $red url(../img/backgrounds/404.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 791px;
+  text-align: center;
+
+  #maincontent {
+    padding: 60px 0;
+
+    .compass {
+      width: 214px;
+      height: 216px;
+    }
+
+    h1 {
+      color: $yellow;
+      line-height: 60px;
+      padding: 30px 0 0 0;
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 60px;
+      padding: 0 0 40px 0;
+    }
+    button {
+      border: 4px solid #fff;
+      color: $yellow;
+      padding: 18px 25px;
+      font-size: 19px;
+      letter-spacing: 1px;
+
+      &:hover {
+        background: #fff;
+        color: $red;
+      }
+    }
+  }
+}
+
 @import "landing";
 @import "how-it-works";
 @import "get-your-pass";
@@ -221,6 +275,7 @@ button {
 @import "educators";
 @import "plan-your-trip";
 @import "about";
+@import "parents";
 
 @import "footer";
 

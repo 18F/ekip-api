@@ -576,4 +576,71 @@
       }
     }
   }
+
+  #parents {
+
+    .parents-content {
+
+      h1 {
+        line-height: 35px;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 5px 0 0 0;
+      }
+
+      .parents-more {
+        display: none;
+      }
+    }
+
+    .content-inner {
+
+      li {
+        padding: 20px;
+      }
+
+      .section-content {
+        padding: 0 20px;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        &.plan-a-trip,
+        &.rules,
+        &.why {
+          background: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  #not-found {
+    min-height: auto;
+    background: $red;
+
+    #maincontent {
+      padding: 20px;
+
+      h1, h2 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      h1 {
+        padding: 10px 0;
+      }
+      button {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
 }
