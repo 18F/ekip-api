@@ -1,10 +1,18 @@
-    <h1>Statistics</h1>
+{% load humanize %}
 
-    <h2>Paper Passes</h2>
+<h1>Statistics</h1>
 
-    <p>The system has generated: {{num_tickets_issued}} total paper passes</p>
+<h2>Paper Passes</h2>
 
-    <p>{{num_tickets_exchanged}} paper passes have been reported as exchanged
+    <p>The system has generated: {{num_tickets_issued|intcomma}} total paper passes.</p>
+
+    <p>Of which, educators have generated {{educator_tickets_issued|intcomma}} paper passes.</p>
+
+<h2>Exchanges</h2>
+
+    <p>{{num_tickets_exchanged|intcomma}} paper passes have been reported as exchanged
     for plastic passes.</p>
 
-    <p>Educators have generated {{educator_tickets_issued}} paper passes.</p>
+    <p>{{all_exchanged|intcomma}} paper passes have been reported as exchanged
+    for plastic passes (including those that have been redeemed more than
+    once).</p>

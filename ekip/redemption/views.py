@@ -20,19 +20,32 @@ class States():
         for abbr, name in US_STATES:
             self.states[abbr] = name
 
+def get_num_tickets_exchanged():
+    """ Get a count of how many unique paper passes have been exchanged for plastic
+    passes."""
+
+    return Ticket.objects.filter(recreation_site__isnull=False).count()
+
+def get_num_tickets_exchanged_more_than_once():
+    """ Sum up all the additional redemptions for tickets. """
+    return AdditionalRedemption.objects.count()
+
 
 @login_required
 def statistics(request):
     educator_tickets = Educator.objects.all().aggregate(
         Sum('num_students'))['num_students__sum']
 
+    unique_exchanges = get_num_tickets_exchanged()
+    additional_exchanges = get_num_tickets_exchanged_more_than_once()
+
     return render(
         request,
         'stats.html',
         {
             'num_tickets_issued': Ticket.objects.count(),
-            'num_tickets_exchanged': Ticket.objects.filter(
-                recreation_site__isnull=False).count(),
+            'num_tickets_exchanged': unique_exchanges,
+            'all_exchanged': unique_exchanges + additional_exchanges,
             'educator_tickets_issued': educator_tickets
         }
     )
