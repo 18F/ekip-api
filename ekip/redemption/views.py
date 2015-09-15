@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.forms.formsets import formset_factory
+from django.db.models import Sum
 
 from localflavor.us.us_states import US_STATES
 
@@ -9,6 +10,7 @@ from .forms import FederalSiteStateForm, VoucherEntryForm
 from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
+from everykid.models import Educator
 
 
 class States():
@@ -19,16 +21,37 @@ class States():
             self.states[abbr] = name
 
 
+def get_num_tickets_exchanged():
+    """ Get a count of how many unique paper passes have been exchanged for plastic
+    passes."""
+
+    return Ticket.objects.filter(recreation_site__isnull=False).count()
+
+
+def get_num_tickets_exchanged_more_than_once():
+    """ Sum up all the additional redemptions for tickets. """
+    return AdditionalRedemption.objects.count()
+
+
 @login_required
 def statistics(request):
-    all_tickets_num = Ticket.objects.all().count()
+    educator_tickets = Educator.objects.all().aggregate(
+        Sum('num_students'))['num_students__sum']
+
+    unique_exchanges = get_num_tickets_exchanged()
+    additional_exchanges = get_num_tickets_exchanged_more_than_once()
+
     return render(
         request,
         'stats.html',
         {
-            'num_tickets_issued': all_tickets_num
+            'num_tickets_issued': Ticket.objects.count(),
+            'num_tickets_exchanged': unique_exchanges,
+            'all_exchanged': unique_exchanges + additional_exchanges,
+            'educator_tickets_issued': educator_tickets
         }
     )
+
 
 @login_required
 def sites_for_state(request):
@@ -101,7 +124,7 @@ def redeem_confirm(request, slug):
         request,
         'redeem-confirm.html',
         {'pass_site': federal_site})
-    
+
 
 @login_required
 def redeem_for_site(request, slug):
