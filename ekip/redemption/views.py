@@ -20,11 +20,13 @@ class States():
         for abbr, name in US_STATES:
             self.states[abbr] = name
 
+
 def get_num_tickets_exchanged():
     """ Get a count of how many unique paper passes have been exchanged for plastic
     passes."""
 
     return Ticket.objects.filter(recreation_site__isnull=False).count()
+
 
 def get_num_tickets_exchanged_more_than_once():
     """ Sum up all the additional redemptions for tickets. """
@@ -49,6 +51,7 @@ def statistics(request):
             'educator_tickets_issued': educator_tickets
         }
     )
+
 
 @login_required
 def sites_for_state(request):
@@ -121,7 +124,7 @@ def redeem_confirm(request, slug):
         request,
         'redeem-confirm.html',
         {'pass_site': federal_site})
-    
+
 
 @login_required
 def redeem_for_site(request, slug):
