@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.forms.formsets import formset_factory
+from django.db.models import Sum
 
 from localflavor.us.us_states import US_STATES
 
@@ -9,6 +10,7 @@ from .forms import FederalSiteStateForm, VoucherEntryForm
 from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
+from everykid.models import Educator
 
 
 class States():
@@ -21,12 +23,17 @@ class States():
 
 @login_required
 def statistics(request):
-    all_tickets_num = Ticket.objects.all().count()
+    educator_tickets = Educator.objects.all().aggregate(
+        Sum('num_students'))['num_students__sum']
+
     return render(
         request,
         'stats.html',
         {
-            'num_tickets_issued': all_tickets_num
+            'num_tickets_issued': Ticket.objects.count(),
+            'num_tickets_exchanged': Ticket.objects.filter(
+                recreation_site__isnull=False).count(),
+            'educator_tickets_issued': educator_tickets
         }
     )
 
