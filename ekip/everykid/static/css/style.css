@@ -683,6 +683,8 @@ ul.top-links {
     background: #FFE897;
     color: #177099;
     letter-spacing: 1px; }
+    #student-pass .pass-content button:hover {
+      background: #fff; }
 
 #student-pass .diary {
   min-height: 523px;
@@ -705,9 +707,10 @@ ul.top-links {
     padding: 20px 0 0 0; }
   #student-pass .diary.diary-end .page button {
     background: #2D6C35;
-    color: #FFE897; }
+    color: #FFE897;
+    padding: 15px 25px; }
     #student-pass .diary.diary-end .page button:hover {
-      background: #C82629; }
+      background: #177099; }
   #student-pass .diary.diary-end .diary-right {
     text-align: center; }
     #student-pass .diary.diary-end .diary-right img {
@@ -742,7 +745,7 @@ ul.top-links {
       margin: 40px auto 0 auto;
       display: block; }
       #student-pass .diary .page button.start:hover {
-        background: #C82629; }
+        background: #2D6C35; }
     #student-pass .diary .page ul {
       padding: 10px 0;
       margin: 0; }
@@ -759,6 +762,8 @@ ul.top-links {
           bottom: 8px;
           left: 0;
           position: absolute; }
+          #student-pass .diary .page ul li button:hover {
+            background: #2D6C35; }
     #student-pass .diary .page form {
       max-width: 100%;
       margin: 0;
