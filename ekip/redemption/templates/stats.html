@@ -8,17 +8,17 @@
     website visitor.  Website visitors include 4th grade students, parents and educators, but they also include other members of the general
     public and other visitors.</p>
     
-    <p>The numbers reported here represent aggregate counts of the number of times an electronic paper pass have been generated.  They <b>do not</b> represent:</p>
+    <p>The numbers reported here represent aggregate counts of the number of times an electronic paper pass have been generated.  These numbers <b>do not</b> represent:</p>
        <li>The number of 4th graders who have generated an electronic paper pass.</li>
        <li>The number of times an electronic paper pass has been printed.</li>
-       <li>The number of 4th graders reached through this program</li>
+       <li>The number of 4th graders reached through this program.</li>
        <li>For the educator workflow, the number of educators who have used the system.</li>
        
     <p>If you're still not sure what these numbers represent or if you're interpreting them correctly, please ask us!</p>
+    
+    <p>System-generated paper passes through <a href="https://everykidinapark.gov/get-your-pass/fourth-grader" target="_blank">student</a> and <a href="https://everykidinapark.gov/get-your-pass/educator" target="_blank">educator</a> workflows: <b>{{num_tickets_issued|intcomma}}</b></p>
 
-    <p>The system has generated {{num_tickets_issued|intcomma}} paper passes through the student workflow since September 1st, 2015.</p>
-
-    <p>Of which, {{educator_tickets_issued|intcomma}} paper passes have been generated through the educator workflow.</p>
+    <p>System-generated paper passes, educator worfklow only: <b>{{educator_tickets_issued|intcomma}}</b></p>
 
 <h2>Exchanges</h2>
 
@@ -31,13 +31,11 @@
         <li>The number of 4th graders who have exchanged a paper pass for a plastic pass (this number does not include numbers reported
         by Army Corps of Engineers, and it includes anyone who was able to succesfully exchange the paper pass for a plastic one).</li>
     
+    <p>Paper passes exchanged for plastic passes (includes paper passes used more than once): <b>{{all_exchanged|intcomma}}</b></p>
 
-    <p>{{num_tickets_exchanged|intcomma}} paper passes have been reported as exchanged
-    for plastic passes.</p>
+    <p>Unique paper passes exchanged for plastic passes (duplicates removed): <b>{{num_tickets_exchanged|intcomma}}</b></p>
 
-    <p>{{all_exchanged|intcomma}} paper passes have been reported as exchanged
-    for plastic passes (including those that have been redeemed more than
-    once).</p>
+
 
 
 
