@@ -282,7 +282,8 @@ ul.top-links {
 #privacy-policy .content {
   font-weight: 200; }
   #privacy-policy .content h1 {
-    line-height: 40px; }
+    line-height: 40px;
+    padding: 0 0 20px 0; }
   #privacy-policy .content h2 {
     font-size: 30px;
     padding: 15px 0 0 0; }
