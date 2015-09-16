@@ -85,7 +85,7 @@ $(function () {
 
       $('.work_email').addClass('error');
 
-      formErors = true;
+      formErrors = true;
     }
     else {
       $('.work_email').removeClass('error');
