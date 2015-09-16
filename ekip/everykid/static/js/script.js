@@ -59,7 +59,7 @@ $(function () {
 
 
   // educator form error checking
-  $('#educators button[type="submit"]').click(function(e) {
+  $('#educators .pass-form button[type="submit"]').click(function(e) {
 
     e.preventDefault();
 

@@ -53,7 +53,7 @@
       <p><a href="{% url 'privacy_policy' %}">Privacy notice</a>.</p>
     </div>
 
-    <form action="" method="post">
+    <form action="" method="post" class="pass-form">
       {% csrf_token %}
 
       {% include "get-your-pass/educator_form.html" %}
