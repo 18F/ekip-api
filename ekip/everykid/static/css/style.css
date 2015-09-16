@@ -262,7 +262,7 @@ ul.top-links {
     position: absolute; }
 
 .errors {
-  padding: 10px 0;
+  padding: 15px 0;
   color: #ff0000; }
 
 #student-pass .content ul,
@@ -965,10 +965,12 @@ ul.top-links {
     #educators form li .zipcode {
       max-width: 100px;
       float: right; }
-    #educators form li .error input, #educators form li .error select {
-      border: 1px solid red; }
-    #educators form li .error.org_or_school {
-      border: 1px solid red; }
+    #educators form li .error {
+      color: #ff0000; }
+      #educators form li .error input, #educators form li .error select {
+        border: 1px solid red; }
+      #educators form li .error.org_or_school {
+        border: none; }
   #educators form button {
     color: #fff;
     letter-spacing: 1px;

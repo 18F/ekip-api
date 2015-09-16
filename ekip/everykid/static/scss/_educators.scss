@@ -215,12 +215,14 @@
       }
 
       .error {
+        color: #ff0000;
+
         input, select {
           border: 1px solid red;
         }
 
         &.org_or_school {
-          border: 1px solid red;
+          border: none;
         }
       }
     }
