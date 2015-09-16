@@ -56,8 +56,10 @@ urlpatterns = patterns(
     url(r'parents/$', cache_page(60*60)(TemplateView.as_view(
         template_name="parents.html")), name="parents"),
 
+    url(r'rules/$', cache_page(60*60)(TemplateView.as_view(
+        template_name="rules.html")), name="rules"),
+
     # LEGAL
     url(r'privacy-policy/$', cache_page(60*60)(TemplateView.as_view(
         template_name="legal/privacy.html")), name="privacy_policy"),
-
 )
