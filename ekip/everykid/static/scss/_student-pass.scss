@@ -50,6 +50,11 @@
       background: $yellow;
       color: $blue;
       letter-spacing: 1px;
+
+      &:hover {
+        background: #fff;
+
+      }
     }
   }
 
@@ -83,9 +88,10 @@
     &.diary-end .page button {
       background: $green;
       color: $yellow;
+      padding: 15px 25px;
 
       &:hover {
-        background: $red;
+        background: $blue;
       }
     }
     &.diary-end .diary-right {
@@ -132,7 +138,7 @@
         display: block;
 
         &:hover {
-          background: $red;
+          background: $green;
         }
       }
 
@@ -156,6 +162,10 @@
             bottom: 8px;
             left: 0;
             position: absolute;
+
+            &:hover {
+              background: $green;
+            }
           }
         }
       }
@@ -165,6 +175,7 @@
         margin: 0;
         border: none;
         padding: 0;
+
       }
     }
   }
