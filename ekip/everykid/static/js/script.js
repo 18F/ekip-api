@@ -22,7 +22,7 @@ $(function () {
   });
 
   // toggle agency descriptions
-  $('#about .participating li').click(function(e) {
+  $('#about .participating li a:first-child').click(function(e) {
 
     e.preventDefault();
 
