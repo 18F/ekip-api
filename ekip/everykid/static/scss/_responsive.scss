@@ -39,22 +39,6 @@
     position: relative;
   }
 
-  footer .footer-content {
-    padding: 20px;
-
-    img.doi {
-      top: 0;
-      position: relative;
-    }
-
-    nav {
-      margin: 15px 0;
-    }
-
-    nav li {
-      margin: 0;
-    }
-  }
 
   // mobile only nav
   nav.mobile-menu {
@@ -126,7 +110,7 @@
         }
 
         ul.sub li {
-          width: 45%;
+          width: 48%;
           display: inline-block;
           border-bottom: none;
           border-right: 2px solid #fff;
@@ -140,6 +124,42 @@
             border: none;
           }
         }
+      }
+    }
+  }
+
+
+  footer {
+
+    nav.mobile-menu {
+      height: auto;
+      padding: 20px;
+      display: block;
+
+      ul.menu {
+        top: auto;
+        left: auto;
+        right: auto;
+        position: relative;
+        background: $blue;
+        display: block;
+      }
+    }
+
+    .footer-content {
+      padding: 20px;
+
+      img.doi {
+        top: 0;
+        position: relative;
+      }
+
+      nav {
+        margin: 15px 0;
+        }
+
+      nav li {
+        margin: 0;
       }
     }
   }
@@ -179,43 +199,16 @@
       padding: 20px 0 0 0;
 
       .home-mobile-menu {
-        background: $blue;
-        margin: 0 20px;
-        border: 2px solid #fff;
-        text-align: center;
+        padding: 0 20px 20px 20px;
         display: block;
 
-        li {
-          border-bottom: 2px solid #fff;
-
-          a {
-            padding: 20px 0;
-            font-family: "Superclarendon", serif;
-            font-size: 18px;
-            color: $yellow;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: block;
-          }
-          &:last-child {
-            border: none;
-          }
-
-          ul.sub li {
-            width: 49%;
-            display: inline-block;
-            border-bottom: none;
-            border-right: 2px solid #fff;
-
-            a {
-              font-family: 'Lato', sans-serif;
-              color: #fff;
-              text-transform: capitalize;
-            }
-            &:last-child {
-              border: none;
-            }
-          }
+        .menu {
+          top: auto;
+          left: auto;
+          right: auto;
+          position: relative;
+          background: $blue;
+          display: block;
         }
       }
 

@@ -26,29 +26,31 @@
 {% block content_inner %}
   <div class="content-inner-block">
 
-    <ul class="home-mobile-menu">
-      <li>
-        <a href="{% url 'how_it_works' %}">How It Works</a>
-      <li>
-        <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
-      </li>
-      <li>
-        <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
-      </li>
-      <li>
-        <a href="{% url 'parents' %}">Parents</a>
-      </li>
-      <li>
-        <ul class="sub">
-          <li>
-            <a href="{% url 'educator_passes' %}">Educators</a>
-          </li>
-          <li>
-            <a href="{% url 'about_ekip' %}">About</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <nav class="home-mobile-menu mobile-menu">
+      <ul class="menu">
+        <li>
+          <a href="{% url 'how_it_works' %}">How It Works</a>
+        <li>
+          <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+        </li>
+        <li>
+          <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+        </li>
+        <li>
+          <a href="{% url 'parents' %}">Parents</a>
+        </li>
+        <li>
+          <ul class="sub">
+            <li>
+              <a href="{% url 'educator_passes' %}">Educators</a>
+            </li>
+            <li>
+              <a href="{% url 'about_ekip' %}">About</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
     <section>
 
