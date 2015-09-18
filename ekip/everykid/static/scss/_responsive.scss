@@ -1,3 +1,4 @@
+// tablet
 @media (max-width: 1050px) {
   .menu-container nav {
     left: 25px;
@@ -14,6 +15,7 @@
   }
 }
 
+// mobile
 @media (max-width: 800px) {
   h1 {
     font-size: 30px;
@@ -23,66 +25,18 @@
   }
 
   ul.top-links {
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    position: relative;
-  }
-
-  .menu-container {
-    top: 0;
+    display: none;
   }
 
   .menu-container nav {
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    position: relative;
-    text-align: center;
-
-    .logo {
-      margin: 5px 0;
-    }
-
-    .home-line,
-    .lines {
-      display: none;
-    }
-
-    ul {
-      display: block;
-    }
-
-    li {
-      font-size: 13px;
-      margin: 5px;
-      display: inline-block;
-
-      &.active a:before {
-        display: none;
-      }
-
-      a {
-        padding: 8px 10px;
-
-        &:hover:before {
-          display: none;
-        }
-      }
-
-      &:nth-child(2),
-      &:nth-child(4) {
-        margin: 5px;
-      }
-    }
+    display: none;
   }
 
   .content {
-    padding: 10px 20px;
+    padding: 0;
     margin: 0;
     min-height: 0;
+    position: relative;
   }
 
   footer .footer-content {
@@ -100,11 +54,102 @@
     nav li {
       margin: 0;
     }
+  }
 
+  // mobile only nav
+  nav.mobile-menu {
+    height: 300px;
+    display: block;
+
+    .logo {
+      width: 50%;
+      top: 10px;
+      left: 10px;
+      position: absolute;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .menu-button {
+      background: rgba(23, 112, 152, 0.9);
+      font-family: "Superclarendon", serif;
+      font-size: 16px;
+      color: $yellow;
+      letter-spacing: 1px;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      cursor: pointer;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+    }
+
+    ul.menu {
+      background: rgba(23, 112, 152, 0.9);
+      border: 2px solid #fff;
+      font-family: "Superclarendon", serif;
+      text-transform: uppercase;
+      text-align: center;
+      top: 10px;
+      right: 10px;
+      left: 10px;
+      z-index: 500;
+      position: absolute;
+
+      display: none;
+
+      .close {
+        color: $blue;
+        background: #fff;
+        padding: 15px 20px;
+        text-align: right;
+        cursor: pointer;
+      }
+
+      li {
+        border-bottom: 2px solid #fff;
+
+        a {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: $yellow;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+        }
+        &:last-child {
+          border: none;
+        }
+
+        ul.sub li {
+          width: 45%;
+          display: inline-block;
+          border-bottom: none;
+          border-right: 2px solid #fff;
+
+          a {
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            text-transform: capitalize;
+          }
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
   }
 
 
   #landing {
+
+    nav.mobile-menu {
+      display: none;
+    }
 
     .menu-container nav {
       top: 0;
@@ -131,6 +176,48 @@
 
     .content-inner-block {
       background: $red;
+      padding: 20px 0 0 0;
+
+      .home-mobile-menu {
+        background: $blue;
+        margin: 0 20px;
+        border: 2px solid #fff;
+        text-align: center;
+        display: block;
+
+        li {
+          border-bottom: 2px solid #fff;
+
+          a {
+            padding: 20px 0;
+            font-family: "Superclarendon", serif;
+            font-size: 18px;
+            color: $yellow;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+          }
+          &:last-child {
+            border: none;
+          }
+
+          ul.sub li {
+            width: 49%;
+            display: inline-block;
+            border-bottom: none;
+            border-right: 2px solid #fff;
+
+            a {
+              font-family: 'Lato', sans-serif;
+              color: #fff;
+              text-transform: capitalize;
+            }
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+      }
 
       section {
         padding: 20px 0;
@@ -161,11 +248,25 @@
           &.fourth-graders,
           &.parents,
           &.educators {
-            margin: 10px 0;
+            margin: 10px 0 50px 0;
 
             .image,
             .description {
               margin: 0;
+            }
+          }
+          &.ekip .image {
+            padding: 0 20px 50px 20px;
+            border: none;
+            display: block;
+
+            img {
+              width: 100%;
+              border: none;
+            }
+
+            .caption {
+              display: none;
             }
           }
         }
@@ -173,20 +274,20 @@
     }
 
     .content-inner-quote section {
-      padding: 30px 20px;
+      padding: 30px 20px 60px 20px;
 
       .quote {
         font-size: 26px;
       }
     }
-
   }
+  // end landing
+
 
   #how-it-works {
 
     .content-block {
-      padding: 20px;
-      margin: 0 0 20px 0;
+      padding: 40px 20px 50px 20px;
 
       .lets-get-going {
         display: none;
@@ -325,8 +426,8 @@
 
   #educators {
     .educator-content {
+      margin: 0;
       padding: 20px;
-      margin: 0 0 20px 0;
 
       h1 {
         font-size: 26px;
@@ -531,6 +632,10 @@
     .about-content {
       padding: 20px;
       font-size: 18px;
+
+      .about-more {
+        display: none;
+      }
     }
 
     .content-inner {
@@ -556,6 +661,10 @@
             font-size: 16px;
             line-height: 20px;
           }
+
+          ul li.open img {
+            float: none;
+          }
         }
       }
 
@@ -565,7 +674,7 @@
       .contact-content {
         img {
           margin: 0 0 20px 0;
-          max-width: 100%;
+          width: 100%;
         }
         h2 {
           font-size: 18px;
@@ -580,6 +689,7 @@
   #parents {
 
     .parents-content {
+      background: $green;
 
       h1 {
         line-height: 35px;
@@ -617,6 +727,10 @@
         &.why {
           background: none;
           padding: 0;
+
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -640,6 +754,12 @@
         font-size: 14px;
         margin-bottom: 20px;
       }
+    }
+  }
+
+  #privacy-policy {
+    .content {
+      padding: 0 20px;
     }
   }
 

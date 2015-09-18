@@ -109,6 +109,19 @@ button {
   text-align: center;
   padding: 7px 0;
   font-size: 13px;
+  z-index: 1000;
+}
+
+#curtain {
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 400;
+  display: none;
 }
 
 @import "nav";
@@ -157,13 +170,16 @@ button {
   background-size: cover;
 }
 
-
 .content {
   max-width: $site-width - $nav-width - 50;
   min-height: 508px;
   margin: auto;
   padding: 100px 0 50px $nav-width + 50;
   position: relative;
+}
+
+nav.mobile-menu {
+  display: none;
 }
 
 .tooltip {
@@ -191,8 +207,6 @@ button {
   color: #ff0000;
 }
 
-#student-pass,
-#plan-your-trip,
 #privacy-policy {
 
   .content, .content-inner {
@@ -202,6 +216,21 @@ button {
       li {
         padding: 0 0 5px 0;
         list-style: bullet;
+      }
+    }
+
+    nav.mobile-menu {
+      ul {
+        margin: 0;
+
+        li {
+          padding: 0;
+          list-style: none;
+
+          &.close {
+            padding: 15px 20px;
+          }
+        }
       }
     }
   }

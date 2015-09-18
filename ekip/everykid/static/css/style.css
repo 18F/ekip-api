@@ -74,7 +74,19 @@ button {
   color: #fff;
   text-align: center;
   padding: 7px 0;
-  font-size: 13px; }
+  font-size: 13px;
+  z-index: 1000; }
+
+#curtain {
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 400;
+  display: none; }
 
 ul.top-links {
   background: rgba(0, 0, 0, 0.5);
@@ -244,6 +256,9 @@ ul.top-links {
   padding: 100px 0 50px 260px;
   position: relative; }
 
+nav.mobile-menu {
+  display: none; }
+
 .tooltip {
   position: relative; }
   .tooltip:hover:before,
@@ -265,19 +280,19 @@ ul.top-links {
   padding: 15px 0;
   color: #ff0000; }
 
-#student-pass .content ul,
-#student-pass .content-inner ul,
-#plan-your-trip .content ul,
-#plan-your-trip .content-inner ul,
 #privacy-policy .content ul, #privacy-policy .content-inner ul {
   margin: 5px 0 5px 20px; }
-  #student-pass .content ul li,
-  #student-pass .content-inner ul li,
-  #plan-your-trip .content ul li,
-  #plan-your-trip .content-inner ul li,
   #privacy-policy .content ul li, #privacy-policy .content-inner ul li {
     padding: 0 0 5px 0;
     list-style: bullet; }
+
+#privacy-policy .content nav.mobile-menu ul, #privacy-policy .content-inner nav.mobile-menu ul {
+  margin: 0; }
+  #privacy-policy .content nav.mobile-menu ul li, #privacy-policy .content-inner nav.mobile-menu ul li {
+    padding: 0;
+    list-style: none; }
+    #privacy-policy .content nav.mobile-menu ul li.close, #privacy-policy .content-inner nav.mobile-menu ul li.close {
+      padding: 15px 20px; }
 
 #privacy-policy .content {
   font-weight: 200; }
@@ -370,6 +385,8 @@ ul.top-links {
 
 #landing .content-inner-block {
   background: #C82629 url(../img/landing-icons.png) top 40px center no-repeat; }
+  #landing .content-inner-block .home-mobile-menu {
+    display: none; }
   #landing .content-inner-block section {
     max-width: 1080px;
     padding: 65px 20px 75px 20px;
@@ -1415,7 +1432,7 @@ ul.top-links {
     background: #B1DAEC;
     padding: 70px 0; }
   #about .content-inner .contact-content {
-    width: 486px;
+    max-width: 486px;
     color: #115F83;
     margin: auto;
     position: relative; }
@@ -1567,44 +1584,14 @@ footer {
   h2 {
     font-size: 20px; }
   ul.top-links {
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    position: relative; }
-  .menu-container {
-    top: 0; }
+    display: none; }
   .menu-container nav {
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    position: relative;
-    text-align: center; }
-    .menu-container nav .logo {
-      margin: 5px 0; }
-    .menu-container nav .home-line,
-    .menu-container nav .lines {
-      display: none; }
-    .menu-container nav ul {
-      display: block; }
-    .menu-container nav li {
-      font-size: 13px;
-      margin: 5px;
-      display: inline-block; }
-      .menu-container nav li.active a:before {
-        display: none; }
-      .menu-container nav li a {
-        padding: 8px 10px; }
-        .menu-container nav li a:hover:before {
-          display: none; }
-      .menu-container nav li:nth-child(2),
-      .menu-container nav li:nth-child(4) {
-        margin: 5px; }
+    display: none; }
   .content {
-    padding: 10px 20px;
+    padding: 0;
     margin: 0;
-    min-height: 0; }
+    min-height: 0;
+    position: relative; }
   footer .footer-content {
     padding: 20px; }
     footer .footer-content img.doi {
@@ -1614,6 +1601,72 @@ footer {
       margin: 15px 0; }
     footer .footer-content nav li {
       margin: 0; }
+  nav.mobile-menu {
+    height: 300px;
+    display: block; }
+    nav.mobile-menu .logo {
+      width: 50%;
+      top: 10px;
+      left: 10px;
+      position: absolute; }
+      nav.mobile-menu .logo img {
+        width: 100%; }
+    nav.mobile-menu .menu-button {
+      background: rgba(23, 112, 152, 0.9);
+      font-family: "Superclarendon", serif;
+      font-size: 16px;
+      color: #FFE897;
+      letter-spacing: 1px;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      cursor: pointer;
+      top: 10px;
+      right: 10px;
+      position: absolute; }
+    nav.mobile-menu ul.menu {
+      background: rgba(23, 112, 152, 0.9);
+      border: 2px solid #fff;
+      font-family: "Superclarendon", serif;
+      text-transform: uppercase;
+      text-align: center;
+      top: 10px;
+      right: 10px;
+      left: 10px;
+      z-index: 500;
+      position: absolute;
+      display: none; }
+      nav.mobile-menu ul.menu .close {
+        color: #177099;
+        background: #fff;
+        padding: 15px 20px;
+        text-align: right;
+        cursor: pointer; }
+      nav.mobile-menu ul.menu li {
+        border-bottom: 2px solid #fff; }
+        nav.mobile-menu ul.menu li a {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: #FFE897;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block; }
+        nav.mobile-menu ul.menu li:last-child {
+          border: none; }
+        nav.mobile-menu ul.menu li ul.sub li {
+          width: 45%;
+          display: inline-block;
+          border-bottom: none;
+          border-right: 2px solid #fff; }
+          nav.mobile-menu ul.menu li ul.sub li a {
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            text-transform: capitalize; }
+          nav.mobile-menu ul.menu li ul.sub li:last-child {
+            border: none; }
+  #landing nav.mobile-menu {
+    display: none; }
   #landing .menu-container nav {
     top: 0;
     padding: 5px 0; }
@@ -1628,7 +1681,37 @@ footer {
     #landing .content .animate-line {
       display: none; }
   #landing .content-inner-block {
-    background: #C82629; }
+    background: #C82629;
+    padding: 20px 0 0 0; }
+    #landing .content-inner-block .home-mobile-menu {
+      background: #177099;
+      margin: 0 20px;
+      border: 2px solid #fff;
+      text-align: center;
+      display: block; }
+      #landing .content-inner-block .home-mobile-menu li {
+        border-bottom: 2px solid #fff; }
+        #landing .content-inner-block .home-mobile-menu li a {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: #FFE897;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block; }
+        #landing .content-inner-block .home-mobile-menu li:last-child {
+          border: none; }
+        #landing .content-inner-block .home-mobile-menu li ul.sub li {
+          width: 49%;
+          display: inline-block;
+          border-bottom: none;
+          border-right: 2px solid #fff; }
+          #landing .content-inner-block .home-mobile-menu li ul.sub li a {
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            text-transform: capitalize; }
+          #landing .content-inner-block .home-mobile-menu li ul.sub li:last-child {
+            border: none; }
     #landing .content-inner-block section {
       padding: 20px 0; }
       #landing .content-inner-block section li .image {
@@ -1646,7 +1729,7 @@ footer {
       #landing .content-inner-block section li.fourth-graders,
       #landing .content-inner-block section li.parents,
       #landing .content-inner-block section li.educators {
-        margin: 10px 0; }
+        margin: 10px 0 50px 0; }
         #landing .content-inner-block section li.ekip .image,
         #landing .content-inner-block section li.ekip .description,
         #landing .content-inner-block section li.fourth-graders .image,
@@ -1656,13 +1739,21 @@ footer {
         #landing .content-inner-block section li.educators .image,
         #landing .content-inner-block section li.educators .description {
           margin: 0; }
+      #landing .content-inner-block section li.ekip .image {
+        padding: 0 20px 50px 20px;
+        border: none;
+        display: block; }
+        #landing .content-inner-block section li.ekip .image img {
+          width: 100%;
+          border: none; }
+        #landing .content-inner-block section li.ekip .image .caption {
+          display: none; }
   #landing .content-inner-quote section {
-    padding: 30px 20px; }
+    padding: 30px 20px 60px 20px; }
     #landing .content-inner-quote section .quote {
       font-size: 26px; }
   #how-it-works .content-block {
-    padding: 20px;
-    margin: 0 0 20px 0; }
+    padding: 40px 20px 50px 20px; }
     #how-it-works .content-block .lets-get-going {
       display: none; }
   #how-it-works .content-inner .how-it-works-line-container {
@@ -1745,8 +1836,8 @@ footer {
   #student-pass .voucher-claim form button {
     margin-top: 10px; }
   #educators .educator-content {
-    padding: 20px;
-    margin: 0 0 20px 0; }
+    margin: 0;
+    padding: 20px; }
     #educators .educator-content h1 {
       font-size: 26px; }
     #educators .educator-content h2 {
@@ -1902,6 +1993,8 @@ footer {
   #about .about-content {
     padding: 20px;
     font-size: 18px; }
+    #about .about-content .about-more {
+      display: none; }
   #about .content-inner .background-fishies {
     display: none; }
   #about .content-inner .agencies-content {
@@ -1915,22 +2008,26 @@ footer {
       #about .content-inner .agencies-content .participating p {
         font-size: 16px;
         line-height: 20px; }
+      #about .content-inner .agencies-content .participating ul li.open img {
+        float: none; }
   #about .content-inner .contact {
     padding: 20px; }
   #about .content-inner .contact-content img {
     margin: 0 0 20px 0;
-    max-width: 100%; }
+    width: 100%; }
   #about .content-inner .contact-content h2 {
     font-size: 18px; }
   #about .content-inner .contact-content p {
     font-size: 16px; }
-  #parents .parents-content h1 {
-    line-height: 35px; }
-  #parents .parents-content p {
-    font-size: 18px;
-    padding: 5px 0 0 0; }
-  #parents .parents-content .parents-more {
-    display: none; }
+  #parents .parents-content {
+    background: #2D6C35; }
+    #parents .parents-content h1 {
+      line-height: 35px; }
+    #parents .parents-content p {
+      font-size: 18px;
+      padding: 5px 0 0 0; }
+    #parents .parents-content .parents-more {
+      display: none; }
   #parents .content-inner li {
     padding: 20px; }
   #parents .content-inner .section-content {
@@ -1944,6 +2041,10 @@ footer {
     #parents .content-inner .section-content.why {
       background: none;
       padding: 0; }
+      #parents .content-inner .section-content.plan-a-trip img,
+      #parents .content-inner .section-content.rules img,
+      #parents .content-inner .section-content.why img {
+        width: 100%; }
   #not-found {
     min-height: auto;
     background: #C82629; }
@@ -1956,4 +2057,6 @@ footer {
         padding: 10px 0; }
       #not-found #maincontent button {
         font-size: 14px;
-        margin-bottom: 20px; } }
+        margin-bottom: 20px; }
+  #privacy-policy .content {
+    padding: 0 20px; } }
