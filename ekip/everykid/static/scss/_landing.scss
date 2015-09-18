@@ -65,6 +65,10 @@
   .content-inner-block {
     background: $red url(../img/landing-icons.png) top 40px center no-repeat;
 
+    .home-mobile-menu {
+      display: none;
+    }
+
     section {
       max-width: 1080px;
       padding: 65px 20px 75px 20px;

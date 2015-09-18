@@ -28,11 +28,73 @@
     <img alt="US flag signifying that this is a United States Federal Government website" src="{% static 'img/us_flag_small.png' %}" />
   </div>
 
+  <div id="curtain"></div>
+
   <section class="{% block background %}{% endblock background %}">
 
     {% include "nav.html" %}
 
     <div id="maincontent" class="content">
+
+      <nav class="mobile-menu">
+        <div class="logo">
+          <a href="/">
+            <img src="{% static "img/nav-logo.png" %}" alt="Every Kid In A Park Logo" />
+          </a>
+        </div>
+
+        <div class="menu-button">
+          Menu
+          <svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-318.000000, -69.000000)" fill="#FFFFFF">
+                      <g transform="translate(221.000000, 46.000000)">
+                          <path d="M109.782887,18.267767 L112.227767,31.727767 L98.767767,29.2828869 L109.782887,18.267767 Z" transform="translate(105.497767, 24.997767) rotate(45.000000) translate(-105.497767, -24.997767) "></path>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </div>
+
+        <ul class="menu">
+          <li class="close">
+            Close
+            <svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-318.000000, -67.000000)" fill="#167099">
+                        <path d="M330.782887,70.267767 L333.227767,83.727767 L319.767767,81.2828869 L330.782887,70.267767 Z" transform="translate(326.497767, 76.997767) scale(1, -1) rotate(45.000000) translate(-326.497767, -76.997767) "></path>
+                    </g>
+                </g>
+            </svg>
+          </li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'how_it_works' %}">How It Works</a>
+          <li>
+            <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+          </li>
+          <li>
+            <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+          </li>
+          <li>
+            <a href="{% url 'parents' %}">Parents</a>
+          </li>
+          <li>
+            <ul class="sub">
+              <li>
+                <a href="{% url 'educator_passes' %}">Educators</a>
+              </li>
+              <li>
+                <a href="{% url 'about_ekip' %}">About</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </nav>
+
       {% block content %}{% endblock content %}
     </div>
 
@@ -43,6 +105,37 @@
   </section>
 
   <footer>
+
+    <nav class="footer-mobile-menu mobile-menu">
+
+      <ul class="menu">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'how_it_works' %}">How It Works</a>
+        <li>
+          <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+        </li>
+        <li>
+          <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+        </li>
+        <li>
+          <a href="{% url 'parents' %}">Parents</a>
+        </li>
+        <li>
+          <ul class="sub">
+            <li>
+              <a href="{% url 'educator_passes' %}">Educators</a>
+            </li>
+            <li>
+              <a href="{% url 'about_ekip' %}">About</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </nav>
 
     <section class="footer-content">
 

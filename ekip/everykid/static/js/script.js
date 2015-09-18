@@ -7,6 +7,22 @@ $(function () {
   }
 
 
+  // mobile nav
+  $('.mobile-menu .menu-button').click(function() {
+
+    $('#curtain').fadeIn();
+    $('.mobile-menu .menu').fadeIn();
+
+  });
+
+  $('.mobile-menu .close').click(function() {
+
+    $('#curtain').fadeOut();
+    $('.mobile-menu .menu').fadeOut();
+
+  });
+
+
   $('.lets-go, .educator-begin, .lets-get-going, .about-more, .parents-more').click(function(e) {
 
     e.preventDefault();
