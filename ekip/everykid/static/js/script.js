@@ -22,13 +22,13 @@ $(function () {
   });
 
   // toggle agency descriptions
-  $('#about .participating li').click(function(e) {
+  $('#about .participating li h4').click(function(e) {
 
     e.preventDefault();
 
-    $(this).find('.description').fadeToggle();
+    $(this).parent().find('.description').fadeToggle();
 
-    $(this).toggleClass('open').toggleClass('closed');
+    $(this).parent().toggleClass('open').toggleClass('closed');
 
     $('.closed .expand').html('click to expand');
     $('.open .expand').html('click to collapse');
