@@ -1,0 +1,120 @@
+---
+# .about.yml project metadata
+#
+# Short name that acts as the project identifier (required)
+name: ekip-api
+
+# Full proper name of the project (required)
+full_name: Every Kid in a Park
+
+# The type of content in the repo
+# values: app, docs, policy
+type: app
+
+# Describes whether a project team, working group/guild, etc. owns the repo (required)
+# values: guild, working-group, project
+owner_type: project
+
+# Name of the main project repo if this is a sub-repo; name of the working group/guild repo if this is a working group/guild subproject
+#parent:
+
+# Maturity stage of the project (required)
+# values: discovery, alpha, beta, live
+stage: live
+
+# Whether or not the project is actively maintained (required)
+# values: active, deprecated
+status: active
+
+# Description of the project
+description: |
+  The Every Kid in a Park initiative is part of President Obama’s commitment to protect 
+  our Nation’s unique outdoor spaces and ensure that every American has the opportunity 
+  to visit and enjoy them. This initiative provides all fourth grade students and their 
+  families with free admission to National Parks and other federal lands and waters for 
+  a full year.
+
+# Should be 'true' if the project has a continuous build (required)
+# values: true, false
+testable: true
+
+# Team members contributing to the project (required)
+# Items:
+# - github: GitHub user name
+#   id: Internal team identifier/user name
+#   role: Team member's role; leads should be designated as 'lead'
+team:
+- github: khandelwal
+  role: 18F Product Lead, developer
+- github: openglobe
+  role: DOI Activation Team Co-Lead, Presidential Innovation Fellow
+- id: Kat Currie
+  role: DOI Activation Team Co-Lead
+- github: ericronne
+  role: 18F Designer, UX
+- github: xtine
+  role: Front-End Developer
+- github: emileighoutlaw
+  role: Content Writer, UX
+
+# Partners for whom the project is developed
+#partners:
+- [U.S. Department of the Interior](https://www.doi.gov/)
+
+# Brief descriptions of significant project developments
+#milestones:
+- February 2015 - PIF Design Studio
+- March 2015 - Mini-Hackathon
+- May 2015 - UMD Kid's Team Testing at White House
+- June 2015 - 18F began work on the project
+- July 2015 - Ticketing Application Demo
+- September 1, 2015 - Site Launch
+
+# Technologies used to build the project
+stack:
+- Django
+- Jekyll
+
+# Brief description of the project's outcomes
+impact: Written at a 4th grade level and tested with UMDs Kid's Team, this site provides an optimized user experience to
+generate a paper pass to visit national lands and waters.
+
+# Services used to supply project status information
+Items:
+- name: Coveralls
+   category: Build review
+   url: https://coveralls.io/github/18F/ekip-api?branch=master
+   badge: [![Coverage Status](https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/ekip-api?branch=master)
+- name: Quantified Code
+   category: Site review
+   url: https://www.quantifiedcode.com/app/project/ecb305ac0bfa4e968192621402faface
+   badge: https://www.quantifiedcode.com/api/v1/project/ecb305ac0bfa4e968192621402faface/badge.svg
+
+#services:
+#- 
+
+# Licenses that apply to the project and/or its components (required)
+# Items by property name pattern:
+#   .*:
+#     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
+#     url: URL for the text of the license
+licenses:
+  dashboard:
+    name: CC0-1.0
+    url: https://github.com/18F/team_api/blob/master/LICENSE.md
+
+# Blogs or websites associated with project development
+#blog:
+#- 
+
+# Links to project artifacts
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+links:
+- url: https://everykidinapark.gov/
+  text: Every Kid in a Park Website
+
+# Email addresses of points-of-contact
+contact:
+- shashank.khanderwhal@gsa.gov
