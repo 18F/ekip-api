@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="blitz" content="mu-bf431adc-3df60040-20150ee5-6af832b8">
+  {# <link rel="stylesheet" href="{% static "css/style.min.css" %}" /> #}
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
+
+  <style type="text/css">
+
+    #content {
+      max-width: 800px;
+      padding: 10px 20px 40px 20px;
+      margin: 0 auto;
+      font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0 0 15px 0;
+    }
+    h1 {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    h2 {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+      padding: 0 0 15px 0;
+    }
+    ul {
+      margin-top: 0;
+    }
+    ul li {
+      padding: 0 0 5px 0;
+    }
+    a {
+      color: #489BC0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #state-select form label {
+      font-weight: 700;
+      font-size: 25px;
+      padding: 0 10px 0 0;
+    }
+    #state-select form select {
+      font-size: 25px;
+    }
+
+    #state-list ul {
+      margin: 0;
+      padding: 0;
+    }
+    #state-list ul li {
+      border-top: 1px dotted #ccc;
+      list-style: none;
+      padding: 25px 0 35px 0;
+      margin: 0;
+    }
+    #state-list h2 {
+      font-size: 25px;
+      line-height: 25px;
+      padding: 0 0 10px 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <section id="content">
+    {% block content %}{% endblock content %}
+  </section>
+
+</body>
+</html>

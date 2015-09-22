@@ -1,11 +1,15 @@
-<html>
+{% extends "base.html" %}
 
-<h1> Voucher Redemption </h1>
-<h2> {{pass_site.name}} </h2>
-<h3> {{ pass_site.city }}, {{ pass_site.state }} </h3>
+{% block title %}Redemption{% endblock title %}
 
-<p> Thanks </p>
+{% block content %}
 
-<p> <a href="/redeem/location/{{pass_site.slug}}">Enter more voucher IDs</a></p>
+  <h1> Voucher Redemption </h1>
+  <h2> {{pass_site.name}} </h2>
+  <h3> {{ pass_site.city }}, {{ pass_site.state }} </h3>
 
-</html>
+  <p> Thanks </p>
+
+  <p> <a href="/redeem/location/{{pass_site.slug}}">Enter more voucher IDs</a></p>
+
+{% endblock content %}

@@ -1,41 +1,49 @@
+{% extends "base.html" %}
 {% load humanize %}
 
-<h1>Every Kid in a Park statistics</h1>
+{% block title %}Statistics{% endblock title %}
 
-<h2>Paper passes</h2>
+{% block content %}
 
-    <p>Numbers for paper passes represent the number of times the Every Kid in a Park website has generated an electronic paper pass for a 
-    website visitor.  Website visitors include fourth-grade students, parents, and educators; they also include members of the general public 
+    <h1>Every Kid in a Park statistics</h1>
+
+    <h2>Paper passes</h2>
+
+    <p>Numbers for paper passes represent the number of times the Every Kid in a Park website has generated an electronic paper pass for a
+    website visitor.  Website visitors include fourth-grade students, parents, and educators; they also include members of the general public
     and other visitors.</p>
-    
+
     <p>The numbers reported here represent aggregate counts of the number of times an electronic paper pass have been generated.  These numbers <b>do not</b> represent:</p>
+    <ul>
        <li>The number of fourth graders who have generated an electronic paper pass</li>
        <li>The number of times an electronic paper pass has been printed</li>
        <li>The number of fourth graders reached through this program</li>
        <li>For the educator workflow, the number of educators who have used the system</li>
-       
+   </ul>
+
     <p>If you're still not sure what these numbers represent, or if you'd like more help interpreting them, please ask us!</p>
-    
+
     <p>System-generated paper passes through <a href="https://everykidinapark.gov/get-your-pass/fourth-grader" target="_blank">student</a> and <a href="https://everykidinapark.gov/get-your-pass/educator" target="_blank">educator</a> workflows: <b>{{num_tickets_issued|intcomma}}</b></p>
 
     <p>System-generated paper passes, educator worfklow only: <b>{{educator_tickets_issued|intcomma}}</b></p>
 
-<h2>Exchanges</h2>
+    <h2>Exchanges</h2>
 
     <p>Exchanges represent the physical exchange of the printed, paper pass for the plastic pass.  These represent numbers reported
     directly by the fee collectors.</p>
-    
+
     <p>These numbers represent the aggregate count of paper passes that have been reported as exchanged for plastic passes by fee collectors.  These numbers <b>do not</b> represent:</p>
         <li>The number of paper pass holders who have used the paper pass to gain entry to a federal land or water</li>
         <li>The number of fourth graders who have received a plastic pass</li>
         <li>The number of fourth graders who have exchanged a paper pass for a plastic pass— this number does not include numbers reported
         by Army Corps of Engineers, and it includes anyone who was able to successfully exchange the paper pass for a plastic one</li>
-    
+
     <p>Paper passes exchanged for plastic passes (includes paper passes used more than once): <b>{{all_exchanged|intcomma}}</b></p>
 
     <p>Unique paper passes exchanged for plastic passes (duplicates removed): <b>{{num_tickets_exchanged|intcomma}}</b></p>
 
 
+{% endblock content %}
 
 
 

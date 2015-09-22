@@ -1,27 +1,32 @@
-<html>
+{% extends "base.html" %}
 
-<h1> Voucher Redemption </h1>
-<h2> {{pass_site.name}} </h2>
-<h3> {{ pass_site.city }}, {{ pass_site.state }} </h3>
+{% block title %}Voucher Redemption{% endblock title %}
 
-(Not this location? <a href="/redeem/">Find your recreation site.</a>)
+{% block content %}
 
-<p> Use this form to enter Every Kid in a Park vouchers redeemed at your
-location. </p>
+  <h1> Voucher Redemption </h1>
+  <h2> {{pass_site.name}} </h2>
+  <h3> {{ pass_site.city }}, {{ pass_site.state }} </h3>
 
-<p> You can enter voucher ids, up to ten at a time. Using a barcode scanner?
-Make sure the scanner is set to H tab mode before continuing.</p>
+  (Not this location? <a href="/redeem/">Find your recreation site.</a>)
 
-<form action="/redeem/location/{{pass_site.slug}}/" method="POST">
-{% csrf_token %}
+  <p> Use this form to enter Every Kid in a Park vouchers redeemed at your
+  location. </p>
 
-{{formset.management_form}}
+  <p> You can enter voucher ids, up to ten at a time. Using a barcode scanner?
+  Make sure the scanner is set to H tab mode before continuing.</p>
 
-{% for form in formset %}
-    {{ form.as_p }}
-{% endfor %}
+  <form action="/redeem/location/{{pass_site.slug}}/" method="POST">
+  {% csrf_token %}
 
-<input type="submit" value="Submit Voucher IDs" />
+  {{formset.management_form}}
 
-</form>
-</html>
+  {% for form in formset %}
+      {{ form.as_p }}
+  {% endfor %}
+
+  <input type="submit" value="Submit Voucher IDs" />
+
+  </form>
+
+{% endblock content %}
