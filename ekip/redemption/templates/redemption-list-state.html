@@ -1,15 +1,24 @@
-<html>
+{% extends "base-redemption.html" %}
 
+{% block title %}Redemption{% endblock title %}
 
-<h1> {{state_name}} </h1>
+{% block content %}
 
-{% for site in sites %}
+  <div id="state-list">
 
-<p>
-    <a href="/redeem/location/{{site.slug}}">{{site.name}}</a> <br />
-    {{site.city}}, {{site.state}}
-</p>
+    <h1> {{state_name}} </h1>
 
-{% endfor %}
+    <ul>
+    {% for site in sites %}
+      <li>
+        <h2>
+          <a href="/redeem/location/{{site.slug}}">{{site.name}}</a>
+        </h2>
+          {{site.city}}, {{site.state}}
+      </li>
+    {% endfor %}
+    </ul>
 
-</html>
+  </div>
+
+{% endblock content %}

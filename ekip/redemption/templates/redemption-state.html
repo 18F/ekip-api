@@ -1,13 +1,22 @@
-<html>
+{% extends "base-redemption.html" %}
 
-<p> Use this website to enter Every Kid in a Park vouchers redeemed at your
-location. To start, simply select the state your recreation site is located in
-</p>
+{% block title %}Redemption{% endblock title %}
 
-<form action="/redeem/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
-</form>
+{% block content %}
 
-</html>
+  <div id="state-select">
+
+    <h1>Redemption</h1>
+
+    <p>Use this website to enter Every Kid in a Park vouchers redeemed at your location.<br/>
+    To start, simply select the state your recreation site is located in.</p>
+
+    <form action="/redeem/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Submit" />
+    </form>
+
+  </div>
+
+{% endblock content %}
