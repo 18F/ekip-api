@@ -73,10 +73,9 @@ team:
 # Technologies used to build the project
 stack:
 - Django
-- Jekyll
 
 # Brief description of the project's outcomes
-impact: Written at a 4th grade level and tested with UMDs Kid's Team, this site provides an optimized user experience to
+impact: Written at a 4th grade level and tested with kids, this site provides an optimized user experience to
 generate a paper pass to visit national lands and waters.
 
 # Services used to supply project status information
