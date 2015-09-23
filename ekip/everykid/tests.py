@@ -102,6 +102,29 @@ class EducatorFormTests(TestCase):
             self.assertFormError(
                 response, 'form', field, 'This field is required.')
 
+    def test_number_of_passes_limit(self):
+        """ On the educator form, we can only request 50 passes at a time. Test
+        that this is enforced. """
+
+        response = self.client.post(
+            '/get-your-pass/educator/',
+            {
+                'work_email': 'rj@teach.org',
+                'stage': '1',
+                'name': 'Rajiv Teacher',
+                'organization_name': 'Zion Elementary',
+                'address_line_1': '1 Main St.',
+                'city': 'Austin',
+                'state': 'TX',
+                'zipcode': '78704',
+                'num_students': '61',
+                'org_or_school': 'S'
+            })
+
+        self.assertFormError(
+            response, 'form', 'num_students',
+            'You can only print up to 50 passes at a time.')
+
     def test_create_educator(self):
         """ Test the create_educator function. """
         data = {

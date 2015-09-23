@@ -29,6 +29,6 @@ class Educator(models.Model):
         _("Number of students"),
         validators=[
             MaxValueValidator(
-                50, _('You can only print up to 50 passes at at time.')),
+                50, _('You can only print up to 50 passes at a time.')),
             MinValueValidator(1, _('You can not print less than one pass.'))],
         help_text="Number of students for which you are requesting vouchers")
