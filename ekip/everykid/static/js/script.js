@@ -130,14 +130,14 @@ $(function () {
       $('.state').removeClass('error');
     }
 
-
     // check number input
-    if(!$('#educators input[type="number"]').val()) {
+    if(!$('#educators input[type="number"]').val() || $('#educators input[type="number"]').val() > 50 || $('#educators input[type="number"]').val() < 1) {
       $('.num_students').addClass('error');
 
       formErrors = true;
     }
     else {
+
       $('.num_students').removeClass('error');
     }
 
