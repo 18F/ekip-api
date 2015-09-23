@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 from localflavor.us.models import USStateField, USZipCodeField
 
@@ -26,4 +27,8 @@ class Educator(models.Model):
     zipcode = USZipCodeField(_("Zip"))
     num_students = models.IntegerField(
         _("Number of students"),
+        validators=[
+            MaxValueValidator(
+                50, _('You can only print up to 50 passes at at time.')),
+            MinValueValidator(1, _('You can not print less than one pass.'))],
         help_text="Number of students for which you are requesting vouchers")
