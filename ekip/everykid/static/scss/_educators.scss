@@ -133,6 +133,10 @@
       }
     }
 
+    .error {
+      color: #ff0000;
+    }
+
     ul {
       padding: 10px 0;
     }
@@ -215,7 +219,6 @@
       }
 
       .error {
-        color: #ff0000;
 
         input, select {
           border: 1px solid red;
