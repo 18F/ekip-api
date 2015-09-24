@@ -1,8 +1,12 @@
+import csv
+from datetime import datetime
+
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.forms.formsets import formset_factory
 from django.db.models import Sum
+from django.template import defaultfilters
 
 from localflavor.us.us_states import US_STATES
 
@@ -31,6 +35,65 @@ def get_num_tickets_exchanged():
 def get_num_tickets_exchanged_more_than_once():
     """ Sum up all the additional redemptions for tickets. """
     return AdditionalRedemption.objects.count()
+
+
+def covert_to_date(s):
+    return datetime.strptime(s, '%Y%m%d')
+
+
+@login_required
+def csv_redemption(request):
+    """ The redemption master data. """
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="shashank.csv"'
+
+    start_date = request.GET.get('start', '20150901')
+    start_date = convert_to_date(start_time)
+    end_date = request.GET.get('end', None)
+
+    exchanged_tickets = Ticket.objects.filter(recreation_site__isnull=False)
+    exchanged_tickets = exchanged_tickets.filter(
+        redemption_entry__gte=start_date)
+    if end_date:
+        end_date = datetime.strptime(end_date, '%Y%m%d')
+        exchanged_tickets = exchanged_tickets.filter(
+            redemption_entry__lte=end_date)
+
+    writer = csv.writer(response)
+    # Write the headers
+
+    writer.writerow([
+        'pass_record_locator',
+        'created',
+        'recorded', 
+        'zip', 
+        'location', 
+        'city',
+        'state'
+    ])
+
+    DATE_FORMAT = 'Ymd'
+    for ticket in exchanged_tickets:
+        writer.writerow([
+            ticket.record_locator,
+            defaultfilters.date(ticket.created, DATE_FORMAT),
+            defaultfilters.date(ticket.redemption_entry, DATE_FORMAT),
+            ticket.zip_code,
+            ticket.recreation_site.name,
+            ticket.recreation_site.city,
+            ticket.recreation_site.state
+        ])
+    return response
+
+@login_required
+def tables(request):
+    """ Give certain user a deeper look into the data. """
+
+    return render(
+        request,
+        'tables.html',
+        {}
+    )
 
 
 @login_required
