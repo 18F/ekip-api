@@ -10,7 +10,12 @@ Every Kid in a Park (EKIP API)
 The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
 
 #About this site
-This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
+This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  
+
+###The Wiki
+Looking for something that you can't find here?  A [site map](https://github.com/18F/ekip/wiki/Site-Map) and other information can be found on the [Every Kid in a Park wiki](https://github.com/18F/ekip/wiki).
+
+##Site Structure
 
 ###Landing / home
 The landing / home section describes the program, how it works, and provides links to resources for 4th grade students, educators and parents.
@@ -28,8 +33,19 @@ Reading grade level: 2.6.
 This section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
 Reading grade level: 1.3
 
+###Parents Page
+The parents page provides information for parents on the rules of the program and trip planning resources.
+
+###About Page
+The about page includes some useful information on partner agencies named in the initiative, press resources, code repository and contact information.
+
+###Pass Exchange and Field Trip Pages
+These pages provide simple lists of sites that will exchange the paper pass for a plastic pass (the pass exchange page) and a subset of field trip suggestions.  The pass exchange locations are derived from the broader [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  This list is updated quarterly.
+
+The field trip suggestions were compiled by the Federal Interagency Council on Outdoor Recreation (FICOR) members.  This is not an exhaustive list of field trip possibilities for EKiP pass holders.  This list is maintained by the EKiP team and FICOR members.
+
 #Technical stuff
-The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.
+This site uses [Django](https://www.djangoproject.com/). 
 
 ##Submitting issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
