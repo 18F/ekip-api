@@ -45,12 +45,24 @@ Reading grade level:
 These pages provide simple lists of sites that will exchange the paper pass for a plastic pass (the pass exchange page) and a subset of field trip suggestions.  The pass exchange locations are derived from the broader [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  This list is updated quarterly.  
 Reading grade level:  
 
-The field trip suggestions were compiled by the Federal Interagency Council on Outdoor Recreation (FICOR) members.  This is not an exhaustive list of field trip possibilities for EKiP pass holders.  This list is maintained by the EKiP team and FICOR members.  
+#### Field Trip Data
+The field trip suggestions were compiled by the Federal Interagency Council on Outdoor Recreation (FICOR) members.  This is not an exhaustive list of field trip possibilities for EKiP pass holders.  This list is maintained by the EKiP team and FICOR members.  The dataset is maintained as a .csv file, and can be found [here](https://github.com/18F/ekip-api/blob/master/ekip/nationalparks/data/ficor.csv).  It is essential that when editing this document one follows the established conventions, and does not deviate from column types or add / remove columns from the dataset.
+
+For a complete data dictionary, [see the wiki](https://github.com/18F/ekip/wiki/FICOR-Data-Dictionary).
+
+#### Plastic Pass Data
+The plastic pass exchange locations allow a 4th grader to exchange their paper voucher for a durable plastic pass.  These sites are documented in the latest [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  Updated quarterly, this list provides a column lookup for sites that will exchange the paper passes for plastic passes.  As of September 2015 the sites that offer the exchange are the same as those that also provide the annual and military passes.  
+
+The data for the plastic pass lookups on the website are in .csv format [here](https://github.com/18F/ekip-api/blob/master/ekip/nationalparks/data/pass-list.csv).  As with the FICOR field trip data, special caution should be taken to ensure that the data remain consistent with the existing schema when adding / removing / editing information.  Columns should not be added or removed from the .csv file.  A simple data dictionary can be found on the [wiki](https://github.com/18F/ekip/wiki/Plastic-Pass-Issuance-List).
+
+One peculiarity to note is that the list maintained by the National Park Service does include some duplicates.  For example, Great Falls Park is listed both under Virginia and DC Metro.  In order to simplify the process of reading in the data directly from the list maintained by the National Park Service, these duplicate entries were maintained - but they also mean that a park may appear more than once in some website queries.
 
 #Technical stuff
 This is a [Django](https://www.djangoproject.com/)-based system and website.  
 
 This site makes use of a number of packages you can download for free if you don't already have them, or haven't worked with them before: [Django](https://www.djangoproject.com/), [Vagrant](https://www.vagrantup.com/) [Gulp](http://gulpjs.com/), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), [sass](https://github.com/medialize/sass.js/) and [NPM](https://www.npmjs.com/).  See the getting started section below for more information and installation guides.
+
+This site also uses [New Relic](http://newrelic.com/) to monitor performance, Google Analytics for site statistics, and AWS for site hosting.
 
 ##Submitting issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
@@ -96,7 +108,7 @@ installed system wide:
 npm install --global gulp
 ```
 
-Also install the additional modules to watch for SASS pre-processing changes
+Next, install the additional modules to watch for SASS pre-processing changes
 (using Bourbon and Neat and minifying the results) as well as uglification of JavaScript files:
 
 ```
