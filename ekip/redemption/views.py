@@ -59,10 +59,11 @@ def csv_redemption(request):
         end_date = datetime.strptime(end_date, '%Y%m%d')
         exchanged_tickets = exchanged_tickets.filter(
             redemption_entry__lte=end_date)
+    exchanged_tickets = exchanged_tickets.select_related('recreation_site')
 
     writer = csv.writer(response)
-    # Write the headers
 
+    # Write the headers
     writer.writerow([
         'pass_record_locator',
         'created',
