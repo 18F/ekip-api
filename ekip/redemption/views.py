@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.forms.formsets import formset_factory
 from django.db.models import Sum
@@ -42,7 +42,7 @@ def convert_to_date(s):
     return datetime.strptime(s, '%Y%m%d')
 
 
-@permission_required('view_exchange_data')
+@permission_required('recordlocator.view_exchange_data')
 def csv_redemption(request):
     """ The redemption master data. """
     response = HttpResponse(content_type='text/csv')
@@ -103,7 +103,7 @@ def csv_redemption(request):
     return response
 
 
-@permission_required('view_exchange_data')
+@permission_required('recordlocator.view_exchange_data')
 def tables(request):
     """ Give certain user a deeper look into the data. """
 
