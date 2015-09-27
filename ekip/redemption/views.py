@@ -37,7 +37,8 @@ def get_num_tickets_exchanged_more_than_once():
     return AdditionalRedemption.objects.count()
 
 
-def covert_to_date(s):
+def convert_to_date(s):
+    """ Convert the date into a useful format. """
     return datetime.strptime(s, '%Y%m%d')
 
 
@@ -45,10 +46,10 @@ def covert_to_date(s):
 def csv_redemption(request):
     """ The redemption master data. """
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="shashank.csv"'
+    response['Content-Disposition'] = 'attachment; filename="exchanges.csv"'
 
     start_date = request.GET.get('start', '20150901')
-    start_date = convert_to_date(start_time)
+    start_date = convert_to_date(start_date)
     end_date = request.GET.get('end', None)
 
     exchanged_tickets = Ticket.objects.filter(recreation_site__isnull=False)
@@ -69,11 +70,14 @@ def csv_redemption(request):
         'zip', 
         'location', 
         'city',
-        'state'
+        'state',
+        'duplicate',
     ])
 
     DATE_FORMAT = 'Ymd'
     for ticket in exchanged_tickets:
+
+        duplicates_exist = ticket.additionalredemption_set.count() > 0
         writer.writerow([
             ticket.record_locator,
             defaultfilters.date(ticket.created, DATE_FORMAT),
@@ -81,8 +85,21 @@ def csv_redemption(request):
             ticket.zip_code,
             ticket.recreation_site.name,
             ticket.recreation_site.city,
-            ticket.recreation_site.state
+            ticket.recreation_site.state,
+            duplicates_exist
         ])
+
+        for ar in ticket.additionalredemption_set.all():
+            writer.writerow([
+                ticket.record_locator,
+                defaultfilters.date(ticket.created, DATE_FORMAT),
+                defaultfilters.date(ar.redemption_entry, DATE_FORMAT),
+                ticket.zip_code,
+                ar.recreation_site.name,
+                ar.recreation_site.city, 
+                ar.recreation_site.state,
+                duplicates_exist
+            ])
     return response
 
 @login_required
@@ -91,7 +108,7 @@ def tables(request):
 
     return render(
         request,
-        'tables.html',
+        'data-index.html',
         {}
     )
 
