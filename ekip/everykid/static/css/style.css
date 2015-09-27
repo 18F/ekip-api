@@ -937,6 +937,8 @@ nav.footer-mobile-menu {
     padding: 0; }
     #educators form fieldset legend {
       display: none; }
+  #educators form .error {
+    color: #ff0000; }
   #educators form ul {
     padding: 10px 0; }
   #educators form li {
@@ -989,12 +991,10 @@ nav.footer-mobile-menu {
     #educators form li .zipcode {
       max-width: 100px;
       float: right; }
-    #educators form li .error {
-      color: #ff0000; }
-      #educators form li .error input, #educators form li .error select {
-        border: 1px solid red; }
-      #educators form li .error.org_or_school {
-        border: none; }
+    #educators form li .error input, #educators form li .error select {
+      border: 1px solid red; }
+    #educators form li .error.org_or_school {
+      border: none; }
   #educators form button {
     color: #fff;
     letter-spacing: 1px;

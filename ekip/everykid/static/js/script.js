@@ -132,13 +132,13 @@ $(function () {
 
     // check number input
     if(!$('#educators input[type="number"]').val() || $('#educators input[type="number"]').val() > 50 || $('#educators input[type="number"]').val() < 1) {
-      $('.num_students').addClass('error');
+      $('.num_students, .pass-limit-text').addClass('error');
 
       formErrors = true;
     }
     else {
 
-      $('.num_students').removeClass('error');
+      $('.num_students, .pass-limit-text').removeClass('error');
     }
 
     if(formErrors) {
