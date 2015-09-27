@@ -23,6 +23,9 @@ class Ticket(models.Model):
     def __str__(self):
         return "%s %s" % (self.record_locator, self.zip_code)
 
+    class Meta:
+        permissions = (('view_exchange_data', 'Can view exchange data'),)
+
 class AdditionalRedemption(models.Model):
     """ Create this, when a ticket is redeemed more than once. """
 

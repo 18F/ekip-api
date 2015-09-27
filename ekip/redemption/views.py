@@ -42,7 +42,7 @@ def convert_to_date(s):
     return datetime.strptime(s, '%Y%m%d')
 
 
-@login_required
+@permission_required('view_exchange_data')
 def csv_redemption(request):
     """ The redemption master data. """
     response = HttpResponse(content_type='text/csv')
@@ -102,7 +102,8 @@ def csv_redemption(request):
             ])
     return response
 
-@login_required
+
+@permission_required('view_exchange_data')
 def tables(request):
     """ Give certain user a deeper look into the data. """
 
