@@ -1,0 +1,17 @@
+{% extends "base-redemption.html" %}
+{% load humanize %}
+
+{% block title %}Statistics{% endblock title %}
+
+{% block content %}
+
+    <h1>Data</h1>
+
+    <h2>Exchanges</h2>
+
+    <p>The following CSV download provides line-item data on exchanges (paper
+    pass for plastic) that have been reported by the various sites.</p>
+ 
+    <p> <a href="{% url 'exchanges_data' %}?start=20150901">All data since launch (CSV).</a></p>
+
+{% endblock content %}
