@@ -10,32 +10,65 @@ Every Kid in a Park (EKIP API)
 The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
 
 #About this site
-This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, which provides information for the press, partner agencies, and more.  A site map can be found [here](https://github.com/18F/ekip/wiki/Site-Map).
+This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, **Parents** page, **Pass Exchange** and **Field Trip** pages. 
+
+###The wiki
+Looking for something that you can't find here?  A [site map](https://github.com/18F/ekip/wiki/Site-Map) and other information can be found on the [Every Kid in a Park wiki](https://github.com/18F/ekip/wiki).
+
+##Site structure
 
 ###Landing / home
-The landing / home section describes the program, how it works, and provides links to resources for 4th grade students, educators and parents.
+The landing / home section describes the program, how it works, and provides links to resources for fourth grade students, educators and parents.  
 Reading grade level: 4.5.
 
 ###How it works
-This section provides a step-by-step walkthrough of the process for getting and using the pass.
+This section provides a step-by-step walkthrough of the process for getting and using the pass.  
 Reading grade level: 3.7.
 
 ###Get your pass
-This section walks either the student or the educator through the appropriate process to get a pass.  4th grade students are directed to an activity - once the activity is completed they can print the paper pass.  The paper pass can later be redeemed for a plastic pass at participating sites.
+This section walks either the student or the educator through the appropriate process to get a pass.  Fourth grade students are directed to an activity - once the activity is completed they can print the paper pass.  The paper pass can later be redeemed for a plastic pass at participating sites.  
 Reading grade level: 2.6.
 
 ###Plan your trip
-This section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.
+This section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.  
 Reading grade level: 1.3
 
+###Parents page
+The parents page provides information for parents on the rules of the program and trip planning resources.  
+Reading grade level: 
+
+###About page
+The about page includes some useful information on partner agencies named in the initiative, press resources, code repository and contact information.  
+Reading grade level: 
+
+###Pass exchange and field trip pages
+These pages provide simple lists of sites that will exchange the paper pass for a plastic pass (the pass exchange page) and a subset of field trip suggestions.  The pass exchange locations are derived from the broader [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  This list is updated quarterly.  
+Reading grade level:  
+
+#### Field trip data
+The field trip suggestions were compiled by the Federal Interagency Council on Outdoor Recreation (FICOR) members.  This is not an exhaustive list of field trip possibilities for EKIP pass holders.  This list is maintained by the EKIP team and FICOR members.  The dataset is maintained as a .csv file, and can be found [here](https://github.com/18F/ekip-api/blob/master/ekip/nationalparks/data/ficor.csv).  It is essential that when editing this document one follows the established conventions, and does not deviate from column types or add / remove columns from the dataset.
+
+For a complete data dictionary, [see the wiki](https://github.com/18F/ekip/wiki/FICOR-Data-Dictionary).
+
+#### Plastic pass data
+The plastic pass exchange locations allow a fourth grader to exchange their paper voucher for a durable plastic pass.  These sites are documented in the latest [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  Updated quarterly, this list provides a column lookup for sites that will exchange the paper passes for plastic passes.  As of September 2015 the sites that offer the exchange are the same as those that also provide the annual and military passes.  
+
+The data for the plastic pass lookups on the website are in .csv format [here](https://github.com/18F/ekip-api/blob/master/ekip/nationalparks/data/pass-list.csv).  As with the FICOR field trip data, special caution should be taken to ensure that the data remain consistent with the existing schema when adding / removing / editing information.  Columns should not be added or removed from the .csv file.  A simple data dictionary can be found on the [wiki](https://github.com/18F/ekip/wiki/Plastic-Pass-Issuance-List).
+
+One peculiarity to note is that the list maintained by the National Park Service does include some duplicates.  For example, Great Falls Park is listed both under Virginia and DC Metro.  In order to simplify the process of reading in the data directly from the list maintained by the National Park Service, these duplicate entries were maintained - but they also mean that a park may appear more than once in some website queries.
+
 #Technical stuff
-The EKIP application used to consist of two parts: a Django based API, and a Jekyll application.
+This is a [Django](https://www.djangoproject.com/)-based system and website.  
+
+This site makes use of a number of packages you can download for free if you don't already have them, or haven't worked with them before: [Django](https://www.djangoproject.com/), [Vagrant](https://www.vagrantup.com/) [Gulp](http://gulpjs.com/), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), [sass](https://github.com/medialize/sass.js/) and [NPM](https://www.npmjs.com/).  See the getting started section below for more information and installation guides.
+
+This site also uses [New Relic](http://newrelic.com/) to monitor performance, Google Analytics for site statistics, and AWS for site hosting.
 
 ##Submitting issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
 
 ## Ticketing system
-A ticketing system.
+The ticketing system generates a unique code for each paper pass the system creates.  A corresponding bar code is created during the generation of each paper pass.  Special care is taken to ensure that the codes do not generate offensive character combinations.
 
 ## Getting started
 Make sure you have `vagrant` installed. For instance, on OS X with Homebrew:
@@ -75,7 +108,7 @@ installed system wide:
 npm install --global gulp
 ```
 
-Also install the additional modules to watch for SASS pre-processing changes
+Next, install the additional modules to watch for SASS pre-processing changes
 (using Bourbon and Neat and minifying the results) as well as uglification of JavaScript files:
 
 ```
