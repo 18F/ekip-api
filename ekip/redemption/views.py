@@ -60,6 +60,7 @@ def csv_redemption(request):
         exchanged_tickets = exchanged_tickets.filter(
             redemption_entry__lte=end_date)
     exchanged_tickets = exchanged_tickets.select_related('recreation_site')
+    exchanged_tickets = exchanged_tickets.prefetch_related('additionalredemption_set')
 
     writer = csv.writer(response)
 
