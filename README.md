@@ -35,15 +35,15 @@ Reading grade level: 1.3
 
 ###Parents page
 The parents page provides information for parents on the rules of the program and trip planning resources.  
-Reading grade level: 
+Reading grade level: 4.6
 
 ###About page
 The about page includes some useful information on partner agencies named in the initiative, press resources, code repository and contact information.  
-Reading grade level: 
+Reading grade level: 4.6
 
 ###Pass exchange and field trip pages
 These pages provide simple lists of sites that will exchange the paper pass for a plastic pass (the pass exchange page) and a subset of field trip suggestions.  The pass exchange locations are derived from the broader [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  This list is updated quarterly.  
-Reading grade level:  
+Reading grade level: 4.6
 
 #### Field trip data
 The field trip suggestions were compiled by the Federal Interagency Council on Outdoor Recreation (FICOR) members.  This is not an exhaustive list of field trip possibilities for EKIP pass holders.  This list is maintained by the EKIP team and FICOR members.  The dataset is maintained as a .csv file, and can be found [here](https://github.com/18F/ekip-api/blob/master/ekip/nationalparks/data/ficor.csv).  It is essential that when editing this document one follows the established conventions, and does not deviate from column types or add / remove columns from the dataset.
