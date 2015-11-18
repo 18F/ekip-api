@@ -46,23 +46,25 @@ testable: true
 team:
 - github: khandelwal
   role: 18F Product Lead, developer
+  id: khandelwal
 - github: openglobe
   role: DOI Activation Team Co-Lead, Presidential Innovation Fellow
-- id: Kat Currie
-  role: DOI Activation Team Co-Lead
+  id: christopher-goranson
+#- id: Kat Currie
+#  role: DOI Activation Team Co-Lead
 - github: ericronne
-  role: 18F Designer, UX
+  role: Designer, UX
 - github: xtine
   role: Front-End Developer
 - github: emileighoutlaw
   role: Content Writer, UX
 
 # Partners for whom the project is developed
-#partners:
+partners:
 - U.S. Department of the Interior
 
 # Brief descriptions of significant project developments
-#milestones:
+milestones:
 - February 2015 - PIF Design Studio
 - March 2015 - Mini-Hackathon
 - May 2015 - UMD Kid's Team Testing at White House
