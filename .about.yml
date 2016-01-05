@@ -46,23 +46,25 @@ testable: true
 team:
 - github: khandelwal
   role: 18F Product Lead, developer
+  id: khandelwal
 - github: openglobe
   role: DOI Activation Team Co-Lead, Presidential Innovation Fellow
-- id: Kat Currie
-  role: DOI Activation Team Co-Lead
+  id: christopher-goranson
+#- id: Kat Currie
+#  role: DOI Activation Team Co-Lead
 - github: ericronne
-  role: 18F Designer, UX
+  role: Designer, UX
 - github: xtine
   role: Front-End Developer
 - github: emileighoutlaw
   role: Content Writer, UX
 
 # Partners for whom the project is developed
-#partners:
+partners:
 - U.S. Department of the Interior
 
 # Brief descriptions of significant project developments
-#milestones:
+milestones:
 - February 2015 - PIF Design Studio
 - March 2015 - Mini-Hackathon
 - May 2015 - UMD Kid's Team Testing at White House
@@ -75,22 +77,20 @@ stack:
 - Django
 
 # Brief description of the project's outcomes
-impact: Written at a 4th grade level and tested with kids, this site provides an optimized user experience to
-generate a paper pass to visit national lands and waters.
+impact: >
+  Written at a 4th grade level and tested with kids, this site provides an optimized user experience to
+  generate a paper pass to visit national lands and waters.
 
 # Services used to supply project status information
-Items:
+services:
 - name: Coveralls
-   category: Build review
-   url: https://coveralls.io/github/18F/ekip-api?branch=master
-   badge: [![Coverage Status](https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/ekip-api?branch=master)
+  category: Build review
+  url: https://coveralls.io/github/18F/ekip-api?branch=master
+  badge: https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github
 - name: Quantified Code
-   category: Site review
-   url: https://www.quantifiedcode.com/app/project/ecb305ac0bfa4e968192621402faface
-   badge: https://www.quantifiedcode.com/api/v1/project/ecb305ac0bfa4e968192621402faface/badge.svg
-
-#services:
-#- 
+  category: Site review
+  url: https://www.quantifiedcode.com/app/project/ecb305ac0bfa4e968192621402faface
+  badge: https://www.quantifiedcode.com/api/v1/project/ecb305ac0bfa4e968192621402faface/badge.svg
 
 # Licenses that apply to the project and/or its components (required)
 # Items by property name pattern:
@@ -98,7 +98,7 @@ Items:
 #     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
 #     url: URL for the text of the license
 licenses:
-  dashboard:
+  ekip-api:
     name: CC0-1.0
     url: https://github.com/18F/team_api/blob/master/LICENSE.md
 
@@ -116,5 +116,7 @@ links:
 
 # Email addresses of points-of-contact
 contact:
-- shashank.khandelwal@gsa.gov
-- christopher.goranson@gsa.gov
+- url: mailto:shashank.khandelwal@gsa.gov
+  text: Shashank Khandelwal
+- url: mailto:christopher.goranson@gsa.gov
+  text: Christopher Goranson
