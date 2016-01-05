@@ -1,0 +1,115 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+#modal-content {
+	display:none; 
+	text-align: center;
+}
+
+#modal-content button {
+	letter-spacing: normal;
+	padding: 12px 40px;
+    background: #FFE897;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+#modal-content button:hover {
+    background: #FFF;
+    color: #177099;
+}
+
+.modal-compass {
+	margin-top: 20px;
+	margin-bottom: 6px;
+}
+
+.modal-continue-button {
+	background: #FFE897;
+    color: #177099;
+    padding: 20px;
+}
+
+.modal-continue-button:hover {
+	background: #FFFFFF;
+    color: #177099;
+    padding: 20px;
+}
+
+#modal-content button .modal-continue-text-top {
+	letter-spacing: 2px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #177099;
+}
+
+#modal-content button .modal-continue-text-bottom {
+	font-family: Lato, sans-serif;
+	text-transform: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: #177099;
+}
+
+/* Overlay */
+#simplemodal-overlay {
+	background-color:#000;
+}
+
+/* Container */
+#simplemodal-container {
+	height: 420px;
+	width: 560px;
+	color: #BBB;
+	background-color: #177099;
+	border: 3px solid #FFF;
+	padding: 12px;
+}
+
+#simplemodal-container p {
+	color: #FFF;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 24px;
+	margin-right: 60px;
+	margin-left: 60px;
+}
+
+#simplemodal-container h3 {
+	color: #FFF;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 10px;
+}
+
+#simplemodal-container .modalClose {
+	position: absolute;
+	height: 30px;
+	text-align: right;
+	color: #FFE897;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+}
+
+#simplemodal-container a.modalCloseImg {
+	background: url(../img/modal-close.png) no-repeat;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+	display: inline;
+	z-index: 3200;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}

@@ -46,7 +46,7 @@
       <h2>Explore parks and sites</h2>
       <ul>
         <li>
-          <a href="http://www.fws.gov/refuges/" target="_blank">
+          <a class="simpleModal" href="http://www.fws.gov/refuges/" target="_blank">
           <div class="icon">
             <img src="{% static "img/icon-owl.png" %}" class="owl" alt="owl icon" />
           </div>
@@ -55,7 +55,7 @@
           </a>
         </li>
         <li>
-          <a href="http://www.discovertheforest.org" target="_blank" title="This link will direct you to a non-government website that may have different privacy policies from those of the Department of the Interior." class="tooltip">
+          <a class="simpleModal" href="http://www.discovertheforest.org" target="_blank" title="This link will direct you to a non-government website that may have different privacy policies from those of the Department of the Interior." class="tooltip">
           <div class="icon">
             <img src="{% static "img/icon-tree.png" %}" class="tree" alt="tree icon" />
           </div>
@@ -64,7 +64,7 @@
           </a>
         </li>
         <li>
-          <a href="http://findyourpark.com/find" target="_blank" title="This link will direct you to a non-government website that may have different privacy policies from those of the Department of the Interior." class="tooltip">
+          <a class="simpleModal" href="http://findyourpark.com/find" target="_blank" title="This link will direct you to a non-government website that may have different privacy policies from those of the Department of the Interior." class="tooltip">
           <div class="icon">
             <img src="{% static "img/icon-mountains.png" %}" class="mountains" alt="mountains icon" />
           </div>
@@ -73,7 +73,7 @@
           </a>
         </li>
         <li>
-          <a href="http://recreation.gov" target="_blank">
+          <a class="simpleModal" href="http://recreation.gov" target="_blank">
           <div class="icon">
             <img src="{% static "img/icon-compass.png" %}" class="compass" alt="compass icon" />
           </div>
@@ -82,6 +82,14 @@
           </a>
         </li>
       </ul>
+      <!-- modal content -->
+		<div id="modal-content">
+			<img src="{% static "img/100-compass.png" %}" class="modal-compass" />
+			<h3>You're about to explore<br />
+			another website!</h3>
+			<p>It will list lots of places to visit! But not all will accept your paper pass. If you aren't sure whether your paper pass will work, have an adult call before you go.</p>
+			<a class="button-link"><button class="modal-continue-button"><span class="modal-continue-text-top">Continue</span><br/><span class="modal-continue-text-bottom"></span></button></a>
+		</div>
     </div>
   </section>
 
@@ -167,7 +175,9 @@
         opportunity.</p>
 
         <p>Many of our sites are ready for large groups and offer programs
-        created for fouth graders.</p>
+        created for fourth graders.</p>
+        
+        <p>This program only provides passes for fourth graders.</p>
 
         <a href="{% url 'field_trip' %}"><button>Field trip sites</button></a>
 
