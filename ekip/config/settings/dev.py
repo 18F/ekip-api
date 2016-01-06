@@ -2,8 +2,6 @@ from .base import *
 
 DEBUG = True
 
-#TEMPLATE_DEBUG = DEBUG
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -23,14 +21,6 @@ TEMPLATES = [
         }
     }
 ]
-
-#TEMPLATES = [
-#    {
-#        'OPTIONS': {
-#            
-#        },
-#    },
-#]
 
 DATABASES = {
     'default': {
