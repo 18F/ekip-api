@@ -1281,6 +1281,23 @@ nav.footer-mobile-menu {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+    #plan-your-trip .content-inner section.amtrak {
+      background: #003A5D; }
+      #plan-your-trip .content-inner section.amtrak .section-content {
+        padding: 10px 0 0 10px; }
+        #plan-your-trip .content-inner section.amtrak .section-content a {
+          color: #FFE897;
+          text-decoration: none; }
+          #plan-your-trip .content-inner section.amtrak .section-content a:hover {
+            text-decoration: underline; }
+        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-image {
+          margin: 40px 10px 0 0;
+          display: inline-block; }
+        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-content {
+          max-width: 410px;
+          padding: 70px 0 0 120px;
+          vertical-align: top;
+          display: inline-block; }
     #plan-your-trip .content-inner section.field-trip-sites {
       background: #B1DAEC;
       color: #177099;
