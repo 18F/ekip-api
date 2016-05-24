@@ -57,6 +57,14 @@ The data for the plastic pass lookups on the website are in .csv format [here](h
 
 One peculiarity to note is that the list maintained by the National Park Service does include some duplicates.  For example, Great Falls Park is listed both under Virginia and DC Metro.  In order to simplify the process of reading in the data directly from the list maintained by the National Park Service, these duplicate entries were maintained - but they also mean that a park may appear more than once in some website queries.
 
+**Format update - May 2016** - In May 2016 the National Park Service updated the way the pass redemption site data is provided.  The format changed in the following ways:
+
+1. NPS has added a number of new USACE= Army Corp of Engineers sites to the list.  This category was not included in the original lauch.  Names, unlike some others in the dataset, are not appended to the name of the site with an identifier, like USACE.  
+
+2. The Annual / Senior columns that used to be broken out into separate columns (see https://store.usgs.gov/pass/PassIssuanceList.pdf), are now condensed under the new format provided by NPS into one column.  So, instead of three columns defining the type of pass(es) accepted at redemption locations, the dataset only includes two.
+​
+3.  State headers have been removed.  The original document used to include individual state headers - which in the dataset appeared as something like ALABAMA,,,,,,,, 
+
 #Technical stuff
 This is a [Django](https://www.djangoproject.com/)-based system and website.  
 
