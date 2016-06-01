@@ -39,7 +39,7 @@ def get_num_tickets_exchanged_more_than_once():
 
 def convert_to_date(s):
     """ Convert the date into a useful format. """
-    return datetime.strptime(s, '%Y%m%d')
+    return datetime.strptime(s, '%m/%d/%Y')
 
 
 @permission_required('recordlocator.view_exchange_data')
@@ -48,15 +48,16 @@ def csv_redemption(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="exchanges.csv"'
 
-    start_date = request.GET.get('start', '20150901')
+    start_date = request.GET.get('start_date', '20150901')
     start_date = convert_to_date(start_date)
-    end_date = request.GET.get('end', None)
+    end_date = request.GET.get('end_date', None)
+
 
     exchanged_tickets = Ticket.objects.filter(recreation_site__isnull=False)
     exchanged_tickets = exchanged_tickets.filter(
         redemption_entry__gte=start_date)
     if end_date:
-        end_date = datetime.strptime(end_date, '%Y%m%d')
+        end_date = convert_to_date(end_date)
         exchanged_tickets = exchanged_tickets.filter(
             redemption_entry__lte=end_date)
     exchanged_tickets = exchanged_tickets.select_related('recreation_site')
