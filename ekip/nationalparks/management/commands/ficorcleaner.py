@@ -1,7 +1,6 @@
 import re
 from localflavor.us.us_states import US_STATES, US_TERRITORIES
 
-
 STATES = {name: abbr for abbr, name in US_STATES}
 TERRITORIES = {name: abbr for abbr, name in US_TERRITORIES}
 STATES.update(TERRITORIES)
