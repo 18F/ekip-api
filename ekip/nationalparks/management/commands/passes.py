@@ -52,8 +52,8 @@ def process_site(site, next_version):
     # missing the city name.
     if site['city'] != '':
         phone, phone_extension = phone_number(site['phone'])
-        annual = site['annual'].upper() == 'YES'
-        senior = site['senior'].upper() == 'YES'
+        annual = site['annual_senior'].upper() == 'YES'
+        # senior = site['senior'].upper() == 'YES'
         access = site['access'].upper() == 'YES'
         site_type = determine_site_type(site['name'], site['website'])
 
@@ -73,7 +73,7 @@ def process_site(site, next_version):
         fs.state = site['state']
         fs.website = site['website']
         fs.annual_pass = annual
-        fs.senior_pass = senior
+        fs.senior_pass = annual
         fs.access_pass = access
         fs.version = next_version
         fs.save()
@@ -81,9 +81,12 @@ def process_site(site, next_version):
 def get_next_version():
     """ The FederalSite objects are versioned. Determine the last version by
     looking at an active site. """
-
-    random_site = FederalSite.objects.filter(active_participant=True)[0]
-    return random_site.version + 1
+    
+    random_site_version = 1
+    sites = FederalSite.objects.filter(active_participant=True)
+    if len(sites) > 0:
+        random_site_version = sites[0].version + 1
+    return random_site_version + 1
 
 
 def deactivate_sites(next_version):
@@ -105,14 +108,16 @@ def read_pass_list(filename):
 
     with open(filename, 'r', encoding='latin-1') as passcsv:
         field_names = [
-            'name', 'phone', 'city', 'state', 'website', 'annual', 'senior',
-            'access']
+            'name', 'phone', 'city', 'state', 'website', 'annual_senior', 'access']
         passreader = csv.DictReader(
             passcsv, fieldnames=field_names, delimiter=',') 
 
+        header = True
         for l in passreader:
-            process_site(l, next_version)
-
+            #Skip header row.
+            if not header:
+               process_site(l, next_version)
+            header = False
     deactivate_sites(next_version)
         
 
