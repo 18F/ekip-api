@@ -48,10 +48,14 @@ def csv_redemption(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="exchanges.csv"'
 
-    start_date = request.GET.get('start_date', '20150901')
-    start_date = convert_to_date(start_date)
+    start_date = request.GET.get('start_date', None)
     end_date = request.GET.get('end_date', None)
 
+    if start_date is None:
+        # Default date = Start of year.
+        start_date = datetime(datetime.now().year, 1, 1)
+    else:
+        start_date = convert_to_date(start_date)
 
     exchanged_tickets = Ticket.objects.filter(recreation_site__isnull=False)
     exchanged_tickets = exchanged_tickets.filter(
