@@ -245,6 +245,10 @@ ul.top-links {
   background: url(../img/backgrounds/forest.jpg) no-repeat center bottom;
   background-size: cover; }
 
+.liberty {
+  background: url(../img/backgrounds/liberty.jpg) no-repeat center bottom;
+  background-size: cover; }
+
 .river {
   background: url(../img/backgrounds/river.jpg) no-repeat center bottom;
   background-size: cover; }
@@ -262,8 +266,7 @@ nav.footer-mobile-menu {
 
 .tooltip {
   position: relative; }
-  .tooltip:hover:before,
-  .tooltip:focus:before {
+  .tooltip:hover:before, .tooltip:focus:before {
     background: #fff;
     padding: 8px 12px;
     font-size: 13px;
@@ -1215,8 +1218,7 @@ nav.footer-mobile-menu {
           #plan-your-trip .content-inner section.destination .section-content li p {
             font-size: 16px;
             margin: 0; }
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2),
-          #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
+          #plan-your-trip .content-inner section.destination .section-content li:nth-child(2), #plan-your-trip .content-inner section.destination .section-content li:nth-child(3) {
             background: #177099; }
     #plan-your-trip .content-inner section.lodging {
       background: #2D6C35; }
@@ -1279,6 +1281,23 @@ nav.footer-mobile-menu {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
+    #plan-your-trip .content-inner section.amtrak {
+      background: #003A5D; }
+      #plan-your-trip .content-inner section.amtrak .section-content {
+        padding: 10px 0 0 10px; }
+        #plan-your-trip .content-inner section.amtrak .section-content a {
+          color: #FFE897;
+          text-decoration: none; }
+          #plan-your-trip .content-inner section.amtrak .section-content a:hover {
+            text-decoration: underline; }
+        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-image {
+          margin: 40px 10px 0 0;
+          display: inline-block; }
+        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-content {
+          max-width: 410px;
+          padding: 70px 0 0 120px;
+          vertical-align: top;
+          display: inline-block; }
     #plan-your-trip .content-inner section.field-trip-sites {
       background: #B1DAEC;
       color: #177099;
@@ -1718,18 +1737,12 @@ footer {
           margin-bottom: 15px; }
       #landing .content-inner-block section li:nth-child(even) .image {
         float: none; }
-      #landing .content-inner-block section li.ekip,
-      #landing .content-inner-block section li.fourth-graders,
-      #landing .content-inner-block section li.parents,
-      #landing .content-inner-block section li.educators {
+      #landing .content-inner-block section li.ekip, #landing .content-inner-block section li.fourth-graders, #landing .content-inner-block section li.parents, #landing .content-inner-block section li.educators {
         margin: 10px 0 50px 0; }
         #landing .content-inner-block section li.ekip .image,
-        #landing .content-inner-block section li.ekip .description,
-        #landing .content-inner-block section li.fourth-graders .image,
-        #landing .content-inner-block section li.fourth-graders .description,
-        #landing .content-inner-block section li.parents .image,
-        #landing .content-inner-block section li.parents .description,
-        #landing .content-inner-block section li.educators .image,
+        #landing .content-inner-block section li.ekip .description, #landing .content-inner-block section li.fourth-graders .image,
+        #landing .content-inner-block section li.fourth-graders .description, #landing .content-inner-block section li.parents .image,
+        #landing .content-inner-block section li.parents .description, #landing .content-inner-block section li.educators .image,
         #landing .content-inner-block section li.educators .description {
           margin: 0; }
       #landing .content-inner-block section li.ekip .image {
@@ -1759,28 +1772,16 @@ footer {
     #how-it-works .content-inner section p {
       font-size: 22px;
       line-height: 24px; }
-    #how-it-works .content-inner section.get-your-pass .section-content,
-    #how-it-works .content-inner section.plan-a-trip .section-content,
-    #how-it-works .content-inner section.hit-the-road .section-content,
-    #how-it-works .content-inner section.reminders .section-content {
+    #how-it-works .content-inner section.get-your-pass .section-content, #how-it-works .content-inner section.plan-a-trip .section-content, #how-it-works .content-inner section.hit-the-road .section-content, #how-it-works .content-inner section.reminders .section-content {
       padding: 20px; }
-    #how-it-works .content-inner section.get-your-pass .image,
-    #how-it-works .content-inner section.plan-a-trip .image,
-    #how-it-works .content-inner section.hit-the-road .image,
-    #how-it-works .content-inner section.reminders .image {
+    #how-it-works .content-inner section.get-your-pass .image, #how-it-works .content-inner section.plan-a-trip .image, #how-it-works .content-inner section.hit-the-road .image, #how-it-works .content-inner section.reminders .image {
       margin: 0;
       position: relative;
       left: 0; }
-      #how-it-works .content-inner section.get-your-pass .image img,
-      #how-it-works .content-inner section.plan-a-trip .image img,
-      #how-it-works .content-inner section.hit-the-road .image img,
-      #how-it-works .content-inner section.reminders .image img {
+      #how-it-works .content-inner section.get-your-pass .image img, #how-it-works .content-inner section.plan-a-trip .image img, #how-it-works .content-inner section.hit-the-road .image img, #how-it-works .content-inner section.reminders .image img {
         width: 100%;
         height: auto; }
-    #how-it-works .content-inner section.get-your-pass .description,
-    #how-it-works .content-inner section.plan-a-trip .description,
-    #how-it-works .content-inner section.hit-the-road .description,
-    #how-it-works .content-inner section.reminders .description {
+    #how-it-works .content-inner section.get-your-pass .description, #how-it-works .content-inner section.plan-a-trip .description, #how-it-works .content-inner section.hit-the-road .description, #how-it-works .content-inner section.reminders .description {
       max-width: 100%;
       margin: 20px 0; }
   #get-your-pass .content .pass-content,
@@ -1892,82 +1893,42 @@ footer {
       font-size: 18px;
       line-height: 24px;
       margin: 5px 0; }
-    #plan-your-trip .content-inner section.destination,
-    #plan-your-trip .content-inner section.lodging,
-    #plan-your-trip .content-inner section.prepare,
-    #plan-your-trip .content-inner section.voucher,
-    #plan-your-trip .content-inner section.field-trip-sites {
+    #plan-your-trip .content-inner section.destination, #plan-your-trip .content-inner section.lodging, #plan-your-trip .content-inner section.prepare, #plan-your-trip .content-inner section.voucher, #plan-your-trip .content-inner section.field-trip-sites {
       padding: 20px;
       min-height: 0; }
-      #plan-your-trip .content-inner section.destination .section-content,
-      #plan-your-trip .content-inner section.lodging .section-content,
-      #plan-your-trip .content-inner section.prepare .section-content,
-      #plan-your-trip .content-inner section.voucher .section-content,
-      #plan-your-trip .content-inner section.field-trip-sites .section-content {
+      #plan-your-trip .content-inner section.destination .section-content, #plan-your-trip .content-inner section.lodging .section-content, #plan-your-trip .content-inner section.prepare .section-content, #plan-your-trip .content-inner section.voucher .section-content, #plan-your-trip .content-inner section.field-trip-sites .section-content {
         width: auto;
         padding: 0; }
-        #plan-your-trip .content-inner section.destination .section-content li,
-        #plan-your-trip .content-inner section.lodging .section-content li,
-        #plan-your-trip .content-inner section.prepare .section-content li,
-        #plan-your-trip .content-inner section.voucher .section-content li,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content li {
+        #plan-your-trip .content-inner section.destination .section-content li, #plan-your-trip .content-inner section.lodging .section-content li, #plan-your-trip .content-inner section.prepare .section-content li, #plan-your-trip .content-inner section.voucher .section-content li, #plan-your-trip .content-inner section.field-trip-sites .section-content li {
           width: 100%; }
-        #plan-your-trip .content-inner section.destination .section-content .lodging-image,
-        #plan-your-trip .content-inner section.lodging .section-content .lodging-image,
-        #plan-your-trip .content-inner section.prepare .section-content .lodging-image,
-        #plan-your-trip .content-inner section.voucher .section-content .lodging-image,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-image {
+        #plan-your-trip .content-inner section.destination .section-content .lodging-image, #plan-your-trip .content-inner section.lodging .section-content .lodging-image, #plan-your-trip .content-inner section.prepare .section-content .lodging-image, #plan-your-trip .content-inner section.voucher .section-content .lodging-image, #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-image {
           display: none; }
         #plan-your-trip .content-inner section.destination .section-content .lodging-content,
-        #plan-your-trip .content-inner section.destination .section-content .prepare-content,
-        #plan-your-trip .content-inner section.lodging .section-content .lodging-content,
-        #plan-your-trip .content-inner section.lodging .section-content .prepare-content,
-        #plan-your-trip .content-inner section.prepare .section-content .lodging-content,
-        #plan-your-trip .content-inner section.prepare .section-content .prepare-content,
-        #plan-your-trip .content-inner section.voucher .section-content .lodging-content,
-        #plan-your-trip .content-inner section.voucher .section-content .prepare-content,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-content,
+        #plan-your-trip .content-inner section.destination .section-content .prepare-content, #plan-your-trip .content-inner section.lodging .section-content .lodging-content,
+        #plan-your-trip .content-inner section.lodging .section-content .prepare-content, #plan-your-trip .content-inner section.prepare .section-content .lodging-content,
+        #plan-your-trip .content-inner section.prepare .section-content .prepare-content, #plan-your-trip .content-inner section.voucher .section-content .lodging-content,
+        #plan-your-trip .content-inner section.voucher .section-content .prepare-content, #plan-your-trip .content-inner section.field-trip-sites .section-content .lodging-content,
         #plan-your-trip .content-inner section.field-trip-sites .section-content .prepare-content {
           max-width: none;
           padding: 0; }
-        #plan-your-trip .content-inner section.destination .section-content .packing-list,
-        #plan-your-trip .content-inner section.lodging .section-content .packing-list,
-        #plan-your-trip .content-inner section.prepare .section-content .packing-list,
-        #plan-your-trip .content-inner section.voucher .section-content .packing-list,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list {
+        #plan-your-trip .content-inner section.destination .section-content .packing-list, #plan-your-trip .content-inner section.lodging .section-content .packing-list, #plan-your-trip .content-inner section.prepare .section-content .packing-list, #plan-your-trip .content-inner section.voucher .section-content .packing-list, #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list {
           width: 100%;
           margin: 10px 0; }
-          #plan-your-trip .content-inner section.destination .section-content .packing-list h3,
-          #plan-your-trip .content-inner section.lodging .section-content .packing-list h3,
-          #plan-your-trip .content-inner section.prepare .section-content .packing-list h3,
-          #plan-your-trip .content-inner section.voucher .section-content .packing-list h3,
-          #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list h3 {
+          #plan-your-trip .content-inner section.destination .section-content .packing-list h3, #plan-your-trip .content-inner section.lodging .section-content .packing-list h3, #plan-your-trip .content-inner section.prepare .section-content .packing-list h3, #plan-your-trip .content-inner section.voucher .section-content .packing-list h3, #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list h3 {
             font-size: 24px;
             padding: 10px; }
-          #plan-your-trip .content-inner section.destination .section-content .packing-list ul,
-          #plan-your-trip .content-inner section.lodging .section-content .packing-list ul,
-          #plan-your-trip .content-inner section.prepare .section-content .packing-list ul,
-          #plan-your-trip .content-inner section.voucher .section-content .packing-list ul,
-          #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list ul {
+          #plan-your-trip .content-inner section.destination .section-content .packing-list ul, #plan-your-trip .content-inner section.lodging .section-content .packing-list ul, #plan-your-trip .content-inner section.prepare .section-content .packing-list ul, #plan-your-trip .content-inner section.voucher .section-content .packing-list ul, #plan-your-trip .content-inner section.field-trip-sites .section-content .packing-list ul {
             padding: 10px;
             font-size: 16px; }
-        #plan-your-trip .content-inner section.destination .section-content .voucher-image,
-        #plan-your-trip .content-inner section.lodging .section-content .voucher-image,
-        #plan-your-trip .content-inner section.prepare .section-content .voucher-image,
-        #plan-your-trip .content-inner section.voucher .section-content .voucher-image,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-image {
+        #plan-your-trip .content-inner section.destination .section-content .voucher-image, #plan-your-trip .content-inner section.lodging .section-content .voucher-image, #plan-your-trip .content-inner section.prepare .section-content .voucher-image, #plan-your-trip .content-inner section.voucher .section-content .voucher-image, #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-image {
           padding: 20px;
           display: block;
           text-align: center; }
         #plan-your-trip .content-inner section.destination .section-content .voucher-content,
-        #plan-your-trip .content-inner section.destination .section-content .field-trip-sites-content,
-        #plan-your-trip .content-inner section.lodging .section-content .voucher-content,
-        #plan-your-trip .content-inner section.lodging .section-content .field-trip-sites-content,
-        #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
-        #plan-your-trip .content-inner section.prepare .section-content .field-trip-sites-content,
-        #plan-your-trip .content-inner section.voucher .section-content .voucher-content,
-        #plan-your-trip .content-inner section.voucher .section-content .field-trip-sites-content,
-        #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-content,
+        #plan-your-trip .content-inner section.destination .section-content .field-trip-sites-content, #plan-your-trip .content-inner section.lodging .section-content .voucher-content,
+        #plan-your-trip .content-inner section.lodging .section-content .field-trip-sites-content, #plan-your-trip .content-inner section.prepare .section-content .voucher-content,
+        #plan-your-trip .content-inner section.prepare .section-content .field-trip-sites-content, #plan-your-trip .content-inner section.voucher .section-content .voucher-content,
+        #plan-your-trip .content-inner section.voucher .section-content .field-trip-sites-content, #plan-your-trip .content-inner section.field-trip-sites .section-content .voucher-content,
         #plan-your-trip .content-inner section.field-trip-sites .section-content .field-trip-sites-content {
           width: auto;
           padding: 0; }
@@ -2029,14 +1990,10 @@ footer {
       font-size: 28px; }
     #parents .content-inner .section-content p {
       font-size: 18px; }
-    #parents .content-inner .section-content.plan-a-trip,
-    #parents .content-inner .section-content.rules,
-    #parents .content-inner .section-content.why {
+    #parents .content-inner .section-content.plan-a-trip, #parents .content-inner .section-content.rules, #parents .content-inner .section-content.why {
       background: none;
       padding: 0; }
-      #parents .content-inner .section-content.plan-a-trip img,
-      #parents .content-inner .section-content.rules img,
-      #parents .content-inner .section-content.why img {
+      #parents .content-inner .section-content.plan-a-trip img, #parents .content-inner .section-content.rules img, #parents .content-inner .section-content.why img {
         width: 100%; }
   #not-found {
     min-height: auto;

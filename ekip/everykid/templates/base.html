@@ -13,7 +13,9 @@
   <meta name="blitz" content="mu-bf431adc-3df60040-20150ee5-6af832b8">
   <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-
+  {% if request.get_full_path = "/plan-your-trip/" %}
+  <link rel="stylesheet" href="{% static "css/simplemodal.css" %}" />
+  {% endif %}
   <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
   <meta name="description" content="">
 
@@ -143,7 +145,7 @@
         <img src="{% static "img/doi-logo.png" %}" class="doi" alt="US Department of the Interior - March 3, 1849" />
       </a>
 
-      <p class="hashtag">#EveryKidInAPark</p>
+      <p class="hashtag">@everykidinapark</p>
 
       <nav>
         <ul>
@@ -173,6 +175,35 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="{% static 'js/min/script.js' %}"></script>
+  {% if request.get_full_path = "/plan-your-trip/" %}
+  <script type="text/javascript" src="{% static 'js/min/jquery.simplemodal.js' %}"></script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		// Load dialog on click
+		$('.simpleModal').click(function (e) {
+			var hrefValue = $(this).attr("href");
+			var linkValue = hrefValue.replace('http://','');
+			linkValue = linkValue.replace('www.','');
+			linkValue = linkValue.replace('/find','');
+			linkValue = linkValue.replace('/refuges/','');
+			$('#modal-content').modal({
+				close: true, 
+				//escClose: true,
+				//overlayClose: true,
+				closeHTML: "<div>Close to go back<img src='{% static 'img/modal-close.png' %}' width='30' height='30' style='vertical-align:middle;margin-left:10px;'></div>",
+				closeClass: "modalClose"
+			});
+			// add the href to the button's anchor tag and bind the click of the link to close the modal
+			$('#modal-content a.button-link').attr("href", hrefValue).attr("target", "_blank").on( "click", function() {
+				$.modal.close();
+			});
+			// add the web address to the button's text
+			$(".modal-continue-text-bottom").html('visit '+linkValue);
+			return false;
+		});
+    });
+  </script>  
+  {% endif %}
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

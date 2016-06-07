@@ -20,7 +20,7 @@ class FederalSiteResource(DjangoResource):
             # Only return those sites that issue the Every Kid in a Park pass
             everykid = True
 
-        query = FederalSite.objects.all()
+        query = FederalSite.objects.all().order_by('name')
 
         if state:
             query = FederalSite.objects.filter(state=state)
@@ -48,6 +48,6 @@ class FieldTripResource(DjangoResource):
             state = self.request.GET.get('state', None)
 
         if state:
-            return FieldTripSite.objects.filter(state=state)
+            return FieldTripSite.objects.filter(state=state).order_by('name')
 
-        return FieldTripSite.objects.all()
+        return FieldTripSite.objects.all().order_by('name')
