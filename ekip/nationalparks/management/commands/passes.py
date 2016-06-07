@@ -52,8 +52,10 @@ def process_site(site, next_version):
     # missing the city name.
     if site['city'] != '':
         phone, phone_extension = phone_number(site['phone'])
-        annual = site['annual'].upper() == 'YES'
-        senior = site['senior'].upper() == 'YES'
+        annual = site['annual_senior'].upper() == 'YES'
+        # As of June, 2016 'annual', and 'senior' were merged into the same field.
+        # So to maintain backwards compatability, we set senior to the same value.
+        senior = annual
         access = site['access'].upper() == 'YES'
         site_type = determine_site_type(site['name'], site['website'])
 
@@ -73,7 +75,8 @@ def process_site(site, next_version):
         fs.state = site['state']
         fs.website = site['website']
         fs.annual_pass = annual
-        fs.senior_pass = senior
+        # All sites that have annual passes, also have senior passes. 
+        fs.senior_pass = annual
         fs.access_pass = access
         fs.version = next_version
         fs.save()
@@ -81,9 +84,12 @@ def process_site(site, next_version):
 def get_next_version():
     """ The FederalSite objects are versioned. Determine the last version by
     looking at an active site. """
-
-    random_site = FederalSite.objects.filter(active_participant=True)[0]
-    return random_site.version + 1
+    
+    random_site_version = 1
+    sites = FederalSite.objects.filter(active_participant=True)
+    if len(sites) > 0:
+        random_site_version = sites[0].version + 1
+    return random_site_version
 
 
 def deactivate_sites(next_version):
@@ -105,10 +111,12 @@ def read_pass_list(filename):
 
     with open(filename, 'r', encoding='latin-1') as passcsv:
         field_names = [
-            'name', 'phone', 'city', 'state', 'website', 'annual', 'senior',
-            'access']
+            'name', 'phone', 'city', 'state', 'website', 'annual_senior', 'access']
         passreader = csv.DictReader(
-            passcsv, fieldnames=field_names, delimiter=',') 
+            passcsv, fieldnames=field_names, delimiter=',')
+
+        # Skip header row.
+        next(passreader)
 
         for l in passreader:
             process_site(l, next_version)
