@@ -4,13 +4,20 @@ from django.contrib.auth.models import User
 # Create your tests here.
 from .views import (
     redeem_voucher, get_num_tickets_exchanged,
-    get_num_tickets_exchanged_more_than_once)
+    get_num_tickets_exchanged_more_than_once, convert_to_date)
 from nationalparks.models import FederalSite
 from ticketer.recordlocator.models import AdditionalRedemption
 
 
 class RedemptionTestCase(TestCase):
     fixtures = ['federalsites.json', 'tickets.json']
+
+    def test_date_formatter(self):
+        from datetime import datetime
+        datestr = "01/05/2016"
+        dateObj = convert_to_date(datestr)
+        self.assertTrue(isinstance(dateObj, datetime))
+        self.assertEqual(dateObj.month, 1)
 
     def test_redeem_voucher(self):
         """ Test the redemption of a voucher here. """
