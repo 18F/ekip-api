@@ -84,26 +84,11 @@ def process_site(site, next_version):
 def get_next_version():
     """ The FederalSite objects are versioned. Determine the last version by
     looking at an active site. """
-<<<<<<< HEAD
-
-    # random_site = FederalSite.objects.filter(active_participant=True)[0]
-    # return random_site.version + 1
-    
-    participants = FederalSite.objects.filter(active_participant=True)
-    
-    if len(participants) > 0:
-    	random_site = participants[0]
-    	return random_site.version + 1
-    else:
-    	return 0
-=======
-    
     random_site_version = 1
     sites = FederalSite.objects.filter(active_participant=True)
     if len(sites) > 0:
         random_site_version = sites[0].version + 1
     return random_site_version
->>>>>>> 18F/master
 
 
 def deactivate_sites(next_version):

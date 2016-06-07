@@ -1,3 +1,3 @@
 echo '-----Starting APP ----------'
 cd ekip
-waitress-serve --port=$VCAP_APP_PORT ekip.config.wsgi:application
+newrelic-admin run-program waitress-serve --port=$VCAP_APP_PORT ekip.config.wsgi:application
