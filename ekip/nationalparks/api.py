@@ -25,7 +25,7 @@ class FederalSiteResource(DjangoResource):
         if state:
             query = FederalSite.objects.filter(state=state)
         if everykid:
-            query = query.filter(annual_pass=True, active_participant=True)
+            query = query.filter(access_pass=True, active_participant=True)
 
         return query
 
