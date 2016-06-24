@@ -99,7 +99,7 @@ class FederalSite(models.Model):
     city = models.CharField(max_length=128)
     state = USStateField(blank=False, null=False, db_index=True)
     website = models.URLField(max_length=512)
-    slug = models.SlugField(unique=True, null=True)
+    slug = models.SlugField(unique=True, null=True, max_length=80)
     annual_pass = models.BooleanField(
         default=False, help_text="True if the site offers an annual pass")
     senior_pass = models.BooleanField(
@@ -114,6 +114,16 @@ class FederalSite(models.Model):
     @property
     def kids_pass(self):
         return (self.annual_pass and self.active_participant)
+
+    def save(self, *args, **kwargs):
+        """ Generate and save a slug when this object is saved for the first
+        time. """
+
+        if not self.id:
+            name = self.name
+            name = name.replace('National Wildlife Refuge', 'NWR')
+            self.slug = slugify(name + self.city)[:80]
+        super(FederalSite, self).save(*args, **kwargs)
 
     def __str__(self):
         return "%s (%s, %s)" % (self.name, self.city, self.state)
