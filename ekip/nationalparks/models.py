@@ -115,16 +115,6 @@ class FederalSite(models.Model):
     def kids_pass(self):
         return (self.annual_pass and self.active_participant)
 
-    def save(self, *args, **kwargs):
-        """ Generate and save a slug when this object is saved for the first
-        time. """
-
-        if not self.id:
-            name = self.name
-            name = name.replace('National Wildlife Refuge', 'NWR')
-            self.slug = slugify(name + self.city)[:80]
-        super(FederalSite, self).save(*args, **kwargs)
-
     def __str__(self):
         return "%s (%s, %s)" % (self.name, self.city, self.state)
 
