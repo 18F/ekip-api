@@ -52,7 +52,8 @@ def nps_name_slug(name):
 
 def oth_slug(name):
     deletes = [
-        'Visitor Center', 'Outdoor Recreation Information Center'
+        'Visitor Center', 'Outdoor Recreation Information Center', 
+        'Reclamation','Office','Area'
     ]
     name = delete_from(name, deletes)
     return slugify('oth %s' % name)
