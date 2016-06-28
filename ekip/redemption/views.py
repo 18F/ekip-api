@@ -218,7 +218,7 @@ def redeem_confirm(request, slug):
 def redeem_for_site(request, slug):
     """ Display and process a form that allows a user to enter multiple voucher
     ids for a single recreation site. """
-
+    
     federal_site = get_object_or_404(FederalSite, slug=slug)
     VoucherEntryFormSet = formset_factory(VoucherEntryForm, extra=10)
 
