@@ -133,7 +133,7 @@ def statistics(request):
         request,
         'stats.html',
         {
-            'num_tickets_issued': Ticket.objects.count(),
+            'num_tickets_issued': Ticket.objects.count() + educator_tickets,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
             'educator_tickets_issued': educator_tickets
