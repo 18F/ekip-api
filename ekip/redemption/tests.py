@@ -2,12 +2,19 @@ from django.test import TestCase, Client
 from django.contrib.auth.models import User
 
 # Create your tests here.
-from .views import (
+from .views import (States, 
     redeem_voucher, get_num_tickets_exchanged,
     get_num_tickets_exchanged_more_than_once, convert_to_date)
 from nationalparks.models import FederalSite
 from ticketer.recordlocator.models import AdditionalRedemption
 
+
+class StatesTestCase(TestCase):
+    def test_state_list(self):
+        stateList = States()
+        self.assertEqual(stateList.states['PR'], "Puerto Rico")
+        self.assertEqual(stateList.states['WI'], "Wisconsin")
+        self.assertEqual(stateList.states['NC'], "North Carolina")
 
 class RedemptionTestCase(TestCase):
     fixtures = ['federalsites.json', 'tickets.json']

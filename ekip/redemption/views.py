@@ -8,7 +8,7 @@ from django.forms.formsets import formset_factory
 from django.db.models import Sum
 from django.template import defaultfilters
 
-from localflavor.us.us_states import US_STATES
+from localflavor.us.us_states import US_STATES, US_TERRITORIES
 
 from .forms import FederalSiteStateForm, VoucherEntryForm
 from nationalparks.api import FederalSiteResource
@@ -22,6 +22,8 @@ class States():
     def __init__(self):
         self.states = {}
         for abbr, name in US_STATES:
+            self.states[abbr] = name
+        for abbr, name in US_TERRITORIES:
             self.states[abbr] = name
 
 
