@@ -50,6 +50,13 @@ def nps_name_slug(name):
     name = delete_from(name, deletes)
     return slugify('nps %s' % name)
 
+def oth_slug(name):
+    deletes = [
+        'Visitor Center', 'Outdoor Recreation Information Center', 
+        'Reclamation','Office','Area'
+    ]
+    name = delete_from(name, deletes)
+    return slugify('oth %s' % name)
 
 def blm_slug(name):
     """ BLM related slug generation. """
@@ -98,6 +105,8 @@ class Command(BaseCommand):
                 slug = blm_slug(site.name)
             elif site.site_type == 'NRA':
                 slug = nra_slug(site.name)
+            elif site.site_type == 'OTH':
+                slug = oth_slug(site.name)
             else:
                 slug = other_slug(site.name)
             site.slug = slug
