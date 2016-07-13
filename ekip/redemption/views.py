@@ -132,28 +132,44 @@ def statistics(request):
 
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
-
     num_tickets_issued = Ticket.objects.count() + educator_tickets
+
     one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
     today = datetime.now().strftime('%Y-%m-%d')
 
+    ticket_date_query = Ticket.objects \
+               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
+               .filter(created__range=(one_year_ago, today))
+
     # Get all Tickets created, grouped by date.
-    tickets_by_date = Ticket.objects.extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
-               .filter(created__range=(one_year_ago, today)) \
+    tickets_by_date = ticket_date_query \
                .values('day') \
                .annotate(count=Count('created'))
 
-    tickets = []
-    for ticket in tickets_by_date:
-        tickets.append({'date':ticket['day'], 'count':ticket['count']})
+    # Get all Tickets created, grouped by State.
+    tickets_by_state = ticket_date_query \
+               .values('recreation_site__state') \
+               .annotate(count=Count('created'))
 
-    tickets = json.dumps(tickets)
+    tickets_dates = []
+    for ticket in tickets_by_date:
+        tickets_dates.append({'date':ticket['day'], 'count':ticket['count']})
+
+    tickets_states = []
+    for ticket in tickets_by_state:
+        tickets_states.append({'state':ticket['recreation_site__state'], 'count':ticket['count']})
+
+    tickets_dates = json.dumps(tickets_dates)
+    tickets_states = json.dumps(tickets_states)
 
     return render(
         request,
         'stats.html',
         {
-            'tickets': tickets,
+            'start_date': one_year_ago,
+            'end_date': today,
+            'tickets_dates': tickets_dates,
+            'tickets_states': tickets_states,
             'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
