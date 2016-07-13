@@ -1,11 +1,12 @@
 import csv
-from datetime import datetime
+import json
+from datetime import datetime, timedelta
 
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.forms.formsets import formset_factory
-from django.db.models import Sum
+from django.db.models import Sum, Count
 from django.template import defaultfilters
 
 from localflavor.us.us_states import US_STATES, US_TERRITORIES
@@ -125,17 +126,35 @@ def tables(request):
 
 @login_required
 def statistics(request):
+    
     educator_tickets = Educator.objects.all().aggregate(
         Sum('num_students'))['num_students__sum']
 
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
 
+    num_tickets_issued = Ticket.objects.count() + educator_tickets
+    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    # Get all Tickets created, grouped by date.
+    tickets_by_date = Ticket.objects.extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
+               .filter(created__range=(one_year_ago, today)) \
+               .values('day') \
+               .annotate(count=Count('created'))
+
+    tickets = []
+    for ticket in tickets_by_date:
+        tickets.append({'date':ticket['day'], 'count':ticket['count']})
+
+    tickets = json.dumps(tickets)
+
     return render(
         request,
         'stats.html',
         {
-            'num_tickets_issued': Ticket.objects.count() + educator_tickets,
+            'tickets': tickets,
+            'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
             'educator_tickets_issued': educator_tickets
