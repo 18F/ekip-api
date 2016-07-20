@@ -44,6 +44,68 @@ def convert_to_date(s):
     """ Convert the date into a useful format. """
     return datetime.strptime(s, '%m/%d/%Y')
 
+def get_tickets_by_states(start_date, end_date):
+
+    # Base query with a date range.
+    ticket_date_query = Ticket.objects \
+               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
+               .filter(created__range=(start_date, end_date))
+
+    # Get all Tickets created, grouped by State.
+    tickets_by_state = ticket_date_query \
+               .values('recreation_site__state') \
+               .annotate(count=Count('created'))
+
+    tickets_states = []
+    if tickets_by_state:
+        for ticket in tickets_by_state:
+            tickets_states.append({'state':ticket['recreation_site__state'], 'count':ticket['count']})
+
+    tickets_states = json.dumps(tickets_states)
+    return tickets_states
+
+def get_tickets_by_dates(start_date, end_date):
+    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    # Base query with a date range.
+    ticket_date_query = Ticket.objects \
+               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
+               .filter(created__range=(start_date, end_date))
+
+    # Get all Tickets created, grouped by date.
+    tickets_by_date = ticket_date_query \
+               .values('day') \
+               .annotate(count=Count('created'))
+
+    tickets_dates = []
+    if tickets_by_date:
+        for ticket in tickets_by_date:
+            tickets_dates.append({'date':ticket['day'], 'count':ticket['count']})
+
+    tickets_dates = json.dumps(tickets_dates)
+    return tickets_dates
+
+def refresh_stats(request):
+
+    if request.method == 'GET':
+        start_date = request.GET.get('start')
+        end_date = request.GET.get('end')
+
+        response_data = {
+            'tickets_by_states': get_tickets_by_states(start_date,end_date),
+            'tickets_by_dates': get_tickets_by_dates(start_date,end_date)
+        }
+
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )
 
 @permission_required('recordlocator.view_exchange_data')
 def csv_redemption(request):
@@ -124,11 +186,14 @@ def tables(request):
     )
 
 
-@login_required
+#@login_required
 def statistics(request):
-    
+
     educator_tickets = Educator.objects.all().aggregate(
         Sum('num_students'))['num_students__sum']
+
+    if not educator_tickets:
+        educator_tickets = 0
 
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
@@ -136,31 +201,7 @@ def statistics(request):
 
     one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
     today = datetime.now().strftime('%Y-%m-%d')
-
-    ticket_date_query = Ticket.objects \
-               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
-               .filter(created__range=(one_year_ago, today))
-
-    # Get all Tickets created, grouped by date.
-    tickets_by_date = ticket_date_query \
-               .values('day') \
-               .annotate(count=Count('created'))
-
-    # Get all Tickets created, grouped by State.
-    tickets_by_state = ticket_date_query \
-               .values('recreation_site__state') \
-               .annotate(count=Count('created'))
-
-    tickets_dates = []
-    for ticket in tickets_by_date:
-        tickets_dates.append({'date':ticket['day'], 'count':ticket['count']})
-
-    tickets_states = []
-    for ticket in tickets_by_state:
-        tickets_states.append({'state':ticket['recreation_site__state'], 'count':ticket['count']})
-
-    tickets_dates = json.dumps(tickets_dates)
-    tickets_states = json.dumps(tickets_states)
+    print(get_tickets_by_states(one_year_ago, today))
 
     return render(
         request,
@@ -168,8 +209,8 @@ def statistics(request):
         {
             'start_date': one_year_ago,
             'end_date': today,
-            'tickets_dates': tickets_dates,
-            'tickets_states': tickets_states,
+            'tickets_dates': get_tickets_by_dates(one_year_ago, today),
+            'tickets_states': get_tickets_by_states(one_year_ago, today),
             'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,

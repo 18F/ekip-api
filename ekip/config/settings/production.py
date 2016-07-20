@@ -3,8 +3,8 @@ import os
 
 from .base import *
 
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
     '.everykidinapark.gov', # Allow domain and subdomains
