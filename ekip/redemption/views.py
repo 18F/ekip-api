@@ -44,12 +44,17 @@ def convert_to_date(s):
     """ Convert the date into a useful format. """
     return datetime.strptime(s, '%m/%d/%Y')
 
+def convert_to_db_date(s):
+    """ Convert the date into a useful format. """
+    date = convert_to_date(s)
+    return date.strftime('%Y-%m-%d')
+
 def get_tickets_by_states(start_date, end_date):
 
     # Base query with a date range.
     ticket_date_query = Ticket.objects \
-               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
-               .filter(created__range=(start_date, end_date))
+               .extra(select={'day': "to_char(created, 'MMDDYYYY')"}) \
+               .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
 
     # Get all Tickets created, grouped by State.
     tickets_by_state = ticket_date_query \
@@ -65,13 +70,11 @@ def get_tickets_by_states(start_date, end_date):
     return tickets_states
 
 def get_tickets_by_dates(start_date, end_date):
-    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
-    today = datetime.now().strftime('%Y-%m-%d')
 
     # Base query with a date range.
     ticket_date_query = Ticket.objects \
                .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
-               .filter(created__range=(start_date, end_date))
+               .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
 
     # Get all Tickets created, grouped by date.
     tickets_by_date = ticket_date_query \
@@ -199,9 +202,8 @@ def statistics(request):
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
     num_tickets_issued = Ticket.objects.count() + educator_tickets
 
-    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%Y-%m-%d')
-    today = datetime.now().strftime('%Y-%m-%d')
-    print(get_tickets_by_states(one_year_ago, today))
+    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%m/%d/%Y')
+    today = datetime.now().strftime('%m/%d/%Y')
 
     return render(
         request,
