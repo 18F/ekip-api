@@ -6,8 +6,31 @@
 {% block content %}
 
     <h1>Every Kid in a Park statistics</h1>
+    
+    <h2>Paper passes by date range</h2>
 
-    <h2>Paper passes</h2>
+    <p>[# student passes] student passes were generated from [      ] to [       ] [Refresh data]</p>
+
+    [Line Graph]
+    
+    <p>There were [# of redemptions] redemptions during that time:</p>
+    
+    [State Bar Chart or Parks Name Chart]
+
+    <h2>Lifetime summary statistics</h2>
+    Since September 01, 2015, the site has generated a total of <b>{{num_tickets_issued|intcomma}}</b> paper passes.  The site has also recorded <b>{{all_exchanged|intcomma}}</b> exchanged for plastic passes at parks.
+    
+    <p><b>Paper passes</b></p>
+    <p>System-generated paper passes through <a href="https://everykidinapark.gov/get-your-pass/fourth-grader" target="_blank">student</a> workflow: [total student count]</p>
+    <p>System-generated paper passes through <a href="https://everykidinapark.gov/get-your-pass/educator" target="_blank">educator</a> workflow: <b>{{educator_tickets_issued|intcomma}}</b></p>
+
+    <p><b>Paper pass redemptions</b></p>
+    <p>Paper passes exchanged for plastic passes (includes paper passes used more than once): <b>{{all_exchanged|intcomma}}</b></p>
+    <p>Unique paper passes exchanged for plastic passes (duplicates removed): <b>{{num_tickets_exchanged|intcomma}}</b></p>
+    
+    <h2>About the numbers</h2> 
+    
+    <h3>Paper passes</h3>
 
     <p>Numbers for paper passes represent the number of times the Every Kid in a Park website has generated an electronic paper pass for a
     website visitor.  Website visitors include fourth-grade students, parents, and educators; they also include members of the general public
@@ -21,13 +44,13 @@
        <li>For the educator workflow, the number of educators who have used the system</li>
    </ul>
 
-    <p>If you're still not sure what these numbers represent, or if you'd like more help interpreting them, please ask us!</p>
+    <h3>Paper passes by date range</h3>
 
-    <p>System-generated paper passes through <a href="https://everykidinapark.gov/get-your-pass/fourth-grader" target="_blank">student</a> and <a href="https://everykidinapark.gov/get-your-pass/educator" target="_blank">educator</a> workflows: <b>{{num_tickets_issued|intcomma}}</b></p>
+    <p>The paper passes by date range represent a subset of the total number of passes requested through the site.  The line graph illustrates the passes
+    requested by date.  Although we also identify the locations where paper passes were redeemed in the bar chart, the two graphs do not represent 
+    the same data and one cannot easily be extrapolated from the other.</p>
 
-    <p>System-generated paper passes, educator worfklow only: <b>{{educator_tickets_issued|intcomma}}</b></p>
-
-    <h2>Exchanges</h2>
+    <h3>Exchanges</h3>
 
     <p>Exchanges represent the physical exchange of the printed, paper pass for the plastic pass.  These represent numbers reported
     directly by the fee collectors.</p>
@@ -38,9 +61,7 @@
         <li>The number of fourth graders who have exchanged a paper pass for a plastic pass— this number does not include numbers reported
         by Army Corps of Engineers, and it includes anyone who was able to successfully exchange the paper pass for a plastic one</li>
 
-    <p>Paper passes exchanged for plastic passes (includes paper passes used more than once): <b>{{all_exchanged|intcomma}}</b></p>
 
-    <p>Unique paper passes exchanged for plastic passes (duplicates removed): <b>{{num_tickets_exchanged|intcomma}}</b></p>
 
 
 {% endblock content %}
