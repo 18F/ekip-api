@@ -48,6 +48,7 @@ THIRD_PARTY_APPS = (
     'localflavor',
     'formtools',
     'storages',
+    'djangosecure',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -109,6 +110,7 @@ STATIC_ROOT = '/static/'
 CORS_ORIGIN_ALLOW_ALL = True
 
 CSRF_COOKIE_SECURE = True
+
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
