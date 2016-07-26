@@ -2,10 +2,6 @@
 # all applications use these settings and services
 memory: 512M
 instances: 1
-applications:
-- name: blue
-  path: .
-  stack: cflinuxfs2
-  timeout: 180
-  env:
-    NEW_RELIC_CONFIG_FILE: /app/newrelic.ini
+timeout: 180
+env:
+  NEW_RELIC_CONFIG_FILE: /app/newrelic.ini
