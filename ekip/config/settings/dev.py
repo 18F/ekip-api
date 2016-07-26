@@ -1,15 +1,10 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 #  TEMPLATE_DEBUG = True
 #  Replaced to remove TEMPLATE_* error message during manage.py check and manage.py runserver commands.
 #  This is an exact duplicate of what is in base.py but appended with 'debug' in the 'OPTIONS' block.
-
-
-ALLOWED_HOSTS = [
-    '*'
-    ]
 
 TEMPLATES = [
     {
