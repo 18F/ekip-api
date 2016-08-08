@@ -1,12 +1,28 @@
 schema_version: "1.0.0"
 name: ekip-api
 metadata:
-  description: "Every Kid In a Park (EKIP)"
+  description: >
+    The Every Kid in a Park initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American 
+    has the opportunity to visit and enjoy them. This initiative provides all fourth grade students and their families with free admission to National Parks 
+    and other federal lands and waters for a full year.
   maintainers:
     - colin.craig@gsa.gov
+    - christopher.goranson@gsa.gov
+    - shashank.khandelwal@gsa.gov
 components: # A list of paths to components written in the opencontrol format for more information view: https://github.com/opencontrol/schemas
   - ./compliance
+certifications:
+  # paths
+standards:
+  # paths
 dependencies:
-  systems:
-    - url: github.com/18F/cg-compliance
+  certifications:
+    # LATO
+    - url: https://github.com/18F/GSA-Certifications
       revision: master
+  systems:
+    # Cloud.gov
+    - url: https://github.com/18F/cg-compliance
+      revision: master
+  standards:
+    # data
