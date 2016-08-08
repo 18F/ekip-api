@@ -1,0 +1,12 @@
+schema_version: "1.0.0"
+name: ekip-api
+metadata:
+  description: "Every Kid In a Park (EKIP)"
+  maintainers:
+    - colin.craig@gsa.gov
+components: # A list of paths to components written in the opencontrol format for more information view: https://github.com/opencontrol/schemas
+  - ./compliance
+dependencies:
+  systems:
+    - url: github.com/18F/cg-compliance
+      revision: master
