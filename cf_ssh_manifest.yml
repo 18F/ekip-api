@@ -1,0 +1,25 @@
+---
+applications:
+- name: green
+  memory: 512M
+  instances: 4
+  timeout: 180
+  command: bash cf.sh
+  hosts:
+  - ekip-staging
+  - ekip-staging-1432233522
+  domains:
+  - cf.18f.us
+  - 18f.gov
+  services:
+  - ekip-staging-db
+  env:
+    DJANGO_SETTINGS_MODULE: "config.settings.production"
+    EKIP_AWS_SECRET_ACCESS_KEY: "LaxKZLogqquruWuSWL8+ocMWquEEuBe/vy93CcCV"
+    NEW_RELIC_APP_NAME: "EKIP - staging"
+    NEW_RELIC_LICENSE_KEY: "c820d5eb73b18b20771e04c7b526738af22e86c7"
+    DATABASE_URL: "postgresql://ugouwnpq0ps8gnds:qrn96xovx2j8oiwexue3otn4v@rpbcav5osz8b4q.ch0moygcdwsl.us-east-1.rds.amazonaws.com:5432/db409ehqtq2sg8spj"
+    EKIP_AWS_ACCESS_KEY_ID: "AKIAIHLFCBUSOQY3NGAA"
+    EKIP_STATIC_BUCKET_NAME: "ekip-staging"
+    NEW_RELIC_CONFIG_FILE: "/app/newrelic.ini"
+    NEW_RELIC_ENV: "staging"
