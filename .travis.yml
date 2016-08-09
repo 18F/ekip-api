@@ -8,8 +8,8 @@ install:
   - travis_retry pip install -r requirements-dev.txt
 
 script:
+  - bandit -r ekip
   - cd ekip
   - coverage run --source=everykid manage.py test --settings=config.settings.test
-
 after_success:
   - coveralls
