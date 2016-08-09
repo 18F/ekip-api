@@ -2,12 +2,19 @@ from django.test import TestCase, Client
 from django.contrib.auth.models import User
 
 # Create your tests here.
-from .views import (
+from .views import (States, 
     redeem_voucher, get_num_tickets_exchanged,
     get_num_tickets_exchanged_more_than_once, convert_to_date)
 from nationalparks.models import FederalSite
 from ticketer.recordlocator.models import AdditionalRedemption
 
+
+class StatesTestCase(TestCase):
+    def test_state_list(self):
+        stateList = States()
+        self.assertEqual(stateList.states['PR'], "Puerto Rico")
+        self.assertEqual(stateList.states['WI'], "Wisconsin")
+        self.assertEqual(stateList.states['NC'], "North Carolina")
 
 class RedemptionTestCase(TestCase):
     fixtures = ['federalsites.json', 'tickets.json']
@@ -48,8 +55,8 @@ class SitesTestCase(TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(
-            'john', 'john@doi.gov', 'password')
+        self.user = User.objects.create_user(   # nosec - test password
+            'john', 'john@doi.gov', 'password') 
 
     def test_behind_password(self):
         response = self.client.get('/redeem/sites/', {'state': 'AZ'})
@@ -58,7 +65,7 @@ class SitesTestCase(TestCase):
 
     def test_sites_for_state(self):
         """ We display FederalSites by state. Test that display here. """
-        self.client.login(username='john', password='password')
+        self.client.login(username='john', password='password') # nosec - test password
         response = self.client.get('/redeem/sites/', {'state': 'AZ'})
         self.assertEqual(200, response.status_code)
 

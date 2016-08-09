@@ -45,6 +45,10 @@ CACHES = {
     }
 }
 
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
 try:
   from .local_settings import *
 except ImportError:

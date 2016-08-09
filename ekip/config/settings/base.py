@@ -15,7 +15,6 @@ from django.utils.crypto import get_random_string
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 ALLOWED_HOSTS = []
@@ -48,6 +47,7 @@ THIRD_PARTY_APPS = (
     'localflavor',
     'formtools',
     'storages',
+    'djangosecure',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -80,6 +80,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'config.urls'
@@ -106,5 +107,15 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_HTTPONLY = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+CSRF_COOKIE_HTTPONLY = True
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
