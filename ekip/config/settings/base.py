@@ -15,7 +15,6 @@ from django.utils.crypto import get_random_string
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 ALLOWED_HOSTS = []

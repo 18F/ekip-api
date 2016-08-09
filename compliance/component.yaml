@@ -76,7 +76,7 @@ satisfies:
     - text: >
         In addition to cloud.gov controls, all code is reviewed on GitHub before
         being merged into the "master" branch. These changes are tested
-        automatically via Coveralls CI (which runs unit, integration tests, and
+        automatically via Travis CI (which runs unit, integration tests, and
         static analysis) as well as manual testing for visual regressions
         (though this is partially automated). Proposed changes have appropriate
         justification (describing problems resolved or referencing further
@@ -86,7 +86,7 @@ satisfies:
         deployed, on an ad-hoc basis.
   references:
     - verification_key: github
-    - verification_key: coveralls
+    - verification_key: travis-ci
 - standard_key: NIST-800-53
   control_key: CM-6   # Configuration Settings
   narrative:
@@ -199,13 +199,13 @@ satisfies:
     - text: >
         At the application layer (see cloud.gov controls for lower), all custom
         code passes through a set of automated unit and integration tests via
-        Coveralls CI. Library dependencies are verified up to date via PIP.
+        Travis CI. Library dependencies are verified up to date via PIP.
         Production errors are captured via New Relic and emailed to relevant
         parties. Further, code is first deployed (automatically) to our staging
         environment, where we may discover errors before appearing in
         production.
   references:
-    - verification_key: coveralls
+    - verification_key: travis-ci
     - verification_key: new-relic
 - standard_key: NIST-800-53
   control_key: SI-4   # Information System Monitoring
@@ -219,9 +219,9 @@ satisfies:
         we validate user Input by checking for valid strings, and scrub data 
         that is saved to the database layer.
 verifications:
-- key: coveralls
-  name: Repository's Coveralls CI
-  path: https://coveralls.io/github/18F/ekip-api
+- key: travis-ci
+  name: Repository's Travis CI
+  path: https://travis-ci.org/18F/ekip-api
   type: URL
 - key: code-climate
   name: Project's Code Climate Results

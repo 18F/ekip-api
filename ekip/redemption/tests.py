@@ -55,8 +55,8 @@ class SitesTestCase(TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(
-            'john', 'john@doi.gov', 'password')
+        self.user = User.objects.create_user(   # nosec - test password
+            'john', 'john@doi.gov', 'password') 
 
     def test_behind_password(self):
         response = self.client.get('/redeem/sites/', {'state': 'AZ'})
@@ -65,7 +65,7 @@ class SitesTestCase(TestCase):
 
     def test_sites_for_state(self):
         """ We display FederalSites by state. Test that display here. """
-        self.client.login(username='john', password='password')
+        self.client.login(username='john', password='password') # nosec - test password
         response = self.client.get('/redeem/sites/', {'state': 'AZ'})
         self.assertEqual(200, response.status_code)
 

@@ -11,6 +11,7 @@ django-formtools
 boto
 newrelic==2.54.0.41
 django-secure
+bandit==1.0.1
 
 # @see http://code.larlet.fr/django-storages/issue/155/python-3-support
 -e git+https://github.com/coagulant/django-storages-py3.git@py3#egg=django-storages

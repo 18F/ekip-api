@@ -1,7 +1,8 @@
 import dj_database_url
 import os
-
+import tempfile
 from .base import *
+
 
 DEBUG = False
 TEMPLATE_DEBUG = False
@@ -28,7 +29,7 @@ AWS_SECRET_ACCESS_KEY = os.getenv('EKIP_AWS_SECRET_ACCESS_KEY')
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': os.getenv('TMPDIR', '/tmp'),
+        'LOCATION': os.getenv('TMPDIR', tempfile.gettempdir()),
         'OPTIONS': {
             'MAX_ENTRIES': 1000,
         },
