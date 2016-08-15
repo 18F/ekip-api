@@ -73,18 +73,21 @@ def get_tickets_by_dates(start_date, end_date):
 
     # Base query with a date range.
     ticket_date_query = Ticket.objects \
-               .extra(select={'day': "to_char(created, 'YYYYMMDD')"}) \
-               .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
+                .extra(select={
+                        'month': "EXTRACT(month FROM created)",
+                        'year': "EXTRACT(year FROM created)"
+                }) \
+                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
 
     # Get all Tickets created, grouped by date.
     tickets_by_date = ticket_date_query \
-               .values('day') \
+               .values('month','year') \
                .annotate(count=Count('created'))
 
     tickets_dates = []
     if tickets_by_date:
         for ticket in tickets_by_date:
-            tickets_dates.append({'date':ticket['day'], 'count':ticket['count']})
+            tickets_dates.append({'date': str(int(ticket['year'])) + str(int(ticket['month'])), 'count':ticket['count']})
 
     tickets_dates = json.dumps(tickets_dates)
     return tickets_dates
@@ -189,7 +192,7 @@ def tables(request):
     )
 
 
-@login_required
+#@login_required
 def statistics(request):
 
     educator_tickets = Educator.objects.all().aggregate(
