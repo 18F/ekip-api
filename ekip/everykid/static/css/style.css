@@ -1619,7 +1619,8 @@ footer {
       width: 50%;
       top: 10px;
       left: 10px;
-      position: absolute; }
+      position: absolute;
+      max-width: 256px; }
       nav.mobile-menu .logo img {
         width: 100%; }
     nav.mobile-menu .menu-button {
