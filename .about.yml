@@ -44,11 +44,14 @@ testable: true
 #   id: Internal team identifier/user name
 #   role: Team member's role; leads should be designated as 'lead'
 team:
+- github: cacraig
+  role: Lead developer for 2016 statistics enhancements project
+  id:
 - github: khandelwal
   role: 18F Product Lead, developer
   id: khandelwal
 - github: openglobe
-  role: DOI Activation Team Co-Lead, Presidential Innovation Fellow
+  role: 2016 Stats enhancements Engagement Manager; 2015 DOI Activation Team Co-Lead, Presidential Innovation Fellow
   id: christopher-goranson
 #- id: Kat Currie
 #  role: DOI Activation Team Co-Lead
@@ -71,6 +74,7 @@ milestones:
 - June 2015 - 18F began work on the project
 - July 2015 - Ticketing Application Demo
 - September 1, 2015 - Site Launch
+- June 2016 - August 2016 - Backend statistics enhancement and maintenance improvements
 
 # Technologies used to build the project
 stack:
@@ -120,3 +124,5 @@ contact:
   text: Shashank Khandelwal
 - url: mailto:christopher.goranson@gsa.gov
   text: Christopher Goranson
+- url: mailto:colin.craig@gsa.gov
+  text: Colin Craig
