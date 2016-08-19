@@ -7,7 +7,6 @@
 {% block content %}
 
     <h1>Every Kid in a Park statistics</h1>
-    {{tickets}}
 
     <h2>Paper passes</h2>
 
@@ -72,7 +71,7 @@
 
             var start_date = '{{start_date | safe}}';
             var start_date = '{{end_date | safe}}';
-            console.log(tickets_dates);
+
             // Date Chart generation.
             var drawCharts = function(tickets_dates, tickets_states){
 
