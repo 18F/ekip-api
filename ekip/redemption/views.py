@@ -16,7 +16,7 @@ from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
 from everykid.models import Educator
-
+from django.db import IntegrityError
 
 class States():
     """ Create a map of two-letter state codes and the state name. """
@@ -75,26 +75,33 @@ def get_tickets_by_dates(start_date, end_date):
     """
     Retrieves all of the tickets generated grouped by Date. Data is Monthly by default.
     """
-    # Base query with a date range.
-    ticket_date_query = Ticket.objects \
-                .extra(select={
-                        'month': "EXTRACT(month FROM created)",
-                        'year': "EXTRACT(year FROM created)"
-                }) \
-                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
-
-    # Get all Tickets created, grouped by date.
-    tickets_by_date = ticket_date_query \
-               .values('month','year') \
-               .annotate(count=Count('created'))
 
     tickets_dates = []
-    if tickets_by_date:
-        for ticket in tickets_by_date:
-            tickets_dates.append({'date': str(int(ticket['year'])) + str(int(ticket['month'])), 'count':ticket['count']})
+    grouped_dates = {}
+    result = []
 
-    tickets_dates = json.dumps(tickets_dates)
-    return tickets_dates
+    # Base query with a date range.
+    ticket_dates = Ticket.objects \
+                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date))) \
+                .values('created').annotate(count=Count('created'))
+
+    # Group Tickets by Month.
+    for ticket in ticket_dates:
+        YM = str(int(ticket['created'].year)) + str(int(ticket['created'].month))
+        if YM in grouped_dates:
+            grouped_dates[YM] += ticket['count']
+        else:
+            grouped_dates[YM] = ticket['count']
+
+    # Put into more UI friendly format.
+    for date,count in grouped_dates.items():
+        result.append({'date': date, 'count':count})
+
+    result = json.dumps(result)
+
+    return result
+    
+
 
 def refresh_stats(request):
     """
@@ -198,7 +205,7 @@ def tables(request):
     )
 
 
-@login_required
+#@login_required
 def statistics(request):
 
     educator_tickets = Educator.objects.all().aggregate(
