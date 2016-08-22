@@ -16,7 +16,6 @@ from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
 from everykid.models import Educator
-from django.db import IntegrityError
 
 class States():
     """ Create a map of two-letter state codes and the state name. """
