@@ -204,7 +204,7 @@ def tables(request):
     )
 
 
-#@login_required
+@login_required
 def statistics(request):
 
     educator_tickets = Educator.objects.all().aggregate(
