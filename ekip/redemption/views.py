@@ -45,12 +45,14 @@ def convert_to_date(s):
     return datetime.strptime(s, '%m/%d/%Y')
 
 def convert_to_db_date(s):
-    """ Convert the date into a useful format. """
+    """ Convert the date into a Database friendly format. """
     date = convert_to_date(s)
     return date.strftime('%Y-%m-%d')
 
 def get_tickets_by_states(start_date, end_date):
-
+    """
+    Retrieves all of the tickets generated grouped by State.
+    """
     # Base query with a date range.
     ticket_date_query = Ticket.objects \
                .extra(select={'day': "to_char(created, 'MMDDYYYY')"}) \
@@ -70,7 +72,9 @@ def get_tickets_by_states(start_date, end_date):
     return tickets_states
 
 def get_tickets_by_dates(start_date, end_date):
-
+    """
+    Retrieves all of the tickets generated grouped by Date. Data is Monthly by default.
+    """
     # Base query with a date range.
     ticket_date_query = Ticket.objects \
                 .extra(select={
@@ -93,7 +97,9 @@ def get_tickets_by_dates(start_date, end_date):
     return tickets_dates
 
 def refresh_stats(request):
-
+    """
+    Retrieves a fresh Statistics result, given start/end dates.
+    """
     if request.method == 'GET':
         start_date = request.GET.get('start')
         end_date = request.GET.get('end')
