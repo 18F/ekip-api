@@ -2,8 +2,8 @@ applications:
 - command: curl https://18f-tmate-bootstrap.s3.amazonaws.com/tmate-debug-init.sh |
     sh
   domains:
-  - cf.18f.us
   - 18f.gov
+  - cf.18f.us
   env:
     DATABASE_URL: postgresql://ugouwnpq0ps8gnds:qrn96xovx2j8oiwexue3otn4v@rpbcav5osz8b4q.ch0moygcdwsl.us-east-1.rds.amazonaws.com:5432/db409ehqtq2sg8spj
     DJANGO_SETTINGS_MODULE: config.settings.production
@@ -17,6 +17,7 @@ applications:
   hosts:
   - ekip-staging
   - ekip-staging-1432233522
+  - kids
   instances: 1
   memory: 512M
   name: green-ssh
