@@ -19,7 +19,7 @@
       }
 
       h2 {
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
 
       #content {
@@ -39,7 +39,8 @@
         clear: both;
       }
 
-      .pass_details {
+      .pass_details,
+      .exchange_details {
         cursor: pointer;
       }
 
@@ -53,7 +54,7 @@
       }
 
       .passes_generated {
-        width: 200px;
+        width: 220px;
         float: right;
       }
 
@@ -62,6 +63,11 @@
       }
 
       .generated_pass_details div {
+        display: none;
+      }
+
+      .exchange_details_content {
+        padding-top: 15px;
         display: none;
       }
 
@@ -128,11 +134,13 @@
 
     <div class="exchanges">
 
-      <h2>Pass Exchanges</h2>
+      <h2>Exchanges</h2>
 
       <h3>Total paper passes exchanged for plastic passes: {{all_exchanged|intcomma}}</h3>
 
       <h3>Passes exchanged with duplicates removed: {{num_tickets_exchanged|intcomma}}</h3>
+
+      <hr>
 
       <p>Exchanges represent the physical exchange of the printed, paper pass for the plastic pass.  These represent numbers reported
       directly by the fee collectors.</p>
