@@ -62,7 +62,8 @@ html, body {
       color: #6C6C69; }
     .voucher-container .heading h4, .voucher-instructions .heading h4 {
       font-size: 18px;
-      color: #4C89A5;
+      //color: #4C89A5;
+      color: #5D402E;
       text-align: center;
       padding: 15px 0 0 0; }
   .voucher-container .steps, .voucher-instructions .steps {
@@ -112,7 +113,8 @@ html, body {
         text-align: left; }
         .voucher-container .steps ol li h2, .voucher-instructions .steps ol li h2 {
           font-size: 22px;
-          color: #4C89A5; }
+          //color: #4C89A5; 
+          color: #5D402E;}
         .voucher-container .steps ol li p, .voucher-instructions .steps ol li p {
           font-size: 14px;
           line-height: 22px;
