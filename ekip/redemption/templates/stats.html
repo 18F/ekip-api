@@ -49,7 +49,7 @@
       }
 
       .paper_passes {
-        width: 500px;
+        max-width: 500px;
         float: left;
       }
 
@@ -69,6 +69,13 @@
       .exchange_details_content {
         padding-top: 15px;
         display: none;
+      }
+
+      @media (max-width: 500px) {
+        .passes_generated {
+          max-width: 100%;
+          float: none;
+        }
       }
 
     </style>
