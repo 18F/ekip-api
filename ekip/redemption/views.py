@@ -211,7 +211,7 @@ def statistics(request):
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
     num_tickets_issued = Ticket.objects.count()
 
-    one_year_ago = (datetime.now() - timedelta(days=1*360)).strftime('%m/%d/%Y')
+    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%m/%d/%Y')
     today = datetime.now().strftime('%m/%d/%Y')
 
     return render(
