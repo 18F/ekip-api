@@ -1,11 +1,12 @@
 import csv
-from datetime import datetime
+import json
+from datetime import datetime, timedelta
 
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.forms.formsets import formset_factory
-from django.db.models import Sum
+from django.db.models import Sum, Count
 from django.template import defaultfilters
 
 from localflavor.us.us_states import US_STATES, US_TERRITORIES
@@ -15,7 +16,6 @@ from nationalparks.api import FederalSiteResource
 from ticketer.recordlocator.models import Ticket, AdditionalRedemption
 from nationalparks.models import FederalSite
 from everykid.models import Educator
-
 
 class States():
     """ Create a map of two-letter state codes and the state name. """
@@ -43,6 +43,87 @@ def convert_to_date(s):
     """ Convert the date into a useful format. """
     return datetime.strptime(s, '%m/%d/%Y')
 
+def convert_to_db_date(s):
+    """ Convert the date into a Database friendly format. """
+    date = convert_to_date(s)
+    return date.strftime('%Y-%m-%d')
+
+def get_tickets_by_states(start_date, end_date):
+    """
+    Retrieves all of the tickets generated grouped by State.
+    """
+    # Base query with a date range.
+    ticket_date_query = Ticket.objects \
+               .extra(select={'day': "to_char(created, 'MMDDYYYY')"}) \
+               .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
+
+    # Get all Tickets created, grouped by State.
+    tickets_by_state = ticket_date_query \
+               .values('recreation_site__state') \
+               .annotate(count=Count('created'))
+
+    tickets_states = []
+    if tickets_by_state:
+        for ticket in tickets_by_state:
+            tickets_states.append({'state':ticket['recreation_site__state'], 'count':ticket['count']})
+
+    tickets_states = json.dumps(tickets_states)
+    return tickets_states
+
+def get_tickets_by_dates(start_date, end_date):
+    """
+    Retrieves all of the tickets generated grouped by Date. Data is Monthly by default.
+    """
+
+    tickets_dates = []
+    grouped_dates = {}
+    result = []
+
+    # Base query with a date range.
+    ticket_dates = Ticket.objects \
+                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date))) \
+                .values('created').annotate(count=Count('created'))
+
+    # Group Tickets by Month.
+    for ticket in ticket_dates:
+        YM = str(int(ticket['created'].year)) + str(int(ticket['created'].month))
+        if YM in grouped_dates:
+            grouped_dates[YM] += ticket['count']
+        else:
+            grouped_dates[YM] = ticket['count']
+
+    # Put into more UI friendly format.
+    for date,count in grouped_dates.items():
+        result.append({'date': date, 'count':count})
+
+    result = json.dumps(result)
+
+    return result
+    
+
+
+def refresh_stats(request):
+    """
+    Retrieves a fresh Statistics result, given start/end dates.
+    """
+    if request.method == 'GET':
+        start_date = request.GET.get('start')
+        end_date = request.GET.get('end')
+
+        response_data = {
+            'tickets_by_states': get_tickets_by_states(start_date,end_date),
+            'tickets_by_dates': get_tickets_by_dates(start_date,end_date)
+        }
+
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )
 
 @permission_required('recordlocator.view_exchange_data')
 def csv_redemption(request):
@@ -125,17 +206,29 @@ def tables(request):
 
 @login_required
 def statistics(request):
+
     educator_tickets = Educator.objects.all().aggregate(
         Sum('num_students'))['num_students__sum']
 
+    if not educator_tickets:
+        educator_tickets = 0
+
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
+    num_tickets_issued = Ticket.objects.count()
+
+    one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%m/%d/%Y')
+    today = datetime.now().strftime('%m/%d/%Y')
 
     return render(
         request,
         'stats.html',
         {
-            'num_tickets_issued': Ticket.objects.count(),
+            'start_date': one_year_ago,
+            'end_date': today,
+            'tickets_dates': get_tickets_by_dates(one_year_ago, today),
+            'tickets_states': get_tickets_by_states(one_year_ago, today),
+            'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
             'educator_tickets_issued': educator_tickets

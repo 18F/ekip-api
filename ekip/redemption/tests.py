@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your tests here.
 from .views import (States, 
     redeem_voucher, get_num_tickets_exchanged,
-    get_num_tickets_exchanged_more_than_once, convert_to_date)
+    get_num_tickets_exchanged_more_than_once, convert_to_date, convert_to_db_date, get_tickets_by_dates, get_tickets_by_states)
 from nationalparks.models import FederalSite
 from ticketer.recordlocator.models import AdditionalRedemption
 
@@ -115,3 +115,22 @@ class StatisticsTestCase(TestCase):
 
         after = get_num_tickets_exchanged_more_than_once()
         self.assertTrue(after > before)
+
+    def test_get_tickets_by_dates(self):
+        start_date = "01/01/2014"
+        end_date = "01/01/2017"
+        data = get_tickets_by_dates(start_date, end_date)
+        self.assertIsNotNone(data, None)
+
+    def test_get_tickets_by_states(self):
+        start_date = "01/01/2014"
+        end_date = "01/01/2017"
+        data = get_tickets_by_states(start_date, end_date)
+        self.assertIsNotNone(data, None)
+
+    def test_convert_to_db_date(self):
+        date = "01/01/2014"
+        date = convert_to_db_date(date)
+        self.assertEqual(date, '2014-01-01')
+
+

@@ -1,10 +1,11 @@
 from django.conf.urls import patterns, include, url
 from redemption.views import redeem_confirm, redeem_for_site, sites_for_state
-from redemption.views import get_passes_state, statistics, tables, csv_redemption
+from redemption.views import get_passes_state, statistics, tables, csv_redemption, refresh_stats
 
 urlpatterns = patterns(
     '', 
     url(r'statistics/$', statistics),
+    url(r'statistics/refresh/$', refresh_stats),
     url('data/exchanges/$', csv_redemption, name='exchanges_data'),
     url(r'data/$', tables),
     url(r'location/(?P<slug>[-\w]+)/$', redeem_for_site),
