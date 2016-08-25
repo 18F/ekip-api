@@ -1,5 +1,8 @@
 language: python
 
+services:
+- postgresql
+
 python:
   - "3.4"
 
@@ -7,9 +10,16 @@ install:
   - travis_retry pip install -r requirements.txt
   - travis_retry pip install -r requirements-dev.txt
 
+before_script:
+  - psql -c "create user ekip with password 'ekip';"
+  - psql -c "alter user ekip with superuser;"
+  - psql -c "CREATE DATABASE ekip;"
+  - psql -c "GRANT ALL PRIVILEGES ON DATABASE ekip TO ekip;"
+
 script:
   - bandit -r ekip
   - cd ekip
   - coverage run --source=everykid manage.py test --settings=config.settings.test
+
 after_success:
   - coveralls
