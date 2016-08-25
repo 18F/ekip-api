@@ -11,10 +11,10 @@ install:
   - travis_retry pip install -r requirements-dev.txt
 
 before_script:
-  - psql -c "create user ekip with password 'ekip';"
-  - psql -c "alter user ekip with superuser;"
-  - psql -c "CREATE DATABASE ekip;"
-  - psql -c "GRANT ALL PRIVILEGES ON DATABASE ekip TO ekip;"
+  - psql -c "create user ekip with password 'ekip';" -U postgres
+  - psql -c "alter user ekip with superuser;" -U postgres
+  - psql -c "CREATE DATABASE ekip;" -U postgres
+  - psql -c "GRANT ALL PRIVILEGES ON DATABASE ekip TO ekip;" -U postgres
 
 script:
   - bandit -r ekip
