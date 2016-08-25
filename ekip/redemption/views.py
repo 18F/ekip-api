@@ -105,6 +105,7 @@ def refresh_stats(request):
         end_date = request.GET.get('end')
 
         response_data = {
+            # State-level data is being hidden until needed.
             'tickets_by_states': json.dumps([]), #get_tickets_by_states(start_date,end_date),
             'tickets_by_dates': get_tickets_by_dates(start_date,end_date)
         }
@@ -221,6 +222,7 @@ def statistics(request):
             'start_date': one_year_ago,
             'end_date': today,
             'tickets_dates': get_tickets_by_dates(one_year_ago, today),
+            # State-level data is being hidden until needed.
             'tickets_states': json.dumps([]), # get_tickets_by_states(one_year_ago, today),
             'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
