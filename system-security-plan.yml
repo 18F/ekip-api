@@ -37,6 +37,12 @@ staff:
         org: General Services Administration
         unit: 18F
         email: devops@gsa.gov
+    developer:
+        name: Colin Craig
+        title: Engineer
+        org: General Services Administration
+        unit: 18F
+        email: colin.craig@gsa.gov
     technical-lead:
 		name: Shashank Khandelwal 
         title: Engineer
