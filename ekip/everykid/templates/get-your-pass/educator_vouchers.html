@@ -20,7 +20,8 @@
       <h1>Congratulations!</h1>
       <h2>You've earned a free pass</h2>
       <h3>to all federal parks, lands, and waters</h3>
-      <h4>Start your adventure!</h4>
+      <!-- <h4>Start your adventure!</h4> -->
+      <h4>Follow these instructions to start your adventure!</h4>
     </div>
 
     <div class="steps">
@@ -28,25 +29,29 @@
       <img src="{% static 'img/voucher-rules.svg' %}" class="step-lines" alt="" />
 
       <div class="voucher">
-        <img class="voucher-image" src="{% static 'img/voucher.jpg' %}" alt="" />
+        <img class="voucher-image" src="{% static 'img/voucher.png' %}" alt="" />
 
         <div class="voucher-barcode">
           <img class="barcode" alt="barcode" data-id="{{ locator }}" />
         </div>
       </div>
-
+      
       <ol>
         <li class="print-page">
           <h2>Print this page</h2>
-          <p>You must have a printed pass. We can't take electronic copies.</p>
+          <!-- <p>You must have a printed pass. We can't take electronic copies.</p> -->
+          <p>Great job! First print this paper voucher and put it in a safe place until you are ready to use it.</p>
         </li>
         <li class="plan">
           <h2>Hit the road</h2>
-          <p>Plan your trip at www.everykidinapark.gov/plan-your-trip/</p>
+          <!-- <p>Plan your trip at www.everykidinapark.gov/plan-your-trip/</p> -->
+          <p>Click “Plan Your Trip” on this website (www.everykidinapark.gov) to learn about all of the places you can go.</p>
         </li>
         <li class="get">
-          <h2>Get your pass and get in free!</h2>
-          <p>Show this paper to exchange for your free pass, or use it for access until you can. Be safe and have fun!</p>
+          <!-- <h2>Get your pass and get in free!</h2> -->
+          <h2>Get in free!</h2>
+          <!--  <p>Show this paper to exchange for your free pass, or use it for access until you can. Be safe and have fun!</p> -->
+          <p>Show this paper voucher to receive free access and/or claim your 4th grade pass. Be safe and have fun!</p>
 
           <img class="durable-pass" src="{% static 'img/durable-pass.jpg' %}" alt="" />
         </li>
