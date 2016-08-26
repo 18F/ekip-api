@@ -11,7 +11,7 @@ ALLOWED_HOSTS = [
     '.everykidinapark.gov', # Allow domain and subdomains
     'kids-prod.18f.gov', # Internal URL for production instance 
     'kids.18f.gov', # Allow staging URL
-    'kids-dev.18f.gov', # Allow development URL
+    'kids-dev.18f.gov' # Allow development URL
     ]
 
 DATABASES = {}

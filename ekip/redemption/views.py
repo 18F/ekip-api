@@ -70,35 +70,29 @@ def get_tickets_by_states(start_date, end_date):
     tickets_states = json.dumps(tickets_states)
     return tickets_states
 
-def get_tickets_by_dates(start_date, end_date):
-    """
-    Retrieves all of the tickets generated grouped by Date. Data is Monthly by default.
-    """
 
-    tickets_dates = []
-    grouped_dates = {}
-    result = []
+def get_tickets_by_dates(start_date, end_date):
 
     # Base query with a date range.
-    ticket_dates = Ticket.objects \
-                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date))) \
-                .values('created').annotate(count=Count('created'))
+    ticket_date_query = Ticket.objects \
+                .extra(select={
+                        'month': "EXTRACT(month FROM created)",
+                        'year': "EXTRACT(year FROM created)"
+                }) \
+                .filter(created__range=(convert_to_db_date(start_date), convert_to_db_date(end_date)))
 
-    # Group Tickets by Month.
-    for ticket in ticket_dates:
-        YM = str(int(ticket['created'].year)) + str(int(ticket['created'].month))
-        if YM in grouped_dates:
-            grouped_dates[YM] += ticket['count']
-        else:
-            grouped_dates[YM] = ticket['count']
+    # Get all Tickets created, grouped by date.
+    tickets_by_date = ticket_date_query \
+               .values('month','year') \
+               .annotate(count=Count('created'))
 
-    # Put into more UI friendly format.
-    for date,count in grouped_dates.items():
-        result.append({'date': date, 'count':count})
+    tickets_dates = []
+    if tickets_by_date:
+        for ticket in tickets_by_date:
+            tickets_dates.append({'date': str(int(ticket['year'])) + str(int(ticket['month'])), 'count':ticket['count']})
 
-    result = json.dumps(result)
-
-    return result
+    tickets_dates = json.dumps(tickets_dates)
+    return tickets_dates
     
 
 
@@ -111,7 +105,8 @@ def refresh_stats(request):
         end_date = request.GET.get('end')
 
         response_data = {
-            'tickets_by_states': get_tickets_by_states(start_date,end_date),
+            # State-level data is being hidden until needed.
+            'tickets_by_states': json.dumps([]), #get_tickets_by_states(start_date,end_date),
             'tickets_by_dates': get_tickets_by_dates(start_date,end_date)
         }
 
@@ -227,7 +222,8 @@ def statistics(request):
             'start_date': one_year_ago,
             'end_date': today,
             'tickets_dates': get_tickets_by_dates(one_year_ago, today),
-            'tickets_states': get_tickets_by_states(one_year_ago, today),
+            # State-level data is being hidden until needed.
+            'tickets_states': json.dumps([]), # get_tickets_by_states(one_year_ago, today),
             'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
