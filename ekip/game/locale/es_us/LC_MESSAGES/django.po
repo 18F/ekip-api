@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 19:07-0400\n"
+"POT-Creation-Date: 2016-08-29 19:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: templates/adventure/choose_adventure.html:5
+#: templates/adventure/nature_walk.html:5
 #: templates/adventure/nature_walk_end.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
@@ -54,6 +55,38 @@ msgstr "Decidí ir a nadar."
 msgid "Go swimming!"
 msgstr "¡Ir a nadar!"
 
+#: templates/adventure/nature_walk.html:17
+msgid "When I arrived I saw:"
+msgstr "Al llegar yo vi: "
+
+#: templates/adventure/nature_walk.html:27
+#: templates/adventure/nature_walk_end.html:34
+#: templates/adventure/nature_walk_end.html:43
+msgid "When I arrived I saw huge mountains."
+msgstr "Al llegar yo vi enormes montañas."
+
+#: templates/adventure/nature_walk.html:28
+msgid "Huge mountains!"
+msgstr "¡Enormes montañas!"
+
+#: templates/adventure/nature_walk.html:31
+#: templates/adventure/nature_walk_end.html:37
+msgid "When I arrived I saw wild animals."
+msgstr "Al llegar yo vi animales salvajes"
+
+#: templates/adventure/nature_walk.html:32
+msgid "Wild animals!"
+msgstr "¡Animales salvajes!"
+
+#: templates/adventure/nature_walk.html:35
+#: templates/adventure/nature_walk_end.html:40
+msgid "When I arrived I saw beautiful plants."
+msgstr "Al llegar yo vi plantas maravillosas."
+
+#: templates/adventure/nature_walk.html:36
+msgid "Beautiful plants!"
+msgstr "¡Plantas maravillosas!"
+
 #: templates/adventure/nature_walk_end.html:18
 msgid "Dear Diary,"
 msgstr "Querido Diario,"
@@ -63,27 +96,16 @@ msgid "Today I went on a nature walk and saw"
 msgstr "Hoy di un paseo por la naturaleza y vi"
 
 #: templates/adventure/nature_walk_end.html:20
-msgid "Our country has thousands of things to see — like pine trees and prickly "
+msgid ""
+"Our country has thousands of things to see — like pine trees and prickly "
 "pears! Like lizards and bears! Like volcanoes and snowy mountains!"
-msgstr "Nuestro país tiene miles de cosas para ver como ¡pinos y chumberas! "
+msgstr ""
+"Nuestro país tiene miles de cosas para ver como ¡pinos y chumberas! "
 "¡Lagartos y osos! ¡Volcanes y montañas nevadas!"
 
 #: templates/adventure/nature_walk_end.html:21
 msgid "I can't wait to use my pass to see more!"
 msgstr "¡No puedo esperar más para usar mi pase y ver más cosas!"
-
-#: templates/adventure/nature_walk_end.html:34
-#: templates/adventure/nature_walk_end.html:43
-msgid "When I arrived I saw huge mountains."
-msgstr "Al llegar yo vi enormes montañas."
-
-#: templates/adventure/nature_walk_end.html:37
-msgid "When I arrived I saw wild animals."
-msgstr "Al llegar yo vi animales salvajes"
-
-#: templates/adventure/nature_walk_end.html:40
-msgid "When I arrived I saw beautiful plants."
-msgstr "Al llegar yo vi plantas maravillosas."
 
 #: templates/adventure/nature_walk_end.html:46
 msgid "Get your pass now"
