@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 19:51-0400\n"
+"POT-Creation-Date: 2016-08-29 19:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: templates/adventure/choose_adventure.html:5
 #: templates/adventure/nature_walk.html:5
 #: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
-#: templates/adventure/time_travel.html:5
+#: templates/adventure/swimming.html:5 templates/adventure/time_travel.html:5
 #: templates/adventure/time_travel_end.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
@@ -134,6 +134,34 @@ msgstr ""
 msgid "I had to decide what I wanted to do."
 msgstr "Tuve que decidir lo que quería hacer. "
 
+#: templates/adventure/swimming.html:16
+msgid "I could hardly wait to jump into that fresh, cold:"
+msgstr "No podía esperar para saltar en ese fresco, frío:"
+
+#: templates/adventure/swimming.html:26
+msgid "I could hardly wait to jump into that fresh, cold ocean."
+msgstr "No podía esperar para saltar en ese fresco, frío océano."
+
+#: templates/adventure/swimming.html:27
+msgid "Ocean!"
+msgstr "¡Océano!"
+
+#: templates/adventure/swimming.html:30
+msgid "I could hardly wait to jump into that fresh, cold lake."
+msgstr "No podía esperar para saltar en ese fresco, frío lago."
+
+#: templates/adventure/swimming.html:31
+msgid "Lake!"
+msgstr "¡Lago!"
+
+#: templates/adventure/swimming.html:34
+msgid "I could hardly wait to jump into that fresh, cold river."
+msgstr "No podía esperar para saltar en ese fresco, frío río."
+
+#: templates/adventure/swimming.html:35
+msgid "River!"
+msgstr "¡Río!"
+
 #: templates/adventure/time_travel.html:16
 msgid "It was so cool to see:"
 msgstr "Fue fascinante ver:"
@@ -171,12 +199,14 @@ msgid "Today I saw"
 msgstr "Hoy vi "
 
 #: templates/adventure/time_travel_end.html:17
-msgid "It was exciting to listen to the past. America's story ranges from roaming "
+msgid ""
+"It was exciting to listen to the past. America's story ranges from roaming "
 "dinosaurs all the way to me!"
-msgstr "Fue emocionante escuchar sobre el pasado. La historia de Estados Unidos "
+msgstr ""
+"Fue emocionante escuchar sobre el pasado. La historia de Estados Unidos "
 "abarca desde dinosaurios errantes hasta yo mismo!"
 
 #: templates/adventure/time_travel_end.html:18
 msgid "I can't wait to use my pass to discover more historic places."
-msgstr "No puedo esperar más para usar mi pase y descubrir más lugares históricos."
-
+msgstr ""
+"No puedo esperar más para usar mi pase y descubrir más lugares históricos."
