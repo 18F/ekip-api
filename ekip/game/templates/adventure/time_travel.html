@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -12,7 +13,7 @@
   <div class="pass-content diary">
     <div class="diary-left">
       <div class="page">
-        <h2>It was so cool to see:</h2>
+        <h2>{% trans "It was so cool to see:" %}</h2>
       </div>
     </div>
 
@@ -22,16 +23,16 @@
         {% csrf_token %}
         <ul>
           <li>
-            <img src="{% static "img/activity/house.jpg" %}" alt="It was so cool to see Martin Luther King Jr.'s house." />
-            <button type="submit" name='selection' value="mlk-house">Martin Luther King Jr.'s house!</button>
+            <img src="{% static "img/activity/house.jpg" %}" alt="{% trans "It was so cool to see Martin Luther King Jr.'s house." %}" />
+            <button type="submit" name='selection' value="mlk-house">{% trans "Martin Luther King Jr.'s house!" %}</button>
           </li>
           <li>
-            <img src="{% static "img/activity/drawings.jpg" %}" alt="It was so cool to see ancient drawings." />
-            <button type="submit" name='selection' value="ancient-drawings">Ancient drawings!</button>
+            <img src="{% static "img/activity/drawings.jpg" %}" alt="{% trans 'It was so cool to see ancient drawings.' %}" />
+            <button type="submit" name='selection' value="ancient-drawings">{% trans "Ancient drawings!" %}</button>
           </li>
           <li>
-            <img src="{% static "img/activity/tracks.jpg" %}" alt="It was so cool to see dinosaur tracks." />
-            <button type="submit" name='selection' value="dinosaur-tracks">Dinosaur tracks!</button>
+            <img src="{% static "img/activity/tracks.jpg" %}" alt="{% trans 'It was so cool to see dinosaur tracks.' %}" />
+            <button type="submit" name='selection' value="dinosaur-tracks">{% trans "Dinosaur tracks!" %}</button>
           </li>
         </ul>
         </form>
