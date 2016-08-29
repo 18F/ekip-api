@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 19:17-0400\n"
+"POT-Creation-Date: 2016-08-29 19:25-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: templates/adventure/choose_adventure.html:5
 #: templates/adventure/nature_walk.html:5
-#: templates/adventure/nature_walk_end.html:5
+#: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
@@ -88,6 +88,7 @@ msgid "Beautiful plants!"
 msgstr "¡Plantas maravillosas!"
 
 #: templates/adventure/nature_walk_end.html:18
+#: templates/adventure/start.html:21
 msgid "Dear Diary,"
 msgstr "Querido Diario,"
 
@@ -110,3 +111,13 @@ msgstr "¡No puedo esperar más para usar mi pase y ver más cosas!"
 #: templates/adventure/nature_walk_end.html:46
 msgid "Get your pass now"
 msgstr "Consigue tu pase ahora"
+
+#: templates/adventure/start.html:23
+msgid "Today I used my free pass to explore the U.S.! At first I was nervous "
+"because there were so many options. There were parks, forests, seashores, "
+"and wildlife habitats to visit."
+msgstr "¡Hoy usé mi pase gratuito para explorar los EE.UU.! Al principio sentí nervios porque había muchísimas opciones. Había parques, bosques, playas y hábitats de vida silvestre para visitar."
+
+#: templates/adventure/start.html:23
+msgid "I had to decide what I wanted to do."
+msgstr "Tuve que decidir lo que quería hacer. "
