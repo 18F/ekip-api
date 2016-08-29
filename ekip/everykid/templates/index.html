@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Main{% endblock title %}
+{% block title %}{% trans "Main" %}{% endblock title %}
 
 {% block page_id %}landing{% endblock page_id %}
 
@@ -9,11 +10,11 @@
 
 {% block content %}
 
-  <img src="{% static "img/logo.png" %}" class="logo" alt="Every Kid In A Park Logo" />
+  <img src="{% static "img/logo.png" %}" class="logo" alt="{% trans 'Every Kid In A Park Logo' %}" />
 
-  <h1><span>Hey fourth graders!</span> See America’s natural wonders and historic sites for free.</h1>
+  <h1><span>{% trans "Hey fourth graders!" %}</span> {% trans "See America’s natural wonders and historic sites for free." %}</h1>
 
-  <button class="lets-go">Let's Go!</button>
+  <button class="lets-go">{% trans "Let's Go!" %}</button>
 
   <svg class="animate-line" width="379px" height="211px" viewBox="0 0 379 211" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -29,23 +30,23 @@
     <nav class="home-mobile-menu mobile-menu">
       <ul class="menu">
         <li>
-          <a href="{% url 'how_it_works' %}">How It Works</a>
+          <a href="{% url 'how_it_works' %}">{% trans "How It Works" %}</a>
         <li>
-          <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+          <a href="{% url 'get_your_pass' %}">{% trans "Get Your Pass" %}</a>
         </li>
         <li>
-          <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+          <a href="{% url 'plan_your_trip' %}">{% trans "Plan a Trip" %}</a>
         </li>
         <li>
-          <a href="{% url 'parents' %}">Parents</a>
+          <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
         </li>
         <li>
           <ul class="sub">
             <li>
-              <a href="{% url 'educator_passes' %}">Educators</a>
+              <a href="{% url 'educator_passes' %}">{% trans "Educators" %}</a>
             </li>
             <li>
-              <a href="{% url 'about_ekip' %}">About</a>
+              <a href="{% url 'about_ekip' %}">{% trans "About" %}</a>
             </li>
           </ul>
         </li>
@@ -59,27 +60,27 @@
           <div class="image">
             <img src="{% static "img/landing-kids-1-new.jpg" %}" alt="" />
             <div class="caption">
-                Play outdoors.
+                {% trans "Play outdoors." %}
             </div>
           </div>
           <div class="description">
-            <h2>Every Kid in a Park</h2>
-            <p>You and your family get free access to hundreds of parks, lands, and waters for an entire year.</p>
+            <h2>{% trans "Every Kid in a Park" %}</h2>
+            <p>{% trans "You and your family get free access to hundreds of parks, lands, and waters for an entire year." %}</p>
 
-            <a href="{% url "how_it_works" %}"><button>How it works</button></a>
+            <a href="{% url "how_it_works" %}"><button>{% trans "How it works" %}</button></a>
           </div>
         </li>
         <li class="fourth-graders">
           <div class="description">
-            <h2>Fourth graders</h2>
-            <p>This is for you! Explore ancient dwellings. See a waterfall taller than a building.</p>
+            <h2>{% trans "Fourth graders" %}</h2>
+            <p>{% trans "This is for you! Explore ancient dwellings. See a waterfall taller than a building." %}</p>
 
-            <a href="{% url 'student_pass' %}"><button>Get your pass</button></a>
+            <a href="{% url 'student_pass' %}"><button>{% trans "Get your pass" %}</button></a>
           </div>
           <div class="image">
             <img src="{% static "img/landing-kids-2-new.jpg" %}" alt="" />
             <div class="caption">
-                Explore with friends.
+                {% trans "Explore with friends." %}
             </div>
           </div>
         </li>
@@ -87,27 +88,27 @@
           <div class="image">
             <img src="{% static "img/landing-kids-3-new.jpg" %}" alt="" />
             <div class="caption">
-                Go climbing.
+                {% trans "Go climbing." %}
             </div>
           </div>
           <div class="description">
-            <h2>Parents and guardians</h2>
-            <p>Stay close to home, or travel somewhere new. This year's the perfect time for an unforgettable outing.</p>
+            <h2>{% trans "Parents and guardians" %}</h2>
+            <p>{% trans "Stay close to home, or travel somewhere new. This year's the perfect time for an unforgettable outing." %}</p>
 
-            <a href="{% url 'parents' %}"><button>Learn more</button></a>
+            <a href="{% url 'parents' %}"><button>{% trans "Learn more" %}</button></a>
           </div>
         </li>
         <li class="educators">
           <div class="description">
-            <h2>Educators</h2>
-            <p>Get passes, download our activity, or plan a life-changing field trip for your fourth-grade students.</p>
+            <h2>{% trans "Educators" %}</h2>
+            <p>{% trans "Get passes, download our activity, or plan a life-changing field trip for your fourth-grade students." %}</p>
 
-            <a href="{% url "educator_passes" %}"><button>More Info</button></a>
+            <a href="{% url "educator_passes" %}"><button>{% trans "More Info" %}</button></a>
           </div>
           <div class="image">
             <img src="{% static "img/landing-kids-4-new.jpg" %}" alt="" />
             <div class="caption">
-                Try something new.
+                {% trans "Try something new." %}
             </div>
           </div>
         </li>
@@ -122,10 +123,8 @@
     <section>
 
       <span class="quote">
-        <p>“Because no matter who you are, no matter where you live, our parks,
-        our monuments, our lands, our waters &mdash; these places are your birthright
-        as Americans”</p>
-        <span class="author">President Barack Obama</span>
+        <p>{% trans "“Because no matter who you are, no matter where you live, our parks, our monuments, our lands, our waters &mdash; these places are your birthright as Americans”" %}</p>
+        <span class="author">{% trans "President Barack Obama" %}</span>
       </span>
 
     </section>
