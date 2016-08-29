@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Privacy Policy{% endblock title %}
+{% block title %}{% trans "Privacy Policy" %}{% endblock title %}
 {% block page_id %}privacy-policy{% endblock page_id %}
 {% block background %}landing{% endblock background %}
 
 {% block content %}
 
-<h1> Rules and instructions </h1>
+<h1> {% trans "Rules and instructions" %} </h1>
 
 {% include 'get-your-pass/voucher-rules.html' %}
 

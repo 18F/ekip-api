@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 18:35-0400\n"
+"POT-Creation-Date: 2016-08-29 18:42-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -350,7 +350,8 @@ msgstr ""
 msgid ""
 "Check out \"plan your trip\" to find fun things to do at public lands, "
 "waters, and parks."
-msgstr "Revisa “Planea un Viaje” para encontrar cosas divertidas que hacer en "
+msgstr ""
+"Revisa “Planea un Viaje” para encontrar cosas divertidas que hacer en "
 "tierras, aguas y parques públicos."
 
 #: templates/parents.html:50
@@ -370,21 +371,33 @@ msgid "Why fourth graders"
 msgstr "Por qué escolares de  4ºgrado"
 
 #: templates/parents.html:58
-msgid "We chose fourth graders because research shows that kids ages nine to 11 are "
+msgid ""
+"We chose fourth graders because research shows that kids ages nine to 11 are "
 "beginning to learn about the world around them. They’re open to new ideas, "
 "and they are likely to connect to nature and our history."
-msgstr "Nosotros seleccionamos escolares de  4ºgrado porque la investigación "
+msgstr ""
+"Nosotros seleccionamos escolares de  4ºgrado porque la investigación "
 "muestras que los niños de entre 9 y 11 años comienzan a aprender sobre el "
 "mundo que les rodea. Ellos están abiertos a nuevas ideas, y dispuestos a "
 "conectar con la naturaleza y nuestra historia."
 
 #: templates/parents.html:59
-msgid "We offer the pass to fourth graders every year. Over time, every kid can get "
+msgid ""
+"We offer the pass to fourth graders every year. Over time, every kid can get "
 "a free pass to explore our country."
-msgstr "¡Este año es solamente el principio! Ofreceremos el pase a escolares de  4ºgrado "
-"cada año. Con el tiempo, todos los niños podrán obtener un pase gratuito para explorar "
-"nuestro país."
+msgstr ""
+"¡Este año es solamente el principio! Ofreceremos el pase a escolares de  "
+"4ºgrado cada año. Con el tiempo, todos los niños podrán obtener un pase "
+"gratuito para explorar nuestro país."
 
 #: templates/parents.html:60
 msgid "family fishing"
 msgstr "pesca en familia"
+
+#: templates/rules.html:4
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: templates/rules.html:10
+msgid "Rules and instructions"
+msgstr "Reglas e instrucciones "
