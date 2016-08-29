@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 18:27-0400\n"
+"POT-Creation-Date: 2016-08-29 18:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,8 +99,10 @@ msgid "An official website of the United States Government."
 msgstr "Un sitio internet oficial del gobierno de Estados Unidos."
 
 #: templates/404.html:28 templates/base.html:30
-msgid "US flag signifying that this is a United States Federal Government website"
-msgstr "la bandera de EEUU significa que este es un sitio internet del gobierno "
+msgid ""
+"US flag signifying that this is a United States Federal Government website"
+msgstr ""
+"la bandera de EEUU significa que este es un sitio internet del gobierno "
 "federal de los Estados Unidos"
 
 #: templates/404.html:33
@@ -147,7 +149,7 @@ msgid "Plan a Trip"
 msgstr "Planea un Viaje"
 
 #: templates/base.html:84 templates/base.html:126 templates/index.html:41
-#: templates/nav.html:7
+#: templates/nav.html:7 templates/parents.html:5
 msgid "Parents"
 msgstr "Padres"
 
@@ -264,7 +266,7 @@ msgstr "Pasa tiempo con amigos."
 msgid "Go climbing."
 msgstr "Ve a pescar."
 
-#: templates/index.html:95
+#: templates/index.html:95 templates/parents.html:15
 msgid "Parents and guardians"
 msgstr "Padres y tutores"
 
@@ -309,3 +311,80 @@ msgstr ""
 #: templates/index.html:127
 msgid "President Barack Obama"
 msgstr "Presidente Barack Obama"
+
+#: templates/parents.html:17
+msgid ""
+"“The wilderness holds answers to questions man has not yet learned to ask.”"
+msgstr ""
+"“La naturaleza ofrece respuestas a preguntas que el hombre todavía no "
+"haaprendido a hacer.”"
+
+#: templates/parents.html:19
+msgid ""
+"Your child can take you amazing places! With the pass, fourth graders can "
+"bring family and friends on adventures free for a full year."
+msgstr ""
+"¡Su hijo puede llevarles a lugares asombrosos! Con el pase, los escolares de "
+"4ºgrado pueden llevar a familiares y amigos para vivir aventuras gratis "
+"durante todo un año."
+
+#: templates/parents.html:22
+msgid "Learn More"
+msgstr "Aprende más"
+
+#: templates/parents.html:42
+msgid "Plan a trip"
+msgstr "Planea un Viaje"
+
+#: templates/parents.html:43
+msgid ""
+"Visiting public lands is healthy and fun. Learn about your heritage, and "
+"connect with nature. No matter where you live in the U.S., you’re within two "
+"hours of an included site."
+msgstr ""
+"Visitar tierras públicas es saludable y divertido. Aprende sobre tu herencia "
+"y conecta con la naturaleza. No importa donde vivas en EE.UU. estás a menos "
+"de dos horas de cualquiera de nuestros sitios."
+
+#: templates/parents.html:44
+msgid ""
+"Check out \"plan your trip\" to find fun things to do at public lands, "
+"waters, and parks."
+msgstr "Revisa “Planea un Viaje” para encontrar cosas divertidas que hacer en "
+"tierras, aguas y parques públicos."
+
+#: templates/parents.html:50
+msgid "Official rules"
+msgstr "Reglas oficiales"
+
+#: templates/parents.html:51
+msgid "See our rules and instructions before you go."
+msgstr "Revisa nuestras reglas e instrucciones antes de navegar."
+
+#: templates/parents.html:52
+msgid "View Rules"
+msgstr "Revisa las Reglas"
+
+#: templates/parents.html:57
+msgid "Why fourth graders"
+msgstr "Por qué escolares de  4ºgrado"
+
+#: templates/parents.html:58
+msgid "We chose fourth graders because research shows that kids ages nine to 11 are "
+"beginning to learn about the world around them. They’re open to new ideas, "
+"and they are likely to connect to nature and our history."
+msgstr "Nosotros seleccionamos escolares de  4ºgrado porque la investigación "
+"muestras que los niños de entre 9 y 11 años comienzan a aprender sobre el "
+"mundo que les rodea. Ellos están abiertos a nuevas ideas, y dispuestos a "
+"conectar con la naturaleza y nuestra historia."
+
+#: templates/parents.html:59
+msgid "We offer the pass to fourth graders every year. Over time, every kid can get "
+"a free pass to explore our country."
+msgstr "¡Este año es solamente el principio! Ofreceremos el pase a escolares de  4ºgrado "
+"cada año. Con el tiempo, todos los niños podrán obtener un pase gratuito para explorar "
+"nuestro país."
+
+#: templates/parents.html:60
+msgid "family fishing"
+msgstr "pesca en familia"
