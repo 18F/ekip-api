@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -12,7 +13,7 @@
   <div class="pass-content diary">
     <div class="diary-left">
       <div class="page">
-        <h2>I could hardly wait to jump into that fresh, cold: </h2>
+        <h2>{% trans "I could hardly wait to jump into that fresh, cold:" %} </h2>
         </div>
     </div>
 
@@ -22,16 +23,16 @@
         {% csrf_token %}
         <ul>
           <li>
-            <img src="{% static "img/activity/ocean.jpg" %}" alt="I could hardly wait to jump into that fresh, cold ocean." />
-            <button type="submit" name='selection' value="ocean">Ocean!</button>
+            <img src="{% static "img/activity/ocean.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold ocean.' %}" />
+            <button type="submit" name='selection' value="ocean">{% trans "Ocean!" %}</button>
           </li>
           <li>
-            <img src="{% static "img/activity/lake.jpg" %}" alt="I could hardly wait to jump into that fresh, cold lake." />
-            <button type="submit" name='selection' value="lake">Lake!</button>
+            <img src="{% static "img/activity/lake.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold lake.' %}" />
+            <button type="submit" name='selection' value="lake">{% trans "Lake!" %}</button>
           </li>
           <li>
-            <img src="{% static "img/activity/river.jpg" %}" alt="I could hardly wait to jump into that fresh, cold river." />
-            <button type="submit" name='selection' value="river">River!</button>
+            <img src="{% static "img/activity/river.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold river.' %}" />
+            <button type="submit" name='selection' value="river">{% trans "River!" %}</button>
           </li>
         </ul>
         </form>
