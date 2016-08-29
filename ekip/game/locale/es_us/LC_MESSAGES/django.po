@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 19:41-0400\n"
+"POT-Creation-Date: 2016-08-29 19:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: templates/adventure/nature_walk.html:5
 #: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
 #: templates/adventure/time_travel.html:5
+#: templates/adventure/time_travel_end.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
@@ -41,6 +42,10 @@ msgid "Go on a nature walk!"
 msgstr "Paseo por la naturaleza!"
 
 #: templates/adventure/choose_adventure.html:34
+#: templates/adventure/time_travel_end.html:26
+#: templates/adventure/time_travel_end.html:29
+#: templates/adventure/time_travel_end.html:32
+#: templates/adventure/time_travel_end.html:35
 msgid "I decided to time travel."
 msgstr "Decidí viajar en el tiempo."
 
@@ -90,6 +95,7 @@ msgstr "¡Plantas maravillosas!"
 
 #: templates/adventure/nature_walk_end.html:18
 #: templates/adventure/start.html:21
+#: templates/adventure/time_travel_end.html:16
 msgid "Dear Diary,"
 msgstr "Querido Diario,"
 
@@ -110,6 +116,7 @@ msgid "I can't wait to use my pass to see more!"
 msgstr "¡No puedo esperar más para usar mi pase y ver más cosas!"
 
 #: templates/adventure/nature_walk_end.html:46
+#: templates/adventure/time_travel_end.html:39
 msgid "Get your pass now"
 msgstr "Consigue tu pase ahora"
 
@@ -132,6 +139,8 @@ msgid "It was so cool to see:"
 msgstr "Fue fascinante ver:"
 
 #: templates/adventure/time_travel.html:26
+#: templates/adventure/time_travel_end.html:27
+#: templates/adventure/time_travel_end.html:36
 msgid "It was so cool to see Martin Luther King Jr.'s house."
 msgstr "Fue fascinante ver la casa de Martin Luther King Jr."
 
@@ -140,6 +149,7 @@ msgid "Martin Luther King Jr.'s house!"
 msgstr "¡La casa de Martin Luther King Jr.!"
 
 #: templates/adventure/time_travel.html:30
+#: templates/adventure/time_travel_end.html:30
 msgid "It was so cool to see ancient drawings."
 msgstr "Fue fascinante ver dibujos antiguos."
 
@@ -148,9 +158,25 @@ msgid "Ancient drawings!"
 msgstr "¡Dibujos antiguos!"
 
 #: templates/adventure/time_travel.html:34
+#: templates/adventure/time_travel_end.html:33
 msgid "It was so cool to see dinosaur tracks."
 msgstr "Fue fascinante ver huellas de dinosaurio."
 
 #: templates/adventure/time_travel.html:35
 msgid "Dinosaur tracks!"
 msgstr "¡Huellas de dinosaurio!"
+
+#: templates/adventure/time_travel_end.html:17
+msgid "Today I saw"
+msgstr "Hoy vi "
+
+#: templates/adventure/time_travel_end.html:17
+msgid "It was exciting to listen to the past. America's story ranges from roaming "
+"dinosaurs all the way to me!"
+msgstr "Fue emocionante escuchar sobre el pasado. La historia de Estados Unidos "
+"abarca desde dinosaurios errantes hasta yo mismo!"
+
+#: templates/adventure/time_travel_end.html:18
+msgid "I can't wait to use my pass to discover more historic places."
+msgstr "No puedo esperar más para usar mi pase y descubrir más lugares históricos."
+
