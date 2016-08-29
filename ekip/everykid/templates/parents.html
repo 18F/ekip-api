@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Parents{% endblock title %}
+{% block title %}{% trans "Parents" %}{% endblock title %}
 
 {% block page_id %}parents{% endblock page_id %}
 
@@ -11,14 +12,14 @@
 
   <div class="parents-content">
 
-    <h1>Parents and guardians</h1>
+    <h1>{% trans "Parents and guardians" %}</h1>
 
-    <p>“The wilderness holds answers to questions man has not yet learned to ask.” <span class="author">– NANCY NEWHALL</span></p>
+    <p>{% trans "“The wilderness holds answers to questions man has not yet learned to ask.”" %} <span class="author">– NANCY NEWHALL</span></p>
 
-    <p>Your child can take you amazing places! With the pass, fourth graders can bring family and friends on adventures free for a full year.</p>
+    <p>{% trans "Your child can take you amazing places! With the pass, fourth graders can bring family and friends on adventures free for a full year." %}</p>
 
     <div class="parents-more">
-      Learn More
+      {% trans "Learn More" %}
 
       <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -38,25 +39,25 @@
   <ul>
     <li>
       <div class="section-content plan-a-trip">
-        <h2>Plan a trip</h2>
-        <p>Visiting public lands is healthy and fun. Learn about your heritage, and connect with nature. No matter where you live in the U.S., you’re within two hours of an included site.</p>
-        <p>Check out "plan your trip" to find fun things to do at public lands, waters, and parks.</p>
+        <h2>{% trans "Plan a trip" %}</h2>
+        <p>{% trans "Visiting public lands is healthy and fun. Learn about your heritage, and connect with nature. No matter where you live in the U.S., you’re within two hours of an included site." %}</p>
+        <p>{% trans 'Check out "plan your trip" to find fun things to do at public lands, waters, and parks.' %}</p>
         <a href="{% url "plan_your_trip" %}"><button>Go</button></a>
       </div>
     </li>
     <li>
       <div class="section-content rules">
-        <h2>Official rules</h2>
-        <p>See our rules and instructions before you go.</p>
-        <a href="{% url 'rules' %}"><button>View Rules</button></a>
+        <h2>{% trans "Official rules" %}</h2>
+        <p>{% trans "See our rules and instructions before you go." %}</p>
+        <a href="{% url 'rules' %}"><button>{% trans "View Rules" %}</button></a>
       </div>
     </li>
     <li>
       <div class="section-content why">
-        <h2>Why fourth graders</h2>
-        <p>We chose fourth graders because research shows that kids ages nine to 11 are beginning to learn about the world around them. They’re open to new ideas, and they are likely to connect to nature and our history.</p>
-        <p>We offer the pass to fourth graders every year. Over time, every kid can get a free pass to explore our country.</p>
-        <img src="{% static "img/parents-fishing.jpg" %}" alt="family fishing" />
+        <h2>{% trans "Why fourth graders" %}</h2>
+        <p>{% trans "We chose fourth graders because research shows that kids ages nine to 11 are beginning to learn about the world around them. They’re open to new ideas, and they are likely to connect to nature and our history." %}</p>
+        <p>{% trans "We offer the pass to fourth graders every year. Over time, every kid can get a free pass to explore our country." %}</p>
+        <img src="{% static "img/parents-fishing.jpg" %}" alt="{% trans 'family fishing' %}" />
       </div>
     </li>
   </ul>
