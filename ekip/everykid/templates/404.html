@@ -1,5 +1,5 @@
 {% load staticfiles %}
-
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,28 +14,28 @@
   <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-  <title>Every Kid in a Park | Sorry! We couldn't find this page.</title>
+  <title>{% trans "Every Kid in a Park" %} | {% trans "Sorry! We couldn't find this page." %}</title>
   <meta name="description" content="">
 
 </head>
 
 <body id="not-found">
 
-  <a id="skipnav" href="#maincontent">skip to main content</a>
+  <a id="skipnav" href="#maincontent">{% trans "skip to main content" %}</a>
 
   <div class="govt-banner">
-    An official website of the United States Government.
-    <img alt="US flag signifying that this is a United States Federal Government website" src="{% static 'img/us_flag_small.png' %}" />
+    {% trans "An official website of the United States Government." %}
+    <img alt="{% trans 'US flag signifying that this is a United States Federal Government website' %}" src="{% static 'img/us_flag_small.png' %}" />
   </div>
 
   <div id="maincontent">
 
-    <img src="{% static "img/404-compass.png" %}" class="compass" alt="Compass" />
+    <img src="{% static "img/404-compass.png" %}" class="compass" alt="{% trans 'Compass' %}" />
 
-    <h1>Sorry!<br/>We couldn't find this page.</h1>
-    <h2>It must be out exploring!</h2>
+    <h1>{% trans "Sorry!" %}<br/>{% trans "We couldn't find this page." %}</h1>
+    <h2>{% trans "It must be out exploring!" %}</h2>
 
-    <a href="/"><button>Get Back On Track</button></a>
+    <a href="/"><button>{% trans "Get Back On Track" %}</button></a>
 
   </div>
 
