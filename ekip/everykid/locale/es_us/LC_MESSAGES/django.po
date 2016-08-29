@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 17:44-0400\n"
+"POT-Creation-Date: 2016-08-29 18:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,24 +82,46 @@ msgstr ""
 msgid "You can not print less than one pass."
 msgstr ""
 
-#: templates/base.html:19 templates/index.html:67
+#: templates/404.html:17 templates/base.html:19 templates/index.html:67
 msgid "Every Kid in a Park"
 msgstr "Todos los Niños en un Parque"
 
-#: templates/base.html:26
+#: templates/404.html:17
+msgid "Sorry! We couldn't find this page."
+msgstr "No pudimos encontrar esta página."
+
+#: templates/404.html:24 templates/base.html:26
 msgid "skip to main content"
 msgstr "ir al contenido principal"
 
-#: templates/base.html:29
+#: templates/404.html:27 templates/base.html:29
 msgid "An official website of the United States Government."
 msgstr "Un sitio internet oficial del gobierno de Estados Unidos."
 
-#: templates/base.html:30
-msgid ""
-"US flag signifying that this is a United States Federal Government website"
-msgstr ""
-"a bandera de EEUU significa que este es un sitio internet del gobierno "
+#: templates/404.html:28 templates/base.html:30
+msgid "US flag signifying that this is a United States Federal Government website"
+msgstr "la bandera de EEUU significa que este es un sitio internet del gobierno "
 "federal de los Estados Unidos"
+
+#: templates/404.html:33
+msgid "Compass"
+msgstr "Brújula"
+
+#: templates/404.html:35
+msgid "Sorry!"
+msgstr "¡Disculpas!"
+
+#: templates/404.html:35
+msgid "We couldn't find this page."
+msgstr "No pudimos encontrar esta página."
+
+#: templates/404.html:36
+msgid "It must be out exploring!"
+msgstr "¡Debe estar explorando en algún lugar!"
+
+#: templates/404.html:38
+msgid "Get Back On Track"
+msgstr "Retome el camino"
 
 #: templates/base.html:44 templates/index.html:13 templates/nav.html:22
 msgid "Every Kid In A Park Logo"
@@ -275,12 +297,14 @@ msgid "Try something new."
 msgstr "Prueba algo nuevo."
 
 #: templates/index.html:126
-msgid "“Because no matter who you are, no matter where you live, our parks, our "
+msgid ""
+"“Because no matter who you are, no matter where you live, our parks, our "
 "monuments, our lands, our waters &mdash; these places are your birthright as "
 "Americans”"
-msgstr "“Porque no importa donde estés ni donde vivas, nuestros parques, "
-"nuestras tierras, nuestras aguas &mdash; estos lugares son tu derecho "
-"natural como estadounidense”"
+msgstr ""
+"“Porque no importa donde estés ni donde vivas, nuestros parques, nuestras "
+"tierras, nuestras aguas &mdash; estos lugares son tu derecho natural como "
+"estadounidense”"
 
 #: templates/index.html:127
 msgid "President Barack Obama"
