@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 20:03-0400\n"
+"POT-Creation-Date: 2016-08-29 20:11-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
 #: templates/adventure/swimming.html:5 templates/adventure/swimming_end.html:5
 #: templates/adventure/time_travel.html:5
-#: templates/adventure/time_travel_end.html:5
+#: templates/adventure/time_travel_end.html:5 templates/first-game/start.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
@@ -181,12 +181,14 @@ msgid "I made sure to go with an adult."
 msgstr "Me aseguré de ir con un adulto."
 
 #: templates/adventure/swimming_end.html:18
-msgid "Sometimes water is clear — you can see straight to the bottom. Sometimes "
+msgid ""
+"Sometimes water is clear — you can see straight to the bottom. Sometimes "
 "it's wavy and green, or blue. I can't wait to use my pass to discover more "
 "cool places."
-msgstr "A veces el agua está clara, y puedes ver directamente hasta el fondo. "
-"Otras veces el agua está ondulante, verde o azul. No puedo esperar más para "
-"usar mi pase y descubrir más lugares fascinantes."
+msgstr ""
+"A veces el agua está clara, y puedes ver directamente hasta el fondo. Otras "
+"veces el agua está ondulante, verde o azul. No puedo esperar más para usar "
+"mi pase y descubrir más lugares fascinantes."
 
 #: templates/adventure/time_travel.html:16
 msgid "It was so cool to see:"
@@ -236,3 +238,39 @@ msgstr ""
 msgid "I can't wait to use my pass to discover more historic places."
 msgstr ""
 "No puedo esperar más para usar mi pase y descubrir más lugares históricos."
+
+#: templates/first-game/start.html:15
+msgid "What are federal lands and waters?"
+msgstr "¿Qué son las tierras y aguas federales?"
+
+#: templates/first-game/start.html:17
+msgid "Federal lands and waters are owned by the American people (that means you) "
+"and managed by federal government."
+msgstr "Las tierras y aguas federales son propiedad del pueblo estadounidense (eso significa “tú”) y son gestionadas por el gobierno federal."
+
+#: templates/first-game/start.html:19
+msgid "Federal lands and waters include:"
+msgstr "Las tierras y aguas federales incluyen: "
+
+#: templates/first-game/start.html:22
+msgid "National parks."
+msgstr "Parques nacionales."
+
+#: templates/first-game/start.html:23
+msgid "National forests."
+msgstr "Bosques nacionales."
+
+#: templates/first-game/start.html:24
+msgid "National monuments."
+msgstr "Monumentos nacionales."
+
+#: templates/first-game/start.html:27
+msgid ""
+"A large number of federal lands and waters are open for recreational use."
+msgstr ""
+"Un gran número de tierras y aguas federales están abiertos para el uso "
+"recreativo."
+
+#: templates/first-game/start.html:29
+msgid "Next"
+msgstr "Siguiente"
