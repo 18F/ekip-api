@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -11,22 +12,21 @@
 
   <div class="pass-content">
 
-    <h2> What are federal lands and waters? </h2>
+    <h2> {% trans "What are federal lands and waters?" %} </h2>
 
-    Federal lands and waters are owned by the American people (that means you) and
-    managed by federal government.
+    {% trans "Federal lands and waters are owned by the American people (that means you) and managed by federal government." %}
 
-    <p> Federal lands and waters include: </p>
+    <p> {% trans "Federal lands and waters include:" %} </p>
 
     <ul>
-        <li> National parks.  </li>
-        <li> National forests. </li>
-        <li> National monuments. </li>
+        <li> {% trans "National parks." %}  </li>
+        <li> {% trans "National forests." %} </li>
+        <li> {% trans "National monuments." %} </li>
     </ul>
 
-    <p>A large number of federal lands and waters are open for recreational use.</p>
+    <p>{% trans "A large number of federal lands and waters are open for recreational use." %}</p>
 
-    <a href='{% url "first_game_infographic" %}'><button>Next</button></a>
+    <a href='{% url "first_game_infographic" %}'><button>{% trans "Next" %}</button></a>
 
     </div>
 
