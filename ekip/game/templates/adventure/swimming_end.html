@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -12,10 +13,9 @@
   <div class="pass-content diary diary-end">
     <div class="diary-left">
       <div class="page">
-        <h2>Dear Diary,</h2>
-        <p>Today I swam in a{% if selection == "ocean" %}n{% endif %} {{selection}}! I made sure to go with an adult.</p> 
-        <p>Sometimes water is clear — you can see straight to the bottom. 
-        Sometimes it's wavy and green, or blue. I can't wait to use my pass to discover more cool places.</p>
+        <h2>{% trans "Dear Diary," %}</h2>
+        <p>{% trans "Today I swam in a" %}{% if selection == "ocean" %}n{% endif %} {{selection}}! {% trans "I made sure to go with an adult." %}</p> 
+        <p>{% trans "Sometimes water is clear — you can see straight to the bottom. Sometimes it's wavy and green, or blue. I can't wait to use my pass to discover more cool places." %}</p>
         
       </div>
     </div>
@@ -24,20 +24,20 @@
       <div class="page">
 
       {% if selection == "ocean" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
-        <img src="{% static "img/activity/end-ocean.jpg" %}" alt="I could hardly wait to jump into that fresh, cold ocean." />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="{% trans 'I decided to go swimming.' %}" />
+        <img src="{% static "img/activity/end-ocean.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold ocean.' %}" />
       {% elif selection == "lake" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
-        <img src="{% static "img/activity/end-lake.jpg" %}" alt="I could hardly wait to jump into that fresh, cold lake." />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="{% trans 'I decided to go swimming.' %}" />
+        <img src="{% static "img/activity/end-lake.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold lake.' %}" />
       {% elif selection == "river" %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
-        <img src="{% static "img/activity/end-river.jpg" %}" alt="I could hardly wait to jump into that fresh, cold river." />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="{% trans 'I decided to go swimming.' %}" />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold river.' %}" />
       {% else %}
-        <img src="{% static "img/activity/end-swim.jpg" %}" alt="I decided to go swimming." />
-        <img src="{% static "img/activity/end-river.jpg" %}" alt="I could hardly wait to jump into that fresh, cold river." />
+        <img src="{% static "img/activity/end-swim.jpg" %}" alt="{% trans 'I decided to go swimming.' %}" />
+        <img src="{% static "img/activity/end-river.jpg" %}" alt="{% trans 'I could hardly wait to jump into that fresh, cold river.' %}" />
       {% endif %}
 
-        <a href={% url "game_success" %}><button>Get your pass now</button></a>
+        <a href={% url "game_success" %}><button>{% trans "Get your pass now" %}</button></a>
       </div>
     </div>
   </div>
