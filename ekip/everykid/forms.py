@@ -8,7 +8,7 @@ from .models import Educator
 
 
 # The U.S. states including DC and Puerto Rico
-STATES_AND_PR = US_STATES + (('PR', 'Puerto Rico'), ('VI', 'Virgin Islands'))
+STATES_AND_PR = US_STATES + (('AS', 'American Somoa'), ('GU', 'Guam'), ('PR', 'Puerto Rico'), ('VI', 'Virgin Islands'))
 STATES_AND_PR = sorted(STATES_AND_PR, key=lambda x: x[1])
 
 

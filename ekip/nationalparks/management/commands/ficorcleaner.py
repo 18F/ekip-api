@@ -4,7 +4,10 @@ from localflavor.us.us_states import US_STATES, US_TERRITORIES
 STATES = {name: abbr for abbr, name in US_STATES}
 TERRITORIES = {name: abbr for abbr, name in US_TERRITORIES}
 STATES.update(TERRITORIES)
-
+STATES['American Somoa'] = 'AS'
+STATES['Guam'] = 'GU'
+STATES['Puerto Rico'] = 'PR'
+STATES['Virgin Islands'] = 'VI'
 
 def clean_postal_code(postal_code):
     """ Clean the postal code from the dataset."""
