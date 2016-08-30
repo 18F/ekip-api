@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -11,36 +12,30 @@
 
   <div class="pass-content">
 
-    <h2> Explore some of the different land and water types below. </h2>
+    <h2> {% trans "Explore some of the different land and water types below." %} </h2>
 
     <br/>
 
-    <h3> Louisiana: Kitsatchie National Forest </h3>
+    <h3> {% trans "Louisiana: Kitsatchie National Forest" %} </h3>
 
-    <p>Kitsatchie National Forest is Louisiana's only national forest. It coveres
-    604,000 acres. Hidden in the bayous, beneath the bald cypress trees and
-    old-growth pine is a world of natural beauty and excitement.</p>
+    <p>{% trans "Kitsatchie National Forest is Louisiana's only national forest. It coveres 604,000 acres. Hidden in the bayous, beneath the bald cypress trees and old-growth pine is a world of natural beauty and excitement." %}</p>
 
-    <p>See: wild orchids, carnivorous plants.</p>
+    <p>{% trans "See: wild orchids, carnivorous plants." %}</p>
 
-    <h3>Colorado: Vermillion CLiffs National Monument</h3>
+    <h3>{% trans "Colorado: Vermillion CLiffs National Monument" %}</h3>
 
-    <p>This 280,000 acre monument is a geologic treasure containing a variety of
-    different landscapes. The colorful swirls of cross-bedded sandstone in Coyote
-    Buttes are an international hiking destination.</p>
+    <p>{% trans "This 280,000 acre monument is a geologic treasure containing a variety of different landscapes. The colorful swirls of cross-bedded sandstone in Coyote Buttes are an international hiking destination." %}</p>
 
-    <p>See: California condors.</p>
+    <p>{% trans "See: California condors." %}</p>
 
-    <h3>Maine: Acadia National Park</h3>
+    <h3>{% trans "Maine: Acadia National Park" %}</h3>
 
-    <p> This park is home to many plants and animals, and the tallest mountain on
-    the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding
-    views of the park's ocean shoreline, coastal forests and mountain silhouettes.
+    <p> {% trans "This park is home to many plants and animals, and the tallest mountain on the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding views of the park's ocean shoreline, coastal forests and mountain silhouettes." %}
     </p>
 
-    <p> Do: ride along broken stone roads build for horse-drawn vehicles.</p>
+    <p> {% trans "Do: ride along broken stone roads build for horse-drawn vehicles." %}</p>
 
-    <a href='{% url "game_success" %}'><button>Next</button></a>
+    <a href='{% url "game_success" %}'><button>{% trans "Next" %}</button></a>
 
   </div>
 
