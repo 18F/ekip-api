@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 20:26-0400\n"
+"POT-Creation-Date: 2016-08-29 20:30-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,8 @@ msgstr ""
 #: templates/adventure/time_travel.html:5
 #: templates/adventure/time_travel_end.html:5
 #: templates/first-game/endangered.html:5
-#: templates/first-game/infographic.html:5 templates/first-game/start.html:5
+#: templates/first-game/infographic.html:5
+#: templates/first-game/lands_map.html:5 templates/first-game/start.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
@@ -250,16 +251,22 @@ msgid ""
 "Federal lands and waters provide habitats for rare and endangered species. "
 "At least one or more endangered species are found in 204 of the 394 national "
 "parks."
-msgstr "Las tierras y aguas federales ofrecen hábitats para especies raras y en peligro. Al menos una o más especies en peligro viven en 204 de los 394 parques nacionales. "
+msgstr ""
+"Las tierras y aguas federales ofrecen hábitats para especies raras y en "
+"peligro. Al menos una o más especies en peligro viven en 204 de los 394 "
+"parques nacionales. "
 
 #: templates/first-game/endangered.html:19
 msgid ""
 "Examples include: the Guadelupe fur seal, the humpback whale and the brown "
 "pelican."
-msgstr "Algunos ejemplos son la foca peluda de Guadelupe, la yubarta o ballena jorobada y el pelicano pardo."
+msgstr ""
+"Algunos ejemplos son la foca peluda de Guadelupe, la yubarta o ballena "
+"jorobada y el pelicano pardo."
 
 #: templates/first-game/endangered.html:21
-#: templates/first-game/infographic.html:23 templates/first-game/start.html:29
+#: templates/first-game/infographic.html:23
+#: templates/first-game/lands_map.html:38 templates/first-game/start.html:29
 msgid "Next"
 msgstr "Siguiente"
 
@@ -292,6 +299,64 @@ msgid ""
 msgstr ""
 "Hay 117 monumentos nacionales. Cada uno presenta una interesante perspectiva "
 "sobre nuestra historia y cultura."
+
+#: templates/first-game/lands_map.html:15
+msgid "Explore some of the different land and water types below."
+msgstr "Explora algunos de los distintos tipos de tierras y aguas a continuación."
+
+#: templates/first-game/lands_map.html:19
+msgid "Louisiana: Kitsatchie National Forest"
+msgstr "Luisiana: Bosque Nacional Kitsatchie"
+
+#: templates/first-game/lands_map.html:21
+msgid ""
+"Kitsatchie National Forest is Louisiana's only national forest. It coveres "
+"604,000 acres. Hidden in the bayous, beneath the bald cypress trees and old-"
+"growth pine is a world of natural beauty and excitement."
+msgstr "El Bosque Nacional Kitsatchie es el único bosque nacional de Luisiana. "
+"Cubre 604,000 acres. Es un mundo emocionante de belleza natural escondido en "
+"los pántanos, bajo los cipreses y los viejos pinos."
+
+#: templates/first-game/lands_map.html:23
+msgid "See: wild orchids, carnivorous plants."
+msgstr "Véase: orquídeas salvajes, plantas carnívoras."
+
+#: templates/first-game/lands_map.html:25
+msgid "Colorado: Vermillion CLiffs National Monument"
+msgstr "Colorado: Monumento Nacional Vermillion Cliffs"
+
+#: templates/first-game/lands_map.html:27
+msgid ""
+"This 280,000 acre monument is a geologic treasure containing a variety of "
+"different landscapes. The colorful swirls of cross-bedded sandstone in "
+"Coyote Buttes are an international hiking destination."
+msgstr "Este monumento de 280,000 acres es un tesoro geológico que contiene "
+"toda una variedad de paisajes. Los coloridos remolinos de arena fina y "
+"gruesa en Coyote Buttes son un destino internacional para caminantes."
+
+#: templates/first-game/lands_map.html:29
+msgid "See: California condors."
+msgstr "Véase: cóndores de California."
+
+#: templates/first-game/lands_map.html:31
+msgid "Maine: Acadia National Park"
+msgstr "Maine: Parque Nacional Acadia"
+
+#: templates/first-game/lands_map.html:33
+msgid ""
+"This park is home to many plants and animals, and the tallest mountain on "
+"the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding "
+"views of the park's ocean shoreline, coastal forests and mountain "
+"silhouettes."
+msgstr "Este parque es el hogar de muchas plantas y animales, y de la mayor "
+"montaña en la costa atlántica de los EE.UU. La vía de circunvalación Park "
+"Loop Road ofrece 27 millas de espectaculares vistas del litoral oceánico "
+"del parque, bosques costeros y siluetas montañosas."
+
+#: templates/first-game/lands_map.html:36
+msgid "Do: ride along broken stone roads build for horse-drawn vehicles."
+msgstr "Haz: ve en carro en carreteras de rocas partidas construidas para "
+"vehículos manejados por caballos."
 
 #: templates/first-game/start.html:15
 msgid "What are federal lands and waters?"
