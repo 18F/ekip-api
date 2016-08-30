@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 20:11-0400\n"
+"POT-Creation-Date: 2016-08-29 20:23-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,8 @@ msgstr ""
 #: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
 #: templates/adventure/swimming.html:5 templates/adventure/swimming_end.html:5
 #: templates/adventure/time_travel.html:5
-#: templates/adventure/time_travel_end.html:5 templates/first-game/start.html:5
+#: templates/adventure/time_travel_end.html:5
+#: templates/first-game/infographic.html:5 templates/first-game/start.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
@@ -239,14 +240,49 @@ msgid "I can't wait to use my pass to discover more historic places."
 msgstr ""
 "No puedo esperar más para usar mi pase y descubrir más lugares históricos."
 
+#: templates/first-game/infographic.html:15
+msgid "How large are the federal lands and waters?"
+msgstr "¿Qué extensión tienen las tierras y aguas federales?"
+
+#: templates/first-game/infographic.html:17
+msgid ""
+"Federal lands cover somewhere between 635 and 640 million acres (484,000,000 "
+"football fields). That's 28%% of the 2.27 billion acres of land in the "
+"United States."
+msgstr ""
+"Las tierras federales cubren entre 635 y 640 millones de acres (equivalente "
+"a 484,000,000 canchas de fútbol). Eso significa 28% de los 2.27 mil millones "
+"de acres de tierra en Estados Unidos."
+
+#: templates/first-game/infographic.html:19
+msgid ""
+"Federal lands and waters exist for preservation, recreation and the "
+"development of natural resources."
+msgstr "Las tierras y aguas federales existen para asegurar la preservación, la recreación y el desarrollo de los recursos naturales."
+
+#: templates/first-game/infographic.html:21
+msgid ""
+"There are a 117 national monuments. Each presents an interesting view into "
+"our history and culture."
+msgstr ""
+"Hay 117 monumentos nacionales. Cada uno presenta una interesante perspectiva "
+"sobre nuestra historia y cultura."
+
+#: templates/first-game/infographic.html:23 templates/first-game/start.html:29
+msgid "Next"
+msgstr "Siguiente"
+
 #: templates/first-game/start.html:15
 msgid "What are federal lands and waters?"
 msgstr "¿Qué son las tierras y aguas federales?"
 
 #: templates/first-game/start.html:17
-msgid "Federal lands and waters are owned by the American people (that means you) "
+msgid ""
+"Federal lands and waters are owned by the American people (that means you) "
 "and managed by federal government."
-msgstr "Las tierras y aguas federales son propiedad del pueblo estadounidense (eso significa “tú”) y son gestionadas por el gobierno federal."
+msgstr ""
+"Las tierras y aguas federales son propiedad del pueblo estadounidense (eso "
+"significa “tú”) y son gestionadas por el gobierno federal."
 
 #: templates/first-game/start.html:19
 msgid "Federal lands and waters include:"
@@ -270,7 +306,3 @@ msgid ""
 msgstr ""
 "Un gran número de tierras y aguas federales están abiertos para el uso "
 "recreativo."
-
-#: templates/first-game/start.html:29
-msgid "Next"
-msgstr "Siguiente"
