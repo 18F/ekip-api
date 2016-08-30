@@ -19,11 +19,23 @@ CACHES = {
     }
 }
 
-
-# The test database can just be sqlite.
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'ekip',
+if 'TRAVIS' in os.environ:
+    # Use Postgres.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+            'NAME': 'ekip',                      
+            'USER': 'ekip',
+            'PASSWORD': 'ekip',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
-}
+else:
+    # The test database can just be sqlite.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'ekip',
+        }
+    }
