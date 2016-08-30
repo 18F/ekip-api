@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 19:56-0400\n"
+"POT-Creation-Date: 2016-08-29 20:03-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,8 @@ msgstr ""
 #: templates/adventure/choose_adventure.html:5
 #: templates/adventure/nature_walk.html:5
 #: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
-#: templates/adventure/swimming.html:5 templates/adventure/time_travel.html:5
+#: templates/adventure/swimming.html:5 templates/adventure/swimming_end.html:5
+#: templates/adventure/time_travel.html:5
 #: templates/adventure/time_travel_end.html:5
 msgid "Get Your Pass - Fourth Graders"
 msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
@@ -54,6 +55,10 @@ msgid "Time travel!"
 msgstr "¡Viaje en el tiempo!"
 
 #: templates/adventure/choose_adventure.html:40
+#: templates/adventure/swimming_end.html:27
+#: templates/adventure/swimming_end.html:30
+#: templates/adventure/swimming_end.html:33
+#: templates/adventure/swimming_end.html:36
 msgid "I decided to go swimming."
 msgstr "Decidí ir a nadar."
 
@@ -94,7 +99,7 @@ msgid "Beautiful plants!"
 msgstr "¡Plantas maravillosas!"
 
 #: templates/adventure/nature_walk_end.html:18
-#: templates/adventure/start.html:21
+#: templates/adventure/start.html:21 templates/adventure/swimming_end.html:16
 #: templates/adventure/time_travel_end.html:16
 msgid "Dear Diary,"
 msgstr "Querido Diario,"
@@ -116,6 +121,7 @@ msgid "I can't wait to use my pass to see more!"
 msgstr "¡No puedo esperar más para usar mi pase y ver más cosas!"
 
 #: templates/adventure/nature_walk_end.html:46
+#: templates/adventure/swimming_end.html:40
 #: templates/adventure/time_travel_end.html:39
 msgid "Get your pass now"
 msgstr "Consigue tu pase ahora"
@@ -139,6 +145,7 @@ msgid "I could hardly wait to jump into that fresh, cold:"
 msgstr "No podía esperar para saltar en ese fresco, frío:"
 
 #: templates/adventure/swimming.html:26
+#: templates/adventure/swimming_end.html:28
 msgid "I could hardly wait to jump into that fresh, cold ocean."
 msgstr "No podía esperar para saltar en ese fresco, frío océano."
 
@@ -147,6 +154,7 @@ msgid "Ocean!"
 msgstr "¡Océano!"
 
 #: templates/adventure/swimming.html:30
+#: templates/adventure/swimming_end.html:31
 msgid "I could hardly wait to jump into that fresh, cold lake."
 msgstr "No podía esperar para saltar en ese fresco, frío lago."
 
@@ -155,12 +163,30 @@ msgid "Lake!"
 msgstr "¡Lago!"
 
 #: templates/adventure/swimming.html:34
+#: templates/adventure/swimming_end.html:34
+#: templates/adventure/swimming_end.html:37
 msgid "I could hardly wait to jump into that fresh, cold river."
 msgstr "No podía esperar para saltar en ese fresco, frío río."
 
 #: templates/adventure/swimming.html:35
 msgid "River!"
 msgstr "¡Río!"
+
+#: templates/adventure/swimming_end.html:17
+msgid "Today I swam in a"
+msgstr "Hoy nadé en un"
+
+#: templates/adventure/swimming_end.html:17
+msgid "I made sure to go with an adult."
+msgstr "Me aseguré de ir con un adulto."
+
+#: templates/adventure/swimming_end.html:18
+msgid "Sometimes water is clear — you can see straight to the bottom. Sometimes "
+"it's wavy and green, or blue. I can't wait to use my pass to discover more "
+"cool places."
+msgstr "A veces el agua está clara, y puedes ver directamente hasta el fondo. "
+"Otras veces el agua está ondulante, verde o azul. No puedo esperar más para "
+"usar mi pase y descubrir más lugares fascinantes."
 
 #: templates/adventure/time_travel.html:16
 msgid "It was so cool to see:"
