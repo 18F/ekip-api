@@ -67,7 +67,7 @@ target/
 
 node_modules
 
-# Manifest files
+# Manifest files for cf-ssh
 blue_manifest.yml
 green_manifest.yml
 cf-ssh.yml
