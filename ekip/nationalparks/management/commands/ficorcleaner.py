@@ -31,7 +31,7 @@ def clean_advance_reservation(text):
     Returns 'True' if reservation required, False otherwise. """
 
     text = text.lower()
-    if text in ['yes']:
+    if text in ['yes', 'y']:
         return True
     if 'registration required' in text:
         return True
@@ -106,7 +106,8 @@ def clean_youth_facilities(facilities):
     list. """
 
     facilities = facilities.lower()
-    facilities = re.split('[;,]|and|&', facilities)
+    #facilities = re.split('[;,]|and|&', facilities)
+    facilities = re.split(',', facilities)
     facilities = [f.strip() for f in facilities]
     facilities = [f.replace('(a.k.a.', '') for f in facilities]
     facilities = [replace_facilities(f) for f in facilities]
