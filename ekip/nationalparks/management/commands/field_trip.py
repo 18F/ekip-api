@@ -6,9 +6,12 @@ from nationalparks.management.commands import ficorcleaner as fc
 from nationalparks.models import FieldTripSite, BestVisitTime, YouthFacility
 
 #Begin by cleaning house!
-FieldTripSite.objects.all().delete()
-BestVisitTime.objects.all().delete()
-YouthFacility.objects.all().delete()
+try:
+    FieldTripSite.objects.all().delete()
+    BestVisitTime.objects.all().delete()
+    YouthFacility.objects.all().delete()
+except:
+    pass
     
 NAME_TO_ABBR = {r[1]: r[0] for r in FieldTripSite.AGENCY_CHOICES}
 NAME_TO_ABBR['Army Corps'] = 'USACE'
