@@ -6,11 +6,12 @@ from nationalparks.management.commands import ficorcleaner as fc
 from nationalparks.models import FieldTripSite, BestVisitTime, YouthFacility
 
 #Begin by cleaning house!
-if FieldTripSite.objects.exists():
+from django.db import connection
+if FieldTripSite.objects.model._meta.db_table in connection.introspection.table_names():
     FieldTripSite.objects.all().delete()
-if BestVisitTime.objects.exists():
+if BestVisitTime.objects.model._meta.db_table in connection.introspection.table_names():
     BestVisitTime.objects.all().delete()
-if YouthFacility.objects.exists():
+if YouthFacility.objects.model._meta.db_table in connection.introspection.table_names():
     YouthFacility.objects.all().delete()
     
 NAME_TO_ABBR = {r[1]: r[0] for r in FieldTripSite.AGENCY_CHOICES}
