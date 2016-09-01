@@ -66,4 +66,8 @@ target/
 .DS_Store
 
 node_modules
-*.yml
+
+# Manifest files for cf-ssh
+blue_manifest.yml
+green_manifest.yml
+cf-ssh.yml

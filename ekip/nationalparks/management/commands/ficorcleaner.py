@@ -4,7 +4,10 @@ from localflavor.us.us_states import US_STATES, US_TERRITORIES
 STATES = {name: abbr for abbr, name in US_STATES}
 TERRITORIES = {name: abbr for abbr, name in US_TERRITORIES}
 STATES.update(TERRITORIES)
-
+STATES['American Somoa'] = 'AS'
+STATES['Guam'] = 'GU'
+STATES['Puerto Rico'] = 'PR'
+STATES['Virgin Islands'] = 'VI'
 
 def clean_postal_code(postal_code):
     """ Clean the postal code from the dataset."""
@@ -28,7 +31,7 @@ def clean_advance_reservation(text):
     Returns 'True' if reservation required, False otherwise. """
 
     text = text.lower()
-    if text in ['yes']:
+    if text in ['yes', 'y']:
         return True
     if 'registration required' in text:
         return True
@@ -103,7 +106,8 @@ def clean_youth_facilities(facilities):
     list. """
 
     facilities = facilities.lower()
-    facilities = re.split('[;,]|and|&', facilities)
+    #facilities = re.split('[;,]|and|&', facilities)
+    facilities = re.split(',', facilities)
     facilities = [f.strip() for f in facilities]
     facilities = [f.replace('(a.k.a.', '') for f in facilities]
     facilities = [replace_facilities(f) for f in facilities]

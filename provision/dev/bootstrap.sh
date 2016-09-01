@@ -45,9 +45,9 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 . ~/.bash_profile
-pyenv install 3.4.1
+pyenv install 3.4.5
 pyenv rehash
-pyenv virtualenv 3.4.1 ekip
+pyenv virtualenv 3.4.5 ekip
 pyenv rehash
 pyenv activate ekip
 pip install -r /vagrant/requirements.txt

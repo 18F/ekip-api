@@ -108,7 +108,7 @@ def deactivate_sites(next_version):
 def read_pass_list(filename):
     next_version = get_next_version()
 
-    with open(filename, 'r', encoding='latin-1') as passcsv:
+    with open(filename, 'r', encoding='utf-8') as passcsv:
         field_names = [
             'name', 'phone', 'city', 'state', 'website', 'annual_senior', 'access']
         passreader = csv.DictReader(

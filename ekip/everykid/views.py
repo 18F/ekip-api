@@ -1,3 +1,4 @@
+import string
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -12,6 +13,8 @@ from nationalparks.api import FederalSiteResource, FieldTripResource
 from nationalparks.models import FieldTripSite
 
 STATES = {abbr: name for abbr, name in US_STATES}
+STATES['AS'] = 'American Somoa'
+STATES['GU'] = 'Guam'
 STATES['PR'] = 'Puerto Rico'
 STATES['VI'] = 'Virgin Islands'
 
@@ -74,7 +77,7 @@ def student_pass(request):
 
 def get_active_pass_exchange_sites(state):
     """ For a given state, return the sites that are issuing kids passes. """
-    return FederalSiteResource().list(state, 1)
+    return FederalSiteResource().list(state, 1).order_by('name')
 
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
@@ -105,10 +108,10 @@ def field_trip_details(request, slug):
     destination = get_object_or_404(FieldTripSite, slug=slug)
 
     destination.visit_times_list = [
-        v.best_time for v in destination.best_visit_times.all()]
+        string.capwords(v.best_time) for v in destination.best_visit_times.all()]
 
     destination.features_list = [
-        v.facility for v in destination.facilities.all()]
+        string.capwords(v.facility) for v in destination.facilities.all()]
 
     return render(
         request,
@@ -124,7 +127,7 @@ def field_trip(request):
     state_name = None
 
     if state:
-        sites = FieldTripResource().list(state)
+        sites = FieldTripResource().list(state).order_by('name')
         form = PassSiteStateForm(initial={'state': state})
         state_name = STATES[state]
     else:

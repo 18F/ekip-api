@@ -5,7 +5,15 @@ from django.core.management.base import BaseCommand
 from nationalparks.management.commands import ficorcleaner as fc
 from nationalparks.models import FieldTripSite, BestVisitTime, YouthFacility
 
-
+#Begin by cleaning house!
+from django.db import connection
+if FieldTripSite.objects.model._meta.db_table in connection.introspection.table_names():
+    FieldTripSite.objects.all().delete()
+if BestVisitTime.objects.model._meta.db_table in connection.introspection.table_names():
+    BestVisitTime.objects.all().delete()
+if YouthFacility.objects.model._meta.db_table in connection.introspection.table_names():
+    YouthFacility.objects.all().delete()
+    
 NAME_TO_ABBR = {r[1]: r[0] for r in FieldTripSite.AGENCY_CHOICES}
 NAME_TO_ABBR['Army Corps'] = 'USACE'
 
@@ -42,27 +50,29 @@ def process_site(row):
     field_trip_site, created = FieldTripSite.objects.get_or_create(
         name=name, agency=agency)
 
-    field_trip_site.phone = fc.clean_phone(row['PHONE_1'])
-    field_trip_site.city = fc.clean_text(row['City'])
-    field_trip_site.state = fc.clean_state(row['Region'])
+    field_trip_site.phone = fc.clean_phone(row['PHONE'])
+    field_trip_site.city = fc.clean_text(row['CITY'])
+    field_trip_site.state = fc.clean_state(row['STATE'])
+    field_trip_site.address_line_1 = fc.clean_text(row['ADDRESS'])
+    field_trip_site.zipcode = fc.clean_postal_code(row['ZIPCODE'])
     field_trip_site.website = fc.clean_website(row['WEBSITE'])
-    field_trip_site.address_line_1 = fc.clean_text(row['StAddr'])
     field_trip_site.advance_reservation = fc.clean_advance_reservation(
-        row['ADV_RES_RE'])
-
+        row['ADVANCE_RESERVATION'])
+        
     field_trip_site.larger_groups = fc.clean_thirty_five_or_more(
-        row['THRIRTYFIV'])
-    field_trip_site.zipcode = fc.clean_postal_code(row['PostalCode'])
+        row['THIRTY_FIVE'])
     field_trip_site.save()
 
-    # Clear the deck.
-    field_trip_site.best_visit_times.remove()
+    # Clear old data for this facility
     field_trip_site.facilities.remove()
 
-    youth_facilities = fc.clean_youth_facilities(row['YOUTH_FACI'])
+    youth_facilities = fc.clean_youth_facilities(row['YOUTH_FACILITIES'])
     yfacilities = create_youth_facilities(youth_facilities)
     field_trip_site.facilities.add(*yfacilities)
 
+	# Clear old data for this facility
+    field_trip_site.best_visit_times.remove()
+    
     best_times_data = fc.clean_best_times(row['BEST_TIMES'])
     if best_times_data:
         best_times = create_best_times(best_times_data)
@@ -73,7 +83,7 @@ def process_site(row):
 
 def read_site_list(filename):
     """ Read and process the list of field trip sites. """
-    with open(filename, 'r', encoding='latin-1') as site_csv:
+    with open(filename, 'r', encoding='utf-8', errors='strict') as site_csv:
         site_reader = csv.DictReader(site_csv, delimiter=',', quotechar='"')
         for l in site_reader:
             process_site(l)
