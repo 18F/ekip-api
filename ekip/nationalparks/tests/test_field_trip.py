@@ -59,15 +59,15 @@ class FieldTripTests(TestCase):
         row = {
             'NAME': ' Wheeler NWR',
             'AGENCY': 'U.S. Fish and Wildlife Service',
-            'PHONE_1': '(256) 350-6639',
-            'City': 'Decatur',
-            'Region': 'Alabama',
+            'PHONE': '(256) 350-6639',
+            'CITY': 'Decatur',
+            'STATE': 'Alabama',
             'WEBSITE': 'http;/www.fws.gov/refuge/Wheeler/',
-            'StAddr': 'Visitor Center Rd',
-            'ADV_RES_RE': 'yes',
-            'THRIRTYFIV': 'Yes',
-            'PostalCode': '35603',
-            'YOUTH_FACI': 'Visitor center, trail, auto tour route, bicycling',
+            'ADDRESS': 'Visitor Center Rd',
+            'ADVANCE_RESERVATION': 'yes',
+            'THIRTY_FIVE': 'Yes',
+            'ZIPCODE': '35603',
+            'YOUTH_FACILITIES': 'Visitor center, trail, auto tour route, bicycling',
             'BEST_TIMES': 'September through June'}
 
         trip.process_site(row)
@@ -99,15 +99,15 @@ class FieldTripTests(TestCase):
         row = {
             'NAME': ' Wheeler NWR',
             'AGENCY': 'U.S. Fish and Wildlife Service',
-            'PHONE_1': '(256) 350-6639',
-            'City': 'Decatur',
-            'Region': 'Alabama',
+            'PHONE': '(256) 350-6639',
+            'CITY': 'Decatur',
+            'STATE': 'Alabama',
             'WEBSITE': 'http;/www.fws.gov/refuge/Wheeler/',
-            'StAddr': 'Visitor Center Rd',
-            'ADV_RES_RE': 'yes',
-            'THRIRTYFIV': 'Yes',
-            'PostalCode': '35603',
-            'YOUTH_FACI': 'Visitor center, trail, auto tour route, bicycling',
+            'ADDRESS': 'Visitor Center Rd',
+            'ADVANCE_RESERVATION': 'yes',
+            'THIRTY_FIVE': 'Yes',
+            'ZIPCODE': '35603',
+            'YOUTH_FACILITIES': 'Visitor center, trail, auto tour route, bicycling',
             'BEST_TIMES': 'September through June'}
 
         trip.process_site(row)
