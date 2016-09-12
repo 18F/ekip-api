@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 
-{% block title %}Plan your trip{% endblock title %}
+{% block title %}{% trans "Plan your trip" %}{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -11,15 +12,14 @@
 
   <div class="plan-your-trip-content">
 
-    <h1>Plan your trip</h1>
+    <h1>{% trans "Plan your trip" %}</h1>
 
-    <p>"We come and go, but the land is always here. And the people who love it and understand it are the people who own it — for a little while." <span class="author">- Willa Cather</span></p>
+    <p>{% trans '"We come and go, but the land is always here. And the people who love it and understand it are the people who own it — for a little while."' %} <span class="author">- Willa Cather</span></p>
 
-    <p>Plan your adventure using these tools. No matter where you live in the United States,
-    there's a site within two hours of your home.</p>
+    <p>{% trans "Plan your adventure using these tools. No matter where you live in the United States, there's a site within two hours of your home." %}</p>
 
     <div class="lets-get-going">
-      Let's Get Going!
+      {% trans "Let's Get Going!" %}
 
       <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -43,14 +43,14 @@
   <section class="destination">
     <div class="section-content">
 
-      <h2>Explore parks and sites</h2>
+      <h2>{% trans "Explore parks and sites" %}</h2>
       <ul>
         <li>
           <a class="simpleModal" href="http://www.fws.gov/refuges/" target="_blank">
           <div class="icon">
             <img src="{% static "img/icon-owl.png" %}" class="owl" alt="owl icon" />
           </div>
-          <h3>See protected animals</h3>
+          <h3>{% trans "See protected animals" %}</h3>
           <p>fws.gov</p>
           </a>
         </li>
@@ -59,7 +59,7 @@
           <div class="icon">
             <img src="{% static "img/icon-tree.png" %}" class="tree" alt="tree icon" />
           </div>
-          <h3>Visit the woods</h3>
+          <h3>{% trans "Visit the woods" %}</h3>
           <p>discovertheforest.org</p>
           </a>
         </li>
@@ -68,7 +68,7 @@
           <div class="icon">
             <img src="{% static "img/icon-mountains.png" %}" class="mountains" alt="mountains icon" />
           </div>
-          <h3>Go to a park</h3>
+          <h3>{% trans "Go to a park" %}</h3>
           <p>findyourpark.com</p>
           </a>
         </li>
@@ -77,7 +77,7 @@
           <div class="icon">
             <img src="{% static "img/icon-compass.png" %}" class="compass" alt="compass icon" />
           </div>
-          <h3>More places to play</h3>
+          <h3>{% trans "More places to play" %}</h3>
           <p>recreation.gov</p>
           </a>
         </li>
@@ -85,10 +85,10 @@
       <!-- modal content -->
 		<div id="modal-content">
 			<img src="{% static "img/100-compass.png" %}" class="modal-compass" />
-			<h3>You're about to explore<br />
-			another website!</h3>
-			<p>It will list lots of places to visit! But not all will accept your paper pass. If you aren't sure whether your paper pass will work, have an adult call before you go.</p>
-			<a class="button-link"><button class="modal-continue-button"><span class="modal-continue-text-top">Continue</span><br/><span class="modal-continue-text-bottom"></span></button></a>
+			<h3>{% trans "You're about to explore" %}<br />
+			{% trans "another website!" %}</h3>
+			<p>{% trans "It will list lots of places to visit! But not all will accept your paper pass. If you aren't sure whether your paper pass will work, have an adult call before you go." %}</p>
+			<a class="button-link"><button class="modal-continue-button"><span class="modal-continue-text-top">{% trans "Continue" %}</span><br/><span class="modal-continue-text-bottom"></span></button></a>
 		</div>
     </div>
   </section>
@@ -101,10 +101,9 @@
       </div>
 
       <div class="lodging-content">
-        <h2>Get a place to stay</h2>
+        <h2>{% trans "Get a place to stay" %}</h2>
 
-        <p>Your family may want to stay somewhere overnight. You can reserve a cabin or
-        campsite on <a class="simpleModal" href="http://www.recreation.gov" target="_blank">recreation.gov</a>.</p>
+        <p>{% trans "Your family may want to stay somewhere overnight. You can reserve a cabin or campsite on" %} <a class="simpleModal" href="http://www.recreation.gov" target="_blank">recreation.gov</a>.</p>
 
       </div>
 
@@ -116,27 +115,26 @@
 
       <div class="prepare-content">
 
-        <h2>Pack this</h2>
-        <p>Note: some of our sites don't get cell service. This means you might not be able to make or get phone calls,
-        texts, or emails when you visit.</p>
+        <h2>{% trans "Pack this" %}</h2>
+        <p>{% trans "Note: some of our sites don't get cell service. This means you might not be able to make or get phone calls, texts, or emails when you visit." %}</p>
 
       </div>
 
       <div class="packing-list">
 
-        <h3>What to bring</h3>
+        <h3>{% trans "What to bring" %}</h3>
         <ul>
-          <li>Water</li>
-          <li>Healthy snacks</li>
-          <li>A first-aid kit</li>
-          <li>Comfortable shoes</li>
-          <li>Sunglasses</li>
-          <li>A hat</li>
-          <li>Sunscreen</li>
-          <li>Gloves (if it's cold)</li>
-          <li>Bug spray</li>
-          <li>A map</li>
-          <li>Emergency numbers</li>
+          <li>{% trans "Water" %}</li>
+          <li>{% trans "Healthy snacks" %}</li>
+          <li>{% trans "A first-aid kit" %}</li>
+          <li>{% trans "Comfortable shoes" %}</li>
+          <li>{% trans "Sunglasses" %}</li>
+          <li>{% trans "A hat" %}</li>
+          <li>{% trans "Sunscreen" %}</li>
+          <li>{% trans "Gloves (if it's cold)" %}</li>
+          <li>{% trans "Bug spray" %}</li>
+          <li>{% trans "A map" %}</li>
+          <li>{% trans "Emergency numbers" %}</li>
         </ul>
       </div>
 
@@ -151,14 +149,13 @@
       </div>
 
       <div class="voucher-content">
-        <h2>Bring your pass</h2>
+        <h2>{% trans "Bring your pass" %}</h2>
 
-        <p>Make sure you bring your pass to get in for free.</p>
+        <p>{% trans "Make sure you bring your pass to get in for free." %}</p>
 
-        <p> At some sites, the ranger will exchange your paper pass for a plastic pass.
-        The plastic pass is waterproof and a great keepsake!</p>
+        <p> {% trans "At some sites, the ranger will exchange your paper pass for a plastic pass. The plastic pass is waterproof and a great keepsake!" %}</p>
 
-        <a href="{% url 'pass_exchange' %}"><button>Sites with plastic passes</button></a>
+        <a href="{% url 'pass_exchange' %}"><button>{% trans "Sites with plastic passes" %}</button></a>
 
       </div>
 
@@ -186,17 +183,15 @@
     <div class="section-content">
 
       <div class="field-trip-sites-content">
-        <h2>Field trips</h2>
+        <h2>{% trans "Field trips" %}</h2>
 
-        <p>A field trip with your class offers a unique learning
-        opportunity.</p>
+        <p>{% trans "A field trip with your class offers a unique learning opportunity." %}</p>
 
-        <p>Many of our sites are ready for large groups and offer programs
-        created for fourth graders.</p>
+        <p>{% trans "Many of our sites are ready for large groups and offer programs created for fourth graders." %}</p>
         
-        <p>This program only provides passes for fourth graders.</p>
+        <p>{% trans "This program only provides passes for fourth graders." %}</p>
 
-        <a href="{% url 'field_trip' %}"><button>Field trip sites</button></a>
+        <a href="{% url 'field_trip' %}"><button>{% trans "Field trip sites" %}</button></a>
 
       </div>
 
