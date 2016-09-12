@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 18:42-0400\n"
+"POT-Creation-Date: 2016-09-12 14:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,7 +153,8 @@ msgstr "Planea un Viaje"
 msgid "Parents"
 msgstr "Padres"
 
-#: templates/base.html:89 templates/base.html:131 templates/index.html:46
+#: templates/base.html:89 templates/base.html:131
+#: templates/how-it-works/index.html:46 templates/index.html:46
 #: templates/index.html:103 templates/nav.html:10
 msgid "Educators"
 msgstr "Educadores"
@@ -207,6 +208,75 @@ msgstr "Departamento del Interior"
 msgid "Every Kid in a Park program."
 msgstr "programa Todos los Niños en un Parque."
 
+#: templates/how-it-works/index.html:14 templates/index.html:70
+msgid "How it works"
+msgstr "Cómo Funciona"
+
+#: templates/how-it-works/index.html:16
+msgid "Follow the steps below, and you'll be visiting America's parks, lands, and "
+"waters in no time."
+msgstr "Sigue los pasos a continuación, y en un santiamén ¡estarás visitando los parques, "
+"l, y las aguas de los Estados Unidos!"
+
+#: templates/how-it-works/index.html:19
+msgid "Let's Get Going!"
+msgstr "¡Vámonos!"
+
+#: templates/how-it-works/index.html:43 templates/index.html:78
+msgid "Get your pass"
+msgstr "Consigue tu Pase"
+
+#: templates/how-it-works/index.html:44
+msgid "Get and print fourth-grade passes to our national lands and waters."
+msgstr "Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
+"estudiantes del cuarto grado."
+
+#: templates/how-it-works/index.html:45
+msgid "Fourth Graders"
+msgstr "Estudiante de 4ºgrado"
+
+#: templates/how-it-works/index.html:60 templates/parents.html:42
+msgid "Plan a trip"
+msgstr "Planea un Viaje"
+
+#: templates/how-it-works/index.html:61
+msgid "It's a good idea to involve your parent or guardian in this."
+msgstr "Es buena idea involucrar a tus padres o guardianes en esto."
+
+#: templates/how-it-works/index.html:62
+msgid "Start"
+msgstr "Empieza"
+
+#: templates/how-it-works/index.html:70
+msgid "Hit the road!"
+msgstr "¡Vámonos!"
+
+#: templates/how-it-works/index.html:71
+msgid "Enjoy national parks, lands, and waters for a full year. Leave only "
+"footsteps. Take only pictures."
+msgstr "Disfruta de los parques, las tierras, y las aguas nacionales por un año entero. "
+"Deja solo huellas. Lleva contigo solo fotos."
+
+#: templates/how-it-works/index.html:87
+msgid "A few things to know"
+msgstr "Cosas importantes de conocer"
+
+#: templates/how-it-works/index.html:88
+msgid "You need to print your pass and bring it with you when you visit. Electronic "
+"copies aren't accepted."
+msgstr "Necesitas imprimir tu pase y llevarlo contigo cuando visites. No se aceptan copies electrónicas."
+
+#: templates/how-it-works/index.html:90
+msgid "Your pass has a unique code. That means you can't copy it and give it to "
+"friends. Encourage your friends to get their own pass if they're in the "
+"fourth grade."
+msgstr "Tu pase tiene un código único. Esto significa que no puedes copiarlo y darlo a "
+"tus amigos. Alienta a tus amigos a que consigan su propio pase si están en cuarto grado."
+
+#: templates/how-it-works/index.html:92
+msgid "This program only provides passes for fourth graders."
+msgstr "Este programa solo proporciona pases a estudiantes del cuarto grado."
+
 #: templates/index.html:5
 msgid "Main"
 msgstr "Principal"
@@ -236,10 +306,6 @@ msgstr ""
 "Tú y tu familia consiguen acceso gratuito a cientos de parques, tierras y "
 "aguas durante todo un año."
 
-#: templates/index.html:70
-msgid "How it works"
-msgstr "Cómo Funciona"
-
 #: templates/index.html:75
 msgid "Fourth graders"
 msgstr "Estudiante de 4ºgrado"
@@ -251,12 +317,6 @@ msgid ""
 msgstr ""
 "¡Esto es para ti! Explora ancianas viviendas. Observa una catarata más alta "
 "que un edificio."
-
-#: templates/index.html:78
-#, fuzzy
-#| msgid "Get Your Pass"
-msgid "Get your pass"
-msgstr "Consigue tu Pase"
 
 #: templates/index.html:83
 msgid "Explore with friends."
@@ -331,10 +391,6 @@ msgstr ""
 #: templates/parents.html:22
 msgid "Learn More"
 msgstr "Aprende más"
-
-#: templates/parents.html:42
-msgid "Plan a trip"
-msgstr "Planea un Viaje"
 
 #: templates/parents.html:43
 msgid ""
