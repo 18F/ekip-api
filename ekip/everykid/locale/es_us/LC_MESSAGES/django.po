@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 14:08-0400\n"
+"POT-Creation-Date: 2016-09-12 16:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -213,12 +213,14 @@ msgid "How it works"
 msgstr "Cómo Funciona"
 
 #: templates/how-it-works/index.html:16
-msgid "Follow the steps below, and you'll be visiting America's parks, lands, and "
+msgid ""
+"Follow the steps below, and you'll be visiting America's parks, lands, and "
 "waters in no time."
-msgstr "Sigue los pasos a continuación, y en un santiamén ¡estarás visitando los parques, "
-"l, y las aguas de los Estados Unidos!"
+msgstr ""
+"Sigue los pasos a continuación, y en un santiamén ¡estarás visitando los "
+"parques, l, y las aguas de los Estados Unidos!"
 
-#: templates/how-it-works/index.html:19
+#: templates/how-it-works/index.html:19 templates/plan-your-trip/index.html:22
 msgid "Let's Get Going!"
 msgstr "¡Vámonos!"
 
@@ -228,7 +230,8 @@ msgstr "Consigue tu Pase"
 
 #: templates/how-it-works/index.html:44
 msgid "Get and print fourth-grade passes to our national lands and waters."
-msgstr "Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
+msgstr ""
+"Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
 "estudiantes del cuarto grado."
 
 #: templates/how-it-works/index.html:45
@@ -252,28 +255,36 @@ msgid "Hit the road!"
 msgstr "¡Vámonos!"
 
 #: templates/how-it-works/index.html:71
-msgid "Enjoy national parks, lands, and waters for a full year. Leave only "
+msgid ""
+"Enjoy national parks, lands, and waters for a full year. Leave only "
 "footsteps. Take only pictures."
-msgstr "Disfruta de los parques, las tierras, y las aguas nacionales por un año entero. "
-"Deja solo huellas. Lleva contigo solo fotos."
+msgstr ""
+"Disfruta de los parques, las tierras, y las aguas nacionales por un año "
+"entero. Deja solo huellas. Lleva contigo solo fotos."
 
 #: templates/how-it-works/index.html:87
 msgid "A few things to know"
 msgstr "Cosas importantes de conocer"
 
 #: templates/how-it-works/index.html:88
-msgid "You need to print your pass and bring it with you when you visit. Electronic "
+msgid ""
+"You need to print your pass and bring it with you when you visit. Electronic "
 "copies aren't accepted."
-msgstr "Necesitas imprimir tu pase y llevarlo contigo cuando visites. No se aceptan copies electrónicas."
+msgstr ""
+"Necesitas imprimir tu pase y llevarlo contigo cuando visites. No se aceptan "
+"copies electrónicas."
 
 #: templates/how-it-works/index.html:90
-msgid "Your pass has a unique code. That means you can't copy it and give it to "
+msgid ""
+"Your pass has a unique code. That means you can't copy it and give it to "
 "friends. Encourage your friends to get their own pass if they're in the "
 "fourth grade."
-msgstr "Tu pase tiene un código único. Esto significa que no puedes copiarlo y darlo a "
-"tus amigos. Alienta a tus amigos a que consigan su propio pase si están en cuarto grado."
+msgstr ""
+"Tu pase tiene un código único. Esto significa que no puedes copiarlo y darlo "
+"a tus amigos. Alienta a tus amigos a que consigan su propio pase si están en "
+"cuarto grado."
 
-#: templates/how-it-works/index.html:92
+#: templates/how-it-works/index.html:92 templates/plan-your-trip/index.html:192
 msgid "This program only provides passes for fourth graders."
 msgstr "Este programa solo proporciona pases a estudiantes del cuarto grado."
 
@@ -449,6 +460,294 @@ msgstr ""
 #: templates/parents.html:60
 msgid "family fishing"
 msgstr "pesca en familia"
+
+#: templates/plan-your-trip/field_trip.html:4
+#: templates/plan-your-trip/field_trip.html:14
+#: templates/plan-your-trip/field_trip_details.html:4
+#: templates/plan-your-trip/field_trip_details.html:14
+msgid "Plan a field trip"
+msgstr "Organice un viaje de estudios"
+
+#: templates/plan-your-trip/field_trip.html:16
+msgid "A field trip is a great learning opportunity."
+msgstr "Un viaje de estudios es una gran oportunidad para el aprendizaje"
+
+#: templates/plan-your-trip/field_trip.html:18
+msgid ""
+"Start by selecting a state or territory. Then check out our list of "
+"recommended sites. You can see the best time of year to visit and what that "
+"site has to offer. For example, trails, outdoor classrooms, and visitor "
+"centers."
+msgstr ""
+"Empiece por seleccionar un estado o territorio. Luego vea nuestra lista de "
+"sitios recomendados. Se puede ver la mejor época en donde visitar y la "
+"infraestructura que el sitio ofrece. Por ejemplo: senderos, aulas al aire "
+"libre, y centros de visitantes."
+
+#: templates/plan-your-trip/field_trip.html:20
+msgid ""
+"You'll also see contact information for each site. Contact the site for help "
+"scheduling trips and transportation."
+msgstr ""
+"También hay información como contactar cada sitio. Favor de comunicarse con "
+"el sitio para ayuda con agendar las salidas y el transporte."
+
+#: templates/plan-your-trip/field_trip.html:22
+msgid ""
+"This program only provides passes for fourth graders. Sites can choose to "
+"waive fees for teachers on a field trip. Please contact each site for more "
+"information."
+msgstr ""
+"Este programa solo proporciona pases a los estudiantes del cuarto grado. Los "
+"sitios individuales pueden optar por no cobrar la entrada a los maestros en "
+"un viaje de estudios. Favor de comunicarse con los sitios individuales para "
+"más información."
+
+#: templates/plan-your-trip/field_trip.html:25
+#: templates/plan-your-trip/pass_exchange.html:20
+msgid "Choose a state or territory"
+msgstr "Escoge un estado o territorio"
+
+#: templates/plan-your-trip/field_trip.html:27
+msgid "Submit"
+msgstr "Enviee"
+
+#: templates/plan-your-trip/field_trip.html:41
+msgid "Sites to visit in"
+msgstr "Lugares donde visitar en"
+
+#: templates/plan-your-trip/field_trip_details.html:37
+msgid "This site is suitable for large groups."
+msgstr "Este sitio es adecuado para grupos grandes."
+
+#: templates/plan-your-trip/field_trip_details.html:42
+msgid "This site requires advance reservations for field trips."
+msgstr "Este sitio requiere reservaciones para viajes de estudio."
+
+#: templates/plan-your-trip/field_trip_details.html:47
+msgid "Best times to visit"
+msgstr "Mejores épocas para visitar"
+
+#: templates/plan-your-trip/field_trip_details.html:55
+msgid "Facilities"
+msgstr "Instalaciones"
+
+#: templates/plan-your-trip/field_trip_details.html:61
+msgid "Website"
+msgstr "Sitio web"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "Be informed before you visit in person. Visit the"
+msgstr "Infórmese antes de ir. Visitar primero el sitio"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "website"
+msgstr "web"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "first"
+msgstr ""
+
+#: templates/plan-your-trip/index.html:5 templates/plan-your-trip/index.html:15
+msgid "Plan your trip"
+msgstr "Planea tu salida"
+
+#: templates/plan-your-trip/index.html:17
+msgid ""
+"\"We come and go, but the land is always here. And the people who love it "
+"and understand it are the people who own it — for a little while.\""
+msgstr ""
+"\"Nosotros vamos y venimos, pero la tierra está ahí siempre presente. Y la "
+"gente que la ama y la comprende es la gente que la posee – por un ratito.\""
+
+#: templates/plan-your-trip/index.html:19
+msgid ""
+"Plan your adventure using these tools. No matter where you live in the "
+"United States, there's a site within two hours of your home."
+msgstr ""
+"Utiliza estas herramientas para planear tu aventura. Donde sea que vivas en "
+"los Estados Unidos, hay un sitio a dos horas o menos de tu casa."
+
+#: templates/plan-your-trip/index.html:46
+msgid "Explore parks and sites"
+msgstr "Explora parques y sitios"
+
+#: templates/plan-your-trip/index.html:53
+msgid "See protected animals"
+msgstr "Observa animales protegidos"
+
+#: templates/plan-your-trip/index.html:62
+msgid "Visit the woods"
+msgstr "Visita el bosque"
+
+#: templates/plan-your-trip/index.html:71
+msgid "Go to a park"
+msgstr "Visita un parque"
+
+#: templates/plan-your-trip/index.html:80
+msgid "More places to play"
+msgstr "Más lugares donde jugar"
+
+#: templates/plan-your-trip/index.html:88
+msgid "You're about to explore"
+msgstr "¡Estás por explorar otro"
+
+#: templates/plan-your-trip/index.html:89
+msgid "another website!"
+msgstr "sitio web!"
+
+#: templates/plan-your-trip/index.html:90
+msgid ""
+"It will list lots of places to visit! But not all will accept your paper "
+"pass. If you aren't sure whether your paper pass will work, have an adult "
+"call before you go."
+msgstr ""
+"¡El nuevo sitio presentará muchos lugares donde visitar! Pero no todos "
+"aceptaran tu pase de papel. Si no estás seguro si te lo acepten, favor de "
+"pedirle a un adulto que llame antes de que te vayas."
+
+#: templates/plan-your-trip/index.html:91
+msgid "Continue"
+msgstr "Continuar"
+
+#: templates/plan-your-trip/index.html:104
+msgid "Get a place to stay"
+msgstr "Busca un lugar donde quedarte"
+
+#: templates/plan-your-trip/index.html:106
+msgid ""
+"Your family may want to stay somewhere overnight. You can reserve a cabin or "
+"campsite on"
+msgstr ""
+"Puede que tu familia quiera quedarse la noche en algún lugar. Puedes "
+"reservar una cabaña o sitio para acampar en"
+
+#: templates/plan-your-trip/index.html:118
+msgid "Pack this"
+msgstr "Empaca esto"
+
+#: templates/plan-your-trip/index.html:119
+msgid ""
+"Note: some of our sites don't get cell service. This means you might not be "
+"able to make or get phone calls, texts, or emails when you visit."
+msgstr ""
+"Nota: algunos de nuestros sitios no reciben servicio de telefonía celular. "
+"Esto significa que es posible que no puedas hacer o recibir llamadas, "
+"textos, o correos electrónicos cuando visitas."
+
+#: templates/plan-your-trip/index.html:125
+msgid "What to bring"
+msgstr "Cosas para llevar"
+
+#: templates/plan-your-trip/index.html:127
+msgid "Water"
+msgstr "Agua"
+
+#: templates/plan-your-trip/index.html:128
+msgid "Healthy snacks"
+msgstr "Refrigerios sanos"
+
+#: templates/plan-your-trip/index.html:129
+msgid "A first-aid kit"
+msgstr "Un botiquín"
+
+#: templates/plan-your-trip/index.html:130
+msgid "Comfortable shoes"
+msgstr "Zapatos cómodos"
+
+#: templates/plan-your-trip/index.html:131
+msgid "Sunglasses"
+msgstr "Lentes oscuros"
+
+#: templates/plan-your-trip/index.html:132
+msgid "A hat"
+msgstr "Una gorra"
+
+#: templates/plan-your-trip/index.html:133
+msgid "Sunscreen"
+msgstr "Protector solar"
+
+#: templates/plan-your-trip/index.html:134
+msgid "Gloves (if it's cold)"
+msgstr "Guantes (si hace frio)"
+
+#: templates/plan-your-trip/index.html:135
+msgid "Bug spray"
+msgstr "Repelente para insectos"
+
+#: templates/plan-your-trip/index.html:136
+msgid "A map"
+msgstr "Un mapa"
+
+#: templates/plan-your-trip/index.html:137
+msgid "Emergency numbers"
+msgstr "Números de emergencia"
+
+#: templates/plan-your-trip/index.html:152
+msgid "Bring your pass"
+msgstr "Lleva tu pase"
+
+#: templates/plan-your-trip/index.html:154
+msgid "Make sure you bring your pass to get in for free."
+msgstr "Asegura que lleves tu pase para entrar sin costo."
+
+#: templates/plan-your-trip/index.html:156
+msgid ""
+"At some sites, the ranger will exchange your paper pass for a plastic pass. "
+"The plastic pass is waterproof and a great keepsake!"
+msgstr ""
+"En algunos sitios, el guarda puede cambiar tu pase de papel para un pase de "
+"plástico. Este último es prueba de agua y ¡un buen recuerdo!"
+
+#: templates/plan-your-trip/index.html:158
+msgid "Sites with plastic passes"
+msgstr "Sitios con pases de plástico"
+
+#: templates/plan-your-trip/index.html:186
+msgid "Field trips"
+msgstr "Viajes de estudio"
+
+#: templates/plan-your-trip/index.html:188
+msgid "A field trip with your class offers a unique learning opportunity."
+msgstr ""
+"Un viaje de estudio con tu clase ofrece una oportunidad única de aprendizaje."
+
+#: templates/plan-your-trip/index.html:190
+msgid ""
+"Many of our sites are ready for large groups and offer programs created for "
+"fourth graders."
+msgstr ""
+"Muchos de nuestros sitios pueden recibir grupos grandes y ofrecen programas "
+"especializados para estudiantes de cuarto grado."
+
+#: templates/plan-your-trip/index.html:194
+msgid "Field trip sites"
+msgstr "Sitios para viajes de estudio"
+
+#: templates/plan-your-trip/pass_exchange.html:3
+#: templates/plan-your-trip/pass_exchange.html:13
+msgid "Exchange your pass"
+msgstr "Cambia tu pase"
+
+#: templates/plan-your-trip/pass_exchange.html:15
+msgid ""
+"Trade your paper pass for a limited-edition, plastic pass at any of the "
+"sites on this page."
+msgstr ""
+"Cambia tu pase de papel para un pase de plástico, de edición limitada, en "
+"cualquier de los sitios en este página."
+
+#: templates/plan-your-trip/pass_exchange.html:17
+msgid ""
+"Start by selecting a state or territory, and we'll show you all the places "
+"you can trade your paper pass for a plastic pass."
+msgstr ""
+"Empieza por seleccionar un estado o territorio, y te mostramos todos los "
+"lugares en donde puedes cambiar tu pase de papel por uno de plástico."
+
+#: templates/plan-your-trip/pass_exchange.html:36
+msgid "Where to trade your pass in"
+msgstr "Donde cambiar tu pase"
 
 #: templates/rules.html:4
 msgid "Privacy Policy"
