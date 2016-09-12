@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
-{% block title %}Exchange your pass{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Exchange your pass" %}{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -10,14 +10,14 @@
 
   <div class="plan-your-trip-content">
 
-    <h1>Exchange your pass</h1>
+    <h1>{% trans "Exchange your pass" %}</h1>
 
-    <p>Trade your paper pass for a limited-edition, plastic pass at any of the sites on this page.</p>
+    <p>{% trans "Trade your paper pass for a limited-edition, plastic pass at any of the sites on this page." %}</p>
 
-    <p> Start by selecting a state or territory, and we'll show you all the places you can trade your paper pass for a plastic pass.</p>
+    <p> {% trans "Start by selecting a state or territory, and we'll show you all the places you can trade your paper pass for a plastic pass." %}</p>
 
     <form class="state-select" method="GET">
-      <label class="choose-state" for="id_state">Choose a state or territory:</label>
+      <label class="choose-state" for="id_state">{% trans "Choose a state or territory" %}:</label>
       {{ form.state }}
       <button type="submit">Go</button>
     </form>
@@ -33,7 +33,7 @@
     {% if sites %}
     <section class="state">
       <div class="state-content">
-        <h2>Where to trade your pass in {{state_name}}:</h2>
+        <h2>{% trans "Where to trade your pass in" %} {{state_name}}:</h2>
       </div>
     </section>
 
