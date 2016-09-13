@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Educators{% endblock title %}
+{% block title %}{% trans "Get Your Pass" %} - {% trans "Educators" %}{% endblock title %}
 
 {% block page_id %}educators{% endblock page_id %}
 
@@ -10,8 +11,8 @@
 
   <div class="preview">
 
-    <h2>Double-check your information</h2>
-    <p>Please confirm that the info you've provided is correct.</p>
+    <h2>{% trans "Double-check your information" %}</h2>
+    <p>{% trans "Please confirm that the info you've provided is correct." %}</p>
 
     <div class="data">
       <strong>{{ form.name.data }}</strong><br/>
@@ -53,8 +54,8 @@
         <input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}"/>
 
         <div class="buttons">
-          <div class="back">Errors?<br/>Go Back</div>
-          <button type="submit">Good to go?<br/><span>Get vouchers</span></button>
+          <div class="back">{% trans "Errors?" %}<br/>{% trans "Go Back" %}</div>
+          <button type="submit">{% trans "Good to go?" %}<br/><span>{% trans "Get vouchers" %}</span></button>
         </div>
 
       </form>

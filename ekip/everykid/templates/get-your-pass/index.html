@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 
-{% block title %}Get your pass{% endblock title %}
+{% block title %}{% trans "Get your pass" %}{% endblock title %}
 
 {% block page_id %}get-your-pass{% endblock page_id %}
 
@@ -11,36 +12,37 @@
 
   <div class="pass-content">
 
-    <h1>Get your pass</h1>
+    <h1>{% trans "Get your pass" %}</h1>
 
-    <p>Bike through a forest. Walk in a desert. See a whale
-    burst through the ocean's surface. Do all this and more with your pass.
-    And bring a car full of family and friends for free!</p>
+    <p>{% trans "Bike through a forest. Walk in a desert. See a whale burst through the ocean's surface. Do all this and more with your pass. And bring a car full of family and friends for free!" %}</p>
 
     <ul class="boxes">
       <li class="fourth-graders">
         <img src="{% static "img/icon-backpack.png" %}" class="backpack" alt="backpack icon" />
-        <h2>Fourth graders</h2>
-        <p>Complete our adventure diary to get your pass</p>
+        <h2>{% trans "Fourth graders" %}</h2>
+        <p>{% trans "Complete our adventure diary to get your pass" %}</p>
         <a href="{%url 'student_pass' %}">
-          <button>Play</button>
+          <button>{% trans "Play" %}</button>
         </a>
       </li>
       <li>
         <img src="{% static "img/icon-leaf.png" %}" class="leaf" alt="leaf icon" />
-        <h2>Parents</h2>
-        <p>Learn more and see rules</p>
+        <h2>{% trans "Parents" %}</h2>
+        <p>{% trans "Learn more and see rules" %}</p>
+		{% if LANGUAGE_CODE == 'es-us' %}
+		  <br/>
+		{% endif %}		  
         <a href="{%url 'parents' %}">
-          <button>Go</button>
+          <button>{% trans "Go" %}</button>
         </a>
       </li>
 
       <li>
         <img src="{% static "img/icon-binoculars.png" %}" class="binoculars" alt="binoculars icon" />
-        <h2>Educators</h2>
-        <p>Get passes for your fourth-grade students</p>
+        <h2>{% trans "Educators" %}</h2>
+        <p>{% trans "Get passes for your fourth-grade students" %}</p>
         <a href="{%url 'educator_passes' %}">
-          <button>Start</button>
+          <button>{% trans "Start" %}</button>
         </a>
       </li>
     </ul>
