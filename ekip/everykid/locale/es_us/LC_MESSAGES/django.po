@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 16:28-0400\n"
+"POT-Creation-Date: 2016-09-13 13:24-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: forms.py:24 models.py:26
 msgid "State"
-msgstr ""
+msgstr "Estado"
 
 #: forms.py:29
 msgid "School or qualified organization"
-msgstr ""
+msgstr "Escuela o Organización calificada"
 
 #: forms.py:46
 msgid "Yes, I am in the 4th grader (or 10 years old)"
@@ -44,35 +44,35 @@ msgstr ""
 
 #: models.py:15
 msgid "Educator's full name"
-msgstr ""
+msgstr "Nombre completo del educador"
 
 #: models.py:17
 msgid "Work email address"
-msgstr ""
+msgstr "Correo electrónico del trabajo"
 
 #: models.py:19
 msgid "School or organization name"
-msgstr ""
+msgstr "Nombre de la escuela o la organización"
 
 #: models.py:22
 msgid "Address line 1"
-msgstr ""
+msgstr "Dirección línea 1"
 
 #: models.py:24
 msgid "Address line 2"
-msgstr ""
+msgstr "Dirección línea 2"
 
 #: models.py:25
 msgid "City"
-msgstr ""
+msgstr "Ciudad"
 
 #: models.py:27
 msgid "Zip"
-msgstr ""
+msgstr "Código postal"
 
 #: models.py:29
 msgid "Number of students"
-msgstr ""
+msgstr "Número de estudiantes"
 
 #: models.py:32
 msgid "You can only print up to 50 passes at a time."
@@ -138,7 +138,9 @@ msgstr "Menú"
 msgid "How It Works"
 msgstr "Cómo Funciona"
 
-#: templates/base.html:78 templates/base.html:120 templates/index.html:35
+#: templates/base.html:78 templates/base.html:120
+#: templates/get-your-pass/educator_passes_preview.html:4
+#: templates/get-your-pass/student_pass.html:4 templates/index.html:35
 #: templates/nav.html:54
 msgid "Get Your Pass"
 msgstr "Consigue tu Pase"
@@ -148,14 +150,16 @@ msgstr "Consigue tu Pase"
 msgid "Plan a Trip"
 msgstr "Planea un Viaje"
 
-#: templates/base.html:84 templates/base.html:126 templates/index.html:41
+#: templates/base.html:84 templates/base.html:126
+#: templates/get-your-pass/index.html:30 templates/index.html:41
 #: templates/nav.html:7 templates/parents.html:5
 msgid "Parents"
 msgstr "Padres"
 
 #: templates/base.html:89 templates/base.html:131
-#: templates/how-it-works/index.html:46 templates/index.html:46
-#: templates/index.html:103 templates/nav.html:10
+#: templates/get-your-pass/educator_passes_preview.html:4
+#: templates/get-your-pass/index.html:42 templates/how-it-works/index.html:46
+#: templates/index.html:46 templates/index.html:103 templates/nav.html:10
 msgid "Educators"
 msgstr "Educadores"
 
@@ -208,9 +212,364 @@ msgstr "Departamento del Interior"
 msgid "Every Kid in a Park program."
 msgstr "programa Todos los Niños en un Parque."
 
+#: templates/get-your-pass/educator_form.html:5
+msgid "Please correctly fill out the highlighted fields below"
+msgstr ""
+"Favor de llenar los campos resaltados a continuación con la información "
+"correcta"
+
+#: templates/get-your-pass/educator_form.html:9
+msgid "Fourth-grade educator info"
+msgstr "Información del educador del cuarto grado"
+
+#: templates/get-your-pass/educator_form.html:18
+msgid "Organizational info"
+msgstr "Información de la organización"
+
+#: templates/get-your-pass/educator_passes.html:7
+#: templates/get-your-pass/index.html:5 templates/get-your-pass/index.html:15
+#: templates/how-it-works/index.html:43 templates/index.html:78
+msgid "Get your pass"
+msgstr "Consigue tu Pase"
+
+#: templates/get-your-pass/educator_passes.html:7
+msgid "educators"
+msgstr "educadores"
+
+#: templates/get-your-pass/educator_passes.html:17
+msgid "Get passes for your students"
+msgstr "Conseguir pases para sus estudiantes"
+
+#: templates/get-your-pass/educator_passes.html:19
+msgid ""
+"As a fourth-grade educator, you can download an activity and print paper "
+"passes for each of your students. This program only provides passes for "
+"fourth graders."
+msgstr ""
+"Como educador del cuarto grado, Ud. puede bajar una actividad e imprimir "
+"pases de papel para cada uno de sus estudiantes. Este programa solo "
+"proporciona pases a estudiantes del cuarto grado."
+
+#: templates/get-your-pass/educator_passes.html:21
+msgid "You're a fourth-grade educator if"
+msgstr "Ud. es un educador de cuarto grado si"
+
+#: templates/get-your-pass/educator_passes.html:22
+msgid "You're a teacher at a U.S. or U.S. military school, or"
+msgstr ""
+"Ud. es un maestro en una escuela en los Estados Unidos o una escuela "
+"militar, o"
+
+#: templates/get-your-pass/educator_passes.html:23
+msgid ""
+"You're an adult who engages fourth graders through a youth-serving "
+"organization. For example, a camp director, a home-school leader, an after-"
+"school leader, or a religious group leader."
+msgstr ""
+"Ud. es un adulto que trabaja con niños del cuarto grado en una organización "
+"que proporciona servicios a la juventud. Por ejemplo: un director de "
+"campamento, un maestro de escuela-en-casa, un líder de programas para las "
+"horas después de clases, o un líder de un grupo religioso."
+
+#: templates/get-your-pass/educator_passes.html:25
+msgid "begin"
+msgstr "Empezar"
+
+#: templates/get-your-pass/educator_passes.html:46
+msgid "Download"
+msgstr "Bajar"
+
+#: templates/get-your-pass/educator_passes.html:46
+msgid "Activity Guides"
+msgstr "Guías de Actividades"
+
+#: templates/get-your-pass/educator_passes.html:47
+#: templates/get-your-pass/educator_passes.html:48
+#: templates/get-your-pass/educator_passes.html:49
+#: templates/get-your-pass/educator_passes.html:50
+msgid "Activity"
+msgstr "Actividad"
+
+#: templates/get-your-pass/educator_passes.html:47
+msgid "Exploring Federal Lands and Waters"
+msgstr "Explorando Tierras y Aguas Federales "
+
+#: templates/get-your-pass/educator_passes.html:47
+msgid "This lesson teaches students why our country protects lands and waters."
+msgstr ""
+"Esta lección enseña a los estudiantes  para que nuestro país proteja tierras "
+"y aguas."
+
+#: templates/get-your-pass/educator_passes.html:48
+msgid "Environmental Stewardship"
+msgstr "Salvaguardia Ambiental"
+
+#: templates/get-your-pass/educator_passes.html:48
+msgid "This lesson shows students how to take care of lands and waters."
+msgstr ""
+"Esta lección muestra a los estudiantes como cuidar las tierras y aguas."
+
+#: templates/get-your-pass/educator_passes.html:49
+msgid "Our Nation’s Native Peoples"
+msgstr "Los Pueblos Nativos de Nuestra Nación"
+
+#: templates/get-your-pass/educator_passes.html:49
+msgid ""
+"This lesson teaches students about the people who lived on this land before "
+"it was called the United States."
+msgstr ""
+"Esta lección  enseña a los estudiantes sobre la gente que vivía en esta "
+"tierra antes de que se llamara Los Estados Unidos."
+
+#: templates/get-your-pass/educator_passes.html:50
+msgid "Citizen Science"
+msgstr "Ciencia Ciudadana"
+
+#: templates/get-your-pass/educator_passes.html:50
+msgid ""
+"This lesson helps kids learn about the difference between weather and "
+"climate."
+msgstr ""
+"Esta lección ayuda a los niños comprender la diferencia entre el tiempo y el "
+"clima."
+
+#: templates/get-your-pass/educator_passes.html:53
+msgid "Generate passes"
+msgstr "Generar pases"
+
+#: templates/get-your-pass/educator_passes.html:54
+msgid ""
+"Each student receives a paper pass with a unique code. That pass gives them "
+"free access to all national parks, lands, and waters through August 31, 2017."
+msgstr ""
+"Cada estudiante recibe un pase de papel con un código único. Este pase le "
+"dar derecho a la entrada gratuita a todos los parques, tierras, y aguas "
+"nacionales hasta el 31 de agosto de 2017."
+
+#: templates/get-your-pass/educator_passes.html:55
+msgid "Privacy notice"
+msgstr "Nota de privacidad"
+
+#: templates/get-your-pass/educator_passes.html:63
+msgid ""
+"You can only print up to 50 passes at a time. To print more than 50 passes, "
+"just fill this form out again."
+msgstr ""
+"Se puede imprimir solo hasta 50 pases a la vez. Para imprimir más de 50 "
+"pases, solo hay que volver a llenar el formulario."
+
+#: templates/get-your-pass/educator_passes.html:66
+msgid "Next"
+msgstr "Sigue"
+
+#: templates/get-your-pass/educator_passes.html:66
+msgid "Review Information"
+msgstr ""
+
+#: templates/get-your-pass/educator_passes_preview.html:14
+msgid "Double-check your information"
+msgstr "Verificar su información"
+
+#: templates/get-your-pass/educator_passes_preview.html:15
+msgid "Please confirm that the info you've provided is correct."
+msgstr ""
+"Favor de confirmar que la información que Ud. ha proporcionado está correcta."
+
+#: templates/get-your-pass/educator_passes_preview.html:57
+msgid "Errors?"
+msgstr "¿Errores?"
+
+#: templates/get-your-pass/educator_passes_preview.html:57
+msgid "Go Back"
+msgstr "Regresar"
+
+#: templates/get-your-pass/educator_passes_preview.html:58
+msgid "Good to go?"
+msgstr "¿Todo bien?"
+
+#: templates/get-your-pass/educator_passes_preview.html:58
+msgid "Get vouchers"
+msgstr "Conseguir los Pases"
+
+#: templates/get-your-pass/index.html:17
+msgid ""
+"Bike through a forest. Walk in a desert. See a whale burst through the "
+"ocean's surface. Do all this and more with your pass. And bring a car full "
+"of family and friends for free!"
+msgstr ""
+"Anda en bicicleta en el bosque. Camina en el desierto. Mira a una ballena "
+"aparecer en la superficie del océano. Haz todo esto y más con tu pase. Y "
+"trae un coche lleno de familia y amigos ¡de manera gratuita!"
+
+#: templates/get-your-pass/index.html:22 templates/index.html:75
+msgid "Fourth graders"
+msgstr "Estudiante de 4ºgrado"
+
+#: templates/get-your-pass/index.html:23
+msgid "Complete our adventure diary to get your pass"
+msgstr "Completa nuestro diario de aventuras para conseguir tu pase"
+
+#: templates/get-your-pass/index.html:25
+#: templates/get-your-pass/student_pass.html:24
+msgid "Play"
+msgstr "Juega"
+
+#: templates/get-your-pass/index.html:31
+msgid "Learn more and see rules"
+msgstr "Aprenda más y ver las reglas"
+
+#: templates/get-your-pass/index.html:36
+msgid "Go"
+msgstr "Ir"
+
+#: templates/get-your-pass/index.html:43
+msgid "Get passes for your fourth-grade students"
+msgstr "Conseguir pases para sus estudiantes del cuarto grado"
+
+#: templates/get-your-pass/index.html:45 templates/how-it-works/index.html:62
+msgid "Start"
+msgstr "Empieza"
+
+#: templates/get-your-pass/student_pass.html:4
+#: templates/how-it-works/index.html:45
+msgid "Fourth Graders"
+msgstr "Estudiante de 4ºgrado"
+
+#: templates/get-your-pass/student_pass.html:14
+msgid "Start your adventure now"
+msgstr "Empieza tu aventura ahora"
+
+#: templates/get-your-pass/student_pass.html:15
+msgid ""
+"Fill out our diary entry with things you'd like to see and do. When you're "
+"done, read your story! Then print your paper pass."
+msgstr ""
+"Escribe en tu diario las cosas que te gustaría ver y hacer. Cuando termines, "
+"¡lee tu cuento! Luego emprime tu pase de papel."
+
+#: templates/get-your-pass/student_pass.html:22
+msgid "Yes, I'm in the fourth grade or home-school equivalent"
+msgstr "Sí, estoy en el cuarto grado, o el equivalente."
+
+#: templates/get-your-pass/voucher-rules.html:3 templates/parents.html:50
+msgid "Official rules"
+msgstr "Reglas oficiales"
+
+#: templates/get-your-pass/voucher-rules.html:6
+msgid "The pass is for U.S. fourth-grade (or home-school equivalent) students."
+msgstr ""
+"El pase es para estudiantes del cuarto grado de los Estados Unidos (o su "
+"equivalente de escuela-en-casa)."
+
+#: templates/get-your-pass/voucher-rules.html:7
+msgid ""
+"The pass is for the 2016 to 2017 school year. It expires August 31, 2017."
+msgstr ""
+"El pase es para el año escolar de 2016 a 2017. El pase vence el 31 de agosto "
+"de 2017."
+
+#: templates/get-your-pass/voucher-rules.html:8
+msgid "Students can't transfer the pass to anyone else."
+msgstr "Los estudiantes no pueden transferir el pase a nadie."
+
+#: templates/get-your-pass/voucher-rules.html:9
+msgid ""
+"We can’t accept electronic versions of this paper for access or to exchange "
+"for a pass."
+msgstr ""
+"No podemos aceptar versiones electrónicas de este papel para acceso o para "
+"cambiar para un pase duradero."
+
+#: templates/get-your-pass/voucher-rules.html:10
+msgid ""
+"No refunds are given for previously purchased passes, or if you forget your "
+"pass when you visit."
+msgstr ""
+"No se dan reembolsos para pases comprados previamente, o si se te olvida tu "
+"pase cuando visitas."
+
+#: templates/get-your-pass/voucher-rules.html:11
+msgid ""
+"If you lose your pass, get a new one by visiting the website and signing up "
+"again."
+msgstr "Si se te pierde tu pase, visita el sitio web y consigue un pase nuevo."
+
+#: templates/get-your-pass/voucher-rules.html:12
+msgid ""
+"Educators can get one paper pass for each of their fourth-grade students."
+msgstr ""
+"Los educadores pueden conseguir un pase de papel para cada uno de sus "
+"estudiantes del cuarto grado."
+
+#: templates/get-your-pass/voucher-rules.html:13
+#: templates/how-it-works/index.html:92 templates/plan-your-trip/index.html:192
+msgid "This program only provides passes for fourth graders."
+msgstr "Este programa solo proporciona pases a estudiantes del cuarto grado."
+
+#: templates/get-your-pass/voucher-rules.html:16
 #: templates/how-it-works/index.html:14 templates/index.html:70
 msgid "How it works"
 msgstr "Cómo Funciona"
+
+#: templates/get-your-pass/voucher-rules.html:19
+msgid ""
+"Show your pass to a ranger when you enter. If there is no ranger, leave it "
+"on the dashboard of your car."
+msgstr ""
+"Muestra tu pase a un guarda al entrar. Si no hay un guarda, déjalo en el "
+"tablero de tu carro."
+
+#: templates/get-your-pass/voucher-rules.html:20
+msgid ""
+"If you visit a site that charges entrance fees per person— The pass admits "
+"all children under 16 and up to three adults for free."
+msgstr ""
+"Si visitas un sitio que cobra la entrada por persona – el pase admite todos "
+"los niños menores de 16 años y hasta tres adultos de manera gratuita."
+
+#: templates/get-your-pass/voucher-rules.html:21
+msgid ""
+"If your group visits a site that charges vehicle entrance fees - The pass "
+"admits all children under 16 and all adults in up to one passenger vehicle.  "
+"Commercial vehicles can't use a pass to get in."
+msgstr ""
+"Si tu grupo visita un sitio que cobra la entrada por vehículo -  el pase "
+"admite todos los niños menores de 16 años y todos los adultos en un vehículo "
+"de pasajeros. Los vehículos comerciales no pueden utilizar el pase para la "
+"entrada."
+
+#: templates/get-your-pass/voucher-rules.html:22
+msgid ""
+"If you arrive at a site on bicycle— The pass admits all children under 16 "
+"and up to three adults on bicycles."
+msgstr ""
+"Si tú llegas a un sitio en bicicleta – el pase admite todos los niños "
+"menores de 16 años y hasta tres adultos en bicicleta."
+
+#: templates/get-your-pass/voucher-rules.html:23
+msgid ""
+"The pass doesn't cover things like parking fees, camping, boats, and special "
+"tours.   Also, some sites are managed by private operators.  They may not "
+"honor the pass.  Check with the site ahead of time to find out."
+msgstr ""
+"El pase no cubre cosas tales como tarifas para estacionamiento, acampar, "
+"barcos, y tours especiales. También, algunos sitios pueden ser manejados por "
+"operadores privados. Puede que ellos no acepten el pase. Favor de consultar "
+"directamente con el sitio de manera previa."
+
+#: templates/get-your-pass/voucher-rules.html:24
+msgid ""
+"The pass doesn’t cover fees for local, city, or state parks and recreation "
+"areas unless they say that they accept this pass."
+msgstr ""
+"El pase no cubre tarifas de parques y lugares de recreación locales, "
+"estatales, o de ciudades a no ser que estas áreas lo anuncian."
+
+#: templates/get-your-pass/voucher-rules.html:25
+msgid "Paper passes can be exchanged for plastic passes at certain sites."
+msgstr ""
+"Se pueden cambiar los pases de papel para pases de plástico en algunos "
+"sitios específicos."
 
 #: templates/how-it-works/index.html:16
 msgid ""
@@ -224,19 +583,11 @@ msgstr ""
 msgid "Let's Get Going!"
 msgstr "¡Vámonos!"
 
-#: templates/how-it-works/index.html:43 templates/index.html:78
-msgid "Get your pass"
-msgstr "Consigue tu Pase"
-
 #: templates/how-it-works/index.html:44
 msgid "Get and print fourth-grade passes to our national lands and waters."
 msgstr ""
 "Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
 "estudiantes del cuarto grado."
-
-#: templates/how-it-works/index.html:45
-msgid "Fourth Graders"
-msgstr "Estudiante de 4ºgrado"
 
 #: templates/how-it-works/index.html:60 templates/parents.html:42
 msgid "Plan a trip"
@@ -245,10 +596,6 @@ msgstr "Planea un Viaje"
 #: templates/how-it-works/index.html:61
 msgid "It's a good idea to involve your parent or guardian in this."
 msgstr "Es buena idea involucrar a tus padres o guardianes en esto."
-
-#: templates/how-it-works/index.html:62
-msgid "Start"
-msgstr "Empieza"
 
 #: templates/how-it-works/index.html:70
 msgid "Hit the road!"
@@ -284,10 +631,6 @@ msgstr ""
 "a tus amigos. Alienta a tus amigos a que consigan su propio pase si están en "
 "cuarto grado."
 
-#: templates/how-it-works/index.html:92 templates/plan-your-trip/index.html:192
-msgid "This program only provides passes for fourth graders."
-msgstr "Este programa solo proporciona pases a estudiantes del cuarto grado."
-
 #: templates/index.html:5
 msgid "Main"
 msgstr "Principal"
@@ -316,10 +659,6 @@ msgid ""
 msgstr ""
 "Tú y tu familia consiguen acceso gratuito a cientos de parques, tierras y "
 "aguas durante todo un año."
-
-#: templates/index.html:75
-msgid "Fourth graders"
-msgstr "Estudiante de 4ºgrado"
 
 #: templates/index.html:76
 msgid ""
@@ -420,10 +759,6 @@ msgid ""
 msgstr ""
 "Revisa “Planea un Viaje” para encontrar cosas divertidas que hacer en "
 "tierras, aguas y parques públicos."
-
-#: templates/parents.html:50
-msgid "Official rules"
-msgstr "Reglas oficiales"
 
 #: templates/parents.html:51
 msgid "See our rules and instructions before you go."
