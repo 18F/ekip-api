@@ -4,7 +4,7 @@
 
 {% load i18n %}
 
-{% block title %}Get your pass - educators{% endblock title %}
+{% block title %}{% trans "Get your pass" %} - {% trans "educators" %}{% endblock title %}
 
 {% block page_id %}educators{% endblock page_id %}
 
@@ -14,17 +14,15 @@
 
   <div class="educator-content">
 
-    <h1>Get passes for your students</h1>
+    <h1>{% trans "Get passes for your students" %}</h1>
 
-    <h2>As a fourth-grade educator, you can download an activity and print paper passes for each of your students. 
-    This program only provides passes for fourth graders. </h2>
+    <h2>{% trans "As a fourth-grade educator, you can download an activity and print paper passes for each of your students. This program only provides passes for fourth graders." %} </h2>
     
-    <h3>You're a fourth-grade educator if: </h3>
-    <p>You're a teacher at a U.S. or U.S. military school, or</p>
-    <p>You're an adult who engages fourth graders through a youth-serving organization.
-    For example, a camp director, a home-school leader, an after-school leader, or a religious group leader.</p>
+    <h3>{% trans "You're a fourth-grade educator if" %}: </h3>
+    <p>{% trans "You're a teacher at a U.S. or U.S. military school, or" %}</p>
+    <p>{% trans "You're an adult who engages fourth graders through a youth-serving organization. For example, a camp director, a home-school leader, an after-school leader, or a religious group leader." %}</p>
 
-    <button class="educator-begin">begin</button>
+    <button class="educator-begin">{% trans "begin" %}</button>
 
     <svg class="animate-line" width="372px" height="272px" viewBox="0 0 372 272" version="1.1">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -45,17 +43,16 @@
   <div class="content-inner-block">
     {% get_current_language as LANGUAGE_CODE %}
     <div class="download-activity">
-      <h3>Download<br/> Activity Guides</h3>
-      <p>Activity 1: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-one.pdf" %}{% else %}{% static "activities/scholastic-one.pdf" %}{% endif %}" target="_blank">Exploring Federal Lands and Waters</a> (PDF). This lesson teaches students why our country protects lands and waters.</p>
-      <p>Activity 2: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-two.pdf" %}{% else %}{% static "activities/scholastic-two.pdf" %}{% endif %}" target="_blank">Environmental Stewardship</a> (PDF). This lesson shows students how to take care of lands and waters.</p>
-      <p>Activity 3: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-three.pdf" %}{% else %}{% static "activities/scholastic-three.pdf" %}{% endif %}" target="_blank">Our Nation’s Native Peoples</a> (PDF). This lesson teaches students about the people who lived on this land before it was called the United States.</p>
-      <p>Activity 4: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-four.pdf" %}{% else %}{% static "activities/scholastic-four.pdf" %}{% endif %}" target="_blank">Citizen Science</a> (PDF). This lesson helps kids learn about the difference between weather and climate.</p>
+      <h3>{% trans "Download" %}<br/> {% trans "Activity Guides" %}</h3>
+      <p>{% trans "Activity" %} 1: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-one.pdf" %}{% else %}{% static "activities/scholastic-one.pdf" %}{% endif %}" target="_blank">{% trans "Exploring Federal Lands and Waters" %}</a> (PDF). {% trans "This lesson teaches students why our country protects lands and waters." %}</p>
+      <p>{% trans "Activity" %} 2: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-two.pdf" %}{% else %}{% static "activities/scholastic-two.pdf" %}{% endif %}" target="_blank">{% trans "Environmental Stewardship" %}</a> (PDF). {% trans "This lesson shows students how to take care of lands and waters." %}</p>
+      <p>{% trans "Activity" %} 3: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-three.pdf" %}{% else %}{% static "activities/scholastic-three.pdf" %}{% endif %}" target="_blank">{% trans "Our Nation’s Native Peoples" %}</a> (PDF). {% trans "This lesson teaches students about the people who lived on this land before it was called the United States." %}</p>
+      <p>{% trans "Activity" %} 4: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-four.pdf" %}{% else %}{% static "activities/scholastic-four.pdf" %}{% endif %}" target="_blank">{% trans "Citizen Science" %}</a> (PDF). {% trans "This lesson helps kids learn about the difference between weather and climate." %}</p>
     </div>
     <div class="generate-vouchers">
-      <h3>Generate passes</h3>
-      <p>Each student receives a paper pass with a unique code.
-      That pass gives them free access to all national parks, lands, and waters through August 31, 2017.</p>
-      <p><a href="{% url 'privacy_policy' %}">Privacy notice</a>.</p>
+      <h3>{% trans "Generate passes" %}</h3>
+      <p>{% trans "Each student receives a paper pass with a unique code. That pass gives them free access to all national parks, lands, and waters through August 31, 2017." %}</p>
+      <p><a href="{% url 'privacy_policy' %}">{% trans "Privacy notice" %}</a>.</p>
     </div>
 
     <form action="" method="post" class="pass-form">
@@ -63,10 +60,10 @@
 
       {% include "get-your-pass/educator_form.html" %}
 
-      <p class="pass-limit-text">You can only print up to 50 passes at a time. To print more than 50 passes, just fill this form out again.</p>
+      <p class="pass-limit-text">{% trans "You can only print up to 50 passes at a time. To print more than 50 passes, just fill this form out again." %}</p>
 
       <input type="hidden" name="{{stage_field}}" value="1" />
-      <button type="submit">Next:<br/><span>Review Information</span></button>
+      <button type="submit">{% trans "Next" %}:<br/><span>{% trans "Review Information" %}</span></button>
     </form>
   </div>
 
