@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 13:24-0400\n"
+"POT-Creation-Date: 2016-09-13 14:01-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,7 +159,8 @@ msgstr "Padres"
 #: templates/base.html:89 templates/base.html:131
 #: templates/get-your-pass/educator_passes_preview.html:4
 #: templates/get-your-pass/index.html:42 templates/how-it-works/index.html:46
-#: templates/index.html:46 templates/index.html:103 templates/nav.html:10
+#: templates/index.html:46 templates/index.html:103
+#: templates/legal/privacy.html:15 templates/nav.html:10
 msgid "Educators"
 msgstr "Educadores"
 
@@ -176,7 +177,7 @@ msgstr "Departamento de Interior de EE.UU. – 3 de marzo, 1849"
 msgid "About Every Kid in a Park"
 msgstr "Sobre Todos los Niños en un Parque"
 
-#: templates/base.html:156
+#: templates/base.html:156 templates/legal/privacy.html:4
 msgid "Privacy policy"
 msgstr "Política de Privacidad"
 
@@ -402,6 +403,7 @@ msgstr ""
 "trae un coche lleno de familia y amigos ¡de manera gratuita!"
 
 #: templates/get-your-pass/index.html:22 templates/index.html:75
+#: templates/legal/privacy.html:12
 msgid "Fourth graders"
 msgstr "Estudiante de 4ºgrado"
 
@@ -721,6 +723,85 @@ msgstr ""
 #: templates/index.html:127
 msgid "President Barack Obama"
 msgstr "Presidente Barack Obama"
+
+#: templates/legal/privacy.html:10
+msgid "Privacy statement"
+msgstr "Declaración de Privacidad"
+
+#: templates/legal/privacy.html:13
+msgid ""
+"We don't collect any information that could personally identify you. We do "
+"ask you to tell us the general area where you live. Knowing this helps us "
+"analyze who is using the program. It also helps us make your paper pass and "
+"protect against misuse."
+msgstr ""
+"Nosotros no coleccionamos ningún tipo de información que te puede "
+"identificar personalmente. Sí, te pedimos que nos digas el área general "
+"donde vives. Esta información nos ayuda analizar quien está utilizando el "
+"programa. También nos ayuda a hacer tu pase de papel y proteger contra el "
+"mal uso."
+
+#: templates/legal/privacy.html:16
+msgid ""
+"On this site, we ask you to give us some basic information. You're not "
+"required to provide it to us, but it's necessary to get a pass. We collect "
+"this information to give free passes to fourth graders and educators. We use "
+"it to make sure you're eligible for a free pass and to promote Every Kid in "
+"a Park. These passes allow free access to public lands and waters."
+msgstr ""
+"En este sitio, pedimos que nos proporcione alguna información básica. No es "
+"requerido que nos la proporciona, pero es necesario para conseguir un pase. "
+"Nosotros coleccionamos esta información para dar pases gratuitos a los "
+"estudiantes del cuarto grado. Lo utilizamos para asegurar que Ud. es "
+"elegible para un pase gratuito y para promocionar Todos Los Niños en un "
+"Parque. Estos pases permiten en acceso gratuito a tierras y aguas federales. "
+
+#: templates/legal/privacy.html:18
+msgid ""
+"We may share the information with others, including agency groups or "
+"organizations, pursuant to Privacy Act system of records notice DOI-06.  "
+"Among other things, this helps us measure and improve the program. It also "
+"helps us stop fraud and abuse."
+msgstr ""
+"Tal vez compartamos esta información con otros, incluyendo grupos de "
+"agencias u organizaciones, de conformidad con el Privacy Act system of "
+"records notice DOI-06. Entre otras cosas, esto nos ayuda medir y mejorar el "
+"programa. También nos ayuda impedir el fraude y abuso."
+
+#: templates/legal/privacy.html:20
+msgid ""
+"We do all this under the authority of the Federal Lands Recreation "
+"Enhancement Act of 2004 (REA), 16 U.S.C. 6804, and the Privacy Act of 1974, "
+"5 U.S.C. 552a."
+msgstr ""
+"Nosotros hacemos todo esto bajo la autoridad del Federal Lands Recreation "
+"Enhancement Act of 2004 (REA), 16 U.S.C. 6804, y el Privacy Act of 1974, 5 U."
+"S.C. 552a."
+
+#: templates/legal/privacy.html:22
+msgid "More about your privacy"
+msgstr "Más acerca de su privacidad"
+
+#: templates/legal/privacy.html:23
+msgid ""
+"We collect general information about our visitors so we can improve our "
+"website. If you want more information, see the"
+msgstr ""
+"Nosotros colectamos información general acerca de nuestros visitantes para "
+"que podamos mejorar nuestro sitio web. Si Ud. quiere más información, véase "
+"la"
+
+#: templates/legal/privacy.html:23
+msgid "Department of the Interior Privacy Policy"
+msgstr "Declaración de Privacidad del Department of the Interior"
+
+#: templates/legal/privacy.html:24
+msgid "and the General Services Administration"
+msgstr "y la"
+
+#: templates/legal/privacy.html:24
+msgid "Privacy and Security Notice"
+msgstr "Noticia de Privacidad y Seguridad de la General Services Administration"
 
 #: templates/parents.html:17
 msgid ""
@@ -1091,3 +1172,6 @@ msgstr "Política de privacidad"
 #: templates/rules.html:10
 msgid "Rules and instructions"
 msgstr "Reglas e instrucciones "
+
+#~ msgid "and the"
+#~ msgstr "y la"
