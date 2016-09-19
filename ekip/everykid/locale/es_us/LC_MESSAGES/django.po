@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 14:01-0400\n"
+"POT-Creation-Date: 2016-09-19 13:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,6 +125,302 @@ msgstr "¡Debe estar explorando en algún lugar!"
 msgid "Get Back On Track"
 msgstr "Retome el camino"
 
+#: templates/about.html:5 templates/base.html:153
+msgid "About Every Kid in a Park"
+msgstr "Sobre Todos los Niños en un Parque"
+
+#: templates/about.html:15 templates/base.html:92 templates/base.html:134
+#: templates/index.html:49 templates/nav.html:13
+msgid "About"
+msgstr "Sobre"
+
+#: templates/about.html:17
+msgid ""
+"Marvel at the St. Louis Arch, the Florida Keys, and the Frederick Douglass "
+"house. Listen to wolves howl. Walk in dinosaur tracks. Look up into the inky "
+"night sky, and reach for the stars!"
+msgstr ""
+"Maravíllate con el Arco de San Luis, los Cayos de la Florida y la casa de "
+"Frederick Douglas. ¡Escucha los aullidos de los lobos. Camina sobre huellas "
+"de dinosaurios. Mira el oscuro cielo nocturno y mira las estrellas!"
+
+#: templates/about.html:19
+msgid "These sites belong to all of us — including you."
+msgstr "Estos sitios nos pertenecen a todos, también a ti."
+
+#: templates/about.html:21
+msgid ""
+"President Barack Obama created Every Kid in a Park so fourth graders and "
+"their families could discover our wildlife, resources, and history for free."
+msgstr ""
+"El presidente Barack Obama creó Todos los Niños en un Parque para que los "
+"estudiantes de 4º grado y sus familias puedan descubrir gratuitamente "
+"nuestra vida silvestre, recursos naturales e historia. "
+
+#: templates/about.html:24
+msgid "Partner"
+msgstr "Socio"
+
+#: templates/about.html:25
+msgid "agencies and more"
+msgstr "agencias y más"
+
+#: templates/about.html:47
+msgid ""
+"Our country is full of dazzling landscapes where you can play and learn. "
+"They protect our wildlife and resources. They let us look into the past and "
+"protect our history. Keeping them public supports a healthy planet."
+msgstr ""
+"Nuestro país está lleno de deslumbrantes paisajes donde tú puedes jugar y "
+"aprender. Ellos protegen nuestra vida silvestre y recursos naturales. Ellos "
+"nos permiten contemplar el pasado y proteger nuestra historia. Mantenerlos "
+"abiertos al público fomenta un mundo saludable."
+
+#: templates/about.html:51
+msgid "Participating agencies"
+msgstr "Agencias participantes"
+
+#: templates/about.html:52
+msgid ""
+"These agencies support Every Kid in a Park. Learn more about their "
+"conservation work and find activities by visiting their websites."
+msgstr ""
+"Estas agencias apoyan Todos Los Niños en un Parque. Aprende más sobre sus "
+"tareas de conservación y encuentra otras actividades visitando sus sitios "
+"internet."
+
+#: templates/about.html:56 templates/about.html:59
+msgid "U.S. Bureau of Land Management"
+msgstr "Oficina de Administración de Tierras de EE.UU."
+
+#: templates/about.html:57 templates/about.html:66 templates/about.html:75
+#: templates/about.html:84 templates/about.html:93 templates/about.html:102
+#: templates/about.html:111
+msgid "click to expand"
+msgstr "pulsa para ampliar"
+
+#: templates/about.html:61
+msgid ""
+"We're a small government group with a big mission. We take care of more than "
+"245 million acres of public land. Our goal is to make sure that land is "
+"there for everyone, now and in the future. We're in charge of more land than "
+"any other group in the government. Most of it's in the 12 western states, "
+"including Alaska."
+msgstr ""
+"Nosotros somos una pequeña entidad gubernamental con una gran misión. "
+"Cuidamos más de 245 millones de acres de tierras públicas. Nuestro objetivo "
+"es asegurarnos de que esas tierras están disponibles para todos, ahora y en "
+"el futuro. Somos responsables de más tierras que ninguna otra agencia "
+"gubernamental. La mayor parte se encuentran en los 12 estados del oeste, "
+"incluido Alaska."
+
+#: templates/about.html:65 templates/about.html:68
+msgid "U.S. Bureau of Reclamation"
+msgstr "Oficina de Recuperación de Tierras de EE.UU."
+
+#: templates/about.html:70
+msgid ""
+"More people than ever are looking for places to have fun and relax. We take "
+"care of more than 6.5 million acres of land and water, and most of that is "
+"available for you to explore. Come play or swim with us!"
+msgstr ""
+"Más gente que nunca está buscando lugares para divertirse y relajarse. "
+"Nosotros nos encargamos de más de 6.5 millones de acres de tierras y aguas, "
+"en su mayor parte disponibles para que tú las explores. ¡Ven a jugar o nadar "
+"con nosotros!"
+
+#: templates/about.html:74 templates/about.html:77
+msgid "National Oceanic and Atmospheric Administration"
+msgstr "Administración Nacional Oceánica y Atmosférica."
+
+#: templates/about.html:79
+msgid ""
+"We enrich life through science. People rely on us for weather forecasts and "
+"warnings. We also protect the coast. This includes making sure we have "
+"plenty of seafood and that ships can move safely in our oceans. Our "
+"scientists look at the world up close and far away. They study tiny plankton "
+"and look at the earth from space. Our sanctuaries and research reserves have "
+"great places where you can relax and protect our ocean and coastal treasures."
+msgstr ""
+"Nosotros enriquecemos la vida mediante la ciencia. La gente confía en "
+"nosotros para recibir predicciones y advertencias metereológicas. También "
+"protegemos las costas. Esto incluye asegurar que tenemos suficientes "
+"mariscos y que los barcos pueden moverse con seguridad en nuestros océanos. "
+"Nuestros científicos observan el mundo desde muy cerca y desde lejos. Ellos "
+"estudian plancton diminuto y miran la tierra desde el espacio. Nuestros "
+"santuarios naturales y espacios de investigación tienen bellos lugares donde "
+"tú puedes relajarte y proteger nuestros tesoros oceánicos y costeros."
+
+#: templates/about.html:83 templates/about.html:86
+msgid "National Park Service"
+msgstr "Servicio de Parques Nacionales"
+
+#: templates/about.html:88
+msgid ""
+"We take care of hundreds of parks and monuments. Every year, millions of "
+"people come see our islands, oceans, and mountains. You can see active "
+"volcanoes, old prisons, or the hottest desert in the U.S.! Come explore and "
+"learn at one of our sites!"
+msgstr ""
+"Nosotros cuidamos cientos de parques y monumentos. Cada año, millones de "
+"personas vienen a ver nuestras islas, océanos y montañas. Tú puedes ver "
+"volcanes activos, prisiones antiguas o el desierto más caliente de EE.UU. "
+"¡Ven a explorar y aprender en uno de nuestros sitios!"
+
+#: templates/about.html:92 templates/about.html:95
+msgid "U.S. Fish and Wildlife Service"
+msgstr "Servicio de Pesca y Fauna Silvestre de EE.UU."
+
+#: templates/about.html:97
+msgid ""
+"Clean water. Clean air. Rare and abundant wildlife. World-class places to "
+"relax and enjoy nature. We protect 150 million acres of land and water and "
+"more than 418 million acres of national marine monuments."
+msgstr ""
+"Agua limpia. Aire limpio. Vida silvestre excepcional y abundante. Lugares de "
+"primera categoría para relajarse y disfrutar de la naturaleza. Nosotros "
+"protegemos 150 millones de acres de tierras y aguas, y más de 418 millones "
+"de acres de monumentos marinos nacionales."
+
+#: templates/about.html:101 templates/about.html:104
+msgid "U.S. Forest Service"
+msgstr "Servicio Forestal de EE.UU."
+
+#: templates/about.html:106
+msgid ""
+"Ice fields in Alaska. Tropical forests in Puerto Rico. We take care of 193 "
+"million acres of forests and grasslands. Come visit us and see all the "
+"things you can explore and learn in a national forest!"
+msgstr ""
+"Campos de hielo en Alaska. Bosques tropicales en Puerto Rico. Nosotros nos "
+"ocupamos de 193 millones de acres de bosques y praderas. ¡Ven a visitarnos y "
+"observa todas las cosas que puedes explorar y aprender en un bosque nacional!"
+
+#: templates/about.html:110 templates/about.html:113
+msgid "U.S. Army Corps of Engineers"
+msgstr "Cuerpo de Ingenieros del Ejército de EE.UU."
+
+#: templates/about.html:115
+msgid ""
+"Explore and enjoy the outdoors at one of our sites. You can swim, boat, "
+"fish, hike, and ride horses. See how dams and river locks are built. Even "
+"drive a barge or boat through a lock on a major river! We have outdoor "
+"classrooms about animals, energy, and history. In fact, we have more "
+"recreation visits than any other government group— more than 350 million "
+"every year. Find a river or lake close to your home!"
+msgstr ""
+"Explora y disfruta al aire libre en uno de nuestros sitios. Puedes nadar, "
+"navegar, pescar, caminar y montar a caballo. Mira cómo se construyen diques "
+"y esclusas. ¡Incluso puedes manejar una barcaza o un bote en una esclusa en "
+"un gran río! Tenemos clases al aire libre sobre animales, energía e "
+"historia. De hecho, tenemos más visitas de recreación que ninguna otra "
+"agencia gubernamental, más de 350 millones al año. ¡Encuentra un río o lago "
+"cerca de tu casa!"
+
+#: templates/about.html:127
+msgid "Kids learning about turtles."
+msgstr ""
+
+#: templates/about.html:128
+msgid "Media"
+msgstr "Medios de Comunicación"
+
+#: templates/about.html:130 templates/about.html:131
+msgid "Here's an"
+msgstr "He aquí un"
+
+#: templates/about.html:130 templates/about.html:131
+msgid "information kit"
+msgstr "kit de información"
+
+#: templates/about.html:130
+msgid "in English"
+msgstr "en inglés"
+
+#: templates/about.html:131
+msgid "in Spanish"
+msgstr "en español"
+
+#: templates/about.html:132
+msgid "Please don't hesitate to"
+msgstr "Favor de contactarnos"
+
+#: templates/about.html:132
+msgid "email the press office"
+msgstr "vía correo electrónico"
+
+#: templates/about.html:132
+msgid "if you have additional questions."
+msgstr "si Ud. tiene más preguntas."
+
+#: templates/about.html:134
+msgid "Tools"
+msgstr "Herramientas"
+
+#: templates/about.html:136
+msgid "Here's a"
+msgstr "He aquí"
+
+#: templates/about.html:136
+msgid "set of resources"
+msgstr "información y materiales"
+
+#: templates/about.html:136
+msgid ""
+"to help local officials, youth leaders and others plan an outdoor outing "
+"with 4th graders."
+msgstr "para oficiales locales, líderes de la juventud, y otros para ayudar "
+"a planear una salida al aire libre con estudiantes del cuarto grado."
+
+#: templates/about.html:137
+msgid ""
+"In partnership with the Every Kid in a Park Program, Transforming Youth "
+"Outdoors"
+msgstr "En colaboración con el programa Todos los Niños en un Parque, "
+"el grupo Transforming Youth Outdoors"
+
+#: templates/about.html:137
+msgid "has created two step-by-step learning paths"
+msgstr "ha creado dos manuales con materiales"
+
+#: templates/about.html:137
+msgid ""
+"that give classroom teachers and outdoor educators tools to learn more about "
+"the Every Kid program and plan a successful field trip. These resources "
+"provide information about federal lands and waters, tools to find nearby "
+"locations, and information on planning and executing an Every Kid in a Park "
+"field trip."
+msgstr "para ayudar a maestros y educadores al aire libre a aprender más acerca "
+"del programa Todos los Niños en un Parque y planear un viaje de estudios exitoso. "
+"Estos recursos proporcionan información sobre tierras y aguas federales, donde "
+"localizarlos, y planear una salida. (Estos materiales están disponibles solo en "
+"inglés.)"
+
+#: templates/about.html:139
+msgid "Code"
+msgstr "Código"
+
+#: templates/about.html:140
+msgid "We developed this website in the"
+msgstr "Nosotros desarrollamos este sitio"
+
+#: templates/about.html:140
+msgid "open"
+msgstr "abierto"
+
+#: templates/about.html:140
+msgid "and welcome your contributions and comments."
+msgstr "al público y sus contribuciones y comentarios son bienvenidos."
+
+#: templates/about.html:142
+msgid "Contact us"
+msgstr "Contáctenos"
+
+#: templates/about.html:143
+msgid "Questions? Concerns? Things we're doing well? Please reach out to us at"
+msgstr "¿Preguntas? ¿Preocupaciones? ¿Cosas que estamos haciendo bien? ¿Favor "
+"de comunicarse con nosotros a"
+
 #: templates/base.html:44 templates/index.html:13 templates/nav.html:22
 msgid "Every Kid In A Park Logo"
 msgstr "Logo de Todos los Niños en un Parque"
@@ -164,18 +460,9 @@ msgstr "Padres"
 msgid "Educators"
 msgstr "Educadores"
 
-#: templates/base.html:92 templates/base.html:134 templates/index.html:49
-#: templates/nav.html:13
-msgid "About"
-msgstr "Sobre"
-
 #: templates/base.html:145
 msgid "US Department of the Interior - March 3, 1849"
 msgstr "Departamento de Interior de EE.UU. – 3 de marzo, 1849"
-
-#: templates/base.html:153
-msgid "About Every Kid in a Park"
-msgstr "Sobre Todos los Niños en un Parque"
 
 #: templates/base.html:156 templates/legal/privacy.html:4
 msgid "Privacy policy"
@@ -801,7 +1088,8 @@ msgstr "y la"
 
 #: templates/legal/privacy.html:24
 msgid "Privacy and Security Notice"
-msgstr "Noticia de Privacidad y Seguridad de la General Services Administration"
+msgstr ""
+"Noticia de Privacidad y Seguridad de la General Services Administration"
 
 #: templates/parents.html:17
 msgid ""
@@ -1172,6 +1460,9 @@ msgstr "Política de privacidad"
 #: templates/rules.html:10
 msgid "Rules and instructions"
 msgstr "Reglas e instrucciones "
+
+#~ msgid "in English (ZIP file, 67.1 MB)"
+#~ msgstr "en inglés"
 
 #~ msgid "and the"
 #~ msgstr "y la"
