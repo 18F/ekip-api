@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 
-{% block title %}About Every Kid in a Park{% endblock title %}
+{% block title %}{% trans "About Every Kid in a Park" %}{% endblock title %}
 
 {% block page_id %}about{% endblock page_id %}
 
@@ -11,20 +12,17 @@
 
   <div class="about-content">
 
-    <h1>About</h1>
+    <h1>{% trans "About" %}</h1>
 
-    <p>Marvel at the St. Louis Arch, the Florida Keys, and the Frederick Douglass house.
-    Listen to wolves howl. Walk in dinosaur tracks. Look up into the inky night sky, and
-    reach for the stars!</p>
+    <p>{% trans "Marvel at the St. Louis Arch, the Florida Keys, and the Frederick Douglass house. Listen to wolves howl. Walk in dinosaur tracks. Look up into the inky night sky, and reach for the stars!" %}</p>
 
-    <p>These sites belong to all of us — including you.</p>
+    <p>{% trans "These sites belong to all of us — including you." %}</p>
 
-    <p>President Barack Obama created Every Kid in a Park so fourth graders and their families
-    could discover our wildlife, resources, and history for free.</p>
+    <p>{% trans "President Barack Obama created Every Kid in a Park so fourth graders and their families could discover our wildlife, resources, and history for free." %}</p>
 
     <div class="about-more">
-      Partner<br/>
-      agencies and more
+      {% trans "Partner" %}<br/>
+      {% trans "agencies and more" %}
 
       <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -46,90 +44,75 @@
   <div class="agencies">
     <div class="agencies-content">
 
-      <h2>Our country is full of dazzling landscapes where you can play and learn. They protect our wildlife and resources.
-      They let us look into the past and protect our history. Keeping them public supports a healthy planet.</h2>
+      <h2>{% trans "Our country is full of dazzling landscapes where you can play and learn. They protect our wildlife and resources. They let us look into the past and protect our history. Keeping them public supports a healthy planet." %}</h2>
 
       <div class="participating">
 
-        <h3>Participating agencies</h3>
-        <p>These agencies support Every Kid in a Park. Learn more about their conservation work and find activities by visiting their websites.</p>
+        <h3>{% trans "Participating agencies" %}</h3>
+        <p>{% trans "These agencies support Every Kid in a Park. Learn more about their conservation work and find activities by visiting their websites." %}</p>
 
         <ul>
           <li class="closed">
-            <h4><a href="">U.S. Bureau of Land Management</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "U.S. Bureau of Land Management" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/blm.png" %}" width="99" alt="U.S. Bureau of Land Management" />
+              <img src="{% static "img/agencies/blm.png" %}" width="99" alt="{% trans "U.S. Bureau of Land Management" %}" />
               <p><a href="http://www.blm.gov" target="_blank">http://www.blm.gov</a><br/>
-              We're a small government group with a big mission. We take care of more than 245 million acres of public land.
-              Our goal is to make sure that land is there for everyone, now and in the future. We're in charge of more land
-              than any other group in the government. Most of it's in the 12 western states, including Alaska. </p>
+              {% trans "We're a small government group with a big mission. We take care of more than 245 million acres of public land. Our goal is to make sure that land is there for everyone, now and in the future. We're in charge of more land than any other group in the government. Most of it's in the 12 western states, including Alaska." %} </p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">U.S. Bureau of Reclamation</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "U.S. Bureau of Reclamation" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/reclamation.png" %}" width="117" alt="U.S. Bureau of Reclamation" />
+              <img src="{% static "img/agencies/reclamation.png" %}" width="117" alt="{% trans "U.S. Bureau of Reclamation" %}" />
               <p><a href="http://www.usbr.gov" target="_blank">http://www.usbr.gov</a><br/>
-              More people than ever are looking for places to have fun and relax.
-              We take care of more than 6.5 million acres of land and water, and most of that is available for you to explore.
-              Come play or swim with us!</p>
+              {% trans "More people than ever are looking for places to have fun and relax. We take care of more than 6.5 million acres of land and water, and most of that is available for you to explore. Come play or swim with us!" %}</p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">National Oceanic and Atmospheric Administration<a href=""></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "National Oceanic and Atmospheric Administration" %}<a href=""></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/noaa.png" %}" width="99" alt="National Oceanic and Atmospheric Administration" />
+              <img src="{% static "img/agencies/noaa.png" %}" width="99" alt="{% trans "National Oceanic and Atmospheric Administration" %}" />
               <p><a href="http://oceanservice.noaa.gov/ekip/" target="_blank">http://oceanservice.noaa.gov/ekip/</a><br/>
-              We enrich life through science. People rely on us for weather forecasts and warnings. We also protect the coast.
-              This includes making sure we have plenty of seafood and that ships can move safely in our oceans. Our scientists look
-              at the world up close and far away. They study tiny plankton and look at the earth from space. Our sanctuaries and research
-              reserves have great places where you can relax and protect our ocean and coastal treasures. </p>
+              {% trans "We enrich life through science. People rely on us for weather forecasts and warnings. We also protect the coast. This includes making sure we have plenty of seafood and that ships can move safely in our oceans. Our scientists look at the world up close and far away. They study tiny plankton and look at the earth from space. Our sanctuaries and research reserves have great places where you can relax and protect our ocean and coastal treasures." %} </p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">National Park Service</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "National Park Service" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/nps.png" %}" width="99" alt="National Park Service" />
+              <img src="{% static "img/agencies/nps.png" %}" width="99" alt="{% trans "National Park Service" %}" />
               <p><a href="http://www.nps.gov" target="_blank">http://www.nps.gov</a><br/>
-              We take care of hundreds of parks and monuments. Every year, millions of people come see our islands,
-              oceans, and mountains. You can see active volcanoes, old prisons, or the hottest desert in the U.S.!
-              Come explore and learn at one of our sites!</p>
+              {% trans "We take care of hundreds of parks and monuments. Every year, millions of people come see our islands, oceans, and mountains. You can see active volcanoes, old prisons, or the hottest desert in the U.S.! Come explore and learn at one of our sites!" %}</p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">U.S. Fish and Wildlife Service</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "U.S. Fish and Wildlife Service" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/fishwildlife.png" %}" width="81" alt="U.S. Fish and Wildlife Service" />
+              <img src="{% static "img/agencies/fishwildlife.png" %}" width="81" alt="{% trans "U.S. Fish and Wildlife Service" %}" />
               <p><a href="http://www.fws.gov" target="_blank">http://www.fws.gov</a><br/>
-             Clean water. Clean air. Rare and abundant wildlife. World-class places to relax and enjoy nature.
-             We protect 150 million acres of land and water and more than 418 million acres of national marine monuments.</p>
+             {% trans "Clean water. Clean air. Rare and abundant wildlife. World-class places to relax and enjoy nature. We protect 150 million acres of land and water and more than 418 million acres of national marine monuments." %}</p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">U.S. Forest Service</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "U.S. Forest Service" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/forest-service.png" %}" width="88" alt="U.S. Forest Service" />
+              <img src="{% static "img/agencies/forest-service.png" %}" width="88" alt="{% trans "U.S. Forest Service" %}" />
               <p><a href="http://www.fs.fed.us" target="_blank">http://www.fs.fed.us</a><br/>
-              Ice fields in Alaska. Tropical forests in Puerto Rico. We take care of 193 million acres of forests and grasslands.
-              Come visit us and see all the things you can explore and learn in a national forest!</p>
+              {% trans "Ice fields in Alaska. Tropical forests in Puerto Rico. We take care of 193 million acres of forests and grasslands. Come visit us and see all the things you can explore and learn in a national forest!" %}</p>
             </div>
           </li>
           <li class="closed">
-            <h4><a href="">U.S. Army Corps of Engineers</a></h4>
-            <span class="expand">click to expand</span>
+            <h4><a href="">{% trans "U.S. Army Corps of Engineers" %}</a></h4>
+            <span class="expand">{% trans "click to expand" %}</span>
             <div class="description">
-              <img src="{% static "img/agencies/engineers.png" %}" width="96" alt="U.S. Army Corps of Engineers" />
+              <img src="{% static "img/agencies/engineers.png" %}" width="96" alt="{% trans "U.S. Army Corps of Engineers" %}" />
               <p><a href="http://www.corpslakes.us" target="_blank">http://www.corpslakes.us</a><br/>
-              Explore and enjoy the outdoors at one of our sites. You can swim, boat, fish, hike, and ride horses.
-              See how dams and river locks are built. Even drive a barge or boat through a lock on a major river!
-              We have outdoor classrooms about animals, energy, and history. In fact, we have more recreation visits than
-              any other government group— more than 350 million every year. Find a river or lake close to your home!</p>
+              {% trans "Explore and enjoy the outdoors at one of our sites. You can swim, boat, fish, hike, and ride horses. See how dams and river locks are built. Even drive a barge or boat through a lock on a major river! We have outdoor classrooms about animals, energy, and history. In fact, we have more recreation visits than any other government group— more than 350 million every year. Find a river or lake close to your home!" %}</p>
             </div>
           </li>
         </ul>
@@ -141,23 +124,23 @@
   <div class="contact">
     <div class="contact-content">
 
-      <img src="{% static "img/about-turtle.jpg" %}" alt="Kids learning about turtles." />
-      <h2>Media</h2>
+      <img src="{% static "img/about-turtle.jpg" %}" alt="{% trans "Kids learning about turtles." %}" />
+      <h2>{% trans "Media" %}</h2>
 
-      <p>Here's an <a href="{% static "media/info-kit-en.zip" %}">information kit</a> in English (ZIP file, 67.1 MB)</a>.</p>
-      <p>Here's an <a href="{% static "media/info-kit-es.zip" %}">information kit</a> in Spanish (ZIP file, 5.4 MB)</a>.</p>
-      <p>Please don't hesitate to <a href="mailto:interior_press@ios.doi.gov">email the press office</a> if you have additional questions.</p>
+      <p>{% trans "Here's an" %} <a href="{% static "media/info-kit-en.zip" %}">{% trans "information kit" %}</a> {% trans "in English" %} (ZIP file, 67.1 MB)</a>.</p>
+      <p>{% trans "Here's an" %} <a href="{% static "media/info-kit-es.zip" %}">{% trans "information kit" %}</a> {% trans "in Spanish" %} (ZIP file, 5.4 MB)</a>.</p>
+      <p>{% trans "Please don't hesitate to" %} <a href="mailto:interior_press@ios.doi.gov">{% trans "email the press office" %}</a> {% trans "if you have additional questions." %}</p>
       
-      <h2>Tools</h2>
+      <h2>{% trans "Tools" %}</h2>
 
-      <p>Here's a <a href="{% static "media/tool-kit-2.zip" %}">set of resources</a> (ZIP file, 15.4 MB) to help local officials, youth leaders and others plan an outdoor outing with 4th graders.</p>
-      <p>In partnership with the Every Kid in a Park Program, Transforming Youth Outdoors <a href="https://tyo.pathgather.com/l/login" target="_blank">has created two step-by-step learning paths</a> that give classroom teachers and outdoor educators tools to learn more about the Every Kid program and plan a successful field trip. These resources provide information about federal lands and waters, tools to find nearby locations, and information on planning and executing an Every Kid in a Park field trip.</p>
+      <p>{% trans "Here's a" %} <a href="{% static "media/tool-kit-2.zip" %}">{% trans "set of resources" %}</a> (ZIP file, 15.4 MB) {% trans "to help local officials, youth leaders and others plan an outdoor outing with 4th graders." %}</p>
+      <p>{% trans "In partnership with the Every Kid in a Park Program, Transforming Youth Outdoors" %} <a href="https://tyo.pathgather.com/l/login" target="_blank">{% trans "has created two step-by-step learning paths" %}</a> {% trans "that give classroom teachers and outdoor educators tools to learn more about the Every Kid program and plan a successful field trip. These resources provide information about federal lands and waters, tools to find nearby locations, and information on planning and executing an Every Kid in a Park field trip." %}</p>
 
-      <h2>Code</h2>
-      <p>We developed this website in the <a href="https://github.com/18F/ekip-api">open</a> and welcome your contributions and comments.</p>
+      <h2>{% trans "Code" %}</h2>
+      <p>{% trans "We developed this website in the" %}  <a href="https://github.com/18F/ekip-api">{% trans "open" %}</a> {% trans "and welcome your contributions and comments." %} </p>
 
-      <h2>Contact us</h2>
-      <p>Questions? Concerns? Things we're doing well? Please reach out to us at <a href="mailto:everykidinapark@ios.doi.gov" itemprop="email">everykidinapark@ios.doi.gov</a>!</p>
+      <h2>{% trans "Contact us" %}</h2>
+      <p>{% trans "Questions? Concerns? Things we're doing well? Please reach out to us at" %}  <a href="mailto:everykidinapark@ios.doi.gov" itemprop="email">everykidinapark@ios.doi.gov</a>!</p>
 
     </div>
   </div>
