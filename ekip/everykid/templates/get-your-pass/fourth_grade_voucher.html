@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html>
@@ -16,8 +17,8 @@
   <div class="print">
 
     <button>
-      Click this button to<br/>
-      <span>PRINT YOUR PASS</span>
+      {% trans "Click this button to" %}<br/>
+      <span>{% trans "PRINT YOUR PASS!" %}</span>
     </button>
 
   </div>
