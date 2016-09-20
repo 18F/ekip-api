@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 10:45-0400\n"
+"POT-Creation-Date: 2016-09-20 10:52-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -685,8 +685,16 @@ msgstr "¿Todo bien?"
 msgid "Get vouchers"
 msgstr "Conseguir los Pases"
 
+#: templates/get-your-pass/fourth_grade_voucher.html:20
+msgid "Click this button to"
+msgstr "Presiona aquí para"
+
+#: templates/get-your-pass/fourth_grade_voucher.html:21
+msgid "PRINT YOUR PASS!"
+msgstr "IMPRIME TU PASE"
+
 #: templates/get-your-pass/game_success.html:5
-msgid "fourth graders" 
+msgid "fourth graders"
 msgstr "estudiante de 4ºgrado"
 
 #: templates/get-your-pass/game_success.html:15
@@ -701,8 +709,9 @@ msgstr "Consige tu pase"
 msgid ""
 "Success! You'll get your paper pass on the next screen. Please print it and "
 "keep it in a safe place. Remember to take it with you on your trip."
-msgstr "¡Éxito! Recibirás tu pase de papel en la siguiente hoja. Por favor "
-"imprímelo y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu viaje."
+msgstr ""
+"¡Éxito! Recibirás tu pase de papel en la siguiente hoja. Por favor imprímelo "
+"y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu viaje."
 
 #: templates/get-your-pass/game_success.html:44
 msgid "Get my pass"
