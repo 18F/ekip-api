@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-19 13:18-0400\n"
+"POT-Creation-Date: 2016-09-20 10:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: forms.py:60
 msgid "My zip code is"
-msgstr ""
+msgstr "Mi código postal es:"
 
 #: models.py:15
 msgid "Educator's full name"
@@ -369,15 +369,17 @@ msgstr "información y materiales"
 msgid ""
 "to help local officials, youth leaders and others plan an outdoor outing "
 "with 4th graders."
-msgstr "para oficiales locales, líderes de la juventud, y otros para ayudar "
-"a planear una salida al aire libre con estudiantes del cuarto grado."
+msgstr ""
+"para oficiales locales, líderes de la juventud, y otros para ayudar a "
+"planear una salida al aire libre con estudiantes del cuarto grado."
 
 #: templates/about.html:137
 msgid ""
 "In partnership with the Every Kid in a Park Program, Transforming Youth "
 "Outdoors"
-msgstr "En colaboración con el programa Todos los Niños en un Parque, "
-"el grupo Transforming Youth Outdoors"
+msgstr ""
+"En colaboración con el programa Todos los Niños en un Parque, el grupo "
+"Transforming Youth Outdoors"
 
 #: templates/about.html:137
 msgid "has created two step-by-step learning paths"
@@ -390,11 +392,12 @@ msgid ""
 "provide information about federal lands and waters, tools to find nearby "
 "locations, and information on planning and executing an Every Kid in a Park "
 "field trip."
-msgstr "para ayudar a maestros y educadores al aire libre a aprender más acerca "
-"del programa Todos los Niños en un Parque y planear un viaje de estudios exitoso. "
-"Estos recursos proporcionan información sobre tierras y aguas federales, donde "
-"localizarlos, y planear una salida. (Estos materiales están disponibles solo en "
-"inglés.)"
+msgstr ""
+"para ayudar a maestros y educadores al aire libre a aprender más acerca del "
+"programa Todos los Niños en un Parque y planear un viaje de estudios "
+"exitoso. Estos recursos proporcionan información sobre tierras y aguas "
+"federales, donde localizarlos, y planear una salida. (Estos materiales están "
+"disponibles solo en inglés.)"
 
 #: templates/about.html:139
 msgid "Code"
@@ -418,8 +421,9 @@ msgstr "Contáctenos"
 
 #: templates/about.html:143
 msgid "Questions? Concerns? Things we're doing well? Please reach out to us at"
-msgstr "¿Preguntas? ¿Preocupaciones? ¿Cosas que estamos haciendo bien? ¿Favor "
-"de comunicarse con nosotros a"
+msgstr ""
+"¿Preguntas? ¿Preocupaciones? ¿Cosas que estamos haciendo bien? ¿Favor de "
+"comunicarse con nosotros a"
 
 #: templates/base.html:44 templates/index.html:13 templates/nav.html:22
 msgid "Every Kid In A Park Logo"
@@ -515,6 +519,7 @@ msgid "Organizational info"
 msgstr "Información de la organización"
 
 #: templates/get-your-pass/educator_passes.html:7
+#: templates/get-your-pass/game_success.html:5
 #: templates/get-your-pass/index.html:5 templates/get-your-pass/index.html:15
 #: templates/how-it-works/index.html:43 templates/index.html:78
 msgid "Get your pass"
@@ -635,6 +640,7 @@ msgstr ""
 "nacionales hasta el 31 de agosto de 2017."
 
 #: templates/get-your-pass/educator_passes.html:55
+#: templates/get-your-pass/game_success.html:49
 msgid "Privacy notice"
 msgstr "Nota de privacidad"
 
@@ -678,6 +684,33 @@ msgstr "¿Todo bien?"
 #: templates/get-your-pass/educator_passes_preview.html:58
 msgid "Get vouchers"
 msgstr "Conseguir los Pases"
+
+#: templates/get-your-pass/game_success.html:5
+msgid "fourth graders" 
+msgstr "estudiante de 4ºgrado"
+
+#: templates/get-your-pass/game_success.html:15
+msgid "You did it!"
+msgstr "¡Lo lograste!"
+
+#: templates/get-your-pass/game_success.html:15
+msgid "Claim your pass"
+msgstr "Consige tu pase"
+
+#: templates/get-your-pass/game_success.html:19
+msgid ""
+"Success! You'll get your paper pass on the next screen. Please print it and "
+"keep it in a safe place. Remember to take it with you on your trip."
+msgstr "¡Éxito! Recibirás tu pase de papel en la siguiente hoja. Por favor "
+"imprímelo y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu viaje."
+
+#: templates/get-your-pass/game_success.html:44
+msgid "Get my pass"
+msgstr "Conseguir mi pase"
+
+#: templates/get-your-pass/game_success.html:48
+msgid "I don't know my zip code"
+msgstr "No sé mi código postal"
 
 #: templates/get-your-pass/index.html:17
 msgid ""
