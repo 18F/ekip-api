@@ -490,7 +490,7 @@ msgstr "La gestión de este sitio corresponde a"
 
 #: templates/base.html:170
 msgid "General Services Administration"
-msgstr "Administración de Servicios Generales "
+msgstr "Administración de Servicios Generales"
 
 #: templates/base.html:170
 msgid "for the"
