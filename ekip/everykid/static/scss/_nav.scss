@@ -38,6 +38,18 @@ ul.top-links {
       border: none;
     }
   }
+	
+  .translate-link {
+    background: none; 
+    border: none;
+    padding: 0;
+    color: #fff; 
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: .7;
+	font-family: inherit;
+  }
 }
 
 #educators .educators-link {
