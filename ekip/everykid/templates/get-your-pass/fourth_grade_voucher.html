@@ -41,7 +41,7 @@
         <img class="voucher-image" src="{% static 'img/voucher-new.png' %}" alt="" />
 
         <div class="voucher-barcode">
-          <img class="barcode" alt="barcode" data-id="{{ locator }}" />
+          <img class="barcode" alt="{% trans 'barcode' %}" data-id="{{ locator }}" />
         </div>
       </div>
 
@@ -70,7 +70,7 @@
 
     <div class="personnel">
       <span>This area for official use by facility personnel.</span>
-      <img alt="barcode" data-id="{{ locator }}" />
+      <img alt="{% trans 'barcode' %}" data-id="{{ locator }}" />
     </div>
 
   </div>

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 11:03-0400\n"
+"POT-Creation-Date: 2016-09-26 07:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -693,6 +693,11 @@ msgstr "Presiona aquí para"
 msgid "PRINT YOUR PASS!"
 msgstr "IMPRIME TU PASE"
 
+#: templates/get-your-pass/fourth_grade_voucher.html:44
+#: templates/get-your-pass/fourth_grade_voucher.html:73
+msgid "barcode"
+msgstr "código de barras"
+
 #: templates/get-your-pass/game_success.html:5
 msgid "fourth graders"
 msgstr "estudiante de 4ºgrado"
@@ -731,6 +736,10 @@ msgstr ""
 "aparecer en la superficie del océano. Haz todo esto y más con tu pase. Y "
 "trae un coche lleno de familia y amigos ¡de manera gratuita!"
 
+#: templates/get-your-pass/index.html:21
+msgid "backpack icon"
+msgstr "ícono de mochila"
+
 #: templates/get-your-pass/index.html:22 templates/index.html:75
 #: templates/legal/privacy.html:12
 msgid "Fourth graders"
@@ -745,6 +754,10 @@ msgstr "Completa nuestro diario de aventuras para conseguir tu pase"
 msgid "Play"
 msgstr "Juega"
 
+#: templates/get-your-pass/index.html:29
+msgid "leaf icon"
+msgstr "ícono de hoja"
+
 #: templates/get-your-pass/index.html:31
 msgid "Learn more and see rules"
 msgstr "Aprenda más y ver las reglas"
@@ -752,6 +765,10 @@ msgstr "Aprenda más y ver las reglas"
 #: templates/get-your-pass/index.html:36
 msgid "Go"
 msgstr "Ir"
+
+#: templates/get-your-pass/index.html:41
+msgid "binoculars icon"
+msgstr "ícono de binoculares"
 
 #: templates/get-your-pass/index.html:43
 msgid "Get passes for your fourth-grade students"
@@ -920,6 +937,14 @@ msgstr ""
 "Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
 "estudiantes del cuarto grado."
 
+#: templates/how-it-works/index.html:49
+msgid "Printable Pass"
+msgstr "Pase para imprimir"
+
+#: templates/how-it-works/index.html:57
+msgid "Stand up paddlers with dog"
+msgstr "Remadores parados con un perro"
+
 #: templates/how-it-works/index.html:60 templates/parents.html:42
 msgid "Plan a trip"
 msgstr "Planea un Viaje"
@@ -939,6 +964,14 @@ msgid ""
 msgstr ""
 "Disfruta de los parques, las tierras, y las aguas nacionales por un año "
 "entero. Deja solo huellas. Lleva contigo solo fotos."
+
+#: templates/how-it-works/index.html:74
+msgid "line of hikers in brush"
+msgstr "Línea de caminadores en arbustos"
+
+#: templates/how-it-works/index.html:83
+msgid "Every Kid In A Park Pass"
+msgstr "Pasa para Todos los Niños en un Parque"
 
 #: templates/how-it-works/index.html:87
 msgid "A few things to know"
@@ -1322,17 +1355,33 @@ msgstr ""
 msgid "Explore parks and sites"
 msgstr "Explora parques y sitios"
 
+#: templates/plan-your-trip/index.html:51
+msgid "owl icon"
+msgstr "ícono de búho"
+
 #: templates/plan-your-trip/index.html:53
 msgid "See protected animals"
 msgstr "Observa animales protegidos"
+
+#: templates/plan-your-trip/index.html:60
+msgid "tree icon"
+msgstr "ícono de árbol"
 
 #: templates/plan-your-trip/index.html:62
 msgid "Visit the woods"
 msgstr "Visita el bosque"
 
+#: templates/plan-your-trip/index.html:69
+msgid "mountains icon"
+msgstr "ícono de montañas"
+
 #: templates/plan-your-trip/index.html:71
 msgid "Go to a park"
 msgstr "Visita un parque"
+
+#: templates/plan-your-trip/index.html:78
+msgid "compass icon"
+msgstr "ícono de brújula"
 
 #: templates/plan-your-trip/index.html:80
 msgid "More places to play"
