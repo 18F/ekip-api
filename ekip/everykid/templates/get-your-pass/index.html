@@ -18,7 +18,7 @@
 
     <ul class="boxes">
       <li class="fourth-graders">
-        <img src="{% static "img/icon-backpack.png" %}" class="backpack" alt="backpack icon" />
+        <img src="{% static "img/icon-backpack.png" %}" class="backpack" alt="{% trans 'backpack icon' %}" />
         <h2>{% trans "Fourth graders" %}</h2>
         <p>{% trans "Complete our adventure diary to get your pass" %}</p>
         <a href="{%url 'student_pass' %}">
@@ -26,7 +26,7 @@
         </a>
       </li>
       <li>
-        <img src="{% static "img/icon-leaf.png" %}" class="leaf" alt="leaf icon" />
+        <img src="{% static "img/icon-leaf.png" %}" class="leaf" alt="{% trans 'leaf icon' %}" />
         <h2>{% trans "Parents" %}</h2>
         <p>{% trans "Learn more and see rules" %}</p>
 		{% if LANGUAGE_CODE == 'es-us' %}
@@ -38,7 +38,7 @@
       </li>
 
       <li>
-        <img src="{% static "img/icon-binoculars.png" %}" class="binoculars" alt="binoculars icon" />
+        <img src="{% static "img/icon-binoculars.png" %}" class="binoculars" alt="{% trans 'binoculars icon' %}" />
         <h2>{% trans "Educators" %}</h2>
         <p>{% trans "Get passes for your fourth-grade students" %}</p>
         <a href="{%url 'educator_passes' %}">
