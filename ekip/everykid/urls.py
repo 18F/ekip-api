@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 from django.views.generic import TemplateView
 from django.views.decorators.cache import cache_page
 
@@ -62,4 +62,7 @@ urlpatterns = patterns(
     # LEGAL
     url(r'privacy-policy/$', cache_page(60*60)(TemplateView.as_view(
         template_name="legal/privacy.html")), name="privacy_policy"),
+	
+	#LANGUAGE
+	url(r'^i18n/', include('django.conf.urls.i18n')),
 )
