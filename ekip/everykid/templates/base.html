@@ -83,6 +83,18 @@
           <li>
             <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
           </li>
+		  <li>
+            <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+              {% if LANGUAGE_CODE == 'es-us' %}
+                <input name="language" type="hidden" value="en-us" />		 
+              {% else %}
+		        <input name="language" type="hidden" value="es-us" />
+              {% endif %}
+                <input type="submit" value="{% if LANGUAGE_CODE == 'es-us' %}In English{% else %}En Español{% endif %}"/>
+            </form>	
+          </li>
           <li>
             <ul class="sub">
               <li>
@@ -125,6 +137,18 @@
         <li>
           <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
         </li>
+		<li>
+          <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            {% if LANGUAGE_CODE == 'es-us' %}
+              <input name="language" type="hidden" value="en-us" />		 
+            {% else %}
+			  <input name="language" type="hidden" value="es-us" />
+            {% endif %}
+            <input type="submit" value="{% if LANGUAGE_CODE == 'es-us' %}In English{% else %}En Español{% endif %}"/>
+          </form>	
+        </li>		  
         <li>
           <ul class="sub">
             <li>
