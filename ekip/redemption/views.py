@@ -202,15 +202,22 @@ def tables(request):
 @login_required
 def statistics(request):
 
-    educator_tickets = Educator.objects.filter(num_students__lte=50).aggregate(
+    # Filter out large - possibly abandoned requests.
+    educator_tickets_cleaned = Educator.objects.filter(num_students__lte=50).aggregate(
         Sum('num_students'))['num_students__sum']
+
+    educator_tickets = Educator.objects.all().aggregate(
+        Sum('num_students'))['num_students__sum']
+
+    if not educator_tickets_cleaned:
+        educator_tickets_cleaned = 0
 
     if not educator_tickets:
         educator_tickets = 0
 
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
-    num_tickets_issued = Ticket.objects.count()
+    num_tickets_issued = Ticket.objects.count() - educator_tickets
 
     one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%m/%d/%Y')
     today = datetime.now().strftime('%m/%d/%Y')
@@ -227,7 +234,7 @@ def statistics(request):
             'num_tickets_issued': num_tickets_issued,
             'num_tickets_exchanged': unique_exchanges,
             'all_exchanged': unique_exchanges + additional_exchanges,
-            'educator_tickets_issued': educator_tickets
+            'educator_tickets_issued': educator_tickets_cleaned
         }
     )
 
