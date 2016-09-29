@@ -206,18 +206,13 @@ def statistics(request):
     educator_tickets_cleaned = Educator.objects.filter(num_students__lte=50).aggregate(
         Sum('num_students'))['num_students__sum']
 
-    educator_tickets = Educator.objects.all().aggregate(
-        Sum('num_students'))['num_students__sum']
-
     if not educator_tickets_cleaned:
         educator_tickets_cleaned = 0
 
-    if not educator_tickets:
-        educator_tickets = 0
 
     unique_exchanges = get_num_tickets_exchanged()
     additional_exchanges = get_num_tickets_exchanged_more_than_once()
-    num_tickets_issued = Ticket.objects.count() - educator_tickets
+    num_tickets_issued = Ticket.objects.count() - educator_tickets_cleaned
 
     one_year_ago = (datetime.now() - timedelta(days=1*365)).strftime('%m/%d/%Y')
     today = datetime.now().strftime('%m/%d/%Y')
