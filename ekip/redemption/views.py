@@ -202,7 +202,7 @@ def tables(request):
 @login_required
 def statistics(request):
 
-    educator_tickets = Educator.objects.all().aggregate(
+    educator_tickets = Educator.objects.filter(num_students__lte=50).aggregate(
         Sum('num_students'))['num_students__sum']
 
     if not educator_tickets:
