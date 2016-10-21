@@ -1,5 +1,5 @@
 # Django, using PostgreSQL
-Django==1.9.6
+Django==1.9.10
 psycopg2
 dj-database-url
 waitress==0.8.9
