@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html>
@@ -72,7 +73,7 @@
 
       <h2>Instructions</h2>
 
-      <p>Our national lands and waters belong to everyone. That includes you!  Use this pass to visit any of them for free.  You can bring your family and friends with you for free, too!</p>
+      <p>{% trans "Our national lands and waters belong to everyone. That includes you!  Use this pass to visit any of them for free.  You can bring your family and friends with you for free, too!" %}</p>
 
       {% include 'get-your-pass/voucher-rules.html' %}
 
