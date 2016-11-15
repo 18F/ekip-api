@@ -26,7 +26,7 @@ class PassSiteStateForm(forms.Form):
 
 class EducatorForm(forms.ModelForm):
     org_or_school = forms.ChoiceField(
-        label=_("School or qualified organization"), widget=forms.RadioSelect,
+        label="School or qualified organization", widget=forms.RadioSelect,
         choices=Educator.ORG_CHOICES)
 
     class Meta:

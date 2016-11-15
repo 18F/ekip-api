@@ -145,7 +145,7 @@ $(function () {
 
       $('.errors').remove();
 
-      $('form').prepend('<div class="errors">Please correctly fill out the highlighted fields below:</div>');
+      $('.pass-form').prepend('<div class="errors">Please correctly fill out the highlighted fields below:</div>');
     }
     else {
       $('#educators form').submit();

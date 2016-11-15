@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 20:30-0400\n"
+"POT-Creation-Date: 2016-11-14 19:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
 
 #: templates/adventure/choose_adventure.html:17
 msgid "I decided to:"
-msgstr "Decidí"
+msgstr "Decidí:"
 
 #: templates/adventure/choose_adventure.html:28
 #: templates/adventure/nature_walk_end.html:33
@@ -43,7 +43,7 @@ msgstr "Decidí dar un paseo por la naturaleza."
 
 #: templates/adventure/choose_adventure.html:29
 msgid "Go on a nature walk!"
-msgstr "Paseo por la naturaleza!"
+msgstr "¡Pasear por la naturaleza!"
 
 #: templates/adventure/choose_adventure.html:34
 #: templates/adventure/time_travel_end.html:26
@@ -55,7 +55,7 @@ msgstr "Decidí viajar en el tiempo."
 
 #: templates/adventure/choose_adventure.html:35
 msgid "Time travel!"
-msgstr "¡Viaje en el tiempo!"
+msgstr "¡Viajar  en el tiempo!"
 
 #: templates/adventure/choose_adventure.html:40
 #: templates/adventure/swimming_end.html:27
@@ -90,7 +90,7 @@ msgstr "Al llegar yo vi animales salvajes"
 
 #: templates/adventure/nature_walk.html:32
 msgid "Wild animals!"
-msgstr "¡Animales salvajes!"
+msgstr "¡Animales silvestres!"
 
 #: templates/adventure/nature_walk.html:35
 #: templates/adventure/nature_walk_end.html:40
@@ -99,7 +99,7 @@ msgstr "Al llegar yo vi plantas maravillosas."
 
 #: templates/adventure/nature_walk.html:36
 msgid "Beautiful plants!"
-msgstr "¡Plantas maravillosas!"
+msgstr "¡Plantas hermosas!"
 
 #: templates/adventure/nature_walk_end.html:18
 #: templates/adventure/start.html:21 templates/adventure/swimming_end.html:16
@@ -109,7 +109,7 @@ msgstr "Querido Diario,"
 
 #: templates/adventure/nature_walk_end.html:20
 msgid "Today I went on a nature walk and saw"
-msgstr "Hoy di un paseo por la naturaleza y vi"
+msgstr "Hoy paseé por la naturaleza y vi"
 
 #: templates/adventure/nature_walk_end.html:20
 msgid ""
@@ -136,12 +136,16 @@ msgid ""
 "and wildlife habitats to visit."
 msgstr ""
 "¡Hoy usé mi pase gratuito para explorar los EE.UU.! Al principio sentí "
-"nervios porque había muchísimas opciones. Había parques, bosques, playas y "
+"nervioso porque había muchísimas opciones. Había parques, bosques, playas y "
 "hábitats de vida silvestre para visitar."
 
 #: templates/adventure/start.html:23
 msgid "I had to decide what I wanted to do."
 msgstr "Tuve que decidir lo que quería hacer. "
+
+#: templates/adventure/start.html:25
+msgid "Start"
+msgstr ""
 
 #: templates/adventure/swimming.html:16
 msgid "I could hardly wait to jump into that fresh, cold:"
@@ -177,7 +181,7 @@ msgstr "¡Río!"
 
 #: templates/adventure/swimming_end.html:17
 msgid "Today I swam in a"
-msgstr "Hoy nadé en un"
+msgstr "¡Hoy nadé en un"
 
 #: templates/adventure/swimming_end.html:17
 msgid "I made sure to go with an adult."
@@ -190,8 +194,8 @@ msgid ""
 "cool places."
 msgstr ""
 "A veces el agua está clara, y puedes ver directamente hasta el fondo. Otras "
-"veces el agua está ondulante, verde o azul. No puedo esperar más para usar "
-"mi pase y descubrir más lugares fascinantes."
+"veces el agua está con olas, verde o azul. No puedo esperar más para usar mi "
+"pase y descubrir más lugares fascinantes."
 
 #: templates/adventure/time_travel.html:16
 msgid "It was so cool to see:"
@@ -227,15 +231,15 @@ msgstr "¡Huellas de dinosaurio!"
 
 #: templates/adventure/time_travel_end.html:17
 msgid "Today I saw"
-msgstr "Hoy vi "
+msgstr "!Hoy vi "
 
 #: templates/adventure/time_travel_end.html:17
 msgid ""
 "It was exciting to listen to the past. America's story ranges from roaming "
 "dinosaurs all the way to me!"
 msgstr ""
-"Fue emocionante escuchar sobre el pasado. La historia de Estados Unidos "
-"abarca desde dinosaurios errantes hasta yo mismo!"
+"Fue emocionante escuchar sobre el pasado. La historia de los Estados Unidos "
+"abarca desde los dinosaurios errantes hasta yo mismo!"
 
 #: templates/adventure/time_travel_end.html:18
 msgid "I can't wait to use my pass to discover more historic places."
@@ -275,6 +279,11 @@ msgid "How large are the federal lands and waters?"
 msgstr "¿Qué extensión tienen las tierras y aguas federales?"
 
 #: templates/first-game/infographic.html:17
+#, fuzzy, python-format
+#| msgid ""
+#| "Federal lands cover somewhere between 635 and 640 million acres "
+#| "(484,000,000 football fields). That's 28%% of the 2.27 billion acres of "
+#| "land in the United States."
 msgid ""
 "Federal lands cover somewhere between 635 and 640 million acres (484,000,000 "
 "football fields). That's 28%% of the 2.27 billion acres of land in the "
@@ -302,7 +311,8 @@ msgstr ""
 
 #: templates/first-game/lands_map.html:15
 msgid "Explore some of the different land and water types below."
-msgstr "Explora algunos de los distintos tipos de tierras y aguas a continuación."
+msgstr ""
+"Explora algunos de los distintos tipos de tierras y aguas a continuación."
 
 #: templates/first-game/lands_map.html:19
 msgid "Louisiana: Kitsatchie National Forest"
@@ -313,9 +323,10 @@ msgid ""
 "Kitsatchie National Forest is Louisiana's only national forest. It coveres "
 "604,000 acres. Hidden in the bayous, beneath the bald cypress trees and old-"
 "growth pine is a world of natural beauty and excitement."
-msgstr "El Bosque Nacional Kitsatchie es el único bosque nacional de Luisiana. "
-"Cubre 604,000 acres. Es un mundo emocionante de belleza natural escondido en "
-"los pántanos, bajo los cipreses y los viejos pinos."
+msgstr ""
+"El Bosque Nacional Kitsatchie es el único bosque nacional de Luisiana. Cubre "
+"604,000 acres. Es un mundo emocionante de belleza natural escondido en los "
+"pántanos, bajo los cipreses y los viejos pinos."
 
 #: templates/first-game/lands_map.html:23
 msgid "See: wild orchids, carnivorous plants."
@@ -330,9 +341,10 @@ msgid ""
 "This 280,000 acre monument is a geologic treasure containing a variety of "
 "different landscapes. The colorful swirls of cross-bedded sandstone in "
 "Coyote Buttes are an international hiking destination."
-msgstr "Este monumento de 280,000 acres es un tesoro geológico que contiene "
-"toda una variedad de paisajes. Los coloridos remolinos de arena fina y "
-"gruesa en Coyote Buttes son un destino internacional para caminantes."
+msgstr ""
+"Este monumento de 280,000 acres es un tesoro geológico que contiene toda una "
+"variedad de paisajes. Los coloridos remolinos de arena fina y gruesa en "
+"Coyote Buttes son un destino internacional para caminantes."
 
 #: templates/first-game/lands_map.html:29
 msgid "See: California condors."
@@ -348,15 +360,17 @@ msgid ""
 "the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding "
 "views of the park's ocean shoreline, coastal forests and mountain "
 "silhouettes."
-msgstr "Este parque es el hogar de muchas plantas y animales, y de la mayor "
-"montaña en la costa atlántica de los EE.UU. La vía de circunvalación Park "
-"Loop Road ofrece 27 millas de espectaculares vistas del litoral oceánico "
-"del parque, bosques costeros y siluetas montañosas."
+msgstr ""
+"Este parque es el hogar de muchas plantas y animales, y de la mayor montaña "
+"en la costa atlántica de los EE.UU. La vía de circunvalación Park Loop Road "
+"ofrece 27 millas de espectaculares vistas del litoral oceánico del parque, "
+"bosques costeros y siluetas montañosas."
 
 #: templates/first-game/lands_map.html:36
 msgid "Do: ride along broken stone roads build for horse-drawn vehicles."
-msgstr "Haz: ve en carro en carreteras de rocas partidas construidas para "
-"vehículos manejados por caballos."
+msgstr ""
+"Haz: ve en carro en carreteras de rocas partidas construidas para vehículos "
+"manejados por caballos."
 
 #: templates/first-game/start.html:15
 msgid "What are federal lands and waters?"
@@ -392,3 +406,39 @@ msgid ""
 msgstr ""
 "Un gran número de tierras y aguas federales están abiertos para el uso "
 "recreativo."
+
+#: views.py:35
+msgid "ocean"
+msgstr "océano!"
+
+#: views.py:36
+msgid "lake"
+msgstr "lago!"
+
+#: views.py:37
+msgid "river"
+msgstr "río!"
+
+#: views.py:69
+msgid "Martin Luther King's house"
+msgstr "la casa de Martin Luther King!"
+
+#: views.py:70
+msgid "ancient drawings"
+msgstr "dibujos antiguos!"
+
+#: views.py:71
+msgid "dinosaur tracks"
+msgstr "huellas de dinosaurio!"
+
+#: views.py:120
+msgid "huge mountains"
+msgstr "enormes montañas"
+
+#: views.py:121
+msgid "wild animals"
+msgstr "animales silvestres"
+
+#: views.py:122
+msgid "beautiful plants"
+msgstr "plantas hermosas"
