@@ -118,6 +118,16 @@ ul.top-links {
       cursor: default; }
     ul.top-links li:last-child {
       border: none; }
+  ul.top-links .translate-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: .7;
+    font-family: inherit; }
 
 #educators .educators-link {
   color: #FFE897; }
@@ -824,7 +834,7 @@ nav.footer-mobile-menu {
     background: rgba(255, 255, 255, 0.7);
     float: left; }
   #student-pass .voucher-claim form button {
-    width: 202px;
+    width: 222px;
     height: 50px;
     background: #FFE897;
     font-weight: normal;
@@ -925,80 +935,80 @@ nav.footer-mobile-menu {
       top: -10px;
       left: -24px; }
 
-#educators form {
-  max-width: 370px;
+#educators .pass-form {
+  max-width: 450px;
   padding: 15px 0 0 0;
   margin: 0 0 0 50px; }
-  #educators form::after {
+  #educators .pass-form::after {
     clear: both;
     content: "";
     display: table; }
-  #educators form span {
+  #educators .pass-form span {
     font-size: 18px; }
-  #educators form fieldset {
+  #educators .pass-form fieldset {
     border: none;
     padding: 0; }
-    #educators form fieldset legend {
+    #educators .pass-form fieldset legend {
       display: none; }
-  #educators form .error {
+  #educators .pass-form .error {
     color: #ff0000; }
-  #educators form ul {
+  #educators .pass-form ul {
     padding: 10px 0; }
-  #educators form li {
+  #educators .pass-form li {
     list-style: none;
     margin: 0 0 15px 0;
     clear: both; }
-    #educators form li label {
+    #educators .pass-form li label {
       font-weight: bold;
       font-size: 18px;
       padding-bottom: 5px;
       display: block; }
-    #educators form li input[type="text"] {
+    #educators .pass-form li input[type="text"] {
       width: 100%;
       font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 15px;
       margin: 0 0 10px 0; }
-    #educators form li input[type="number"] {
+    #educators .pass-form li input[type="number"] {
       width: 50px;
       font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 10px; }
-    #educators form li select {
+    #educators .pass-form li select {
       font-size: 18px; }
-    #educators form li .org_or_school > label {
+    #educators .pass-form li .org_or_school > label {
       display: none; }
-    #educators form li .org_or_school ul {
+    #educators .pass-form li .org_or_school ul {
       padding: 0; }
-      #educators form li .org_or_school ul li {
+      #educators .pass-form li .org_or_school ul li {
         margin: 0;
         display: inline-block;
         position: relative;
         padding-left: 15px; }
-        #educators form li .org_or_school ul li input[type="radio"] {
+        #educators .pass-form li .org_or_school ul li input[type="radio"] {
           margin: 0 5px 0 0; }
-        #educators form li .org_or_school ul li:nth-child(1) {
+        #educators .pass-form li .org_or_school ul li:nth-child(1) {
           padding: 0 20px 0 0; }
-        #educators form li .org_or_school ul li:nth-child(2) {
+        #educators .pass-form li .org_or_school ul li:nth-child(2) {
           padding: 0 0 0 35px; }
-          #educators form li .org_or_school ul li:nth-child(2):before {
+          #educators .pass-form li .org_or_school ul li:nth-child(2):before {
             content: "or";
             font-size: 18px;
             position: absolute;
             left: 0; }
-    #educators form li .city {
+    #educators .pass-form li .city {
       max-width: 230px; }
-    #educators form li .state {
+    #educators .pass-form li .state {
       max-width: 200px;
       float: left; }
-    #educators form li .zipcode {
+    #educators .pass-form li .zipcode {
       max-width: 100px;
       float: right; }
-    #educators form li .error input, #educators form li .error select {
+    #educators .pass-form li .error input, #educators .pass-form li .error select {
       border: 1px solid red; }
-    #educators form li .error.org_or_school {
+    #educators .pass-form li .error.org_or_school {
       border: none; }
-  #educators form button {
+  #educators .pass-form button {
     color: #fff;
     letter-spacing: 1px;
     padding: 10px 20px;
@@ -1006,7 +1016,7 @@ nav.footer-mobile-menu {
     background: #306B38;
     font-weight: 400;
     float: right; }
-    #educators form button span {
+    #educators .pass-form button span {
       color: #FFD77B;
       font-size: 14px; }
 
@@ -1281,23 +1291,6 @@ nav.footer-mobile-menu {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
-    #plan-your-trip .content-inner section.amtrak {
-      background: #003A5D; }
-      #plan-your-trip .content-inner section.amtrak .section-content {
-        padding: 10px 0 0 10px; }
-        #plan-your-trip .content-inner section.amtrak .section-content a {
-          color: #FFE897;
-          text-decoration: none; }
-          #plan-your-trip .content-inner section.amtrak .section-content a:hover {
-            text-decoration: underline; }
-        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-image {
-          margin: 40px 10px 0 0;
-          display: inline-block; }
-        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-content {
-          max-width: 410px;
-          padding: 70px 0 0 120px;
-          vertical-align: top;
-          display: inline-block; }
     #plan-your-trip .content-inner section.field-trip-sites {
       background: #B1DAEC;
       color: #177099;
@@ -1613,7 +1606,7 @@ footer {
     min-height: 0;
     position: relative; }
   nav.mobile-menu {
-    height: 300px;
+    height: 360px;
     display: block; }
     nav.mobile-menu .logo {
       width: 50%;
@@ -1666,6 +1659,18 @@ footer {
           display: block; }
         nav.mobile-menu ul.menu li:last-child {
           border: none; }
+        nav.mobile-menu ul.menu li input {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: #FFE897;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          border: 0px;
+          background: inherit;
+          cursor: pointer; }
         nav.mobile-menu ul.menu li ul.sub li {
           width: 48%;
           display: inline-block;
