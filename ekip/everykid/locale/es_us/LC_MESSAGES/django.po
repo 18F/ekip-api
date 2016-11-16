@@ -1054,7 +1054,7 @@ msgstr "Pasa tiempo con amigos."
 
 #: templates/index.html:105
 msgid "Go climbing."
-msgstr "Ve a pescar."
+msgstr "Sal a explorar."
 
 #: templates/index.html:109 templates/parents.html:15
 msgid "Parents and guardians"
