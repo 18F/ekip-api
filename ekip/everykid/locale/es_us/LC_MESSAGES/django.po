@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-15 10:15-0500\n"
+"POT-Creation-Date: 2016-11-16 21:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,7 @@ msgstr ""
 msgid "You can not print less than one pass."
 msgstr ""
 
-#: templates/404.html:17 templates/base.html:19 templates/index.html:81
+#: templates/404.html:17 templates/base.html:19 templates/index.html:79
 msgid "Every Kid in a Park"
 msgstr "Todos los Niños en un Parque"
 
@@ -129,12 +129,12 @@ msgstr "¡Debe estar explorando en algún lugar!"
 msgid "Get Back On Track"
 msgstr "Retome el camino"
 
-#: templates/about.html:5 templates/base.html:172
+#: templates/about.html:5 templates/base.html:165
 msgid "About Every Kid in a Park"
 msgstr "Sobre Todos los Niños en un Parque"
 
-#: templates/about.html:15 templates/base.html:106 templates/base.html:153
-#: templates/index.html:63 templates/nav.html:13
+#: templates/about.html:15 templates/base.html:104 templates/base.html:146
+#: templates/index.html:61 templates/nav.html:13
 msgid "About"
 msgstr "Acerca de"
 
@@ -210,8 +210,8 @@ msgstr ""
 "Nosotros somos una pequeña entidad gubernamental con una gran misión. "
 "Cuidamos más de 245 millones de acres de tierras públicas. Nuestro objetivo "
 "es asegurarnos de que esas tierras están disponibles para todos, ahora y en "
-"el futuro. Somos responsables de más tierras que ninguna otra agencia "
-"gubernamental. La mayor parte se encuentran en los 12 estados del oeste, "
+"el futuro. Somos responsables de más tierras que todas las otras agencias "
+"gubernamentales. La mayor parte se encuentran en los 12 estados del oeste, "
 "incluido Alaska."
 
 #: templates/about.html:64 templates/about.html:67
@@ -313,9 +313,9 @@ msgstr ""
 "navegar, pescar, caminar y montar a caballo. Mira cómo se construyen diques "
 "y esclusas. ¡Incluso puedes manejar una barcaza o un bote en una esclusa en "
 "un gran río! Tenemos clases al aire libre sobre animales, energía e "
-"historia. De hecho, tenemos más visitas de recreación que ninguna otra "
-"agencia gubernamental, más de 350 millones al año. ¡Encuentra un río o lago "
-"cerca de tu casa!"
+"historia. De hecho, tenemos más visitas de recreación que todas las otras "
+"agencias gubernamentales, más de 350 millones al año. ¡Encuentra un río o "
+"lago cerca de tu casa!"
 
 #: templates/about.html:126
 msgid "Kids learning about turtles."
@@ -371,7 +371,7 @@ msgid ""
 "with 4th graders."
 msgstr ""
 "para oficiales locales, líderes de la juventud, y otros para ayudar a "
-"planear una salida al aire libre con estudiantes del cuarto grado."
+"planear una salida al aire libre con estudiantes de cuarto grado."
 
 #: templates/about.html:136
 msgid ""
@@ -433,78 +433,78 @@ msgstr "Logo de Todos los Niños en un Parque"
 msgid "Menu"
 msgstr "Menú"
 
-#: templates/base.html:73 templates/base.html:129 templates/nav.html:61
+#: templates/base.html:73 templates/base.html:127 templates/nav.html:61
 msgid "Home"
 msgstr "Inicio"
 
-#: templates/base.html:76 templates/base.html:132 templates/index.html:33
+#: templates/base.html:76 templates/base.html:130 templates/index.html:33
 #: templates/nav.html:64
 msgid "How It Works"
 msgstr "Cómo Funciona"
 
-#: templates/base.html:78 templates/base.html:134
+#: templates/base.html:78 templates/base.html:132
 #: templates/get-your-pass/educator_passes_preview.html:4
 #: templates/get-your-pass/student_pass.html:4 templates/index.html:35
 #: templates/nav.html:66
 msgid "Get Your Pass"
 msgstr "Consigue tu Pase"
 
-#: templates/base.html:81 templates/base.html:137 templates/index.html:38
+#: templates/base.html:81 templates/base.html:135 templates/index.html:38
 #: templates/nav.html:69
 msgid "Plan a Trip"
 msgstr "Planea un Viaje"
 
-#: templates/base.html:84 templates/base.html:140
+#: templates/base.html:84 templates/base.html:138
 #: templates/get-your-pass/index.html:30 templates/index.html:41
 #: templates/nav.html:7 templates/parents.html:5
 msgid "Parents"
 msgstr "Padres"
 
-#: templates/base.html:103 templates/base.html:150
+#: templates/base.html:101 templates/base.html:143
 #: templates/get-your-pass/educator_passes_preview.html:4
 #: templates/get-your-pass/index.html:42 templates/how-it-works/index.html:46
-#: templates/index.html:60 templates/index.html:117
+#: templates/index.html:58 templates/index.html:115
 #: templates/legal/privacy.html:15 templates/nav.html:10
 msgid "Educators"
 msgstr "Educadores"
 
-#: templates/base.html:164
+#: templates/base.html:157
 msgid "US Department of the Interior - March 3, 1849"
 msgstr "Departamento de Interior de EE.UU. – 3 de marzo, 1849"
 
-#: templates/base.html:175 templates/legal/privacy.html:4
+#: templates/base.html:168 templates/legal/privacy.html:4
 msgid "Privacy policy"
 msgstr "Política de Privacidad"
 
-#: templates/base.html:178
+#: templates/base.html:171
 msgid "Disclaimer"
 msgstr "Descargo de responsabilidad"
 
-#: templates/base.html:181
+#: templates/base.html:174
 msgid "Accessibility"
 msgstr "Accesibilidad"
 
-#: templates/base.html:184
+#: templates/base.html:177
 msgid "Notices"
 msgstr "Avisos"
 
-#: templates/base.html:189
+#: templates/base.html:182
 msgid "This site is run by the"
 msgstr "La gestión de este sitio corresponde a"
 
-#: templates/base.html:189
+#: templates/base.html:182
 msgid "General Services Administration"
 msgstr "Administración de Servicios Generales"
 
-#: templates/base.html:189
+#: templates/base.html:182
 msgid "for the"
 msgstr "para el"
 
-#: templates/base.html:189
+#: templates/base.html:182
 msgid "Department of the Interior's"
 msgstr "Departamento del Interior"
 
-#: templates/base.html:189
+#: templates/base.html:182
 msgid "Every Kid in a Park program."
 msgstr "programa Todos los Niños en un Parque."
 
@@ -516,7 +516,7 @@ msgstr ""
 
 #: templates/get-your-pass/educator_form.html:9
 msgid "Fourth-grade educator info"
-msgstr "Información del educador del cuarto grado"
+msgstr "Información del educador de cuarto grado"
 
 #: templates/get-your-pass/educator_form.html:18
 msgid "Organizational info"
@@ -525,7 +525,7 @@ msgstr "Información de la organización"
 #: templates/get-your-pass/educator_passes.html:7
 #: templates/get-your-pass/game_success.html:5
 #: templates/get-your-pass/index.html:5 templates/get-your-pass/index.html:15
-#: templates/how-it-works/index.html:43 templates/index.html:92
+#: templates/how-it-works/index.html:43 templates/index.html:90
 msgid "Get your pass"
 msgstr "Consigue tu Pase"
 
@@ -563,7 +563,7 @@ msgid ""
 "organization. For example, a camp director, a home-school leader, an after-"
 "school leader, or a religious group leader."
 msgstr ""
-"Ud. es un adulto que trabaja con niños del cuarto grado en una organización "
+"Ud. es un adulto que trabaja con niños de cuarto grado en una organización "
 "que proporciona servicios a la juventud. Por ejemplo: un director de "
 "campamento, un maestro de escuela-en-casa, un líder de programas para las "
 "horas después de clases, o un líder de un grupo religioso."
@@ -666,7 +666,7 @@ msgstr "Revisar Información"
 
 #: templates/get-your-pass/educator_passes_preview.html:14
 msgid "Double-check your information"
-msgstr "Verificar su información"
+msgstr "Verifique su información"
 
 #: templates/get-your-pass/educator_passes_preview.html:15
 msgid "Please confirm that the info you've provided is correct."
@@ -723,15 +723,16 @@ msgstr "¡Lo lograste!"
 
 #: templates/get-your-pass/game_success.html:15
 msgid "Claim your pass"
-msgstr "Consige tu pase"
+msgstr "Consigue tu pase"
 
 #: templates/get-your-pass/game_success.html:19
 msgid ""
 "Success! You'll get your paper pass on the next screen. Please print it and "
 "keep it in a safe place. Remember to take it with you on your trip."
 msgstr ""
-"¡Éxito! Recibirás tu pase de papel en la siguiente hoja. Por favor imprímelo "
-"y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu viaje."
+"¡Éxito! Recibirás tu pase de papel en la siguiente página. Por favor "
+"imprímelo y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu "
+"viaje."
 
 #: templates/get-your-pass/game_success.html:44
 msgid "Get my pass"
@@ -755,7 +756,7 @@ msgstr ""
 msgid "backpack icon"
 msgstr "ícono de mochila"
 
-#: templates/get-your-pass/index.html:22 templates/index.html:89
+#: templates/get-your-pass/index.html:22 templates/index.html:87
 #: templates/legal/privacy.html:12
 msgid "Fourth graders"
 msgstr "Estudiante de 4ºgrado"
@@ -822,7 +823,7 @@ msgstr "Reglas oficiales"
 #: templates/get-your-pass/voucher-rules.html:6
 msgid "The pass is for U.S. fourth-grade (or home-school equivalent) students."
 msgstr ""
-"El pase es para estudiantes del cuarto grado de los Estados Unidos (o su "
+"El pase es para estudiantes de cuarto grado de los Estados Unidos (o su "
 "equivalente de escuela-en-casa)."
 
 #: templates/get-your-pass/voucher-rules.html:7
@@ -849,7 +850,7 @@ msgid ""
 "No refunds are given for previously purchased passes, or if you forget your "
 "pass when you visit."
 msgstr ""
-"No se dan reembolsos para pases comprados previamente, o si se te olvida tu "
+"No se dan reembolsos por pases comprados previamente, o si se te olvidas tu "
 "pase cuando visitas."
 
 #: templates/get-your-pass/voucher-rules.html:11
@@ -863,7 +864,7 @@ msgid ""
 "Educators can get one paper pass for each of their fourth-grade students."
 msgstr ""
 "Los educadores pueden conseguir un pase de papel para cada uno de sus "
-"estudiantes del cuarto grado."
+"estudiantes de cuarto grado."
 
 #: templates/get-your-pass/voucher-rules.html:13
 #: templates/how-it-works/index.html:92 templates/plan-your-trip/index.html:192
@@ -871,7 +872,7 @@ msgid "This program only provides passes for fourth graders."
 msgstr "Este programa solo proporciona pases a estudiantes de cuarto grado."
 
 #: templates/get-your-pass/voucher-rules.html:16
-#: templates/how-it-works/index.html:14 templates/index.html:84
+#: templates/how-it-works/index.html:14 templates/index.html:82
 msgid "How it works"
 msgstr "Cómo Funciona"
 
@@ -951,7 +952,7 @@ msgstr "¡Vámonos!"
 msgid "Get and print fourth-grade passes to our national lands and waters."
 msgstr ""
 "Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
-"estudiantes del cuarto grado."
+"estudiantes de cuarto grado."
 
 #: templates/how-it-works/index.html:49
 msgid "Printable Pass"
@@ -999,7 +1000,7 @@ msgid ""
 "copies aren't accepted."
 msgstr ""
 "Necesitas imprimir tu pase y llevarlo contigo cuando visites. No se aceptan "
-"copies electrónicas."
+"copias electrónicas."
 
 #: templates/how-it-works/index.html:90
 msgid ""
@@ -1028,11 +1029,11 @@ msgstr ""
 msgid "Let's Go!"
 msgstr "¡Vamos!"
 
-#: templates/index.html:77
+#: templates/index.html:75
 msgid "Play outdoors."
 msgstr "Juega al aire libre."
 
-#: templates/index.html:82
+#: templates/index.html:80
 msgid ""
 "You and your family get free access to hundreds of parks, lands, and waters "
 "for an entire year."
@@ -1040,7 +1041,7 @@ msgstr ""
 "Tú y tu familia consiguen acceso gratuito a cientos de parques, tierras y "
 "aguas durante todo un año."
 
-#: templates/index.html:90
+#: templates/index.html:88
 msgid ""
 "This is for you! Explore ancient dwellings. See a waterfall taller than a "
 "building."
@@ -1048,19 +1049,19 @@ msgstr ""
 "¡Esto es para ti! Explora viviendas antiguas. Observa una catarata más alta "
 "que un edificio."
 
-#: templates/index.html:97
+#: templates/index.html:95
 msgid "Explore with friends."
 msgstr "Pasa tiempo con amigos."
 
-#: templates/index.html:105
+#: templates/index.html:103
 msgid "Go climbing."
 msgstr "Sal a explorar."
 
-#: templates/index.html:109 templates/parents.html:15
+#: templates/index.html:107 templates/parents.html:15
 msgid "Parents and guardians"
 msgstr "Padres y tutores"
 
-#: templates/index.html:110
+#: templates/index.html:108
 msgid ""
 "Stay close to home, or travel somewhere new. This year's the perfect time "
 "for an unforgettable outing."
@@ -1068,11 +1069,11 @@ msgstr ""
 "Quédense cerca de casa, o viajen a algún lugar nuevo. Este año es el momento "
 "perfecto para una excursión inolvidable."
 
-#: templates/index.html:112
+#: templates/index.html:110
 msgid "Learn more"
 msgstr "Aprende más"
 
-#: templates/index.html:118
+#: templates/index.html:116
 msgid ""
 "Get passes, download our activity, or plan a life-changing field trip for "
 "your fourth-grade students."
@@ -1080,15 +1081,15 @@ msgstr ""
 "Consigan pases, descarguen nuestra actividad, o planeen una excursión "
 "escolar que cambie la vida de sus estudiantes de 4ºgrado."
 
-#: templates/index.html:120
+#: templates/index.html:118
 msgid "More Info"
 msgstr "Más Información"
 
-#: templates/index.html:125
+#: templates/index.html:123
 msgid "Try something new."
 msgstr "Prueba algo nuevo."
 
-#: templates/index.html:140
+#: templates/index.html:138
 msgid ""
 "“Because no matter who you are, no matter where you live, our parks, our "
 "monuments, our lands, our waters &mdash; these places are your birthright as "
@@ -1098,7 +1099,7 @@ msgstr ""
 "tierras, nuestras aguas &mdash; estos lugares son tu derecho natural como "
 "estadounidense”"
 
-#: templates/index.html:141
+#: templates/index.html:139
 msgid "President Barack Obama"
 msgstr "Presidente Barack Obama"
 
@@ -1132,7 +1133,7 @@ msgstr ""
 "Nosotros coleccionamos esta información para dar pases gratuitos a los "
 "estudiantes de cuarto grado. Lo utilizamos para asegurar que Ud. es elegible "
 "para un pase gratuito y para promocionar Todos Los Niños en un Parque. Estos "
-"pases permiten en acceso gratuito a tierras y aguas federales. "
+"pases permiten el acceso gratuito a tierras y aguas federales. "
 
 #: templates/legal/privacy.html:18
 msgid ""
@@ -1217,7 +1218,7 @@ msgid ""
 "Check out \"plan your trip\" to find fun things to do at public lands, "
 "waters, and parks."
 msgstr ""
-"Revisa “Planea un Viaje” para encontrar cosas divertidas que hacer en "
+"Revisa “Planea un Viaje” para encontrar cosas divertidas para hacer en "
 "tierras, aguas y parques públicos."
 
 #: templates/parents.html:51
@@ -1286,7 +1287,7 @@ msgid ""
 "scheduling trips and transportation."
 msgstr ""
 "También hay información sobre cómo contactar cada sitio. Favor de "
-"comunicarse con el sitio para ayuda con agendar las salidas y el transporte."
+"comunicarse con el sitio para ayudar planificar las salidas y el transporte."
 
 #: templates/plan-your-trip/field_trip.html:22
 msgid ""
@@ -1393,6 +1394,10 @@ msgstr "ícono de árbol"
 msgid "Visit the woods"
 msgstr "Visita el bosque"
 
+#: templates/plan-your-trip/index.html:67
+msgid "findyourpark.com/find"
+msgstr "encuentratuparque.com"
+
 #: templates/plan-your-trip/index.html:69
 msgid "mountains icon"
 msgstr "ícono de montañas"
@@ -1400,6 +1405,10 @@ msgstr "ícono de montañas"
 #: templates/plan-your-trip/index.html:71
 msgid "Go to a park"
 msgstr "Visita un parque"
+
+#: templates/plan-your-trip/index.html:72
+msgid "findyourpark.com"
+msgstr "encuentratuparque.com"
 
 #: templates/plan-your-trip/index.html:78
 msgid "compass icon"
@@ -1529,12 +1538,16 @@ msgid "Take a train"
 msgstr "Viajar en Tren"
 
 #: templates/plan-your-trip/index.html:171
-msgid "Your family may want to take a train.  Amtrak is offering fourth graders — "
+#, python-format
+msgid ""
+"Your family may want to take a train.  Amtrak is offering fourth graders — "
 "like you — a discount on train tickets. When an adult buys a full-price "
 "ticket, you'll get 75%% off."
-msgstr "Tal vez tu familia quiera viajar en tren. Amtrak ofrece a los estudiantes de "
-"cuarto grado – como tú – un descuento en los boletos de tren. Cuando un adulto compre "
-"un boleto de precio completo, tu recibirás un descuento del 75%%."
+msgstr ""
+"Tal vez tu familia quiera viajar en tren. Amtrak ofrece a los estudiantes de "
+"cuarto grado – como tú – un descuento en los boletos de tren. Cuando un "
+"adulto compre un boleto de precio completo, tu recibirás un descuento del "
+"75%%."
 
 #: templates/plan-your-trip/index.html:171
 msgid "Visit"
