@@ -231,7 +231,7 @@ msgstr "¡Huellas de dinosaurio!"
 
 #: templates/adventure/time_travel_end.html:17
 msgid "Today I saw"
-msgstr "!Hoy vi "
+msgstr "¡Hoy vi "
 
 #: templates/adventure/time_travel_end.html:17
 msgid ""
@@ -239,7 +239,7 @@ msgid ""
 "dinosaurs all the way to me!"
 msgstr ""
 "Fue emocionante escuchar sobre el pasado. La historia de los Estados Unidos "
-"abarca desde los dinosaurios errantes hasta yo mismo!"
+"abarca desde los dinosaurios errantes hasta ¡yo mismo!"
 
 #: templates/adventure/time_travel_end.html:18
 msgid "I can't wait to use my pass to discover more historic places."
