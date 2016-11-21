@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from recordlocator import generator
 from restless.dj import DjangoResource
@@ -37,6 +37,7 @@ class TicketResource(DjangoResource):
         }
         return data
 
+
     @skip_prepare
     def issue(self, num_locators=1, zip_code=None):
         if self.request and 'num_locators' in self.request.GET:
@@ -54,12 +55,12 @@ class TicketResource(DjangoResource):
     @classmethod
     def urls(cls, name_prefix=None):
         urlpatterns = super(TicketResource, cls).urls(name_prefix=name_prefix)
-        return urlpatterns + patterns(
-            '',
+        new = [
             url(
                 r'^issue/', cls.as_view('issue'),
                 name=cls.build_url_name('issue', name_prefix)),
-        )
+        ] + urlpatterns
+        return new
 
 
 def locator_exists(locator):

@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.views.generic import TemplateView
 from django.views.decorators.cache import cache_page
 
@@ -9,8 +9,7 @@ from .views import (
 
 from .forms import EducatorForm
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [ 
     url(r'^$', cache_page(60*60)(TemplateView.as_view(
         template_name="index.html")), name="main_landing"),
 
@@ -62,4 +61,4 @@ urlpatterns = patterns(
     # LEGAL
     url(r'privacy-policy/$', cache_page(60*60)(TemplateView.as_view(
         template_name="legal/privacy.html")), name="privacy_policy"),
-)
+]

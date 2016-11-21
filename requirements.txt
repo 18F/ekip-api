@@ -7,7 +7,7 @@ whitenoise==1.0.6
 django-cors-headers
 django-localflavor
 restless
-django-formtools
+-e git+https://github.com/django/django-formtools.git#egg=django-formtools
 boto
 newrelic==2.54.0.41
 django-secure

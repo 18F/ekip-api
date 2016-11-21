@@ -1,9 +1,8 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from redemption.views import redeem_confirm, redeem_for_site, sites_for_state
 from redemption.views import get_passes_state, statistics, tables, csv_redemption, refresh_stats
 
-urlpatterns = patterns(
-    '', 
+urlpatterns = [ 
     url(r'statistics/$', statistics),
     url(r'statistics/refresh/$', refresh_stats),
     url('data/exchanges/$', csv_redemption, name='exchanges_data'),
@@ -12,4 +11,4 @@ urlpatterns = patterns(
     url(r'done/(?P<slug>[-\w]+)/$', redeem_confirm),
     url(r'sites/', sites_for_state),
     url(r'^$', get_passes_state),
-)
+]
