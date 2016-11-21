@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-16 21:45-0500\n"
+"POT-Creation-Date: 2016-11-21 11:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -192,12 +192,6 @@ msgstr ""
 #: templates/about.html:55 templates/about.html:58
 msgid "U.S. Bureau of Land Management"
 msgstr "Oficina de Administración de Tierras de EE.UU."
-
-#: templates/about.html:56 templates/about.html:65 templates/about.html:74
-#: templates/about.html:83 templates/about.html:92 templates/about.html:101
-#: templates/about.html:110
-msgid "click to expand"
-msgstr "pulsa para ampliar"
 
 #: templates/about.html:60
 msgid ""
@@ -689,6 +683,11 @@ msgstr "¿Todo bien?"
 msgid "Get vouchers"
 msgstr "Conseguir los Pases"
 
+#: templates/get-your-pass/educator_vouchers.html:74
+#: templates/get-your-pass/fourth_grade_voucher.html:82
+msgid "Instructions"
+msgstr "Instrucciones"
+
 #: templates/get-your-pass/educator_vouchers.html:76
 #: templates/get-your-pass/fourth_grade_voucher.html:84
 msgid ""
@@ -818,7 +817,7 @@ msgstr "Sí, estoy en el cuarto grado, o el equivalente."
 
 #: templates/get-your-pass/voucher-rules.html:3 templates/parents.html:50
 msgid "Official rules"
-msgstr "Reglas oficiales"
+msgstr "Reglas Oficiales"
 
 #: templates/get-your-pass/voucher-rules.html:6
 msgid "The pass is for U.S. fourth-grade (or home-school equivalent) students."
@@ -850,7 +849,7 @@ msgid ""
 "No refunds are given for previously purchased passes, or if you forget your "
 "pass when you visit."
 msgstr ""
-"No se dan reembolsos por pases comprados previamente, o si se te olvidas tu "
+"No se dan reembolsos por pases comprados previamente, o si te olvidas tu "
 "pase cuando visitas."
 
 #: templates/get-your-pass/voucher-rules.html:11
