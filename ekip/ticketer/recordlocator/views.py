@@ -60,7 +60,6 @@ class TicketResource(DjangoResource):
                 r'^issue/', cls.as_view('issue'),
                 name=cls.build_url_name('issue', name_prefix)),
         ] + urlpatterns
-        print(new)
         return new
 
 
