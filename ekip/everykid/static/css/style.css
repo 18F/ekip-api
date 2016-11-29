@@ -935,80 +935,83 @@ nav.footer-mobile-menu {
       top: -10px;
       left: -24px; }
 
-#educators .pass-form {
+#educators .translation-form {
+  max-width: inherit; }
+
+#educators form {
   max-width: 450px;
   padding: 15px 0 0 0;
   margin: 0 0 0 50px; }
-  #educators .pass-form::after {
+  #educators form::after {
     clear: both;
     content: "";
     display: table; }
-  #educators .pass-form span {
+  #educators form span {
     font-size: 18px; }
-  #educators .pass-form fieldset {
+  #educators form fieldset {
     border: none;
     padding: 0; }
-    #educators .pass-form fieldset legend {
+    #educators form fieldset legend {
       display: none; }
-  #educators .pass-form .error {
+  #educators form .error {
     color: #ff0000; }
-  #educators .pass-form ul {
+  #educators form ul {
     padding: 10px 0; }
-  #educators .pass-form li {
+  #educators form li {
     list-style: none;
     margin: 0 0 15px 0;
     clear: both; }
-    #educators .pass-form li label {
+    #educators form li label {
       font-weight: bold;
       font-size: 18px;
       padding-bottom: 5px;
       display: block; }
-    #educators .pass-form li input[type="text"] {
+    #educators form li input[type="text"] {
       width: 100%;
       font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 15px;
       margin: 0 0 10px 0; }
-    #educators .pass-form li input[type="number"] {
+    #educators form li input[type="number"] {
       width: 50px;
       font-size: 18px;
       border: 1px solid #5A7C5D;
       padding: 10px; }
-    #educators .pass-form li select {
+    #educators form li select {
       font-size: 18px; }
-    #educators .pass-form li .org_or_school > label {
+    #educators form li .org_or_school > label {
       display: none; }
-    #educators .pass-form li .org_or_school ul {
+    #educators form li .org_or_school ul {
       padding: 0; }
-      #educators .pass-form li .org_or_school ul li {
+      #educators form li .org_or_school ul li {
         margin: 0;
         display: inline-block;
         position: relative;
         padding-left: 15px; }
-        #educators .pass-form li .org_or_school ul li input[type="radio"] {
+        #educators form li .org_or_school ul li input[type="radio"] {
           margin: 0 5px 0 0; }
-        #educators .pass-form li .org_or_school ul li:nth-child(1) {
+        #educators form li .org_or_school ul li:nth-child(1) {
           padding: 0 20px 0 0; }
-        #educators .pass-form li .org_or_school ul li:nth-child(2) {
+        #educators form li .org_or_school ul li:nth-child(2) {
           padding: 0 0 0 35px; }
-          #educators .pass-form li .org_or_school ul li:nth-child(2):before {
+          #educators form li .org_or_school ul li:nth-child(2):before {
             content: "or";
             font-size: 18px;
             position: absolute;
             left: 0; }
-    #educators .pass-form li .city {
+    #educators form li .city {
       max-width: 230px; }
-    #educators .pass-form li .state {
+    #educators form li .state {
       max-width: 200px;
       float: left; }
-    #educators .pass-form li .zipcode {
+    #educators form li .zipcode {
       max-width: 100px;
       float: right; }
-    #educators .pass-form li .error input, #educators .pass-form li .error select {
+    #educators form li .error input, #educators form li .error select {
       border: 1px solid red; }
-    #educators .pass-form li .error.org_or_school {
+    #educators form li .error.org_or_school {
       border: none; }
-  #educators .pass-form button {
+  #educators form button {
     color: #fff;
     letter-spacing: 1px;
     padding: 10px 20px;
@@ -1016,7 +1019,7 @@ nav.footer-mobile-menu {
     background: #306B38;
     font-weight: 400;
     float: right; }
-    #educators .pass-form button span {
+    #educators form button span {
       color: #FFD77B;
       font-size: 14px; }
 

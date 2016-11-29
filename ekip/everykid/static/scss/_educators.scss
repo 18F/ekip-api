@@ -113,7 +113,11 @@
     }
   }
 
-  .pass-form {
+  .translation-form{
+	max-width: inherit;
+  }
+	
+  form {
     max-width: 450px;
     padding: 15px 0 0 0;
     margin: 0 0 0 50px;
