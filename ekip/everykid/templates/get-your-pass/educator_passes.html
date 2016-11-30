@@ -44,10 +44,10 @@
     {% get_current_language as LANGUAGE_CODE %}
     <div class="download-activity">
       <h3>{% trans "Download" %}<br/> {% trans "Activity Guides" %}</h3>
-      <p>{% trans "Activity" %} 1: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-one.pdf" %}{% else %}{% static "activities/scholastic-one.pdf" %}{% endif %}" target="_blank">{% trans "Exploring Federal Lands and Waters" %}</a> (PDF). {% trans "This lesson teaches students why our country protects lands and waters." %}</p>
-      <p>{% trans "Activity" %} 2: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-two.pdf" %}{% else %}{% static "activities/scholastic-two.pdf" %}{% endif %}" target="_blank">{% trans "Environmental Stewardship" %}</a> (PDF). {% trans "This lesson shows students how to take care of lands and waters." %}</p>
-      <p>{% trans "Activity" %} 3: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-three.pdf" %}{% else %}{% static "activities/scholastic-three.pdf" %}{% endif %}" target="_blank">{% trans "Our Nation’s Native Peoples" %}</a> (PDF). {% trans "This lesson teaches students about the people who lived on this land before it was called the United States." %}</p>
-      <p>{% trans "Activity" %} 4: <a href="{% if LANGUAGE_CODE == 'es-us' %}{% static "activities/es_us/scholastic-four.pdf" %}{% else %}{% static "activities/scholastic-four.pdf" %}{% endif %}" target="_blank">{% trans "Citizen Science" %}</a> (PDF). {% trans "This lesson helps kids learn about the difference between weather and climate." %}</p>
+      <p>{% trans "Activity" %} 1: <a href="{% static "activities" %}/{{LANGUAGE_CODE}}/scholastic-one.pdf" target="_blank">{% trans "Exploring Federal Lands and Waters" %}</a> (PDF). {% trans "This lesson teaches students why our country protects lands and waters." %}</p>
+      <p>{% trans "Activity" %} 2: <a href="{% static "activities" %}/{{LANGUAGE_CODE}}/scholastic-two.pdf" target="_blank">{% trans "Environmental Stewardship" %}</a> (PDF). {% trans "This lesson shows students how to take care of lands and waters." %}</p>
+      <p>{% trans "Activity" %} 3: <a href="{% static "activities" %}/{{LANGUAGE_CODE}}/scholastic-three.pdf" target="_blank">{% trans "Our Nation’s Native Peoples" %}</a> (PDF). {% trans "This lesson teaches students about the people who lived on this land before it was called the United States." %}</p>
+      <p>{% trans "Activity" %} 4: <a href="{% static "activities" %}/{{LANGUAGE_CODE}}/scholastic-four.pdf" target="_blank">{% trans "Citizen Science" %}</a> (PDF). {% trans "This lesson helps kids learn about the difference between weather and climate." %}</p>
     </div>
     <div class="generate-vouchers">
       <h3>{% trans "Generate passes" %}</h3>
