@@ -936,7 +936,9 @@ nav.footer-mobile-menu {
       left: -24px; }
 
 #educators .translation-form {
-  max-width: inherit; }
+  max-width: inherit;
+  margin: 0px;
+  padding: 0px; }
 
 #educators form {
   max-width: 450px;
