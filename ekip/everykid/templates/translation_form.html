@@ -1,0 +1,10 @@
+<form action="{% url 'set_language' %}" method="post" class="translation-form">
+  {% csrf_token %}
+  <input name="next" type="hidden" value="{{ redirect_to }}" />
+  {% if LANGUAGE_CODE == 'es-us' %}
+    <input name="language" type="hidden" value="en-us" />		 
+  {% else %}
+    <input name="language" type="hidden" value="es-us" />
+  {% endif %}
+  <input class="translate-link" type="submit" value="{% if LANGUAGE_CODE == 'es-us' %}In English{% else %}En Español{% endif %}"/>
+</form>	
