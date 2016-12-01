@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -13,7 +14,7 @@
 
     <div class="diary-left">
       <div class="page">
-        <h2>When I arrived I saw:</h2>
+        <h2>{% trans "When I arrived I saw:" %}</h2>
       </div>
     </div>
 
@@ -23,16 +24,16 @@
           {% csrf_token %}
           <ul>
             <li>
-              <img src="{% static "img/activity/mountains.jpg" %}" alt="When I arrived I saw huge mountains." />
-              <button type="submit" name='huge-mountain' value="huge mountains">Huge mountains!</button>
+              <img src="{% static "img/activity/mountains.jpg" %}" alt="{% trans 'When I arrived I saw huge mountains.' %}" />
+              <button type="submit" name='huge-mountain' value="huge mountains">{% trans "Huge mountains!" %}</button>
             </li>
             <li>
-              <img src="{% static "img/activity/animal.jpg" %}" alt="When I arrived I saw wild animals." />
-              <button type="submit" name='wild-animals' value="wild animals">Wild animals!</button>
+              <img src="{% static "img/activity/animal.jpg" %}" alt="{% trans 'When I arrived I saw wild animals.' %}" />
+              <button type="submit" name='wild-animals' value="wild animals">{% trans "Wild animals!" %}</button>
             </li>
             <li>
-              <img src="{% static "img/activity/plant.jpg" %}" alt="When I arrived I saw beautiful plants." />
-              <button type="submit" name='beautiful-plants' value="beautiful-plants">Beautiful plants!</button>
+              <img src="{% static "img/activity/plant.jpg" %}" alt="{% trans 'When I arrived I saw beautiful plants.' %}" />
+              <button type="submit" name='beautiful-plants' value="beautiful-plants">{% trans "Beautiful plants!" %}</button>
             </li>
           </ul>
         </form>

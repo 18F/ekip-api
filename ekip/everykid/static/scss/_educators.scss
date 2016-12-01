@@ -113,8 +113,14 @@
     }
   }
 
+  .translation-form{
+	max-width: inherit;
+	margin: 0px;
+	padding: 0px;
+  }
+	
   form {
-    max-width: 370px;
+    max-width: 450px;
     padding: 15px 0 0 0;
     margin: 0 0 0 50px;
 

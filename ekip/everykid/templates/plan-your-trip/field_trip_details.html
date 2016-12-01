@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Plan a field trip{% endblock title %}
+{% block title %}{% trans "Plan a field trip" %}{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -10,7 +11,7 @@
 
   <div class="plan-your-trip-content plan-field-trip-details">
 
-    <h1>Plan a field trip</h1>
+    <h1>{% trans "Plan a field trip" %}</h1>
 
     <h2>{{destination.name}}</h2>
 
@@ -33,17 +34,17 @@
 
     <p>
     {% if destination.larger_groups %}
-      This site is suitable for large groups.
+      {% trans "This site is suitable for large groups." %}
     {% endif %}
     </p>
     <p>
     {% if destination.advance_reservation %}
-      This site requires advance reservations for field trips.
+      {% trans "This site requires advance reservations for field trips." %}
     {% endif %}
     </p>
 
     {% if destination.visit_times_list %}
-      <h3>Best times to visit</h3>
+      <h3>{% trans "Best times to visit" %}</h3>
       <p>
         {{destination.visit_times_list|join:", "}}
       </p>
@@ -51,16 +52,16 @@
 
     {% if destination.features_list %}
 
-    <h3>Facilities</h3>
+    <h3>{% trans "Facilities" %}</h3>
     <p>
       {{ destination.features_list|join:", "}}
     </p>
     {% endif %}
 	{% if destination.website %}
-    <h3>Website</h3>
+    <h3>{% trans "Website" %}</h3>
 
     <p>
-    Be informed before you visit in person. Visit the <a href="{{destination.website}}">website</a> first.
+    {% trans "Be informed before you visit in person. Visit the" %} <a href="{{destination.website}}">{% trans "website" %}</a> {% trans "first" %}.
     </p>
     {% endif %}
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext_lazy as _
 
 def choose_adventure_type(request):
     if 'ok_to_start' not in request.session:
@@ -31,9 +32,9 @@ def swimming_end(request):
     selection = request.GET.get('selection', 'ocean')
 
     selector = {
-        'ocean': "ocean",
-        'lake': 'lake',
-        'river': 'river'
+        'ocean': _("ocean"),
+        'lake': _('lake'),
+        'river': _('river')
     }
     request.session['game_end'] = True
 
@@ -65,9 +66,9 @@ def time_travel_end(request):
     selection = request.GET.get('selection', 'dinosaur-tracks')
 
     selector = {
-        'mlk-house': "Martin Luther King's house",
-        'ancient-drawings': 'ancient drawings',
-        'dinosaur-tracks': 'dinosaur tracks'
+        'mlk-house': _("Martin Luther King's house"),
+        'ancient-drawings': _('ancient drawings'),
+        'dinosaur-tracks': _('dinosaur tracks')
     }
     request.session['game_end'] = True
 
@@ -116,9 +117,9 @@ def nature_walk_end(request):
     selection = request.GET.get('selection', 'mountains')
 
     selector = {
-        'mountains': 'huge mountains',
-        'animals': 'wild animals',
-        'plants': 'beautiful plants'
+        'mountains': _('huge mountains'),
+        'animals': _('wild animals'),
+        'plants': _('beautiful plants')
     }
 
     request.session['game_end'] = True

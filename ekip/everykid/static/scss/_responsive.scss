@@ -42,7 +42,7 @@
 
   // mobile only nav
   nav.mobile-menu {
-    height: 300px;
+    height: 360px;
     display: block;
 
     .logo {
@@ -109,6 +109,19 @@
         &:last-child {
           border: none;
         }
+		input {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: $yellow;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+		  border: 0px;
+		  background: inherit;
+		  cursor: pointer;
+        }  
 
         ul.sub li {
           width: 48%;

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html>
@@ -16,8 +17,8 @@
   <div class="print">
 
     <button>
-      Click this button to<br/>
-      <span>PRINT YOUR PASS</span>
+      {% trans "Click this button to" %}<br/>
+      <span>{% trans "PRINT YOUR PASS!" %}</span>
     </button>
 
   </div>
@@ -40,7 +41,7 @@
         <img class="voucher-image" src="{% static 'img/voucher-new.png' %}" alt="" />
 
         <div class="voucher-barcode">
-          <img class="barcode" alt="barcode" data-id="{{ locator }}" />
+          <img class="barcode" alt="{% trans 'barcode' %}" data-id="{{ locator }}" />
         </div>
       </div>
 
@@ -69,7 +70,7 @@
 
     <div class="personnel">
       <span>This area for official use by facility personnel.</span>
-      <img alt="barcode" data-id="{{ locator }}" />
+      <img alt="{% trans 'barcode' %}" data-id="{{ locator }}" />
     </div>
 
   </div>
@@ -78,9 +79,9 @@
 
     <div class="instruction-content">
 
-      <h2>Instructions</h2>
+      <h2>{% trans "Instructions" %}</h2>
 
-      <p>Our national lands and waters belong to everyone. That includes you!  Use this pass to visit any of them for free.  You can bring your family and friends with you for free, too!</p>
+      <p>{% trans "Our national lands and waters belong to everyone. That includes you!  Use this pass to visit any of them for free.  You can bring your family and friends with you for free, too!" %}</p>
 
       {% include 'get-your-pass/voucher-rules.html' %}
 

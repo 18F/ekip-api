@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get your pass - fourth graders{% endblock title %}
+{% block title %}{% trans "Get your pass" %} - {% trans "fourth graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -11,11 +12,11 @@
 
   <div class="pass-content voucher-claim">
 
-    <h1>You did it!<br/>Claim your pass</h1>
+    <h1>{% trans "You did it!" %}<br/>{% trans "Claim your pass" %}</h1>
 
     <div class="voucher-claim-description">
 
-      <p>Success! You'll get your paper pass on the next screen. Please print it and keep it in a safe place. Remember to take it with you on your trip.</p>
+      <p>{% trans "Success! You'll get your paper pass on the next screen. Please print it and keep it in a safe place. Remember to take it with you on your trip." %}</p>
 
     </div>
 
@@ -40,12 +41,12 @@
 
       {% endfor %}
 
-      <button>Get my pass</button>
+      <button>{% trans "Get my pass" %}</button>
     </form>
 
     <div class="no-zipcode">
-      <a href="{% url 'fourth_grade_voucher' %}?zip=00000">I don't know my zip code</a>.<br/>
-      <a href="{% url 'privacy_policy' %}">Privacy notice</a>.
+      <a href="{% url 'fourth_grade_voucher' %}?zip=00000">{% trans "I don't know my zip code" %}</a>.<br/>
+      <a href="{% url 'privacy_policy' %}">{% trans "Privacy notice" %}</a>.
     </div>
 
   </div>

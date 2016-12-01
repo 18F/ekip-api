@@ -118,6 +118,16 @@ ul.top-links {
       cursor: default; }
     ul.top-links li:last-child {
       border: none; }
+  ul.top-links .translate-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: .7;
+    font-family: inherit; }
 
 #educators .educators-link {
   color: #FFE897; }
@@ -824,7 +834,7 @@ nav.footer-mobile-menu {
     background: rgba(255, 255, 255, 0.7);
     float: left; }
   #student-pass .voucher-claim form button {
-    width: 202px;
+    width: 222px;
     height: 50px;
     background: #FFE897;
     font-weight: normal;
@@ -925,8 +935,13 @@ nav.footer-mobile-menu {
       top: -10px;
       left: -24px; }
 
+#educators .translation-form {
+  max-width: inherit;
+  margin: 0px;
+  padding: 0px; }
+
 #educators form {
-  max-width: 370px;
+  max-width: 450px;
   padding: 15px 0 0 0;
   margin: 0 0 0 50px; }
   #educators form::after {
@@ -1281,23 +1296,6 @@ nav.footer-mobile-menu {
         width: 450px;
         padding: 0 0 50px 140px;
         display: inline-block; }
-    #plan-your-trip .content-inner section.amtrak {
-      background: #003A5D; }
-      #plan-your-trip .content-inner section.amtrak .section-content {
-        padding: 10px 0 0 10px; }
-        #plan-your-trip .content-inner section.amtrak .section-content a {
-          color: #FFE897;
-          text-decoration: none; }
-          #plan-your-trip .content-inner section.amtrak .section-content a:hover {
-            text-decoration: underline; }
-        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-image {
-          margin: 40px 10px 0 0;
-          display: inline-block; }
-        #plan-your-trip .content-inner section.amtrak .section-content .amtrak-content {
-          max-width: 410px;
-          padding: 70px 0 0 120px;
-          vertical-align: top;
-          display: inline-block; }
     #plan-your-trip .content-inner section.field-trip-sites {
       background: #B1DAEC;
       color: #177099;
@@ -1613,7 +1611,7 @@ footer {
     min-height: 0;
     position: relative; }
   nav.mobile-menu {
-    height: 300px;
+    height: 360px;
     display: block; }
     nav.mobile-menu .logo {
       width: 50%;
@@ -1666,6 +1664,18 @@ footer {
           display: block; }
         nav.mobile-menu ul.menu li:last-child {
           border: none; }
+        nav.mobile-menu ul.menu li input {
+          padding: 20px 0;
+          font-family: "Superclarendon", serif;
+          font-size: 18px;
+          color: #FFE897;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          border: 0px;
+          background: inherit;
+          cursor: pointer; }
         nav.mobile-menu ul.menu li ul.sub li {
           width: 48%;
           display: inline-block;

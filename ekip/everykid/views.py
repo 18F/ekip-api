@@ -2,6 +2,7 @@ import string
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 from formtools.preview import FormPreview
 from localflavor.us.us_states import US_STATES
@@ -79,6 +80,7 @@ def get_active_pass_exchange_sites(state):
     """ For a given state, return the sites that are issuing kids passes. """
     return FederalSiteResource().list(state, 1).order_by('name')
 
+@ensure_csrf_cookie
 def pass_exchange(request):
     """Display the list of sites one can exchange a voucher for a pass at."""
 
@@ -103,7 +105,7 @@ def pass_exchange(request):
         }
     )
 
-
+@ensure_csrf_cookie
 def field_trip_details(request, slug):
     destination = get_object_or_404(FieldTripSite, slug=slug)
 
@@ -120,6 +122,7 @@ def field_trip_details(request, slug):
     )
 
 
+@ensure_csrf_cookie
 def field_trip(request):
     """ Display the list of sites intended for field trips. """
 

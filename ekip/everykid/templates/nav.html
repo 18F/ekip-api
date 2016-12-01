@@ -1,15 +1,19 @@
 {% load staticfiles %}
 {% load tags %}
+{% load i18n %}
 
     <ul class="top-links">
       <li class="{% active request 'parents' %}">
-        <a href="{% url 'parents' %}">Parents</a>
+        <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
       </li>
       <li class="{% active request 'educator' %}">
-        <a href="{% url 'educator_passes' %}">Educators</a>
+        <a href="{% url 'educator_passes' %}">{% trans "Educators" %}</a>
       </li>
       <li class="{% active request 'about' %}">
-        <a href="{% url 'about_ekip' %}">About</a>
+        <a href="{% url 'about_ekip' %}">{% trans "About" %}</a>
+      </li>
+      <li>
+        {% include "translation_form.html" %}	  
       </li>
     </ul>
 
@@ -18,7 +22,7 @@
       <nav>
         <div class="logo">
           <a href="/">
-            <img src="{% static "img/nav-logo.png" %}" alt="Every Kid In A Park Logo" />
+            <img src="{% static "img/nav-logo.png" %}" alt="{% trans 'Every Kid In A Park Logo' %}" />
           </a>
         </div>
 
@@ -45,15 +49,15 @@
 
           <ul>
             <li class="home">
-              <a href="/">Home</a>
+              <a href="/">{% trans "Home" %}</a>
             </li>
             <li class="{% active request 'how-it-works' %}">
-              <a href="{% url 'how_it_works' %}">How It Works</a>
+              <a href="{% url 'how_it_works' %}">{% trans "How It Works" %}</a>
             <li class="{% active request 'get-your-pass' %}">
-              <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+              <a href="{% url 'get_your_pass' %}">{% trans "Get Your Pass" %}</a>
             </li>
             <li class="{% active request 'plan-your-trip' %}" >
-              <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+              <a href="{% url 'plan_your_trip' %}">{% trans "Plan a Trip" %}</a>
             </li>
           </ul>
         </div>

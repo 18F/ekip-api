@@ -1,5 +1,5 @@
 {% load staticfiles %}
-
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,18 +16,18 @@
   {% if request.get_full_path = "/plan-your-trip/" %}
   <link rel="stylesheet" href="{% static "css/simplemodal.css" %}" />
   {% endif %}
-  <title>Every Kid in a Park | {% block title %}{% endblock title %}</title>
+  <title>{% trans "Every Kid in a Park" %} | {% block title %}{% endblock title %}</title>
   <meta name="description" content="">
 
 </head>
 
 <body id="{% block page_id %}{% endblock page_id %}">
 
-  <a id="skipnav" href="#maincontent">skip to main content</a>
+  <a id="skipnav" href="#maincontent">{% trans "skip to main content" %}</a>
 
   <div class="govt-banner">
-    An official website of the United States Government.
-    <img alt="US flag signifying that this is a United States Federal Government website" src="{% static 'img/us_flag_small.png' %}" />
+    {% trans "An official website of the United States Government." %}
+    <img alt="{% trans 'US flag signifying that this is a United States Federal Government website' %}" src="{% static 'img/us_flag_small.png' %}" />
   </div>
 
   <div id="curtain"></div>
@@ -41,12 +41,12 @@
       <nav class="mobile-menu">
         <div class="logo">
           <a href="/">
-            <img src="{% static "img/nav-logo.png" %}" alt="Every Kid In A Park Logo" />
+            <img src="{% static "img/nav-logo.png" %}" alt="{% trans 'Every Kid In A Park Logo' %}" />
           </a>
         </div>
 
         <div class="menu-button">
-          Menu
+          {% trans "Menu" %}
           <svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-318.000000, -69.000000)" fill="#FFFFFF">
@@ -70,26 +70,29 @@
             </svg>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">{% trans "Home" %}</a>
           </li>
           <li>
-            <a href="{% url 'how_it_works' %}">How It Works</a>
+            <a href="{% url 'how_it_works' %}">{% trans "How It Works" %}</a>
           <li>
-            <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+            <a href="{% url 'get_your_pass' %}">{% trans "Get Your Pass" %}</a>
           </li>
           <li>
-            <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+            <a href="{% url 'plan_your_trip' %}">{% trans "Plan a Trip" %}</a>
           </li>
           <li>
-            <a href="{% url 'parents' %}">Parents</a>
+            <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
           </li>
+		  <li>
+		    {% include "translation_form.html" %}
+		  </li>
           <li>
             <ul class="sub">
               <li>
-                <a href="{% url 'educator_passes' %}">Educators</a>
+                <a href="{% url 'educator_passes' %}">{% trans "Educators" %}</a>
               </li>
               <li>
-                <a href="{% url 'about_ekip' %}">About</a>
+                <a href="{% url 'about_ekip' %}">{% trans "About" %}</a>
               </li>
             </ul>
           </li>
@@ -112,26 +115,26 @@
 
       <ul class="menu">
         <li>
-          <a href="/">Home</a>
+          <a href="/">{% trans "Home" %}</a>
         </li>
         <li>
-          <a href="{% url 'how_it_works' %}">How It Works</a>
+          <a href="{% url 'how_it_works' %}">{% trans "How It Works" %}</a>
         <li>
-          <a href="{% url 'get_your_pass' %}">Get Your Pass</a>
+          <a href="{% url 'get_your_pass' %}">{% trans "Get Your Pass" %}</a>
         </li>
         <li>
-          <a href="{% url 'plan_your_trip' %}">Plan a Trip</a>
+          <a href="{% url 'plan_your_trip' %}">{% trans "Plan a Trip" %}</a>
         </li>
         <li>
-          <a href="{% url 'parents' %}">Parents</a>
-        </li>
+          <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
+        </li>		  
         <li>
           <ul class="sub">
             <li>
-              <a href="{% url 'educator_passes' %}">Educators</a>
+              <a href="{% url 'educator_passes' %}">{% trans "Educators" %}</a>
             </li>
             <li>
-              <a href="{% url 'about_ekip' %}">About</a>
+              <a href="{% url 'about_ekip' %}">{% trans "About" %}</a>
             </li>
           </ul>
         </li>
@@ -142,7 +145,7 @@
     <section class="footer-content">
 
       <a href="http://www.doi.gov" target="_blank">
-        <img src="{% static "img/doi-logo.png" %}" class="doi" alt="US Department of the Interior - March 3, 1849" />
+        <img src="{% static "img/doi-logo.png" %}" class="doi" alt="{% trans 'US Department of the Interior - March 3, 1849' %}" />
       </a>
 
       <p class="hashtag">@everykidinapark</p>
@@ -150,24 +153,24 @@
       <nav>
         <ul>
           <li>
-            <a href="{% url 'about_ekip' %}">About Every Kid in a Park</a>
+            <a href="{% url 'about_ekip' %}">{% trans "About Every Kid in a Park" %}</a>
           </li>
           <li>
-            <a href="https://www.doi.gov/privacy">Privacy policy</a>
+            <a href="https://www.doi.gov/privacy">{% trans "Privacy policy" %}</a>
           </li>
           <li>
-            <a href="https://www.doi.gov/disclaimer">Disclaimer</a>
+            <a href="https://www.doi.gov/disclaimer">{% trans "Disclaimer" %}</a>
           </li>
           <li>
-            <a href="https://www.doi.gov/accessibility">Accessibility</a>
+            <a href="https://www.doi.gov/accessibility">{% trans "Accessibility" %}</a>
           </li>
           <li>
-            <a href="https://www.doi.gov/notices">Notices</a>
+            <a href="https://www.doi.gov/notices">{% trans "Notices" %}</a>
           </li>
         </ul>
       </nav>
 
-      <p class="notice">This site is run by the <a href="http://www.gsa.gov" target="_blank">General Services Administration</a> for the <a href="http://www.doi.gov" target="_blank">Department of the Interior's</a> Every Kid in a Park program.</p>
+      <p class="notice">{% trans "This site is run by the" %} <a href="http://www.gsa.gov" target="_blank">{% trans "General Services Administration" %}</a> {% trans "for the" %} <a href="http://www.doi.gov" target="_blank">{% trans "Department of the Interior's" %}</a> {% trans "Every Kid in a Park program." %}</p>
 
     </section>
 
