@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -12,10 +13,9 @@
   <div class="pass-content diary diary-end">
     <div class="diary-left">
       <div class="page">
-        <h2>Dear Diary,</h2>
-        <p>Today I saw {{selection}}! It was exciting to listen to the past. 
-        America's story ranges from roaming dinosaurs all the way to me!</p>
-        <p>I can't wait to use my pass to discover more historic places.</p>
+        <h2>{% trans "Dear Diary," %}</h2>
+        <p>{% trans "Today I saw" %} {{selection}} {% trans "It was exciting to listen to the past. America's story ranges from roaming dinosaurs all the way to me!" %}</p>
+        <p>{% trans "I can't wait to use my pass to discover more historic places." %}</p>
       </div>
     </div>
 
@@ -23,20 +23,20 @@
       <div class="page">
 
       {% if selection == "Martin Luther King's house" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
-        <img src="{% static "img/activity/end-house.jpg" %}" alt="It was so cool to see Martin Luther King Jr.'s house." />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="{% trans 'I decided to time travel.' %}" />
+        <img src="{% static "img/activity/end-house.jpg" %}" alt="{% trans "It was so cool to see Martin Luther King Jr.'s house." %}" />
       {% elif selection == "ancient drawings" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
-        <img src="{% static "img/activity/end-drawings.jpg" %}" alt="It was so cool to see ancient drawings." />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="{% trans 'I decided to time travel.' %}" />
+        <img src="{% static "img/activity/end-drawings.jpg" %}" alt="{% trans 'It was so cool to see ancient drawings.' %}" />
       {% elif selection == "dinosaur tracks" %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
-        <img src="{% static "img/activity/end-tracks.jpg" %}" alt="It was so cool to see dinosaur tracks." />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="{% trans 'I decided to time travel.' %}" />
+        <img src="{% static "img/activity/end-tracks.jpg" %}" alt="{% trans 'It was so cool to see dinosaur tracks.' %}" />
       {% else %}
-        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="I decided to time travel." />
-        <img src="{% static "img/activity/end-house.jpg" %}" alt="It was so cool to see Martin Luther King Jr.'s house." />
+        <img src="{% static "img/activity/end-timetravel.jpg" %}" alt="{% trans 'I decided to time travel.' %}" />
+        <img src="{% static "img/activity/end-house.jpg" %}" alt="{% trans "It was so cool to see Martin Luther King Jr.'s house." %}" />
       {% endif %}
 
-        <a href={% url "game_success" %}><button>Get your pass now</button></a>
+        <a href={% url "game_success" %}><button>{% trans "Get your pass now" %}</button></a>
       </div>
     </div>
   </div>

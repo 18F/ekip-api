@@ -1,10 +1,12 @@
+    {% load i18n %}
+    
     {% if form.errors %}
       <div class="errors">
-        Please correctly fill out the highlighted fields below:
+        {% trans "Please correctly fill out the highlighted fields below" %}:
       </div>
     {% endif %}
 
-    <span>Fourth-grade educator info:</span>
+    <span>{% trans "Fourth-grade educator info" %}:</span>
     <fieldset>
       <legend>Fourth-grade educator info:</legend>
       <ul>
@@ -13,7 +15,7 @@
       </ul>
     </fieldset>
 
-    <span>Organizational info:</span>
+    <span>{% trans "Organizational info" %}:</span>
     <fieldset>
       <legend>Organizational info:</legend>
       <ul>

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass" %} - {% trans "Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -10,18 +11,17 @@
 
   <div class="pass-content">
 
-    <h1>Start your adventure now</h1>
-    <p>Fill out our diary entry with things you'd like to see and do.
-    When you're done, read your story! Then print your paper pass.</p>
+    <h1>{% trans "Start your adventure now" %}</h1>
+    <p>{% trans "Fill out our diary entry with things you'd like to see and do. When you're done, read your story! Then print your paper pass." %}</p>
 
     <form method="POST">
       {% csrf_token %}
 
       <label for="in_the_fourth_grade">
       <input id="in_the_fourth_grade" name="in_the_fourth_grade" type="checkbox" value="Y" />
-      <span>Yes, I'm in the fourth grade or home-school equivalent</span></label>
+      <span>{% trans "Yes, I'm in the fourth grade or home-school equivalent" %}</span></label>
 
-      <button type="submit">Play</button>
+      <button type="submit">{% trans "Play" %}</button>
     </form>
 
   </div>

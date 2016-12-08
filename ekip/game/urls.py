@@ -1,12 +1,11 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.views.generic import TemplateView
 
 from .views import (
     nature_walk, nature_walk_end, time_travel, time_travel_end, swimming,
     swimming_end, game_start, choose_adventure_type)
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'first/one$', TemplateView.as_view(
         template_name='first-game/start.html'), name='first_game_start'),
     url(r'first/two$', TemplateView.as_view(
@@ -32,4 +31,4 @@ urlpatterns = patterns(
 
     url(r'adventure/swimming/end', swimming_end, name='swimming_end'),
     url(r'adventure/swimming', swimming, name='adventure_swimming'),
-)
+]

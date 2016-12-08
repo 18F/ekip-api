@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
-{% block title %}Get Your Pass - Fourth Graders{% endblock title %}
+{% block title %}{% trans "Get Your Pass - Fourth Graders" %}{% endblock title %}
 
 {% block page_id %}student-pass{% endblock page_id %}
 
@@ -13,7 +14,7 @@
 
     <div class="diary-left">
       <div class="page">
-        <h2>I decided to:</h2>
+        <h2>{% trans "I decided to:" %}</h2>
       </div>
     </div>
 
@@ -24,20 +25,20 @@
         <ul>
           <li>
             <a href="{% url 'adventure_nature_walk' %}">
-            <img src="{% static "img/activity/nature-walk.jpg" %}" alt="I decided to go on a nature walk." />
-            <button>Go on a nature walk!</button>
+            <img src="{% static "img/activity/nature-walk.jpg" %}" alt="{% trans 'I decided to go on a nature walk.' %}" />
+            <button>{% trans "Go on a nature walk!" %}</button>
             </a>
           </li>
           <li>
             <a href="{% url 'adventure_time_travel' %}">
-            <img src="{% static "img/activity/time-travel.jpg" %}" alt="I decided to time travel." />
-            <button>Time travel!</button>
+            <img src="{% static "img/activity/time-travel.jpg" %}" alt="{% trans 'I decided to time travel.' %}" />
+            <button>{% trans "Time travel!" %}</button>
             </a>
           </li>
           <li>
             <a href="{% url 'adventure_swimming' %}">
-            <img src="{% static "img/activity/beach.jpg" %}" alt="I decided to go swimming." />
-            <button>Go swimming!</button>
+            <img src="{% static "img/activity/beach.jpg" %}" alt="{% trans 'I decided to go swimming.' %}" />
+            <button>{% trans "Go swimming!" %}</button>
             </a>
           </li>
         </ul>

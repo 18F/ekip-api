@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 
 {% block title %}How Every Kid in a Park Works{% endblock title %}
@@ -10,12 +11,12 @@
 
   <div class="content-block">
 
-    <h1>How it works</h1>
+    <h1>{% trans "How it works" %}</h1>
 
-    <p>Follow the steps below, and you'll be visiting America's parks, lands, and waters in no time.</p>
+    <p>{% trans "Follow the steps below, and you'll be visiting America's parks, lands, and waters in no time." %}</p>
 
     <div class="lets-get-going">
-      Let's Get Going!
+      {% trans "Let's Get Going!" %}
 
       <svg class="arrow-down" width="36px" height="21px" viewBox="0 0 36 21" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -39,13 +40,13 @@
   <section class="get-your-pass">
     <div class="section-content">
       <div class="description">
-        <h2>Get your pass</h2>
-        <p>Get and print fourth-grade passes to our national lands and waters.</p>
-        <a href="{% url "student_pass" %}"><button>Fourth Graders</button></a>
-        <a href="{% url "educator_passes" %}"><button>Educators</button></a>
+        <h2>{% trans "Get your pass" %}</h2>
+        <p>{% trans "Get and print fourth-grade passes to our national lands and waters." %}</p>
+        <a href="{% url "student_pass" %}"><button>{% trans "Fourth Graders" %}</button></a>
+        <a href="{% url "educator_passes" %}"><button>{% trans "Educators" %}</button></a>
       </div>
       <div class="image">
-        <img src="{% static "img/how-it-works-print-new.png" %}" alt="Printable Pass" />
+        <img src="{% static "img/how-it-works-print-new.png" %}" alt="{% trans 'Printable Pass' %}" />
       </div>
     </div>
   </section>
@@ -53,12 +54,12 @@
   <section class="plan-a-trip">
     <div class="section-content">
       <div class="image">
-        <img src="{% static "img/how-it-works-plan.jpg" %}" alt="Stand up paddlers with dog" />
+        <img src="{% static "img/how-it-works-plan.jpg" %}" alt="{% trans 'Stand up paddlers with dog' %}" />
       </div>
       <div class="description">
-        <h2>Plan a trip</h2>
-        <p>It's a good idea to involve your parent or guardian in this.</p>
-        <a href="{% url "plan_your_trip" %}"><button>Start</button></a>
+        <h2>{% trans "Plan a trip" %}</h2>
+        <p>{% trans "It's a good idea to involve your parent or guardian in this." %}</p>
+        <a href="{% url "plan_your_trip" %}"><button>{% trans "Start" %}</button></a>
       </div>
     </div>
   </section>
@@ -66,11 +67,11 @@
   <section class="hit-the-road">
     <div class="section-content">
       <div class="description">
-        <h2>Hit the road!</h2>
-        <p>Enjoy national parks, lands, and waters for a full year. Leave only footsteps. Take only pictures.</p>
+        <h2>{% trans "Hit the road!" %}</h2>
+        <p>{% trans "Enjoy national parks, lands, and waters for a full year. Leave only footsteps. Take only pictures." %}</p>
       </div>
       <div class="image">
-        <img src="{% static "img/how-it-works-road-new.png" %}" alt="line of hikers in brush" />
+        <img src="{% static "img/how-it-works-road-new.png" %}" alt="{% trans 'line of hikers in brush' %}" />
       </div>
     </div>
   </section>
@@ -79,17 +80,16 @@
     <div class="section-content">
 
       <div class="image">
-        <img src="{% static "img/how-it-works-pass-new.png" %}" alt="Every Kid In A Park Pass" />
+        <img src="{% static "img/how-it-works-pass-new.png" %}" alt="{% trans 'Every Kid In A Park Pass' %}" />
       </div>
 
       <div class="description">
-        <h2>A few things to know</h2>
-        <p>You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted.</p>
+        <h2>{% trans "A few things to know" %}</h2>
+        <p>{% trans "You need to print your pass and bring it with you when you visit. Electronic copies aren't accepted." %}</p>
         <br/>
-        <p>Your pass has a unique code. That means you can't copy it and give it to friends.
-          Encourage your friends to get their own pass if they're in the fourth grade.</p>
+        <p>{% trans "Your pass has a unique code. That means you can't copy it and give it to friends. Encourage your friends to get their own pass if they're in the fourth grade." %}</p>
         <br/>
-        <p>This program only provides passes for fourth graders.</p>
+        <p>{% trans "This program only provides passes for fourth graders." %}</p>
         <br/>
       </div>
     </div>

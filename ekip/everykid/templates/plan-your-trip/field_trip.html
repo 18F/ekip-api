@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Plan a field trip{% endblock title %}
+{% block title %}{% trans "Plan a field trip" %}{% endblock title %}
 
 {% block page_id %}plan-your-trip{% endblock page_id %}
 
@@ -10,25 +11,20 @@
 
   <div class="plan-your-trip-content plan-field-trip">
 
-    <h1>Plan a field trip</h1>
+    <h1>{% trans "Plan a field trip" %}</h1>
 
-    <p>A field trip is a great learning opportunity. </p>
+    <p>{% trans "A field trip is a great learning opportunity." %} </p>
 
-    <p>Start by selecting a state or territory. Then check out our list of recommended sites.
-    You can see the best time of year to visit and what that site has to offer.
-    For example, trails, outdoor classrooms, and visitor centers. </p>
+    <p>{% trans "Start by selecting a state or territory. Then check out our list of recommended sites. You can see the best time of year to visit and what that site has to offer. For example, trails, outdoor classrooms, and visitor centers." %} </p>
 
-    <p>You'll also see contact information for each site.
-    Contact the site for help scheduling trips and transportation.</p>
+    <p>{% trans "You'll also see contact information for each site. Contact the site for help scheduling trips and transportation." %}</p>
     
-   <p>This program only provides passes for fourth graders. 
-    Sites can choose to waive fees for teachers on a field trip. 
-    Please contact each site for more information.</p>
+   <p>{% trans "This program only provides passes for fourth graders. Sites can choose to waive fees for teachers on a field trip. Please contact each site for more information." %}</p>
 
     <form class="state-select" method="GET">
-      <label class="choose-state" for="id_state">Choose a state or territory:</label>
+      <label class="choose-state" for="id_state">{% trans "Choose a state or territory" %}:</label>
       {{ form.state }}
-      <button type="submit">Submit</button>
+      <button type="submit">{% trans "Submit" %}</button>
     </form>
 
   </div>
@@ -42,7 +38,7 @@
     {% if sites %}
     <section class="state">
       <div class="state-content">
-        <h2>Sites to visit in {{state_name}}:</h2>
+        <h2>{% trans "Sites to visit in" %} {{state_name}}:</h2>
       </div>
     </section>
 
@@ -62,7 +58,7 @@
     {% if state_name %}
     <section class="state">
         <div class="state-content">
-        <h2> No results for: {{state_name}}. </h2>
+        <h2> {% trans "No results for" %}: {{state_name}}. </h2>
         </div>
     </section>
     {% endif %}

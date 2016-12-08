@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-16 21:46-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/adventure/choose_adventure.html:5
+#: templates/adventure/nature_walk.html:5
+#: templates/adventure/nature_walk_end.html:5 templates/adventure/start.html:5
+#: templates/adventure/swimming.html:5 templates/adventure/swimming_end.html:5
+#: templates/adventure/time_travel.html:5
+#: templates/adventure/time_travel_end.html:5
+#: templates/first-game/endangered.html:5
+#: templates/first-game/infographic.html:5
+#: templates/first-game/lands_map.html:5 templates/first-game/start.html:5
+msgid "Get Your Pass - Fourth Graders"
+msgstr "Consigue tu Pase - Estudiantes de 4ºgrado"
+
+#: templates/adventure/choose_adventure.html:17
+msgid "I decided to:"
+msgstr "Decidí:"
+
+#: templates/adventure/choose_adventure.html:28
+#: templates/adventure/nature_walk_end.html:33
+#: templates/adventure/nature_walk_end.html:36
+#: templates/adventure/nature_walk_end.html:39
+#: templates/adventure/nature_walk_end.html:42
+msgid "I decided to go on a nature walk."
+msgstr "Decidí dar un paseo por la naturaleza."
+
+#: templates/adventure/choose_adventure.html:29
+msgid "Go on a nature walk!"
+msgstr "¡Pasear por la naturaleza!"
+
+#: templates/adventure/choose_adventure.html:34
+#: templates/adventure/time_travel_end.html:26
+#: templates/adventure/time_travel_end.html:29
+#: templates/adventure/time_travel_end.html:32
+#: templates/adventure/time_travel_end.html:35
+msgid "I decided to time travel."
+msgstr "Decidí viajar en el tiempo."
+
+#: templates/adventure/choose_adventure.html:35
+msgid "Time travel!"
+msgstr "¡Viajar  en el tiempo!"
+
+#: templates/adventure/choose_adventure.html:40
+#: templates/adventure/swimming_end.html:27
+#: templates/adventure/swimming_end.html:30
+#: templates/adventure/swimming_end.html:33
+#: templates/adventure/swimming_end.html:36
+msgid "I decided to go swimming."
+msgstr "Decidí ir a nadar."
+
+#: templates/adventure/choose_adventure.html:41
+msgid "Go swimming!"
+msgstr "¡Ir a nadar!"
+
+#: templates/adventure/nature_walk.html:17
+msgid "When I arrived I saw:"
+msgstr "Al llegar yo vi: "
+
+#: templates/adventure/nature_walk.html:27
+#: templates/adventure/nature_walk_end.html:34
+#: templates/adventure/nature_walk_end.html:43
+msgid "When I arrived I saw huge mountains."
+msgstr "Al llegar yo vi enormes montañas."
+
+#: templates/adventure/nature_walk.html:28
+msgid "Huge mountains!"
+msgstr "¡Enormes montañas!"
+
+#: templates/adventure/nature_walk.html:31
+#: templates/adventure/nature_walk_end.html:37
+msgid "When I arrived I saw wild animals."
+msgstr "Al llegar yo vi animales salvajes"
+
+#: templates/adventure/nature_walk.html:32
+msgid "Wild animals!"
+msgstr "¡Animales silvestres!"
+
+#: templates/adventure/nature_walk.html:35
+#: templates/adventure/nature_walk_end.html:40
+msgid "When I arrived I saw beautiful plants."
+msgstr "Al llegar yo vi plantas maravillosas."
+
+#: templates/adventure/nature_walk.html:36
+msgid "Beautiful plants!"
+msgstr "¡Plantas hermosas!"
+
+#: templates/adventure/nature_walk_end.html:18
+#: templates/adventure/start.html:21 templates/adventure/swimming_end.html:16
+#: templates/adventure/time_travel_end.html:16
+msgid "Dear Diary,"
+msgstr "Querido Diario,"
+
+#: templates/adventure/nature_walk_end.html:20
+msgid "Today I went on a nature walk and saw"
+msgstr "Hoy paseé por la naturaleza y vi"
+
+#: templates/adventure/nature_walk_end.html:20
+msgid ""
+"Our country has thousands of things to see — like pine trees and prickly "
+"pears! Like lizards and bears! Like volcanoes and snowy mountains!"
+msgstr ""
+"Nuestro país tiene miles de cosas para ver como ¡pinos y chumberas! "
+"¡Lagartos y osos! ¡Volcanes y montañas nevadas!"
+
+#: templates/adventure/nature_walk_end.html:21
+msgid "I can't wait to use my pass to see more!"
+msgstr "¡No puedo esperar más para usar mi pase y ver más cosas!"
+
+#: templates/adventure/nature_walk_end.html:46
+#: templates/adventure/swimming_end.html:40
+#: templates/adventure/time_travel_end.html:39
+msgid "Get your pass now"
+msgstr "Consigue tu pase ahora"
+
+#: templates/adventure/start.html:23
+msgid ""
+"Today I used my free pass to explore the U.S.! At first I was nervous "
+"because there were so many options. There were parks, forests, seashores, "
+"and wildlife habitats to visit."
+msgstr ""
+"¡Hoy usé mi pase gratuito para explorar los EE.UU.! Al principio sentí "
+"nervioso porque había muchísimas opciones. Había parques, bosques, playas y "
+"hábitats de vida silvestre para visitar."
+
+#: templates/adventure/start.html:23
+msgid "I had to decide what I wanted to do."
+msgstr "Tuve que decidir lo que quería hacer. "
+
+#: templates/adventure/start.html:25
+msgid "Start"
+msgstr "Empieza"
+
+#: templates/adventure/swimming.html:16
+msgid "I could hardly wait to jump into that fresh, cold:"
+msgstr "No podía esperar para saltar en ese fresco, frío:"
+
+#: templates/adventure/swimming.html:26
+#: templates/adventure/swimming_end.html:28
+msgid "I could hardly wait to jump into that fresh, cold ocean."
+msgstr "No podía esperar para saltar en ese fresco, frío océano."
+
+#: templates/adventure/swimming.html:27
+msgid "Ocean!"
+msgstr "¡Océano!"
+
+#: templates/adventure/swimming.html:30
+#: templates/adventure/swimming_end.html:31
+msgid "I could hardly wait to jump into that fresh, cold lake."
+msgstr "No podía esperar para saltar en ese fresco, frío lago."
+
+#: templates/adventure/swimming.html:31
+msgid "Lake!"
+msgstr "¡Lago!"
+
+#: templates/adventure/swimming.html:34
+#: templates/adventure/swimming_end.html:34
+#: templates/adventure/swimming_end.html:37
+msgid "I could hardly wait to jump into that fresh, cold river."
+msgstr "No podía esperar para saltar en ese fresco, frío río."
+
+#: templates/adventure/swimming.html:35
+msgid "River!"
+msgstr "¡Río!"
+
+#: templates/adventure/swimming_end.html:17
+msgid "Today I swam in a"
+msgstr "¡Hoy nadé en un"
+
+#: templates/adventure/swimming_end.html:17
+msgid "I made sure to go with an adult."
+msgstr "Me aseguré de ir con un adulto."
+
+#: templates/adventure/swimming_end.html:18
+msgid ""
+"Sometimes water is clear — you can see straight to the bottom. Sometimes "
+"it's wavy and green, or blue. I can't wait to use my pass to discover more "
+"cool places."
+msgstr ""
+"A veces el agua está clara, y puedes ver directamente hasta el fondo. Otras "
+"veces el agua está con olas, verde o azul. No puedo esperar más para usar mi "
+"pase y descubrir más lugares fascinantes."
+
+#: templates/adventure/time_travel.html:16
+msgid "It was so cool to see:"
+msgstr "Fue fascinante ver:"
+
+#: templates/adventure/time_travel.html:26
+#: templates/adventure/time_travel_end.html:27
+#: templates/adventure/time_travel_end.html:36
+msgid "It was so cool to see Martin Luther King Jr.'s house."
+msgstr "Fue fascinante ver la casa de Martin Luther King Jr."
+
+#: templates/adventure/time_travel.html:27
+msgid "Martin Luther King Jr.'s house!"
+msgstr "¡La casa de Martin Luther King Jr.!"
+
+#: templates/adventure/time_travel.html:30
+#: templates/adventure/time_travel_end.html:30
+msgid "It was so cool to see ancient drawings."
+msgstr "Fue fascinante ver dibujos antiguos."
+
+#: templates/adventure/time_travel.html:31
+msgid "Ancient drawings!"
+msgstr "¡Dibujos antiguos!"
+
+#: templates/adventure/time_travel.html:34
+#: templates/adventure/time_travel_end.html:33
+msgid "It was so cool to see dinosaur tracks."
+msgstr "Fue fascinante ver huellas de dinosaurio."
+
+#: templates/adventure/time_travel.html:35
+msgid "Dinosaur tracks!"
+msgstr "¡Huellas de dinosaurio!"
+
+#: templates/adventure/time_travel_end.html:17
+msgid "Today I saw"
+msgstr "¡Hoy vi "
+
+#: templates/adventure/time_travel_end.html:17
+msgid ""
+"It was exciting to listen to the past. America's story ranges from roaming "
+"dinosaurs all the way to me!"
+msgstr ""
+"Fue emocionante escuchar sobre el pasado. La historia de los Estados Unidos "
+"abarca desde los dinosaurios errantes hasta ¡yo mismo!"
+
+#: templates/adventure/time_travel_end.html:18
+msgid "I can't wait to use my pass to discover more historic places."
+msgstr ""
+"No puedo esperar más para usar mi pase y descubrir más lugares históricos."
+
+#: templates/first-game/endangered.html:15
+msgid "Learn about different parks."
+msgstr "Aprende sobre diferentes parques"
+
+#: templates/first-game/endangered.html:17
+msgid ""
+"Federal lands and waters provide habitats for rare and endangered species. "
+"At least one or more endangered species are found in 204 of the 394 national "
+"parks."
+msgstr ""
+"Las tierras y aguas federales ofrecen hábitats para especies raras y en "
+"peligro. Al menos una o más especies en peligro viven en 204 de los 394 "
+"parques nacionales. "
+
+#: templates/first-game/endangered.html:19
+msgid ""
+"Examples include: the Guadelupe fur seal, the humpback whale and the brown "
+"pelican."
+msgstr ""
+"Algunos ejemplos son la foca peluda de Guadelupe, la yubarta o ballena "
+"jorobada y el pelicano pardo."
+
+#: templates/first-game/endangered.html:21
+#: templates/first-game/infographic.html:23
+#: templates/first-game/lands_map.html:38 templates/first-game/start.html:29
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/first-game/infographic.html:15
+msgid "How large are the federal lands and waters?"
+msgstr "¿Qué extensión tienen las tierras y aguas federales?"
+
+#: templates/first-game/infographic.html:17
+#, fuzzy, python-format
+#| msgid ""
+#| "Federal lands cover somewhere between 635 and 640 million acres "
+#| "(484,000,000 football fields). That's 28%% of the 2.27 billion acres of "
+#| "land in the United States."
+msgid ""
+"Federal lands cover somewhere between 635 and 640 million acres (484,000,000 "
+"football fields). That's 28%% of the 2.27 billion acres of land in the "
+"United States."
+msgstr ""
+"Las tierras federales cubren entre 635 y 640 millones de acres (equivalente "
+"a 484,000,000 canchas de fútbol). Eso significa 28% de los 2.27 mil millones "
+"de acres de tierra en Estados Unidos."
+
+#: templates/first-game/infographic.html:19
+msgid ""
+"Federal lands and waters exist for preservation, recreation and the "
+"development of natural resources."
+msgstr ""
+"Las tierras y aguas federales existen para asegurar la preservación, la "
+"recreación y el desarrollo de los recursos naturales."
+
+#: templates/first-game/infographic.html:21
+msgid ""
+"There are a 117 national monuments. Each presents an interesting view into "
+"our history and culture."
+msgstr ""
+"Hay 117 monumentos nacionales. Cada uno presenta una interesante perspectiva "
+"sobre nuestra historia y cultura."
+
+#: templates/first-game/lands_map.html:15
+msgid "Explore some of the different land and water types below."
+msgstr ""
+"Explora algunos de los distintos tipos de tierras y aguas a continuación."
+
+#: templates/first-game/lands_map.html:19
+msgid "Louisiana: Kitsatchie National Forest"
+msgstr "Luisiana: Bosque Nacional Kitsatchie"
+
+#: templates/first-game/lands_map.html:21
+msgid ""
+"Kitsatchie National Forest is Louisiana's only national forest. It coveres "
+"604,000 acres. Hidden in the bayous, beneath the bald cypress trees and old-"
+"growth pine is a world of natural beauty and excitement."
+msgstr ""
+"El Bosque Nacional Kitsatchie es el único bosque nacional de Luisiana. Cubre "
+"604,000 acres. Es un mundo emocionante de belleza natural escondido en los "
+"pántanos, bajo los cipreses y los viejos pinos."
+
+#: templates/first-game/lands_map.html:23
+msgid "See: wild orchids, carnivorous plants."
+msgstr "Véase: orquídeas salvajes, plantas carnívoras."
+
+#: templates/first-game/lands_map.html:25
+msgid "Colorado: Vermillion CLiffs National Monument"
+msgstr "Colorado: Monumento Nacional Vermillion Cliffs"
+
+#: templates/first-game/lands_map.html:27
+msgid ""
+"This 280,000 acre monument is a geologic treasure containing a variety of "
+"different landscapes. The colorful swirls of cross-bedded sandstone in "
+"Coyote Buttes are an international hiking destination."
+msgstr ""
+"Este monumento de 280,000 acres es un tesoro geológico que contiene toda una "
+"variedad de paisajes. Los coloridos remolinos de arena fina y gruesa en "
+"Coyote Buttes son un destino internacional para caminantes."
+
+#: templates/first-game/lands_map.html:29
+msgid "See: California condors."
+msgstr "Véase: cóndores de California."
+
+#: templates/first-game/lands_map.html:31
+msgid "Maine: Acadia National Park"
+msgstr "Maine: Parque Nacional Acadia"
+
+#: templates/first-game/lands_map.html:33
+msgid ""
+"This park is home to many plants and animals, and the tallest mountain on "
+"the U.S. Atlantic Coast. The Park Loop Road offers 27 miles of outstanding "
+"views of the park's ocean shoreline, coastal forests and mountain "
+"silhouettes."
+msgstr ""
+"Este parque es el hogar de muchas plantas y animales, y de la mayor montaña "
+"en la costa atlántica de los EE.UU. La vía de circunvalación Park Loop Road "
+"ofrece 27 millas de espectaculares vistas del litoral oceánico del parque, "
+"bosques costeros y siluetas montañosas."
+
+#: templates/first-game/lands_map.html:36
+msgid "Do: ride along broken stone roads build for horse-drawn vehicles."
+msgstr ""
+"Haz: ve en carro en carreteras de rocas partidas construidas para vehículos "
+"manejados por caballos."
+
+#: templates/first-game/start.html:15
+msgid "What are federal lands and waters?"
+msgstr "¿Qué son las tierras y aguas federales?"
+
+#: templates/first-game/start.html:17
+msgid ""
+"Federal lands and waters are owned by the American people (that means you) "
+"and managed by federal government."
+msgstr ""
+"Las tierras y aguas federales son propiedad del pueblo estadounidense (eso "
+"significa “tú”) y son gestionadas por el gobierno federal."
+
+#: templates/first-game/start.html:19
+msgid "Federal lands and waters include:"
+msgstr "Las tierras y aguas federales incluyen: "
+
+#: templates/first-game/start.html:22
+msgid "National parks."
+msgstr "Parques nacionales."
+
+#: templates/first-game/start.html:23
+msgid "National forests."
+msgstr "Bosques nacionales."
+
+#: templates/first-game/start.html:24
+msgid "National monuments."
+msgstr "Monumentos nacionales."
+
+#: templates/first-game/start.html:27
+msgid ""
+"A large number of federal lands and waters are open for recreational use."
+msgstr ""
+"Un gran número de tierras y aguas federales están abiertos para el uso "
+"recreativo."
+
+#: views.py:35
+msgid "ocean"
+msgstr "océano!"
+
+#: views.py:36
+msgid "lake"
+msgstr "lago!"
+
+#: views.py:37
+msgid "river"
+msgstr "río!"
+
+#: views.py:69
+msgid "Martin Luther King's house"
+msgstr "la casa de Martin Luther King!"
+
+#: views.py:70
+msgid "ancient drawings"
+msgstr "dibujos antiguos!"
+
+#: views.py:71
+msgid "dinosaur tracks"
+msgstr "huellas de dinosaurio!"
+
+#: views.py:120
+msgid "huge mountains"
+msgstr "enormes montañas"
+
+#: views.py:121
+msgid "wild animals"
+msgstr "animales silvestres"
+
+#: views.py:122
+msgid "beautiful plants"
+msgstr "plantas hermosas"

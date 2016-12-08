@@ -1,0 +1,1611 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: models.py:20
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-21 11:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:24 models.py:26
+msgid "State"
+msgstr "Estado"
+
+#: forms.py:46
+msgid "Yes, I am in the 4th grader (or 10 years old)"
+msgstr ""
+
+#: forms.py:47
+msgid "No"
+msgstr ""
+
+#: forms.py:50
+msgid "Are you a 4th grader?"
+msgstr ""
+
+#: forms.py:60
+msgid "My zip code is"
+msgstr "Mi código postal es:"
+
+#: models.py:12
+msgid "School"
+msgstr "Escuela"
+
+#: models.py:12
+msgid "Qualified organization"
+msgstr "Organización calificada"
+
+#: models.py:15
+msgid "Educator's full name"
+msgstr "Nombre completo del educador"
+
+#: models.py:17
+msgid "Work email address"
+msgstr "Correo electrónico del trabajo"
+
+#: models.py:19
+msgid "School or organization name"
+msgstr "Nombre de la escuela o la organización"
+
+#: models.py:22
+msgid "Address line 1"
+msgstr "Dirección línea 1"
+
+#: models.py:24
+msgid "Address line 2"
+msgstr "Dirección línea 2"
+
+#: models.py:25
+msgid "City"
+msgstr "Ciudad"
+
+#: models.py:27
+msgid "Zip"
+msgstr "Código postal"
+
+#: models.py:29
+msgid "Number of students"
+msgstr "Número de estudiantes"
+
+#: models.py:32
+msgid "You can only print up to 50 passes at a time."
+msgstr ""
+
+#: models.py:33
+msgid "You can not print less than one pass."
+msgstr ""
+
+#: templates/404.html:17 templates/base.html:19 templates/index.html:79
+msgid "Every Kid in a Park"
+msgstr "Todos los Niños en un Parque"
+
+#: templates/404.html:17
+msgid "Sorry! We couldn't find this page."
+msgstr "No pudimos encontrar esta página."
+
+#: templates/404.html:24 templates/base.html:26
+msgid "skip to main content"
+msgstr "ir al contenido principal"
+
+#: templates/404.html:27 templates/base.html:29
+msgid "An official website of the United States Government."
+msgstr "Un sitio internet oficial del gobierno de Estados Unidos."
+
+#: templates/404.html:28 templates/base.html:30
+msgid ""
+"US flag signifying that this is a United States Federal Government website"
+msgstr ""
+"la bandera de EEUU significa que este es un sitio internet del gobierno "
+"federal de los Estados Unidos"
+
+#: templates/404.html:33
+msgid "Compass"
+msgstr "Brújula"
+
+#: templates/404.html:35
+msgid "Sorry!"
+msgstr "¡Disculpas!"
+
+#: templates/404.html:35
+msgid "We couldn't find this page."
+msgstr "No pudimos encontrar esta página."
+
+#: templates/404.html:36
+msgid "It must be out exploring!"
+msgstr "¡Debe estar explorando en algún lugar!"
+
+#: templates/404.html:38
+msgid "Get Back On Track"
+msgstr "Retome el camino"
+
+#: templates/about.html:5 templates/base.html:165
+msgid "About Every Kid in a Park"
+msgstr "Sobre Todos los Niños en un Parque"
+
+#: templates/about.html:15 templates/base.html:104 templates/base.html:146
+#: templates/index.html:61 templates/nav.html:13
+msgid "About"
+msgstr "Acerca de"
+
+#: templates/about.html:17
+msgid ""
+"Marvel at the St. Louis Arch, the Florida Keys, and the Frederick Douglass "
+"house. Listen to wolves howl. Walk in dinosaur tracks. Look up into the inky "
+"night sky, and reach for the stars!"
+msgstr ""
+"Maravíllate con el Arco de San Luis, los Cayos de la Florida y la casa de "
+"Frederick Douglas. ¡Escucha los aullidos de los lobos! Camina sobre huellas "
+"de dinosaurios. ¡Mira el oscuro cielo nocturno y las estrellas!"
+
+#: templates/about.html:19
+msgid "These sites belong to all of us — including you."
+msgstr "Estos sitios nos pertenecen a todos, también a ti."
+
+#: templates/about.html:21
+msgid ""
+"President Barack Obama created Every Kid in a Park so fourth graders and "
+"their families could discover our wildlife, resources, and history for free."
+msgstr ""
+"El presidente Barack Obama creó Todos los Niños en un Parque para que los "
+"estudiantes de 4º grado y sus familias puedan descubrir gratuitamente "
+"nuestra vida silvestre, recursos naturales e historia. "
+
+#: templates/about.html:24
+msgid "Partner agencies and more"
+msgstr "Agencias Participantes y más"
+
+#: templates/about.html:46
+msgid ""
+"Our country is full of dazzling landscapes where you can play and learn. "
+"They protect our wildlife and resources. They let us look into the past and "
+"protect our history. Keeping them public supports a healthy planet."
+msgstr ""
+"Nuestro país está lleno de deslumbrantes paisajes donde tú puedes jugar y "
+"aprender. Ellos protegen nuestra vida silvestre y recursos naturales. Ellos "
+"nos permiten contemplar el pasado y proteger nuestra historia. Mantenerlos "
+"abiertos al público fomenta un mundo saludable."
+
+#: templates/about.html:50
+msgid "Participating agencies"
+msgstr "Agencias participantes"
+
+#: templates/about.html:51
+msgid ""
+"These agencies support Every Kid in a Park. Learn more about their "
+"conservation work and find activities by visiting their websites."
+msgstr ""
+"Estas agencias apoyan Todos Los Niños en un Parque. Aprende más sobre sus "
+"tareas de conservación y encuentra otras actividades visitando sus sitios "
+"internet."
+
+#: templates/about.html:55 templates/about.html:58
+msgid "U.S. Bureau of Land Management"
+msgstr "Oficina de Administración de Tierras de EE.UU."
+
+#: templates/about.html:60
+msgid ""
+"We're a small government group with a big mission. We take care of more than "
+"245 million acres of public land. Our goal is to make sure that land is "
+"there for everyone, now and in the future. We're in charge of more land than "
+"any other group in the government. Most of it's in the 12 western states, "
+"including Alaska."
+msgstr ""
+"Nosotros somos una pequeña entidad gubernamental con una gran misión. "
+"Cuidamos más de 245 millones de acres de tierras públicas. Nuestro objetivo "
+"es asegurarnos de que esas tierras están disponibles para todos, ahora y en "
+"el futuro. Somos responsables de más tierras que todas las otras agencias "
+"gubernamentales. La mayor parte se encuentran en los 12 estados del oeste, "
+"incluido Alaska."
+
+#: templates/about.html:64 templates/about.html:67
+msgid "U.S. Bureau of Reclamation"
+msgstr "Oficina de Recuperación de Tierras de EE.UU."
+
+#: templates/about.html:69
+msgid ""
+"More people than ever are looking for places to have fun and relax. We take "
+"care of more than 6.5 million acres of land and water, and most of that is "
+"available for you to explore. Come play or swim with us!"
+msgstr ""
+"Más gente que nunca está buscando lugares para divertirse y relajarse. "
+"Nosotros nos encargamos de más de 6.5 millones de acres de tierras y aguas, "
+"en su mayor parte disponibles para que tú las explores. ¡Ven a jugar o nadar "
+"con nosotros!"
+
+#: templates/about.html:73 templates/about.html:76
+msgid "National Oceanic and Atmospheric Administration"
+msgstr "Administración Nacional Oceánica y Atmosférica."
+
+#: templates/about.html:78
+msgid ""
+"We enrich life through science. People rely on us for weather forecasts and "
+"warnings. We also protect the coast. This includes making sure we have "
+"plenty of seafood and that ships can move safely in our oceans. Our "
+"scientists look at the world up close and far away. They study tiny plankton "
+"and look at the earth from space. Our sanctuaries and research reserves have "
+"great places where you can relax and protect our ocean and coastal treasures."
+msgstr ""
+"Nosotros enriquecemos la vida mediante la ciencia. La gente confía en "
+"nosotros para recibir predicciones y advertencias metereológicas. También "
+"protegemos las costas. Esto incluye asegurar que tenemos suficientes "
+"mariscos y que los barcos pueden moverse con seguridad en nuestros océanos. "
+"Nuestros científicos observan el mundo desde muy cerca y desde lejos. Ellos "
+"estudian plancton diminuto y miran la tierra desde el espacio. Nuestros "
+"santuarios naturales y espacios de investigación tienen bellos lugares donde "
+"tú puedes relajarte y proteger nuestros tesoros oceánicos y costeros."
+
+#: templates/about.html:82 templates/about.html:85
+msgid "National Park Service"
+msgstr "Servicio de Parques Nacionales"
+
+#: templates/about.html:87
+msgid ""
+"We take care of hundreds of parks and monuments. Every year, millions of "
+"people come see our islands, oceans, and mountains. You can see active "
+"volcanoes, old prisons, or the hottest desert in the U.S.! Come explore and "
+"learn at one of our sites!"
+msgstr ""
+"Nosotros cuidamos cientos de parques y monumentos. Cada año, millones de "
+"personas vienen a ver nuestras islas, océanos y montañas. Tú puedes ver "
+"volcanes activos, prisiones antiguas o el desierto más caliente de EE.UU. "
+"¡Ven a explorar y aprender en uno de nuestros sitios!"
+
+#: templates/about.html:91 templates/about.html:94
+msgid "U.S. Fish and Wildlife Service"
+msgstr "Servicio de Pesca y Fauna Silvestre de EE.UU."
+
+#: templates/about.html:96
+msgid ""
+"Clean water. Clean air. Rare and abundant wildlife. World-class places to "
+"relax and enjoy nature. We protect 150 million acres of land and water and "
+"more than 418 million acres of national marine monuments."
+msgstr ""
+"Agua limpia. Aire limpio. Vida silvestre excepcional y abundante. Lugares de "
+"primera categoría para relajarse y disfrutar de la naturaleza. Nosotros "
+"protegemos 150 millones de acres de tierras y aguas, y más de 418 millones "
+"de acres de monumentos marinos nacionales."
+
+#: templates/about.html:100 templates/about.html:103
+msgid "U.S. Forest Service"
+msgstr "Servicio Forestal de EE.UU."
+
+#: templates/about.html:105
+msgid ""
+"Ice fields in Alaska. Tropical forests in Puerto Rico. We take care of 193 "
+"million acres of forests and grasslands. Come visit us and see all the "
+"things you can explore and learn in a national forest!"
+msgstr ""
+"Campos de hielo en Alaska. Bosques tropicales en Puerto Rico. Nosotros nos "
+"ocupamos de 193 millones de acres de bosques y praderas. ¡Ven a visitarnos y "
+"observa todas las cosas que puedes explorar y aprender en un bosque nacional!"
+
+#: templates/about.html:109 templates/about.html:112
+msgid "U.S. Army Corps of Engineers"
+msgstr "Cuerpo de Ingenieros del Ejército de EE.UU."
+
+#: templates/about.html:114
+msgid ""
+"Explore and enjoy the outdoors at one of our sites. You can swim, boat, "
+"fish, hike, and ride horses. See how dams and river locks are built. Even "
+"drive a barge or boat through a lock on a major river! We have outdoor "
+"classrooms about animals, energy, and history. In fact, we have more "
+"recreation visits than any other government group— more than 350 million "
+"every year. Find a river or lake close to your home!"
+msgstr ""
+"Explora y disfruta al aire libre en uno de nuestros sitios. Puedes nadar, "
+"navegar, pescar, caminar y montar a caballo. Mira cómo se construyen diques "
+"y esclusas. ¡Incluso puedes manejar una barcaza o un bote en una esclusa en "
+"un gran río! Tenemos clases al aire libre sobre animales, energía e "
+"historia. De hecho, tenemos más visitas de recreación que todas las otras "
+"agencias gubernamentales, más de 350 millones al año. ¡Encuentra un río o "
+"lago cerca de tu casa!"
+
+#: templates/about.html:126
+msgid "Kids learning about turtles."
+msgstr ""
+
+#: templates/about.html:127
+msgid "Media"
+msgstr "Medios de Comunicación"
+
+#: templates/about.html:129 templates/about.html:130
+msgid "Here's an"
+msgstr "He aquí un"
+
+#: templates/about.html:129 templates/about.html:130
+msgid "information kit"
+msgstr "kit de información"
+
+#: templates/about.html:129
+msgid "in English"
+msgstr "en inglés"
+
+#: templates/about.html:130
+msgid "in Spanish"
+msgstr "en español"
+
+#: templates/about.html:131
+msgid "Please don't hesitate to"
+msgstr "Favor de contactarnos"
+
+#: templates/about.html:131
+msgid "email the press office"
+msgstr "vía correo electrónico"
+
+#: templates/about.html:131
+msgid "if you have additional questions."
+msgstr "si Ud. tiene más preguntas."
+
+#: templates/about.html:133
+msgid "Tools"
+msgstr "Herramientas"
+
+#: templates/about.html:135
+msgid "Here's a"
+msgstr "He aquí"
+
+#: templates/about.html:135
+msgid "set of resources"
+msgstr "información y materiales"
+
+#: templates/about.html:135
+msgid ""
+"to help local officials, youth leaders and others plan an outdoor outing "
+"with 4th graders."
+msgstr ""
+"para oficiales locales, líderes de la juventud, y otros para ayudar a "
+"planear una salida al aire libre con estudiantes de cuarto grado."
+
+#: templates/about.html:136
+msgid ""
+"In partnership with the Every Kid in a Park Program, Transforming Youth "
+"Outdoors"
+msgstr ""
+"En colaboración con el programa Todos los Niños en un Parque, el grupo "
+"Transforming Youth Outdoors"
+
+#: templates/about.html:136
+msgid "has created two step-by-step learning paths"
+msgstr "ha creado dos manuales con materiales"
+
+#: templates/about.html:136
+msgid ""
+"that give classroom teachers and outdoor educators tools to learn more about "
+"the Every Kid program and plan a successful field trip. These resources "
+"provide information about federal lands and waters, tools to find nearby "
+"locations, and information on planning and executing an Every Kid in a Park "
+"field trip."
+msgstr ""
+"para ayudar a maestros y educadores al aire libre a aprender más acerca del "
+"programa Todos los Niños en un Parque y planear un viaje de estudios "
+"exitoso. Estos recursos proporcionan información sobre tierras y aguas "
+"federales, donde localizarlos, y planear una salida. (Estos materiales están "
+"disponibles solo en inglés.)"
+
+#: templates/about.html:138
+msgid "Code"
+msgstr "Código"
+
+#: templates/about.html:139
+msgid "We developed this website in the"
+msgstr "Nosotros desarrollamos este sitio"
+
+#: templates/about.html:139
+msgid "open"
+msgstr "abierto"
+
+#: templates/about.html:139
+msgid "and welcome your contributions and comments."
+msgstr "al público y sus contribuciones y comentarios son bienvenidos."
+
+#: templates/about.html:141
+msgid "Contact us"
+msgstr "Contáctenos"
+
+#: templates/about.html:142
+msgid "Questions? Concerns? Things we're doing well? Please reach out to us at"
+msgstr ""
+"¿Preguntas? ¿Preocupaciones? ¿Cosas que estamos haciendo bien? ¡Favor de "
+"comunicarse con nosotros a"
+
+#: templates/base.html:44 templates/index.html:13 templates/nav.html:34
+msgid "Every Kid In A Park Logo"
+msgstr "Logo de Todos los Niños en un Parque"
+
+#: templates/base.html:49
+msgid "Menu"
+msgstr "Menú"
+
+#: templates/base.html:73 templates/base.html:127 templates/nav.html:61
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/base.html:76 templates/base.html:130 templates/index.html:33
+#: templates/nav.html:64
+msgid "How It Works"
+msgstr "Cómo Funciona"
+
+#: templates/base.html:78 templates/base.html:132
+#: templates/get-your-pass/educator_passes_preview.html:4
+#: templates/get-your-pass/student_pass.html:4 templates/index.html:35
+#: templates/nav.html:66
+msgid "Get Your Pass"
+msgstr "Consigue tu Pase"
+
+#: templates/base.html:81 templates/base.html:135 templates/index.html:38
+#: templates/nav.html:69
+msgid "Plan a Trip"
+msgstr "Planea un Viaje"
+
+#: templates/base.html:84 templates/base.html:138
+#: templates/get-your-pass/index.html:30 templates/index.html:41
+#: templates/nav.html:7 templates/parents.html:5
+msgid "Parents"
+msgstr "Padres"
+
+#: templates/base.html:101 templates/base.html:143
+#: templates/get-your-pass/educator_passes_preview.html:4
+#: templates/get-your-pass/index.html:42 templates/how-it-works/index.html:46
+#: templates/index.html:58 templates/index.html:115
+#: templates/legal/privacy.html:15 templates/nav.html:10
+msgid "Educators"
+msgstr "Educadores"
+
+#: templates/base.html:157
+msgid "US Department of the Interior - March 3, 1849"
+msgstr "Departamento de Interior de EE.UU. – 3 de marzo, 1849"
+
+#: templates/base.html:168 templates/legal/privacy.html:4
+msgid "Privacy policy"
+msgstr "Política de Privacidad"
+
+#: templates/base.html:171
+msgid "Disclaimer"
+msgstr "Descargo de responsabilidad"
+
+#: templates/base.html:174
+msgid "Accessibility"
+msgstr "Accesibilidad"
+
+#: templates/base.html:177
+msgid "Notices"
+msgstr "Avisos"
+
+#: templates/base.html:182
+msgid "This site is run by the"
+msgstr "La gestión de este sitio corresponde a"
+
+#: templates/base.html:182
+msgid "General Services Administration"
+msgstr "Administración de Servicios Generales"
+
+#: templates/base.html:182
+msgid "for the"
+msgstr "para el"
+
+#: templates/base.html:182
+msgid "Department of the Interior's"
+msgstr "Departamento del Interior"
+
+#: templates/base.html:182
+msgid "Every Kid in a Park program."
+msgstr "programa Todos los Niños en un Parque."
+
+#: templates/get-your-pass/educator_form.html:5
+msgid "Please correctly fill out the highlighted fields below"
+msgstr ""
+"Favor de llenar los campos resaltados a continuación con la información "
+"correcta"
+
+#: templates/get-your-pass/educator_form.html:9
+msgid "Fourth-grade educator info"
+msgstr "Información del educador de cuarto grado"
+
+#: templates/get-your-pass/educator_form.html:18
+msgid "Organizational info"
+msgstr "Información de la organización"
+
+#: templates/get-your-pass/educator_passes.html:7
+#: templates/get-your-pass/game_success.html:5
+#: templates/get-your-pass/index.html:5 templates/get-your-pass/index.html:15
+#: templates/how-it-works/index.html:43 templates/index.html:90
+msgid "Get your pass"
+msgstr "Consigue tu Pase"
+
+#: templates/get-your-pass/educator_passes.html:7
+msgid "educators"
+msgstr "educadores"
+
+#: templates/get-your-pass/educator_passes.html:17
+msgid "Get passes for your students"
+msgstr "Conseguir pases para sus estudiantes"
+
+#: templates/get-your-pass/educator_passes.html:19
+msgid ""
+"As a fourth-grade educator, you can download an activity and print paper "
+"passes for each of your students. This program only provides passes for "
+"fourth graders."
+msgstr ""
+"Como educador del cuarto grado, Ud. puede bajar una actividad e imprimir "
+"pases de papel para cada uno de sus estudiantes. Este programa solo "
+"proporciona pases a estudiantes de cuarto grado."
+
+#: templates/get-your-pass/educator_passes.html:21
+msgid "You're a fourth-grade educator if"
+msgstr "Ud. es un educador de cuarto grado si"
+
+#: templates/get-your-pass/educator_passes.html:22
+msgid "You're a teacher at a U.S. or U.S. military school, or"
+msgstr ""
+"Ud. es un maestro en una escuela en los Estados Unidos o una escuela "
+"militar, o"
+
+#: templates/get-your-pass/educator_passes.html:23
+msgid ""
+"You're an adult who engages fourth graders through a youth-serving "
+"organization. For example, a camp director, a home-school leader, an after-"
+"school leader, or a religious group leader."
+msgstr ""
+"Ud. es un adulto que trabaja con niños de cuarto grado en una organización "
+"que proporciona servicios a la juventud. Por ejemplo: un director de "
+"campamento, un maestro de escuela-en-casa, un líder de programas para las "
+"horas después de clases, o un líder de un grupo religioso."
+
+#: templates/get-your-pass/educator_passes.html:25
+msgid "begin"
+msgstr "Empezar"
+
+#: templates/get-your-pass/educator_passes.html:46
+msgid "Download"
+msgstr "Bajar"
+
+#: templates/get-your-pass/educator_passes.html:46
+msgid "Activity Guides"
+msgstr "Guías de Actividades"
+
+#: templates/get-your-pass/educator_passes.html:47
+#: templates/get-your-pass/educator_passes.html:48
+#: templates/get-your-pass/educator_passes.html:49
+#: templates/get-your-pass/educator_passes.html:50
+msgid "Activity"
+msgstr "Actividad"
+
+#: templates/get-your-pass/educator_passes.html:47
+msgid "Exploring Federal Lands and Waters"
+msgstr "Explorar Tierras y Aguas Federales "
+
+#: templates/get-your-pass/educator_passes.html:47
+msgid "This lesson teaches students why our country protects lands and waters."
+msgstr ""
+"Esta lección enseña a los estudiantes porque nuestro país proteja las "
+"tierras y aguas."
+
+#: templates/get-your-pass/educator_passes.html:48
+msgid "Environmental Stewardship"
+msgstr "Salvaguardia Ambiental"
+
+#: templates/get-your-pass/educator_passes.html:48
+msgid "This lesson shows students how to take care of lands and waters."
+msgstr ""
+"Esta lección muestra a los estudiantes como cuidar las tierras y aguas."
+
+#: templates/get-your-pass/educator_passes.html:49
+msgid "Our Nation’s Native Peoples"
+msgstr "Los Pueblos Nativos de Nuestra Nación"
+
+#: templates/get-your-pass/educator_passes.html:49
+msgid ""
+"This lesson teaches students about the people who lived on this land before "
+"it was called the United States."
+msgstr ""
+"Esta lección  enseña a los estudiantes sobre la gente que vivía en esta "
+"tierra antes de que se llamara los Estados Unidos."
+
+#: templates/get-your-pass/educator_passes.html:50
+msgid "Citizen Science"
+msgstr "Ciencia Ciudadana"
+
+#: templates/get-your-pass/educator_passes.html:50
+msgid ""
+"This lesson helps kids learn about the difference between weather and "
+"climate."
+msgstr ""
+"Esta lección ayuda a los niños comprender la diferencia entre el tiempo y el "
+"clima."
+
+#: templates/get-your-pass/educator_passes.html:53
+msgid "Generate passes"
+msgstr "Generar pases"
+
+#: templates/get-your-pass/educator_passes.html:54
+msgid ""
+"Each student receives a paper pass with a unique code. That pass gives them "
+"free access to all national parks, lands, and waters through August 31, 2017."
+msgstr ""
+"Cada estudiante recibe un pase de papel con un código único. Este pase le da "
+"derecho a la entrada gratuita a todos los parques, tierras, y aguas "
+"nacionales hasta el 31 de agosto de 2017."
+
+#: templates/get-your-pass/educator_passes.html:55
+#: templates/get-your-pass/game_success.html:49
+msgid "Privacy notice"
+msgstr "Nota de privacidad"
+
+#: templates/get-your-pass/educator_passes.html:63
+msgid ""
+"You can only print up to 50 passes at a time. To print more than 50 passes, "
+"just fill this form out again."
+msgstr ""
+"Se puede imprimir solo hasta 50 pases a la vez. Para imprimir más de 50 "
+"pases, solo hay que volver a llenar el formulario."
+
+#: templates/get-your-pass/educator_passes.html:66
+msgid "Next"
+msgstr "Sigue"
+
+#: templates/get-your-pass/educator_passes.html:66
+msgid "Review Information"
+msgstr "Revisar Información"
+
+#: templates/get-your-pass/educator_passes_preview.html:14
+msgid "Double-check your information"
+msgstr "Verifique su información"
+
+#: templates/get-your-pass/educator_passes_preview.html:15
+msgid "Please confirm that the info you've provided is correct."
+msgstr ""
+"Favor de confirmar que la información que Ud. ha proporcionado está correcta."
+
+#: templates/get-your-pass/educator_passes_preview.html:57
+msgid "Errors?"
+msgstr "¿Errores?"
+
+#: templates/get-your-pass/educator_passes_preview.html:57
+msgid "Go Back"
+msgstr "Regresar"
+
+#: templates/get-your-pass/educator_passes_preview.html:58
+msgid "Good to go?"
+msgstr "¿Todo bien?"
+
+#: templates/get-your-pass/educator_passes_preview.html:58
+msgid "Get vouchers"
+msgstr "Conseguir los Pases"
+
+#: templates/get-your-pass/educator_vouchers.html:74
+#: templates/get-your-pass/fourth_grade_voucher.html:82
+msgid "Instructions"
+msgstr "Instrucciones"
+
+#: templates/get-your-pass/educator_vouchers.html:76
+#: templates/get-your-pass/fourth_grade_voucher.html:84
+msgid ""
+"Our national lands and waters belong to everyone. That includes you!  Use "
+"this pass to visit any of them for free.  You can bring your family and "
+"friends with you for free, too!"
+msgstr ""
+"Nuestras tierras y aguas nacionales se pertenecen a todos, incluyendo a ti! "
+"Usa este pase para visitarlas gratis. ¡Puedes llevar tu familia y tus amigos "
+"gratis también! "
+
+#: templates/get-your-pass/fourth_grade_voucher.html:20
+msgid "Click this button to"
+msgstr "Presiona aquí para"
+
+#: templates/get-your-pass/fourth_grade_voucher.html:21
+msgid "PRINT YOUR PASS!"
+msgstr "IMPRIMIR TU PASE"
+
+#: templates/get-your-pass/fourth_grade_voucher.html:44
+#: templates/get-your-pass/fourth_grade_voucher.html:73
+msgid "barcode"
+msgstr "código de barras"
+
+#: templates/get-your-pass/game_success.html:5
+msgid "fourth graders"
+msgstr "estudiante de 4ºgrado"
+
+#: templates/get-your-pass/game_success.html:15
+msgid "You did it!"
+msgstr "¡Lo lograste!"
+
+#: templates/get-your-pass/game_success.html:15
+msgid "Claim your pass"
+msgstr "Consigue tu pase"
+
+#: templates/get-your-pass/game_success.html:19
+msgid ""
+"Success! You'll get your paper pass on the next screen. Please print it and "
+"keep it in a safe place. Remember to take it with you on your trip."
+msgstr ""
+"¡Éxito! Recibirás tu pase de papel en la siguiente página. Por favor "
+"imprímelo y guárdalo en un lugar seguro. Acuérdate de llevarlo contigo en tu "
+"viaje."
+
+#: templates/get-your-pass/game_success.html:44
+msgid "Get my pass"
+msgstr "Conseguir mi pase"
+
+#: templates/get-your-pass/game_success.html:48
+msgid "I don't know my zip code"
+msgstr "No sé mi código postal"
+
+#: templates/get-your-pass/index.html:17
+msgid ""
+"Bike through a forest. Walk in a desert. See a whale burst through the "
+"ocean's surface. Do all this and more with your pass. And bring a car full "
+"of family and friends for free!"
+msgstr ""
+"Anda en bicicleta en el bosque. Camina en el desierto. Mira a una ballena "
+"aparecer en la superficie del océano. Haz todo esto y más con tu pase. Y "
+"trae un coche lleno de familia y amigos ¡de manera gratuita!"
+
+#: templates/get-your-pass/index.html:21
+msgid "backpack icon"
+msgstr "ícono de mochila"
+
+#: templates/get-your-pass/index.html:22 templates/index.html:87
+#: templates/legal/privacy.html:12
+msgid "Fourth graders"
+msgstr "Estudiante de 4ºgrado"
+
+#: templates/get-your-pass/index.html:23
+msgid "Complete our adventure diary to get your pass"
+msgstr "Completa nuestro diario de aventuras para conseguir tu pase"
+
+#: templates/get-your-pass/index.html:25
+#: templates/get-your-pass/student_pass.html:24
+msgid "Play"
+msgstr "Juega"
+
+#: templates/get-your-pass/index.html:29
+msgid "leaf icon"
+msgstr "ícono de hoja"
+
+#: templates/get-your-pass/index.html:31
+msgid "Learn more and see rules"
+msgstr "Aprenda más y ver las reglas"
+
+#: templates/get-your-pass/index.html:36 templates/parents.html:45
+#: templates/plan-your-trip/pass_exchange.html:22
+msgid "Go"
+msgstr "Ir"
+
+#: templates/get-your-pass/index.html:41
+msgid "binoculars icon"
+msgstr "ícono de binoculares"
+
+#: templates/get-your-pass/index.html:43
+msgid "Get passes for your fourth-grade students"
+msgstr "Conseguir pases para sus estudiantes de cuarto grado"
+
+#: templates/get-your-pass/index.html:45 templates/how-it-works/index.html:62
+msgid "Start"
+msgstr "Empieza"
+
+#: templates/get-your-pass/student_pass.html:4
+#: templates/how-it-works/index.html:45
+msgid "Fourth Graders"
+msgstr "Estudiante de 4ºgrado"
+
+#: templates/get-your-pass/student_pass.html:14
+msgid "Start your adventure now"
+msgstr "Empieza tu aventura ahora"
+
+#: templates/get-your-pass/student_pass.html:15
+msgid ""
+"Fill out our diary entry with things you'd like to see and do. When you're "
+"done, read your story! Then print your paper pass."
+msgstr ""
+"Escribe en tu diario las cosas que te gustaría ver y hacer. Cuando termines, "
+"¡lee tu cuento! Luego imprime tu pase de papel."
+
+#: templates/get-your-pass/student_pass.html:22
+msgid "Yes, I'm in the fourth grade or home-school equivalent"
+msgstr "Sí, estoy en el cuarto grado, o el equivalente."
+
+#: templates/get-your-pass/voucher-rules.html:3 templates/parents.html:50
+msgid "Official rules"
+msgstr "Reglas Oficiales"
+
+#: templates/get-your-pass/voucher-rules.html:6
+msgid "The pass is for U.S. fourth-grade (or home-school equivalent) students."
+msgstr ""
+"El pase es para estudiantes de cuarto grado de los Estados Unidos (o su "
+"equivalente de escuela-en-casa)."
+
+#: templates/get-your-pass/voucher-rules.html:7
+msgid ""
+"The pass is for the 2016 to 2017 school year. It expires August 31, 2017."
+msgstr ""
+"El pase es para el año escolar de 2016 a 2017. El pase expira el 31 de "
+"agosto de 2017."
+
+#: templates/get-your-pass/voucher-rules.html:8
+msgid "Students can't transfer the pass to anyone else."
+msgstr "Los estudiantes no pueden transferir el pase a nadie."
+
+#: templates/get-your-pass/voucher-rules.html:9
+msgid ""
+"We can’t accept electronic versions of this paper for access or to exchange "
+"for a pass."
+msgstr ""
+"No podemos aceptar versiones electrónicas de este papel para acceso o para "
+"cambiarlo por un pase duradero."
+
+#: templates/get-your-pass/voucher-rules.html:10
+msgid ""
+"No refunds are given for previously purchased passes, or if you forget your "
+"pass when you visit."
+msgstr ""
+"No se dan reembolsos por pases comprados previamente, o si te olvidas tu "
+"pase cuando visitas."
+
+#: templates/get-your-pass/voucher-rules.html:11
+msgid ""
+"If you lose your pass, get a new one by visiting the website and signing up "
+"again."
+msgstr "Si pierdes tu pase, visita el sitio web y consigue un pase nuevo."
+
+#: templates/get-your-pass/voucher-rules.html:12
+msgid ""
+"Educators can get one paper pass for each of their fourth-grade students."
+msgstr ""
+"Los educadores pueden conseguir un pase de papel para cada uno de sus "
+"estudiantes de cuarto grado."
+
+#: templates/get-your-pass/voucher-rules.html:13
+#: templates/how-it-works/index.html:92 templates/plan-your-trip/index.html:192
+msgid "This program only provides passes for fourth graders."
+msgstr "Este programa solo proporciona pases a estudiantes de cuarto grado."
+
+#: templates/get-your-pass/voucher-rules.html:16
+#: templates/how-it-works/index.html:14 templates/index.html:82
+msgid "How it works"
+msgstr "Cómo Funciona"
+
+#: templates/get-your-pass/voucher-rules.html:19
+msgid ""
+"Show your pass to a ranger when you enter. If there is no ranger, leave it "
+"on the dashboard of your car."
+msgstr ""
+"Muestra tu pase a un guarda al entrar. Si no hay un guarda, déjalo en el "
+"tablero de tu carro."
+
+#: templates/get-your-pass/voucher-rules.html:20
+msgid ""
+"If you visit a site that charges entrance fees per person— The pass admits "
+"all children under 16 and up to three adults for free."
+msgstr ""
+"Si visitas un sitio que cobra la entrada por persona – el pase admite todos "
+"los niños menores de 16 años y hasta tres adultos gratis."
+
+#: templates/get-your-pass/voucher-rules.html:21
+msgid ""
+"If your group visits a site that charges vehicle entrance fees - The pass "
+"admits all children under 16 and all adults in up to one passenger vehicle.  "
+"Commercial vehicles can't use a pass to get in."
+msgstr ""
+"Si tu grupo visita un sitio que cobra la entrada por vehículo -  el pase "
+"admite todos los niños menores de 16 años y todos los adultos en un vehículo "
+"de pasajeros. Los vehículos comerciales no pueden utilizar el pase para "
+"entrar."
+
+#: templates/get-your-pass/voucher-rules.html:22
+msgid ""
+"If you arrive at a site on bicycle— The pass admits all children under 16 "
+"and up to three adults on bicycles."
+msgstr ""
+"Si tú llegas a un sitio en bicicleta – el pase admite todos los niños "
+"menores de 16 años y hasta tres adultos en bicicleta."
+
+#: templates/get-your-pass/voucher-rules.html:23
+msgid ""
+"The pass doesn't cover things like parking fees, camping, boats, and special "
+"tours.   Also, some sites are managed by private operators.  They may not "
+"honor the pass.  Check with the site ahead of time to find out."
+msgstr ""
+"El pase no cubre cosas tales como tarifas para estacionamiento, acampar, "
+"barcos, y tours especiales. También, algunos sitios pueden ser manejados por "
+"operadores privados. Puede que ellos no acepten el pase. Favor de consultar "
+"directamente con el sitio de manera previa."
+
+#: templates/get-your-pass/voucher-rules.html:24
+msgid ""
+"The pass doesn’t cover fees for local, city, or state parks and recreation "
+"areas unless they say that they accept this pass."
+msgstr ""
+"El pase no cubre tarifas de parques y lugares de recreación locales, "
+"estatales, o de ciudades a no ser que estas áreas lo anuncian."
+
+#: templates/get-your-pass/voucher-rules.html:25
+msgid "Paper passes can be exchanged for plastic passes at certain sites."
+msgstr ""
+"Se pueden cambiar los pases de papel por pases de plástico en algunos sitios "
+"específicos."
+
+#: templates/how-it-works/index.html:16
+msgid ""
+"Follow the steps below, and you'll be visiting America's parks, lands, and "
+"waters in no time."
+msgstr ""
+"Sigue los pasos a continuación, y en un santiamén ¡estarás visitando los "
+"parques, las tierras, y las aguas de los Estados Unidos!"
+
+#: templates/how-it-works/index.html:19 templates/plan-your-trip/index.html:22
+msgid "Let's Get Going!"
+msgstr "¡Vámonos!"
+
+#: templates/how-it-works/index.html:44
+msgid "Get and print fourth-grade passes to our national lands and waters."
+msgstr ""
+"Conseguir e imprimir pases a las tierras y aguas federales de la nación para "
+"estudiantes de cuarto grado."
+
+#: templates/how-it-works/index.html:49
+msgid "Printable Pass"
+msgstr "Pase para imprimir"
+
+#: templates/how-it-works/index.html:57
+msgid "Stand up paddlers with dog"
+msgstr "Remadores parados con un perro"
+
+#: templates/how-it-works/index.html:60 templates/parents.html:42
+msgid "Plan a trip"
+msgstr "Planea un Viaje"
+
+#: templates/how-it-works/index.html:61
+msgid "It's a good idea to involve your parent or guardian in this."
+msgstr "Es buena idea involucrar a tus padres o guardianes en esto."
+
+#: templates/how-it-works/index.html:70
+msgid "Hit the road!"
+msgstr "¡Vámonos!"
+
+#: templates/how-it-works/index.html:71
+msgid ""
+"Enjoy national parks, lands, and waters for a full year. Leave only "
+"footsteps. Take only pictures."
+msgstr ""
+"Disfruta de los parques, las tierras, y las aguas nacionales por un año "
+"entero. Deja solo huellas. Lleva contigo solo fotos."
+
+#: templates/how-it-works/index.html:74
+msgid "line of hikers in brush"
+msgstr "Línea de caminadores en arbustos"
+
+#: templates/how-it-works/index.html:83
+msgid "Every Kid In A Park Pass"
+msgstr "Pasa para Todos los Niños en un Parque"
+
+#: templates/how-it-works/index.html:87
+msgid "A few things to know"
+msgstr "Cosas importantes de conocer"
+
+#: templates/how-it-works/index.html:88
+msgid ""
+"You need to print your pass and bring it with you when you visit. Electronic "
+"copies aren't accepted."
+msgstr ""
+"Necesitas imprimir tu pase y llevarlo contigo cuando visites. No se aceptan "
+"copias electrónicas."
+
+#: templates/how-it-works/index.html:90
+msgid ""
+"Your pass has a unique code. That means you can't copy it and give it to "
+"friends. Encourage your friends to get their own pass if they're in the "
+"fourth grade."
+msgstr ""
+"Tu pase tiene un código único. Esto significa que no puedes copiarlo y darlo "
+"a tus amigos. Alienta a tus amigos a que consigan su propio pase si están en "
+"cuarto grado."
+
+#: templates/index.html:5
+msgid "Main"
+msgstr "Principal"
+
+#: templates/index.html:15
+msgid "Hey fourth graders!"
+msgstr "¡Hola, escolares de 4º grado!"
+
+#: templates/index.html:15
+msgid "See America’s natural wonders and historic sites for free."
+msgstr ""
+"¡Vean gratis las maravillas naturales y sitios históricos de Estados Unidos!"
+
+#: templates/index.html:17
+msgid "Let's Go!"
+msgstr "¡Vamos!"
+
+#: templates/index.html:75
+msgid "Play outdoors."
+msgstr "Juega al aire libre."
+
+#: templates/index.html:80
+msgid ""
+"You and your family get free access to hundreds of parks, lands, and waters "
+"for an entire year."
+msgstr ""
+"Tú y tu familia consiguen acceso gratuito a cientos de parques, tierras y "
+"aguas durante todo un año."
+
+#: templates/index.html:88
+msgid ""
+"This is for you! Explore ancient dwellings. See a waterfall taller than a "
+"building."
+msgstr ""
+"¡Esto es para ti! Explora viviendas antiguas. Observa una catarata más alta "
+"que un edificio."
+
+#: templates/index.html:95
+msgid "Explore with friends."
+msgstr "Pasa tiempo con amigos."
+
+#: templates/index.html:103
+msgid "Go climbing."
+msgstr "Sal a explorar."
+
+#: templates/index.html:107 templates/parents.html:15
+msgid "Parents and guardians"
+msgstr "Padres y tutores"
+
+#: templates/index.html:108
+msgid ""
+"Stay close to home, or travel somewhere new. This year's the perfect time "
+"for an unforgettable outing."
+msgstr ""
+"Quédense cerca de casa, o viajen a algún lugar nuevo. Este año es el momento "
+"perfecto para una excursión inolvidable."
+
+#: templates/index.html:110
+msgid "Learn more"
+msgstr "Aprende más"
+
+#: templates/index.html:116
+msgid ""
+"Get passes, download our activity, or plan a life-changing field trip for "
+"your fourth-grade students."
+msgstr ""
+"Consigan pases, descarguen nuestra actividad, o planeen una excursión "
+"escolar que cambie la vida de sus estudiantes de 4ºgrado."
+
+#: templates/index.html:118
+msgid "More Info"
+msgstr "Más Información"
+
+#: templates/index.html:123
+msgid "Try something new."
+msgstr "Prueba algo nuevo."
+
+#: templates/index.html:138
+msgid ""
+"“Because no matter who you are, no matter where you live, our parks, our "
+"monuments, our lands, our waters &mdash; these places are your birthright as "
+"Americans”"
+msgstr ""
+"“Porque no importa donde estés ni donde vivas, nuestros parques, nuestras "
+"tierras, nuestras aguas &mdash; estos lugares son tu derecho natural como "
+"estadounidense”"
+
+#: templates/index.html:139
+msgid "President Barack Obama"
+msgstr "Presidente Barack Obama"
+
+#: templates/legal/privacy.html:10
+msgid "Privacy statement"
+msgstr "Declaración de Privacidad"
+
+#: templates/legal/privacy.html:13
+msgid ""
+"We don't collect any information that could personally identify you. We do "
+"ask you to tell us the general area where you live. Knowing this helps us "
+"analyze who is using the program. It also helps us make your paper pass and "
+"protect against misuse."
+msgstr ""
+"Nosotros no coleccionamos ningún tipo de información que te puede "
+"identificar personalmente. Sí, te pedimos que nos digas el área general "
+"donde vives. Esta información nos ayuda analizar quien está utilizando el "
+"programa. También nos ayuda a hacer tu pase de papel y proteger contra el "
+"mal uso."
+
+#: templates/legal/privacy.html:16
+msgid ""
+"On this site, we ask you to give us some basic information. You're not "
+"required to provide it to us, but it's necessary to get a pass. We collect "
+"this information to give free passes to fourth graders and educators. We use "
+"it to make sure you're eligible for a free pass and to promote Every Kid in "
+"a Park. These passes allow free access to public lands and waters."
+msgstr ""
+"En este sitio, pedimos que nos proporcione alguna información básica. No es "
+"requerido que nos la proporciona, pero es necesario para conseguir un pase. "
+"Nosotros coleccionamos esta información para dar pases gratuitos a los "
+"estudiantes de cuarto grado. Lo utilizamos para asegurar que Ud. es elegible "
+"para un pase gratuito y para promocionar Todos Los Niños en un Parque. Estos "
+"pases permiten el acceso gratuito a tierras y aguas federales. "
+
+#: templates/legal/privacy.html:18
+msgid ""
+"We may share the information with others, including agency groups or "
+"organizations, pursuant to Privacy Act system of records notice DOI-06.  "
+"Among other things, this helps us measure and improve the program. It also "
+"helps us stop fraud and abuse."
+msgstr ""
+"Tal vez compartamos esta información con otros, incluyendo grupos de "
+"agencias u organizaciones, de conformidad con el Privacy Act system of "
+"records notice DOI-06. Entre otras cosas, esto nos ayuda medir y mejorar el "
+"programa. También nos ayuda impedir el fraude y abuso."
+
+#: templates/legal/privacy.html:20
+msgid ""
+"We do all this under the authority of the Federal Lands Recreation "
+"Enhancement Act of 2004 (REA), 16 U.S.C. 6804, and the Privacy Act of 1974, "
+"5 U.S.C. 552a."
+msgstr ""
+"Nosotros hacemos todo esto bajo la autoridad del Federal Lands Recreation "
+"Enhancement Act of 2004 (REA), 16 U.S.C. 6804, y el Privacy Act of 1974, 5 U."
+"S.C. 552a."
+
+#: templates/legal/privacy.html:22
+msgid "More about your privacy"
+msgstr "Más acerca de su privacidad"
+
+#: templates/legal/privacy.html:23
+msgid ""
+"We collect general information about our visitors so we can improve our "
+"website. If you want more information, see the"
+msgstr ""
+"Nosotros colectamos información general acerca de nuestros visitantes para "
+"que podamos mejorar nuestro sitio web. Si Ud. quiere más información, véase "
+"la"
+
+#: templates/legal/privacy.html:23
+msgid "Department of the Interior Privacy Policy"
+msgstr "Declaración de Privacidad del Department of the Interior"
+
+#: templates/legal/privacy.html:24
+msgid "and the General Services Administration"
+msgstr "y la"
+
+#: templates/legal/privacy.html:24
+msgid "Privacy and Security Notice"
+msgstr ""
+"Noticia de Privacidad y Seguridad de la General Services Administration"
+
+#: templates/parents.html:17
+msgid ""
+"“The wilderness holds answers to questions man has not yet learned to ask.”"
+msgstr ""
+"“La naturaleza ofrece respuestas a preguntas que el hombre todavía no ha "
+"aprendido a hacer.”"
+
+#: templates/parents.html:19
+msgid ""
+"Your child can take you amazing places! With the pass, fourth graders can "
+"bring family and friends on adventures free for a full year."
+msgstr ""
+"¡Su hijo puede llevarles a lugares asombrosos! Con el pase, los escolares de "
+"4ºgrado pueden llevar a familiares y amigos para vivir aventuras gratis "
+"durante todo un año."
+
+#: templates/parents.html:22
+msgid "Learn More"
+msgstr "Aprende más"
+
+#: templates/parents.html:43
+msgid ""
+"Visiting public lands is healthy and fun. Learn about your heritage, and "
+"connect with nature. No matter where you live in the U.S., you’re within two "
+"hours of an included site."
+msgstr ""
+"Visitar tierras públicas es saludable y divertido. Aprende sobre tu herencia "
+"y conéctate con la naturaleza. No importa donde vivas en Estados Unidos, "
+"estás a menos de dos horas de cualquiera de nuestros sitios."
+
+#: templates/parents.html:44
+msgid ""
+"Check out \"plan your trip\" to find fun things to do at public lands, "
+"waters, and parks."
+msgstr ""
+"Revisa “Planea un Viaje” para encontrar cosas divertidas para hacer en "
+"tierras, aguas y parques públicos."
+
+#: templates/parents.html:51
+msgid "See our rules and instructions before you go."
+msgstr ""
+"Revisa nuestras reglas e instrucciones antes de navegar en el sitio web."
+
+#: templates/parents.html:52
+msgid "View Rules"
+msgstr "Revisa las Reglas"
+
+#: templates/parents.html:57
+msgid "Why fourth graders"
+msgstr "Por qué escolares de  4ºgrado"
+
+#: templates/parents.html:58
+msgid ""
+"We chose fourth graders because research shows that kids ages nine to 11 are "
+"beginning to learn about the world around them. They’re open to new ideas, "
+"and they are likely to connect to nature and our history."
+msgstr ""
+"Nosotros seleccionamos escolares de  4ºgrado porque la investigación muestra "
+"que los niños de entre 9 y 11 años comienzan a aprender sobre el mundo que "
+"les rodea. Ellos están abiertos a nuevas ideas, y dispuestos a conectar con "
+"la naturaleza y nuestra historia."
+
+#: templates/parents.html:59
+msgid ""
+"We offer the pass to fourth graders every year. Over time, every kid can get "
+"a free pass to explore our country."
+msgstr ""
+"¡Este año es solamente el principio! Ofreceremos el pase a escolares de  "
+"4ºgrado cada año. Con el tiempo, todos los niños podrán obtener un pase "
+"gratuito para explorar nuestro país."
+
+#: templates/parents.html:60
+msgid "family fishing"
+msgstr "pesca en familia"
+
+#: templates/plan-your-trip/field_trip.html:4
+#: templates/plan-your-trip/field_trip.html:14
+#: templates/plan-your-trip/field_trip_details.html:4
+#: templates/plan-your-trip/field_trip_details.html:14
+msgid "Plan a field trip"
+msgstr "Organice un viaje de estudios"
+
+#: templates/plan-your-trip/field_trip.html:16
+msgid "A field trip is a great learning opportunity."
+msgstr "Un viaje de estudios es una gran oportunidad para el aprendizaje."
+
+#: templates/plan-your-trip/field_trip.html:18
+msgid ""
+"Start by selecting a state or territory. Then check out our list of "
+"recommended sites. You can see the best time of year to visit and what that "
+"site has to offer. For example, trails, outdoor classrooms, and visitor "
+"centers."
+msgstr ""
+"Empiece por seleccionar un estado o territorio. Luego vea nuestra lista de "
+"sitios recomendados. Se puede ver la mejor época para visitar y la "
+"infraestructura que el sitio ofrece. Por ejemplo: senderos, aulas al aire "
+"libre, y centros de visitantes."
+
+#: templates/plan-your-trip/field_trip.html:20
+msgid ""
+"You'll also see contact information for each site. Contact the site for help "
+"scheduling trips and transportation."
+msgstr ""
+"También hay información sobre cómo contactar cada sitio. Favor de "
+"comunicarse con el sitio para ayudar planificar las salidas y el transporte."
+
+#: templates/plan-your-trip/field_trip.html:22
+msgid ""
+"This program only provides passes for fourth graders. Sites can choose to "
+"waive fees for teachers on a field trip. Please contact each site for more "
+"information."
+msgstr ""
+"Este programa solo proporciona pases a los estudiantes de cuarto grado. Los "
+"sitios individuales pueden optar por no cobrar la entrada a los maestros en "
+"un viaje de estudios. Favor de comunicarse con los sitios individuales para "
+"más información."
+
+#: templates/plan-your-trip/field_trip.html:25
+#: templates/plan-your-trip/pass_exchange.html:20
+msgid "Choose a state or territory"
+msgstr "Escoge un estado o territorio"
+
+#: templates/plan-your-trip/field_trip.html:27
+msgid "Submit"
+msgstr "Enviee"
+
+#: templates/plan-your-trip/field_trip.html:41
+msgid "Sites to visit in"
+msgstr "Lugares donde visitar en"
+
+#: templates/plan-your-trip/field_trip.html:61
+msgid "No results for"
+msgstr "No hay resultados para"
+
+#: templates/plan-your-trip/field_trip_details.html:37
+msgid "This site is suitable for large groups."
+msgstr "Este sitio es adecuado para grupos grandes."
+
+#: templates/plan-your-trip/field_trip_details.html:42
+msgid "This site requires advance reservations for field trips."
+msgstr "Este sitio requiere reservaciones para viajes de estudio."
+
+#: templates/plan-your-trip/field_trip_details.html:47
+msgid "Best times to visit"
+msgstr "Mejores épocas para visitar"
+
+#: templates/plan-your-trip/field_trip_details.html:55
+msgid "Facilities"
+msgstr "Instalaciones"
+
+#: templates/plan-your-trip/field_trip_details.html:61
+msgid "Website"
+msgstr "Sitio web"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "Be informed before you visit in person. Visit the"
+msgstr "Infórmese antes de ir. Visitar primero el sitio"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "website"
+msgstr "web"
+
+#: templates/plan-your-trip/field_trip_details.html:64
+msgid "first"
+msgstr ""
+
+#: templates/plan-your-trip/index.html:5 templates/plan-your-trip/index.html:15
+msgid "Plan your trip"
+msgstr "Planea tu salida"
+
+#: templates/plan-your-trip/index.html:17
+msgid ""
+"\"We come and go, but the land is always here. And the people who love it "
+"and understand it are the people who own it — for a little while.\""
+msgstr ""
+"\"Nosotros vamos y venimos, pero la tierra está ahí siempre presente. Y la "
+"gente que la ama y la comprende es la gente que la posee – por un ratito.\""
+
+#: templates/plan-your-trip/index.html:19
+msgid ""
+"Plan your adventure using these tools. No matter where you live in the "
+"United States, there's a site within two hours of your home."
+msgstr ""
+"Utiliza estas herramientas para planear tu aventura. Donde sea que vivas en "
+"los Estados Unidos, hay un sitio a dos horas o menos de tu casa."
+
+#: templates/plan-your-trip/index.html:46
+msgid "Explore parks and sites"
+msgstr "Explora parques y sitios"
+
+#: templates/plan-your-trip/index.html:51
+msgid "owl icon"
+msgstr "ícono de búho"
+
+#: templates/plan-your-trip/index.html:53
+msgid "See protected animals"
+msgstr "Observa animales protegidos"
+
+#: templates/plan-your-trip/index.html:58
+#: templates/plan-your-trip/index.html:63
+msgid "discovertheforest.org"
+msgstr "descubreelbosque.org"
+
+#: templates/plan-your-trip/index.html:60
+msgid "tree icon"
+msgstr "ícono de árbol"
+
+#: templates/plan-your-trip/index.html:62
+msgid "Visit the woods"
+msgstr "Visita el bosque"
+
+#: templates/plan-your-trip/index.html:67
+msgid "findyourpark.com/find"
+msgstr "encuentratuparque.com"
+
+#: templates/plan-your-trip/index.html:69
+msgid "mountains icon"
+msgstr "ícono de montañas"
+
+#: templates/plan-your-trip/index.html:71
+msgid "Go to a park"
+msgstr "Visita un parque"
+
+#: templates/plan-your-trip/index.html:72
+msgid "findyourpark.com"
+msgstr "encuentratuparque.com"
+
+#: templates/plan-your-trip/index.html:78
+msgid "compass icon"
+msgstr "ícono de brújula"
+
+#: templates/plan-your-trip/index.html:80
+msgid "More places to play"
+msgstr "Más lugares donde jugar"
+
+#: templates/plan-your-trip/index.html:88
+msgid "You're about to explore"
+msgstr "¡Estás por explorar otro"
+
+#: templates/plan-your-trip/index.html:89
+msgid "another website!"
+msgstr "sitio web!"
+
+#: templates/plan-your-trip/index.html:90
+msgid ""
+"It will list lots of places to visit! But not all will accept your paper "
+"pass. If you aren't sure whether your paper pass will work, have an adult "
+"call before you go."
+msgstr ""
+"¡El nuevo sitio presentará muchos lugares donde visitar! Pero no todos "
+"aceptarán tu pase de papel. Si no estás seguro si te lo acepten, favor de "
+"pedirle a un adulto que llame antes de que te vayas."
+
+#: templates/plan-your-trip/index.html:91
+msgid "Continue"
+msgstr "Continuar"
+
+#: templates/plan-your-trip/index.html:104
+msgid "Get a place to stay"
+msgstr "Busca un lugar donde quedarte"
+
+#: templates/plan-your-trip/index.html:106
+msgid ""
+"Your family may want to stay somewhere overnight. You can reserve a cabin or "
+"campsite on"
+msgstr ""
+"Puede que tu familia quiera quedarse la noche en algún lugar. Puedes "
+"reservar una cabaña o sitio para acampar en"
+
+#: templates/plan-your-trip/index.html:118
+msgid "Pack this"
+msgstr "Empaca esto"
+
+#: templates/plan-your-trip/index.html:119
+msgid ""
+"Note: some of our sites don't get cell service. This means you might not be "
+"able to make or get phone calls, texts, or emails when you visit."
+msgstr ""
+"Nota: algunos de nuestros sitios no reciben servicio de telefonía celular. "
+"Esto significa que es posible que no puedas hacer o recibir llamadas, "
+"textos, o correos electrónicos cuando visitas."
+
+#: templates/plan-your-trip/index.html:125
+msgid "What to bring"
+msgstr "Cosas para llevar"
+
+#: templates/plan-your-trip/index.html:127
+msgid "Water"
+msgstr "Agua"
+
+#: templates/plan-your-trip/index.html:128
+msgid "Healthy snacks"
+msgstr "Refrigerios sanos"
+
+#: templates/plan-your-trip/index.html:129
+msgid "A first-aid kit"
+msgstr "Un botiquín"
+
+#: templates/plan-your-trip/index.html:130
+msgid "Comfortable shoes"
+msgstr "Zapatos cómodos"
+
+#: templates/plan-your-trip/index.html:131
+msgid "Sunglasses"
+msgstr "Lentes de sol"
+
+#: templates/plan-your-trip/index.html:132
+msgid "A hat"
+msgstr "Una gorra"
+
+#: templates/plan-your-trip/index.html:133
+msgid "Sunscreen"
+msgstr "Protector solar"
+
+#: templates/plan-your-trip/index.html:134
+msgid "Gloves (if it's cold)"
+msgstr "Guantes (si hace frio)"
+
+#: templates/plan-your-trip/index.html:135
+msgid "Bug spray"
+msgstr "Repelente para insectos"
+
+#: templates/plan-your-trip/index.html:136
+msgid "A map"
+msgstr "Un mapa"
+
+#: templates/plan-your-trip/index.html:137
+msgid "Emergency numbers"
+msgstr "Números de emergencia"
+
+#: templates/plan-your-trip/index.html:152
+msgid "Bring your pass"
+msgstr "Lleva tu pase"
+
+#: templates/plan-your-trip/index.html:154
+msgid "Make sure you bring your pass to get in for free."
+msgstr "Asegura que lleves tu pase para entrar sin costo."
+
+#: templates/plan-your-trip/index.html:156
+msgid ""
+"At some sites, the ranger will exchange your paper pass for a plastic pass. "
+"The plastic pass is waterproof and a great keepsake!"
+msgstr ""
+"En algunos sitios, el guarda puede cambiar tu pase de papel por un pase de "
+"plástico. ¡El pase de plástico es impermeable y un buen recuerdo! "
+
+#: templates/plan-your-trip/index.html:158
+msgid "Sites with plastic passes"
+msgstr "Sitios con pases de plástico"
+
+#: templates/plan-your-trip/index.html:169
+msgid "Take a train"
+msgstr "Viajar en Tren"
+
+#: templates/plan-your-trip/index.html:171
+#, python-format
+msgid ""
+"Your family may want to take a train.  Amtrak is offering fourth graders — "
+"like you — a discount on train tickets. When an adult buys a full-price "
+"ticket, you'll get 75%% off."
+msgstr ""
+"Tal vez tu familia quiera viajar en tren. Amtrak ofrece a los estudiantes de "
+"cuarto grado – como tú – un descuento en los boletos de tren. Cuando un "
+"adulto compre un boleto de precio completo, tu recibirás un descuento del "
+"75%%."
+
+#: templates/plan-your-trip/index.html:171
+msgid "Visit"
+msgstr "Visita"
+
+#: templates/plan-your-trip/index.html:171
+msgid "to learn more."
+msgstr "para aprender más."
+
+#: templates/plan-your-trip/index.html:186
+msgid "Field trips"
+msgstr "Viajes de estudio"
+
+#: templates/plan-your-trip/index.html:188
+msgid "A field trip with your class offers a unique learning opportunity."
+msgstr ""
+"Un viaje de estudio con tu clase ofrece una oportunidad única de aprendizaje."
+
+#: templates/plan-your-trip/index.html:190
+msgid ""
+"Many of our sites are ready for large groups and offer programs created for "
+"fourth graders."
+msgstr ""
+"Muchos de nuestros sitios pueden recibir grupos grandes y ofrecen programas "
+"especializados para estudiantes de cuarto grado."
+
+#: templates/plan-your-trip/index.html:194
+msgid "Field trip sites"
+msgstr "Sitios para viajes de estudio"
+
+#: templates/plan-your-trip/pass_exchange.html:3
+#: templates/plan-your-trip/pass_exchange.html:13
+msgid "Exchange your pass"
+msgstr "Cambia tu pase"
+
+#: templates/plan-your-trip/pass_exchange.html:15
+msgid ""
+"Trade your paper pass for a limited-edition, plastic pass at any of the "
+"sites on this page."
+msgstr ""
+"Cambia tu pase de papel por un pase de plástico, de edición limitada, en "
+"cualquier de los sitios en esta página."
+
+#: templates/plan-your-trip/pass_exchange.html:17
+msgid ""
+"Start by selecting a state or territory, and we'll show you all the places "
+"you can trade your paper pass for a plastic pass."
+msgstr ""
+"Empieza por seleccionar un estado o territorio, y te mostramos todos los "
+"lugares en donde puedes cambiar tu pase de papel por uno de plástico."
+
+#: templates/plan-your-trip/pass_exchange.html:36
+msgid "Where to trade your pass in"
+msgstr "Donde cambiar tu pase en"
+
+#: templates/rules.html:4
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: templates/rules.html:10
+msgid "Rules and instructions"
+msgstr "Reglas e instrucciones "
