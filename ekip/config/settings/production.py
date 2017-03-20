@@ -1,5 +1,7 @@
+from cfenv import AppEnv
 import dj_database_url
 import os
+import re
 import tempfile
 from .base import *
 
@@ -14,17 +16,29 @@ ALLOWED_HOSTS = [
     'kids-dev.18f.gov' # Allow development URL
     ]
 
+database_url = os.getenv('DATABASE_URL')
+env = AppEnv()
+cf_db = env.get_service(name=re.compile('ekip-db'))
+if cf_db:
+    database_url = cf_db.credentials['uri']
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.parse(database_url)
 DATABASES['default']['CONN_MAX_AGE'] = 60
 
-AWS_STORAGE_BUCKET_NAME = os.getenv('EKIP_STATIC_BUCKET_NAME')
-AWS_S3_CUSTOM_DOMAIN = 's3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
-STATIC_URL = 'https://%s/' % AWS_S3_CUSTOM_DOMAIN
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
+AWS_S3_REGION_NAME = os.getenv('EKIP_AWS_REGION')
 AWS_ACCESS_KEY_ID = os.getenv('EKIP_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('EKIP_AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('EKIP_STATIC_BUCKET_NAME')
+cf_s3 = env.get_service(name=re.compile('ekip-s3'))
+if cf_s3:
+    AWS_STORAGE_BUCKET_NAME = cf_s3.credentials['bucket']
+    AWS_S3_REGION_NAME = cf_s3.credentials['region']
+    AWS_ACCESS_KEY_ID = cf_s3.credentials['access_key_id']
+    AWS_SECRET_ACCESS_KEY = cf_s3.credentials['secret_access_key']
+AWS_S3_CUSTOM_DOMAIN = 's3-%s.amazonaws.com/%s' % (AWS_S3_REGION_NAME, AWS_STORAGE_BUCKET_NAME)
+STATIC_URL = 'https://%s/' % AWS_S3_CUSTOM_DOMAIN
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 CACHES = {
     'default': {
