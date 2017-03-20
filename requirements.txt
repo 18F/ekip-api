@@ -7,14 +7,14 @@ whitenoise==1.0.6
 django-cors-headers
 django-localflavor
 restless
--e git+https://github.com/django/django-formtools.git#egg=django-formtools
-boto
+django-formtools==2.0
+boto3==1.4.4
 newrelic==2.54.0.41
 django-secure
 bandit==1.0.1
+cfenv==0.5.2
 
-# @see http://code.larlet.fr/django-storages/issue/155/python-3-support
--e git+https://github.com/coagulant/django-storages-py3.git@py3#egg=django-storages
+django-storages==1.5.2
 
 # Recordlocator
 -e git+https://github.com/18F/record-locator.git#egg=recordlocator
