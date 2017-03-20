@@ -13,7 +13,7 @@
   <meta name="blitz" content="mu-bf431adc-3df60040-20150ee5-6af832b8">
   <link rel="stylesheet" href="{% static "css/style.min.css" %}" />
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  {% if request.get_full_path = "/plan-your-trip/" %}
+  {% if request.get_full_path == "/plan-your-trip/" %}
   <link rel="stylesheet" href="{% static "css/simplemodal.css" %}" />
   {% endif %}
   <title>{% trans "Every Kid in a Park" %} | {% block title %}{% endblock title %}</title>
@@ -127,7 +127,7 @@
         </li>
         <li>
           <a href="{% url 'parents' %}">{% trans "Parents" %}</a>
-        </li>		  
+        </li>
         <li>
           <ul class="sub">
             <li>
@@ -178,7 +178,7 @@
 
   <script src="{% static 'js/min/jquery.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/min/script.js' %}"></script>
-  {% if request.get_full_path = "/plan-your-trip/" %}
+  {% if request.get_full_path == "/plan-your-trip/" %}
   <script type="text/javascript" src="{% static 'js/min/jquery.simplemodal.js' %}"></script>
   <script type="text/javascript">
   	$(document).ready(function() {
@@ -190,7 +190,7 @@
 			linkValue = linkValue.replace('/find','');
 			linkValue = linkValue.replace('/refuges/','');
 			$('#modal-content').modal({
-				close: true, 
+				close: true,
 				//escClose: true,
 				//overlayClose: true,
 				closeHTML: "<div>Close to go back<img src='{% static 'img/modal-close.png' %}' width='30' height='30' style='vertical-align:middle;margin-left:10px;'></div>",
@@ -205,7 +205,7 @@
 			return false;
 		});
     });
-  </script>  
+  </script>
   {% endif %}
 
   <script>
