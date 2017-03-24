@@ -11,9 +11,9 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [
     '.everykidinapark.gov', # Allow domain and subdomains
-    'kids-prod.18f.gov', # Internal URL for production instance 
-    'kids.18f.gov', # Allow staging URL
-    'kids-dev.18f.gov' # Allow development URL
+    'kids-prod.18f.gov', 'ekip-prod.app.cloud.gov', # Internal URL for production instance
+    'kids.18f.gov', 'ekip-staging.app.cloud.gov', # Allow staging URL
+    'kids-dev.18f.gov', 'ekip-dev.app.cloud.gov' # Allow development URL
     ]
 
 database_url = os.getenv('DATABASE_URL')
@@ -39,6 +39,11 @@ AWS_S3_CUSTOM_DOMAIN = 's3-%s.amazonaws.com/%s' % (AWS_S3_REGION_NAME, AWS_STORA
 STATIC_URL = 'https://%s/' % AWS_S3_CUSTOM_DOMAIN
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# Allow secret key to be retreieved from UPS if on Cloud Foundry
+ekip_creds = env.get_service(name='ekip-django')
+if ekip_creds is not None:
+    SECRET_KEY = ekip_creds.credentials['DJANGO_SECRET_KEY']
 
 CACHES = {
     'default': {
