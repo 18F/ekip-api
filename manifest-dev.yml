@@ -1,1 +1,5 @@
 inherit: manifest.yml
+routes:
+  - route: ekip-dev.app.cloud.gov
+env:
+  NEW_RELIC_ENVIRONMENT: "development"

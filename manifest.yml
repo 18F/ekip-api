@@ -8,10 +8,9 @@ name: ekip
 # version, we can change the buildpack text to "python-buildpack"
 # https://github.com/cloudfoundry/python-buildpack/commit/1441a71b9606a32c29c804da8bcf5fa89ece3429#diff-d3bb3391c79904494c60ee2ac2f33070R14
 buildpack: https://github.com/cloudfoundry/python-buildpack#v1.5.16
-env:
-  NEW_RELIC_CONFIG_FILE: /app/newrelic.ini
 services:
   - ekip-db
   - ekip-s3
 env:
   DJANGO_SETTINGS_MODULE: "config.settings.production"
+  NEW_RELIC_CONFIG_FILE: /app/newrelic.ini

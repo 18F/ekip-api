@@ -1,1 +1,11 @@
 inherit: manifest.yml
+instances: 4
+routes:
+  - route: ekip-prod.app.cloud.gov
+services:
+  - ekip-newrelic
+  - ekip-django
+env:
+  NEW_RELIC_ENVIRONMENT: "production"
+  NEW_RELIC_APP_NAME: "EKIP - production"
+  WEB_CONCURRENCY: 4
