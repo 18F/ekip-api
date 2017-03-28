@@ -3,5 +3,11 @@
 memory: 512M
 instances: 1
 timeout: 180
+name: ekip
+buildpack: python_buildpack
+services:
+  - ekip-db
+  - ekip-s3
 env:
+  DJANGO_SETTINGS_MODULE: "config.settings.production"
   NEW_RELIC_CONFIG_FILE: /app/newrelic.ini

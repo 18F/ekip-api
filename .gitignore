@@ -70,3 +70,7 @@ node_modules
 blue_manifest.yml
 green_manifest.yml
 cf-ssh.yml
+
+# actual creds files
+newrelic.json
+django.json

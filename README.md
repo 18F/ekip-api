@@ -160,45 +160,93 @@ included in the repository.
 
 ## Deploy notes
 
-We use a blue-green deployment system for zero downtime.
+We use the [autopilot](https://github.com/contraband/autopilot) plugin to deploy
+with zero downtime.
 
+### Setting up the services.
+Note: Needed for **all** environments / spaces.
 
-### Setting up the applications.
 =======
-You'll need to set the application to use the production settings file.
 
-```
-cf set-env blue DJANGO_SETTINGS_MODULE config.settings.production
-cf set-env green DJANGO_SETTINGS_MODULE config.settings.production
-```
+You'll need to create services (Postgres and S3). This only needs to be
+done once. You can see if the services already exist by running `cf services`
+within the desired space.
 
-
-You'll need to set three environment variables, for both blue and green apps to
-use S3 for hosting static files. Do this once.
-
-```
-cf set-env blue EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
-cf set-env blue EKIP_AWS_ACCESS_KEY_ID <<value>>
-cf set-env blue EKIP_AWS_SECRET_ACCESS_KEY <<value>>
-cf set-env green EKIP_STATIC_BUCKET_NAME <<S3 static files bucket name>>
-cf set-env green EKIP_AWS_ACCESS_KEY_ID <<value>>
-cf set-env green EKIP_AWS_SECRET_ACCESS_KEY <<value>>
+1. If you do not see the `ekip-s3` service after running `cf services`,
+you can create it by running:
+```bash
+cf create-service s3 basic-public ekip-s3
 ```
 
+2. If you do not see the `ekip-db` service after running `cf services`,
+you can create it by running:
+```bash
+# for the prod space
+cf create-service aws-rds medium-psql ekip-db
+# for the dev and dev spaces
+cf create-service aws-rds shared-psql ekip-db
+```
+
+### Setting up the credentials.
+=======
+
+#### Setting up New Relic Credentials
+Note: Recommended for **staging** and **prod** spaces.
+
+1. If you need New Relic, create a copy of the JSON credentials file:
+```bash
+cp creds/newrelic.example.json creds/newrelic.json
+```
+
+2. Fill in the JSON file.
+
+3. Create the user provided service for the New Relic Credentials.
+```bash
+cf create-user-provided-service ekip-newrelic -p creds/newrelic.json
+```
+
+#### Setting up Django Credentials
+Note: Recommended for **staging** and **prod** spaces.
+
+1. If you want to set sensitive Django values, create a copy of the
+JSON credentials file:
+```bash
+cp creds/django.example.json creds/django.json
+```
+
+2. Fill in the JSON file.
+
+3. Create the user provided service for the Django Credentials.
+```bash
+cf create-user-provided-service ekip-django -p creds/django.json
+```
 
 ### Running deploys
 
 To actually deploy the application, simply configure for your use case and run:
 
 ```
-./deployer.sh
+./deploy.sh <space-name>
+```
+
+For example to deploy to the `prod` space:
+
+```
+./deploy.sh prod
 ```
 
 ### Running database migrations
 
-Use cf-ssh to create an instance of the application you can ssh into, and then
+Using the `cf ssh` command, you can ssh into your instance, and then
 run:
 
-```
-python manage.py migrate --settings=config.settings.production
+```bash
+# On your local machine
+cf ssh ekip
+
+# On the remote instance
+cd app
+source .profile.d/python.sh
+cd ekip
+$PYTHONHOME/bin/python manage.py migrate --settings=config.settings.production
 ```
