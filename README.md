@@ -221,6 +221,21 @@ cp creds/django.example.json creds/django.json
 cf create-user-provided-service ekip-django -p creds/django.json
 ```
 
+### Setting up the custom routes.
+Note: Recommended for the **prod** space.
+
+=======
+
+1. Use the CDN Broker to create the custom route service.
+```bash
+# For production
+cf cs cdn-route cdn-route ekip-route -c '{"domain": "www.everykidinapark.gov,everykidinapark.gov"}'
+```
+
+2. Run `cf service ekip-route` to get the CloudFront distribution.
+
+2. Add/ modify your entry into [DNS](https://github.com/18F/dns) repository.
+
 ### Running deploys
 
 To actually deploy the application, simply configure for your use case and run:
