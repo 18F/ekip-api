@@ -1,5 +1,5 @@
 # Django, using PostgreSQL
-Django==1.10.7
+Django==1.9.10
 psycopg2==2.7.1
 dj-database-url==0.4.2
 gunicorn==19.7.1
