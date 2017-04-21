@@ -1,8 +1,10 @@
 inherit: manifest.yml
+instances: 4
 routes:
   - route: ekip-staging.app.cloud.gov
 services:
   - ekip-newrelic
+  - ekip-django
 env:
   NEW_RELIC_ENVIRONMENT: "staging"
   NEW_RELIC_APP_NAME: "EKIP - staging"
