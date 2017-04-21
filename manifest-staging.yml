@@ -1,5 +1,4 @@
 inherit: manifest.yml
-instances: 4
 routes:
   - route: ekip-staging.app.cloud.gov
 services:
