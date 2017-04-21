@@ -1,17 +1,17 @@
 # Django, using PostgreSQL
-Django==1.9.10
-psycopg2
-dj-database-url
-waitress==0.8.9
-whitenoise==1.0.6
-django-cors-headers
-django-localflavor
-restless
+Django==1.10.7
+psycopg2==2.7.1
+dj-database-url==0.4.2
+gunicorn==19.7.1
+whitenoise==3.3.0
+django-cors-headers==2.0.2
+django-localflavor==1.4.1
+restless==2.0.3
 django-formtools==2.0
 boto3==1.4.4
-newrelic==2.54.0.41
-django-secure
-bandit==1.0.1
+newrelic==2.82.1.63
+django-secure==1.0.1
+bandit==1.4.0
 cfenv==0.5.2
 
 django-storages==1.5.2
