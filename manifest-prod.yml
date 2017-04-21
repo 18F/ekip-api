@@ -8,4 +8,3 @@ services:
 env:
   NEW_RELIC_ENVIRONMENT: "production"
   NEW_RELIC_APP_NAME: "EKIP - production"
-  WEB_CONCURRENCY: 4

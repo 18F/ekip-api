@@ -11,3 +11,4 @@ services:
 env:
   DJANGO_SETTINGS_MODULE: "config.settings.production"
   NEW_RELIC_CONFIG_FILE: /app/newrelic.ini
+  WEB_CONCURRENCY: 4

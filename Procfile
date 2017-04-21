@@ -1,1 +1,1 @@
-web: cd ekip && python manage.py migrate --settings=config.settings.production --noinput && waitress-serve --port=$PORT config.wsgi:application
+web: cd ekip && python manage.py migrate --settings=config.settings.production --noinput && gunicorn config.wsgi:application
