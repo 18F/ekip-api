@@ -2,7 +2,7 @@
 Django==1.9.13
 psycopg2==2.7.1
 dj-database-url==0.4.2
-gunicorn==19.7.1
+waitress==0.8.9
 whitenoise==3.3.0
 django-cors-headers==2.0.2
 django-localflavor==1.4.1
