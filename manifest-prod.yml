@@ -2,6 +2,8 @@ inherit: manifest.yml
 instances: 4
 routes:
   - route: ekip-prod.app.cloud.gov
+  - route: everykidinapark.gov
+  - route: www.everykidinapark.gov
 services:
   - ekip-newrelic
   - ekip-django
