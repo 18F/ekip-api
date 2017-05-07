@@ -4,42 +4,42 @@ Every Kid in a Park (EKIP API)
 [![Coverage Status](https://coveralls.io/repos/18F/ekip-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/ekip-api?branch=master)
 
 
-#Introduction
-The [Every Kid in a Park] (https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
+# Introduction
+The [Every Kid in a Park](https://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio) initiative is part of President Obama’s commitment to protect our Nation’s unique outdoor spaces and ensure that every American has the opportunity to visit and enjoy them.  This initiative provides all fourth grade students and their families with free admission to National Parks and other federal lands and waters for a full year.
 
-#About this site
+# About this site
 This is the repository for the Every Kid in a Park website.  The site itself consists of four primary "sections": the **Landing / Home Page, How it Works, Get Your Pass**, and **Plan a Trip**.  Secondary pages include the **About** page, **Parents** page, **Pass Exchange** and **Field Trip** pages. 
 
-###The wiki
+### The wiki
 Looking for something that you can't find here?  A [site map](https://github.com/18F/ekip/wiki/Site-Map) and other information can be found on the [Every Kid in a Park wiki](https://github.com/18F/ekip/wiki).
 
-##Site structure
+## Site structure
 
-###Landing / home
+### Landing / home
 The landing / home section describes the program, how it works, and provides links to resources for fourth grade students, educators and parents.  
 Reading grade level: 4.5.
 
-###How it works
+### How it works
 This section provides a step-by-step walkthrough of the process for getting and using the pass.  
 Reading grade level: 3.7.
 
-###Get your pass
+### Get your pass
 This section walks either the student or the educator through the appropriate process to get a pass.  Fourth grade students are directed to an activity - once the activity is completed they can print the paper pass.  The paper pass can later be redeemed for a plastic pass at participating sites.  
 Reading grade level: 2.6.
 
-###Plan your trip
+### Plan your trip
 This section includes trip planning resources for students and parents.  For educators, there is also an opportunity to plan field trips from a select subset of sites.  
 Reading grade level: 1.3.
 
-###Parents page
+### Parents page
 The parents page provides information for parents on the rules of the program and trip planning resources.  
 Reading grade level: 4.6.
 
-###About page
+### About page
 The about page includes some useful information on partner agencies named in the initiative, press resources, code repository and contact information.  
 Reading grade level: 4.6.
 
-###Pass exchange and field trip pages
+### Pass exchange and field trip pages
 These pages provide simple lists of sites that will exchange the paper pass for a plastic pass (the pass exchange page) and a subset of field trip suggestions.  The pass exchange locations are derived from the broader [America the Beautiful](http://store.usgs.gov/pass/PassIssuanceList.pdf) pass exchange list maintained on the USGS website.  This list is updated quarterly.  
 Reading grade level: 4.6.
 
@@ -63,14 +63,14 @@ One peculiarity to note is that the list maintained by the National Park Service
 ​
 3.  State headers have been removed.  The original document used to include individual state headers - which in the dataset appeared as something like ALABAMA,,,,,,,, 
 
-#Technical stuff
+# Technical stuff
 This is a [Django](https://www.djangoproject.com/)-based system and website.  
 
-This site makes use of a number of packages you can download for free if you don't already have them, or haven't worked with them before: [Django](https://www.djangoproject.com/), [Vagrant](https://www.vagrantup.com/) [Gulp](http://gulpjs.com/), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), [sass](https://github.com/medialize/sass.js/) and [NPM](https://www.npmjs.com/).  See the getting started section below for more information and installation guides.
+This site makes use of a number of packages you can download for free if you don't already have them, or haven't worked with them before: [Django](https://www.djangoproject.com/), [Vagrant](https://www.vagrantup.com/), [Gulp](http://gulpjs.com/), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), [sass](https://github.com/medialize/sass.js/), and [NPM](https://www.npmjs.com/). See the getting started section below for more information and installation guides.
 
 This site also uses [New Relic](http://newrelic.com/) to monitor performance, Google Analytics for site statistics, and AWS for site hosting.
 
-##Submitting issues
+## Submitting issues
 Interested in working on the site with us?  Great!  We maintain a separate repository for our issue tracking, found [here](https://github.com/18F/ekip/issues).  You can fork our code and suggest additions / enhancements when you have something prepared that you think improves the site.
 
 ## Ticketing system
