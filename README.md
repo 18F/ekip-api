@@ -259,9 +259,15 @@ run:
 # On your local machine
 cf ssh ekip
 
-# On the remote instance
-cd app
-source .profile.d/python.sh
+# On the remote instance, set up the shell environment to match the app's
+export HOME=/home/vcap/app
+export TMPDIR=/home/vcap/tmp
+cd /home/vcap/app
+[ -d /home/vcap/app/.profile.d ] && for f in /home/vcap/app/.profile.d/*.sh; do source "$f"; done
+source /home/vcap/app/.profilesource .profile.d/python.sh
+
+# Run the migration
 cd ekip
 $PYTHONHOME/bin/python manage.py migrate --settings=config.settings.production
 ```
+If you run into problems, refer to the [upstream canonical instructions for reproducing the app environment](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html#ssh-env). 
